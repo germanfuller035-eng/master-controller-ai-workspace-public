@@ -535,11 +535,13 @@ export function handleEmailPreflightCommand(context = {}) {
     const canSendLiveSelfTest = realSendEnabled && testOnly && testToPresent;
 
 
-    // configured comes from the alias bridge:
-    //   NO | YES_PARTIAL | YES. We treat NO as not-configured for the result code;
-    //   YES_PARTIAL / YES both count as configured (alias coverage present), but
-    //   real send always stays OFF and can_send_live always NO.
-    const configured_state = alias.configured; // 'NO' | 'YES_PARTIAL' | 'YES'
+    // configured can come from either the direct EMAIL_* config path or the
+    // YANDEX_* alias bridge. Both are presence-only checks; values never leave
+    // the env object. YES_PARTIAL / YES both count as configured for preflight.
+    const directEmailConfigured = env_presence.configured === true || cap.configured === true;
+    const configured_state = alias.configured !== CONFIGURED_NO
+        ? alias.configured
+        : (directEmailConfigured ? CONFIGURED_YES : CONFIGURED_NO);
     const configured = configured_state !== CONFIGURED_NO;
     const code = configured
         ? EMAIL_PREFLIGHT_READY
@@ -594,7 +596,7 @@ export function handleEmailPreflightCommand(context = {}) {
 //   (SEND_BLOCKED_REAL_SEND_DISABLED / SEND_TRANSPORT_DEPENDENCY_MISSING /
 //   SEND_TRANSPORT_NOT_IMPLEMENTED / SEND_ADAPTER_NOT_CONFIGURED).
 //   Owner-only. Recipient is forced to EMAIL_TEST_TO (Dmitry-owned) only.
-export async function handleEmailTestSelfCommand(context = {}) {
+export function handleEmailTestSelfCommand(context = {}) {
     const isOwner = context.isOwner === true;
     if (!isOwner) {
         return { ok: false, code: SEND_BLOCKED_NOT_OWNER, text: MSG_NOT_OWNER };
@@ -678,48 +680,48 @@ export async function handleEmailTestSelfCommand(context = {}) {
         autosend: false,
     };
 
-    const result = await sendApprovedSelfTestEmail(payload, liveCtx);
+    return sendApprovedSelfTestEmail(payload, liveCtx).then((result) => {
+        const ok = result.ok === true && result.code === SEND_OK_TEST_EMAIL;
 
-    const ok = result.ok === true && result.code === SEND_OK_TEST_EMAIL;
+        // Safe audit log line. NEVER includes password/login/token — only draft_id,
+        // recipient, a SENT/FAILED result code, and an ISO timestamp.
+        const sendLog = buildSendLogEntry(
+            { draft_id: context.draft_id || 'selftest', recipient: payload.to, subject: payload.subject, body: payload.body, channel: 'email' },
+            { send_result: ok ? 'SENT' : 'FAILED' },
+        );
+        try {
+            console.log('[audit_send_selftest]', JSON.stringify({
+                draft_id: (sendLog && sendLog.lead_id) || context.draft_id || 'selftest',
+                recipient: payload.to,
+                result: ok ? 'SENT' : 'FAILED',
+                code: result.code,
+                timestamp: (sendLog && sendLog.timestamp) || new Date().toISOString(),
+            }));
+        } catch { /* logging must never throw or leak secrets */ }
 
-    // Safe audit log line. NEVER includes password/login/token — only draft_id,
-    // recipient, a SENT/FAILED result code, and an ISO timestamp.
-    const sendLog = buildSendLogEntry(
-        { draft_id: context.draft_id || 'selftest', recipient: payload.to, subject: payload.subject, body: payload.body, channel: 'email' },
-        { send_result: ok ? 'SENT' : 'FAILED' },
-    );
-    try {
-        console.log('[audit_send_selftest]', JSON.stringify({
-            draft_id: (sendLog && sendLog.lead_id) || context.draft_id || 'selftest',
-            recipient: payload.to,
-            result: ok ? 'SENT' : 'FAILED',
+        let text;
+        if (ok) {
+            text = '✅ SEND_OK_TEST_EMAIL: self-test письмо отправлено через Yandex SMTP на EMAIL_TEST_TO.';
+        } else if (result.code === SMTP_SEND_FAILED) {
+            // Never include password/login — message is sanitized in the adapter.
+            text = `🚫 SMTP_SEND_FAILED: ${result.message || 'не удалось отправить (без пароля).'}`;
+        } else {
+            text = `🚫 ${result.code}: ${result.message || 'self-test заблокирован.'}`;
+        }
+
+        return {
+            ok,
             code: result.code,
-            timestamp: (sendLog && sendLog.timestamp) || new Date().toISOString(),
-        }));
-    } catch { /* logging must never throw or leak secrets */ }
-
-    let text;
-    if (ok) {
-        text = '✅ SEND_OK_TEST_EMAIL: self-test письмо отправлено через Yandex SMTP на EMAIL_TEST_TO.';
-    } else if (result.code === SMTP_SEND_FAILED) {
-        // Never include password/login — message is sanitized in the adapter.
-        text = `🚫 SMTP_SEND_FAILED: ${result.message || 'не удалось отправить (без пароля).'}`;
-    } else {
-        text = `🚫 ${result.code}: ${result.message || 'self-test заблокирован.'}`;
-    }
-
-    return {
-        ok,
-        code: result.code,
-        sent_count: result.sent_count || 0,
-        real_send_enabled: realSendEnabled,
-        recipient_was_test_to: payload.to === testTo,
-        secrets_printed: false,
-        reads_dotenv: false,
-        reads_ai_secrets: false,
-        text,
-        result,
-    };
+            sent_count: result.sent_count || 0,
+            real_send_enabled: realSendEnabled,
+            recipient_was_test_to: payload.to === testTo,
+            secrets_printed: false,
+            reads_dotenv: false,
+            reads_ai_secrets: false,
+            text,
+            result,
+        };
+    });
 }
 
 
@@ -900,6 +902,4 @@ export default {
     NEVER_SEND_ON_PREFLIGHT,
     EMAIL_SELF_TEST_NEVER_SENDS_IN_BUILD,
 };
-
-
 
