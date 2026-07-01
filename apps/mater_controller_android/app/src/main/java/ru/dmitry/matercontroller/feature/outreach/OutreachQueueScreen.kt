@@ -305,8 +305,10 @@ class OutreachQueueViewModel @Inject constructor(
     }
 
     private fun ownerError(code: String, message: String): String = when (code) {
+        "UNAUTHORIZED", "NOT_PAIRED" -> "Нужно заново подключить телефон к рабочему серверу. Откройте «Ещё» → «Настройки» → «Выйти / отвязать», затем подключите по новому коду."
+        "FORBIDDEN" -> "Рабочий сервер доступен, но у телефона нет прав на это действие. Переподключите устройство по коду владельца."
         "NETWORK" -> "Нет соединения с рабочим сервером. Запустите сервер или проверьте подключение, затем нажмите «Обновить»."
-        "READ_ONLY" -> "Сейчас доступен только просмотр. Включите рабочую фиксацию и повторите действие."
+        "READ_ONLY" -> "Сейчас доступен только просмотр. Рабочая фиксация на сервере выключена."
         "LIVE_SEND_DISABLED" -> "Нужно отдельное разрешение на одну отправку этого письма."
         "OWNER_CONFIRMATION_REQUIRED" -> "Нужно подтверждение владельца на этот текст и получателя."
         "DUPLICATE_SEND_BLOCKED", "SEND_BLOCKED" -> "Отправка заблокирована: есть блокер или письмо уже отправлялось."
@@ -320,6 +322,8 @@ class OutreachQueueViewModel @Inject constructor(
         return when {
             message.isBlank() -> "Действие не выполнено. Обновите данные и повторите попытку."
             "failed to connect" in low ||
+                "требуется повторное" in low ||
+                "unauthorized" in low ||
                 "127.0.0.1" in low ||
                 "localhost" in low ||
                 "connectexception" in low ||

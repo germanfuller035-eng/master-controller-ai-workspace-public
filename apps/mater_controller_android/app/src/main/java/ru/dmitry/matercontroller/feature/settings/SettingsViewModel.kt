@@ -9,6 +9,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import ru.dmitry.matercontroller.core.data.DataResult
+import ru.dmitry.matercontroller.core.data.ErrorCodes
 import ru.dmitry.matercontroller.core.data.MaterRepository
 import ru.dmitry.matercontroller.core.data.SettingsStore
 import ru.dmitry.matercontroller.core.designsystem.ThemeMode
@@ -32,14 +33,36 @@ class SettingsViewModel @Inject constructor(
     // null = checking; true = API answered; false = no connection.
     private val _connected = MutableStateFlow<Boolean?>(null)
     val connected: StateFlow<Boolean?> = _connected.asStateFlow()
+    private val _connectionMessage = MutableStateFlow("Проверяем рабочий сервер...")
+    val connectionMessage: StateFlow<String> = _connectionMessage.asStateFlow()
 
     init { checkConnection() }
 
     fun checkConnection() {
         viewModelScope.launch {
-            _connected.value = when (repo.checkHealth(repo.currentBaseUrl)) {
-                is DataResult.Success -> true
-                is DataResult.Error -> false
+            _connected.value = null
+            _connectionMessage.value = "Проверяем рабочий сервер..."
+            when (val health = repo.checkHealth(repo.currentBaseUrl)) {
+                is DataResult.Error -> {
+                    _connected.value = false
+                    _connectionMessage.value = "Рабочий сервер недоступен с телефона. Проверьте интернет или включите USB-канал."
+                }
+                is DataResult.Success -> {
+                    when (val auth = repo.checkAuthorized()) {
+                        is DataResult.Success -> {
+                            _connected.value = true
+                            _connectionMessage.value = "Рабочий сервер подключён. Можно обновлять данные и запускать поиск."
+                        }
+                        is DataResult.Error -> {
+                            _connected.value = false
+                            _connectionMessage.value = when (auth.code) {
+                                ErrorCodes.UNAUTHORIZED -> "Сервер доступен, но устройство не авторизовано. Отвяжите телефон и подключите его заново по коду."
+                                ErrorCodes.FORBIDDEN -> "Сервер доступен, но у устройства недостаточно прав для рабочего контура."
+                                else -> "Сервер доступен, но рабочий контур не подтвердился. Повторите проверку или подключите телефон заново."
+                            }
+                        }
+                    }
+                }
             }
         }
     }

@@ -67,6 +67,8 @@ class MaterRepository @Inject constructor(
         DataResult.Error(if (e is SocketTimeoutException) ErrorCodes.TIMEOUT else ErrorCodes.NETWORK, e.message ?: "network error")
     }
 
+    suspend fun checkAuthorized(): DataResult<SystemStatus> = read { apiProvider.api().systemStatus() }
+
     suspend fun pair(url: String, code: String, deviceName: String): DataResult<PairingCompleteData> = try {
         val origin = ru.dmitry.matercontroller.core.network.BaseUrlHolder.normalizeOrigin(url)
         val full = origin + "api/v1/"

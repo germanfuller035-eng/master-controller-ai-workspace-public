@@ -20,6 +20,7 @@ fun SettingsScreen(onUnpair: () -> Unit, vm: SettingsViewModel = hiltViewModel()
     val bg by vm.bgRefresh.collectAsState(initial = true)
     val notif by vm.notifications.collectAsState(initial = true)
     val connected by vm.connected.collectAsState()
+    val connectionMessage by vm.connectionMessage.collectAsState()
     var confirmUnpair by remember { mutableStateOf(false) }
     Scaffold(topBar = { TopAppBar(title = { Text("Настройки") }) }) { pad ->
         Column(
@@ -42,19 +43,32 @@ fun SettingsScreen(onUnpair: () -> Unit, vm: SettingsViewModel = hiltViewModel()
             Text("Телефон: ${ownerDeviceLabel(vm.deviceLabel)}", style = MaterialTheme.typography.bodySmall)
             vm.shortDeviceId?.let { Text("Код телефона: $it", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.5f)) }
             // Live status from a real health read — never a hardcoded "подключено".
-            val statusRu = when (connected) { true -> "подключено"; false -> "нет соединения"; else -> "проверка…" }
+            val statusRu = when (connected) { true -> "готов"; false -> "требует действия"; else -> "проверка…" }
             Text(
                 "Статус подключения: $statusRu",
                 style = MaterialTheme.typography.bodySmall,
                 color = if (connected == false) MaterialTheme.colorScheme.error else MaterialTheme.colorScheme.onSurface,
                 modifier = Modifier.testTag("settings_conn_status"),
             )
-            TextButton(onClick = vm::checkConnection, modifier = Modifier.testTag("settings_recheck")) { Text("Проверить соединение") }
+            ElevatedCard(
+                modifier = Modifier.fillMaxWidth().testTag("settings_connection_message"),
+                colors = CardDefaults.elevatedCardColors(
+                    containerColor = if (connected == false) MaterialTheme.colorScheme.errorContainer else MaterialTheme.colorScheme.surfaceVariant,
+                ),
+            ) {
+                Text(
+                    connectionMessage,
+                    modifier = Modifier.padding(12.dp),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = if (connected == false) MaterialTheme.colorScheme.onErrorContainer else MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            }
+            TextButton(onClick = vm::checkConnection, modifier = Modifier.testTag("settings_recheck")) { Text("Проверить рабочий сервер") }
             Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 OutlinedButton(
                     onClick = vm::useRemoteServer,
                     modifier = Modifier.weight(1f).testTag("settings_use_remote_server"),
-                ) { Text("VPS") }
+                ) { Text("Рабочий сервер") }
                 OutlinedButton(
                     onClick = vm::useUsbServer,
                     modifier = Modifier.weight(1f).testTag("settings_use_usb_server"),
@@ -141,7 +155,7 @@ private fun ownerDeviceLabel(label: String): String =
 
 private fun serverLabel(url: String): String = when {
     url.contains("127.0.0.1:8787") -> "USB-канал с ноутбуком"
-    url.contains("195-96-132-82.sslip.io") -> "рабочий VPS"
+    url.contains("195-96-132-82.sslip.io") -> "рабочий сервер"
     url.isBlank() -> "не выбран"
     else -> "свой адрес"
 }

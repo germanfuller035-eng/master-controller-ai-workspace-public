@@ -73,12 +73,22 @@ class AuthViewModel @Inject constructor(
         _state.update { it.copy(checking = true, message = null, healthOk = null) }
         viewModelScope.launch {
             when (val r = repo.checkHealth(s.baseUrl)) {
-                is DataResult.Success -> _state.update { it.copy(checking = false, healthOk = true, message = "Сервер доступен") }
+                is DataResult.Success -> _state.update {
+                    it.copy(
+                        checking = false,
+                        healthOk = true,
+                        message = if (s.remote) {
+                            "Рабочий сервер доступен. Введите код подключения."
+                        } else {
+                            "USB-канал доступен. Можно подключить устройство или открыть локальный режим."
+                        },
+                    )
+                }
                 is DataResult.Error -> {
                     val msg = if (r.code == ErrorCodes.TIMEOUT) {
-                        "Сервер не ответил. Включите Wi‑Fi или VPN и повторите."
+                        "Сервер не ответил. Проверьте Wi‑Fi/мобильный интернет и повторите."
                     } else {
-                        "Сервер недоступен. Проверьте сеть или откройте локальный режим."
+                        "Рабочий сервер недоступен с телефона. Проверьте интернет или откройте локальный режим."
                     }
                     _state.update { it.copy(checking = false, healthOk = false, message = msg) }
                 }
@@ -96,14 +106,14 @@ class AuthViewModel @Inject constructor(
         viewModelScope.launch {
             when (val r = repo.pair(s.baseUrl, s.pairingCode, s.deviceName)) {
                 is DataResult.Success -> {
-                    _state.update { it.copy(pairing = false, paired = true, message = "Подключено") }
+                    _state.update { it.copy(pairing = false, paired = true, message = "Рабочий сервер подключён") }
                     onPaired()
                 }
                 is DataResult.Error -> {
                     val msg = when (r.code) {
                         "PAIRING_CODE_INVALID", "PAIRING_CODE_USED", "PAIRING_CODE_EXPIRED" -> "Неверный код подключения"
-                        ErrorCodes.TIMEOUT -> "Сервер не ответил. Включите Wi‑Fi или VPN и повторите."
-                        else -> "Не удалось подключиться. Проверьте адрес и сеть или откройте локальный режим."
+                        ErrorCodes.TIMEOUT -> "Сервер не ответил. Проверьте интернет и повторите."
+                        else -> "Не удалось подключить рабочий сервер. Проверьте адрес, сеть и код."
                     }
                     _state.update { it.copy(pairing = false, message = msg) }
                 }

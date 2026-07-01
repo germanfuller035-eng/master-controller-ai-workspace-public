@@ -32,7 +32,7 @@ fun ConnectionScreen(
         ) {
             Text("Master Controller", style = MaterialTheme.typography.headlineSmall, color = MaterialTheme.colorScheme.primary)
             Spacer(Modifier.height(4.dp))
-            Text("Единый пульт управления проектами", style = MaterialTheme.typography.bodyMedium)
+            Text("Подключите телефон к рабочему серверу или откройте локальный ручной режим.", style = MaterialTheme.typography.bodyMedium)
             Spacer(Modifier.height(20.dp))
 
             SingleChoiceSegmentedButtonRow(Modifier.fillMaxWidth()) {
@@ -45,13 +45,13 @@ fun ConnectionScreen(
                     selected = s.remote, onClick = { vm.onRemote(true) },
                     shape = SegmentedButtonDefaults.itemShape(1, 2),
                     modifier = Modifier.testTag("seg_remote"),
-                ) { Text("Удалённый сервер") }
+                ) { Text("Рабочий сервер") }
             }
             Spacer(Modifier.height(16.dp))
 
             OutlinedTextField(
                 value = s.baseUrl, onValueChange = vm::onBaseUrl,
-                label = { Text("Адрес сервера") },
+                label = { Text(if (s.remote) "Адрес рабочего сервера" else "Адрес USB-канала") },
                 singleLine = true, modifier = Modifier.fillMaxWidth().testTag("field_base_url"),
             )
             Spacer(Modifier.height(12.dp))
@@ -78,7 +78,7 @@ fun ConnectionScreen(
                 modifier = Modifier.fillMaxWidth().testTag("btn_check"),
             ) {
                 if (s.checking) CircularProgressIndicator(Modifier.size(18.dp), strokeWidth = 2.dp)
-                else Text("Проверить соединение")
+                else Text(if (s.remote) "Проверить рабочий сервер" else "Проверить USB-канал")
             }
             Spacer(Modifier.height(8.dp))
             Button(
@@ -86,7 +86,7 @@ fun ConnectionScreen(
                 modifier = Modifier.fillMaxWidth().testTag("btn_pair"),
             ) {
                 if (s.pairing) CircularProgressIndicator(Modifier.size(18.dp), strokeWidth = 2.dp)
-                else Text("Подключить устройство")
+                else Text(if (s.remote) "Подключить к рабочему серверу" else "Подключить устройство")
             }
             Spacer(Modifier.height(8.dp))
             OutlinedButton(
@@ -102,18 +102,26 @@ fun ConnectionScreen(
 
             s.message?.let {
                 Spacer(Modifier.height(16.dp))
-                val color = when (s.healthOk) {
-                    true -> MaterialTheme.colorScheme.primary
-                    false -> MaterialTheme.colorScheme.error
-                    null -> MaterialTheme.colorScheme.onSurface
+                val colors = CardDefaults.elevatedCardColors(
+                    containerColor = when (s.healthOk) {
+                        true -> MaterialTheme.colorScheme.surfaceVariant
+                        false -> MaterialTheme.colorScheme.errorContainer
+                        null -> MaterialTheme.colorScheme.surfaceVariant
+                    },
+                )
+                val textColor = when (s.healthOk) {
+                    false -> MaterialTheme.colorScheme.onErrorContainer
+                    else -> MaterialTheme.colorScheme.onSurfaceVariant
                 }
-                Text(it, color = color, modifier = Modifier.testTag("connect_message"))
+                ElevatedCard(Modifier.fillMaxWidth().testTag("connect_message"), colors = colors) {
+                    Text(it, color = textColor, modifier = Modifier.padding(12.dp))
+                }
             }
 
             if (s.remote) {
                 Spacer(Modifier.height(20.dp))
                 Text(
-                    "Для удалённого сервера нужен доступ к интернету. Если он не открывается, используйте локальный режим.",
+                    "Рабочий сервер требует интернет на телефоне и код подключения. Если сеть недоступна, используйте локальный режим.",
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f),
                 )
