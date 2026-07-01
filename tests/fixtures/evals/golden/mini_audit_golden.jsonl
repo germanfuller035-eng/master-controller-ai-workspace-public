@@ -1,0 +1,2 @@
+{"case_id": "GOLDEN_MINI_AUDIT_001", "expected_output": "needs_website_and_followup_review", "input": {"lead": "synthetic local business"}, "pass_criteria": "exact deterministic output", "purpose": "mini audit synthetic baseline"}
+{"case_id": "GOLDEN_MINI_AUDIT_002", "expected_output": "insufficient_public_presence", "input": {"lead": "synthetic no presence"}, "pass_criteria": "exact deterministic output", "purpose": "mini audit no data baseline"}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/controlled_outbound/reply_monitor_state.schema.json",
+  "title": "Reply Monitor State V1",
+  "type": "object",
+  "required": [
+    "synthetic",
+    "reply_monitor_required",
+    "real_inbox_access",
+    "decision"
+  ],
+  "properties": {
+    "synthetic": {"const": true},
+    "reply_monitor_required": {"const": true},
+    "real_inbox_access": {"const": false},
+    "decision": {"enum": ["READY_SYNTHETIC", "BLOCK"]}
+  },
+  "additionalProperties": true
+}

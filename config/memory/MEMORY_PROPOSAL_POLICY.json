@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-26",
+  "session": "KNOWLEDGE_MEMORY_QDRANT_DOCLING_V1",
+  "proposal_required_fields": ["proposal_id", "proposed_by", "claim", "source_id", "source_date", "confidence", "classification", "retention"],
+  "minimum_confidence_for_auto_curator_review": 0.75,
+  "low_confidence_policy": "REQUIRES_REVIEW",
+  "missing_source_policy": "DENY",
+  "unknown_classification_policy": "DENY",
+  "direct_write_after_proposal": "DENY"
+}

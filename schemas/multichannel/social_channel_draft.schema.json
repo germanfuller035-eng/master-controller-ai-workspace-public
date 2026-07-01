@@ -1,0 +1,19 @@
+{
+  "additionalProperties": true,
+  "properties": {
+    "draft_id": {},
+    "payload_hash": {},
+    "publish_allowed": {},
+    "social_ref": {},
+    "synthetic": {}
+  },
+  "required": [
+    "synthetic",
+    "draft_id",
+    "social_ref",
+    "publish_allowed",
+    "payload_hash"
+  ],
+  "title": "Social Channel Draft",
+  "type": "object"
+}

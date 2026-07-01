@@ -1,0 +1,25 @@
+{
+  "schema": "cs.owner_command_center.v1",
+  "label": "INTERNAL_OWNER_ONLY",
+  "primary_customer_action": "recover TEST_cs08",
+  "critical_support_issue": [
+    "TEST_cs08",
+    "TEST_cs15"
+  ],
+  "customer_at_risk": [
+    "TEST_cs02",
+    "TEST_cs11"
+  ],
+  "renewal_decision": [
+    "TEST_cs14",
+    "TEST_cs15"
+  ],
+  "expansion_review": [
+    "TEST_cs16"
+  ],
+  "high_support_unpaid": [],
+  "case_approval": [],
+  "needs_product_change": [],
+  "needs_delivery_change": [],
+  "note": "No external notification."
+}

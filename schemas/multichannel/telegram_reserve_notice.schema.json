@@ -1,0 +1,21 @@
+{
+  "additionalProperties": true,
+  "properties": {
+    "draft_id": {},
+    "payload_hash": {},
+    "reserve_only": {},
+    "synthetic": {},
+    "telegram_ref": {},
+    "telegram_sent": {}
+  },
+  "required": [
+    "synthetic",
+    "draft_id",
+    "telegram_ref",
+    "reserve_only",
+    "telegram_sent",
+    "payload_hash"
+  ],
+  "title": "Telegram Reserve Notice",
+  "type": "object"
+}

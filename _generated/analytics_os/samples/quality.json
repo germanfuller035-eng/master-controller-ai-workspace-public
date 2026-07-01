@@ -1,0 +1,29 @@
+{
+  "score": 1,
+  "total_rules": 2,
+  "passed": 2,
+  "failed": 0,
+  "critical_failures": 0,
+  "high_failures": 0,
+  "failing_rules": [],
+  "results": [
+    {
+      "rule_id": "q_customer_id",
+      "dimension": "COMPLETENESS",
+      "type": "required",
+      "severity": "HIGH",
+      "passed": true,
+      "failure_count": 0,
+      "failures": []
+    },
+    {
+      "rule_id": "q_health_enum",
+      "dimension": "VALIDITY",
+      "type": "enum",
+      "severity": "MEDIUM",
+      "passed": true,
+      "failure_count": 0,
+      "failures": []
+    }
+  ]
+}

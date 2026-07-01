@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-26",
+  "session": "VOLTAGENT_RUNTIME_MODEL_ROUTER_AND_COST_GOVERNOR_V1",
+  "ai_unavailable_policy": "CONTINUE_DETERMINISTIC_WHERE_POSSIBLE",
+  "no_unlimited_fallback_loops": true,
+  "fallback_chains": [
+    {
+      "task_type": "critical",
+      "models": ["critical_best_model_class", "independent_review_model_class", "cheap_routine_model_class", "deterministic_fallback_process"],
+      "max_provider_fallbacks": 2
+    },
+    {
+      "task_type": "routine",
+      "models": ["cheap_routine_model_class", "deterministic_fallback_process"],
+      "max_provider_fallbacks": 1
+    },
+    {
+      "task_type": "classification",
+      "models": ["deterministic_local_classifier", "cheap_routine_model_class", "deterministic_fallback_process"],
+      "max_provider_fallbacks": 1
+    },
+    {
+      "task_type": "coding",
+      "models": ["coding_worker_profile", "critical_best_model_class", "deterministic_fallback_process"],
+      "max_provider_fallbacks": 1
+    },
+    {
+      "task_type": "review",
+      "models": ["independent_review_model_class", "critical_best_model_class", "deterministic_fallback_process"],
+      "max_provider_fallbacks": 1
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "additionalProperties": true,
+  "properties": {
+    "always_on_listening": {},
+    "push_to_talk": {},
+    "real_audio_capture": {},
+    "request_id": {},
+    "synthetic": {}
+  },
+  "required": [
+    "synthetic",
+    "request_id",
+    "push_to_talk",
+    "always_on_listening",
+    "real_audio_capture"
+  ],
+  "title": "Push To Talk Request",
+  "type": "object"
+}

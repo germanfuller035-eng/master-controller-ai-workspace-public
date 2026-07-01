@@ -1,0 +1,12 @@
+{
+  "briefing_topic": "synthetic local knowledge update",
+  "external_monitoring_requested": false,
+  "external_system_accessed": false,
+  "kind": "news_briefing",
+  "request_id": "syn_news_alpha",
+  "synthetic": true,
+  "synthetic_sources": [
+    "synthetic_note_a",
+    "synthetic_note_b"
+  ]
+}

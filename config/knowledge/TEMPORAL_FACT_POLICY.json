@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-26",
+  "session": "KNOWLEDGE_MEMORY_QDRANT_DOCLING_V1",
+  "temporal_fact_required_fields": ["fact_id", "subject", "predicate", "value", "valid_from", "source_id", "confidence"],
+  "date_format": "ISO_8601_DATE",
+  "minimum_confidence": 0.5,
+  "source_required": true,
+  "conflict_key_fields": ["subject", "predicate", "valid_from"],
+  "conflict_policy": "FLAG_FOR_CURATOR",
+  "unknown_date_policy": "DENY"
+}

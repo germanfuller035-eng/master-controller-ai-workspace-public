@@ -1,0 +1,9 @@
+{
+  "external_system_accessed": false,
+  "kind": "property_task",
+  "property_label": "synthetic_property_alias",
+  "property_transaction_requested": false,
+  "request_id": "syn_property_alpha",
+  "synthetic": true,
+  "task": "prepare upkeep checklist draft"
+}

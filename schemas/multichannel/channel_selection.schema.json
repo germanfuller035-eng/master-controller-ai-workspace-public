@@ -1,0 +1,17 @@
+{
+  "additionalProperties": true,
+  "properties": {
+    "decision": {},
+    "owner_approval_required_for_future_send": {},
+    "selected_channel": {},
+    "synthetic": {}
+  },
+  "required": [
+    "synthetic",
+    "selected_channel",
+    "decision",
+    "owner_approval_required_for_future_send"
+  ],
+  "title": "Channel Selection",
+  "type": "object"
+}

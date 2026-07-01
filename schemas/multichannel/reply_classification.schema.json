@@ -1,0 +1,17 @@
+{
+  "additionalProperties": true,
+  "properties": {
+    "confidence": {},
+    "label": {},
+    "reply_id": {},
+    "synthetic": {}
+  },
+  "required": [
+    "synthetic",
+    "reply_id",
+    "label",
+    "confidence"
+  ],
+  "title": "Reply Classification",
+  "type": "object"
+}

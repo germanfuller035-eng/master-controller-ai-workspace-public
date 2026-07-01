@@ -1,0 +1,38 @@
+{
+  "schema": "consolidation.source_inventory.v1",
+  "note": "MP3-4 — full source inventory + untracked/generated/legacy/main-disk debt classification. Read-only scan; no mass delete, no main-disk original moved/deleted.",
+  "tracked_counts": {
+    "tools": 712, "apps_android": 82, "dist_android": 13, "docs_canonical_proposed": 261,
+    "_generated": 422, "05_security": 2, "00_MASTER_CONTEXT": "present", "09_dashboards": 48, "03_sop": 6
+  },
+  "root_areas": [
+    { "path": "tools/", "system": "all OS + MC + Lead Hunter + Telegram + communication_monitor", "component_type": "source", "source_of_truth": true, "runtime": "mixed", "production_sensitive": true, "duplicate": false, "superseded": false, "orphan": false, "recommended_action": "INCLUDED — primary source tree" },
+    { "path": "apps/mater_controller_android", "system": "Android", "component_type": "source", "source_of_truth": true, "runtime": "device", "production_sensitive": true, "duplicate": false, "superseded": false, "orphan": false, "recommended_action": "INCLUDED — 82 files; no APK/AAB regeneration" },
+    { "path": "dist/master_controller_android", "system": "Android", "component_type": "artifact", "source_of_truth": false, "runtime": "device", "generated": true, "production_sensitive": true, "duplicate": false, "superseded": false, "orphan": false, "recommended_action": "REFERENCE_ONLY — release artifacts; not rebuilt" },
+    { "path": "tools/mater_controller_api", "system": "Master Controller", "component_type": "source", "source_of_truth": true, "runtime": "vps", "production_sensitive": true, "recommended_action": "INCLUDED — sole canonical writer; not modified" },
+    { "path": "tools/lead_hunter", "system": "Lead Hunter", "component_type": "source", "source_of_truth": true, "runtime": "tool", "recommended_action": "INCLUDED — discovery; recommendation-only" },
+    { "path": "tools/communication_monitor", "system": "Communication Monitor", "component_type": "source", "source_of_truth": true, "runtime": "tool", "production_sensitive": true, "contains_real_data": false, "recommended_action": "INCLUDED — read-only subset (6 files) tracked; 21 excluded files remain main-disk-only" },
+    { "path": "docs_canonical_proposed/", "system": "all", "component_type": "documentation", "documentation": true, "recommended_action": "APPLY_IN_BRANCH — 261 proposals -> 261 unique targets" },
+    { "path": "_generated/", "system": "all", "component_type": "generated", "generated": true, "recommended_action": "POLICY — keep reproducibility artifacts/manifests; bundles gitignored" },
+    { "path": "00_MASTER_CONTEXT/", "system": "governance", "component_type": "canonical_docs", "documentation": true, "recommended_action": "CONSOLIDATE — Project Registry / WHAT_ALREADY_EXISTS / AI System Map / SoT" },
+    { "path": "09_dashboards/", "system": "all", "component_type": "dashboard", "documentation": true, "recommended_action": "CONSOLIDATE — domain dashboards + owner centers; add root nav index" },
+    { "path": "03_sop/", "system": "governance", "component_type": "sop", "documentation": true, "recommended_action": "CONSOLIDATE — SOP index" },
+    { "path": "05_security/security_gate.md", "system": "Security", "component_type": "policy", "documentation": true, "recommended_action": "REFERENCE — existing gate" }
+  ],
+  "untracked_generated_legacy": {
+    "untracked_required_source": 0,
+    "communication_monitor_excluded": { "count": 21, "location": "main disk only (D:/AI_WORKSPACE/tools/communication_monitor)", "classification": "KEEP_UNTRACKED_RESTRICTED / ARCHIVE_AFTER_APPROVAL / DELETE_AFTER_APPROVAL per Security disposition", "action": "NOT moved, NOT deleted; owner approval required" },
+    "emergency_route_getme_scripts": { "count": 37, "location": "tools/telegram_gateway (tracked, historical)", "classification": "ARCHIVE_AFTER_APPROVAL", "action": "NOT deleted" },
+    "git_bundles": { "classification": "GENERATED_IGNORE", "action": "gitignored large binaries; per-OS backups retain them locally" },
+    "real_data_artifacts": { "tracked_in_branch": 0, "note": "result JSONs with real emails remain main-disk-only, never tracked" }
+  },
+  "classification_summary": {
+    "TRACK_REQUIRED": "primary tools/ + apps/ + docs",
+    "KEEP_UNTRACKED_RESTRICTED": "21 communication_monitor excluded files (main-disk)",
+    "ARCHIVE_AFTER_APPROVAL": "37 emergency/getMe/route scripts + superseded analytics branch",
+    "GENERATED_IGNORE": "*.gitbundle, temp restore dirs",
+    "REAL_DATA_NEVER_TRACK": "result JSONs with real emails (main-disk-only)",
+    "SECRET_NEVER_TRACK": ".env / credentials (gitignored)",
+    "DELETE_AFTER_APPROVAL": "1 send-script .bak (owner approval; not deleted)"
+  }
+}

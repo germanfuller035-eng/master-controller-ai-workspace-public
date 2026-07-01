@@ -1,0 +1,55 @@
+{
+  "schema": "finance_os.chart_of_accounts.v1",
+  "version": "1.0",
+  "note": "Managerial (not statutory) category structure. Personal and business categories are kept strictly separate.",
+  "revenue": [
+    {"key": "product_sales", "label": "Product sales"},
+    {"key": "subscriptions", "label": "Subscriptions"},
+    {"key": "support", "label": "Support"},
+    {"key": "consulting", "label": "Consulting"},
+    {"key": "implementation", "label": "Implementation"},
+    {"key": "audit", "label": "Audit"},
+    {"key": "website", "label": "Website"},
+    {"key": "lead_systems", "label": "Lead systems"},
+    {"key": "other_confirmed_revenue", "label": "Other confirmed revenue"}
+  ],
+  "direct_costs": [
+    {"key": "contractors", "label": "Contractors"},
+    {"key": "hosting", "label": "Hosting"},
+    {"key": "domains", "label": "Domains"},
+    {"key": "paid_apis", "label": "Paid APIs"},
+    {"key": "design_assets", "label": "Design assets"},
+    {"key": "advertising", "label": "Advertising"},
+    {"key": "project_software", "label": "Project software"},
+    {"key": "delivery_travel", "label": "Delivery travel"},
+    {"key": "client_specific_expense", "label": "Client-specific expense"}
+  ],
+  "operating_expenses": [
+    {"key": "software_subscriptions", "label": "Software subscriptions"},
+    {"key": "vps", "label": "VPS"},
+    {"key": "internet", "label": "Internet"},
+    {"key": "equipment", "label": "Equipment"},
+    {"key": "accounting", "label": "Accounting"},
+    {"key": "legal", "label": "Legal"},
+    {"key": "banking", "label": "Banking"},
+    {"key": "communications", "label": "Communications"},
+    {"key": "office", "label": "Office"},
+    {"key": "insurance", "label": "Insurance"},
+    {"key": "education", "label": "Education"},
+    {"key": "maintenance", "label": "Maintenance"}
+  ],
+  "owner_personal": [
+    {"key": "owner_draw", "label": "Owner draw", "scope": "personal"},
+    {"key": "personal_expense", "label": "Personal expense", "scope": "personal"},
+    {"key": "loan_payment", "label": "Loan payment", "scope": "personal"},
+    {"key": "personal_transfer", "label": "Personal transfer", "scope": "personal"},
+    {"key": "business_reimbursement", "label": "Business reimbursement", "scope": "business"}
+  ],
+  "taxes_reserves": [
+    {"key": "tax_reserve", "label": "Tax reserve"},
+    {"key": "mandatory_payments", "label": "Mandatory payments"},
+    {"key": "accounting_reserve", "label": "Accounting reserve"},
+    {"key": "emergency_reserve", "label": "Emergency reserve"}
+  ],
+  "separation_rule": "Personal categories (owner_draw, personal_expense, loan_payment, personal_transfer) must NEVER be mixed with business revenue/direct/operating categories."
+}

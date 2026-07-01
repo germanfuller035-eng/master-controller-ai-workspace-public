@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-26",
+  "session": "KNOWLEDGE_MEMORY_QDRANT_DOCLING_V1",
+  "curator_required": true,
+  "decision_required_fields": ["decision_id", "proposal_id", "decision", "reviewed_by", "reviewed_at", "reason"],
+  "allowed_decisions": ["APPROVE_PROPOSED_RECORD", "REJECT", "NEEDS_OWNER_APPROVAL"],
+  "approval_creates_record_status": "PROPOSED_NOT_WRITTEN",
+  "rejection_blocks_write": true,
+  "source_date_confidence_classification_validation": true
+}

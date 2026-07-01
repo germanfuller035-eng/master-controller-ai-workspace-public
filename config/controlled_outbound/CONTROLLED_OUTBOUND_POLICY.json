@@ -1,0 +1,30 @@
+{
+  "policy_id": "controlled_outbound_policy_v1",
+  "scope": "LOCAL_SYNTHETIC_ONLY",
+  "safety": {
+    "OUTBOUND_EMAIL": "OFF",
+    "OUTBOUND_SOCIAL": "OFF",
+    "AUTO_SAFE": "OFF",
+    "PAYMENTS": "OFF",
+    "PRODUCTION_DB_WRITE": "OFF",
+    "CRM_WRITE": "OFF",
+    "INVOICE_SEND": "OFF",
+    "ACCOUNTING_EXPORT": "OFF",
+    "REAL_REPLY_MONITOR": "OFF"
+  },
+  "adapters": {
+    "send_adapter_enabled": false,
+    "crm_write_adapter_enabled": false,
+    "payment_provider_enabled": false,
+    "real_inbox_enabled": false
+  },
+  "required_gates": [
+    "owner_approval",
+    "payload_hash",
+    "suppression",
+    "daily_cap",
+    "reply_monitor",
+    "stop",
+    "no_send_guard"
+  ]
+}

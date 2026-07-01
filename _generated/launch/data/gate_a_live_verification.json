@@ -1,0 +1,43 @@
+{
+  "schema": "launch.gate_a_live_verification.v1",
+  "note": "Gate A approved + executed. Network reachable; production API health + TLS + auth boundary verified LIVE. SSH read-only DENIED (key not authorized) -> SSH-dependent state remains UNKNOWN, NOT simulated.",
+  "gate_a_approved": "YES",
+  "gate_a_executed": "PARTIAL",
+  "live_baseline_timestamp_utc": "2026-06-17T19:20:19Z",
+  "vps_reachable": "YES (TCP 443 OPEN, TCP 22 OPEN)",
+  "ssh_authentication": "DENIED (publickey) — offered key SHA256:uZ5hw9xhHCblYUrpIvHTq/Vy4q+VoKStwJBgQgtzRyc not authorized; no ssh-agent; both ~/.ssh keys share this fingerprint",
+  "ssh_technical_reason": "Permission denied (publickey,password) for masterctl@195.96.132.82 with the only available local keys. The authorized release credential is not present in this environment. No simulation performed.",
+  "live_verified_evidence": {
+    "api_health": { "endpoint": "GET /api/v1/health", "http": 200, "service": "mater-controller-api", "displayName": "Master Controller", "apiVersion": "v1", "schema_valid": true, "no_raw_secret_fields": true, "no_raw_internal_object_regression": true, "reproducible": true },
+    "auth_boundary": { "evidence": "GET /system/status, /capabilities, /store/revision all return 401 UNAUTHORIZED ('Требуется подключение устройства')", "meaning": "authorization boundary is ACTIVE and enforced (device pairing required) — a positive security signal", "verified_live": true },
+    "tls": { "issuer": "Let's Encrypt", "notBefore": "2026-06-16", "notAfter": "2026-09-14", "valid": true, "expiry_status": "OK (~88 days)", "verified_live": true },
+    "reachability": { "tcp_443": "OPEN", "tcp_22": "OPEN", "verified_live": true }
+  },
+  "ssh_dependent_UNKNOWN": [
+    "canonical_writer_count", "canonical_mode", "canonical_revision", "canonical_lead_count", "canonical_store_permissions",
+    "queue_pending/running/completed/failed", "dead_letters", "worker_heartbeat", "scheduler_freshness",
+    "service active/enabled states", "service PIDs", "service users", "timer states", "open listeners (internal)",
+    "telegram_poller_count", "telegram_service_user", "telegram_isolation", "telegram_local_fallback", "telegram_source_hashes",
+    "imap_service_state", "imap_timer_state", "imap_last_run", "imap_read_only_config_evidence",
+    "ufw_status", "fail2ban_status", "disk_status", "memory_status", "backup_freshness/checksum",
+    "caddy_service_state (proxy is up per 200, but systemd state unread)",
+    "production_runtime_source_hashes (Phase 8 source match)",
+    "autosend_live_state", "send_allowed_live_state", "ledger send counts (Phase 5)"
+  ],
+  "send_metrics": {
+    "current_gate_a_sends": 0, "smtp_calls": 0, "telegram_api_calls": 0, "messages_sent": 0,
+    "historical_successful_ledger_sends": "UNKNOWN_LIVE (documented baseline 7; not re-read — needs SSH/ledger access)",
+    "release_window_sends": "UNKNOWN_LIVE (documented baseline 0)",
+    "note": "This pass performed only GET /health + GET privileged (401) + TLS read + SSH auth attempts. No SMTP/IMAP/Telegram message operation. No mutation endpoint called."
+  },
+  "production_source_match": {
+    "status": "NOT_LIVE_VERIFIED (requires SSH file hashing)",
+    "offline_delta_analysis": "consolidation candidate added documentation + offline OS tooling ONLY on top of the production release (v0.4.0-rc1 = 9d346f3); no backend/Telegram/IMAP runtime change was authored in the chain after the release.",
+    "expected_runtime_scope": "NONE (pending live hash confirmation)"
+  },
+  "safety": {
+    "vps_changes": 0, "production_canonical_writes": 0, "services_restarted": 0, "reboot": "NO",
+    "backup_executed": "NO", "restore_executed": "NO", "secrets_printed": 0, "credentials_committed": 0,
+    "autosend": "BLOCKED (documented; live state UNKNOWN but no change made)", "tag_moved": "NO", "git_remote": "none"
+  }
+}

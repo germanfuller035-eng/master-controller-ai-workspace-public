@@ -1,0 +1,42 @@
+{
+  "recommendation_id": "rec_TEST_no_presence",
+  "customer_profile": "TEST_no_presence",
+  "primary_product": "digital_presence_check",
+  "secondary_product": null,
+  "do_not_offer": [
+    "lead_system",
+    "ai_front_office",
+    "growth_support",
+    "full_business_audit",
+    "digital_presence_check:not_ready",
+    "owned_presence_pack:not_ready",
+    "start_page_sprint:not_ready",
+    "business_website:not_ready"
+  ],
+  "reason_codes": [
+    "maturity:NO_DIGITAL_PRESENCE",
+    "maturity_reason:declared NO_DIGITAL_PRESENCE consistent with evidence (5 channel checks)",
+    "manual_review:no_active_product_for_segment",
+    "budget_unknown"
+  ],
+  "evidence": [
+    {
+      "category": "identity",
+      "claim_type": "FACT",
+      "source_url": "https://example.test/biz",
+      "source_type": "direct_observation",
+      "checked_at": "2026-06-17",
+      "evidence_excerpt": "verified business name",
+      "confidence": 0.8,
+      "freshness": "fresh",
+      "claim": "verified business name"
+    }
+  ],
+  "confidence": 0.9,
+  "blockers": [
+    "primary_product_not_client_ready:PLANNED"
+  ],
+  "manual_review": true,
+  "price_range": "UNKNOWN (UNKNOWN)",
+  "recommended_next_action": "Internal review only: digital_presence_check is PLANNED, not client-ready. Do not offer."
+}

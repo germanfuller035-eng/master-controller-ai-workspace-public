@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-26",
+  "session": "VOLTAGENT_RUNTIME_MODEL_ROUTER_AND_COST_GOVERNOR_V1",
+  "max_delegation_depth": 1,
+  "max_subagents_per_task": 3,
+  "max_interagent_messages": 8,
+  "max_steps_per_task": 12,
+  "max_runtime_seconds_local_synthetic": 120,
+  "production_capabilities": 0,
+  "memory_enabled": false,
+  "persistent_memory_writes": "DENY",
+  "direct_tool_call": "DENY",
+  "mcp_gateway_required": true
+}

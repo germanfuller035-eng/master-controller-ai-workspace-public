@@ -1,0 +1,8 @@
+{
+  "scenario": "H",
+  "name": "Dependency failure",
+  "ok": true,
+  "steps": [
+    "dag issues: failed_dependency"
+  ]
+}

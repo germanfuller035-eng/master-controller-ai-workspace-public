@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "session": "AGENT_SANDBOX_OBSERVABILITY_AND_EVALS_V1",
+  "allowed_states": [
+    "REQUESTED",
+    "CREATED",
+    "RUNNING",
+    "PAUSED",
+    "CANCELLED",
+    "COMPLETED",
+    "CLEANED_UP"
+  ],
+  "terminal_states": [
+    "CANCELLED",
+    "COMPLETED",
+    "CLEANED_UP"
+  ],
+  "cleanup_required": true,
+  "stop_blocks_new_runs": true,
+  "stop_pauses_active_runs": true,
+  "stop_cancels_pending_actions": true
+}

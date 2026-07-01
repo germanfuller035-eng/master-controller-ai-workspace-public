@@ -1,0 +1,10 @@
+{
+  "scenario": "I",
+  "production_affected": false,
+  "name": "Backup corrupted",
+  "ok": true,
+  "steps": [
+    "checksum_mismatch -> detect:checksum fail health:UNHEALTHY alert:a_backup_failed runbook:rb_backup_checksum"
+  ],
+  "alert": "a_backup_failed"
+}

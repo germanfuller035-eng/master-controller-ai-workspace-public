@@ -1,0 +1,145 @@
+{
+  "session": "OWNER_COMMERCIAL_WORKFLOW_ONE_ACTION_ONE_SCREEN_V1",
+  "device": "Honor ALT-LX1",
+  "screen_results": [
+    {
+      "screen": "Today",
+      "status": "PASS",
+      "evidence": "23_after_reinstall_local_mode.png",
+      "notes": "Owner dashboard opens after local mode; five-tab navigation is visible."
+    },
+    {
+      "screen": "LeadQueue",
+      "status": "PASS",
+      "evidence": "02_leads_queue.png",
+      "notes": "Lead queue and manual website input are reachable."
+    },
+    {
+      "screen": "LeadReview",
+      "status": "PASS",
+      "evidence": "03_lead_review.png",
+      "notes": "Parsed facts, source, confidence, history and suppression are visible without invented contact data."
+    },
+    {
+      "screen": "FirstTouchDraft",
+      "status": "PASS",
+      "evidence": "04_first_touch_draft.png",
+      "notes": "Draft is editable and remains draft-only."
+    },
+    {
+      "screen": "QaGate",
+      "status": "PASS",
+      "evidence": "05a_qa_gate_history_confirmed.png",
+      "notes": "QA route checks unsupported claims, ROI promise, tone, length, compliance and deliverability."
+    },
+    {
+      "screen": "ChannelSelect",
+      "status": "PASS",
+      "evidence": "06_channel_select.png",
+      "notes": "Channel, source, confidence, risk, prior outreach and suppression are visible."
+    },
+    {
+      "screen": "SendPacket",
+      "status": "PASS",
+      "evidence": "07_send_packet.png",
+      "notes": "Package code, text hash, payload hash and explicit not-sent status are visible."
+    },
+    {
+      "screen": "ManualSendReview",
+      "status": "PASS",
+      "evidence": "08_manual_send_review.png",
+      "notes": "Manual send review is owner-controlled; no automatic outbound was triggered."
+    },
+    {
+      "screen": "ManualSendResult",
+      "status": "PASS",
+      "evidence": "09_manual_send_result.png",
+      "notes": "Owner can record sent, no-send, error, replied or postponed locally."
+    },
+    {
+      "screen": "ReplyInbox",
+      "status": "PASS",
+      "evidence": "10_replies_inbox.png",
+      "notes": "Reply monitor is read-only."
+    },
+    {
+      "screen": "ReplyDetail",
+      "status": "PASS",
+      "evidence": "11_reply_detail.png",
+      "notes": "Reply detail routes to deal/CRM gate without auto-reply."
+    },
+    {
+      "screen": "CrmWriteGate",
+      "status": "PASS",
+      "evidence": "12_crm_write_gate.png",
+      "notes": "Production write is gated and off."
+    },
+    {
+      "screen": "DealOverview",
+      "status": "PASS",
+      "evidence": "24_final_deals_tab.png",
+      "notes": "Deals tab opens deal overview and next action."
+    },
+    {
+      "screen": "ProductSelect",
+      "status": "PASS",
+      "evidence": "25b_final_product_select_scrolled.png",
+      "notes": "Product selection is reachable and CTA remains accessible after scroll."
+    },
+    {
+      "screen": "ProductDraft",
+      "status": "PASS",
+      "evidence": "26b_final_product_draft_scrolled.png",
+      "notes": "Product draft is editable and routes to document creation."
+    },
+    {
+      "screen": "DocumentReview",
+      "status": "PASS",
+      "evidence": "27b_final_document_scrolled.png",
+      "notes": "Document review is reachable; invoice draft CTA is accessible."
+    },
+    {
+      "screen": "InvoiceDraft",
+      "status": "PASS",
+      "evidence": "28_final_invoice_draft.png",
+      "notes": "Invoice is draft-only; live payment link is not created."
+    },
+    {
+      "screen": "PaymentGate",
+      "status": "PASS",
+      "evidence": "29_final_payment_gate.png",
+      "notes": "Payment gate is separate and live payments are off."
+    },
+    {
+      "screen": "History",
+      "status": "PASS",
+      "evidence": "30b_final_history_scrolled_after_fix.png",
+      "notes": "Local audit is visible; CTA is above bottom navigation after final spacing fix."
+    },
+    {
+      "screen": "SafetyCenter",
+      "status": "PASS",
+      "evidence": "31_final_safety_center_after_fix.png",
+      "notes": "Auto-send, payments and production write remain gated/off."
+    },
+    {
+      "screen": "SettingsSafety",
+      "status": "PASS",
+      "evidence": "31_final_safety_center_after_fix.png",
+      "notes": "Owner-visible safety status is present in the commercial safety center."
+    }
+  ],
+  "live_actions": {
+    "auto_send": "OFF",
+    "live_email_send": "OFF",
+    "live_social_send": "OFF",
+    "crm_production_write": "OFF",
+    "payment_live": "OFF",
+    "payment_link": "OFF"
+  },
+  "counts": {
+    "outbound_count": 0,
+    "payment_count": 0,
+    "production_db_writes": 0
+  }
+}

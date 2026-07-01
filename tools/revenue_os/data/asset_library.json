@@ -1,0 +1,21 @@
+{
+  "schema": "revenue_os.asset_library.v1",
+  "version": "1.0",
+  "default_status": "DRAFT_INTERNAL",
+  "note": "Structured local asset library. Assets are DRAFT_INTERNAL until owner-approved with evidence. No asset is OWNER_APPROVED without evidence/source.",
+  "assets": [
+    {"asset_id": "onepager_mini_audit", "product_id": "mini_audit", "type": "product_one_pager", "status": "DRAFT_INTERNAL", "version": "0.1", "approved": false, "source": "13_sales/mini_audit_10k_product_spec.md", "last_reviewed": "2026-06-17", "owner": "claude"},
+    {"asset_id": "audit_template_mini", "product_id": "mini_audit", "type": "audit_template", "status": "DRAFT_INTERNAL", "version": "0.1", "approved": false, "source": "data/mini_audit_standard.json", "last_reviewed": "2026-06-17", "owner": "claude"},
+    {"asset_id": "offer_template_mini_audit", "product_id": "mini_audit", "type": "offer_template", "status": "DRAFT_INTERNAL", "version": "0.1", "approved": false, "source": "lib/offer.mjs", "last_reviewed": "2026-06-17", "owner": "claude"},
+    {"asset_id": "proposal_template_default", "product_id": null, "type": "proposal_template", "status": "DRAFT_INTERNAL", "version": "0.1", "approved": false, "source": "lib/proposal.mjs", "last_reviewed": "2026-06-17", "owner": "claude"},
+    {"asset_id": "delivery_checklist_mini_audit", "product_id": "mini_audit", "type": "delivery_checklist", "status": "DRAFT_INTERNAL", "version": "0.1", "approved": false, "source": "data/mini_audit_standard.json", "last_reviewed": "2026-06-17", "owner": "claude"},
+    {"asset_id": "kickoff_checklist_build", "product_id": "business_website", "type": "kickoff_checklist", "status": "DRAFT_INTERNAL", "version": "0.1", "approved": false, "source": "lib/scope.mjs", "last_reviewed": "2026-06-17", "owner": "claude"},
+    {"asset_id": "discovery_questions", "product_id": null, "type": "discovery_questions", "status": "DRAFT_INTERNAL", "version": "0.1", "approved": false, "source": "playbook", "last_reviewed": "2026-06-17", "owner": "claude"},
+    {"asset_id": "qualification_questions", "product_id": null, "type": "qualification_questions", "status": "DRAFT_INTERNAL", "version": "0.1", "approved": false, "source": "lib/recommend.mjs", "last_reviewed": "2026-06-17", "owner": "claude"},
+    {"asset_id": "objection_playbook", "product_id": null, "type": "objection_playbook", "status": "DRAFT_INTERNAL", "version": "1.0", "approved": false, "source": "data/objection_playbook.json", "last_reviewed": "2026-06-17", "owner": "claude"},
+    {"asset_id": "response_templates", "product_id": null, "type": "response_templates", "status": "DRAFT_INTERNAL", "version": "0.1", "approved": false, "source": "lib/messaging.mjs", "last_reviewed": "2026-06-17", "owner": "claude"},
+    {"asset_id": "follow_up_templates", "product_id": null, "type": "follow_up_templates", "status": "DRAFT_INTERNAL", "version": "0.1", "approved": false, "source": "lib/messaging.mjs", "last_reviewed": "2026-06-17", "owner": "claude"},
+    {"asset_id": "project_handoff_template", "product_id": null, "type": "project_handoff_template", "status": "DRAFT_INTERNAL", "version": "0.1", "approved": false, "source": "lib/deal.mjs", "last_reviewed": "2026-06-17", "owner": "claude"},
+    {"asset_id": "acceptance_template", "product_id": null, "type": "acceptance_template", "status": "DRAFT_INTERNAL", "version": "0.1", "approved": false, "source": "lib/scope.mjs", "last_reviewed": "2026-06-17", "owner": "claude"}
+  ]
+}

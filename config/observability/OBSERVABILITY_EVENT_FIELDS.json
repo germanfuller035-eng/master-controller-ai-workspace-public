@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "session": "AGENT_SANDBOX_OBSERVABILITY_AND_EVALS_V1",
+  "required_trace_fields": [
+    "trace_id",
+    "task_id",
+    "workflow_id",
+    "agent_id"
+  ],
+  "required_run_fields": [
+    "trace_id",
+    "task_id",
+    "workflow_id",
+    "agent_id",
+    "model",
+    "provider",
+    "prompt_version",
+    "tool_calls",
+    "policy_decisions",
+    "approvals",
+    "tokens",
+    "calculated_cost",
+    "duration",
+    "retry_count",
+    "artifacts",
+    "verification",
+    "final_status"
+  ],
+  "sensitive_value_policy": "REDACT_BEFORE_WRITE",
+  "local_synthetic_only": true
+}

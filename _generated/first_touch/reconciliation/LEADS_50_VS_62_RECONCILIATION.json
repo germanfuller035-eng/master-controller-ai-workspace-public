@@ -1,0 +1,792 @@
+{
+  "considered": 62,
+  "scored": 7,
+  "not_scored_expected": 55,
+  "not_scored_defect": 0,
+  "unique_ids": 62,
+  "primary_stage_sum": 62,
+  "lost": 0,
+  "deleted": 0,
+  "archived": 0,
+  "exclusion_breakdown": {
+    "MISSING_CONTACT": 21,
+    "MISSING_REAL_AUDIT": 54,
+    "REJECTED": 9,
+    "CONTACT_NOT_EVIDENCED": 10,
+    "TEST_ONLY": 2
+  },
+  "unexplained_exclusions": 0,
+  "rows": [
+    {
+      "lead_id": "JBI-KUBAN_RU",
+      "company": "ЖБИ Кубань",
+      "status": "rejected",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "MISSING_CONTACT",
+        "MISSING_REAL_AUDIT",
+        "REJECTED"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "KZ-JBI_RU",
+      "company": "Краснодарский Завод ЖБИ",
+      "status": "needs_identity_verification",
+      "category": "SCORED",
+      "reasons": [],
+      "quality": 98,
+      "hook": "WEAK_WEBSITE",
+      "score": 84
+    },
+    {
+      "lead_id": "JBK-NVRSK_RU",
+      "company": "ЖБК Новороссийск",
+      "status": "hold_no_public_email",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "CONTACT_NOT_EVIDENCED",
+        "MISSING_REAL_AUDIT"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "JBI-ARMAVIR_RU",
+      "company": "ЖБИ Армавир",
+      "status": "hold_no_public_email",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "CONTACT_NOT_EVIDENCED",
+        "MISSING_REAL_AUDIT"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "JBI-KUBAN-YUG_RU",
+      "company": "ЖБИ Кубань-Юг",
+      "status": "rejected",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "MISSING_CONTACT",
+        "MISSING_REAL_AUDIT",
+        "REJECTED"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "JBI-DINSKAYA_RU",
+      "company": "ЖБИ Динская",
+      "status": "rejected",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "MISSING_CONTACT",
+        "MISSING_REAL_AUDIT",
+        "REJECTED"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "JBI-KROPOTKIN_RU",
+      "company": "СтройЖБИ Кропоткин",
+      "status": "hold_no_public_email",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "CONTACT_NOT_EVIDENCED",
+        "MISSING_REAL_AUDIT"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "JBI-USTLABINSK_RU",
+      "company": "ЖБИ Усть-Лабинск",
+      "status": "rejected",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "MISSING_CONTACT",
+        "MISSING_REAL_AUDIT",
+        "REJECTED"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "BETONSTROY-YUG_RU",
+      "company": "БетонСтрой Юг",
+      "status": "rejected",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "MISSING_CONTACT",
+        "MISSING_REAL_AUDIT",
+        "REJECTED"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "KUBAN-BETON_RU",
+      "company": "Кубань Бетон",
+      "status": "rejected",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "MISSING_CONTACT",
+        "MISSING_REAL_AUDIT",
+        "REJECTED"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "BETON-ADLER_RU",
+      "company": "Бетонный Завод Адлер",
+      "status": "hold_no_public_email",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "CONTACT_NOT_EVIDENCED",
+        "MISSING_REAL_AUDIT"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "BETONMIX-KUBAN_RU",
+      "company": "БетонМикс Кубань",
+      "status": "rejected",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "MISSING_CONTACT",
+        "MISSING_REAL_AUDIT",
+        "REJECTED"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "BETON-KUBANI_RU",
+      "company": "Бетон Кубани",
+      "status": "rejected",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "MISSING_CONTACT",
+        "MISSING_REAL_AUDIT",
+        "REJECTED"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "UGBETON_RU",
+      "company": "ЮгБетон",
+      "status": "written_channel_search_queue",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "MISSING_REAL_AUDIT"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "BETONTRADE-SOCHI_RU",
+      "company": "БетонТрейд Сочи",
+      "status": "written_channel_search_queue",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "MISSING_REAL_AUDIT"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "BETON-ANAPA_RU",
+      "company": "Бетон Анапа",
+      "status": "hold_no_public_email",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "CONTACT_NOT_EVIDENCED",
+        "MISSING_REAL_AUDIT"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "TBETON-KRD_RU",
+      "company": "ТоварныйБетон Краснодар",
+      "status": "rejected",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "MISSING_CONTACT",
+        "MISSING_REAL_AUDIT",
+        "REJECTED"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "METALLK-YUG_RU",
+      "company": "МеталлКонструкция ЮГ",
+      "status": "hold_no_public_email",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "CONTACT_NOT_EVIDENCED",
+        "MISSING_REAL_AUDIT"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "UGMETALLMONTAZH_RU",
+      "company": "ЮгМеталлМонтаж",
+      "status": "written_channel_search_queue",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "MISSING_REAL_AUDIT"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "METALLKARKAS23_RU",
+      "company": "МеталлоКаркас 23",
+      "status": "hold_no_public_email",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "CONTACT_NOT_EVIDENCED",
+        "MISSING_REAL_AUDIT"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "UGMETALLSERVICE_RU",
+      "company": "ЮгМеталлСервис",
+      "status": "written_channel_search_queue",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "MISSING_REAL_AUDIT"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "METALLPROKAT-UFO_RU",
+      "company": "МеталлПрокат ЮФО",
+      "status": "written_channel_search_queue",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "MISSING_REAL_AUDIT"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "STALK-KUBAN_RU",
+      "company": "СтальКонструкция Кубань",
+      "status": "hold_no_public_email",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "CONTACT_NOT_EVIDENCED",
+        "MISSING_REAL_AUDIT"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "METALLSTROY-SOCHI_RU",
+      "company": "МеталлСтрой Сочи",
+      "status": "written_channel_search_queue",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "MISSING_REAL_AUDIT"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "KRASNODARMETALL_RU",
+      "company": "КраснодарМеталл",
+      "status": "hold_no_public_email",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "CONTACT_NOT_EVIDENCED",
+        "MISSING_REAL_AUDIT"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "STRMAT-KUBAN_RU",
+      "company": "СтройМатериалы Кубани",
+      "status": "hold_later",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "MISSING_REAL_AUDIT"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "SK-STROYRESURS_RU",
+      "company": "ТД Стройресурс",
+      "status": "hold_later",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "MISSING_REAL_AUDIT"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "STROYDVOR-KRD_RU",
+      "company": "СтройДвор Краснодар",
+      "status": "hold_later",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "MISSING_REAL_AUDIT"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "STROYOPTTORG-KRD_RU",
+      "company": "СтройОптТорг",
+      "status": "hold_later",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "MISSING_REAL_AUDIT"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "STROYBAZA-SOCHI_RU",
+      "company": "СтройБаза Сочи",
+      "status": "written_channel_search_queue",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "MISSING_REAL_AUDIT"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "STROYTORG-UFO_RU",
+      "company": "СтройТорг ЮФО",
+      "status": "written_channel_search_queue",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "MISSING_REAL_AUDIT"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "STROYGOROD-KRD_RU",
+      "company": "СтройГород Краснодар",
+      "status": "hold_later",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "MISSING_REAL_AUDIT"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "STROYSNAB-KUBAN_RU",
+      "company": "СтройСнаб Кубань",
+      "status": "hold_later",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "MISSING_REAL_AUDIT"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "STROYLIDER-NVRSK_RU",
+      "company": "СтройЛидер Новороссийск",
+      "status": "written_channel_search_queue",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "MISSING_REAL_AUDIT"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "KZMI-KRD_RU",
+      "company": "Кубанский Завод Металлоизделий",
+      "status": "hold_later",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "MISSING_REAL_AUDIT"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "PZBI-YUG_RU",
+      "company": "Производство ЖБ Изделий Юг",
+      "status": "hold_later",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "MISSING_REAL_AUDIT"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "ZAVODSTROYDETAL_RU",
+      "company": "ЗаводСтройДеталь",
+      "status": "hold_later",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "MISSING_REAL_AUDIT"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "PROMZAVOD-KUBAN_RU",
+      "company": "ПромЗавод Кубань",
+      "status": "hold_later",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "MISSING_REAL_AUDIT"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "ZAVODMP_RU",
+      "company": "ЗаводМеталлоПрофиль",
+      "status": "hold_no_public_email",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "CONTACT_NOT_EVIDENCED",
+        "MISSING_REAL_AUDIT"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "PROMSTROYKOMPLEKT_RU",
+      "company": "ПромСтройКомплект",
+      "status": "written_channel_search_queue",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "MISSING_REAL_AUDIT"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "KUBAN-PROFIL_RU",
+      "company": "Кубань-Профиль Производство",
+      "status": "written_channel_search_queue",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "MISSING_REAL_AUDIT"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "ZSM-ADYGEA_RU",
+      "company": "Завод Стройматериалов Адыгея",
+      "status": "written_channel_search_queue",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "MISSING_REAL_AUDIT"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "TEST_OWNER_EMAIL_CHANNEL",
+      "company": "TEST_OWNER_EMAIL_CHANNEL",
+      "status": "waiting_reply",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "TEST_ONLY",
+        "MISSING_REAL_AUDIT"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "GBIRESURS_RU",
+      "company": "ГБИ Ресурс",
+      "status": "send_uncertain",
+      "category": "SCORED",
+      "reasons": [],
+      "quality": 98,
+      "hook": "REQUEST_PATH_FRICTION",
+      "score": 84
+    },
+    {
+      "lead_id": "DKBI_RU",
+      "company": "ДКБИ",
+      "status": "waiting_reply",
+      "category": "SCORED",
+      "reasons": [],
+      "quality": 98,
+      "hook": "WEAK_WEBSITE",
+      "score": 84
+    },
+    {
+      "lead_id": "BETON-MASTERS_RU",
+      "company": "Бетон-Мастер",
+      "status": "send_uncertain",
+      "category": "SCORED",
+      "reasons": [],
+      "quality": 98,
+      "hook": "CONTACT_DISCOVERY_FRICTION",
+      "score": 84
+    },
+    {
+      "lead_id": "STROYDVOR-UG_RU",
+      "company": "СтройДвор-Юг",
+      "status": "waiting_reply",
+      "category": "SCORED",
+      "reasons": [],
+      "quality": 98,
+      "hook": "CONTACT_DISCOVERY_FRICTION",
+      "score": 84
+    },
+    {
+      "lead_id": "MEGALIT-KRD_RU",
+      "company": "Мегалит Краснодар",
+      "status": "send_uncertain",
+      "category": "SCORED",
+      "reasons": [],
+      "quality": 98,
+      "hook": "WEAK_WEBSITE",
+      "score": 84
+    },
+    {
+      "lead_id": "ZAVODATOM_RU",
+      "company": "Завод Атом",
+      "status": "waiting_reply",
+      "category": "SCORED",
+      "reasons": [],
+      "quality": 98,
+      "hook": "CONTACT_DISCOVERY_FRICTION",
+      "score": 84
+    },
+    {
+      "lead_id": "INTERNAL_VALIDATION_ONLY_20260614",
+      "company": "INTERNAL VALIDATION ONLY - Dmitry test mailbox",
+      "status": "waiting_reply",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "TEST_ONLY"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "cand_5d7f29d6abe8",
+      "company": "Парикмахерская",
+      "status": "manual_review_product_routing",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "MISSING_CONTACT",
+        "MISSING_REAL_AUDIT"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "cand_4edcba517d8e",
+      "company": "Тамара",
+      "status": "manual_review_product_routing",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "MISSING_CONTACT",
+        "MISSING_REAL_AUDIT"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "cand_af37d93740f5",
+      "company": "Маркиза",
+      "status": "manual_review_product_routing",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "MISSING_CONTACT",
+        "MISSING_REAL_AUDIT"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "cand_3a9d1ea548d0",
+      "company": "Глория",
+      "status": "manual_review_product_routing",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "MISSING_CONTACT",
+        "MISSING_REAL_AUDIT"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "cand_4f502f12ddb4",
+      "company": "Barbie",
+      "status": "manual_review_product_routing",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "MISSING_CONTACT",
+        "MISSING_REAL_AUDIT"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "cand_c090713edbf8",
+      "company": "Янина",
+      "status": "manual_review_product_routing",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "MISSING_CONTACT",
+        "MISSING_REAL_AUDIT"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "cand_5f6439c7d501",
+      "company": "Виктория",
+      "status": "manual_review_product_routing",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "MISSING_CONTACT",
+        "MISSING_REAL_AUDIT"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "cand_1e381e2a8371",
+      "company": "Paris",
+      "status": "manual_review_product_routing",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "MISSING_CONTACT",
+        "MISSING_REAL_AUDIT"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "cand_8bc8c56551b3",
+      "company": "Салон \"Афродита\"",
+      "status": "manual_review_product_routing",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "MISSING_CONTACT",
+        "MISSING_REAL_AUDIT"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "cand_02aa59b21abf",
+      "company": "Салон Glamour",
+      "status": "manual_review_product_routing",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "MISSING_CONTACT",
+        "MISSING_REAL_AUDIT"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "cand_dba0d1e4bb13",
+      "company": "Салон Рождественский",
+      "status": "manual_review_product_routing",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "MISSING_CONTACT",
+        "MISSING_REAL_AUDIT"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    },
+    {
+      "lead_id": "cand_7166204fc180",
+      "company": "Специализированный салон-парикмахерская",
+      "status": "manual_review_product_routing",
+      "category": "NOT_SCORED_EXPECTED",
+      "reasons": [
+        "MISSING_CONTACT",
+        "MISSING_REAL_AUDIT"
+      ],
+      "quality": null,
+      "hook": null,
+      "score": 0
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "policy_id": "unauthorized_send_prevention_policy_v1",
+  "scope": "LOCAL_SYNTHETIC_ONLY",
+  "unauthorized_sends_target": 0,
+  "false_success_claims_allowed": false,
+  "duplicate_sends_allowed": false,
+  "safety": {
+    "OUTBOUND_EMAIL": "OFF",
+    "OUTBOUND_SOCIAL": "OFF",
+    "AUTO_SAFE": "OFF",
+    "PAYMENTS": "OFF",
+    "PRODUCTION_DB_WRITE": "OFF",
+    "CRM_WRITE": "OFF",
+    "INVOICE_SEND": "OFF",
+    "ACCOUNTING_EXPORT": "OFF",
+    "REAL_REPLY_MONITOR": "OFF"
+  },
+  "blocked_claims": [
+    "sent",
+    "paid",
+    "crm_written",
+    "production_db_written"
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "session": "OWNER_COMMERCIAL_WORKFLOW_GAP_CLOSEOUT_V2",
+  "device": "Honor",
+  "private_evidence": "D:\\AI_FILE_VAULT\\sales_pilot_private\\owner_commercial_workflow_gap_closeout_v2\\20260629_114745",
+  "private_screenshot_count": 41,
+  "screens": [
+    {
+      "screen": "Today",
+      "status": "PASS",
+      "evidence": ["01_today.png"],
+      "checks": ["action dashboard visible", "stale data visible", "last refresh visible", "refresh action visible"]
+    },
+    {
+      "screen": "LeadQueue",
+      "status": "PASS",
+      "evidence": ["02_current_leads.png", "02b_lead_queue_input.png"],
+      "checks": ["private lead queue visible", "manual site input visible", "source/history/suppression summary visible"]
+    },
+    {
+      "screen": "LeadReview",
+      "status": "PASS",
+      "evidence": ["03_lead_review.png"],
+      "checks": ["weak facts are not invented", "manual review required", "contact path visible", "history and suppression visible"]
+    },
+    {
+      "screen": "FirstTouchDraft",
+      "status": "PASS",
+      "evidence": ["04_first_touch_draft.png", "04_first_touch_draft.xml"],
+      "checks": ["draft editable", "not sent status clear", "message structure visible", "text hash generated"]
+    },
+    {
+      "screen": "QAGate",
+      "status": "PASS",
+      "evidence": ["05_qa_gate.png", "05b_qa_override.png", "05f_qa_checkbox_after_keyboard.png"],
+      "checks": ["unsupported claims check visible", "ROI promise check visible", "history/suppression checked", "owner override with reason routes forward"]
+    },
+    {
+      "screen": "ChannelSelect",
+      "status": "PASS",
+      "evidence": ["06_channel_select.png", "06b_channel_select_all_channels.png"],
+      "checks": ["Email visible", "Contact form visible", "Telegram visible", "WhatsApp visible", "Phone visible", "Other/manual visible"]
+    },
+    {
+      "screen": "SendPacket",
+      "status": "PASS",
+      "evidence": ["07_send_packet.png", "07c_send_packet_final_text.png", "07d_send_packet_actions.png"],
+      "checks": ["package code visible", "text hash visible", "not sent visible", "final text visible", "audit preview visible", "edit/channel/hold/reject actions visible"]
+    },
+    {
+      "screen": "ManualSendResult",
+      "status": "PASS",
+      "evidence": ["08_manual_send_result.png"],
+      "checks": ["local result capture visible", "sequence not started", "local audit visible"]
+    },
+    {
+      "screen": "ReplyInbox",
+      "status": "PASS",
+      "evidence": ["09_reply_inbox.png"],
+      "checks": ["read-only monitor visible", "classification list visible", "auto-reply off", "CRM write off"]
+    },
+    {
+      "screen": "ReplyDetail",
+      "status": "PASS",
+      "evidence": ["10_reply_detail.png", "10b_reply_detail_actions.png"],
+      "checks": ["classification visible", "risk visible", "stop request visible", "owner actions visible"]
+    },
+    {
+      "screen": "CRMWriteGate",
+      "status": "PASS",
+      "evidence": ["11_crm_write_gate.png"],
+      "checks": ["production write blocked", "owner approval required", "rollback visible"]
+    },
+    {
+      "screen": "DealOverview",
+      "status": "PASS",
+      "evidence": ["12_deal_overview.png", "12b_deal_stages.png"],
+      "checks": ["stage visible", "next action visible", "documents and payment status visible", "stage ladder visible"]
+    },
+    {
+      "screen": "ProductSelect",
+      "status": "PASS",
+      "evidence": ["13_product_select.png"],
+      "checks": ["product options visible", "Mini Audit selected", "commercial products route visible"]
+    },
+    {
+      "screen": "ProductDraft",
+      "status": "PASS",
+      "evidence": ["14_product_draft.png", "14b_product_draft_pdf_action.png"],
+      "checks": ["draft material visible", "missing facts not invented", "PDF action visible"]
+    },
+    {
+      "screen": "DocumentReview",
+      "status": "PASS",
+      "evidence": ["15_document_review.png", "15b_document_actions.png"],
+      "checks": ["version visible", "private data warning visible", "open PDF/regenerate/prepare offer/manual send actions visible"]
+    },
+    {
+      "screen": "InvoiceDraft",
+      "status": "PASS",
+      "evidence": ["16_invoice_draft.png"],
+      "checks": ["draft-only invoice visible", "payments off", "no payment link"]
+    },
+    {
+      "screen": "PaymentGate",
+      "status": "PASS",
+      "evidence": ["17_payment_gate.png"],
+      "checks": ["provider/legal/amount/recipient/rollback/audit requirements visible", "payment link off"]
+    },
+    {
+      "screen": "History",
+      "status": "PASS",
+      "evidence": ["18_history.png"],
+      "checks": ["local audit visible", "event id rendered as owner-readable event", "payload code visible", "no raw owner-visible audit keys"]
+    },
+    {
+      "screen": "Safety",
+      "status": "PASS",
+      "evidence": ["19_safety.png"],
+      "checks": ["auto-send off", "social live actions off", "reply monitor read-only", "CRM write gated", "payments off"]
+    }
+  ],
+  "live_actions": {
+    "auto_send": "OFF",
+    "payment_live": "OFF",
+    "payment_link": "OFF",
+    "production_write": "OFF",
+    "outbound_count": 0,
+    "payment_count": 0,
+    "production_db_writes": 0
+  }
+}

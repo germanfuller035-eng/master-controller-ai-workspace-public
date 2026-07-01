@@ -1,0 +1,32 @@
+{
+  "schema": "analytics_os.business_glossary.v1",
+  "version": "1.0",
+  "note": "Canonical term definitions for analytics. Each term names its owner system, what is included/excluded, and the common confusion it resolves. Analytics OS references these; domain OS own the underlying data.",
+  "terms": [
+    {"term": "lead", "owner_system": "Master_Controller", "included": "a discovered business entity with a canonical_lead_id", "excluded": "raw unverified candidate scrape rows", "common_confusion": "candidate vs lead — a candidate becomes a lead only after intake"},
+    {"term": "verified", "owner_system": "Master_Controller", "included": "identity + website + contact verification passed", "excluded": "partially verified (only one check passed)", "common_confusion": "verified identity != verified contact; track both"},
+    {"term": "qualified", "owner_system": "Revenue_OS", "included": "lead matching ICP + has a routed product", "excluded": "verified-but-not-fit leads", "common_confusion": "verified != qualified"},
+    {"term": "sent", "owner_system": "Master_Controller", "included": "an outbound message actually dispatched (delivery attempted)", "excluded": "drafts, approvals, TEST_ONLY sends", "common_confusion": "approved != sent; TEST_ONLY sends must not enter commercial funnel"},
+    {"term": "delivered", "owner_system": "Master_Controller", "included": "outbound accepted by recipient mail/transport", "excluded": "bounced / deferred", "common_confusion": "sent != delivered"},
+    {"term": "reply", "owner_system": "Master_Controller", "included": "inbound human response to outbound", "excluded": "auto-replies, bounces, out-of-office", "common_confusion": "any inbound != genuine reply"},
+    {"term": "interested", "owner_system": "Revenue_OS", "included": "reply classified as positive intent", "excluded": "neutral/negative replies", "common_confusion": "reply != interested"},
+    {"term": "opportunity", "owner_system": "Revenue_OS", "included": "qualified interest with a defined product + price path", "excluded": "early interest without scope", "common_confusion": "interested != opportunity"},
+    {"term": "deal", "owner_system": "Revenue_OS", "included": "an opportunity with an explicit offer/proposal", "excluded": "informal discussion", "common_confusion": "opportunity != deal"},
+    {"term": "won", "owner_system": "Revenue_OS", "included": "deal accepted by client (signed/agreed)", "excluded": "verbal-only, unconfirmed", "common_confusion": "won (commercial) != paid (finance) != delivered (delivery)"},
+    {"term": "project", "owner_system": "Delivery_OS", "included": "delivery engagement created from a won deal", "excluded": "internal tasks", "common_confusion": "deal != project; one deal may create one project"},
+    {"term": "accepted", "owner_system": "Delivery_OS", "included": "deliverable accepted by client at acceptance gate", "excluded": "internally complete but not client-accepted", "common_confusion": "completed != accepted"},
+    {"term": "customer", "owner_system": "Customer_Success_OS", "included": "client with an accepted project entering lifecycle", "excluded": "won-but-not-delivered clients", "common_confusion": "won client != active customer"},
+    {"term": "adoption", "owner_system": "Customer_Success_OS", "included": "customer actively using/realizing the delivered value", "excluded": "delivered-but-unused", "common_confusion": "delivered != adopted"},
+    {"term": "outcome", "owner_system": "Customer_Success_OS", "included": "observed business result attributable with stated limitation", "excluded": "claimed result without evidence", "common_confusion": "output (deliverable) != outcome (result)"},
+    {"term": "revenue", "owner_system": "Finance_OS", "included": "booked revenue from won deals", "excluded": "pipeline, forecast", "common_confusion": "booked != invoiced != collected"},
+    {"term": "invoice", "owner_system": "Finance_OS", "included": "issued invoice document", "excluded": "draft invoice", "common_confusion": "invoiced != paid"},
+    {"term": "payment", "owner_system": "Finance_OS", "included": "confirmed received payment", "excluded": "expected/forecast payment", "common_confusion": "expected payment != confirmed payment"},
+    {"term": "cash", "owner_system": "Finance_OS", "included": "confirmed cash balance", "excluded": "receivables", "common_confusion": "cash != revenue"},
+    {"term": "profit", "owner_system": "Finance_OS", "included": "operating result after costs", "excluded": "gross collections", "common_confusion": "payment/cash != profit"},
+    {"term": "readiness", "owner_system": "Product_OS", "included": "assessed product readiness across dimensions", "excluded": "owner aspiration", "common_confusion": "planned != ready; readiness is assessed not declared"},
+    {"term": "pilot", "owner_system": "Product_OS", "included": "controlled product validation run with outcome", "excluded": "live commercial delivery", "common_confusion": "pilot != commercial cycle"},
+    {"term": "target", "owner_system": "Executive_OS / domain_OS", "included": "owner-set goal value", "excluded": "achieved value", "common_confusion": "target != actual — never plot a target as an actual"},
+    {"term": "forecast", "owner_system": "Analytics_OS / domain_OS", "included": "model-estimated future value with assumptions", "excluded": "confirmed value", "common_confusion": "forecast != confirmed; forecast != target"},
+    {"term": "experiment", "owner_system": "Analytics_OS", "included": "governed hypothesis test (design only in this build)", "excluded": "ad-hoc change without hypothesis/guardrails", "common_confusion": "running an experiment is NOT permitted during freeze"}
+  ]
+}

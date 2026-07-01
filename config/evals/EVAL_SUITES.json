@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "session": "AGENT_SANDBOX_OBSERVABILITY_AND_EVALS_V1",
+  "runner": "tools/evals/eval_runner.py",
+  "local_deterministic_only": true,
+  "external_llm_calls_enabled": false,
+  "provider_credentials_required": false,
+  "suites": [
+    {
+      "id": "golden_mini_audit",
+      "enabled": true,
+      "execution": "LOCAL_DETERMINISTIC"
+    },
+    {
+      "id": "golden_offer_agent",
+      "enabled": true,
+      "execution": "LOCAL_DETERMINISTIC"
+    },
+    {
+      "id": "golden_product_strategy",
+      "enabled": true,
+      "execution": "LOCAL_DETERMINISTIC"
+    },
+    {
+      "id": "prompt_regression",
+      "enabled": true,
+      "execution": "LOCAL_DETERMINISTIC"
+    },
+    {
+      "id": "prompt_injection",
+      "enabled": true,
+      "execution": "LOCAL_DETERMINISTIC"
+    },
+    {
+      "id": "excessive_agency",
+      "enabled": true,
+      "execution": "LOCAL_DETERMINISTIC"
+    },
+    {
+      "id": "ssrf",
+      "enabled": true,
+      "execution": "LOCAL_DETERMINISTIC"
+    },
+    {
+      "id": "data_leakage",
+      "enabled": true,
+      "execution": "LOCAL_DETERMINISTIC"
+    },
+    {
+      "id": "tool_discovery",
+      "enabled": true,
+      "execution": "LOCAL_DETERMINISTIC"
+    },
+    {
+      "id": "false_success",
+      "enabled": true,
+      "execution": "LOCAL_DETERMINISTIC"
+    },
+    {
+      "id": "permission_boundary",
+      "enabled": true,
+      "execution": "LOCAL_DETERMINISTIC"
+    }
+  ]
+}

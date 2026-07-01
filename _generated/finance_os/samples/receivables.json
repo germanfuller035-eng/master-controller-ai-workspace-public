@@ -1,0 +1,39 @@
+{
+  "label": "MANAGERIAL_INTERNAL",
+  "buckets": {
+    "upcoming": [],
+    "due_today": [],
+    "overdue_1_7": [],
+    "overdue_8_30": [
+      {
+        "invoice_id": "i1",
+        "client": "A",
+        "outstanding": 10000,
+        "due_date": "2026-06-01"
+      }
+    ],
+    "overdue_31_plus": [],
+    "disputed": [],
+    "partially_paid": [],
+    "blocked_missing_evidence": []
+  },
+  "metrics": {
+    "total_receivable": 10000,
+    "current": 0,
+    "overdue": 10000,
+    "average_days_outstanding": 16,
+    "largest_exposure": {
+      "client": "A",
+      "amount": 10000
+    },
+    "concentration_pct": 100
+  },
+  "reminder_drafts": [
+    {
+      "invoice_id": "i1",
+      "label": "INTERNAL_DRAFT",
+      "send_allowed": false,
+      "body": "Напоминание об оплате по счёту i1 (черновик, не отправлять без approval)."
+    }
+  ]
+}

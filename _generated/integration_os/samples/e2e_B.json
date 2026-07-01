@@ -1,0 +1,12 @@
+{
+  "scenario": "B",
+  "name": "Opt-out suppression",
+  "ok": true,
+  "steps": [
+    "inbound opt-out detected by conversation_hub (recommendation)",
+    "OK: conversation_hub forbidden from writing canonical opt_out",
+    "OK: master_controller is canonical writer of opt_out",
+    "Growth + Revenue suppress outreach (read opt_out)",
+    "Analytics records opt_out_detected event (recommendation kind)"
+  ]
+}

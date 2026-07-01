@@ -1,0 +1,101 @@
+{
+  "total": 19,
+  "issues": [
+    {
+      "kind": "METRIC_WITHOUT_LINEAGE",
+      "ref": "mc_leads_canonical",
+      "severity": "HIGH"
+    },
+    {
+      "kind": "METRIC_WITHOUT_LINEAGE",
+      "ref": "mc_verified_rate",
+      "severity": "HIGH"
+    },
+    {
+      "kind": "METRIC_WITHOUT_LINEAGE",
+      "ref": "rev_pipeline_expected",
+      "severity": "HIGH"
+    },
+    {
+      "kind": "METRIC_WITHOUT_LINEAGE",
+      "ref": "del_acceptance_rate",
+      "severity": "HIGH"
+    },
+    {
+      "kind": "METRIC_WITHOUT_LINEAGE",
+      "ref": "del_cycle_time",
+      "severity": "HIGH"
+    },
+    {
+      "kind": "METRIC_WITHOUT_LINEAGE",
+      "ref": "fin_cash_collected",
+      "severity": "HIGH"
+    },
+    {
+      "kind": "METRIC_WITHOUT_LINEAGE",
+      "ref": "fin_overdue_receivables",
+      "severity": "HIGH"
+    },
+    {
+      "kind": "METRIC_WITHOUT_LINEAGE",
+      "ref": "fin_cash_runway",
+      "severity": "HIGH"
+    },
+    {
+      "kind": "METRIC_WITHOUT_LINEAGE",
+      "ref": "fin_forecast_error",
+      "severity": "HIGH"
+    },
+    {
+      "kind": "METRIC_WITHOUT_LINEAGE",
+      "ref": "prod_active_products",
+      "severity": "HIGH"
+    },
+    {
+      "kind": "METRIC_WITHOUT_LINEAGE",
+      "ref": "prod_pilot_pass_rate",
+      "severity": "HIGH"
+    },
+    {
+      "kind": "METRIC_WITHOUT_LINEAGE",
+      "ref": "prod_readiness_score",
+      "severity": "HIGH"
+    },
+    {
+      "kind": "METRIC_WITHOUT_LINEAGE",
+      "ref": "cs_adoption_rate",
+      "severity": "HIGH"
+    },
+    {
+      "kind": "METRIC_WITHOUT_LINEAGE",
+      "ref": "cs_health_at_risk",
+      "severity": "HIGH"
+    },
+    {
+      "kind": "METRIC_WITHOUT_LINEAGE",
+      "ref": "cs_churn_count",
+      "severity": "HIGH"
+    },
+    {
+      "kind": "METRIC_WITHOUT_LINEAGE",
+      "ref": "exec_decision_backlog",
+      "severity": "HIGH"
+    },
+    {
+      "kind": "METRIC_WITHOUT_LINEAGE",
+      "ref": "exec_owner_attention_load",
+      "severity": "HIGH"
+    },
+    {
+      "kind": "METRIC_WITHOUT_LINEAGE",
+      "ref": "hq_active_projects",
+      "severity": "HIGH"
+    },
+    {
+      "kind": "METRIC_WITHOUT_LINEAGE",
+      "ref": "sys_backup_health",
+      "severity": "HIGH"
+    }
+  ],
+  "node_count": 15
+}

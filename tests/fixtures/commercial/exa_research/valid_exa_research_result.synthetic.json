@@ -1,0 +1,50 @@
+{
+  "research_task_id": "synthetic-research-task-001",
+  "lead_id": "synthetic-lead-exa-001",
+  "company_name": "Synthetic Public Company",
+  "website": "synthetic-public-company.test",
+  "source_type": "public_web_research",
+  "facts": [
+    {
+      "fact_type": "business_category",
+      "fact_value": "Synthetic service company",
+      "source_url": "synthetic://public-web/company-profile",
+      "source_title": "Synthetic Company Profile",
+      "evidence_snippet": "Synthetic public profile states the company category.",
+      "confidence": "high",
+      "status": "confirmed"
+    }
+  ],
+  "buying_signals": [
+    {
+      "signal_type": "contact_page_present",
+      "signal_description": "Synthetic public page includes a contact path, which may support manual review.",
+      "source_url": "synthetic://public-web/contact-page",
+      "source_title": "Synthetic Contact Page",
+      "evidence_snippet": "Synthetic page contains a contact form reference.",
+      "confidence": "medium",
+      "score_impact": 2,
+      "status": "candidate"
+    }
+  ],
+  "contact_candidates": [
+    {
+      "contact_type": "contact_page",
+      "value": "synthetic-contact-page-reference",
+      "source_url": "synthetic://public-web/contact-page",
+      "source_title": "Synthetic Contact Page",
+      "confidence": "high",
+      "status": "confirmed"
+    }
+  ],
+  "risk_flags": [
+    {
+      "risk_type": "synthetic_low_risk",
+      "description": "Synthetic fixture has no outreach risk.",
+      "severity": "low",
+      "source_url": "synthetic://public-web/company-profile"
+    }
+  ],
+  "recommended_next_action": "manual_review_only",
+  "do_not_contact": false
+}

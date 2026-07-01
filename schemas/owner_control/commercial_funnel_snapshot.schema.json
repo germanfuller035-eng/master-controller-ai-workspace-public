@@ -1,0 +1,12 @@
+{
+  "title": "commercial_funnel_snapshot",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["synthetic", "no_send_state", "outbound_count", "evidence"],
+  "properties": {
+    "synthetic": {"type": "boolean"},
+    "no_send_state": {"type": "string"},
+    "outbound_count": {"type": "integer"},
+    "evidence": {"type": "array"}
+  }
+}

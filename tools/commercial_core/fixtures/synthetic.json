@@ -1,0 +1,30 @@
+{
+  "_note": "SYNTHETIC ONLY. example.invalid is a reserved non-routable domain. No real lead/customer/email/payment data. ДКБИ and real production IDs are explicitly NOT used.",
+  "lead": {
+    "lead_id": "SYN_LEAD_001",
+    "customer_id": "SYN_CUST_001",
+    "company": "Синтетический Бетон",
+    "email": "synthetic@example.invalid",
+    "website": "synthetic.example.invalid",
+    "verification_status": "verified"
+  },
+  "unverified_lead": {
+    "lead_id": "SYN_LEAD_002",
+    "customer_id": "SYN_CUST_002",
+    "company": "Непроверенный Подрядчик",
+    "email": "unverified@example.invalid",
+    "verification_status": "unverified"
+  },
+  "product": {
+    "product_id": "mini_audit",
+    "product_version": "v1",
+    "expected_price": 10000,
+    "currency": "RUB",
+    "expected_status": "ACTIVE"
+  },
+  "clock": {
+    "t0": "2026-06-18T09:00:00Z",
+    "t1": "2026-06-18T09:05:00Z",
+    "t2": "2026-06-18T09:10:00Z"
+  }
+}

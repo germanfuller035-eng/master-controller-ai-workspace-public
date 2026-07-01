@@ -1,0 +1,13 @@
+{
+  "scenario": "A",
+  "name": "Documentation task",
+  "ok": true,
+  "steps": [
+    "select agent: DETERMINISTIC_NODE (deterministic alternative exists)",
+    "plan: 3 phases, approval=NOT_REQUIRED",
+    "phase 1 inventory: run (synthetic) -> checkpoint",
+    "phase 2 implement: run (synthetic) -> checkpoint",
+    "phase 3 verify: run (synthetic) -> checkpoint",
+    "verification gates: unit+security+no-network+no-send+no-production = PASS (synthetic)"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "session": "AGENT_SANDBOX_OBSERVABILITY_AND_EVALS_V1",
+  "default_action": "DENY",
+  "production_egress_allowed": false,
+  "synthetic_allowlist": [
+    {
+      "id": "fixture_metadata",
+      "target": "synthetic://fixture-metadata"
+    },
+    {
+      "id": "local_schema_refs",
+      "target": "file://assigned-worktree/schemas"
+    }
+  ],
+  "blocked_targets": [
+    "169.254.169.254",
+    "localhost_admin",
+    "private_network",
+    "production_api",
+    "provider_api"
+  ]
+}

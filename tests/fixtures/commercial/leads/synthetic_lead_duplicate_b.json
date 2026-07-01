@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "synthetic": true,
+  "lead_id": "synthetic_lead_duplicate_b",
+  "source": {
+    "type": "synthetic_fixture",
+    "external_access": false
+  },
+  "identity": {
+    "organization_name": "Synthetic Duplicate Works",
+    "domain_reference": "synthetic-duplicate.example.invalid",
+    "synthetic_registry_id": "registry-synthetic_lead_duplicate_b",
+    "industry": "synthetic services"
+  },
+  "contact": {
+    "website_reference": "synthetic-duplicate.example.invalid/home",
+    "contact_form_reference": "synthetic-form-synthetic_lead_duplicate_b",
+    "public_contact_page_reference": "synthetic-contact-page-synthetic_lead_duplicate_b",
+    "role_contact_reference": "synthetic-role-contact-synthetic_lead_duplicate_b",
+    "consent_basis": "synthetic_fixture_only"
+  },
+  "signals": {
+    "website_problem": 5,
+    "lead_capture_problem": 2,
+    "response_handling_problem": 1,
+    "trust_problem": 3,
+    "audit_uncertainty": 1
+  },
+  "qualification": {
+    "business_relevance": 3,
+    "urgency": 3,
+    "budget_signal": 2
+  },
+  "roi_inputs": {
+    "monthly_leads": 12,
+    "average_value_units": 100,
+    "expected_improvement_ratio": 0.12
+  },
+  "evidence": [
+    {
+      "id": "ev-synthetic_lead_duplicate_b-fixture",
+      "source": "synthetic_lead_fixture",
+      "claim": "Synthetic fixture defines Synthetic Duplicate Works problem signals."
+    }
+  ],
+  "site_fixture": "synthetic_site_bad"
+}

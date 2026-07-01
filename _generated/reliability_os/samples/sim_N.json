@@ -1,0 +1,10 @@
+{
+  "scenario": "N",
+  "production_affected": false,
+  "name": "Dependency cascade",
+  "ok": true,
+  "steps": [
+    "vps_host down -> all production affected",
+    "dependency-based alert suppression applied"
+  ]
+}

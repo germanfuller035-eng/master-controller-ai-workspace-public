@@ -1,0 +1,9 @@
+{
+  "note": "Full per-control inventory with file:line is embedded as JSON blocks in ANDROID_UI_CONTROL_INVENTORY.md (93KB). This file records the summary + automation gaps.",
+  "scan_scope": "release runtime Compose only (excludes @Preview, src/test, src/androidTest)",
+  "estimated_missing_testtag_before_fix": 110,
+  "fixed_testtags": ["push_switch_enabled","push_switch_decisions","push_switch_incidents","push_switch_daily_brief","push_severity_P0","push_severity_P1","push_severity_P2","theme_chip_dark","theme_chip_light","theme_chip_system","settings_conn_status","settings_recheck","btn_unpair_confirm","btn_unpair_cancel"],
+  "dangerous_controls_total": 23,
+  "dangerous_controls_gated": 23,
+  "dangerous_ungated_after_fix": 0
+}

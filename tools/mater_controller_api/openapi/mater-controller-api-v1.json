@@ -1,0 +1,84 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Master Controller API",
+    "version": "1.0.0",
+    "description": "Owner-only HTTP gateway over the existing AI_WORKSPACE Mini Audit services. No second store, no second ledger, no second send path. Autosend is always BLOCKED. (Internal service id remains mater-controller-api for backward compatibility.)"
+  },
+  "servers": [
+    { "url": "http://127.0.0.1:8787/api/v1", "description": "Local loopback" },
+    { "url": "http://{lanHost}:8787/api/v1", "description": "Private LAN", "variables": { "lanHost": { "default": "192.168.1.10" } } }
+  ],
+  "security": [{ "bearerAuth": [] }],
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": { "type": "http", "scheme": "bearer", "bearerFormat": "opaque-device-token" }
+    },
+    "schemas": {
+      "Envelope": {
+        "type": "object",
+        "required": ["ok", "data", "error", "requestId"],
+        "properties": {
+          "ok": { "type": "boolean" },
+          "data": { "type": "object", "nullable": true },
+          "error": {
+            "type": "object", "nullable": true,
+            "properties": {
+              "code": { "type": "string" },
+              "message": { "type": "string" },
+              "details": { "type": "object", "nullable": true }
+            }
+          },
+          "requestId": { "type": "string", "nullable": true }
+        }
+      },
+      "Lead": {
+        "type": "object",
+        "properties": {
+          "leadId": { "type": "string" },
+          "company": { "type": "string" },
+          "website": { "type": "string", "nullable": true },
+          "email": { "type": "string", "nullable": true },
+          "status": { "type": "string", "nullable": true },
+          "sendProof": { "type": "string", "nullable": true },
+          "smtpCode": { "type": "integer", "nullable": true },
+          "sendable": { "type": "boolean" },
+          "category": { "type": "string" },
+          "blockingReasons": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    }
+  },
+  "paths": {
+    "/health": { "get": { "summary": "Health (public)", "security": [], "responses": { "200": { "description": "OK", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Envelope" } } } } } } },
+    "/system/status": { "get": { "summary": "System status (secret-free booleans)", "responses": { "200": { "description": "OK" }, "401": { "description": "Unauthorized" } } } },
+    "/system/events": { "get": { "summary": "Recent redacted events", "responses": { "200": { "description": "OK" } } } },
+    "/system/refresh": { "post": { "summary": "Recompute system status", "responses": { "200": { "description": "OK" } } } },
+    "/auth/pairing/start": { "post": { "summary": "Start one-time pairing (10 min, single-use)", "security": [], "responses": { "200": { "description": "code + ttl" } } } },
+    "/auth/pairing/complete": { "post": { "summary": "Complete pairing -> device tokens", "security": [], "responses": { "200": { "description": "tokens" }, "400": { "description": "invalid/used/expired code" } } } },
+    "/auth/refresh": { "post": { "summary": "Rotate access token", "security": [], "responses": { "200": { "description": "new access token" }, "401": { "description": "invalid refresh" } } } },
+    "/auth/devices": { "get": { "summary": "List paired devices", "responses": { "200": { "description": "OK" } } } },
+    "/auth/devices/{deviceId}": { "delete": { "summary": "Revoke a device", "parameters": [{ "name": "deviceId", "in": "path", "required": true, "schema": { "type": "string" } }], "responses": { "200": { "description": "revoked" }, "404": { "description": "not found" } } } },
+    "/projects": { "get": { "summary": "List projects (mini_audit only is active)", "responses": { "200": { "description": "OK" } } } },
+    "/projects/{projectId}": { "get": { "summary": "Project detail", "parameters": [{ "name": "projectId", "in": "path", "required": true, "schema": { "type": "string" } }], "responses": { "200": { "description": "OK" }, "404": { "description": "not found" } } } },
+    "/mini-audit/status": { "get": { "summary": "Bucket counts + autosend BLOCKED", "responses": { "200": { "description": "OK" } } } },
+    "/mini-audit/next-action": { "get": { "summary": "Operator next action", "responses": { "200": { "description": "OK" } } } },
+    "/mini-audit/metrics": { "get": { "summary": "Metrics", "responses": { "200": { "description": "OK" } } } },
+    "/mini-audit/leads": { "get": { "summary": "Lead list", "parameters": [{ "name": "bucket", "in": "query", "schema": { "type": "string", "enum": ["all", "ready_send", "waiting_reply", "followups", "needs_check", "send_uncertain", "preparing"] } }, { "name": "search", "in": "query", "schema": { "type": "string" } }, { "name": "page", "in": "query", "schema": { "type": "integer" } }, { "name": "pageSize", "in": "query", "schema": { "type": "integer" } }], "responses": { "200": { "description": "OK" } } } },
+    "/mini-audit/leads/{leadId}": { "get": { "summary": "Lead detail", "parameters": [{ "name": "leadId", "in": "path", "required": true, "schema": { "type": "string" } }], "responses": { "200": { "description": "OK" }, "404": { "description": "not found" } } } },
+    "/mini-audit/leads/{leadId}/audit": { "get": { "summary": "Audit preview", "parameters": [{ "name": "leadId", "in": "path", "required": true, "schema": { "type": "string" } }], "responses": { "200": { "description": "OK" } } } },
+    "/mini-audit/leads/{leadId}/audit/prepare": { "post": { "summary": "Request audit preparation (safe)", "parameters": [{ "name": "leadId", "in": "path", "required": true, "schema": { "type": "string" } }], "responses": { "200": { "description": "OK" } } } },
+    "/mini-audit/leads/{leadId}/email-preview": { "get": { "summary": "Email preview", "parameters": [{ "name": "leadId", "in": "path", "required": true, "schema": { "type": "string" } }], "responses": { "200": { "description": "OK" } } } },
+    "/mini-audit/leads/{leadId}/email-preview/prepare": { "post": { "summary": "Request email prep (safe)", "parameters": [{ "name": "leadId", "in": "path", "required": true, "schema": { "type": "string" } }], "responses": { "200": { "description": "OK" } } } },
+    "/mini-audit/leads/{leadId}/send/prepare": { "post": { "summary": "Create approval intent (re-checks eligibility)", "parameters": [{ "name": "leadId", "in": "path", "required": true, "schema": { "type": "string" } }], "responses": { "200": { "description": "approval intent" }, "409": { "description": "LEAD_NOT_SENDABLE" } } } },
+    "/mini-audit/approvals/{approvalId}/approve": { "post": { "summary": "Owner-confirmed real send via canonical router (no real SMTP in no-send mode)", "parameters": [{ "name": "approvalId", "in": "path", "required": true, "schema": { "type": "string" } }], "responses": { "200": { "description": "sent" }, "404": { "description": "not found" }, "409": { "description": "blocked" } } } },
+    "/mini-audit/approvals/{approvalId}/reject": { "post": { "summary": "Reject approval", "parameters": [{ "name": "approvalId", "in": "path", "required": true, "schema": { "type": "string" } }], "responses": { "200": { "description": "rejected" } } } },
+    "/mini-audit/approvals/{approvalId}/postpone": { "post": { "summary": "Postpone approval", "parameters": [{ "name": "approvalId", "in": "path", "required": true, "schema": { "type": "string" } }], "responses": { "200": { "description": "postponed" } } } },
+    "/mini-audit/followups": { "get": { "summary": "Follow-up candidates (proven only)", "responses": { "200": { "description": "OK" } } } },
+    "/mini-audit/followups/{leadId}/preview": { "get": { "summary": "Follow-up preview", "parameters": [{ "name": "leadId", "in": "path", "required": true, "schema": { "type": "string" } }], "responses": { "200": { "description": "OK" }, "404": { "description": "not due" } } } },
+    "/mini-audit/followups/{leadId}/prepare": { "post": { "summary": "Prepare follow-up (autosend BLOCKED)", "parameters": [{ "name": "leadId", "in": "path", "required": true, "schema": { "type": "string" } }], "responses": { "200": { "description": "OK" } } } },
+    "/mini-audit/followups/{leadId}/postpone": { "post": { "summary": "Postpone follow-up", "parameters": [{ "name": "leadId", "in": "path", "required": true, "schema": { "type": "string" } }], "responses": { "200": { "description": "OK" } } } },
+    "/mini-audit/send-uncertain": { "get": { "summary": "Send-uncertain leads", "responses": { "200": { "description": "OK" } } } },
+    "/mini-audit/send-uncertain/{leadId}/check-proof": { "post": { "summary": "Check SMTP proof (no auto resend)", "parameters": [{ "name": "leadId", "in": "path", "required": true, "schema": { "type": "string" } }], "responses": { "200": { "description": "OK" } } } }
+  }
+}

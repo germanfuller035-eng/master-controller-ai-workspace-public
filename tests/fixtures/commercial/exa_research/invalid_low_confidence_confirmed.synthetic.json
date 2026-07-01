@@ -1,0 +1,23 @@
+{
+  "research_task_id": "synthetic-research-task-003",
+  "lead_id": "synthetic-lead-exa-003",
+  "company_name": "Synthetic Low Confidence Company",
+  "website": "synthetic-low-confidence.test",
+  "source_type": "public_web_research",
+  "facts": [
+    {
+      "fact_type": "business_category",
+      "fact_value": "Synthetic service company",
+      "source_url": "synthetic://public-web/company-profile",
+      "source_title": "Synthetic Company Profile",
+      "evidence_snippet": "Synthetic evidence is ambiguous.",
+      "confidence": "low",
+      "status": "confirmed"
+    }
+  ],
+  "buying_signals": [],
+  "contact_candidates": [],
+  "risk_flags": [],
+  "recommended_next_action": "manual_review_only",
+  "do_not_contact": false
+}

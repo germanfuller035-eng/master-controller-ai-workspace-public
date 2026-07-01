@@ -1,0 +1,35 @@
+{
+  "schema": "consolidation.dashboard.v1",
+  "generated_ts": "20260617_000000",
+  "chain_status": {
+    "linear": "YES",
+    "all_heads": "YES",
+    "lost_commits": 0
+  },
+  "systems_included": 20,
+  "canonical_docs": {
+    "proposals": 261,
+    "applied_in_branch": 261,
+    "collisions": 0
+  },
+  "registries": {
+    "system_registry": "PASS",
+    "source_of_truth": "35 entities, dup_writers=0"
+  },
+  "tests": "all prior OS suites green + consolidation",
+  "owner_decisions": {
+    "total": 27,
+    "blocking_consolidation": 0,
+    "blocking_live_verification": 11,
+    "blocking_commercial_launch": 10,
+    "non_blocking": "remainder (deferrable)",
+    "legal_review_required": 2
+  },
+  "security_gate": "READY_FOR_OWNER_REVIEW",
+  "reliability_gate": "READY_FOR_INTERNAL_REVIEW",
+  "legacy_items": 4,
+  "migration_readiness": "plans READY; none applied",
+  "launch_readiness": "CANDIDATE prepared; live verification + owner decisions pending",
+  "blockers": "none block consolidation; live-verification + commercial-launch decisions pending",
+  "next_action": "owner reviews acceptance pack + decision backlog; then authorize live verification"
+}

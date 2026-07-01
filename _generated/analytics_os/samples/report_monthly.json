@@ -1,0 +1,547 @@
+{
+  "report_id": "analytics_monthly_20260617_193000",
+  "period": "monthly",
+  "generated_ts": "20260617_193000",
+  "source_note": "Derived read-only from canonical OS sources; no dashboards/funnels created; no canonical writes.",
+  "by_system": [
+    {
+      "source_system": "Finance_OS",
+      "metric_count": 4,
+      "keys": [
+        "booked_revenue",
+        "cash_collected",
+        "operating_result",
+        "cash_runway"
+      ]
+    },
+    {
+      "source_system": "Revenue_OS",
+      "metric_count": 1,
+      "keys": [
+        "active_products"
+      ]
+    },
+    {
+      "source_system": "Delivery_OS",
+      "metric_count": 1,
+      "keys": [
+        "acceptance_rate"
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "key": "booked_revenue",
+      "label": "booked_revenue",
+      "value": 25000,
+      "unit": "EUR",
+      "period": "monthly",
+      "period_label": "2026-06",
+      "source_system": "Finance_OS",
+      "source_field": "booked_revenue",
+      "status": "OWNER_TARGET"
+    },
+    {
+      "key": "cash_collected",
+      "label": "cash_collected",
+      "value": 18000,
+      "unit": "EUR",
+      "period": "monthly",
+      "period_label": "2026-06",
+      "source_system": "Finance_OS",
+      "source_field": "cash_collected",
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "operating_result",
+      "label": "operating_result",
+      "value": 1200,
+      "unit": "EUR",
+      "period": "monthly",
+      "period_label": "2026-06",
+      "source_system": "Finance_OS",
+      "source_field": "operating_result",
+      "status": "MODEL_ESTIMATE"
+    },
+    {
+      "key": "cash_runway",
+      "label": "cash_runway",
+      "value": 2.5,
+      "unit": "months",
+      "period": "monthly",
+      "period_label": "2026-06",
+      "source_system": "Finance_OS",
+      "source_field": "cash_runway",
+      "status": "MODEL_ESTIMATE"
+    },
+    {
+      "key": "active_products",
+      "label": "active_products",
+      "value": 2,
+      "unit": "count",
+      "period": "monthly",
+      "period_label": "2026-06",
+      "source_system": "Revenue_OS",
+      "source_field": "active_products",
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "acceptance_rate",
+      "label": "acceptance_rate",
+      "value": 0.85,
+      "unit": "ratio",
+      "period": "monthly",
+      "period_label": "2026-06",
+      "source_system": "Delivery_OS",
+      "source_field": "acceptance_rate",
+      "status": "MODEL_ESTIMATE"
+    }
+  ],
+  "aggregates": [
+    {
+      "key": "booked_revenue",
+      "source_system": "Finance_OS",
+      "unit": "EUR",
+      "count": 5,
+      "sum": 45000,
+      "avg": 9000,
+      "min": 0,
+      "max": 25000,
+      "status": "OWNER_TARGET"
+    },
+    {
+      "key": "cash_collected",
+      "source_system": "Finance_OS",
+      "unit": "EUR",
+      "count": 5,
+      "sum": 26000,
+      "avg": 5200,
+      "min": 0,
+      "max": 18000,
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "operating_result",
+      "source_system": "Finance_OS",
+      "unit": "EUR",
+      "count": 5,
+      "sum": -7300,
+      "avg": -1460,
+      "min": -3200,
+      "max": 1200,
+      "status": "MODEL_ESTIMATE"
+    },
+    {
+      "key": "cash_runway",
+      "source_system": "Finance_OS",
+      "unit": "months",
+      "count": 5,
+      "sum": 18.5,
+      "avg": 3.7,
+      "min": 2.5,
+      "max": 5,
+      "status": "MODEL_ESTIMATE"
+    },
+    {
+      "key": "active_products",
+      "source_system": "Revenue_OS",
+      "unit": "count",
+      "count": 5,
+      "sum": 5,
+      "avg": 1,
+      "min": 0,
+      "max": 2,
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "acceptance_rate",
+      "source_system": "Delivery_OS",
+      "unit": "ratio",
+      "count": 3,
+      "sum": 2.75,
+      "avg": 0.92,
+      "min": 0.85,
+      "max": 1,
+      "status": "MODEL_ESTIMATE"
+    }
+  ],
+  "trends": [
+    {
+      "key": "booked_revenue",
+      "direction": "UP",
+      "first": 0,
+      "last": 25000,
+      "change_abs": 25000,
+      "change_pct": null,
+      "n_points": 5,
+      "source_system": "Finance_OS",
+      "status": "OWNER_TARGET",
+      "points": [
+        {
+          "period_label": "2026-02",
+          "value": 0
+        },
+        {
+          "period_label": "2026-03",
+          "value": 0
+        },
+        {
+          "period_label": "2026-04",
+          "value": 10000
+        },
+        {
+          "period_label": "2026-05",
+          "value": 10000
+        },
+        {
+          "period_label": "2026-06",
+          "value": 25000
+        }
+      ]
+    },
+    {
+      "key": "cash_collected",
+      "direction": "UP",
+      "first": 0,
+      "last": 18000,
+      "change_abs": 18000,
+      "change_pct": null,
+      "n_points": 5,
+      "source_system": "Finance_OS",
+      "status": "CONFIRMED",
+      "points": [
+        {
+          "period_label": "2026-02",
+          "value": 0
+        },
+        {
+          "period_label": "2026-03",
+          "value": 0
+        },
+        {
+          "period_label": "2026-04",
+          "value": 0
+        },
+        {
+          "period_label": "2026-05",
+          "value": 8000
+        },
+        {
+          "period_label": "2026-06",
+          "value": 18000
+        }
+      ]
+    },
+    {
+      "key": "operating_result",
+      "direction": "UP",
+      "first": -3000,
+      "last": 1200,
+      "change_abs": 4200,
+      "change_pct": 1.4,
+      "n_points": 5,
+      "source_system": "Finance_OS",
+      "status": "MODEL_ESTIMATE",
+      "points": [
+        {
+          "period_label": "2026-02",
+          "value": -3000
+        },
+        {
+          "period_label": "2026-03",
+          "value": -3200
+        },
+        {
+          "period_label": "2026-04",
+          "value": -1500
+        },
+        {
+          "period_label": "2026-05",
+          "value": -800
+        },
+        {
+          "period_label": "2026-06",
+          "value": 1200
+        }
+      ]
+    },
+    {
+      "key": "cash_runway",
+      "direction": "DOWN",
+      "first": 5,
+      "last": 2.5,
+      "change_abs": -2.5,
+      "change_pct": -0.5,
+      "n_points": 5,
+      "source_system": "Finance_OS",
+      "status": "MODEL_ESTIMATE",
+      "points": [
+        {
+          "period_label": "2026-02",
+          "value": 5
+        },
+        {
+          "period_label": "2026-03",
+          "value": 4
+        },
+        {
+          "period_label": "2026-04",
+          "value": 4
+        },
+        {
+          "period_label": "2026-05",
+          "value": 3
+        },
+        {
+          "period_label": "2026-06",
+          "value": 2.5
+        }
+      ]
+    },
+    {
+      "key": "active_products",
+      "direction": "UP",
+      "first": 0,
+      "last": 2,
+      "change_abs": 2,
+      "change_pct": null,
+      "n_points": 5,
+      "source_system": "Revenue_OS",
+      "status": "CONFIRMED",
+      "points": [
+        {
+          "period_label": "2026-02",
+          "value": 0
+        },
+        {
+          "period_label": "2026-03",
+          "value": 1
+        },
+        {
+          "period_label": "2026-04",
+          "value": 1
+        },
+        {
+          "period_label": "2026-05",
+          "value": 1
+        },
+        {
+          "period_label": "2026-06",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "key": "acceptance_rate",
+      "direction": "DOWN",
+      "first": 1,
+      "last": 0.85,
+      "change_abs": -0.15,
+      "change_pct": -0.15,
+      "n_points": 3,
+      "source_system": "Delivery_OS",
+      "status": "MODEL_ESTIMATE",
+      "points": [
+        {
+          "period_label": "2026-02",
+          "value": null
+        },
+        {
+          "period_label": "2026-03",
+          "value": null
+        },
+        {
+          "period_label": "2026-04",
+          "value": 1
+        },
+        {
+          "period_label": "2026-05",
+          "value": 0.9
+        },
+        {
+          "period_label": "2026-06",
+          "value": 0.85
+        }
+      ]
+    }
+  ],
+  "funnel_view": {
+    "funnel_ref": "revenue_os/funnel_base",
+    "stages": [
+      {
+        "stage": "candidates",
+        "count": 1000,
+        "conv_from_top": 1,
+        "conv_from_prev": 1,
+        "drop_from_prev": 0
+      },
+      {
+        "stage": "contacted",
+        "count": 220,
+        "conv_from_top": 0.22,
+        "conv_from_prev": 0.22,
+        "drop_from_prev": 0.78
+      },
+      {
+        "stage": "replied",
+        "count": 60,
+        "conv_from_top": 0.06,
+        "conv_from_prev": 0.2727,
+        "drop_from_prev": 0.7273
+      },
+      {
+        "stage": "qualified",
+        "count": 24,
+        "conv_from_top": 0.024,
+        "conv_from_prev": 0.4,
+        "drop_from_prev": 0.6
+      },
+      {
+        "stage": "proposal",
+        "count": 12,
+        "conv_from_top": 0.012,
+        "conv_from_prev": 0.5,
+        "drop_from_prev": 0.5
+      },
+      {
+        "stage": "won",
+        "count": 5,
+        "conv_from_top": 0.005,
+        "conv_from_prev": 0.4167,
+        "drop_from_prev": 0.5833
+      }
+    ],
+    "overall_conversion": 0.005,
+    "biggest_drop_stage": {
+      "stage": "contacted",
+      "drop": 0.78
+    },
+    "status": "MODEL_ESTIMATE"
+  },
+  "cohorts": {
+    "cohorts": [
+      {
+        "cohort_key": "2026-04",
+        "size": 3,
+        "periods_observed": 3,
+        "retention_curve": [
+          {
+            "period": 0,
+            "retained": 3,
+            "rate": 1
+          },
+          {
+            "period": 1,
+            "retained": 3,
+            "rate": 1
+          },
+          {
+            "period": 2,
+            "retained": 2,
+            "rate": 0.6667
+          }
+        ],
+        "current_retained": 2,
+        "current_retention_rate": 0.6667,
+        "status": "MODEL_ESTIMATE"
+      },
+      {
+        "cohort_key": "2026-05",
+        "size": 4,
+        "periods_observed": 2,
+        "retention_curve": [
+          {
+            "period": 0,
+            "retained": 4,
+            "rate": 1
+          },
+          {
+            "period": 1,
+            "retained": 3,
+            "rate": 0.75
+          }
+        ],
+        "current_retained": 3,
+        "current_retention_rate": 0.75,
+        "status": "MODEL_ESTIMATE"
+      },
+      {
+        "cohort_key": "2026-06",
+        "size": 2,
+        "periods_observed": 1,
+        "retention_curve": [
+          {
+            "period": 0,
+            "retained": 2,
+            "rate": 1
+          }
+        ],
+        "current_retained": 2,
+        "current_retention_rate": 1,
+        "status": "MODEL_ESTIMATE"
+      }
+    ],
+    "total_cohorts": 3,
+    "total_members": 9,
+    "blended_retention_rate": 0.7778,
+    "status": "MODEL_ESTIMATE"
+  },
+  "anomalies": {
+    "total": 6,
+    "by_severity": {
+      "HIGH": 1,
+      "LOW": 5
+    },
+    "anomalies": [
+      {
+        "metric_key": "cash_runway",
+        "kind": "THRESHOLD_BREACH",
+        "severity": "HIGH",
+        "observed": 2.5,
+        "expected": ">= 3",
+        "note": "cash_runway below warning threshold",
+        "status": "MODEL_ESTIMATE"
+      },
+      {
+        "metric_key": "booked_revenue",
+        "kind": "SPIKE",
+        "severity": "LOW",
+        "observed": 1.5,
+        "note": "booked_revenue rose 150% period-over-period",
+        "status": "OWNER_TARGET"
+      },
+      {
+        "metric_key": "cash_collected",
+        "kind": "SPIKE",
+        "severity": "LOW",
+        "observed": 1.25,
+        "note": "cash_collected rose 125% period-over-period",
+        "status": "CONFIRMED"
+      },
+      {
+        "metric_key": "operating_result",
+        "kind": "SPIKE",
+        "severity": "LOW",
+        "observed": 0.5313,
+        "note": "operating_result rose 53% period-over-period",
+        "status": "MODEL_ESTIMATE"
+      },
+      {
+        "metric_key": "operating_result",
+        "kind": "SPIKE",
+        "severity": "LOW",
+        "observed": 2.5,
+        "note": "operating_result rose 250% period-over-period",
+        "status": "MODEL_ESTIMATE"
+      },
+      {
+        "metric_key": "active_products",
+        "kind": "SPIKE",
+        "severity": "LOW",
+        "observed": 1,
+        "note": "active_products rose 100% period-over-period",
+        "status": "CONFIRMED"
+      }
+    ]
+  }
+}

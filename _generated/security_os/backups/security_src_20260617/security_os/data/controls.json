@@ -1,0 +1,106 @@
+{
+  "schema": "security_os.controls.v1",
+  "note": "MP22-40 — security controls + reconciliations + incident/vuln/compliance/release-gate. Static; no exploit, no live scan, no production change, no legal assertion.",
+  "synthetic": true,
+
+  "application_security": {
+    "controls": ["input_validation", "output_encoding", "command_injection_prevention", "path_traversal_prevention", "no_unsafe_deserialization", "no_prototype_pollution", "regex_dos_bounds", "ssrf_prevention", "open_redirect_prevention", "file_upload_validation", "mime_validation", "size_limits", "archive_bomb_prevention", "safe_temp_files", "no_shell_invocation", "controlled_subprocess"],
+    "validation": "static + safe synthetic tests; no production exploit"
+  },
+
+  "api_security": {
+    "requirements": ["https_only", "authentication_required", "authorization", "revision", "idempotency", "validation", "rate_limit_contract", "replay_protection", "structured_errors", "no_stack_traces", "no_secrets", "pagination_bounds", "body_size_bounds", "timeout", "request_correlation"],
+    "note": "no changes to production API; contract validation only"
+  },
+
+  "prompt_injection_security": {
+    "threats": ["malicious_repository_instruction", "malicious_client_message", "malicious_attachment", "prompt_injection_in_web_content", "request_to_expose_secrets", "instruction_to_bypass_approval", "instruction_to_run_network_command", "instruction_to_modify_canonical_state", "tool_output_poisoning"],
+    "controls": ["instruction_hierarchy", "source_trust_classification", "allowed_path_policy", "capability_gate", "secret_exclusion", "output_validation", "no_automatic_execution", "owner_approval", "deterministic_verification"],
+    "source_trust": { "system_prompt": "TRUSTED", "owner": "TRUSTED", "repository_code": "REVIEW", "client_message": "UNTRUSTED", "web_content": "UNTRUSTED", "tool_output": "UNTRUSTED_VERIFY" }
+  },
+
+  "data_exfiltration_controls": {
+    "blocked": ["secrets_in_generated_reports", "credentials_in_context_packs", "production_files_in_fixtures", "full_mail_bodies_in_analytics", "real_contacts_in_demos", "financial_data_in_general_logs", "special_category_in_agent_prompts", "uploads_to_external_without_approval"],
+    "validation": "static"
+  },
+
+  "dependency_sbom": [
+    { "component": "imapflow", "version": "^1.0.156", "ecosystem": "npm", "source": "tools/communication_monitor/package.json", "license_reference": "MIT_REVIEW", "runtime_usage": "imap_read_only_lazy", "development_only": false, "network_capable": true, "known_review_status": "REVIEW", "update_policy": "owner_gated" },
+    { "component": "node_builtin (fs/path/crypto/child_process)", "version": "runtime", "ecosystem": "node", "source": "all tools", "license_reference": "node", "runtime_usage": "core", "development_only": false, "network_capable": false, "known_review_status": "TRUSTED", "update_policy": "node_version" },
+    { "component": "gradle/android_plugins", "version": "see android build", "ecosystem": "gradle", "source": "android project", "license_reference": "REVIEW", "runtime_usage": "build", "development_only": true, "network_capable": true, "known_review_status": "REVIEW", "update_policy": "owner_gated" }
+  ],
+  "sbom_note": "SBOM-like static inventory. No live vulnerability lookup, no package update in this task. The OS chain is intentionally near-dependency-free (deterministic Node builtins).",
+
+  "file_attachment_security": {
+    "controls": ["mime_allowlist", "extension_mismatch_detection", "max_size", "checksum", "archive_handling", "path_normalization", "traversal_prevention", "executable_detection", "macro_file_handling", "malware_scan_future_contract", "quarantine", "file_vault_reference"],
+    "note": "no real file uploaded"
+  },
+
+  "android_security": { "controls": ["https_only", "no_server_secrets", "room_cache_classified_PERSONAL", "cache_encryption_status=REQUIRES_LIVE_VERIFICATION", "no_sensitive_logging", "release_signing_external", "backup_behavior_reviewed", "offline_mutation_prohibited", "revision_handling", "certificate_validation", "debug_build_separated"], "note": "no Android build modification; no APK/AAB" },
+
+  "telegram_security": { "controls": ["owner_identity", "api_only", "token_isolation_env", "callback_validation", "revision", "idempotency", "no_local_file_access", "no_raw_object_output", "no_secret_output", "no_client_send_path_from_owner_ui", "one_poller_contract", "service_user_permissions"], "note": "no API call, no deployment" },
+
+  "email_imap_security": { "controls": ["explicit_read_only", "no_flag_mutation", "no_send", "no_APPEND", "no_DELETE", "no_expunge", "tls_contract", "credential_reference_env", "timeout", "bounded_reads", "message_body_minimization", "attachment_handling", "failure_redaction"], "approved_transport_note": "approved email transport reviewed as separate contract; neither path executed" },
+
+  "conversation_hub_security": { "controls": ["identity_conflict_blocks_routing", "recipient_evidence_required", "opt_out_enforced", "draft_validation", "approval_reference_only", "no_direct_transport", "redaction", "retention", "attachment_references", "official_channel_only", "no_unofficial_whatsapp_max"] },
+
+  "orchestration_security": { "controls": ["R3+_owner_gate", "no_agent_self_approval", "capability_restrictions", "no_secret_access", "no_production_executor", "no_scheduler", "bounded_retries", "lease", "checkpoint", "artifact_sensitivity", "context_minimization", "prompt_injection_policy", "token_cost_integrity"] },
+
+  "backup_security": { "controls": ["backup_classification_CONFIDENTIAL", "access_owner", "integrity_checksum_sha256", "encryption_status=PLANNED", "off_site_status=owner_defined", "retention_rotation", "restore_authorization_owner_gated", "no_secret_inclusion", "no_real_production_data_in_tracked_backup", "test_restore", "deletion_owner_gated"], "note": "no backup uploaded" },
+
+  "incident_response": {
+    "types": ["credential_leak", "unauthorized_access", "malicious_dependency", "production_data_exposure", "canonical_corruption", "unauthorized_send", "device_loss", "vps_compromise", "git_history_leak", "backup_loss", "malware", "prompt_injection_incident"],
+    "lifecycle": ["DETECTED", "TRIAGED", "CONTAINMENT_PLANNED", "OWNER_REVIEW", "CONTAINED", "ERADICATION_PLANNED", "RECOVERY_PLANNED", "VERIFIED", "POSTMORTEM", "CLOSED"],
+    "runbooks": {
+      "credential_leak": "do NOT print value -> identify path/type/fingerprint -> owner-gated rotation runbook -> revoke -> reissue -> audit -> verify -> postmortem. No automatic rotation.",
+      "git_history_leak": "scan history (offline) -> owner decision -> rotate affected credential -> history rewrite is owner+high-risk gated -> never auto.",
+      "prompt_injection_incident": "isolate source -> classify untrusted -> revoke agent capability -> owner review -> add fixture -> verify.",
+      "vps_compromise": "owner-only; isolate -> rotate all credentials -> restore from verified backup -> postmortem. Out of scope to execute."
+    },
+    "this_task": "synthetic runbooks only"
+  },
+
+  "vulnerability_management": {
+    "model_fields": ["vulnerability_id", "asset", "source", "severity", "exploitability", "exposure", "evidence", "status", "mitigation", "verification", "exception", "owner"],
+    "statuses": ["NEW", "VALIDATING", "CONFIRMED", "FALSE_POSITIVE", "MITIGATION_PLANNED", "OWNER_REVIEW", "ACCEPTED_RISK", "FIXED", "VERIFIED"],
+    "note": "no live scanning"
+  },
+
+  "security_exceptions": {
+    "required_fields": ["control", "reason", "asset", "risk", "compensating_control", "owner", "expiry", "review", "evidence"],
+    "rules": ["no permanent exception without expiry/review", "agent cannot approve exception"]
+  },
+
+  "compliance_control_mapping": [
+    { "area": "access_control", "status": "PARTIAL", "evidence": "least_privilege_matrix + boundary tests", "legal_review": false },
+    { "area": "secrets", "status": "IMPLEMENTED_AND_TESTED", "evidence": "secret scanner + env-only policy", "legal_review": false },
+    { "area": "change_management", "status": "DOCUMENTED_ONLY", "evidence": "git + approval gates", "legal_review": false },
+    { "area": "backups", "status": "PARTIAL", "evidence": "SHA256 + bundle verify; encryption planned", "legal_review": false },
+    { "area": "incident_response", "status": "DOCUMENTED_ONLY", "evidence": "synthetic runbooks", "legal_review": false },
+    { "area": "privacy", "status": "LEGAL_REVIEW_REQUIRED", "evidence": "PIA framework", "legal_review": true },
+    { "area": "retention", "status": "PARTIAL", "evidence": "retention policy; statutory items legal", "legal_review": true },
+    { "area": "secure_development", "status": "IMPLEMENTED_AND_TESTED", "evidence": "per-OS security tests + this control plane", "legal_review": false },
+    { "area": "logging", "status": "DOCUMENTED_ONLY", "evidence": "redaction standard + validator", "legal_review": false },
+    { "area": "supplier_dependency", "status": "PARTIAL", "evidence": "SBOM inventory", "legal_review": false },
+    { "area": "business_continuity", "status": "PARTIAL", "evidence": "backup/restore tests", "legal_review": false },
+    { "area": "communication_consent", "status": "LEGAL_REVIEW_REQUIRED", "evidence": "consent reconciliation", "legal_review": true }
+  ],
+  "compliance_disclaimer": "Internal evidence-based control catalog. Does NOT claim 'GDPR compliant', '152-FZ compliant', 'ISO certified', or 'fully compliant'. Jurisdiction-neutral controls + legal-review flags only.",
+
+  "security_release_gate": {
+    "requirements": ["no_critical_secret_finding", "no_tracked_live_secret", "no_unauthorized_writer", "no_direct_send_bypass", "security_tests_pass", "privacy_tests_pass", "dependency_inventory", "backup_restore_evidence", "rollback", "owner_approval", "unresolved_high_risk_exceptions_listed"],
+    "statuses": ["NOT_READY", "BLOCKED", "READY_FOR_OWNER_REVIEW", "OWNER_ACCEPTED_REFERENCE"],
+    "current_status": "READY_FOR_OWNER_REVIEW",
+    "evaluation": {
+      "no_tracked_live_secret": true,
+      "no_unauthorized_writer": true,
+      "no_direct_send_bypass": true,
+      "security_tests_pass": true,
+      "dependency_inventory": true,
+      "backup_restore_evidence": true,
+      "owner_approval": "PENDING",
+      "unresolved_high_risk_exceptions": []
+    },
+    "note": "no actual release approval; READY_FOR_OWNER_REVIEW is the max reachable state"
+  }
+}

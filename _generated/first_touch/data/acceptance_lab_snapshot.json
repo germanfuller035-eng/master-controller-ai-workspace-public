@@ -1,0 +1,79 @@
+{
+  "transport": "real HTTP via mater-controller-api on 127.0.0.1:8799 (isolated sandbox store copy), authed bearer (paired)",
+  "summary": {
+    "leads_scored": 50,
+    "pilot_eligible": 7,
+    "top_5_count": 5,
+    "top_3_count": 3,
+    "recommended_pilot": "BETON-MASTERS_RU",
+    "controlled_send_gate": "DISABLED",
+    "transport_enabled": false,
+    "no_send": true,
+    "scope": "COMMERCIAL_REAL_ONLY"
+  },
+  "candidates": {
+    "leads_scored": 50,
+    "pilot_eligible": 7,
+    "top_5": [
+      {
+        "lead_id": "BETON-MASTERS_RU",
+        "hook": "CONTACT_DISCOVERY_FRICTION",
+        "q": 98,
+        "score": 84
+      },
+      {
+        "lead_id": "DKBI_RU",
+        "hook": "WEAK_WEBSITE",
+        "q": 98,
+        "score": 84
+      },
+      {
+        "lead_id": "GBIRESURS_RU",
+        "hook": "REQUEST_PATH_FRICTION",
+        "q": 98,
+        "score": 84
+      },
+      {
+        "lead_id": "KZ-JBI_RU",
+        "hook": "WEAK_WEBSITE",
+        "q": 98,
+        "score": 84
+      },
+      {
+        "lead_id": "MEGALIT-KRD_RU",
+        "hook": "WEAK_WEBSITE",
+        "q": 98,
+        "score": 84
+      }
+    ],
+    "recommended_pilot": "BETON-MASTERS_RU"
+  },
+  "pilot_readiness": {
+    "recommended_pilot": "BETON-MASTERS_RU",
+    "controlled_send_gate": "DISABLED",
+    "transport_enabled": false,
+    "send_allowed_live": false,
+    "approval_token_issued": false,
+    "no_send": true,
+    "readiness": {
+      "contact_evidenced": true,
+      "no_commercial_send": true,
+      "real_audit": true,
+      "hook_confirmed": true,
+      "quality_ok": true,
+      "owner_text_approved": false,
+      "transport_disabled": true
+    }
+  },
+  "recommended_artifact": {
+    "lead_id": "BETON-MASTERS_RU",
+    "status": "QA_PASSED",
+    "hook": "CONTACT_DISCOVERY_FRICTION",
+    "quality": 98,
+    "quality_gate": "PASS",
+    "compliance_gate": "PASS",
+    "deliverability": "READY_NO_SEND",
+    "smtp_probing": false,
+    "no_send": true
+  }
+}

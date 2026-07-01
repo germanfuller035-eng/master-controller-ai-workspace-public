@@ -1,0 +1,13 @@
+{
+  "clean_tree_used": true,
+  "full_repo_present": false,
+  "worktree_fallback_possible": false,
+  "closure_files_copied": 22,
+  "err_module_not_found": 0,
+  "cwd_path_failures": 0,
+  "read_models_execute": true,
+  "migration_applies": true,
+  "catalog_module_relative": true,
+  "pass": 12,
+  "fail": 0
+}

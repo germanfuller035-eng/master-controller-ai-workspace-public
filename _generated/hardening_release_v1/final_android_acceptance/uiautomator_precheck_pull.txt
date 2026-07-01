@@ -1,0 +1,1 @@
+/sdcard/final_acceptance_precheck.xml: 1 file pulled, 0 skipped. 0.1 MB/s (809 bytes in 0.007s)

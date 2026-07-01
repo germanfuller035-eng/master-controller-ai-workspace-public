@@ -1,0 +1,10 @@
+{
+  "result": "unmatched",
+  "confidence": 0.1,
+  "reasons": [
+    "no amount/reference/client match"
+  ],
+  "auto_confirm": false,
+  "requires_owner_confirmation": true,
+  "note": "Probable/over/under/unmatched are NEVER auto-confirmed. Owner confirms."
+}

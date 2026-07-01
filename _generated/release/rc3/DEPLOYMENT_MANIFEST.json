@@ -1,0 +1,35 @@
+{
+  "release": "0.8.0-rc3",
+  "generated_utc": "20260620_161039",
+  "base_head": "b048cf3",
+  "entries": [
+    {
+      "path": "src/owner_center/reliability.mjs",
+      "sha256": "65fcca8bf73d3b29cf257d5e32d6597fa795654d1b877dcd9192c897183db9dd"
+    },
+    {
+      "path": "src/owner_center/cost_center.mjs",
+      "sha256": "408df5e5f205e8202127cb767237cab54d3545b793b34ea8eb04904872021574"
+    },
+    {
+      "path": "src/owner_center/backup_center.mjs",
+      "sha256": "53bda32cb2f69cd7c95ae79d52edd120f092615d461c3b52442d6702e186dae2"
+    },
+    {
+      "path": "src/owner_center/fcm_push.mjs",
+      "sha256": "21375c4cb6ddd0f7451194ed3c5af9d6388498fdb40bc014d3c5ef6dc839918b"
+    },
+    {
+      "path": "src/shared/config.mjs",
+      "sha256": "9bac66cc47a0f7795d99fb27cb5bdaf50cc4117d47c2bf53903d78bc67369e53"
+    },
+    {
+      "path": "src/server/index.mjs",
+      "sha256": "cae2f2db74fc6a14dedf3097e1e05dac6031dae4603798a23bd42bb75c9df06b"
+    },
+    {
+      "path": "src/worker/index.mjs",
+      "sha256": "4aee63ff78bc32f667bf16650004bca66cd4eb4d140e030b66362d06fffb84b4"
+    }
+  ]
+}

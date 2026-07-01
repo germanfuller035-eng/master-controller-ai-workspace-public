@@ -1,0 +1,1178 @@
+{
+  "schema": "ai_hq.inventory.v1",
+  "generated_ts": "20260617_025903",
+  "workspace_root": "D:\\AI_WORKSPACE",
+  "is_fixture": true,
+  "totals": {
+    "files": 44668,
+    "top_level_dirs": 169,
+    "large_files": 13,
+    "release_artifacts": 30,
+    "sensitive_files": 127,
+    "secret_contour_files": 237
+  },
+  "by_category": {
+    "other": 1232,
+    "knowledge": 1332,
+    "backup": 6946,
+    "data": 3421,
+    "archive": 72,
+    "code": 31513,
+    "sensitive": 127,
+    "release_artifact": 25
+  },
+  "top_dirs": {
+    "tools": 25182,
+    "tmp": 9907,
+    "apps": 6392,
+    "00_IMPORTS": 872,
+    "09_dashboards": 742,
+    "13_sales": 238,
+    "17_client_projects": 123,
+    "03_sop": 96,
+    "backups": 94,
+    "00_COMMANDS": 84,
+    "02_templates": 83,
+    "99_ARCHIVE": 82,
+    "20_file_vault_index": 68,
+    "99_SYSTEM": 61,
+    "04_agents": 60,
+    "00_MASTER_CONTEXT": 55,
+    "11_backup": 50,
+    "bonding_vpn": 44,
+    "data": 38,
+    "08_zettelkasten": 37,
+    "00_SYSTEM_INDEX": 35,
+    "05_security": 30,
+    "dist": 25,
+    "00_BACKUPS": 25,
+    "06_projects": 17,
+    "00_MASTER_CONTROLLER": 16,
+    "_release_backup_20260616_2100": 15,
+    "00_architecture": 15,
+    "99_backups": 9,
+    "00_MOC": 9,
+    "04_cline": 8,
+    "02_daily": 8,
+    "12_reminders": 7,
+    "02_context_packs": 3,
+    "10_local_ai": 2,
+    "07_revenue_os": 2,
+    "01_projects": 2,
+    "!o))": 1,
+    "({...l": 1,
+    "({approval_id": 1,
+    ".clineignore": 1,
+    ".cline_cloud_guard.md": 1,
+    ".cline_dashboard_guard.md": 1,
+    ".env": 1,
+    ".env.backup.after_selftest_before_restore_20260613_125124": 1,
+    ".env.backup.before_selftest_toggle_20260613_110805": 1,
+    ".env.backup.manual_email_20260612104720": 1,
+    ".gitignore": 1,
+    "00_ACTIVE_CONTEXT.md": 1,
+    "00_CONTEXT_BOOTSTRAP_FOR_CLINE.md": 1,
+    "00_START_HERE.md": 1,
+    "00_START_HERE_OBSIDIAN.md": 1,
+    "00_SYSTEM_STATE.md": 1,
+    "BATCH1_FIX_LIST.md": 1,
+    "BATCH1_VALIDATION_REPORT.md": 1,
+    "BATCH2_IMPLEMENTATION_REPORT.md": 1,
+    "COMMERCIAL_PIPELINE_REBUILD_REPORT.md": 1,
+    "CURRENT_RELEASE_CHECKPOINT.md": 1,
+    "DUPLICATE_REMOVAL_PLAN.md": 1,
+    "EXECUTION_BACKLOG_P0.md": 1,
+    "EXECUTION_BACKLOG_P1.md": 1,
+    "EXECUTION_BACKLOG_P2.md": 1,
+    "express_review_data.json": 1,
+    "INVARIANT_VIOLATIONS.md": 1,
+    "JSON.stringify(x).includes(leadId)).length": 1,
+    "k": 1,
+    "l.enrichment_batch_id": 1,
+    "l.includes(leadId))": 1,
+    "l.includes(leadId)).length}": 1,
+    "l.lead_id": 1,
+    "LEAD_DATABASE_INTEGRITY_AUDIT.md": 1,
+    "lead_database_integrity_audit_fast_results.json": 1,
+    "lead_database_integrity_audit_live_results.json": 1,
+    "line.includes(leadId))": 1,
+    "LIVE_VALIDATION_BLOCKER_FIX_REPORT.md": 1,
+    "LIVE_VALIDATION_BLOCKER_ROOTCAUSE.md": 1,
+    "LIVE_VALIDATION_EXECUTION_REPORT.md": 1,
+    "LIVE_VALIDATION_FINAL_REPORT.md": 1,
+    "LIVE_VALIDATION_PREP_REPORT.md": 1,
+    "LIVE_VALIDATION_RERUN_REPORT.md": 1,
+    "Modelfile.phi3-low": 1,
+    "P0_BACKLOG_REBUILT.md": 1,
+    "P0_IMPLEMENTATION_PLAN.md": 1,
+    "P0_LIVE_VALIDATION_CLOSEOUT_REPORT.md": 1,
+    "P0_LIVE_VALIDATION_FINAL_CLOSEOUT.md": 1,
+    "P0_LIVE_VALIDATION_FINAL_CLOSEOUT_V2.md": 1,
+    "P0_LIVE_VALIDATION_FINAL_CLOSEOUT_V3.md": 1,
+    "P0_P1_P2_TELEGRAM_PRODUCTION_READINESS_NOW.md": 1,
+    "package-lock.json": 1,
+    "package.json": 1,
+    "PHASE1_EXECUTION_PLAN.md": 1,
+    "PRODUCTION_INVARIANTS.md": 1,
+    "PRODUCTION_LIVE_VALIDATION_PLAN.md": 1,
+    "PRODUCTION_VERIFICATION_REPORT.md": 1,
+    "README_FOR_AI.md": 1,
+    "README_START_HERE.md": 1,
+    "REVISED_P0_FINDINGS.md": 1,
+    "SEND_ADAPTER_CONFIG_ROOTCAUSE.md": 1,
+    "SEND_ADAPTER_ENV_FIX_REPORT.md": 1,
+    "SENT_FOLDER_LIVE_SELFTEST_REPORT.md": 1,
+    "SENT_FOLDER_PERSISTENCE_IMPLEMENTATION_REPORT.md": 1,
+    "SYSTEM_CANONICAL_MAP.md": 1,
+    "SYSTEM_TRUTH_MAP.md": 1,
+    "TELEGRAM_CONTROLLER_CANONICAL_RESTART_PROOF.md": 1,
+    "TELEGRAM_CONTROLLER_EXIT_ROOTCAUSE.md": 1,
+    "TELEGRAM_CONTROLLER_EXPORT_FIX_REPORT.md": 1,
+    "TELEGRAM_CONTROLLER_RECOVERY_REPORT.md": 1,
+    "TELEGRAM_CONTROLLER_RESTART_AFTER_EXPORT_FIX_REPORT.md": 1,
+    "TELEGRAM_CONTROLLER_STABILITY_FIX_REPORT.md": 1,
+    "TELEGRAM_CONTROLLER_STATUS_CANONICAL_FIX_REPORT.md": 1,
+    "TELEGRAM_CONTROLLER_STOP_REASON.md": 1,
+    "TELEGRAM_START_PREFLIGHT_FIX_REPORT.md": 1,
+    "TOP_5_DEEP_COMMERCIAL_AUDIT_PACK.md": 1,
+    "update_state.js": 1,
+    "VALIDATED_CANONICAL_MAP.md": 1,
+    "VALIDATED_DUPLICATES.md": 1,
+    "VALIDATED_TRUTH_MAP.md": 1,
+    "VALIDATION_LEAD_RECIPIENT_ROOTCAUSE.md": 1,
+    "VALIDATION_PREVIEW_FIX_REPORT.md": 1,
+    "VALIDATION_PREVIEW_ROOTCAUSE.md": 1,
+    "VALIDATION_RECIPIENT_MAPPING_FIX_REPORT.md": 1,
+    "VERIFIED_LEAD_ACCEPTANCE_CRITERIA.md": 1,
+    "VERIFIED_LEAD_APPROVAL_CLI_V2_REPORT.md": 1,
+    "VERIFIED_LEAD_APPROVAL_DECISIONS_V2.json": 1,
+    "VERIFIED_LEAD_APPROVAL_QUEUE_V2.md": 1,
+    "VERIFIED_LEAD_APPROVAL_WORKFLOW_V2_REPORT.md": 1,
+    "VERIFIED_LEAD_ARCHIVE_INDEX.md": 1,
+    "VERIFIED_LEAD_AUTOMATION_ROADMAP.md": 1,
+    "VERIFIED_LEAD_CONTACT_CHANNEL_ROUTING_FIX_REPORT.md": 1,
+    "VERIFIED_LEAD_CONTACT_FORM_MANUAL_ACTION_STATUS_REPORT.md": 1,
+    "VERIFIED_LEAD_CONTACT_FORM_PREVIEW_V2_REPORT.md": 1,
+    "VERIFIED_LEAD_CONTACT_FORM_REVIEW_CLI_V2_REPORT.md": 1,
+    "VERIFIED_LEAD_EMAIL_BRANCH_PROOF_V2_REPORT.md": 1,
+    "VERIFIED_LEAD_EMAIL_ONLY_FILTER_V2_REPORT.md": 1,
+    "VERIFIED_LEAD_FINAL_SEND_CONFIRM_CLI_V2_REPORT.md": 1,
+    "VERIFIED_LEAD_INTAKE_ENGINE.md": 1,
+    "VERIFIED_LEAD_INTAKE_ENGINE_V2_IMPLEMENTATION_REPORT.md": 1,
+    "VERIFIED_LEAD_MIGRATION_PLAN.md": 1,
+    "VERIFIED_LEAD_MINI_AUDIT_PREVIEW_V2_REPORT.md": 1,
+    "VERIFIED_LEAD_MINI_AUDIT_QUALITY_GATE_V2_REPORT.md": 1,
+    "VERIFIED_LEAD_MINI_AUDIT_REVIEW_CLI_V2_REPORT.md": 1,
+    "VERIFIED_LEAD_ONE_SHOT_REAL_SEND_EXECUTOR_V2_REPORT.md": 1,
+    "VERIFIED_LEAD_ONE_SHOT_SEND_EXECUTOR_DRY_RUN_V2_REPORT.md": 1,
+    "VERIFIED_LEAD_ONE_SHOT_SEND_GATE_V2.json": 1,
+    "VERIFIED_LEAD_ONE_SHOT_SEND_GATE_V2_REPORT.md": 1,
+    "VERIFIED_LEAD_OPERATIONS_SOP.md": 1,
+    "VERIFIED_LEAD_PIPELINE_V2.md": 1,
+    "VERIFIED_LEAD_PRODUCTION_PROMOTION_V2_REPORT.md": 1,
+    "VERIFIED_LEAD_PROMOTION_PREVIEW_V2_REPORT.md": 1,
+    "VERIFIED_LEAD_SCHEMA_V2.md": 1,
+    "VERIFIED_LEAD_SCORING_ENGINE.md": 1,
+    "VERIFIED_LEAD_SEND_APPROVAL_CLI_V2_REPORT.md": 1,
+    "VERIFIED_LEAD_SEND_APPROVAL_DECISIONS_V2.json": 1,
+    "VERIFIED_LEAD_SEND_APPROVAL_QUEUE_V2.md": 1,
+    "VERIFIED_LEAD_SEND_APPROVAL_RECORD_V2_REPORT.md": 1,
+    "VERIFIED_LEAD_SEND_EXECUTION_PREVIEW_V2_REPORT.md": 1,
+    "VERIFIED_LEAD_SEND_READINESS_PREVIEW_V2_REPORT.md": 1,
+    "VERIFIED_LEAD_SOURCE_MAP.md": 1,
+    "VERIFIED_LEAD_STAGING_STORE_V2.json": 1,
+    "VERIFIED_LEAD_STAGING_STORE_V2_REPORT.md": 1,
+    "VERIFIED_LEAD_STATUS_FLOW.md": 1,
+    "VERIFIED_LEAD_STORE_V2.json": 1,
+    "x": 1,
+    "{const": 1,
+    "examples": 1,
+    "16_fitness_products": 1,
+    "13_personal_assistant": 1,
+    ".clinerules": 1,
+    ".claude": 1
+  },
+  "large_files": [
+    {
+      "path": "tools/voice_transcription/.venv/Lib/site-packages/torch/lib/torch_cpu.dll",
+      "size": 307778048
+    },
+    {
+      "path": "tools/voice_transcription/.venv/Lib/site-packages/torch/lib/torch_cpu.lib",
+      "size": 29853556
+    },
+    {
+      "path": "tools/voice_transcription/.venv/Lib/site-packages/llvmlite/binding/llvmlite.dll",
+      "size": 106602496
+    },
+    {
+      "path": "apps/mater_controller_android/app/build/outputs/mapping/release/mapping.txt",
+      "size": 36736675
+    },
+    {
+      "path": "apps/mater_controller_android/app/build/intermediates/intermediary_bundle/release/shrinkBundleReleaseResources/intermediary-bundle.aab",
+      "size": 41596403
+    },
+    {
+      "path": "apps/mater_controller_android/app/build/intermediates/intermediary_bundle/release/packageReleaseBundle/intermediary-bundle.aab",
+      "size": 41979104
+    },
+    {
+      "path": "apps/mater_controller_android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/btZrQlgAl2eF2eKK0bOqAuzJgNE=",
+      "size": 37425981
+    },
+    {
+      "path": "apps/mater_controller_android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/btZrQlgAl2eF2eKK0bOqAuzJgNE=",
+      "size": 37425981
+    },
+    {
+      "path": "apps/mater_controller_android/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex",
+      "size": 44609512
+    },
+    {
+      "path": "00_IMPORTS/chatgpt_official_export_raw/chatgpt_official_export_2026-05-26.zip.zip",
+      "size": 267843062
+    },
+    {
+      "path": "00_IMPORTS/chatgpt_official_export_extracted/2026-05-26/chat.html",
+      "size": 114941723
+    },
+    {
+      "path": "00_IMPORTS/chatgpt_official_export_extracted/2026-05-26/conversations-000.json",
+      "size": 27880746
+    },
+    {
+      "path": "00_IMPORTS/chatgpt_official_export_extracted/2026-05-26/conversations-001.json",
+      "size": 103559957
+    }
+  ],
+  "release_artifacts": [
+    {
+      "path": "tools/voice_transcription/.venv/Lib/site-packages/pkg_resources/tests/data/my-test-package-zip/my-test-package.zip",
+      "size": 1809
+    },
+    {
+      "path": "tools/voice_transcription/.venv/Lib/site-packages/numpy/random/tests/data/generator_pcg64_np121.pkl.gz",
+      "size": 203
+    },
+    {
+      "path": "tools/voice_transcription/.venv/Lib/site-packages/numpy/random/tests/data/generator_pcg64_np126.pkl.gz",
+      "size": 208
+    },
+    {
+      "path": "tools/voice_transcription/.venv/Lib/site-packages/numpy/random/tests/data/sfc64_np126.pkl.gz",
+      "size": 290
+    },
+    {
+      "path": "tools/voice_transcription/.venv/Lib/site-packages/networkx/generators/atlas.dat.gz",
+      "size": 8887
+    },
+    {
+      "path": "dist/master_controller_android/MasterController-debug-v0.2.0-rc2.apk",
+      "size": 18853656
+    },
+    {
+      "path": "dist/master_controller_android/MasterController-debug-v0.3.0-rc1.apk",
+      "size": 18886887
+    },
+    {
+      "path": "dist/master_controller_android/MasterController-debug-v0.4.0-rc1.apk",
+      "size": 19068735
+    },
+    {
+      "path": "dist/master_controller_android/MasterController-debug.apk",
+      "size": 18873344
+    },
+    {
+      "path": "dist/master_controller_android/MasterController-release-v0.2.0-rc2.aab",
+      "size": 4795700
+    },
+    {
+      "path": "dist/master_controller_android/MasterController-release-v0.2.0-rc2.apk",
+      "size": 2162343
+    },
+    {
+      "path": "dist/master_controller_android/MasterController-release-v0.3.0-rc1.aab",
+      "size": 4825687
+    },
+    {
+      "path": "dist/master_controller_android/MasterController-release-v0.3.0-rc1.apk",
+      "size": 2179131
+    },
+    {
+      "path": "dist/master_controller_android/MasterController-release-v0.4.0-rc1.aab",
+      "size": 4946918
+    },
+    {
+      "path": "dist/master_controller_android/MasterController-release-v0.4.0-rc1.apk",
+      "size": 2229659
+    },
+    {
+      "path": "dist/master_controller_android/MasterController-release.aab",
+      "size": 4790389
+    },
+    {
+      "path": "dist/master_controller_android/MasterController-release.apk",
+      "size": 2162335
+    },
+    {
+      "path": "dist/master_controller_android/MasterController-v0.4.0-rc1-release-bundle/MasterController-debug-v0.4.0-rc1.apk",
+      "size": 19068735
+    },
+    {
+      "path": "dist/master_controller_android/MasterController-v0.4.0-rc1-release-bundle/MasterController-release-v0.4.0-rc1.aab",
+      "size": 4946918
+    },
+    {
+      "path": "dist/master_controller_android/MasterController-v0.4.0-rc1-release-bundle/MasterController-release-v0.4.0-rc1.apk",
+      "size": 2229659
+    },
+    {
+      "path": "apps/mater_controller_android/app/build/outputs/bundle/release/app-release.aab",
+      "size": 4946918
+    },
+    {
+      "path": "apps/mater_controller_android/app/build/outputs/apk/release/app-release.apk",
+      "size": 2229659
+    },
+    {
+      "path": "apps/mater_controller_android/app/build/outputs/apk/debug/app-debug.apk",
+      "size": 19068735
+    },
+    {
+      "path": "apps/mater_controller_android/app/build/intermediates/module_bundle/release/buildReleasePreBundle/base.zip",
+      "size": 4919968
+    },
+    {
+      "path": "apps/mater_controller_android/app/build/intermediates/intermediary_bundle/release/shrinkBundleReleaseResources/intermediary-bundle.aab",
+      "size": 41596403
+    },
+    {
+      "path": "apps/mater_controller_android/app/build/intermediates/intermediary_bundle/release/packageReleaseBundle/intermediary-bundle.aab",
+      "size": 41979104
+    },
+    {
+      "path": "11_backup/AI_WORKSPACE_backup_2026-05-15_0059.zip",
+      "size": 57136
+    },
+    {
+      "path": "11_backup/AI_WORKSPACE_backup_2026-05-15_0105.zip",
+      "size": 57588
+    },
+    {
+      "path": "11_backup/AI_WORKSPACE_backup_after_first_outreach_2026-05-15_1657.zip",
+      "size": 62082
+    },
+    {
+      "path": "00_IMPORTS/chatgpt_official_export_raw/chatgpt_official_export_2026-05-26.zip.zip",
+      "size": 267843062
+    }
+  ],
+  "sensitive_paths_sample": [
+    "tools/voice_transcription/voice_transcription_healthcheck.mjs",
+    "tools/voice_transcription/.venv/Lib/site-packages/torch/distributed/elastic/agent/server/health_check_server.py",
+    "tools/voice_transcription/.venv/Lib/site-packages/torch/distributed/elastic/agent/server/__pycache__/health_check_server.cpython-312.pyc",
+    "tools/voice_transcription/.venv/Lib/site-packages/sympy/physics/quantum/identitysearch.py",
+    "tools/voice_transcription/.venv/Lib/site-packages/sympy/physics/quantum/__pycache__/identitysearch.cpython-312.pyc",
+    "tools/voice_transcription/.venv/Lib/site-packages/sympy/physics/quantum/tests/test_identitysearch.py",
+    "tools/voice_transcription/.venv/Lib/site-packages/sympy/physics/quantum/tests/__pycache__/test_identitysearch.cpython-312.pyc",
+    "tools/telegram_gateway/telegram_gateway_healthcheck.mjs",
+    "tools/communication_monitor/yandex_mail_credential_preflight.mjs",
+    "tools/communication_monitor/yandex_mail_credential_preflight_report.md",
+    "tools/communication_monitor/yandex_mail_readonly_healthcheck.mjs",
+    "data/personal_assistant_tasks.json",
+    "data/personal_context_rules.json",
+    "bonding_vpn/deploy/_xui_rotate_credentials.py",
+    "bonding_vpn/deploy/_xui_rotate_credentials.py.bak_2026-05-25",
+    "apps/mater_controller_android/app/build/tmp/kotlin-classes/release/ru/dmitry/matercontroller/core/model/HealthData$$serializer.class",
+    "apps/mater_controller_android/app/build/tmp/kotlin-classes/release/ru/dmitry/matercontroller/core/model/HealthData$Companion.class",
+    "apps/mater_controller_android/app/build/tmp/kotlin-classes/release/ru/dmitry/matercontroller/core/model/HealthData.class",
+    "apps/mater_controller_android/app/build/tmp/kotlin-classes/release/ru/dmitry/matercontroller/core/model/SourceHealth$$serializer.class",
+    "apps/mater_controller_android/app/build/tmp/kotlin-classes/release/ru/dmitry/matercontroller/core/model/SourceHealth$Companion.class",
+    "apps/mater_controller_android/app/build/tmp/kotlin-classes/release/ru/dmitry/matercontroller/core/model/SourceHealth.class",
+    "apps/mater_controller_android/app/build/tmp/kotlin-classes/release/ru/dmitry/matercontroller/core/model/SourceHealthData$$serializer.class",
+    "apps/mater_controller_android/app/build/tmp/kotlin-classes/release/ru/dmitry/matercontroller/core/model/SourceHealthData$Companion.class",
+    "apps/mater_controller_android/app/build/tmp/kotlin-classes/release/ru/dmitry/matercontroller/core/model/SourceHealthData.class",
+    "apps/mater_controller_android/app/build/tmp/kotlin-classes/release/ru/dmitry/matercontroller/core/data/MaterRepository$checkHealth$1.class",
+    "apps/mater_controller_android/app/build/tmp/kotlin-classes/debug/ru/dmitry/matercontroller/core/model/HealthData$$serializer.class",
+    "apps/mater_controller_android/app/build/tmp/kotlin-classes/debug/ru/dmitry/matercontroller/core/model/HealthData$Companion.class",
+    "apps/mater_controller_android/app/build/tmp/kotlin-classes/debug/ru/dmitry/matercontroller/core/model/HealthData.class",
+    "apps/mater_controller_android/app/build/tmp/kotlin-classes/debug/ru/dmitry/matercontroller/core/model/SourceHealth$$serializer.class",
+    "apps/mater_controller_android/app/build/tmp/kotlin-classes/debug/ru/dmitry/matercontroller/core/model/SourceHealth$Companion.class",
+    "apps/mater_controller_android/app/build/tmp/kotlin-classes/debug/ru/dmitry/matercontroller/core/model/SourceHealth.class",
+    "apps/mater_controller_android/app/build/tmp/kotlin-classes/debug/ru/dmitry/matercontroller/core/model/SourceHealthData$$serializer.class",
+    "apps/mater_controller_android/app/build/tmp/kotlin-classes/debug/ru/dmitry/matercontroller/core/model/SourceHealthData$Companion.class",
+    "apps/mater_controller_android/app/build/tmp/kotlin-classes/debug/ru/dmitry/matercontroller/core/model/SourceHealthData.class",
+    "apps/mater_controller_android/app/build/tmp/kotlin-classes/debug/ru/dmitry/matercontroller/core/data/MaterRepository$checkHealth$1.class",
+    "apps/mater_controller_android/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/ru/dmitry/matercontroller/core/model/HealthData$$serializer.dex",
+    "apps/mater_controller_android/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/ru/dmitry/matercontroller/core/model/HealthData$Companion.dex",
+    "apps/mater_controller_android/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/ru/dmitry/matercontroller/core/model/HealthData.dex",
+    "apps/mater_controller_android/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/ru/dmitry/matercontroller/core/model/SourceHealth$$serializer.dex",
+    "apps/mater_controller_android/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/ru/dmitry/matercontroller/core/model/SourceHealth$Companion.dex",
+    "apps/mater_controller_android/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/ru/dmitry/matercontroller/core/model/SourceHealth.dex",
+    "apps/mater_controller_android/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/ru/dmitry/matercontroller/core/model/SourceHealthData$$serializer.dex",
+    "apps/mater_controller_android/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/ru/dmitry/matercontroller/core/model/SourceHealthData$Companion.dex",
+    "apps/mater_controller_android/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/ru/dmitry/matercontroller/core/model/SourceHealthData.dex",
+    "apps/mater_controller_android/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/ru/dmitry/matercontroller/core/data/MaterRepository$checkHealth$1.dex",
+    "apps/mater_controller_android/app/build/intermediates/classes/release/transformReleaseClassesWithAsm/dirs/ru/dmitry/matercontroller/core/model/HealthData$$serializer.class",
+    "apps/mater_controller_android/app/build/intermediates/classes/release/transformReleaseClassesWithAsm/dirs/ru/dmitry/matercontroller/core/model/HealthData$Companion.class",
+    "apps/mater_controller_android/app/build/intermediates/classes/release/transformReleaseClassesWithAsm/dirs/ru/dmitry/matercontroller/core/model/HealthData.class",
+    "apps/mater_controller_android/app/build/intermediates/classes/release/transformReleaseClassesWithAsm/dirs/ru/dmitry/matercontroller/core/model/SourceHealth$$serializer.class",
+    "apps/mater_controller_android/app/build/intermediates/classes/release/transformReleaseClassesWithAsm/dirs/ru/dmitry/matercontroller/core/model/SourceHealth$Companion.class"
+  ],
+  "secret_contour_paths": [
+    ".env",
+    ".env.backup.after_selftest_before_restore_20260613_125124",
+    ".env.backup.before_selftest_toggle_20260613_110805",
+    ".env.backup.manual_email_20260612104720",
+    "tools/voice_transcription/.venv/Lib/site-packages/whisper/tokenizer.py",
+    "tools/voice_transcription/.venv/Lib/site-packages/whisper/__pycache__/tokenizer.cpython-312.pyc",
+    "tools/voice_transcription/.venv/Lib/site-packages/whisper/assets/gpt2.tiktoken",
+    "tools/voice_transcription/.venv/Lib/site-packages/whisper/assets/multilingual.tiktoken",
+    "tools/voice_transcription/.venv/Lib/site-packages/torch/include/google/protobuf/io/tokenizer.h",
+    "tools/voice_transcription/.venv/Lib/site-packages/torch/include/ATen/ops/_make_dep_token.h",
+    "tools/voice_transcription/.venv/Lib/site-packages/torch/include/ATen/ops/_make_dep_token_cpu_dispatch.h",
+    "tools/voice_transcription/.venv/Lib/site-packages/torch/include/ATen/ops/_make_dep_token_native.h",
+    "tools/voice_transcription/.venv/Lib/site-packages/torch/include/ATen/ops/_make_dep_token_ops.h",
+    "tools/voice_transcription/.venv/Lib/site-packages/torch/export/_remove_effect_tokens_pass.py",
+    "tools/voice_transcription/.venv/Lib/site-packages/torch/export/__pycache__/_remove_effect_tokens_pass.cpython-312.pyc",
+    "tools/voice_transcription/.venv/Lib/site-packages/tiktoken_ext/openai_public.py",
+    "tools/voice_transcription/.venv/Lib/site-packages/tiktoken_ext/__pycache__/openai_public.cpython-312.pyc",
+    "tools/voice_transcription/.venv/Lib/site-packages/tiktoken-0.13.0.dist-info/INSTALLER",
+    "tools/voice_transcription/.venv/Lib/site-packages/tiktoken-0.13.0.dist-info/METADATA",
+    "tools/voice_transcription/.venv/Lib/site-packages/tiktoken-0.13.0.dist-info/RECORD",
+    "tools/voice_transcription/.venv/Lib/site-packages/tiktoken-0.13.0.dist-info/top_level.txt",
+    "tools/voice_transcription/.venv/Lib/site-packages/tiktoken-0.13.0.dist-info/WHEEL",
+    "tools/voice_transcription/.venv/Lib/site-packages/tiktoken-0.13.0.dist-info/licenses/LICENSE",
+    "tools/voice_transcription/.venv/Lib/site-packages/tiktoken/core.py",
+    "tools/voice_transcription/.venv/Lib/site-packages/tiktoken/load.py",
+    "tools/voice_transcription/.venv/Lib/site-packages/tiktoken/model.py",
+    "tools/voice_transcription/.venv/Lib/site-packages/tiktoken/py.typed",
+    "tools/voice_transcription/.venv/Lib/site-packages/tiktoken/registry.py",
+    "tools/voice_transcription/.venv/Lib/site-packages/tiktoken/_educational.py",
+    "tools/voice_transcription/.venv/Lib/site-packages/tiktoken/_tiktoken.cp312-win_amd64.pyd",
+    "tools/voice_transcription/.venv/Lib/site-packages/tiktoken/__init__.py",
+    "tools/voice_transcription/.venv/Lib/site-packages/tiktoken/__pycache__/core.cpython-312.pyc",
+    "tools/voice_transcription/.venv/Lib/site-packages/tiktoken/__pycache__/load.cpython-312.pyc",
+    "tools/voice_transcription/.venv/Lib/site-packages/tiktoken/__pycache__/model.cpython-312.pyc",
+    "tools/voice_transcription/.venv/Lib/site-packages/tiktoken/__pycache__/registry.cpython-312.pyc",
+    "tools/voice_transcription/.venv/Lib/site-packages/tiktoken/__pycache__/_educational.cpython-312.pyc",
+    "tools/voice_transcription/.venv/Lib/site-packages/tiktoken/__pycache__/__init__.cpython-312.pyc",
+    "tools/voice_transcription/.venv/Lib/site-packages/setuptools/_vendor/packaging/_tokenizer.py",
+    "tools/voice_transcription/.venv/Lib/site-packages/setuptools/_vendor/packaging/__pycache__/_tokenizer.cpython-312.pyc",
+    "tools/voice_transcription/.venv/Lib/site-packages/pip/_vendor/pygments/token.py",
+    "tools/voice_transcription/.venv/Lib/site-packages/pip/_vendor/pygments/__pycache__/token.cpython-312.pyc",
+    "tools/voice_transcription/.venv/Lib/site-packages/pip/_vendor/packaging/_tokenizer.py",
+    "tools/voice_transcription/.venv/Lib/site-packages/pip/_vendor/packaging/__pycache__/_tokenizer.cpython-312.pyc",
+    "tools/voice_transcription/.venv/Lib/site-packages/pip/_vendor/certifi/cacert.pem",
+    "tools/voice_transcription/.venv/Lib/site-packages/certifi/cacert.pem",
+    "tools/telegram_gateway/.env",
+    "tools/telegram_gateway/.env.bak_e1c2d_20260607_171606",
+    "tools/telegram_gateway/.env.example",
+    "tools/communication_monitor/.env",
+    "tools/communication_monitor/.env.backup_stage2b_2026-05-23T22-57",
+    "tools/communication_monitor/.env.backup_stage2b_20260523T224102",
+    "tools/communication_monitor/.env.backup_stage2b_20260523_223913",
+    "tools/communication_monitor/.env.backup_stage2b_20260523_224418",
+    "tools/communication_monitor/.env.backup_stage2b_20260523_230852",
+    "tools/communication_monitor/.env.example",
+    "tools/communication_monitor/yandex_mail_credential_preflight.mjs",
+    "tools/communication_monitor/yandex_mail_credential_preflight_report.md",
+    "bonding_vpn/deploy/_xui_rotate_credentials.py",
+    "bonding_vpn/deploy/_xui_rotate_credentials.py.bak_2026-05-25",
+    "apps/mater_controller_android/app/src/main/java/ru/dmitry/matercontroller/core/network/TokenRefresher.kt",
+    "apps/mater_controller_android/app/src/main/java/ru/dmitry/matercontroller/core/data/SecureTokenStore.kt",
+    "apps/mater_controller_android/app/build/tmp/kotlin-classes/release/ru/dmitry/matercontroller/core/network/TokenRefresher$refresh$1.class",
+    "apps/mater_controller_android/app/build/tmp/kotlin-classes/release/ru/dmitry/matercontroller/core/network/TokenRefresher.class",
+    "apps/mater_controller_android/app/build/tmp/kotlin-classes/release/ru/dmitry/matercontroller/core/data/SecureTokenStore$Companion.class",
+    "apps/mater_controller_android/app/build/tmp/kotlin-classes/release/ru/dmitry/matercontroller/core/data/SecureTokenStore$prefs$2.class",
+    "apps/mater_controller_android/app/build/tmp/kotlin-classes/release/ru/dmitry/matercontroller/core/data/SecureTokenStore.class",
+    "apps/mater_controller_android/app/build/tmp/kotlin-classes/debug/ru/dmitry/matercontroller/core/network/TokenRefresher$refresh$1.class",
+    "apps/mater_controller_android/app/build/tmp/kotlin-classes/debug/ru/dmitry/matercontroller/core/network/TokenRefresher.class",
+    "apps/mater_controller_android/app/build/tmp/kotlin-classes/debug/ru/dmitry/matercontroller/core/data/SecureTokenStore$Companion.class",
+    "apps/mater_controller_android/app/build/tmp/kotlin-classes/debug/ru/dmitry/matercontroller/core/data/SecureTokenStore$prefs$2.class",
+    "apps/mater_controller_android/app/build/tmp/kotlin-classes/debug/ru/dmitry/matercontroller/core/data/SecureTokenStore.class",
+    "apps/mater_controller_android/app/build/kspCaches/releaseUnitTest/sealed.keystream.len",
+    "apps/mater_controller_android/app/build/kspCaches/releaseUnitTest/sourceToOutputs.keystream",
+    "apps/mater_controller_android/app/build/kspCaches/releaseUnitTest/sourceToOutputs.keystream.len",
+    "apps/mater_controller_android/app/build/kspCaches/releaseUnitTest/symbols.keystream",
+    "apps/mater_controller_android/app/build/kspCaches/releaseUnitTest/symbols.keystream.len",
+    "apps/mater_controller_android/app/build/kspCaches/releaseUnitTest/symbolLookups/file-to-id.tab.keystream",
+    "apps/mater_controller_android/app/build/kspCaches/releaseUnitTest/symbolLookups/file-to-id.tab.keystream.len",
+    "apps/mater_controller_android/app/build/kspCaches/releaseUnitTest/symbolLookups/id-to-file.tab.keystream",
+    "apps/mater_controller_android/app/build/kspCaches/releaseUnitTest/symbolLookups/id-to-file.tab.keystream.len",
+    "apps/mater_controller_android/app/build/kspCaches/releaseUnitTest/symbolLookups/lookups.tab.keystream",
+    "apps/mater_controller_android/app/build/kspCaches/releaseUnitTest/symbolLookups/lookups.tab.keystream.len",
+    "apps/mater_controller_android/app/build/kspCaches/releaseUnitTest/classLookups/file-to-id.tab.keystream",
+    "apps/mater_controller_android/app/build/kspCaches/releaseUnitTest/classLookups/file-to-id.tab.keystream.len",
+    "apps/mater_controller_android/app/build/kspCaches/releaseUnitTest/classLookups/id-to-file.tab.keystream",
+    "apps/mater_controller_android/app/build/kspCaches/releaseUnitTest/classLookups/id-to-file.tab.keystream.len",
+    "apps/mater_controller_android/app/build/kspCaches/releaseUnitTest/classLookups/lookups.tab.keystream",
+    "apps/mater_controller_android/app/build/kspCaches/releaseUnitTest/classLookups/lookups.tab.keystream.len",
+    "apps/mater_controller_android/app/build/kotlin/compileReleaseUnitTestKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.keystream",
+    "apps/mater_controller_android/app/build/kotlin/compileReleaseUnitTestKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.keystream.len",
+    "apps/mater_controller_android/app/build/kotlin/compileReleaseUnitTestKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.keystream",
+    "apps/mater_controller_android/app/build/kotlin/compileReleaseUnitTestKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.keystream.len",
+    "apps/mater_controller_android/app/build/kotlin/compileReleaseUnitTestKotlin/cacheable/caches-jvm/lookups/lookups.tab.keystream",
+    "apps/mater_controller_android/app/build/kotlin/compileReleaseUnitTestKotlin/cacheable/caches-jvm/lookups/lookups.tab.keystream.len",
+    "apps/mater_controller_android/app/build/kotlin/compileReleaseUnitTestKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.keystream",
+    "apps/mater_controller_android/app/build/kotlin/compileReleaseUnitTestKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.keystream.len",
+    "apps/mater_controller_android/app/build/kotlin/compileReleaseUnitTestKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream",
+    "apps/mater_controller_android/app/build/kotlin/compileReleaseUnitTestKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream.len",
+    "apps/mater_controller_android/app/build/kotlin/compileReleaseUnitTestKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream",
+    "apps/mater_controller_android/app/build/kotlin/compileReleaseUnitTestKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream.len"
+  ],
+  "projects": [
+    {
+      "project_id": "master_controller",
+      "name": "Master Controller (release v0.4.0-rc1)",
+      "category": "platform",
+      "status": "ACCEPTANCE",
+      "priority": "P0_CRITICAL",
+      "production_state": "PRODUCTION_SOAK",
+      "paths_declared": [
+        "tools/master_controller",
+        "tools/mater_controller_api",
+        "00_MASTER_CONTROLLER"
+      ],
+      "paths_present": [
+        "tools/master_controller",
+        "tools/mater_controller_api",
+        "00_MASTER_CONTROLLER"
+      ],
+      "exists": true,
+      "source_of_truth": "VPS Master Controller API + canonical JSON store (13_sales/lead_pipeline_store.json)",
+      "agent_owner": "claude",
+      "risk": "high",
+      "blockers": [
+        "24h soak in progress (FREEZE)"
+      ],
+      "secrets_required": true,
+      "sensitive": false,
+      "next_major_action": "Complete 24h no-send soak; owner acceptance; then controlled production prep",
+      "last_modified_ms": 1781651229127.744,
+      "archive_candidate": false
+    },
+    {
+      "project_id": "telegram_master_controller",
+      "name": "Telegram Master Controller (API-only backup interface)",
+      "category": "interface",
+      "status": "ACTIVE_PRODUCTION",
+      "priority": "P0_CRITICAL",
+      "production_state": "LIVE_BACKUP_CHANNEL",
+      "paths_declared": [
+        "tools/telegram_gateway"
+      ],
+      "paths_present": [
+        "tools/telegram_gateway"
+      ],
+      "exists": true,
+      "source_of_truth": "tools/telegram_gateway (shared Mini Audit services)",
+      "agent_owner": "claude",
+      "risk": "high",
+      "blockers": [
+        "Soak freeze"
+      ],
+      "secrets_required": true,
+      "sensitive": false,
+      "next_major_action": "No UX changes until soak closes (FREEZE)",
+      "last_modified_ms": 1781650683266.6643,
+      "archive_candidate": false
+    },
+    {
+      "project_id": "android_master_controller",
+      "name": "Mater Controller Android (primary owner interface)",
+      "category": "interface",
+      "status": "ACCEPTANCE",
+      "priority": "P1_REVENUE",
+      "production_state": "RELEASE_CANDIDATE",
+      "paths_declared": [
+        "apps/mater_controller_android",
+        "dist/mater_controller_android"
+      ],
+      "paths_present": [
+        "apps/mater_controller_android"
+      ],
+      "exists": true,
+      "source_of_truth": "apps/mater_controller_android + Mater Controller API",
+      "agent_owner": "claude",
+      "risk": "high",
+      "blockers": [
+        "Soak freeze",
+        "Release APK/AAB frozen"
+      ],
+      "secrets_required": true,
+      "sensitive": false,
+      "next_major_action": "Owner/device smoke; release closure after soak",
+      "last_modified_ms": 1781650494409.0872,
+      "archive_candidate": false
+    },
+    {
+      "project_id": "mini_audit_10k",
+      "name": "Mini Audit 10K",
+      "category": "revenue",
+      "status": "ACTIVE_DEVELOPMENT",
+      "priority": "P1_REVENUE",
+      "production_state": "BUILD_TEST",
+      "paths_declared": [
+        "06_projects/mini_audit_10k",
+        "13_sales"
+      ],
+      "paths_present": [
+        "06_projects/mini_audit_10k",
+        "13_sales"
+      ],
+      "exists": true,
+      "source_of_truth": "13_sales/lead_pipeline_store.json (canonical lead store)",
+      "agent_owner": "claude",
+      "risk": "medium",
+      "blockers": [],
+      "secrets_required": false,
+      "sensitive": false,
+      "next_major_action": "Pick one USE_NOW deliverable (no send)",
+      "last_modified_ms": 1781650686073.98,
+      "archive_candidate": false
+    },
+    {
+      "project_id": "lead_hunter",
+      "name": "Lead Hunter (discovery intelligence)",
+      "category": "intelligence",
+      "status": "ACTIVE_DEVELOPMENT",
+      "priority": "P2_INFRASTRUCTURE",
+      "production_state": "BUILD_TEST",
+      "paths_declared": [
+        "tools/lead_hunter"
+      ],
+      "paths_present": [
+        "tools/lead_hunter"
+      ],
+      "exists": true,
+      "source_of_truth": "tools/lead_hunter (single Overpass implementation)",
+      "agent_owner": "claude",
+      "risk": "medium",
+      "blockers": [
+        "External API credentials (owner action)"
+      ],
+      "secrets_required": true,
+      "sensitive": false,
+      "next_major_action": "Credentials decision for 2GIS/DataForSEO/Yandex (owner)",
+      "last_modified_ms": 1781635749350.192,
+      "archive_candidate": false
+    },
+    {
+      "project_id": "obsidian_hq",
+      "name": "Obsidian / AI_WORKSPACE HQ",
+      "category": "infrastructure",
+      "status": "ACTIVE_DEVELOPMENT",
+      "priority": "P1_REVENUE",
+      "production_state": "OPERATIONAL",
+      "paths_declared": [
+        "00_MASTER_CONTEXT",
+        "09_dashboards",
+        "03_sop",
+        "06_projects/obsidian_hq"
+      ],
+      "paths_present": [
+        "00_MASTER_CONTEXT",
+        "09_dashboards",
+        "03_sop",
+        "06_projects/obsidian_hq"
+      ],
+      "exists": true,
+      "source_of_truth": "00_MASTER_CONTEXT/PROJECT_REGISTRY.md + WHAT_ALREADY_EXISTS.md",
+      "agent_owner": "claude",
+      "risk": "low",
+      "blockers": [],
+      "secrets_required": false,
+      "sensitive": false,
+      "next_major_action": "Maintain; one real task at a time",
+      "last_modified_ms": 1781652692798.4094,
+      "archive_candidate": false
+    },
+    {
+      "project_id": "reminder_secretary",
+      "name": "Reminder Secretary OS",
+      "category": "productivity",
+      "status": "ACTIVE_DEVELOPMENT",
+      "priority": "P3_PRODUCTIVITY",
+      "production_state": "OBSIDIAN_ONLY",
+      "paths_declared": [
+        "12_reminders",
+        "06_projects/reminder_secretary"
+      ],
+      "paths_present": [
+        "12_reminders",
+        "06_projects/reminder_secretary"
+      ],
+      "exists": true,
+      "source_of_truth": "12_reminders/",
+      "agent_owner": "cline",
+      "risk": "low",
+      "blockers": [],
+      "secrets_required": false,
+      "sensitive": false,
+      "next_major_action": "Review reminders/deadlines",
+      "last_modified_ms": 1781538644672.391,
+      "archive_candidate": false
+    },
+    {
+      "project_id": "file_vault",
+      "name": "Personal File Vault (index-only)",
+      "category": "infrastructure",
+      "status": "MAINTENANCE",
+      "priority": "P2_INFRASTRUCTURE",
+      "production_state": "INDEX_ONLY",
+      "paths_declared": [
+        "20_file_vault_index",
+        "06_projects/file_vault"
+      ],
+      "paths_present": [
+        "20_file_vault_index",
+        "06_projects/file_vault"
+      ],
+      "exists": true,
+      "source_of_truth": "20_file_vault_index/ (large files live in D:\\AI_FILE_VAULT)",
+      "agent_owner": "cline",
+      "risk": "medium",
+      "blockers": [],
+      "secrets_required": false,
+      "sensitive": false,
+      "next_major_action": "Index only when new files arrive; dry-run intake",
+      "last_modified_ms": 1781538675151.5193,
+      "archive_candidate": false
+    },
+    {
+      "project_id": "revenue_os",
+      "name": "Revenue OS / Sales",
+      "category": "revenue",
+      "status": "ACTIVE_DEVELOPMENT",
+      "priority": "P1_REVENUE",
+      "production_state": "INDEX",
+      "paths_declared": [
+        "07_revenue_os",
+        "13_sales"
+      ],
+      "paths_present": [
+        "07_revenue_os",
+        "13_sales"
+      ],
+      "exists": true,
+      "source_of_truth": "07_revenue_os/revenue_os_structure.md",
+      "agent_owner": "claude",
+      "risk": "low",
+      "blockers": [],
+      "secrets_required": false,
+      "sensitive": false,
+      "next_major_action": "Safe dashboards/summaries only (no outreach)",
+      "last_modified_ms": 1781650686073.98,
+      "archive_candidate": false
+    },
+    {
+      "project_id": "kgbi_b2b_audit",
+      "name": "КЖБИ B2B Audit",
+      "category": "revenue",
+      "status": "ACTIVE_DEVELOPMENT",
+      "priority": "P2_INFRASTRUCTURE",
+      "production_state": "BUILD_TEST",
+      "paths_declared": [
+        "06_projects/kgbi_b2b_audit"
+      ],
+      "paths_present": [
+        "06_projects/kgbi_b2b_audit"
+      ],
+      "exists": true,
+      "source_of_truth": "06_projects/kgbi_b2b_audit/PROJECT_PASSPORT.md",
+      "agent_owner": "claude",
+      "risk": "low",
+      "blockers": [],
+      "secrets_required": false,
+      "sensitive": false,
+      "next_major_action": "Review audit_plan; confirm deliverable scope",
+      "last_modified_ms": 1781538773796.7786,
+      "archive_candidate": false
+    },
+    {
+      "project_id": "edera_rest_mini_audit",
+      "name": "Edera Rest Mini Audit",
+      "category": "revenue",
+      "status": "PAUSED",
+      "priority": "P3_PRODUCTIVITY",
+      "production_state": "BUILD",
+      "paths_declared": [
+        "06_projects/edera_rest_mini_audit"
+      ],
+      "paths_present": [
+        "06_projects/edera_rest_mini_audit"
+      ],
+      "exists": true,
+      "source_of_truth": "06_projects/edera_rest_mini_audit/PROJECT_PASSPORT.md",
+      "agent_owner": "claude",
+      "risk": "low",
+      "blockers": [],
+      "secrets_required": false,
+      "sensitive": false,
+      "next_major_action": "Confirm status; decide go/hold",
+      "last_modified_ms": 1781538785520.9968,
+      "archive_candidate": false
+    },
+    {
+      "project_id": "lead_gen_test_jbi",
+      "name": "JBI Krasnodar Lead-Gen Test",
+      "category": "revenue",
+      "status": "PAUSED",
+      "priority": "P3_PRODUCTIVITY",
+      "production_state": "TEST",
+      "paths_declared": [
+        "06_projects/lead_gen_test_jbi"
+      ],
+      "paths_present": [
+        "06_projects/lead_gen_test_jbi"
+      ],
+      "exists": true,
+      "source_of_truth": "06_projects/lead_gen_test_jbi/PROJECT_PASSPORT.md",
+      "agent_owner": "claude",
+      "risk": "low",
+      "blockers": [
+        "Outreach approval (owner)"
+      ],
+      "secrets_required": false,
+      "sensitive": false,
+      "next_major_action": "Decide if test concludes or scales (outreach approval)",
+      "last_modified_ms": 1781538801018.4773,
+      "archive_candidate": false
+    },
+    {
+      "project_id": "chatgpt_pipeline",
+      "name": "ChatGPT Export/Import Pipeline",
+      "category": "infrastructure",
+      "status": "ACTIVE_DEVELOPMENT",
+      "priority": "P3_PRODUCTIVITY",
+      "production_state": "TOOLING",
+      "paths_declared": [
+        "tools/chatgpt_export",
+        "00_IMPORTS",
+        "98_raw_chat_exports"
+      ],
+      "paths_present": [
+        "tools/chatgpt_export",
+        "00_IMPORTS",
+        "98_raw_chat_exports"
+      ],
+      "exists": true,
+      "source_of_truth": "tools/chatgpt_export + 00_IMPORTS",
+      "agent_owner": "cline",
+      "risk": "low",
+      "blockers": [],
+      "secrets_required": false,
+      "sensitive": false,
+      "next_major_action": "Offline idempotent import pipeline (fixtures first)",
+      "last_modified_ms": 1780035220285.55,
+      "archive_candidate": false
+    },
+    {
+      "project_id": "backup_dr",
+      "name": "Backup / Disaster Recovery",
+      "category": "infrastructure",
+      "status": "MAINTENANCE",
+      "priority": "P2_INFRASTRUCTURE",
+      "production_state": "OPERATIONAL",
+      "paths_declared": [
+        "tools/backups",
+        "11_backup",
+        "00_BACKUPS"
+      ],
+      "paths_present": [
+        "tools/backups",
+        "11_backup",
+        "00_BACKUPS"
+      ],
+      "exists": true,
+      "source_of_truth": "D:\\AI_BACKUPS + git bundles",
+      "agent_owner": "claude",
+      "risk": "medium",
+      "blockers": [],
+      "secrets_required": false,
+      "sensitive": false,
+      "next_major_action": "Manifest + checksum + restore proof; RPO/RTO targets",
+      "last_modified_ms": 1781386482643.024,
+      "archive_candidate": false
+    },
+    {
+      "project_id": "local_ai_hq",
+      "name": "Local AI models / future HQ workstation",
+      "category": "research",
+      "status": "PLANNED",
+      "priority": "P4_RESEARCH",
+      "production_state": "PLANNING",
+      "paths_declared": [
+        "10_local_ai"
+      ],
+      "paths_present": [
+        "10_local_ai"
+      ],
+      "exists": true,
+      "source_of_truth": "10_local_ai/",
+      "agent_owner": "owner",
+      "risk": "low",
+      "blockers": [
+        "Hardware decision (owner)"
+      ],
+      "secrets_required": false,
+      "sensitive": false,
+      "next_major_action": "Workstation plan (90-day)",
+      "last_modified_ms": 1778773778596.34,
+      "archive_candidate": false
+    },
+    {
+      "project_id": "cline_integration",
+      "name": "Cline Integration (focused local executor)",
+      "category": "infrastructure",
+      "status": "ACTIVE_DEVELOPMENT",
+      "priority": "P3_PRODUCTIVITY",
+      "production_state": "OPERATIONAL",
+      "paths_declared": [
+        "04_cline",
+        ".clinerules"
+      ],
+      "paths_present": [
+        "04_cline",
+        ".clinerules"
+      ],
+      "exists": true,
+      "source_of_truth": "04_cline/CLINE_OPERATING_LAYER_INDEX.md",
+      "agent_owner": "cline",
+      "risk": "low",
+      "blockers": [],
+      "secrets_required": false,
+      "sensitive": false,
+      "next_major_action": "Use context packs + handoff protocol",
+      "last_modified_ms": 1781192572688.1084,
+      "archive_candidate": false
+    },
+    {
+      "project_id": "claude_code_integration",
+      "name": "Claude Code Integration (large-block implementer)",
+      "category": "infrastructure",
+      "status": "ACTIVE_DEVELOPMENT",
+      "priority": "P3_PRODUCTIVITY",
+      "production_state": "OPERATIONAL",
+      "paths_declared": [
+        ".claude",
+        "tools/ai_hq"
+      ],
+      "paths_present": [
+        ".claude"
+      ],
+      "exists": true,
+      "source_of_truth": "tools/ai_hq + governance SOP",
+      "agent_owner": "claude",
+      "risk": "low",
+      "blockers": [],
+      "secrets_required": false,
+      "sensitive": false,
+      "next_major_action": "Use context pack builder + task ledger",
+      "last_modified_ms": 1781646983629.8147,
+      "archive_candidate": false
+    },
+    {
+      "project_id": "legal_documents",
+      "name": "Legal Documents",
+      "category": "sensitive",
+      "status": "SENSITIVE_READ_ONLY",
+      "priority": "P5_ARCHIVE",
+      "production_state": "INDEX_ONLY",
+      "paths_declared": [
+        "15_legal_documents"
+      ],
+      "paths_present": [
+        "15_legal_documents"
+      ],
+      "exists": true,
+      "source_of_truth": "container index only",
+      "agent_owner": "owner",
+      "risk": "high",
+      "blockers": [
+        "Owner-only"
+      ],
+      "secrets_required": false,
+      "sensitive": true,
+      "next_major_action": "No content access without explicit owner request",
+      "last_modified_ms": null,
+      "archive_candidate": true
+    },
+    {
+      "project_id": "personal_assistant",
+      "name": "Personal Assistant (personal data)",
+      "category": "sensitive",
+      "status": "SENSITIVE_READ_ONLY",
+      "priority": "P5_ARCHIVE",
+      "production_state": "INDEX_ONLY",
+      "paths_declared": [
+        "13_personal_assistant"
+      ],
+      "paths_present": [
+        "13_personal_assistant"
+      ],
+      "exists": true,
+      "source_of_truth": "container index only",
+      "agent_owner": "owner",
+      "risk": "high",
+      "blockers": [
+        "Owner-only"
+      ],
+      "secrets_required": false,
+      "sensitive": true,
+      "next_major_action": "No content access without explicit owner request",
+      "last_modified_ms": 1779312031349.834,
+      "archive_candidate": true
+    },
+    {
+      "project_id": "file_vault_red",
+      "name": "File Vault RED (military/medical/identity)",
+      "category": "sensitive",
+      "status": "SENSITIVE_READ_ONLY",
+      "priority": "P5_ARCHIVE",
+      "production_state": "INDEX_ONLY",
+      "paths_declared": [
+        "20_file_vault_index"
+      ],
+      "paths_present": [
+        "20_file_vault_index"
+      ],
+      "exists": true,
+      "source_of_truth": "container index only",
+      "agent_owner": "owner",
+      "risk": "high",
+      "blockers": [
+        "Owner-only"
+      ],
+      "secrets_required": false,
+      "sensitive": true,
+      "next_major_action": "No content access without explicit owner request",
+      "last_modified_ms": 1781048567762.15,
+      "archive_candidate": true
+    },
+    {
+      "project_id": "boxon",
+      "name": "BOXON (шины/хранение)",
+      "category": "placeholder",
+      "status": "PLANNED",
+      "priority": "P5_ARCHIVE",
+      "production_state": "PLACEHOLDER",
+      "paths_declared": [
+        "18_boxon"
+      ],
+      "paths_present": [
+        "18_boxon"
+      ],
+      "exists": true,
+      "source_of_truth": "folder (placeholder)",
+      "agent_owner": "owner",
+      "risk": "low",
+      "blockers": [],
+      "secrets_required": false,
+      "sensitive": false,
+      "next_major_action": "Activate only when real files exist",
+      "last_modified_ms": null,
+      "archive_candidate": true
+    },
+    {
+      "project_id": "kgbi_standalone",
+      "name": "КЖБИ (standalone)",
+      "category": "placeholder",
+      "status": "PLANNED",
+      "priority": "P5_ARCHIVE",
+      "production_state": "PLACEHOLDER",
+      "paths_declared": [
+        "19_kgbi"
+      ],
+      "paths_present": [
+        "19_kgbi"
+      ],
+      "exists": true,
+      "source_of_truth": "folder (placeholder)",
+      "agent_owner": "owner",
+      "risk": "low",
+      "blockers": [],
+      "secrets_required": false,
+      "sensitive": false,
+      "next_major_action": "Activate only when real files exist",
+      "last_modified_ms": null,
+      "archive_candidate": true
+    },
+    {
+      "project_id": "project_maria",
+      "name": "Проект Марии",
+      "category": "placeholder",
+      "status": "PLANNED",
+      "priority": "P5_ARCHIVE",
+      "production_state": "PLACEHOLDER",
+      "paths_declared": [
+        "20_project_maria"
+      ],
+      "paths_present": [
+        "20_project_maria"
+      ],
+      "exists": true,
+      "source_of_truth": "folder (placeholder)",
+      "agent_owner": "owner",
+      "risk": "low",
+      "blockers": [],
+      "secrets_required": false,
+      "sensitive": false,
+      "next_major_action": "Activate only when real files exist",
+      "last_modified_ms": null,
+      "archive_candidate": true
+    },
+    {
+      "project_id": "strength_form_35",
+      "name": "Силовая форма 35+",
+      "category": "placeholder",
+      "status": "PLANNED",
+      "priority": "P5_ARCHIVE",
+      "production_state": "PLACEHOLDER",
+      "paths_declared": [
+        "21_strength_form_35",
+        "16_fitness_products"
+      ],
+      "paths_present": [
+        "21_strength_form_35",
+        "16_fitness_products"
+      ],
+      "exists": true,
+      "source_of_truth": "folder (placeholder)",
+      "agent_owner": "owner",
+      "risk": "low",
+      "blockers": [],
+      "secrets_required": false,
+      "sensitive": false,
+      "next_major_action": "Activate only when real files exist",
+      "last_modified_ms": 1778611082679.8933,
+      "archive_candidate": true
+    },
+    {
+      "project_id": "ai_content_factory",
+      "name": "AI Content Factory",
+      "category": "placeholder",
+      "status": "PLANNED",
+      "priority": "P5_ARCHIVE",
+      "production_state": "PLACEHOLDER",
+      "paths_declared": [
+        "14_content_factory"
+      ],
+      "paths_present": [
+        "14_content_factory"
+      ],
+      "exists": true,
+      "source_of_truth": "folder (placeholder)",
+      "agent_owner": "owner",
+      "risk": "low",
+      "blockers": [],
+      "secrets_required": false,
+      "sensitive": false,
+      "next_major_action": "Activate only when real files exist",
+      "last_modified_ms": null,
+      "archive_candidate": true
+    }
+  ]
+}

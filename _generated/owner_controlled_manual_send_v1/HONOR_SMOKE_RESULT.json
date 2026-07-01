@@ -1,0 +1,35 @@
+{
+  "device": "HONOR_ALT_LX1",
+  "serial": "AMSKBB4914919475",
+  "package": "ru.dmitry.matercontroller.debug",
+  "all_pass": true,
+  "checks": {
+    "app_launched": true,
+    "route_today": true,
+    "route_leads": true,
+    "route_commerce": true,
+    "route_agents": true,
+    "route_decisions": true,
+    "route_system": true,
+    "sales_screen_reached": true,
+    "no_send_banner": true,
+    "operator_import_route": true,
+    "operator_import_button": true,
+    "real_leads_visible": true,
+    "lead_step_reached": true,
+    "draft_editing": true,
+    "qa_gate": true,
+    "suppression_gate": true,
+    "owner_override_flow": true,
+    "send_readiness_screen": true,
+    "fix_actions": true,
+    "manual_send_packet_screen": true,
+    "post_send_result_screen": true,
+    "auto_send_status_off": true
+  },
+  "private_data_policy": {
+    "real_lead_contents_printed": false,
+    "real_contact_data_committed": false,
+    "screenshots_committed": false
+  }
+}

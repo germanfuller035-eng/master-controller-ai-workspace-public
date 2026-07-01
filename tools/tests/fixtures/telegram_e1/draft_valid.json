@@ -1,0 +1,10 @@
+{
+  "draft_id": "draft-e1-001",
+  "lead_id": "lead-555",
+  "company": "ООО Ромашка",
+  "website": "https://romashka.example",
+  "recipient": "owner@romashka.example",
+  "subject": "Мини-аудит сайта romashka.example",
+  "body": "Здравствуйте! Подготовили короткий аудит вашего сайта. Готовы обсудить.",
+  "channel": "email"
+}

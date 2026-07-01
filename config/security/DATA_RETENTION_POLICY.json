@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-26",
+  "session": "POLICY_SECRETS_AUDIT_EMERGENCY_CONTROL_V1",
+  "retention": [
+    {"data_class": "PUBLIC", "policy": "NORMAL_PROJECT_RETENTION"},
+    {"data_class": "BUSINESS_INTERNAL", "policy": "MINIMIZE_AND_KEEP_ONLY_WHILE_USEFUL"},
+    {"data_class": "CLIENT_CONFIDENTIAL", "policy": "MINIMIZE_REDACT_AND_KEEP_ONLY_FOR_TASK"},
+    {"data_class": "PERSONAL_CONFIDENTIAL", "policy": "MINIMIZE_REDACT_OWNER_APPROVAL_FOR_EXTERNAL_AI"},
+    {"data_class": "MILITARY_MEDICAL", "policy": "DENY_BY_DEFAULT_EXPLICIT_OWNER_APPROVAL_REQUIRED"},
+    {"data_class": "SECRETS", "policy": "DO_NOT_STORE_IN_GIT_PROMPTS_LOGS_OR_REPORTS"}
+  ],
+  "stop_effect": {
+    "task_scoped_grants": "REVOKE",
+    "queued_secret_access": "DISABLE",
+    "pending_external_ai_processing": "DISABLE"
+  }
+}

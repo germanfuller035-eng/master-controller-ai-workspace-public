@@ -1,0 +1,62 @@
+{
+  "adapters": {
+    "banking_payment_adapter_enabled": false,
+    "booking_adapter_enabled": false,
+    "calendar_adapter_enabled": false,
+    "email_send_adapter_enabled": false,
+    "external_monitoring_enabled": false,
+    "government_portal_adapter_enabled": false,
+    "legal_filing_adapter_enabled": false,
+    "medical_adapter_enabled": false,
+    "production_db_adapter_enabled": false
+  },
+  "default_decision": "DENY_EXTERNAL_ACTION",
+  "generated_at": "session-local",
+  "owner_approval_required_for_future": [
+    "calendar_write",
+    "document_send",
+    "government_filing",
+    "legal_submission",
+    "payment",
+    "booking",
+    "vehicle_transaction",
+    "property_transaction",
+    "production_write"
+  ],
+  "policy_id": "personal_assistant_policy_v1",
+  "purpose": "Global synthetic-only personal assistant policy.",
+  "required_gates": [
+    "owner_approval",
+    "payload_hash",
+    "stop",
+    "no_external_action_guard"
+  ],
+  "risk_gates": {
+    "R4": "OWNER_APPROVAL_REQUIRED",
+    "R5": "STRONG_OWNER_APPROVAL_REQUIRED"
+  },
+  "safety": {
+    "auto_safe": "OFF",
+    "calendar_write": "OFF",
+    "document_send": "OFF",
+    "external_monitoring": "OFF",
+    "government_filing": "OFF",
+    "legal_submission": "OFF",
+    "medical_processing": "OFF",
+    "memory_write": "OFF",
+    "outbound_email": "OFF",
+    "outbound_social": "OFF",
+    "payments": "OFF",
+    "production_db_write": "OFF"
+  },
+  "schema_version": 1,
+  "scope": "LOCAL_SYNTHETIC_ONLY",
+  "sensitive_data_policy": {
+    "family": "MINIMIZE_REDACT_OWNER_APPROVAL_REQUIRED",
+    "financial": "DENY_UNLESS_SYNTHETIC_OR_EXPLICIT_OWNER_APPROVAL_CONTRACT",
+    "medical": "DENY_UNLESS_SYNTHETIC_OR_EXPLICIT_OWNER_APPROVAL_CONTRACT",
+    "military": "DENY_UNLESS_SYNTHETIC_OR_EXPLICIT_OWNER_APPROVAL_CONTRACT",
+    "personal": "MINIMIZE_REDACT_OWNER_APPROVAL_REQUIRED",
+    "secret_like_content": "DENY_AND_REDACT"
+  }
+}

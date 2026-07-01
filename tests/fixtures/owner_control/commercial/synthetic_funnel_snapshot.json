@@ -1,0 +1,18 @@
+{
+  "synthetic": true,
+  "panel_id": "commercial_funnel",
+  "qualified_leads": 3,
+  "draft_offers": 2,
+  "no_send_state": "OUTBOUND_OFF_VISIBLE",
+  "send_allowed": false,
+  "outbound_count": 0,
+  "payment_count": 0,
+  "production_db_writes": 0,
+  "evidence": [
+    {
+      "id": "ev-owner-control-synthetic",
+      "source": "synthetic_fixture",
+      "claim": "Local synthetic owner-control evidence."
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "research_task_id": "synthetic-research-task-002",
+  "lead_id": "synthetic-lead-exa-002",
+  "company_name": "Synthetic Missing Source Company",
+  "website": "synthetic-missing-source.test",
+  "source_type": "public_web_research",
+  "facts": [
+    {
+      "fact_type": "business_category",
+      "fact_value": "Synthetic service company",
+      "source_url": "",
+      "source_title": "Synthetic Company Profile",
+      "evidence_snippet": "Synthetic public profile states the company category.",
+      "confidence": "medium",
+      "status": "candidate"
+    }
+  ],
+  "buying_signals": [],
+  "contact_candidates": [],
+  "risk_flags": [],
+  "recommended_next_action": "manual_review_only",
+  "do_not_contact": false
+}

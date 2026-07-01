@@ -1,0 +1,40 @@
+[
+  {
+    "voice_id": "voice_202605211442236_7405162",
+    "telegram_update_id": "7405162",
+    "from_user_id": "7893144142",
+    "chat_id": "7893144142",
+    "file_id": "AwACAgIAAxkBAAOLag8Z0PxEmGxh6Zj-ECuRpjIrYNYAAnqcAAK7SYFIvYxfYlcUmOA7BA",
+    "local_path": "D:\\AI_WORKSPACE\\tools\\telegram_gateway\\voice\\inbox\\voice_202605211442236_7405162.ogg",
+    "duration": 4,
+    "mime_type": "audio/ogg",
+    "received_at": "2026-05-21T14:42:23.644Z",
+    "status": "transcription_not_configured",
+    "transcript_id": null,
+    "notes": ""
+  },
+  {
+    "id": "voice_1779612402774",
+    "file_id": "AwACAgIAAxkBAAIBGmoSuvDH18tITE3CjIfUcOsBvcqMAALymAACrd-ZSPeP5ouDoArgOwQ",
+    "file_name": "voice_1779612402659.ogg",
+    "received_at": "2026-05-24T08:46:42.774Z",
+    "status": "failed",
+    "transcript": null
+  },
+  {
+    "id": "voice_1779619972696",
+    "file_id": "AwACAgIAAxkBAAIBIGoS2IJbgaifFvin6yCxTbkoBV0AAymaAAKt35lIu3aHREQPXbs7BA",
+    "file_name": "voice_1779619972486.ogg",
+    "received_at": "2026-05-24T10:52:52.697Z",
+    "status": "failed",
+    "transcript": null
+  },
+  {
+    "id": "voice_1779684655379",
+    "file_id": "AwACAgIAAxkBAAIBP2oT1S77oKc4FKWOBJe-me_ZvwqPAAJQmQACLcOgSGtfaTPA_qwCOwQ",
+    "file_name": "voice_1779684655250.ogg",
+    "received_at": "2026-05-25T04:50:55.251Z",
+    "status": "failed",
+    "transcript": null
+  }
+]

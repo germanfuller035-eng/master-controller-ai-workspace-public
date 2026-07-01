@@ -1,0 +1,22 @@
+{
+  "product_id": "mini_audit",
+  "allowed_facts": [
+    "Mini Audit 10K delivers the defined scope deliverables"
+  ],
+  "allowed_inferences": [
+    "Addressing verified findings may improve the customer path to a request"
+  ],
+  "allowed_hypotheses": [
+    "It is worth testing whether the fixes affect conversion"
+  ],
+  "prohibited": [
+    "guaranteed revenue/lead/conversion growth",
+    "guaranteed ranking/payback",
+    "full automation / employee replacement without proof"
+  ],
+  "required_evidence": [
+    "verified delivery output",
+    "pilot result"
+  ],
+  "owner_approval_status": "PENDING"
+}

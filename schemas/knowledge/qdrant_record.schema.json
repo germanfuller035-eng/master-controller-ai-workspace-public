@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "qdrant_record",
+  "type": "object",
+  "required": ["record_id", "artifact_id", "payload", "embedding_id", "adapter_status"],
+  "properties": {
+    "record_id": {"type": "string"},
+    "artifact_id": {"type": "string"},
+    "payload": {"type": "object"},
+    "embedding_id": {"type": "string"},
+    "adapter_status": {"type": "string"}
+  },
+  "additionalProperties": true
+}

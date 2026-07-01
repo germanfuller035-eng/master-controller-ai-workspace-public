@@ -1,0 +1,13 @@
+{
+  "title": "incident_health_snapshot",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["synthetic", "incidents", "health", "next_action", "evidence"],
+  "properties": {
+    "synthetic": {"type": "boolean"},
+    "incidents": {"type": "array"},
+    "health": {"type": "object"},
+    "next_action": {"type": "object"},
+    "evidence": {"type": "array"}
+  }
+}

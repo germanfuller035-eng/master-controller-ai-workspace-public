@@ -1,0 +1,18 @@
+{
+  "schema": "growth_os.brand_policy.v1",
+  "version": "1.0",
+  "note": "Internal brand + message policy. Evidence-first, no fabricated results, no fake authority. Russian-language clarity.",
+  "tone": ["clear", "evidence-first", "respectful", "no hype", "no pressure"],
+  "language": {"primary": "ru", "clarity": "plain business Russian, avoid jargon", "terminology": {"audit": "аудит", "request": "заявка", "findings": "выводы"}},
+  "allowed_claims": ["evidence-backed findings", "fixed price where approved", "fast turnaround where deliverable", "prioritized recommendations"],
+  "prohibited": {
+    "guarantees": ["guaranteed growth", "guaranteed requests", "guaranteed revenue", "guaranteed ranking"],
+    "pressure": ["false urgency", "fake scarcity", "manipulative countdowns"],
+    "authority": ["fabricated credentials", "fake awards", "invented client logos"],
+    "results": ["fabricated cases", "unconsented testimonials", "made-up metrics"]
+  },
+  "price_representation": {"only_approved_prices_shown": true, "unapproved": "show 'price on request' / omit, never invent"},
+  "privacy": ["minimal data", "explicit consent", "opt-out always available"],
+  "cta_standards": ["one clear action", "honest about what happens next", "no dark patterns"],
+  "rules": {"fake_authority": false, "fabricated_results": false}
+}

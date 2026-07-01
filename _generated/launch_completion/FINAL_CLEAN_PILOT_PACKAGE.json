@@ -1,0 +1,21 @@
+{
+  "generated_at": "2026-06-19",
+  "lead_id": "KZ-JBI_RU",
+  "company": "Краснодарский Завод ЖБИ",
+  "segment": "ЖБИ", "region": "Краснодар",
+  "clean_history_proof": {
+    "send_ledger_records": 0, "email_ledger_records": 0,
+    "last_send_status": null, "uncertain_last_sent_at": null, "external_contact_sent": false
+  },
+  "contact": { "email": "info@kz-jbi.ru", "email_source": "scraped_site_contact" },
+  "audit_observations": 3, "hook": "WEAK_WEBSITE",
+  "artifact_status": "QA_PASSED", "quality_score": 98, "quality_gate": "PASS",
+  "compliance_gate": "PASS", "deliverability": "READY_NO_SEND",
+  "recommended_subject_id": "subj_a", "recommended_body_id": "body_a",
+  "content_hash": "cfd6a59cec98500a25197699d48d04b7", "source_revision": 120,
+  "blockers": ["CONTACT_SCRAPED_NOT_VERIFIED", "IDENTITY_MATCH_MISMATCH"],
+  "beton_masters": { "classification": "DELIVERY_STATUS_UNKNOWN", "send_eligible": false, "pilot_reason": "BLOCKED_UNCERTAIN_PRIOR_SEND" },
+  "controlled_send_gate": "DISABLED", "transport_enabled": false,
+  "approval_phrase": "APPROVE_ONE_FIRST_TOUCH_SEND:KZ-JBI_RU:cfd6a59cec98500a25197699d48d04b7",
+  "approval_token_issued": false, "real_send_executed": false
+}

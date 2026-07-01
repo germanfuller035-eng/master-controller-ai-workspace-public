@@ -1,0 +1,129 @@
+{
+  "total": 50,
+  "counts": {
+    "DEAD_DOMAIN": 9,
+    "WRONG_IDENTITY": 1,
+    "CONTACT_FORM_ONLY": 22,
+    "MANUAL_REVIEW": 10,
+    "HISTORICAL_KEEP": 2,
+    "SEND_UNCERTAIN_REVIEW": 3,
+    "WAITING_REPLY_KEEP": 3
+  },
+  "byCat": {
+    "DEAD_DOMAIN": [
+      "JBI-KUBAN_RU",
+      "JBI-KUBAN-YUG_RU",
+      "JBI-DINSKAYA_RU",
+      "JBI-USTLABINSK_RU",
+      "BETONSTROY-YUG_RU",
+      "KUBAN-BETON_RU",
+      "BETONMIX-KUBAN_RU",
+      "BETON-KUBANI_RU",
+      "TBETON-KRD_RU"
+    ],
+    "WRONG_IDENTITY": [
+      "KZ-JBI_RU"
+    ],
+    "CONTACT_FORM_ONLY": [
+      "JBK-NVRSK_RU",
+      "JBI-ARMAVIR_RU",
+      "JBI-KROPOTKIN_RU",
+      "BETON-ADLER_RU",
+      "UGBETON_RU",
+      "BETONTRADE-SOCHI_RU",
+      "BETON-ANAPA_RU",
+      "METALLK-YUG_RU",
+      "UGMETALLMONTAZH_RU",
+      "METALLKARKAS23_RU",
+      "UGMETALLSERVICE_RU",
+      "METALLPROKAT-UFO_RU",
+      "STALK-KUBAN_RU",
+      "METALLSTROY-SOCHI_RU",
+      "KRASNODARMETALL_RU",
+      "STROYBAZA-SOCHI_RU",
+      "STROYTORG-UFO_RU",
+      "STROYLIDER-NVRSK_RU",
+      "ZAVODMP_RU",
+      "PROMSTROYKOMPLEKT_RU",
+      "KUBAN-PROFIL_RU",
+      "ZSM-ADYGEA_RU"
+    ],
+    "MANUAL_REVIEW": [
+      "STRMAT-KUBAN_RU",
+      "SK-STROYRESURS_RU",
+      "STROYDVOR-KRD_RU",
+      "STROYOPTTORG-KRD_RU",
+      "STROYGOROD-KRD_RU",
+      "STROYSNAB-KUBAN_RU",
+      "KZMI-KRD_RU",
+      "PZBI-YUG_RU",
+      "ZAVODSTROYDETAL_RU",
+      "PROMZAVOD-KUBAN_RU"
+    ],
+    "HISTORICAL_KEEP": [
+      "TEST_OWNER_EMAIL_CHANNEL",
+      "INTERNAL_VALIDATION_ONLY_20260614"
+    ],
+    "SEND_UNCERTAIN_REVIEW": [
+      "GBIRESURS_RU",
+      "BETON-MASTERS_RU",
+      "MEGALIT-KRD_RU"
+    ],
+    "WAITING_REPLY_KEEP": [
+      "DKBI_RU",
+      "STROYDVOR-UG_RU",
+      "ZAVODATOM_RU"
+    ]
+  },
+  "quarantine": [
+    {
+      "id": "JBI-KUBAN_RU",
+      "category": "DEAD_DOMAIN"
+    },
+    {
+      "id": "JBI-KUBAN-YUG_RU",
+      "category": "DEAD_DOMAIN"
+    },
+    {
+      "id": "JBI-DINSKAYA_RU",
+      "category": "DEAD_DOMAIN"
+    },
+    {
+      "id": "JBI-USTLABINSK_RU",
+      "category": "DEAD_DOMAIN"
+    },
+    {
+      "id": "BETONSTROY-YUG_RU",
+      "category": "DEAD_DOMAIN"
+    },
+    {
+      "id": "KUBAN-BETON_RU",
+      "category": "DEAD_DOMAIN"
+    },
+    {
+      "id": "BETONMIX-KUBAN_RU",
+      "category": "DEAD_DOMAIN"
+    },
+    {
+      "id": "BETON-KUBANI_RU",
+      "category": "DEAD_DOMAIN"
+    },
+    {
+      "id": "TBETON-KRD_RU",
+      "category": "DEAD_DOMAIN"
+    },
+    {
+      "id": "KZ-JBI_RU",
+      "category": "WRONG_IDENTITY"
+    }
+  ],
+  "ledgerLinked": [
+    "002",
+    "A",
+    "MA-1",
+    "INTERNAL_VALIDATION_ONLY_20260614",
+    "selftest:<mqe43bml.v7kop9gp@yandex.com>",
+    "TEST_OWNER_EMAIL_CHANNEL",
+    "TEST_KGBI23_E2E"
+  ]
+}

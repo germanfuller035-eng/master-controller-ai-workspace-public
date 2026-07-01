@@ -1,0 +1,12 @@
+{
+  "data_classes": [
+    "MILITARY_MEDICAL"
+  ],
+  "external_system_accessed": false,
+  "health_context": "non_medical_reminder",
+  "kind": "family_health_reminder",
+  "medical_processing_requested": false,
+  "reminder_label": "synthetic_wellness_routine",
+  "request_id": "syn_health_alpha",
+  "synthetic": true
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "memory_retention_rule",
+  "type": "object",
+  "required": ["rule_id", "retention", "review_after_days", "action"],
+  "properties": {
+    "rule_id": {"type": "string"},
+    "retention": {"type": "string"},
+    "review_after_days": {"type": "integer"},
+    "action": {"type": "string"}
+  },
+  "additionalProperties": true
+}

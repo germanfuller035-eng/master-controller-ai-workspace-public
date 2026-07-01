@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-26",
+  "session": "VOLTAGENT_RUNTIME_MODEL_ROUTER_AND_COST_GOVERNOR_V1",
+  "registry_kind": "runtime_adapters",
+  "default_enabled": false,
+  "default_production_enabled": false,
+  "adapters": [
+    {
+      "id": "voltagent_internal_runtime_contract",
+      "implementation": "tools.runtime.runtime_adapter.RuntimeAdapter",
+      "runtime": "VoltAgent pinned future runtime",
+      "status": "CONTRACT_ONLY_NOT_INSTALLED",
+      "enabled": false,
+      "production_enabled": false,
+      "local_synthetic_fixture_required": true,
+      "public_api_enabled": false,
+      "managed_memory_enabled": false,
+      "deployment_enabled": false,
+      "production_capabilities": 0,
+      "memory_enabled": false,
+      "direct_tool_bypass_allowed": false,
+      "mcp_gateway_required": true,
+      "denied_capabilities": ["public_voltagent_api", "managed_voltagent_memory", "production_runtime", "external_mcp_server", "production_tool_adapter", "persistent_memory", "outbound_send", "payments", "production_db_write", "production_deploy", "direct_docker_socket", "secret_read"]
+    },
+    {
+      "id": "deterministic_local_runtime",
+      "implementation": "tools.runtime.runtime_adapter.RuntimeAdapter",
+      "runtime": "standard_library_synthetic_runtime",
+      "status": "LOCAL_SYNTHETIC_ONLY",
+      "enabled": false,
+      "production_enabled": false,
+      "local_synthetic_fixture_required": true,
+      "production_capabilities": 0,
+      "memory_enabled": false,
+      "direct_tool_bypass_allowed": false,
+      "mcp_gateway_required": true,
+      "denied_capabilities": ["production_runtime", "production_tool_adapter", "persistent_memory", "outbound_send", "payments", "production_db_write", "production_deploy", "direct_docker_socket", "secret_read"]
+    }
+  ]
+}

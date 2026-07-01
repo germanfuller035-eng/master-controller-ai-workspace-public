@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-26",
+  "session": "WEB_COMMAND_CENTER_ANDROID_OWNER_CONTROL_V1",
+  "scope": "LOCAL_SYNTHETIC_CONTRACT_ONLY",
+  "synthetic_only": true,
+  "synthetic_costs_only": true,
+  "provider_telemetry_allowed": false,
+  "budget_evidence_required": true,
+  "safety": {
+    "production_web_deploy": "OFF",
+    "outbound_email": "OFF",
+    "outbound_social": "OFF",
+    "auto_safe": "OFF",
+    "voice": "OFF",
+    "browser_actions": "OFF",
+    "payments": "OFF",
+    "production_db_write": "OFF"
+  }
+}

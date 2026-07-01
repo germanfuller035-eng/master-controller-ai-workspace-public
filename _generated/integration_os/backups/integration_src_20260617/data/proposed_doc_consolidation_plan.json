@@ -1,0 +1,46 @@
+{
+  "schema": "integration_os.proposed_doc_consolidation_plan.v1",
+  "note": "MP30 — single ordered apply plan across ALL proposed-doc trees. Nothing applied. Detects duplicate/colliding/contradictory/stale/superseded targets.",
+  "synthetic": true,
+  "totals": {
+    "proposed_docs": 114,
+    "unique_targets": 114,
+    "projects": 11
+  },
+  "by_project": {
+    "analytics-os": 25, "conversation-hub": 26, "growth-os": 24, "obsidian_hq": 8,
+    "delivery-os": 6, "revenue_os": 6, "finance-os": 5, "customer-success-os": 4,
+    "executive-os": 4, "product-os": 4, "claude_code_integration": 2,
+    "integration-data-contracts": "33 (added by MP43)"
+  },
+  "detections": {
+    "duplicate_target": [],
+    "target_collision": [],
+    "contradictory_content": [],
+    "stale_proposal": [],
+    "superseded_proposal": [
+      { "note": "analytics-os proposals authored by analytics-os-completion-v1 (in chain) supersede any from the obsolete analytics-os-metrics-reporting-v1 branch; the obsolete branch's docs are NOT in this tree." }
+    ],
+    "create_vs_update_conflict": [
+      { "target": "00_MASTER_CONTEXT/PROJECT_REGISTRY.md", "type": "UPDATE", "note": "multiple projects each propose a registry ENTRY (additive); apply must MERGE entries, not overwrite the file" },
+      { "target": "00_MASTER_CONTEXT/WHAT_ALREADY_EXISTS.md", "type": "UPDATE", "note": "additive links; merge" },
+      { "target": "00_MASTER_CONTEXT/AI_SYSTEM_MAP.md", "type": "UPDATE/CREATE", "note": "additive map links; merge" }
+    ],
+    "cross_link_break": [],
+    "registry_conflict": [
+      { "issue": "11 separate registry_proposal.json files (one per OS) propose distinct project_id entries", "resolution": "apply as additive merge into PROJECT_REGISTRY.md; integration-data-contracts adds the 12th entry" }
+    ]
+  },
+  "ordered_apply_plan": {
+    "note": "Recommended owner apply order (NOT executed). Foundational governance first, then per-OS in chain order, then integration, then shared MASTER_CONTEXT merges last.",
+    "stages": [
+      { "order": 1, "group": "governance_foundation", "targets": ["03_sop/ai_agent_governance_protocol.md"], "change_type": "CREATE" },
+      { "order": 2, "group": "per_os_standards", "projects_in_chain_order": ["revenue_os", "delivery-os", "finance-os", "executive-os", "product-os", "customer-success-os", "analytics-os", "growth-os", "conversation-hub"], "change_type": "MOSTLY_CREATE" },
+      { "order": 3, "group": "integration_standards", "project": "integration-data-contracts", "change_type": "CREATE" },
+      { "order": 4, "group": "dashboards", "targets_prefix": "09_dashboards/", "change_type": "CREATE" },
+      { "order": 5, "group": "shared_master_context_merge", "targets": ["00_MASTER_CONTEXT/PROJECT_REGISTRY.md", "00_MASTER_CONTEXT/WHAT_ALREADY_EXISTS.md", "00_MASTER_CONTEXT/AI_SYSTEM_MAP.md", "00_MASTER_CONTEXT/current_decisions_index.md"], "change_type": "MERGE_ADDITIVE", "note": "apply LAST, as additive merges with backup; never blind overwrite" }
+    ],
+    "apply_executed": false,
+    "canonical_docs_applied": 0
+  }
+}

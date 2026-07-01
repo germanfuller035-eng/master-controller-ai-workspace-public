@@ -1,0 +1,9 @@
+{
+  "scenario": "L",
+  "name": "External communication blocked",
+  "ok": true,
+  "steps": [
+    "select: HUMAN_OWNER",
+    "policy: no send; external comms owner-gated -> BLOCKED for agents"
+  ]
+}

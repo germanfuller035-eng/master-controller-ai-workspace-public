@@ -1,0 +1,56 @@
+{
+  "schema": "product_os.owner_decisions.v1",
+  "decisions": [
+    {
+      "id": "p_confirm_statuses",
+      "title": "Confirm product catalog statuses",
+      "status": "READY_FOR_OWNER"
+    },
+    {
+      "id": "p_approve_prices",
+      "title": "Approve/reject product prices",
+      "status": "READY_FOR_OWNER"
+    },
+    {
+      "id": "p_startpack_conflict",
+      "title": "Resolve Start Pack price conflict (50k vs 90-250k)",
+      "status": "READY_FOR_OWNER"
+    },
+    {
+      "id": "p_pilot_products",
+      "title": "Choose products for pilot",
+      "status": "READY_FOR_OWNER"
+    },
+    {
+      "id": "p_pause_products",
+      "title": "Choose products to pause",
+      "status": "READY_FOR_OWNER"
+    },
+    {
+      "id": "p_lead_system",
+      "title": "Decide Lead System packaging",
+      "status": "NEEDS_DATA"
+    },
+    {
+      "id": "p_ai_front_office",
+      "title": "Decide AI Front Office boundaries",
+      "status": "NEEDS_DATA"
+    },
+    {
+      "id": "p_approve_claims",
+      "title": "Approve product claims",
+      "status": "NEEDS_DATA"
+    },
+    {
+      "id": "p_approve_assets",
+      "title": "Approve sample/demo assets",
+      "status": "READY_FOR_OWNER"
+    },
+    {
+      "id": "p_readiness_promotion",
+      "title": "Approve readiness promotion",
+      "status": "READY_FOR_OWNER"
+    }
+  ],
+  "note": "No decision executed. Owner decides."
+}

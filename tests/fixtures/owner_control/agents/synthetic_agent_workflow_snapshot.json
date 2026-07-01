@@ -1,0 +1,25 @@
+{
+  "synthetic": true,
+  "agents": [
+    {
+      "id": "agent-synthetic-review",
+      "status": "PASS",
+      "evidence_ids": ["ev-owner-control-synthetic"]
+    }
+  ],
+  "workflows": [
+    {
+      "id": "workflow-owner-morning",
+      "status": "PASS",
+      "incidents": ["inc-synthetic-delay"],
+      "evidence_ids": ["ev-owner-control-synthetic"]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-owner-control-synthetic",
+      "source": "synthetic_fixture",
+      "claim": "Local synthetic owner-control evidence."
+    }
+  ]
+}

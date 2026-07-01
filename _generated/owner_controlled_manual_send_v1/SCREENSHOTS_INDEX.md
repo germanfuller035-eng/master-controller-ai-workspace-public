@@ -1,0 +1,6 @@
+# Screenshots Index
+
+SCREENSHOTS_COMMITTED=NO
+REASON=Real-lead screens can contain private company/contact data.
+DEVICE_VISUAL_CHECK=NOT_REQUIRED_AFTER_UIAUTOMATOR_PASS
+PRIVATE_SCREENSHOTS_CREATED=NO

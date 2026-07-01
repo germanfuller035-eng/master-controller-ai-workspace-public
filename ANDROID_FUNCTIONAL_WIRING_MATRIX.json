@@ -1,0 +1,45 @@
+{
+  "matrix_version": "android_functional_wiring_rc3",
+  "generated_for": "0.8.0-rc3",
+  "production_api": "https://195-96-132-82.sslip.io/api/v1",
+  "method": "two independent read-only code audits + direct route/endpoint cross-check + live production curl",
+  "acceptance": {
+    "STATIC_RUNTIME_SCREENS": 0,
+    "RELEASE_RUNTIME_MOCKS": 0,
+    "RELEASE_RUNTIME_PLACEHOLDERS": 0,
+    "NO_OP_CONTROLS": 0,
+    "LOCAL_FALSE_SUCCESS_PATHS": 0,
+    "CLICKABLE_STATIC_CARDS": 0,
+    "BROKEN_NAVIGATION": 0,
+    "UNKNOWN_ENTRIES": 0
+  },
+  "defects_found_and_fixed": [
+    {"class": "BROKEN_NAVIGATION", "where": "MaterControllerRoot.kt command_center/campaigns", "was": "registered composable but no navigate() entry point — unreachable flagship screens", "fix": "Today screen cards onOpenCommandCenter/onOpenCampaigns → nav.navigate", "commit": "2324335"},
+    {"class": "BROKEN_AUTH", "where": "MaterRepository.retryJob → POST jobs/enqueue (jobs:read service scope)", "was": "owner token → guaranteed 401 on dead-letter retry", "fix": "new owner-auth POST /jobs/{id}/retry; repo points at it", "commit": "2324335"},
+    {"class": "LOCAL_FALSE_SUCCESS", "where": "KnowledgeScreens.kt finding dialog", "was": "text claimed actions 'создают задачу проверки' but only recordLocalDecision (UI-only)", "fix": "honest text: locally-saved, no server task; button relabeled '(локально)'", "commit": "2324335"},
+    {"class": "NO_OP", "where": "5 AssistChip(onClick={}) in catalog/replies/transport/today", "was": "decorative status badges presented a clickable affordance", "fix": "enabled=false → honest non-interactive labels", "commit": "2324335"}
+  ],
+  "read_only_screens": [
+    {"screen": "Today", "repository_method": "status/nextAction", "endpoint": "GET /mini-audit/status,/mini-audit/next-action", "classification": "READ_ONLY_WORKING"},
+    {"screen": "CommandCenter", "repository_method": "ownerSnapshot/commandBrief", "endpoint": "GET /next-actions,/command-brief", "classification": "READ_ONLY_WORKING"},
+    {"screen": "Reliability", "repository_method": "reliabilityOverview", "endpoint": "GET /reliability", "classification": "READ_ONLY_WORKING", "live_verified": true},
+    {"screen": "Cost", "repository_method": "costOverview", "endpoint": "GET /costs", "classification": "READ_ONLY_WORKING", "live_verified": "2643 units from prod ledger"},
+    {"screen": "Backup", "repository_method": "backupStatus/restoreDrill", "endpoint": "GET /backups/status,/backups/restore-drill", "classification": "READ_ONLY_WORKING", "live_verified": true},
+    {"screen": "Push", "repository_method": "pushStatus/pushPreferences", "endpoint": "GET /push/status,/push/preferences", "classification": "READ_ONLY_WORKING", "live_verified": "CREDENTIAL_REQUIRED"},
+    {"screen": "Decisions/Incidents", "repository_method": "ownerDecisions/ownerIncidents", "endpoint": "GET /owner-decisions,/incidents", "classification": "READ_ONLY_WORKING"},
+    {"screen": "Knowledge", "repository_method": "knowledgeDigest/radarStatus/knowledgeSources", "endpoint": "GET /knowledge/*", "classification": "READ_ONLY_WORKING"},
+    {"screen": "AiUsage/Cost detail", "repository_method": "aiUsage/aiUsageReconciliation", "endpoint": "GET /ai/usage*", "classification": "READ_ONLY_WORKING"},
+    {"screen": "Operations/System", "repository_method": "automationStatus2/jobs/sourcesHealth", "endpoint": "GET /automation/status,/jobs,/sources/health", "classification": "READ_ONLY_WORKING"}
+  ],
+  "write_controls_test_only": [
+    {"control": "notification mark read", "repository_method": "setNotificationState", "endpoint": "POST /notifications/{id}/read", "auth": "owner", "reread": true, "classification": "TEST_ONLY_WORKING"},
+    {"control": "incident acknowledge/mute", "endpoint": "POST /incidents/{id}/acknowledge|mute", "auth": "owner", "classification": "TEST_ONLY_WORKING"},
+    {"control": "owner decision resolve", "endpoint": "POST /owner-decisions/{id}/resolve", "auth": "owner+expectedDecisionRevision", "classification": "TEST_ONLY_WORKING"},
+    {"control": "autopilot mode", "endpoint": "POST /autopilot/mode", "auth": "owner", "classification": "TEST_ONLY_WORKING"},
+    {"control": "kill switch", "endpoint": "POST /operations/kill-switch/enable", "auth": "owner", "classification": "TEST_ONLY_WORKING"},
+    {"control": "dead-letter retry", "endpoint": "POST /jobs/{id}/retry", "auth": "owner", "classification": "LIVE_WORKING", "note": "fixed from 401"},
+    {"control": "remediation run (HEALTH_RECHECK)", "endpoint": "POST /remediation/run", "auth": "owner", "classification": "LIVE_WORKING", "prod_smoke": "executed HEALTHY; SEND_CLIENT rejected 400"},
+    {"control": "push register/prefs", "endpoint": "POST /push/register,/push/preferences", "auth": "owner", "classification": "TEST_ONLY_WORKING"},
+    {"control": "campaign create/pause/resume", "endpoint": "POST /campaigns,/campaigns/{id}/*", "auth": "owner", "classification": "TEST_ONLY_WORKING"}
+  ]
+}

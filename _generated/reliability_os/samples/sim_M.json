@@ -1,0 +1,10 @@
+{
+  "scenario": "M",
+  "production_affected": false,
+  "name": "TLS expiry warning",
+  "ok": true,
+  "steps": [
+    "tls_expiry -> detect:expiry < 14d health:DEGRADED alert:a_cert_expiry runbook:rb_tls_warning"
+  ],
+  "alert": "a_cert_expiry"
+}

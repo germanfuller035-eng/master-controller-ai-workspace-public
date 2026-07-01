@@ -1,0 +1,15 @@
+{
+  "additionalProperties": true,
+  "properties": {
+    "adapter_status": {},
+    "production_enabled": {},
+    "runtime_enabled": {}
+  },
+  "required": [
+    "adapter_status",
+    "runtime_enabled",
+    "production_enabled"
+  ],
+  "title": "Playwright Adapter Contract",
+  "type": "object"
+}

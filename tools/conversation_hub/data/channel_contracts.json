@@ -1,0 +1,131 @@
+{
+  "schema": "conversation_hub.channel_contracts.v1",
+  "note": "MP5-6 + MP29-32 — channel abstraction + adapter contracts. CONTRACTS ONLY. No network transports. Prohibited automation is explicitly listed and enforced by validators/security tests.",
+  "synthetic": true,
+  "prohibited_globally": [
+    "unofficial WhatsApp automation (whatsapp-web.js, Baileys, browser automation)",
+    "browser automation for WhatsApp / web channels",
+    "personal-account scraping",
+    "unofficial MAX automation / reverse engineering",
+    "userbot Telegram accounts (MTProto user sessions)",
+    "hidden / undocumented channel access"
+  ],
+  "adapter_interface": {
+    "inbound": {
+      "responsibilities": ["receive external event (future)", "validate signature (future)", "normalizeInboundEnvelope()", "dedupe", "create source reference", "NEVER mutate domain directly"],
+      "allowed_method_names": ["normalizeInboundEnvelope", "validateInboundSignature", "buildSourceReference"],
+      "forbidden_method_names": ["receiveLive", "startPoller", "openWebhook", "ingestProduction"]
+    },
+    "outbound": {
+      "responsibilities": ["accept ONLY canonical approved request from Master Controller (future)", "validate idempotency key", "prepareOutboundEnvelope()", "validateTransportResult()", "NEVER determine approval", "NEVER choose recipient", "NEVER generate message content"],
+      "allowed_method_names": ["prepareOutboundEnvelope", "validateTransportResult"],
+      "forbidden_method_names": ["sendMessage", "sendEmail", "postTelegram", "sendSmtp", "deliver"]
+    }
+  },
+  "channels": [
+    {
+      "channel": "EMAIL",
+      "live_state": "NOT_CONNECTED",
+      "directions": ["INBOUND", "OUTBOUND"],
+      "thread_semantics": "Message-ID + In-Reply-To + References headers; subject fallback; participant fallback",
+      "message_ids": "RFC Message-ID (angle-bracketed)",
+      "reply_correlation": "In-Reply-To/References contains one of OUR sent Message-IDs (from send ledger) -> lead; else recipient-from match; else UNMATCHED",
+      "delivery_states": ["TRANSPORT_ACCEPTED", "DELIVERED_CONFIRMED", "DEFERRED", "BOUNCED_SOFT", "BOUNCED_HARD", "REJECTED", "UNKNOWN"],
+      "attachment_handling": "File Vault reference + checksum; no binary in conversation store",
+      "consent": "required for commercial; support may be contractually necessary",
+      "opt_out": "List-Unsubscribe header future; body opt-out phrases; bounce != opt-out",
+      "rate_limits": "per Master Controller send policy (Hub does not send)",
+      "identity_confidence": "verified email = STRONG; guessed email = NO_MATCH (never correlate by guessed email)",
+      "future_adapter_requirements": ["read-only IMAP inbound (future)", "SMTP transport behind MC approved seam (future)", "DKIM/SPF signature validation (future)"],
+      "transport_owner": "Master Controller (approved_email_send_adapter.mjs); outbound_send_ledger.jsonl is canonical SENT state",
+      "implemented_here": false
+    },
+    {
+      "channel": "TELEGRAM",
+      "live_state": "NOT_CONNECTED",
+      "directions": ["INBOUND", "OUTBOUND", "INTERNAL"],
+      "thread_semantics": "chat_id (future) + message reply reference + business conversation id (future)",
+      "message_ids": "Telegram message_id within chat",
+      "reply_correlation": "reply_to_message_id within chat; business_connection_id (future)",
+      "delivery_states": ["TRANSPORT_ACCEPTED", "DELIVERED_CONFIRMED", "UNKNOWN"],
+      "attachment_handling": "file_id reference (future) -> File Vault; no binary store",
+      "consent": "owner-control: owner-only, no consent needed; client Telegram: explicit consent + business/legal policy",
+      "opt_out": "explicit message; block signal (future)",
+      "rate_limits": "Telegram API limits (Hub does not call API)",
+      "identity_confidence": "chat_id = STRONG within channel; cross-channel link requires canonical evidence",
+      "uses": {
+        "owner_control": "owner-only, API-only, commands/buttons, approval views, no raw secrets",
+        "client_future": "only with explicit business/legal policy, separate identity, explicit consent, NO userbot, NO personal-account automation"
+      },
+      "transport_owner": "Master Controller (telegram_api_transport.mjs, API-only)",
+      "implemented_here": false
+    },
+    {
+      "channel": "WEB_FORM",
+      "live_state": "NOT_CONNECTED",
+      "directions": ["INBOUND"],
+      "thread_semantics": "submission_id; new conversation unless explicit contact identity links to existing",
+      "message_ids": "submission_id",
+      "reply_correlation": "campaign_id + explicit contact identity + consent",
+      "delivery_states": ["UNKNOWN"],
+      "attachment_handling": "uploaded file reference (future) -> File Vault scan contract",
+      "consent": "explicit consent checkbox + privacy version REQUIRED; no consent -> blocked",
+      "opt_out": "n/a inbound; consent governs follow-up",
+      "rate_limits": "spam detection + rate limit on intake (future)",
+      "identity_confidence": "explicit contact = STRONG only if verified; otherwise PROBABLE -> owner review",
+      "intake_fields": ["submission_id", "timestamp", "consent", "name_company", "contact", "product_interest", "campaign_id", "source", "privacy_version"],
+      "future_adapter_requirements": ["validation", "spam detection", "rate limit", "consent evidence", "API-only handoff", "NO automatic outbound reply without policy"],
+      "implemented_here": false
+    },
+    {
+      "channel": "MAX_FUTURE",
+      "live_state": "NOT_CONNECTED",
+      "directions": ["INBOUND", "OUTBOUND"],
+      "thread_semantics": "future official adapter only",
+      "reply_correlation": "future",
+      "delivery_states": ["UNKNOWN"],
+      "consent": "future official policy",
+      "opt_out": "future",
+      "identity_confidence": "future",
+      "requirements": ["future OFFICIAL adapter only", "NO reverse engineering", "NO personal-account automation"],
+      "implemented_here": false
+    },
+    {
+      "channel": "WHATSAPP_OFFICIAL_FUTURE",
+      "live_state": "NOT_CONNECTED",
+      "directions": ["INBOUND", "OUTBOUND"],
+      "thread_semantics": "WhatsApp Business Platform conversation (future)",
+      "reply_correlation": "future via official API",
+      "delivery_states": ["UNKNOWN"],
+      "consent": "templates + consent per future applicable policy",
+      "opt_out": "official stop keyword (future)",
+      "identity_confidence": "verified phone via official platform",
+      "requirements": ["OFFICIAL WhatsApp Business Platform ONLY", "NO unofficial libraries", "NO browser automation", "templates + consent per policy"],
+      "implemented_here": false
+    },
+    {
+      "channel": "PHONE_MANUAL_REFERENCE",
+      "live_state": "NOT_CONNECTED",
+      "directions": ["INTERNAL"],
+      "thread_semantics": "manual call log reference entered by owner",
+      "reply_correlation": "manual link to conversation",
+      "delivery_states": ["UNKNOWN"],
+      "consent": "owner records",
+      "opt_out": "owner records verbal opt-out as evidence",
+      "identity_confidence": "owner-asserted",
+      "implemented_here": false
+    },
+    {
+      "channel": "INTERNAL",
+      "live_state": "NOT_CONNECTED",
+      "directions": ["INTERNAL", "SYSTEM"],
+      "thread_semantics": "internal notes / system events attached to a conversation",
+      "reply_correlation": "n/a",
+      "delivery_states": ["DRAFT"],
+      "consent": "n/a",
+      "opt_out": "n/a",
+      "identity_confidence": "n/a",
+      "implemented_here": false
+    }
+  ]
+}

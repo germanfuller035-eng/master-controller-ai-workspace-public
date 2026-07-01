@@ -1,0 +1,25 @@
+{
+  "matrix_version": 1,
+  "single_production_writer": "master_controller",
+  "invariants": {
+    "duplicate_canonical_writers": 0,
+    "parallel_ledgers": 0,
+    "parallel_approval_truths": 0,
+    "unowned_entities": 0,
+    "multi_owner_entities": 0
+  },
+  "entities": [
+    { "entity": "lead", "authoritative_owner": "master_controller", "production_writer": "master_controller", "read_consumers": ["revenue_os","android","executive_os"], "revision_owner": "master_controller", "idempotency_owner": "master_controller", "event_producer": "master_controller", "data_class": "PII", "retention_class": "operational" },
+    { "entity": "opportunity", "authoritative_owner": "revenue_os_domain", "production_writer": "master_controller", "read_consumers": ["android","executive_os","finance_os"], "revision_owner": "master_controller", "idempotency_owner": "master_controller", "event_producer": "commercial_core", "data_class": "commercial", "retention_class": "operational" },
+    { "entity": "product_spec", "authoritative_owner": "product_os", "production_writer": "product_os", "read_consumers": ["revenue_os","commercial_core","android"], "revision_owner": "product_os", "idempotency_owner": "product_os", "event_producer": "product_os", "data_class": "catalog", "retention_class": "reference" },
+    { "entity": "offer", "authoritative_owner": "revenue_os_domain", "production_writer": "master_controller", "read_consumers": ["android","executive_os"], "revision_owner": "master_controller", "idempotency_owner": "master_controller", "event_producer": "commercial_core", "data_class": "commercial", "retention_class": "operational" },
+    { "entity": "owner_decision", "authoritative_owner": "master_controller_approval", "production_writer": "master_controller", "read_consumers": ["revenue_os","android"], "revision_owner": "master_controller", "idempotency_owner": "master_controller", "event_producer": "master_controller", "data_class": "approval", "retention_class": "audit" },
+    { "entity": "deal", "authoritative_owner": "revenue_os_domain", "production_writer": "master_controller", "read_consumers": ["delivery_os","finance_os","android","executive_os"], "revision_owner": "master_controller", "idempotency_owner": "master_controller", "event_producer": "commercial_core", "data_class": "commercial", "retention_class": "operational" },
+    { "entity": "delivery_handoff", "authoritative_owner": "delivery_os_domain", "production_writer": "master_controller", "read_consumers": ["android","executive_os"], "revision_owner": "master_controller", "idempotency_owner": "master_controller", "event_producer": "commercial_core", "data_class": "delivery", "retention_class": "operational" },
+    { "entity": "project", "authoritative_owner": "delivery_os_domain", "production_writer": "master_controller", "read_consumers": ["finance_os","android","executive_os"], "revision_owner": "master_controller", "idempotency_owner": "master_controller", "event_producer": "commercial_core", "data_class": "delivery", "retention_class": "operational" },
+    { "entity": "invoice", "authoritative_owner": "finance_os_domain", "production_writer": "master_controller", "read_consumers": ["android","executive_os"], "revision_owner": "master_controller", "idempotency_owner": "master_controller", "event_producer": "commercial_core", "data_class": "finance", "retention_class": "audit" },
+    { "entity": "payment", "authoritative_owner": "finance_os_domain", "production_writer": "master_controller", "read_consumers": ["android","executive_os"], "revision_owner": "master_controller", "idempotency_owner": "master_controller", "event_producer": "commercial_core", "data_class": "finance", "retention_class": "audit" },
+    { "entity": "send_ledger", "authoritative_owner": "master_controller", "production_writer": "master_controller", "read_consumers": ["telegram","android"], "revision_owner": "master_controller", "idempotency_owner": "master_controller", "event_producer": "master_controller", "data_class": "audit", "retention_class": "audit" },
+    { "entity": "approval_truth", "authoritative_owner": "master_controller", "production_writer": "master_controller", "read_consumers": ["revenue_os","delivery_os","finance_os","android"], "revision_owner": "master_controller", "idempotency_owner": "master_controller", "event_producer": "master_controller", "data_class": "approval", "retention_class": "audit" }
+  ]
+}

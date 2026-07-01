@@ -1,0 +1,50 @@
+﻿[
+    {
+        "route":  "direct",
+        "ok":  "yes",
+        "status":  "HTTP/1.1 302 Moved Temporarily",
+        "latency_ms":  1111
+    },
+    {
+        "route":  "http://127.0.0.1:10809",
+        "ok":  "yes",
+        "status":  "HTTP/1.1 200 Connection established",
+        "latency_ms":  698
+    },
+    {
+        "route":  "http://127.0.0.1:7890",
+        "ok":  "no",
+        "status":  "UNKNOWN",
+        "latency_ms":  2182
+    },
+    {
+        "route":  "http://127.0.0.1:8080",
+        "ok":  "no",
+        "status":  "UNKNOWN",
+        "latency_ms":  2075
+    },
+    {
+        "route":  "http://127.0.0.1:2080",
+        "ok":  "no",
+        "status":  "UNKNOWN",
+        "latency_ms":  2075
+    },
+    {
+        "route":  "socks5h://127.0.0.1:10808",
+        "ok":  "yes",
+        "status":  "HTTP/1.1 302 Moved Temporarily",
+        "latency_ms":  1376
+    },
+    {
+        "route":  "socks5h://127.0.0.1:7891",
+        "ok":  "no",
+        "status":  "UNKNOWN",
+        "latency_ms":  2103
+    },
+    {
+        "route":  "socks5h://127.0.0.1:2081",
+        "ok":  "no",
+        "status":  "UNKNOWN",
+        "latency_ms":  2086
+    }
+]

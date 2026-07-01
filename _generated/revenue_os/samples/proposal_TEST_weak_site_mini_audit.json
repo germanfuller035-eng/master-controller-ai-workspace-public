@@ -1,0 +1,76 @@
+{
+  "schema": "revenue_os.proposal.v1",
+  "title": "Предложение: Мини-аудит сайта и пути клиента до заявки",
+  "client": "[client]",
+  "approval_state": "INTERNAL_REVIEW",
+  "send_allowed": false,
+  "current_situation": "Site/page/listing exists but requests are weak; unclear where the customer is lost.",
+  "verified_observations": [
+    {
+      "claim": "weak CTA verified",
+      "type": "FACT",
+      "source": "https://weak.test"
+    }
+  ],
+  "objectives": [
+    "address the verified problem with a scoped deliverable"
+  ],
+  "proposed_solution": {
+    "id": "mini_audit",
+    "name": "Mini Audit 10K",
+    "client_name": "Мини-аудит сайта и пути клиента до заявки"
+  },
+  "scope": [
+    "5-7 key findings",
+    "short fix plan",
+    "next step recommendation",
+    "client-facing PDF or structured note"
+  ],
+  "deliverables": [
+    "5-7 key findings",
+    "short fix plan",
+    "next step recommendation",
+    "client-facing PDF or structured note"
+  ],
+  "timeline": "1-2 days",
+  "price": {
+    "amount": 10000,
+    "amount_min": null,
+    "amount_max": null,
+    "currency": "RUB",
+    "type": "fixed",
+    "source": "CONFIRMED",
+    "status": "CONFIRMED",
+    "valid_from": "2026-06-01",
+    "valid_until": null,
+    "approved_by_owner": true,
+    "display": "10000 RUB"
+  },
+  "responsibilities": [
+    "verified page URL",
+    "verified identity",
+    "verified contact path",
+    "verified evidence",
+    "Master Controller audit pipeline (future)"
+  ],
+  "exclusions": [
+    "full legal audit",
+    "full technical SEO",
+    "deep crawl",
+    "all-pages review",
+    "analytics setup",
+    "site fixes",
+    "admin access",
+    "new blocks",
+    "new website"
+  ],
+  "acceptance": [
+    "price CONFIRMED (approved)",
+    "evidence gate PASS",
+    "scope valid",
+    "product readiness ACTIVE"
+  ],
+  "next_step": "Owner reviews and approves before any client contact.",
+  "validity": "14 days from owner approval",
+  "blockers": []
+}

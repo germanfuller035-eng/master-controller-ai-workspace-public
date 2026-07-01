@@ -1,0 +1,69 @@
+{
+  "baseline_kind": "GATE_B_LIVE_BASELINE",
+  "captured_at_utc": "2026-06-18T12:36:23Z",
+  "compared_against": "production_baseline_v2.json (captured 2026-06-18T12:18:54Z)",
+  "auto_rebaseline_used": false,
+  "live_drift_classification": "NO_DRIFT_SINCE_BASELINE_V2",
+  "exact_hash_match_with_v2": true,
+  "canonical": {
+    "store_revision": 90,
+    "leads": 62,
+    "duplicate_ids": 0,
+    "missing_status": 0,
+    "updated_at": "2026-06-18T10:15:50.059Z",
+    "updated_by": "verify",
+    "writer_count": 1,
+    "commercial_sections": 0,
+    "commercial_section_keys": [],
+    "commercial_entities": 0
+  },
+  "sends": {
+    "send_ledger_lines": 7,
+    "historical_successful_sends": 7,
+    "unauthorized_sends": 0,
+    "unknown_send": 0
+  },
+  "queue": {
+    "queue_revision": 146,
+    "total_jobs": 41,
+    "by_status": { "COMPLETED": 41 },
+    "types": { "HEALTH_CHECK": 2, "LEAD_DISCOVERY": 9, "LEAD_VERIFY": 29, "METRICS_REFRESH": 1 },
+    "send_capable_jobs": 0,
+    "failed": 0,
+    "dead_letters": 0
+  },
+  "hashes_live": {
+    "canonical_store_sha256": "42bec108840ca9a0039ae913f5ce1259d09a0bf5e14ee0afd3ff3ac9b19a9e0f",
+    "job_queue_sha256": "c7a2ed596d6c753aef2bd66e2ec5cdbb51ca87f9450b5ebf60f63189fa4ec01f",
+    "send_ledger_sha256": "04fda652a15b072bbc729419022c5486746677df3d1a1d6aa07ea0527bbe321e"
+  },
+  "hashes_baseline_v2": {
+    "canonical_store_sha256": "42bec108840ca9a0039ae913f5ce1259d09a0bf5e14ee0afd3ff3ac9b19a9e0f",
+    "job_queue_sha256": "c7a2ed596d6c753aef2bd66e2ec5cdbb51ca87f9450b5ebf60f63189fa4ec01f",
+    "send_ledger_sha256": "04fda652a15b072bbc729419022c5486746677df3d1a1d6aa07ea0527bbe321e"
+  },
+  "flags_live_pre_deploy": {
+    "COMMERCIAL_READ_API": "OFF",
+    "COMMERCIAL_COMMAND_API": "OFF",
+    "COMMERCIAL_SEND": "OFF",
+    "AUTOSEND": "BLOCKED",
+    "SEND_ALLOWED_LIVE": "OFF"
+  },
+  "migration_expectation": {
+    "revision_before": 90,
+    "expected_revision_after": 91,
+    "migration": "iw1_commercial_sections_v1",
+    "sections_added": 8,
+    "entities_created": 0
+  },
+  "halt_conditions_evaluated": {
+    "send_ledger_count_gt_7": false,
+    "unknown_send": false,
+    "unknown_writer": false,
+    "direct_file_write": false,
+    "queue_failed": false,
+    "dead_letters": false,
+    "commercial_sections_partially_present": false
+  },
+  "gate_b_continue": true
+}

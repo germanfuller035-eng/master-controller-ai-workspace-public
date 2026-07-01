@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-26",
+  "session": "WEB_COMMAND_CENTER_ANDROID_OWNER_CONTROL_V1",
+  "scope": "LOCAL_SYNTHETIC_CONTRACT_ONLY",
+  "synthetic_only": true,
+  "real_external_actions_allowed": false,
+  "owner_decision_surface_only": true,
+  "web_command_center_role": "OWNER_DECISION_SURFACE_NOT_AUTONOMOUS_ACTOR",
+  "android_primary_mobile_control": true,
+  "telegram_reserve_channel_only": true,
+  "panel_ids": [
+    "today_decisions",
+    "approvals",
+    "commercial_funnel",
+    "costs_budgets",
+    "agents_workflows",
+    "memory_proposals",
+    "incidents_health",
+    "feature_flags",
+    "stop"
+  ],
+  "stage_gate_required": true,
+  "false_success_without_evidence": "REJECT",
+  "safety": {
+    "production_web_deploy": "OFF",
+    "outbound_email": "OFF",
+    "outbound_social": "OFF",
+    "auto_safe": "OFF",
+    "voice": "OFF",
+    "browser_actions": "OFF",
+    "payments": "OFF",
+    "production_db_write": "OFF",
+    "real_approvals_execution": "OFF",
+    "production_changes": "NO",
+    "vps_changed": "NO",
+    "dns_changed": "NO",
+    "outbound_count": 0,
+    "payment_count": 0,
+    "production_db_writes": 0
+  }
+}

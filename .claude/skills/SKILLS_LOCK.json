@@ -1,0 +1,60 @@
+{
+  "schema_version": 2,
+  "generated_at": "2026-06-26",
+  "session": "AI_SYSTEM_FOUNDATION_AND_OWNER_UX_ARCHITECTURE_V1",
+  "registry_kind": "skill_lock",
+  "install_policy": {
+    "new_skills_installed_this_session": false,
+    "global_install": false,
+    "runtime_enabled": false,
+    "production_capabilities": 0
+  },
+  "skills": [
+    {
+      "id": "context_engineering_skills",
+      "purpose": "Project-local context packing, compression, checkpoint, and handoff guidance already installed before foundation.",
+      "owner": "Master Controller owner",
+      "status": "project_local_existing",
+      "allowed_lifecycle": ["OFF", "LOCAL_SYNTHETIC"],
+      "current_lifecycle": "LOCAL_SYNTHETIC",
+      "runtime_enabled": false,
+      "production_capabilities": 0,
+      "component_id": "context_pack_builder",
+      "allowed_tools": [],
+      "denied_capabilities": ["unrestricted_shell", "direct_docker_socket", "production_db_write", "production_deploy", "outbound_send", "payments", "secret_read", "long_term_memory_write"],
+      "data_classes": ["PUBLIC", "BUSINESS_INTERNAL"],
+      "risk_max": "R1",
+      "approval_requirement": "Automatic only for local instruction use; no runtime execution or production access.",
+      "tests_required": ["registry_validation", "hash_validation_if_skill_files_change"],
+      "rollback_note": "Restore prior SKILLS_LOCK.json from previous commit if needed; no global uninstall required.",
+      "review_date": "2026-07-31",
+      "source_provenance": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering @ 25e1fa79a33f0985793bcab3c64dde8d020c5132",
+      "project_local_path": ".claude/skills/",
+      "included_files_count": 13,
+      "security_review_status": "PASS_INSTRUCTION_ONLY_SUBSET"
+    },
+    {
+      "id": "ui_ux_pro_max",
+      "purpose": "Project-local UX guidance used by the completed Android owner UX redesign; no runtime authority.",
+      "owner": "Master Controller owner",
+      "status": "project_local_existing",
+      "allowed_lifecycle": ["OFF", "LOCAL_SYNTHETIC"],
+      "current_lifecycle": "LOCAL_SYNTHETIC",
+      "runtime_enabled": false,
+      "production_capabilities": 0,
+      "component_id": "owner_interface_design",
+      "allowed_tools": [],
+      "denied_capabilities": ["unrestricted_shell", "direct_docker_socket", "production_db_write", "production_deploy", "outbound_send", "payments", "secret_read", "long_term_memory_write"],
+      "data_classes": ["PUBLIC", "BUSINESS_INTERNAL"],
+      "risk_max": "R1",
+      "approval_requirement": "Automatic only for local instruction use; no runtime execution or production access.",
+      "tests_required": ["registry_validation", "hash_validation_if_skill_files_change"],
+      "rollback_note": "Restore prior SKILLS_LOCK.json from previous commit if needed; no global uninstall required.",
+      "review_date": "2026-07-31",
+      "source_provenance": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill @ 1518fec29d19ce905cd0c689255137b9dcab7ccc",
+      "project_local_path": ".claude/skills/ui-ux-pro-max/",
+      "included_files_count": 17,
+      "security_review_status": "PASS_PROJECT_HARDENED_SUBSET"
+    }
+  ]
+}

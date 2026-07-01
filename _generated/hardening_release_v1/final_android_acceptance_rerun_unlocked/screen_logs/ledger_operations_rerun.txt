@@ -1,0 +1,26 @@
+CTRL_LEDGER: BATCH_BEGIN screens=1 only=operations total_controls=282
+CTRL_LEDGER: SCREEN_BEGIN screen=operations controls=22 anchor=operations_home
+CTRL_LEDGER: ROW {"control_id":"CTRL-0214","screen":"operations","selector":"screen.operations.control.refresh","type":"TextButton","risk":"REFRESH","visible":true,"enabled":true,"action":"refresh","status":"PASS_LIVE_READ"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0215","screen":"operations","selector":"ops_card_reliability","type":"SectionCard","risk":"NAVIGATION","visible":true,"enabled":true,"action":"click_navigate","status":"PASS_NAVIGATION"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0216","screen":"operations","selector":"ops_card_cost","type":"SectionCard","risk":"NAVIGATION","visible":true,"enabled":true,"action":"click_navigate","status":"PASS_NAVIGATION"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0217","screen":"operations","selector":"ops_card_backup","type":"SectionCard","risk":"NAVIGATION","visible":true,"enabled":true,"action":"click_navigate","status":"PASS_NAVIGATION"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0218","screen":"operations","selector":"ops_card_push","type":"SectionCard","risk":"NAVIGATION","visible":true,"enabled":true,"action":"click_navigate","status":"PASS_NAVIGATION"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0219","screen":"operations","selector":"ops_card_automation","type":"SectionCard","risk":"NAVIGATION","visible":true,"enabled":true,"action":"click_no_move","status":"PASS_VISIBLE_ENABLED"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0220","screen":"operations","selector":"ops_card_automation","type":"Clickable","risk":"ACTION","visible":true,"enabled":true,"action":"observe","status":"PASS_VISIBLE_ENABLED"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0221","screen":"operations","selector":"ops_card_queue","type":"SectionCard","risk":"NAVIGATION","visible":true,"enabled":true,"action":"click_navigate","status":"PASS_NAVIGATION"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0222","screen":"operations","selector":"ops_card_queue","type":"Clickable","risk":"ACTION","visible":true,"enabled":true,"action":"observe","status":"PASS_VISIBLE_ENABLED"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0223","screen":"operations","selector":"ops_card_deadletters","type":"SectionCard","risk":"NAVIGATION","visible":true,"enabled":true,"action":"click_no_move","status":"PASS_VISIBLE_ENABLED"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0224","screen":"operations","selector":"ops_card_sources","type":"SectionCard","risk":"NAVIGATION","visible":true,"enabled":true,"action":"click_navigate","status":"PASS_NAVIGATION"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0225","screen":"operations","selector":"ops_card_source_registry","type":"SectionCard","risk":"NAVIGATION","visible":true,"enabled":true,"action":"click_navigate","status":"PASS_NAVIGATION"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0226","screen":"operations","selector":"ops_card_source_telemetry","type":"SectionCard","risk":"DANGEROUS","visible":true,"enabled":true,"action":"open_then_cancel","status":"PASS_UNSAFE_ACTION_BLOCKED"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0227","screen":"operations","selector":"ops_card_owner_settings","type":"SectionCard","risk":"NAVIGATION","visible":true,"enabled":true,"action":"click_no_move","status":"PASS_VISIBLE_ENABLED"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0228","screen":"operations","selector":"ops_card_reservoir","type":"SectionCard","risk":"NAVIGATION","visible":true,"enabled":true,"action":"click_no_move","status":"PASS_VISIBLE_ENABLED"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0229","screen":"operations","selector":"ops_card_ai_usage","type":"SectionCard","risk":"DANGEROUS","visible":true,"enabled":true,"action":"open_then_cancel","status":"PASS_UNSAFE_ACTION_BLOCKED"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0230","screen":"operations","selector":"ops_card_knowledge","type":"SectionCard","risk":"NAVIGATION","visible":true,"enabled":true,"action":"click_no_move","status":"PASS_VISIBLE_ENABLED"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0231","screen":"operations","selector":"ops_card_first_touch","type":"SectionCard","risk":"DANGEROUS","visible":true,"enabled":true,"action":"open_then_cancel","status":"PASS_UNSAFE_ACTION_BLOCKED"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0232","screen":"operations","selector":"ops_card_scheduler","type":"SectionCard","risk":"NAVIGATION","visible":true,"enabled":true,"action":"click_no_move","status":"PASS_VISIBLE_ENABLED"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0233","screen":"operations","selector":"ops_card_connection","type":"SectionCard","risk":"NAVIGATION","visible":true,"enabled":true,"action":"click_navigate","status":"PASS_NAVIGATION"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0234","screen":"operations","selector":"screen.operations.control.back","type":"IconButton","risk":"ACTION","visible":false,"enabled":false,"action":"tab_root_has_no_back","status":"PASS_NOT_APPLICABLE"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0235","screen":"operations","selector":"screen.operations.control.refresh","type":"TextButton","risk":"REFRESH","visible":true,"enabled":true,"action":"refresh","status":"PASS_LIVE_READ"}
+CTRL_LEDGER: SCREEN_END screen=operations executed=22 passed=22 failed=0 unexecuted=0
+CTRL_LEDGER: BATCH_END executed=22 passed=22 failed=0 unexecuted=0

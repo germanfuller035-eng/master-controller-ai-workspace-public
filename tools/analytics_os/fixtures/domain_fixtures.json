@@ -1,0 +1,47 @@
+{
+  "note": "Synthetic domain analytics fixtures (Phase 11-12, 29). NOT real data. Product/CS reference canonical product_ids and TEST_ ref ids only — no names/emails/phones.",
+  "lead_sources": [
+    {"source": "overpass_osm", "candidates": 600, "verified": 240, "audit_ready": 180, "sent": 120, "replies": 18, "won": 4},
+    {"source": "manual_csv", "candidates": 100, "verified": 70, "audit_ready": 60, "sent": 50, "replies": 9, "won": 2},
+    {"source": "referral", "candidates": 20, "verified": 4, "audit_ready": 3, "sent": 3, "replies": 1, "won": 0}
+  ],
+  "products": [
+    {"product_id": "mini_audit", "state": "ACTIVE", "owner_approved_readiness": true, "readiness_dimensions": {"spec": 0.9, "delivery": 0.85, "pricing": 0.8, "qa": 0.9}, "pilot_outcome": "PASSED", "claims_total": 6, "claims_approved": 5, "support_tickets": 2, "revenue": 10000, "variable_cost": 2500},
+    {"product_id": "business_website", "state": "ACTIVE", "owner_approved_readiness": true, "readiness_dimensions": {"spec": 0.8, "delivery": 0.75, "pricing": 0.7, "qa": 0.8}, "pilot_outcome": "PASSED_WITH_NOTES", "claims_total": 4, "claims_approved": 4, "support_tickets": 3, "revenue": 30000, "variable_cost": 12000},
+    {"product_id": "lead_system", "state": "ACTIVE", "owner_approved_readiness": false, "readiness_dimensions": {"spec": 0.5, "delivery": 0.3}, "pilot_outcome": "UNKNOWN", "claims_total": 2, "claims_approved": 0, "support_tickets": 0, "revenue": 0, "variable_cost": 0}
+  ],
+  "delivery_projects": [
+    {"project_id": "TEST_p01", "start_day": 0, "qa_day": 8, "accepted_day": 10, "qa_result": "PASS", "rework_count": 0, "change_requests": 1, "client_delay_days": 2, "owner_delay_days": 0, "planned_days": 9, "actual_days": 10},
+    {"project_id": "TEST_p02", "start_day": 0, "qa_day": 12, "accepted_day": 18, "qa_result": "FAIL", "rework_count": 2, "change_requests": 3, "client_delay_days": 4, "owner_delay_days": 2, "planned_days": 10, "actual_days": 18}
+  ],
+  "finance_period": {"period": "2026-06", "invoiced": 25000, "collected": 18000, "overdue": 7000, "revenue": 25000, "direct_costs": 9000, "inflow": 18000, "outflow": 16800, "forecast": 22000, "actual": 25000},
+  "customers": [
+    {"customer_ref_id": "TEST_cs01", "status": "HEALTHY", "health": "HEALTHY", "adoption": 90, "open_support": 0, "renewal_eligible": true, "value_evidence": true},
+    {"customer_ref_id": "TEST_cs02", "status": "ADOPTION", "health": "AT_RISK", "adoption": 10, "open_support": 1, "renewal_eligible": false, "value_evidence": false},
+    {"customer_ref_id": "TEST_cs03", "status": "SUPPORT_REQUIRED", "health": "AT_RISK", "adoption": 30, "open_support": 2, "open_critical_support": true, "renewal_eligible": false, "value_evidence": false},
+    {"customer_ref_id": "TEST_cs04", "status": "CHURNED", "health": "CRITICAL", "adoption": 5, "open_support": 0, "renewal_eligible": false, "value_evidence": false}
+  ],
+  "customer_health_decline_cohorts": [
+    {"cohort_key": "2026-04", "size": 4, "retained_by_period": [4, 3, 2]},
+    {"cohort_key": "2026-05", "size": 3, "retained_by_period": [3, 1]}
+  ],
+  "executive": {
+    "decisions": [
+      {"decision_id": "d1", "status": "READY_FOR_OWNER", "age_days": 20},
+      {"decision_id": "d2", "status": "OPEN", "age_days": 5},
+      {"decision_id": "d3", "status": "APPROVED", "age_days": 30}
+    ],
+    "largest_project_share": 0.55, "attention_load": "HIGH", "projects_active": 6, "owner_capacity_projects": 4
+  },
+  "schema_mismatch_example": {"dataset": "rev_funnel_snapshot", "candidate_fields": ["snapshot_id", "stages", "product_id"]},
+  "broken_lineage_edges": [
+    {"from": "orphan_source", "to": "orphan_metric", "transform": "magic"},
+    {"from": "metric:x", "to": "metric:y", "transform": "loop"},
+    {"from": "metric:y", "to": "metric:x", "transform": "loop"}
+  ],
+  "privacy_violation_example": {"customer_ref_id": "TEST_cs01", "email": "real.person@acme.com", "password": "hunter2longvalue", "note": "should be flagged"},
+  "experiment_insufficient_sample": {"variant_n": 12, "control_n": 11, "min_required": 100},
+  "optimistic_forecast": {"forecast": [10000, 12000, 15000], "actual": [6000, 6500, 7000], "marked_confirmed": true},
+  "send_window_distinction": {"historical": 40, "release_window": 1, "test_only": 39},
+  "mini_audit_stage_mapping": {"macro_phases": 5, "detailed_stages": 18}
+}

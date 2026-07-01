@@ -1,0 +1,494 @@
+{
+  "schema_version": 1,
+  "synthetic_batch": true,
+  "fixture_purpose": "COMMERCIAL_AGENT_FACTORY_V1_NO_SEND_STAGE_GATE",
+  "leads": [
+    {
+      "lead": {
+        "schema_version": 1,
+        "synthetic": true,
+        "lead_id": "synthetic_batch_clean",
+        "source": {
+          "type": "synthetic_fixture",
+          "external_access": false
+        },
+        "identity": {
+          "organization_name": "Synthetic Batch Clean",
+          "domain_reference": "synthetic-batch-clean.example.invalid",
+          "synthetic_registry_id": "registry-synthetic_batch_clean",
+          "industry": "synthetic services"
+        },
+        "contact": {
+          "website_reference": "synthetic-batch-clean.example.invalid/home",
+          "contact_form_reference": "synthetic-form-synthetic_batch_clean",
+          "public_contact_page_reference": "synthetic-contact-page-synthetic_batch_clean",
+          "role_contact_reference": "synthetic-role-contact-synthetic_batch_clean",
+          "consent_basis": "synthetic_fixture_only"
+        },
+        "signals": {
+          "website_problem": 2,
+          "lead_capture_problem": 4,
+          "response_handling_problem": 1,
+          "trust_problem": 1,
+          "audit_uncertainty": 1
+        },
+        "qualification": {
+          "business_relevance": 3,
+          "urgency": 2,
+          "budget_signal": 2
+        },
+        "roi_inputs": {
+          "monthly_leads": 12,
+          "average_value_units": 100,
+          "expected_improvement_ratio": 0.12
+        },
+        "evidence": [
+          {
+            "id": "ev-synthetic_batch_clean-fixture",
+            "source": "synthetic_lead_fixture",
+            "claim": "Synthetic fixture defines Synthetic Batch Clean problem signals."
+          }
+        ],
+        "site_fixture": "synthetic_site_good"
+      }
+    },
+    {
+      "lead": {
+        "schema_version": 1,
+        "synthetic": true,
+        "lead_id": "synthetic_batch_missing_contact",
+        "source": {
+          "type": "synthetic_fixture",
+          "external_access": false
+        },
+        "identity": {
+          "organization_name": "Synthetic Batch Missing Contact",
+          "domain_reference": "synthetic-batch-missing-contact.example.invalid",
+          "synthetic_registry_id": "registry-synthetic_batch_missing_contact",
+          "industry": "synthetic services"
+        },
+        "contact": {
+          "website_reference": "synthetic-batch-missing-contact.example.invalid/home",
+          "consent_basis": "synthetic_fixture_only"
+        },
+        "signals": {
+          "website_problem": 1,
+          "lead_capture_problem": 5,
+          "response_handling_problem": 1,
+          "trust_problem": 1,
+          "audit_uncertainty": 1
+        },
+        "qualification": {
+          "business_relevance": 3,
+          "urgency": 2,
+          "budget_signal": 2
+        },
+        "roi_inputs": {
+          "monthly_leads": 12,
+          "average_value_units": 100,
+          "expected_improvement_ratio": 0.12
+        },
+        "evidence": [
+          {
+            "id": "ev-synthetic_batch_missing_contact-fixture",
+            "source": "synthetic_lead_fixture",
+            "claim": "Synthetic fixture defines Synthetic Batch Missing Contact problem signals."
+          }
+        ],
+        "site_fixture": "synthetic_site_no_lead_capture"
+      }
+    },
+    {
+      "lead": {
+        "schema_version": 1,
+        "synthetic": true,
+        "lead_id": "synthetic_batch_duplicate_a",
+        "source": {
+          "type": "synthetic_fixture",
+          "external_access": false
+        },
+        "identity": {
+          "organization_name": "Synthetic Batch Duplicate",
+          "domain_reference": "synthetic-batch-duplicate.example.invalid",
+          "synthetic_registry_id": "registry-synthetic_batch_duplicate_a",
+          "industry": "synthetic services"
+        },
+        "contact": {
+          "website_reference": "synthetic-batch-duplicate.example.invalid/home",
+          "contact_form_reference": "synthetic-form-synthetic_batch_duplicate_a",
+          "public_contact_page_reference": "synthetic-contact-page-synthetic_batch_duplicate_a",
+          "role_contact_reference": "synthetic-role-contact-synthetic_batch_duplicate_a",
+          "consent_basis": "synthetic_fixture_only"
+        },
+        "signals": {
+          "website_problem": 5,
+          "lead_capture_problem": 2,
+          "response_handling_problem": 1,
+          "trust_problem": 3,
+          "audit_uncertainty": 1
+        },
+        "qualification": {
+          "business_relevance": 3,
+          "urgency": 3,
+          "budget_signal": 2
+        },
+        "roi_inputs": {
+          "monthly_leads": 12,
+          "average_value_units": 100,
+          "expected_improvement_ratio": 0.12
+        },
+        "evidence": [
+          {
+            "id": "ev-synthetic_batch_duplicate_a-fixture",
+            "source": "synthetic_lead_fixture",
+            "claim": "Synthetic fixture defines Synthetic Batch Duplicate problem signals."
+          }
+        ],
+        "site_fixture": "synthetic_site_bad"
+      }
+    },
+    {
+      "lead": {
+        "schema_version": 1,
+        "synthetic": true,
+        "lead_id": "synthetic_batch_duplicate_b",
+        "source": {
+          "type": "synthetic_fixture",
+          "external_access": false
+        },
+        "identity": {
+          "organization_name": "Synthetic Batch Duplicate",
+          "domain_reference": "synthetic-batch-duplicate.example.invalid",
+          "synthetic_registry_id": "registry-synthetic_batch_duplicate_b",
+          "industry": "synthetic services"
+        },
+        "contact": {
+          "website_reference": "synthetic-batch-duplicate.example.invalid/home",
+          "contact_form_reference": "synthetic-form-synthetic_batch_duplicate_b",
+          "public_contact_page_reference": "synthetic-contact-page-synthetic_batch_duplicate_b",
+          "role_contact_reference": "synthetic-role-contact-synthetic_batch_duplicate_b",
+          "consent_basis": "synthetic_fixture_only"
+        },
+        "signals": {
+          "website_problem": 5,
+          "lead_capture_problem": 2,
+          "response_handling_problem": 1,
+          "trust_problem": 3,
+          "audit_uncertainty": 1
+        },
+        "qualification": {
+          "business_relevance": 3,
+          "urgency": 3,
+          "budget_signal": 2
+        },
+        "roi_inputs": {
+          "monthly_leads": 12,
+          "average_value_units": 100,
+          "expected_improvement_ratio": 0.12
+        },
+        "evidence": [
+          {
+            "id": "ev-synthetic_batch_duplicate_b-fixture",
+            "source": "synthetic_lead_fixture",
+            "claim": "Synthetic fixture defines Synthetic Batch Duplicate problem signals."
+          }
+        ],
+        "site_fixture": "synthetic_site_bad"
+      }
+    },
+    {
+      "lead": {
+        "schema_version": 1,
+        "synthetic": true,
+        "lead_id": "synthetic_batch_low_fit",
+        "source": {
+          "type": "synthetic_fixture",
+          "external_access": false
+        },
+        "identity": {
+          "organization_name": "Synthetic Batch Low Fit",
+          "domain_reference": "synthetic-batch-low-fit.example.invalid",
+          "synthetic_registry_id": "registry-synthetic_batch_low_fit",
+          "industry": "synthetic services"
+        },
+        "contact": {
+          "website_reference": "synthetic-batch-low-fit.example.invalid/home",
+          "contact_form_reference": "synthetic-form-synthetic_batch_low_fit",
+          "public_contact_page_reference": "synthetic-contact-page-synthetic_batch_low_fit",
+          "role_contact_reference": "synthetic-role-contact-synthetic_batch_low_fit",
+          "consent_basis": "synthetic_fixture_only"
+        },
+        "signals": {
+          "website_problem": 1,
+          "lead_capture_problem": 1,
+          "response_handling_problem": 1,
+          "trust_problem": 1,
+          "audit_uncertainty": 1
+        },
+        "qualification": {
+          "business_relevance": 0,
+          "urgency": 0,
+          "budget_signal": 0
+        },
+        "roi_inputs": {
+          "monthly_leads": 12,
+          "average_value_units": 100,
+          "expected_improvement_ratio": 0.12
+        },
+        "evidence": [
+          {
+            "id": "ev-synthetic_batch_low_fit-fixture",
+            "source": "synthetic_lead_fixture",
+            "claim": "Synthetic fixture defines Synthetic Batch Low Fit problem signals."
+          }
+        ],
+        "site_fixture": "synthetic_site_good"
+      }
+    },
+    {
+      "lead": {
+        "schema_version": 1,
+        "synthetic": true,
+        "lead_id": "synthetic_batch_ai_front_office",
+        "source": {
+          "type": "synthetic_fixture",
+          "external_access": false
+        },
+        "identity": {
+          "organization_name": "Synthetic Batch Response Desk",
+          "domain_reference": "synthetic-batch-response.example.invalid",
+          "synthetic_registry_id": "registry-synthetic_batch_ai_front_office",
+          "industry": "synthetic services"
+        },
+        "contact": {
+          "website_reference": "synthetic-batch-response.example.invalid/home",
+          "contact_form_reference": "synthetic-form-synthetic_batch_ai_front_office",
+          "public_contact_page_reference": "synthetic-contact-page-synthetic_batch_ai_front_office",
+          "role_contact_reference": "synthetic-role-contact-synthetic_batch_ai_front_office",
+          "consent_basis": "synthetic_fixture_only"
+        },
+        "signals": {
+          "website_problem": 1,
+          "lead_capture_problem": 1,
+          "response_handling_problem": 5,
+          "trust_problem": 1,
+          "audit_uncertainty": 1
+        },
+        "qualification": {
+          "business_relevance": 3,
+          "urgency": 3,
+          "budget_signal": 2
+        },
+        "roi_inputs": {
+          "monthly_leads": 12,
+          "average_value_units": 100,
+          "expected_improvement_ratio": 0.12
+        },
+        "evidence": [
+          {
+            "id": "ev-synthetic_batch_ai_front_office-fixture",
+            "source": "synthetic_lead_fixture",
+            "claim": "Synthetic fixture defines Synthetic Batch Response Desk problem signals."
+          }
+        ],
+        "site_fixture": "synthetic_site_good"
+      }
+    },
+    {
+      "lead": {
+        "schema_version": 1,
+        "synthetic": true,
+        "lead_id": "synthetic_batch_website",
+        "source": {
+          "type": "synthetic_fixture",
+          "external_access": false
+        },
+        "identity": {
+          "organization_name": "Synthetic Batch Website",
+          "domain_reference": "synthetic-batch-website.example.invalid",
+          "synthetic_registry_id": "registry-synthetic_batch_website",
+          "industry": "synthetic services"
+        },
+        "contact": {
+          "website_reference": "synthetic-batch-website.example.invalid/home",
+          "contact_form_reference": "synthetic-form-synthetic_batch_website",
+          "public_contact_page_reference": "synthetic-contact-page-synthetic_batch_website",
+          "role_contact_reference": "synthetic-role-contact-synthetic_batch_website",
+          "consent_basis": "synthetic_fixture_only"
+        },
+        "signals": {
+          "website_problem": 5,
+          "lead_capture_problem": 1,
+          "response_handling_problem": 1,
+          "trust_problem": 3,
+          "audit_uncertainty": 1
+        },
+        "qualification": {
+          "business_relevance": 3,
+          "urgency": 3,
+          "budget_signal": 2
+        },
+        "roi_inputs": {
+          "monthly_leads": 12,
+          "average_value_units": 100,
+          "expected_improvement_ratio": 0.12
+        },
+        "evidence": [
+          {
+            "id": "ev-synthetic_batch_website-fixture",
+            "source": "synthetic_lead_fixture",
+            "claim": "Synthetic fixture defines Synthetic Batch Website problem signals."
+          }
+        ],
+        "site_fixture": "synthetic_site_bad"
+      }
+    },
+    {
+      "lead": {
+        "schema_version": 1,
+        "synthetic": true,
+        "lead_id": "synthetic_batch_mini_audit",
+        "source": {
+          "type": "synthetic_fixture",
+          "external_access": false
+        },
+        "identity": {
+          "organization_name": "Synthetic Batch Audit",
+          "domain_reference": "synthetic-batch-audit.example.invalid",
+          "synthetic_registry_id": "registry-synthetic_batch_mini_audit",
+          "industry": "synthetic services"
+        },
+        "contact": {
+          "website_reference": "synthetic-batch-audit.example.invalid/home",
+          "contact_form_reference": "synthetic-form-synthetic_batch_mini_audit",
+          "public_contact_page_reference": "synthetic-contact-page-synthetic_batch_mini_audit",
+          "role_contact_reference": "synthetic-role-contact-synthetic_batch_mini_audit",
+          "consent_basis": "synthetic_fixture_only"
+        },
+        "signals": {
+          "website_problem": 1,
+          "lead_capture_problem": 1,
+          "response_handling_problem": 1,
+          "trust_problem": 1,
+          "audit_uncertainty": 5
+        },
+        "qualification": {
+          "business_relevance": 3,
+          "urgency": 2,
+          "budget_signal": 2
+        },
+        "roi_inputs": {
+          "monthly_leads": 12,
+          "average_value_units": 100,
+          "expected_improvement_ratio": 0.12
+        },
+        "evidence": [
+          {
+            "id": "ev-synthetic_batch_mini_audit-fixture",
+            "source": "synthetic_lead_fixture",
+            "claim": "Synthetic fixture defines Synthetic Batch Audit problem signals."
+          }
+        ],
+        "site_fixture": "synthetic_site_good"
+      }
+    },
+    {
+      "lead": {
+        "schema_version": 1,
+        "synthetic": true,
+        "lead_id": "synthetic_batch_lead_system_second",
+        "source": {
+          "type": "synthetic_fixture",
+          "external_access": false
+        },
+        "identity": {
+          "organization_name": "Synthetic Batch Capture Two",
+          "domain_reference": "synthetic-batch-capture-two.example.invalid",
+          "synthetic_registry_id": "registry-synthetic_batch_lead_system_second",
+          "industry": "synthetic services"
+        },
+        "contact": {
+          "website_reference": "synthetic-batch-capture-two.example.invalid/home",
+          "contact_form_reference": "synthetic-form-synthetic_batch_lead_system_second",
+          "public_contact_page_reference": "synthetic-contact-page-synthetic_batch_lead_system_second",
+          "role_contact_reference": "synthetic-role-contact-synthetic_batch_lead_system_second",
+          "consent_basis": "synthetic_fixture_only"
+        },
+        "signals": {
+          "website_problem": 1,
+          "lead_capture_problem": 5,
+          "response_handling_problem": 1,
+          "trust_problem": 1,
+          "audit_uncertainty": 1
+        },
+        "qualification": {
+          "business_relevance": 3,
+          "urgency": 3,
+          "budget_signal": 2
+        },
+        "roi_inputs": {
+          "monthly_leads": 12,
+          "average_value_units": 100,
+          "expected_improvement_ratio": 0.12
+        },
+        "evidence": [
+          {
+            "id": "ev-synthetic_batch_lead_system_second-fixture",
+            "source": "synthetic_lead_fixture",
+            "claim": "Synthetic fixture defines Synthetic Batch Capture Two problem signals."
+          }
+        ],
+        "site_fixture": "synthetic_site_no_lead_capture"
+      }
+    },
+    {
+      "lead": {
+        "schema_version": 1,
+        "synthetic": true,
+        "lead_id": "synthetic_batch_website_second",
+        "source": {
+          "type": "synthetic_fixture",
+          "external_access": false
+        },
+        "identity": {
+          "organization_name": "Synthetic Batch Website Two",
+          "domain_reference": "synthetic-batch-website-two.example.invalid",
+          "synthetic_registry_id": "registry-synthetic_batch_website_second",
+          "industry": "synthetic services"
+        },
+        "contact": {
+          "website_reference": "synthetic-batch-website-two.example.invalid/home",
+          "contact_form_reference": "synthetic-form-synthetic_batch_website_second",
+          "public_contact_page_reference": "synthetic-contact-page-synthetic_batch_website_second",
+          "role_contact_reference": "synthetic-role-contact-synthetic_batch_website_second",
+          "consent_basis": "synthetic_fixture_only"
+        },
+        "signals": {
+          "website_problem": 5,
+          "lead_capture_problem": 1,
+          "response_handling_problem": 1,
+          "trust_problem": 3,
+          "audit_uncertainty": 1
+        },
+        "qualification": {
+          "business_relevance": 3,
+          "urgency": 3,
+          "budget_signal": 2
+        },
+        "roi_inputs": {
+          "monthly_leads": 12,
+          "average_value_units": 100,
+          "expected_improvement_ratio": 0.12
+        },
+        "evidence": [
+          {
+            "id": "ev-synthetic_batch_website_second-fixture",
+            "source": "synthetic_lead_fixture",
+            "claim": "Synthetic fixture defines Synthetic Batch Website Two problem signals."
+          }
+        ],
+        "site_fixture": "synthetic_site_bad"
+      }
+    }
+  ]
+}

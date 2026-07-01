@@ -1,0 +1,14 @@
+{
+  "schema_version": "controlled_outbound.outbound_draft.v1",
+  "synthetic": true,
+  "draft_id": "synthetic-outbound-draft-gamma",
+  "contact_id": "synthetic-contact-gamma",
+  "channel": "synthetic_email_contract",
+  "subject": "Synthetic draft gamma",
+  "body": "Synthetic local draft only. No send.",
+  "draft_only": true,
+  "send_allowed": false,
+  "sent": false,
+  "owner_approval_required_for_future_send": true,
+  "payload_hash": ""
+}

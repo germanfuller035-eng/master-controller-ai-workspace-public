@@ -1,0 +1,34 @@
+{
+  "manifest_version": 1,
+  "gate": "C1A",
+  "base_evidence_head": "f03e572",
+  "whole_repository_deployment": false,
+  "note": "Additive Gate C1-A change: granular command flags + product DTO + reconciliation read models + TEST_ONLY KPI exclusion + APPROVE-wins-deal in recordOwnerDecision. No new store, writer, ledger, or send path. 6 backend runtime files (1 new, 5 modified) + 2 Android artifacts. Tests/fixtures are NOT deployables.",
+  "entries": [
+    { "path": "tools/commercial_core/lib/reconciliation.mjs", "category": "BACKEND_RUNTIME", "deploy_required": true, "source_sha256_16": "e7bd19939e8752ae", "target_path": "/opt/master-controller/tools/commercial_core/lib/reconciliation.mjs", "target_sha256_before": "ABSENT", "owner": "masterctl", "group": "masterctl", "mode": "644", "service": "master-controller-api", "restart_required": true, "rollback_source": "remove (was absent)" },
+    { "path": "tools/commercial_core/lib/lifecycle.mjs", "category": "BACKEND_RUNTIME", "deploy_required": true, "source_sha256_16": "231e9d472f328642", "target_path": "/opt/master-controller/tools/commercial_core/lib/lifecycle.mjs", "target_sha256_before": "965c45e03b8daee5", "owner": "masterctl", "group": "masterctl", "mode": "644", "service": "master-controller-api", "restart_required": true, "rollback_source": "restore backed-up lifecycle.mjs (965c45e0)" },
+    { "path": "tools/commercial_core/lib/readmodels.mjs", "category": "BACKEND_RUNTIME", "deploy_required": true, "source_sha256_16": "2e70e8427c0cd795", "target_path": "/opt/master-controller/tools/commercial_core/lib/readmodels.mjs", "target_sha256_before": "47efb17ba623544c", "owner": "masterctl", "group": "masterctl", "mode": "644", "service": "master-controller-api", "restart_required": true, "rollback_source": "restore backed-up readmodels.mjs (47efb17b)" },
+    { "path": "tools/mater_controller_api/src/commercial/service.mjs", "category": "ROUTE_WIRING", "deploy_required": true, "source_sha256_16": "f36816ad896144ae", "target_path": "/opt/master-controller/tools/mater_controller_api/src/commercial/service.mjs", "target_sha256_before": "5fb39569ee8b5251", "owner": "masterctl", "group": "masterctl", "mode": "644", "service": "master-controller-api", "restart_required": true, "rollback_source": "restore backed-up service.mjs (5fb39569)" },
+    { "path": "tools/mater_controller_api/src/commercial/routes.mjs", "category": "ROUTE_WIRING", "deploy_required": true, "source_sha256_16": "71b2dd3f4819330d", "target_path": "/opt/master-controller/tools/mater_controller_api/src/commercial/routes.mjs", "target_sha256_before": "95a1e5a20d0f81d0", "owner": "masterctl", "group": "masterctl", "mode": "644", "service": "master-controller-api", "restart_required": true, "rollback_source": "restore backed-up routes.mjs (95a1e5a2)" },
+    { "path": "tools/mater_controller_api/src/mini_audit/service.mjs", "category": "ROUTE_WIRING", "deploy_required": true, "source_sha256_16": "d024dcd0351adf17", "target_path": "/opt/master-controller/tools/mater_controller_api/src/mini_audit/service.mjs", "target_sha256_before": "bea0f675c78ebdf9", "owner": "masterctl", "group": "masterctl", "mode": "644", "service": "master-controller-api", "restart_required": true, "rollback_source": "restore backed-up mini_audit/service.mjs (bea0f675)" },
+    { "path": "tools/mater_controller_api/src/server/index.mjs", "category": "ROUTE_WIRING", "deploy_required": true, "source_sha256_16": "f414c26192f5e6a6", "target_path": "/opt/master-controller/tools/mater_controller_api/src/server/index.mjs", "target_sha256_before": "5e8c9e26bfa04749", "owner": "masterctl", "group": "masterctl", "mode": "644", "service": "master-controller-api", "restart_required": true, "rollback_source": "restore backed-up index.mjs (5e8c9e26)", "diff_summary": "2 added reconciliation read routes. Additive." },
+    { "path": "dist/integration_wave_1_gate_c1a_android/MasterController-release-v0.5.0-rc2.apk", "category": "ANDROID", "deploy_required": true, "source_sha256": "569306f8cf0e21773d02d9f9642594755713fd0e812c58caf5587226cbdcfc6d", "target_path": "owner device (manual install over rc1)", "restart_required": false, "rollback_source": "reinstall rc1 APK" },
+    { "path": "dist/integration_wave_1_gate_c1a_android/MasterController-release-v0.5.0-rc2.aab", "category": "ANDROID", "deploy_required": true, "source_sha256": "83d34c85f791a0da627e98a18c8dc1f00f651f44f342bbeff6c4ee0feae0b8fc", "target_path": "release channel (not auto-installed)", "restart_required": false, "rollback_source": "prior aab" }
+  ],
+  "config_changes": {
+    "COMMERCIAL_READ_API": "ON (unchanged)",
+    "COMMERCIAL_COMMAND_API": "ON (new — master command switch)",
+    "COMMERCIAL_COMMAND_C1A": "ON (new — six internal commands)",
+    "COMMERCIAL_PAYMENT_COMMAND": "OFF (new — payment stays gated, Gate C1-B)",
+    "COMMERCIAL_SEND": "OFF (unchanged)",
+    "AUTOSEND": "BLOCKED (unchanged)",
+    "SEND_ALLOWED_LIVE": "OFF (unchanged)"
+  },
+  "counts": {
+    "backend_deployable_files": 7,
+    "new_files": 1,
+    "modified_files": 6,
+    "android_artifacts": 2,
+    "new_store_or_writer_or_ledger_or_sendpath": 0
+  }
+}

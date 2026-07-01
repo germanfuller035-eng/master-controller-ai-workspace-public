@@ -1,0 +1,15 @@
+{
+  "schema": "analytics_os.retention_policy.v1",
+  "version": "1.0",
+  "note": "Retention + archival policy for analytics artifacts. NO automatic deletion — all deletion requires owner approval.",
+  "auto_deletion": false,
+  "deletion_requires_owner_approval": true,
+  "policies": [
+    {"artifact": "fixture", "retention": "indefinite (synthetic, version-controlled)", "archive": "git history", "deletion_approval": "owner"},
+    {"artifact": "snapshot", "retention": "24 periods rolling (synthetic local)", "archive": "_generated/analytics_os/archive", "deletion_approval": "owner"},
+    {"artifact": "report", "retention": "24 periods + permanent for period-close finance", "archive": "_generated/analytics_os/archive", "deletion_approval": "owner"},
+    {"artifact": "experiment", "retention": "indefinite while design-only; result permanent", "archive": "_generated/analytics_os/archive", "deletion_approval": "owner"},
+    {"artifact": "anomaly", "retention": "12 periods", "archive": "_generated/analytics_os/archive", "deletion_approval": "owner"},
+    {"artifact": "correction_history", "retention": "permanent (audit trail)", "archive": "never deleted", "deletion_approval": "owner+audit"}
+  ]
+}

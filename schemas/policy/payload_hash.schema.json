@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Payload Hash V1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["algorithm", "canonicalization", "hash"],
+  "properties": {
+    "algorithm": {"const": "sha256"},
+    "canonicalization": {"const": "json_sort_keys_compact_utf8"},
+    "hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "excluded_fields": {"type": "array", "items": {"enum": ["requested_at", "request_id", "display_nonce"]}}
+  }
+}

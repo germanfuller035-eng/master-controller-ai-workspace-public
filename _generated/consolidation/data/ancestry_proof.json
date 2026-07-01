@@ -1,0 +1,40 @@
+{
+  "schema": "consolidation.ancestry_proof.v1",
+  "note": "MP2 — machine-readable full-chain ancestry proof. All required heads are ancestors of a6048a8. Chain linear; no lost commits. Superseded parallel branches retained (not deleted).",
+  "base_of_consolidation": "a6048a8",
+  "release_tag": { "tag": "v0.4.0-rc1", "commit": "9d346f3", "is_ancestor_of_head": true, "moved": false },
+  "total_commits_to_head": 177,
+  "chain": [
+    { "system": "AI Operations HQ", "branch": "feature/ai-workspace-hq-consolidation-v1", "head_commit": "d4bf77f", "is_ancestor_of_a6048a8": true, "unique_commits_segment": 8, "included": true, "superseded": false, "notes": "chain root area" },
+    { "system": "Revenue OS", "branch": "feature/revenue-os-command-center-v1", "head_commit": "2ff079d", "is_ancestor_of_a6048a8": true, "unique_commits_segment": 8, "included": true, "superseded": false },
+    { "system": "Delivery OS", "branch": "feature/delivery-os-client-project-factory-v1", "head_commit": "0f642d1", "is_ancestor_of_a6048a8": true, "unique_commits_segment": 11, "included": true, "superseded": false },
+    { "system": "Finance OS", "branch": "feature/finance-os-business-control-v1", "head_commit": "9e8ec2f", "is_ancestor_of_a6048a8": true, "unique_commits_segment": 9, "included": true, "superseded": false },
+    { "system": "Executive OS", "branch": "feature/executive-os-owner-command-center-v1", "head_commit": "9e93eae", "is_ancestor_of_a6048a8": true, "unique_commits_segment": 8, "included": true, "superseded": false },
+    { "system": "Product OS", "branch": "feature/product-os-service-productization-v1", "head_commit": "c7300e3", "is_ancestor_of_a6048a8": true, "unique_commits_segment": 7, "included": true, "superseded": false },
+    { "system": "Customer Success OS", "branch": "feature/customer-success-os-retention-support-v1", "head_commit": "e7eccab", "is_ancestor_of_a6048a8": true, "unique_commits_segment": 7, "included": true, "superseded": false },
+    { "system": "Analytics OS", "branch": "feature/analytics-os-completion-v1", "head_commit": "e2e14e7", "is_ancestor_of_a6048a8": true, "unique_commits_segment": 12, "included": true, "superseded": false },
+    { "system": "Growth & Marketing OS", "branch": "feature/growth-marketing-os-v1", "head_commit": "5f054c2", "is_ancestor_of_a6048a8": true, "unique_commits_segment": 10, "included": true, "superseded": false },
+    { "system": "Conversation Hub", "branch": "feature/conversation-hub-v1", "head_commit": "b096766", "is_ancestor_of_a6048a8": true, "unique_commits_segment": 10, "included": true, "superseded": false },
+    { "system": "Integration Architecture", "branch": "feature/integration-data-contracts-v1", "head_commit": "cd7342d", "is_ancestor_of_a6048a8": true, "unique_commits_segment": 8, "included": true, "superseded": false },
+    { "system": "Agent Automation & Orchestration", "branch": "feature/agent-automation-orchestration-v1", "head_commit": "d6b8d1f", "is_ancestor_of_a6048a8": true, "unique_commits_segment": 8, "included": true, "superseded": false },
+    { "system": "Security / Privacy / Compliance", "branch": "feature/security-privacy-compliance-v1", "head_commit": "6f51d57", "is_ancestor_of_a6048a8": true, "unique_commits_segment": 6, "included": true, "superseded": false },
+    { "system": "Reliability / Observability", "branch": "feature/reliability-observability-v1", "head_commit": "a6048a8", "is_ancestor_of_a6048a8": true, "unique_commits_segment": 6, "included": true, "superseded": false }
+  ],
+  "underlying_branches_in_chain": [
+    { "branch": "feature/lead-hunter-os", "head": "9d7c0fa", "is_ancestor": true, "notes": "Lead Hunter — included" },
+    { "branch": "feature/master-controller-lead-hunter-integration", "head": "dd9a63a", "is_ancestor": true, "notes": "MAIN working branch + Master Controller — included (chain built on top)" },
+    { "branch": "feature/master-controller-vps-e2e", "head": "8445bf6", "is_ancestor": true, "notes": "MC VPS E2E — included" },
+    { "branch": "feature/mater-controller-android", "head": "afc1434", "is_ancestor": true, "notes": "Android (82 files apps/, 13 dist/) — included" }
+  ],
+  "parallel_superseded_branches": [
+    { "branch": "feature/analytics-os-metrics-reporting-v1", "head": "8014e43", "is_ancestor": false, "diverged_at": "9e93eae (Executive OS)", "commits_not_in_head": 3, "disposition": "SUPERSEDED by analytics-os-completion-v1 (e2e14e7, in chain); RETAINED, not deleted" }
+  ],
+  "result": {
+    "FULL_CHAIN_LINEAR": "YES",
+    "ALL_REQUIRED_HEADS_INCLUDED": "YES",
+    "LOST_COMMITS": 0,
+    "SUPERSEDED_BRANCHES": 1,
+    "PARALLEL_BRANCHES_RETAINED": 1,
+    "RELEASE_TAG_IN_CHAIN": true
+  }
+}

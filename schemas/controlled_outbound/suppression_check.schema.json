@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/controlled_outbound/suppression_check.schema.json",
+  "title": "Suppression Check V1",
+  "type": "object",
+  "required": [
+    "synthetic",
+    "contact_id",
+    "suppressed",
+    "decision"
+  ],
+  "properties": {
+    "synthetic": {"const": true},
+    "contact_id": {"type": "string"},
+    "suppressed": {"type": "boolean"},
+    "decision": {"enum": ["ALLOW", "BLOCK"]}
+  },
+  "additionalProperties": true
+}

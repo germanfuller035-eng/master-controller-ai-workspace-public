@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "session": "AGENT_SANDBOX_OBSERVABILITY_AND_EVALS_V1",
+  "deny_expected_for": [
+    "prompt_injection",
+    "excessive_agency",
+    "ssrf",
+    "data_leakage",
+    "tool_discovery"
+  ],
+  "external_network_allowed": false,
+  "external_llm_calls_enabled": false
+}

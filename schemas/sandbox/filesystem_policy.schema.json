@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "filesystem_policy.schema",
+  "type": "object",
+  "required": [
+    "allowed_root",
+    "deny_path_traversal",
+    "deny_absolute_escape"
+  ],
+  "properties": {
+    "allowed_root": {
+      "type": [
+        "string",
+        "number",
+        "boolean",
+        "array",
+        "object"
+      ]
+    },
+    "deny_path_traversal": {
+      "type": [
+        "string",
+        "number",
+        "boolean",
+        "array",
+        "object"
+      ]
+    },
+    "deny_absolute_escape": {
+      "type": [
+        "string",
+        "number",
+        "boolean",
+        "array",
+        "object"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

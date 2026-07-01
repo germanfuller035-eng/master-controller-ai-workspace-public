@@ -1,0 +1,37 @@
+{
+  "recommendation_id": "rec_TEST_good_weak_process",
+  "customer_profile": "TEST_good_weak_process",
+  "primary_product": "process_comm_audit",
+  "secondary_product": null,
+  "do_not_offer": [
+    "domain_recovery",
+    "owned_presence_pack",
+    "process_comm_audit:not_ready",
+    "ai_front_office:not_ready"
+  ],
+  "reason_codes": [
+    "maturity:GOOD_WEBSITE_WEAK_PROCESS",
+    "maturity_reason:declared GOOD_WEBSITE_WEAK_PROCESS consistent with evidence (2 channel checks)",
+    "manual_review:no_active_product_for_segment"
+  ],
+  "evidence": [
+    {
+      "category": "process",
+      "claim_type": "FACT",
+      "source_url": "https://good.test",
+      "source_type": "direct_observation",
+      "checked_at": "2026-06-17",
+      "evidence_excerpt": "slow response evidence",
+      "confidence": 0.65,
+      "freshness": "fresh",
+      "claim": "slow response evidence"
+    }
+  ],
+  "confidence": 0.65,
+  "blockers": [
+    "primary_product_not_client_ready:PLANNED"
+  ],
+  "manual_review": true,
+  "price_range": "UNKNOWN (UNKNOWN)",
+  "recommended_next_action": "Internal review only: process_comm_audit is PLANNED, not client-ready. Do not offer."
+}

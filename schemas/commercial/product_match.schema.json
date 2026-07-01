@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://master-controller.local/schemas/commercial/product_match.schema.json",
+  "title": "product_match",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "schema_version": {
+      "type": "integer"
+    },
+    "synthetic": {
+      "type": "boolean"
+    },
+    "lead_id": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "evidence": {
+      "type": "array"
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "draft_only": {
+      "type": "boolean"
+    },
+    "send_allowed": {
+      "type": "boolean"
+    },
+    "owner_approval_required_for_send": {
+      "type": "boolean"
+    }
+  }
+}

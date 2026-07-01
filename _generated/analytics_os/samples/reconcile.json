@@ -1,0 +1,59 @@
+{
+  "total": 8,
+  "by_severity": {
+    "CRITICAL": 1,
+    "HIGH": 5,
+    "MEDIUM": 2
+  },
+  "auto_correction": false,
+  "findings": [
+    {
+      "kind": "PAID_WITHOUT_PAYMENT_EVIDENCE",
+      "ref": "TEST_i99",
+      "severity": "CRITICAL",
+      "note": "invoice marked paid without payment record"
+    },
+    {
+      "kind": "RENEWAL_ELIGIBLE_WITH_CRITICAL_INCIDENT",
+      "ref": "TEST_cs01",
+      "severity": "HIGH",
+      "note": "renewal eligible despite critical incident"
+    },
+    {
+      "kind": "CUSTOMER_ACTIVE_WITHOUT_ACCEPTED_PROJECT",
+      "ref": "TEST_cs02",
+      "severity": "HIGH",
+      "note": "active customer without accepted project"
+    },
+    {
+      "kind": "PRODUCT_ACTIVE_WITHOUT_READINESS",
+      "ref": "lead_system",
+      "severity": "HIGH",
+      "note": "product ACTIVE without owner-approved readiness"
+    },
+    {
+      "kind": "TEST_ONLY_IN_COMMERCIAL_FUNNEL",
+      "ref": "1",
+      "severity": "HIGH",
+      "note": "TEST_ONLY sends counted in commercial funnel"
+    },
+    {
+      "kind": "PAYMENT_CONFUSED_WITH_PROFIT",
+      "ref": "finance",
+      "severity": "HIGH",
+      "note": "payment/cash reported as profit"
+    },
+    {
+      "kind": "DASHBOARD_SOURCE_MISMATCH",
+      "ref": "active_customers",
+      "severity": "MEDIUM",
+      "note": "dashboard=3 source=2"
+    },
+    {
+      "kind": "SENDS_WINDOW_UNCLASSIFIED",
+      "ref": "1",
+      "severity": "MEDIUM",
+      "note": "sends not classified as historical vs release-window"
+    }
+  ]
+}

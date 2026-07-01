@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-26",
+  "session": "POLICY_SECRETS_AUDIT_EMERGENCY_CONTROL_V1",
+  "production_changes_allowed_this_session": false,
+  "vps_changes_allowed_this_session": false,
+  "runtime_install_allowed_this_session": false,
+  "boundaries": [
+    {"id": "production_api_backend", "status": "NO_CHANGE_ALLOWED"},
+    {"id": "caddy_firewall_dns", "status": "NO_CHANGE_ALLOWED"},
+    {"id": "production_database", "status": "NO_CHANGE_ALLOWED"},
+    {"id": "production_filesystem", "status": "NO_CHANGE_ALLOWED"},
+    {"id": "vps", "status": "NO_CHANGE_ALLOWED"},
+    {"id": "happ_vpn_proxy_adb_reverse_android_global_proxy", "status": "NO_CHANGE_ALLOWED"},
+    {"id": "mcp_servers", "status": "NOT_INSTALLED_NOT_ENABLED"},
+    {"id": "opa_runtime", "status": "NOT_INSTALLED"},
+    {"id": "vault_server", "status": "NOT_INSTALLED"},
+    {"id": "voltagent_runtime", "status": "NOT_INSTALLED"},
+    {"id": "qdrant", "status": "NOT_INSTALLED"},
+    {"id": "browser_automation", "status": "DENIED"}
+  ]
+}

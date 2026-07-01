@@ -1,0 +1,18 @@
+{
+  "schema": "executive_os.monthly_review.v1",
+  "period": "this month",
+  "strategic_progress": [],
+  "revenue": "see Finance OS P&L (CONFIRMED only)",
+  "cashflow": "see Finance OS cashflow",
+  "project_profitability": "see Finance OS profitability",
+  "product_readiness": "see Revenue OS",
+  "delivery_quality": "see Delivery OS QA",
+  "owner_capacity": "UNKNOWN",
+  "infrastructure": "soak/production health",
+  "risks": [],
+  "decisions": [],
+  "stopped_projects": [],
+  "next_month_priorities": [],
+  "budget_implications": "see Finance OS budget",
+  "finance_close_source": "Finance OS monthly close (required source, not duplicated)"
+}

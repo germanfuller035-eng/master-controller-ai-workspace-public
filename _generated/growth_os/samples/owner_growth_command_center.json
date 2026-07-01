@@ -1,0 +1,40 @@
+{
+  "generated_ts": "20260617_220000",
+  "priority_segment": "seg_weak_site",
+  "priority_product": "mini_audit",
+  "campaign_closest_to_ready": "camp_mini_audit_inbound",
+  "missing_owner_decisions": [
+    "confirm owner capacity for inbound campaign",
+    "approve prices for DRAFT products to unlock their campaigns"
+  ],
+  "missing_price": [
+    "mini_audit_plus",
+    "full_business_audit",
+    "funnel_audit",
+    "process_comm_audit",
+    "implementation_sprint",
+    "start_page_sprint",
+    "landing_sprint",
+    "business_website",
+    "lead_system",
+    "ai_front_office",
+    "growth_support",
+    "digital_presence_check",
+    "owned_presence_pack",
+    "domain_recovery",
+    "audit_plus_prototype",
+    "prototype_preview"
+  ],
+  "capacity_blocker": "owner_capacity_confirmed = UNKNOWN (Executive OS upstream)",
+  "claim_approval": "mini_audit claims supported; others gated by product readiness",
+  "asset_approval": "all assets DRAFT/not published",
+  "next_safe_growth_action": "Finalize mini_audit inbound campaign assets + confirm owner capacity (no launch).",
+  "intentionally_not_launched": [
+    "all campaigns (ACTIVE prohibited)",
+    "outbound (no send)",
+    "content (not published)",
+    "landings (not published)",
+    "experiments (not RUNNING)",
+    "controlled cycle (not executed)"
+  ]
+}

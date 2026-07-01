@@ -1,0 +1,30 @@
+{
+  "invoice_id": "TEST_inv_T-001",
+  "deal_id": null,
+  "project_id": null,
+  "client_reference": "TEST_c01",
+  "business_unit_id": "mini_audit",
+  "number": "T-001",
+  "issue_date": "2026-06-01",
+  "due_date": "2026-06-08",
+  "currency": "RUB",
+  "subtotal": 10000,
+  "tax": 0,
+  "total": 10000,
+  "status": "DRAFT",
+  "payment_schedule": [
+    {
+      "payment_stage_id": "stg1",
+      "name": "Prepayment",
+      "percentage": 100,
+      "amount": 10000,
+      "due_condition": "on_issue",
+      "due_date": null,
+      "status": "EXPECTED"
+    }
+  ],
+  "price_status": "CONFIRMED",
+  "evidence": null,
+  "test_only": true,
+  "revision": 1
+}

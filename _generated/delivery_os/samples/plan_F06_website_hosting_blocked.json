@@ -1,0 +1,99 @@
+{
+  "ok": true,
+  "errors": [],
+  "warnings": [],
+  "milestone_sequence": [
+    "bw1",
+    "bw2",
+    "bw3",
+    "bw4",
+    "bw5",
+    "bw6"
+  ],
+  "critical_path": [
+    "bw1",
+    "bw2",
+    "bw3",
+    "bw4",
+    "bw5",
+    "bw6"
+  ],
+  "estimated_duration_days": 19,
+  "timeline": [
+    {
+      "milestone_id": "bw1",
+      "name": "Discovery + input collection",
+      "relative": "Day 0",
+      "owner": "owner",
+      "deliverables": [
+        "brief"
+      ],
+      "qa_gate": false,
+      "acceptance_gate": false
+    },
+    {
+      "milestone_id": "bw2",
+      "name": "Information architecture + content structure",
+      "relative": "after bw1",
+      "owner": "claude",
+      "deliverables": [
+        "ia",
+        "content_structure"
+      ],
+      "qa_gate": true,
+      "acceptance_gate": false
+    },
+    {
+      "milestone_id": "bw3",
+      "name": "Wireframe + visual direction + prototype",
+      "relative": "after bw2",
+      "owner": "claude",
+      "deliverables": [
+        "prototype"
+      ],
+      "qa_gate": true,
+      "acceptance_gate": false
+    },
+    {
+      "milestone_id": "bw4",
+      "name": "Development + forms + analytics + SEO basics",
+      "relative": "after bw3",
+      "owner": "claude",
+      "deliverables": [
+        "website"
+      ],
+      "qa_gate": true,
+      "acceptance_gate": false
+    },
+    {
+      "milestone_id": "bw5",
+      "name": "QA + responsive + security review",
+      "relative": "after bw4",
+      "owner": "claude",
+      "deliverables": [
+        "qa_report"
+      ],
+      "qa_gate": true,
+      "acceptance_gate": false
+    },
+    {
+      "milestone_id": "bw6",
+      "name": "Owner+client review + launch + handoff",
+      "relative": "after owner approval",
+      "owner": "owner",
+      "deliverables": [
+        "launched_site",
+        "handoff_guide",
+        "support_guide"
+      ],
+      "qa_gate": true,
+      "acceptance_gate": true
+    }
+  ],
+  "owner_checkpoints": [
+    "bw1",
+    "bw6"
+  ],
+  "client_checkpoints": [],
+  "note": "Relative timeline only. No exact client dates without approved start date."
+}

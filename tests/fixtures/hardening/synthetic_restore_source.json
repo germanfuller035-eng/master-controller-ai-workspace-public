@@ -1,0 +1,16 @@
+{
+  "source_id": "synthetic-restore-source-v1",
+  "synthetic": true,
+  "records": [
+    {
+      "id": "SYNTH-REMINDER-001",
+      "kind": "owner_reminder_draft",
+      "status": "draft_only"
+    },
+    {
+      "id": "SYNTH-APPROVAL-001",
+      "kind": "approval_request",
+      "status": "owner_gate_required"
+    }
+  ]
+}

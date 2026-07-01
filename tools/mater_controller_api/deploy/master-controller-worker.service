@@ -1,0 +1,30 @@
+[Unit]
+Description=Master Controller worker (API-only; no canonical file access)
+After=network-online.target master-controller-api.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=mcworker
+WorkingDirectory=/opt/master-controller/tools/mater_controller_api
+EnvironmentFile=/etc/master-controller/worker.env
+Environment=MATER_API_BASE=http://127.0.0.1:8787/api/v1
+Environment=MATER_WORKER_TYPES=HEALTH_CHECK,METRICS_REFRESH,BACKUP_VERIFY,LEAD_DISCOVERY,LEAD_VERIFY,LEAD_SCORE,AUDIT_GENERATE,DRAFT_GENERATE,FIRST_TOUCH_DRAFT_GENERATE,FOLLOWUP_PLAN,REPLY_DRAFT_GENERATE
+# Safe lead discovery is enabled by default. It stages leads, verifies facts and prepares drafts.
+# It never sends mail, never runs payments and never writes a production DB.
+# Live sending remains separately gated by EMAIL_REAL_SEND_ENABLED and MATER_NO_SEND.
+ExecStart=/usr/bin/node src/worker/index.mjs
+Restart=on-failure
+RestartSec=5
+MemoryMax=192M
+MemoryHigh=160M
+TasksMax=32
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+# Worker has NO write access anywhere except its own runtime; canonical dir is not listed.
+ReadWritePaths=
+
+[Install]
+WantedBy=multi-user.target

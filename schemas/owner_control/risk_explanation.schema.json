@@ -1,0 +1,13 @@
+{
+  "title": "risk_explanation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["what", "who", "why", "cost", "rollback"],
+  "properties": {
+    "what": {"type": "string"},
+    "who": {"type": "string"},
+    "why": {"type": "string"},
+    "cost": {"type": "string"},
+    "rollback": {"type": "string"}
+  }
+}

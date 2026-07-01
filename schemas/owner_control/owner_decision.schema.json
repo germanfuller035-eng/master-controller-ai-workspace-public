@@ -1,0 +1,14 @@
+{
+  "title": "owner_decision",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["decision_id", "synthetic", "priority", "risk", "title", "evidence"],
+  "properties": {
+    "decision_id": {"type": "string"},
+    "synthetic": {"type": "boolean"},
+    "priority": {"type": "integer"},
+    "risk": {"type": "string"},
+    "title": {"type": "string"},
+    "evidence": {"type": "array"}
+  }
+}

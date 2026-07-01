@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "session": "AGENT_SANDBOX_OBSERVABILITY_AND_EVALS_V1",
+  "unknown_capability_policy": "DENY",
+  "exceeds_allowed_scope_policy": "DENY_PERMISSION_BOUNDARY",
+  "stop_active_policy": "DENY_STOP_ACTIVE"
+}

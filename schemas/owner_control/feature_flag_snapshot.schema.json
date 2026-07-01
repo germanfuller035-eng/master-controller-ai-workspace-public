@@ -1,0 +1,13 @@
+{
+  "title": "feature_flag_snapshot",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["synthetic", "display_only", "can_enable_flags", "flags", "evidence"],
+  "properties": {
+    "synthetic": {"type": "boolean"},
+    "display_only": {"type": "boolean"},
+    "can_enable_flags": {"type": "boolean"},
+    "flags": {"type": "array"},
+    "evidence": {"type": "array"}
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "schema": "product_os.product_packs.v1",
+  "version": "1.0",
+  "note": "Productization packs derived from canonical Revenue/Delivery data (read-only). No invented prices/claims. Reference product = mini_audit.",
+  "priority_selection": {
+    "criteria": ["revenue_value", "speed_to_pilot", "delivery_effort", "risk", "owner_effort", "reuse", "market_clarity", "economics", "dependency"],
+    "ranked": [
+      {"product_id": "mini_audit", "rank": 1, "role": "reference_baseline", "reason": "DELIVERY_DEFINED + confirmed price + full factory"},
+      {"product_id": "digital_presence_check", "rank": 2, "role": "pilot_candidate", "reason": "high automation, low effort, clear ICP"},
+      {"product_id": "full_business_audit", "rank": 3, "role": "pilot_candidate", "reason": "upsell from mini_audit"},
+      {"product_id": "start_page_sprint", "rank": 4, "role": "pilot_candidate", "reason": "build entry; price conflict to resolve"},
+      {"product_id": "landing_sprint", "rank": 5, "role": "pilot_candidate", "reason": "conversion build"},
+      {"product_id": "business_website", "rank": 6, "role": "pilot_candidate", "reason": "high value, high effort/scope-creep risk"}
+    ]
+  },
+  "packs": {
+    "digital_presence_check": {
+      "distinction_from_mini_audit": "Maps where a business EXISTS online (channels) vs Mini Audit which audits an EXISTING website's path-to-request.",
+      "outcome": "Presence map + gap list + recommended first step for low-maturity businesses.",
+      "deliverables": ["presence_map", "identity_confidence", "channel_inventory", "contactability_report", "risk_summary", "recommended_next_product"],
+      "price_status": "UNKNOWN (owner to set)",
+      "timeline": "Day 0-1",
+      "upsell": ["owned_presence_pack", "start_page_sprint"],
+      "pilot_scenarios": ["no_website", "maps_only", "marketplace_only", "social_only", "broken_website", "conflicting_identity"],
+      "no_live_web": true
+    },
+    "full_business_audit": {
+      "distinction_from_mini_audit": "Mini Audit = 5-7 findings entry. Full = deep UX+SEO+technical+process across many dimensions with executive report.",
+      "may_include": ["digital_presence", "website", "funnel", "contactability", "trust", "content", "offer_clarity", "local_presence", "analytics", "sales_process", "response_process", "follow_up_process"],
+      "price_status": "OWNER_TARGET 30000-70000",
+      "output": "executive report (no invented deep business facts)",
+      "pilot_criteria": ["evidence-backed findings", "no contradictions", "owner QA pass"]
+    },
+    "start_page_sprint": {
+      "target_customer": "Local business needing basic packaging (first screen/CTA/forms/trust).",
+      "difference_from_landing": "Start page = packaging of an existing/first screen; Landing = full conversion-focused single-offer page.",
+      "deliverables": ["first_screen", "cta", "forms", "trust_block", "handoff_guide"],
+      "price_conflict": {"source_a": "three_sellable_offers (from 50k)", "source_b": "pricing_scope_matrix (90-250k)", "owner_decision": "d_startpack_conflict"},
+      "exclusions": ["full site", "CRM"]
+    },
+    "landing_sprint": {
+      "icp": "weak-website businesses wanting a conversion page",
+      "conversion_goal": "single offer -> request",
+      "sections": ["hero", "offer", "trust", "form", "cta"],
+      "deliverables": ["structure", "copy", "landing", "form", "handoff_guide"],
+      "price_status": "UNKNOWN (owner to set)",
+      "pilot_scenarios": ["valid_inputs", "missing_content", "changing_offer", "excessive_revisions", "analytics_missing"]
+    },
+    "business_website": {
+      "page_scope": "structure + service/product pages + forms + basic lead tracking + Telegram notifications",
+      "scope_creep_signals": ["ecommerce", "multilingual", "custom_crm", "booking", "complex_integrations", "unlimited_content", "unlimited_revisions"],
+      "price_status": "OWNER_TARGET 180000-350000",
+      "tiers": "only if supported by existing evidence (no invented pricing)"
+    },
+    "lead_system": {
+      "boundary_risk": "duplicates Master Controller architecture",
+      "options": ["sell_mc_derived_architecture", "sell_simplified_deployment", "sell_audit_consulting_only", "sell_managed_service", "pause_product"],
+      "recommended": "audit/consulting only until owner packaging decision",
+      "keep_status": "PLANNED",
+      "owner_decision": "d_lead_system_packaging"
+    },
+    "ai_front_office": {
+      "safe_variants": ["advisory_audit", "read_only_assistant", "draft_only_assistant", "approval_gated_assistant"],
+      "prohibited_default": "autonomous_assistant (no autonomous client communication)",
+      "keep_status": "PLANNED",
+      "owner_decision": "d_ai_front_office_boundary"
+    }
+  }
+}

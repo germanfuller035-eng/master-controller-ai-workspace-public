@@ -1,0 +1,86 @@
+[
+  {
+    "model": "first_touch",
+    "allocations": [
+      {
+        "channel": "email",
+        "weight": 1
+      },
+      {
+        "channel": "followup",
+        "weight": 0
+      },
+      {
+        "channel": "reply",
+        "weight": 0
+      }
+    ],
+    "total_weight": 1,
+    "limitation": null,
+    "causation_disclaimer": true,
+    "note": "Attribution reflects correlation of touchpoints with conversion, NOT proven causation."
+  },
+  {
+    "model": "last_touch",
+    "allocations": [
+      {
+        "channel": "email",
+        "weight": 0
+      },
+      {
+        "channel": "followup",
+        "weight": 0
+      },
+      {
+        "channel": "reply",
+        "weight": 1
+      }
+    ],
+    "total_weight": 1,
+    "limitation": null,
+    "causation_disclaimer": true,
+    "note": "Attribution reflects correlation of touchpoints with conversion, NOT proven causation."
+  },
+  {
+    "model": "linear",
+    "allocations": [
+      {
+        "channel": "email",
+        "weight": 0.3333
+      },
+      {
+        "channel": "followup",
+        "weight": 0.3333
+      },
+      {
+        "channel": "reply",
+        "weight": 0.3333
+      }
+    ],
+    "total_weight": 1,
+    "limitation": null,
+    "causation_disclaimer": true,
+    "note": "Attribution reflects correlation of touchpoints with conversion, NOT proven causation."
+  },
+  {
+    "model": "position_based",
+    "allocations": [
+      {
+        "channel": "email",
+        "weight": 0.4
+      },
+      {
+        "channel": "followup",
+        "weight": 0.2
+      },
+      {
+        "channel": "reply",
+        "weight": 0.4
+      }
+    ],
+    "total_weight": 1,
+    "limitation": null,
+    "causation_disclaimer": true,
+    "note": "Attribution reflects correlation of touchpoints with conversion, NOT proven causation."
+  }
+]

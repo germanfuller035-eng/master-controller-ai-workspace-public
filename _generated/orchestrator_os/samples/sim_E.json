@@ -1,0 +1,9 @@
+{
+  "scenario": "E",
+  "name": "Token budget exceeded",
+  "ok": true,
+  "steps": [
+    "budget: EXCEEDED",
+    "action: checkpoint,stop_new_phase,produce_evidence,recommend_reduced_scope"
+  ]
+}

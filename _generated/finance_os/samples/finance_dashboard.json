@@ -1,0 +1,34 @@
+{
+  "schema": "finance_os.dashboard.v1",
+  "label_legend": [
+    "CONFIRMED",
+    "OWNER_TARGET",
+    "MODEL_ESTIMATE",
+    "IMPORTED_UNVERIFIED",
+    "UNKNOWN"
+  ],
+  "period": "2026-06",
+  "sections": {
+    "current_cash_references": "UNKNOWN",
+    "expected_cashflow_7_30_90": {
+      "7": "UNKNOWN",
+      "30": "UNKNOWN",
+      "90": "UNKNOWN"
+    },
+    "unpaid_invoices": 10000,
+    "overdue_amounts": 0,
+    "revenue_this_month": "UNKNOWN",
+    "payments_this_month": "UNKNOWN",
+    "project_profitability": [],
+    "product_profitability": [],
+    "fixed_costs": "UNKNOWN",
+    "reserve_status": "UNKNOWN",
+    "debt_service": "UNKNOWN",
+    "capacity": "UNKNOWN",
+    "business_units": [],
+    "risks": [],
+    "owner_decisions": [],
+    "unknown_data": []
+  },
+  "note": "Facts and estimates are NOT mixed — every value carries a status label."
+}

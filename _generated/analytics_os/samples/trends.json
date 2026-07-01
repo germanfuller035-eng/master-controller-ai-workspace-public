@@ -1,0 +1,200 @@
+[
+  {
+    "key": "booked_revenue",
+    "direction": "UP",
+    "first": 0,
+    "last": 25000,
+    "change_abs": 25000,
+    "change_pct": null,
+    "n_points": 5,
+    "source_system": "Finance_OS",
+    "status": "OWNER_TARGET",
+    "points": [
+      {
+        "period_label": "2026-02",
+        "value": 0
+      },
+      {
+        "period_label": "2026-03",
+        "value": 0
+      },
+      {
+        "period_label": "2026-04",
+        "value": 10000
+      },
+      {
+        "period_label": "2026-05",
+        "value": 10000
+      },
+      {
+        "period_label": "2026-06",
+        "value": 25000
+      }
+    ]
+  },
+  {
+    "key": "cash_collected",
+    "direction": "UP",
+    "first": 0,
+    "last": 18000,
+    "change_abs": 18000,
+    "change_pct": null,
+    "n_points": 5,
+    "source_system": "Finance_OS",
+    "status": "CONFIRMED",
+    "points": [
+      {
+        "period_label": "2026-02",
+        "value": 0
+      },
+      {
+        "period_label": "2026-03",
+        "value": 0
+      },
+      {
+        "period_label": "2026-04",
+        "value": 0
+      },
+      {
+        "period_label": "2026-05",
+        "value": 8000
+      },
+      {
+        "period_label": "2026-06",
+        "value": 18000
+      }
+    ]
+  },
+  {
+    "key": "operating_result",
+    "direction": "UP",
+    "first": -3000,
+    "last": 1200,
+    "change_abs": 4200,
+    "change_pct": 1.4,
+    "n_points": 5,
+    "source_system": "Finance_OS",
+    "status": "MODEL_ESTIMATE",
+    "points": [
+      {
+        "period_label": "2026-02",
+        "value": -3000
+      },
+      {
+        "period_label": "2026-03",
+        "value": -3200
+      },
+      {
+        "period_label": "2026-04",
+        "value": -1500
+      },
+      {
+        "period_label": "2026-05",
+        "value": -800
+      },
+      {
+        "period_label": "2026-06",
+        "value": 1200
+      }
+    ]
+  },
+  {
+    "key": "cash_runway",
+    "direction": "DOWN",
+    "first": 5,
+    "last": 2.5,
+    "change_abs": -2.5,
+    "change_pct": -0.5,
+    "n_points": 5,
+    "source_system": "Finance_OS",
+    "status": "MODEL_ESTIMATE",
+    "points": [
+      {
+        "period_label": "2026-02",
+        "value": 5
+      },
+      {
+        "period_label": "2026-03",
+        "value": 4
+      },
+      {
+        "period_label": "2026-04",
+        "value": 4
+      },
+      {
+        "period_label": "2026-05",
+        "value": 3
+      },
+      {
+        "period_label": "2026-06",
+        "value": 2.5
+      }
+    ]
+  },
+  {
+    "key": "active_products",
+    "direction": "UP",
+    "first": 0,
+    "last": 2,
+    "change_abs": 2,
+    "change_pct": null,
+    "n_points": 5,
+    "source_system": "Revenue_OS",
+    "status": "CONFIRMED",
+    "points": [
+      {
+        "period_label": "2026-02",
+        "value": 0
+      },
+      {
+        "period_label": "2026-03",
+        "value": 1
+      },
+      {
+        "period_label": "2026-04",
+        "value": 1
+      },
+      {
+        "period_label": "2026-05",
+        "value": 1
+      },
+      {
+        "period_label": "2026-06",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "key": "acceptance_rate",
+    "direction": "DOWN",
+    "first": 1,
+    "last": 0.85,
+    "change_abs": -0.15,
+    "change_pct": -0.15,
+    "n_points": 3,
+    "source_system": "Delivery_OS",
+    "status": "MODEL_ESTIMATE",
+    "points": [
+      {
+        "period_label": "2026-02",
+        "value": null
+      },
+      {
+        "period_label": "2026-03",
+        "value": null
+      },
+      {
+        "period_label": "2026-04",
+        "value": 1
+      },
+      {
+        "period_label": "2026-05",
+        "value": 0.9
+      },
+      {
+        "period_label": "2026-06",
+        "value": 0.85
+      }
+    ]
+  }
+]

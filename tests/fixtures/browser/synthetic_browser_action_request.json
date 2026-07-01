@@ -1,0 +1,8 @@
+{
+  "action_type": "preview_contract",
+  "external_browser": false,
+  "form_submit": false,
+  "request_id": "synthetic-browser-preview-alpha",
+  "synthetic": true,
+  "target_ref": "reserved-preview-alpha"
+}

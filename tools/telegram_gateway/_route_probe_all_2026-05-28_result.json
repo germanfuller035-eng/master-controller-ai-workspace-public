@@ -1,0 +1,98 @@
+﻿{
+    "timestamp":  "2026-05-28T15:41:18.7360008+03:00",
+    "direct":  {
+                   "proxy":  "",
+                   "http_code":  "302",
+                   "latency_ms":  849,
+                   "ok":  true
+               },
+    "gateway":  "172.18.0.2",
+    "http_probes":  [
+                        {
+                            "proxy":  "http://127.0.0.1:10809",
+                            "http_code":  "000",
+                            "latency_ms":  10081,
+                            "ok":  false
+                        },
+                        {
+                            "proxy":  "http://127.0.0.1:7890",
+                            "http_code":  "000",
+                            "latency_ms":  2098,
+                            "ok":  false
+                        },
+                        {
+                            "proxy":  "http://127.0.0.1:8080",
+                            "http_code":  "000",
+                            "latency_ms":  2105,
+                            "ok":  false
+                        },
+                        {
+                            "proxy":  "http://127.0.0.1:2080",
+                            "http_code":  "000",
+                            "latency_ms":  2091,
+                            "ok":  false
+                        },
+                        {
+                            "proxy":  "http://172.18.0.2:10809",
+                            "http_code":  "000",
+                            "latency_ms":  10140,
+                            "ok":  false
+                        },
+                        {
+                            "proxy":  "http://172.18.0.2:7890",
+                            "http_code":  "000",
+                            "latency_ms":  1437,
+                            "ok":  false
+                        },
+                        {
+                            "proxy":  "http://172.18.0.2:8080",
+                            "http_code":  "000",
+                            "latency_ms":  1163,
+                            "ok":  false
+                        },
+                        {
+                            "proxy":  "http://172.18.0.2:2080",
+                            "http_code":  "000",
+                            "latency_ms":  1154,
+                            "ok":  false
+                        }
+                    ],
+    "socks_probes":  [
+                         {
+                             "proxy":  "socks5://127.0.0.1:10808",
+                             "http_code":  "302",
+                             "latency_ms":  3288,
+                             "ok":  true
+                         },
+                         {
+                             "proxy":  "socks5://127.0.0.1:7891",
+                             "http_code":  "000",
+                             "latency_ms":  2077,
+                             "ok":  false
+                         },
+                         {
+                             "proxy":  "socks5://127.0.0.1:2081",
+                             "http_code":  "000",
+                             "latency_ms":  2105,
+                             "ok":  false
+                         },
+                         {
+                             "proxy":  "socks5://172.18.0.2:10808",
+                             "http_code":  "302",
+                             "latency_ms":  5028,
+                             "ok":  true
+                         },
+                         {
+                             "proxy":  "socks5://172.18.0.2:7891",
+                             "http_code":  "000",
+                             "latency_ms":  1569,
+                             "ok":  false
+                         },
+                         {
+                             "proxy":  "socks5://172.18.0.2:2081",
+                             "http_code":  "000",
+                             "latency_ms":  1568,
+                             "ok":  false
+                         }
+                     ]
+}

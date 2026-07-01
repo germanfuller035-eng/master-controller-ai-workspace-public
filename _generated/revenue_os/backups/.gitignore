@@ -1,0 +1,4 @@
+# Do not commit raw backup blobs or restore clones (large/redundant). Manifests + bundles tracked.
+revenue_src_*/
+restore_test_*/
+*.gitbundle

@@ -1,0 +1,14 @@
+{
+  "schema_version": "controlled_outbound.outbound_batch.v1",
+  "synthetic": true,
+  "batch_id": "synthetic-no-send-batch-max-three",
+  "max_batch_size": 3,
+  "send_allowed": false,
+  "owner_approval_required_for_future_send": true,
+  "draft_fixtures": [
+    "tests/fixtures/controlled_outbound/synthetic_outbound_draft_1.json",
+    "tests/fixtures/controlled_outbound/synthetic_outbound_draft_2.json",
+    "tests/fixtures/controlled_outbound/synthetic_outbound_draft_3.json",
+    "tests/fixtures/controlled_outbound/synthetic_outbound_draft_4_over_limit.json"
+  ]
+}

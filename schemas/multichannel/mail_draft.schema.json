@@ -1,0 +1,23 @@
+{
+  "additionalProperties": true,
+  "properties": {
+    "body": {},
+    "draft_id": {},
+    "payload_hash": {},
+    "recipient_ref": {},
+    "send_allowed": {},
+    "subject": {},
+    "synthetic": {}
+  },
+  "required": [
+    "synthetic",
+    "draft_id",
+    "recipient_ref",
+    "subject",
+    "body",
+    "send_allowed",
+    "payload_hash"
+  ],
+  "title": "Mail Draft",
+  "type": "object"
+}

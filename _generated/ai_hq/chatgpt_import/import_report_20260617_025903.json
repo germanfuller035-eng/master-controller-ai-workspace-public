@@ -1,0 +1,14 @@
+{
+  "schema": "ai_hq.chatgpt_import.v1",
+  "generated_ts": "20260617_025903",
+  "export": "tools/ai_hq/fixtures/chatgpt/conversations.json",
+  "totals": {
+    "total": 4,
+    "imported": 0,
+    "skipped_dup": 4,
+    "sensitive_restricted": 0,
+    "review_queue": 0,
+    "secrets_blocked": 0
+  },
+  "notes": []
+}

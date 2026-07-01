@@ -1,0 +1,45 @@
+[
+  {
+    "product_id": "mini_audit",
+    "readiness_by_dimension": {
+      "spec": 0.9,
+      "delivery": 0.85,
+      "pricing": 0.8,
+      "qa": 0.9
+    },
+    "readiness_score": 0.86,
+    "pilot_outcome": "PASSED",
+    "claim_approval_rate": 0.8333,
+    "support_burden": 2,
+    "product_profitability": 7500,
+    "product_mismatch": "OK"
+  },
+  {
+    "product_id": "business_website",
+    "readiness_by_dimension": {
+      "spec": 0.8,
+      "delivery": 0.75,
+      "pricing": 0.7,
+      "qa": 0.8
+    },
+    "readiness_score": 0.76,
+    "pilot_outcome": "PASSED_WITH_NOTES",
+    "claim_approval_rate": 1,
+    "support_burden": 3,
+    "product_profitability": 18000,
+    "product_mismatch": "OK"
+  },
+  {
+    "product_id": "lead_system",
+    "readiness_by_dimension": {
+      "spec": 0.5,
+      "delivery": 0.3
+    },
+    "readiness_score": 0.4,
+    "pilot_outcome": "UNKNOWN",
+    "claim_approval_rate": 0,
+    "support_burden": 0,
+    "product_profitability": 0,
+    "product_mismatch": "ACTIVE_WITHOUT_READINESS"
+  }
+]

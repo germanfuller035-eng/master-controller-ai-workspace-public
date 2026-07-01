@@ -1,0 +1,12 @@
+{
+  "contains_fake_medical_marker": true,
+  "contains_fake_military_marker": true,
+  "content_summary": "synthetic placeholder only; no document text",
+  "data_classes": [
+    "MILITARY_MEDICAL"
+  ],
+  "external_system_accessed": false,
+  "kind": "sensitive_data_review",
+  "request_id": "syn_sensitive_military_alpha",
+  "synthetic": true
+}

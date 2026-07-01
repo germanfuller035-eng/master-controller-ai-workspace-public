@@ -1,0 +1,28 @@
+{
+  "schema": "growth_os.controlled_cycle_runbook.v1",
+  "version": "1.0",
+  "status": "RUNBOOK_ONLY",
+  "note": "FUTURE controlled commercial cycle runbook. Builds on Analytics OS measurement plan. NOT executed. Cycle does not start. All preconditions gate execution behind owner approval + freeze lift.",
+  "execution_state": {"cycle_started": false, "running_allowed": false, "owner_approval_required": true, "freeze_must_be_lifted": true},
+  "preconditions": ["freeze lifted", "production health passed", "owner approval", "product approved (ACTIVE)", "price approved", "capacity approved", "support ready", "measurement ready", "opt-out ready", "rollback ready"],
+  "cycle_configuration": {
+    "cycle_id": "cc_mini_audit_v1 (DRAFT)",
+    "product": "mini_audit",
+    "segment": "seg_weak_site",
+    "source": "Lead Hunter discovery + owner-approved (future)",
+    "daily_limit": 5,
+    "total_limit": 25,
+    "owner_approval": "every outbound approved (no autosend)",
+    "send_window": "owner-defined business hours (future)",
+    "followup_policy": "max 1 follow-up, consent-aware, opt-out terminal",
+    "stop_conditions": ["unsupported_claim", "guessed_recipient", "identity_conflict", "opt_out", "unexpected_send_count", "reply_handling_unavailable", "delivery_overload", "support_overload", "data_quality_failure", "production_health_failure"],
+    "quality_threshold": "verified URL + identity + reachable contact + no opt-out",
+    "reply_handling": "Conversation Hub (future) — manual owner review",
+    "delivery_capacity": "confirmed before start (Delivery OS)",
+    "support_capacity": "confirmed before start (Customer Success OS)",
+    "measurement": "Analytics OS controlled_commercial_cycle_measurement_plan"
+  },
+  "hard_stop_conditions": ["unsupported claim", "guessed recipient", "identity conflict", "opt-out", "unexpected send count", "reply handling unavailable", "delivery overload", "support overload", "data quality failure", "production health failure"],
+  "rollback": {"on_any_hard_stop": "halt cycle, no further sends, owner notified, log preserved"},
+  "rules": {"execute_cycle": false, "send": false, "real_recipients": false}
+}

@@ -1,0 +1,12 @@
+{
+  "scenario": "E",
+  "name": "Partial downstream failure",
+  "ok": true,
+  "steps": [
+    "deal WON ok",
+    "delivery project create ok",
+    "finance downstream UNAVAILABLE",
+    "partial failure -> DEPENDENCY_UNAVAILABLE; no canonical corruption; retryable"
+  ],
+  "error_code": "DEPENDENCY_UNAVAILABLE"
+}

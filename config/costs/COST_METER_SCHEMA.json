@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-26",
+  "session": "VOLTAGENT_RUNTIME_MODEL_ROUTER_AND_COST_GOVERNOR_V1",
+  "event_fields": ["event_id", "task_id", "model_id", "provider_id", "input_tokens", "output_tokens", "retry_count", "estimated_rub", "budget_rub", "decision"],
+  "required_fields": ["event_id", "task_id", "model_id", "provider_id", "estimated_rub", "decision"],
+  "print_provider_credentials": false,
+  "print_secret_values": false,
+  "transparent_meter_required": true
+}

@@ -1,0 +1,20 @@
+{
+  "conversation_id": "c01",
+  "current_situation": "ACTIVE",
+  "latest_inbound_ref": "f01",
+  "latest_outbound_ref": null,
+  "open_question": "price_question",
+  "pending_approval": null,
+  "opt_out": null,
+  "support_issue": null,
+  "commercial_stage": "UNKNOWN",
+  "owner_next_action": "review latest inbound + route recommendation",
+  "confidence": 0.8,
+  "missing_data": [],
+  "source_message_refs": [
+    "f01"
+  ],
+  "revision": 2,
+  "note": "Summary references source messages only; no fabricated content. Invalidated on new conversation revision.",
+  "based_on_revision": 2
+}

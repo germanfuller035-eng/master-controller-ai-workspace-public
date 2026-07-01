@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Approval Grant V1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["approval_id", "approved_by", "approval_type", "payload_hash", "granted_at", "expires_at", "single_use", "revoked"],
+  "properties": {
+    "approval_id": {"type": "string", "minLength": 1},
+    "approved_by": {"type": "string", "minLength": 1},
+    "approval_type": {"enum": ["OWNER_APPROVAL", "STRONG_OWNER_APPROVAL"]},
+    "payload_hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "granted_at": {"type": "string"},
+    "expires_at": {"type": "string"},
+    "single_use": {"const": true},
+    "revoked": {"type": "boolean"},
+    "approval_ui": {"type": "object"}
+  }
+}

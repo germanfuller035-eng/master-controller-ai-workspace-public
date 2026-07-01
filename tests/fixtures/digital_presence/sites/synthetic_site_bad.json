@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "site_id": "synthetic_site_bad",
+  "synthetic": true,
+  "external_access": false,
+  "browser_action_allowed": false,
+  "reserved_domain_reference": "synthetic-site-bad.example.test",
+  "synthetic_company_label": "Synthetic Bad Fixture",
+  "metrics": {
+    "response_time_ms": 4800,
+    "mobile_ready": false,
+    "message_clarity": 1,
+    "trust_proofs": 0
+  },
+  "lead_capture": {
+    "forms": 0,
+    "cta_count": 0,
+    "consent_copy": false,
+    "routing_defined": false,
+    "owner_followup_sla_minutes": 999
+  },
+  "front_office": {
+    "response_sla_minutes": 360,
+    "after_hours_plan": false
+  },
+  "signals": {
+    "website_problem": 5,
+    "lead_capture_problem": 3,
+    "response_handling_problem": 2,
+    "trust_problem": 5,
+    "landing_need": 2
+  },
+  "evidence": [
+    {
+      "id": "ev-bad-profile",
+      "source": "synthetic_fixture",
+      "claim": "Synthetic bad site has weak message clarity, trust proof, and lead capture representation."
+    }
+  ]
+}

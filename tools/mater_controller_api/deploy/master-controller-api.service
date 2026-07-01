@@ -1,0 +1,26 @@
+# /etc/systemd/system/master-controller-api.service
+# Master Controller API — single Node process, memory-bounded for a 1 GB VPS.
+[Unit]
+Description=Master Controller API
+After=network.target
+
+[Service]
+Type=simple
+User=masterctl
+WorkingDirectory=/opt/master-controller/tools/mater_controller_api
+EnvironmentFile=/etc/master-controller/master-controller.env
+Environment=MATER_API_AUTOSTART=true
+Environment=MATER_API_PORT=8787
+Environment=NODE_OPTIONS=--max-old-space-size=384
+ExecStart=/usr/bin/node src/server/index.mjs
+Restart=on-failure
+RestartSec=5
+MemoryMax=512M
+MemoryHigh=400M
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=read-only
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,26 @@
+{
+  "schema": "product_os.fixtures.v1",
+  "note": "TEST_ONLY synthetic product scenarios. No real client data. Reference real catalog product_ids where applicable.",
+  "scenarios": [
+    {"fixture_id": "F01_mini_audit_complete", "product_id": "mini_audit", "pilot_scenario": "happy", "expect_pilot": "PASSED"},
+    {"fixture_id": "F02_mini_audit_unsupported_finding", "product_id": "mini_audit", "claim": {"claim": "Гарантируем рост заявок на 50%", "claim_type": "FACT"}, "expect_claim_ok": false},
+    {"fixture_id": "F03_dpc_no_site", "product_id": "digital_presence_check", "pilot_scenario": "happy"},
+    {"fixture_id": "F04_dpc_conflicting_identity", "product_id": "digital_presence_check", "pilot_scenario": "missing_input", "expect_pilot": "FAILED"},
+    {"fixture_id": "F05_full_audit_complete", "product_id": "full_business_audit", "pilot_scenario": "happy"},
+    {"fixture_id": "F06_full_audit_missing_evidence", "product_id": "full_business_audit", "pilot_scenario": "qa_failure", "expect_pilot": "FAILED"},
+    {"fixture_id": "F07_start_page_complete", "product_id": "start_page_sprint", "pilot_scenario": "happy"},
+    {"fixture_id": "F08_start_page_price_conflict", "product_id": "start_page_sprint", "pilot_scenario": "pricing_issue"},
+    {"fixture_id": "F09_landing_complete", "product_id": "landing_sprint", "pilot_scenario": "happy"},
+    {"fixture_id": "F10_landing_missing_content", "product_id": "landing_sprint", "pilot_scenario": "missing_input", "expect_pilot": "FAILED"},
+    {"fixture_id": "F11_landing_excessive_revisions", "product_id": "landing_sprint", "pilot_scenario": "scope_change", "expect_pilot": "PASSED_WITH_NOTES"},
+    {"fixture_id": "F12_website_complete", "product_id": "business_website", "pilot_scenario": "happy"},
+    {"fixture_id": "F13_website_scope_creep", "product_id": "business_website", "pilot_scenario": "scope_change", "expect_pilot": "PASSED_WITH_NOTES"},
+    {"fixture_id": "F14_lead_system_duplication", "product_id": "lead_system", "boundary": true, "expect_keep": "PLANNED"},
+    {"fixture_id": "F15_ai_front_office_autonomy", "product_id": "ai_front_office", "boundary": true, "expect_keep": "PLANNED"},
+    {"fixture_id": "F16_product_underpriced", "product_id": "landing_sprint", "economics": {"margin_pct": 10}, "expect_verdict": "underpriced"},
+    {"fixture_id": "F17_product_capacity_unknown", "product_id": "business_website", "economics": {}, "expect_verdict": "owner_decision_required"},
+    {"fixture_id": "F18_product_claim_unsupported", "product_id": "mini_audit", "asset_text": "Полностью автоматический сервис заменяет сотрудника", "expect_scan_blocked": true},
+    {"fixture_id": "F19_pilot_failed_qa", "product_id": "mini_audit", "pilot_scenario": "qa_failure", "expect_pilot": "FAILED"},
+    {"fixture_id": "F20_pilot_passed_with_notes", "product_id": "mini_audit", "pilot_scenario": "scope_change", "expect_pilot": "PASSED_WITH_NOTES"}
+  ]
+}

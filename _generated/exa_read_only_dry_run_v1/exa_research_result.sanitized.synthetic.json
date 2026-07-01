@@ -1,0 +1,50 @@
+{
+  "research_task_id": "synthetic-exa-dry-run-2026-06-27-001",
+  "lead_id": "synthetic-exa-read-only-validation-lead",
+  "company_name": "Synthetic Research Target",
+  "website": "",
+  "source_type": "public_web_research",
+  "facts": [
+    {
+      "fact_type": "lead_enrichment_context_fields",
+      "fact_value": "Public lead enrichment descriptions commonly frame enrichment as adding structured company context such as company size, funding stage, recent news, technology stack, and research hooks to a basic prospect identifier.",
+      "source_url": "https://www.simular.ai/use-cases/ai-lead-enrichment",
+      "source_title": "Simular AI - AI Lead Enrichment",
+      "evidence_snippet": "Public page describes enrichment as adding contextual company and market data to a basic prospect identifier.",
+      "confidence": "medium",
+      "status": "confirmed"
+    },
+    {
+      "fact_type": "structured_web_enrichment_pipeline",
+      "fact_value": "A public KnowledgeSDK article describes a web-data lead enrichment pipeline that extracts structured company attributes such as description, pricing signals, technology stack, hiring signals, and recent news before CRM use.",
+      "source_url": "https://knowledgesdk.com/blog/lead-enrichment-web-scraping",
+      "source_title": "Enrich CRM Leads with Real-Time Web Data Using AI | KnowledgeSDK Blog",
+      "evidence_snippet": "The article outlines extracting structured company intelligence from public web content for enrichment workflows.",
+      "confidence": "high",
+      "status": "confirmed"
+    },
+    {
+      "fact_type": "crm_enrichment_data_quality_use",
+      "fact_value": "A public CRM enrichment page describes using web sources to fill missing CRM fields and improve lead scoring, routing, and reporting with fresher company information.",
+      "source_url": "https://webscraping.ai/use-cases/crm-enrichment",
+      "source_title": "CRM Enrichment API - Enhance Lead Data Automatically | WebScraping.AI",
+      "evidence_snippet": "The page presents CRM enrichment as filling missing fields from web sources for scoring, routing, and reporting.",
+      "confidence": "medium",
+      "status": "confirmed"
+    },
+    {
+      "fact_type": "evidence_grounding_for_sales_research",
+      "fact_value": "A public business development agent page describes account research outputs as grounded in research and structured so downstream tools or sales teams can inspect the evidence-backed brief.",
+      "source_url": "https://www.strongly.ai/marketplace/business-development-agent.html",
+      "source_title": "Business Development Agent - AI BDR for Account Research & Outreach | Strongly.AI",
+      "evidence_snippet": "The page emphasizes account research briefs grounded in facts and traceable research before use.",
+      "confidence": "medium",
+      "status": "confirmed"
+    }
+  ],
+  "buying_signals": [],
+  "contact_candidates": [],
+  "risk_flags": [],
+  "recommended_next_action": "Use validated research evidence before enrichment/scoring; do not route to outreach.",
+  "do_not_contact": true
+}

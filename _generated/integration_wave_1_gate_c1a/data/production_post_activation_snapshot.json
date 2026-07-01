@@ -1,0 +1,61 @@
+{
+  "snapshot": "GATE_C1A_PRODUCTION_POST_ACTIVATION",
+  "captured_at_utc": "2026-06-18T15:00:00Z",
+  "flags": {
+    "COMMERCIAL_READ_API": "ON",
+    "COMMERCIAL_COMMAND_API": "ON",
+    "COMMERCIAL_COMMAND_C1A": "ON",
+    "COMMERCIAL_PAYMENT_COMMAND": "OFF",
+    "COMMERCIAL_SEND": "OFF",
+    "AUTOSEND": "BLOCKED",
+    "SEND_ALLOWED_LIVE": "OFF",
+    "EMAIL_REAL_SEND_ENABLED": "false",
+    "MATER_NO_SEND": "true"
+  },
+  "api": { "pid_before_deploy": 13717, "pid_after_activation": 15536, "pid_after_fix_redeploy": 16053, "nrestarts": 0, "health_http": 200, "services_restarted": 1, "reboot": false },
+  "deploy": { "backend_files": 7, "target_hash_mismatches": 0, "import_closure": "PASS", "latent_bugs_fixed": ["_apply arg order (store,args)", "_apply idempotent replay no longer bumps revision"] },
+  "read_verification": {
+    "http_500_count": 0,
+    "products_total": 18, "active": 2, "draft": 7, "planned": 9,
+    "active_products": ["express_review (free)", "mini_audit (10000 RUB)"],
+    "mini_audit": { "status": "ACTIVE", "price": 10000, "currency": "RUB", "scope_included": 8, "scope_excluded": 9, "inputs_required": 3, "acceptance_criteria": 6 },
+    "lead_count_reconciliation": { "canonical_total_leads": 62, "mini_audit_operational_leads": 52, "excluded_from_mini_audit": 10, "excluded_breakdown": { "rejected": 9, "waiting_reply": 1 } },
+    "send_reconciliation": { "authoritative_successful_sends": 7, "records_requiring_reconciliation": 7, "unauthorized_sends": 0, "unknown_sends": 0, "classifications": { "CONFIRMED_SENT_LEDGER_BACKED": 1, "PROVEN_NO_LEDGER_MATCH": 3, "DELIVERY_STATUS_UNKNOWN": 4, "NOT_SENT": 54 } }
+  },
+  "command_safety": {
+    "no_auth_opportunity_http": 401,
+    "service_token_opportunity_http": 401,
+    "payment_route_no_auth_http": 401,
+    "payment_feature_disabled_in_process": "403 FEATURE_DISABLED (paymentCommand OFF)",
+    "c1a_commands_enabled": 6,
+    "payment_commands_enabled": 0,
+    "send_commands_enabled": 0
+  },
+  "test_only_e2e": {
+    "marker": "TEST_ONLY_GATE_C1A_ACCEPTANCE",
+    "revision_before": 91, "revision_after": 97, "revision_bumps": 6,
+    "entities": {
+      "opportunity": "opp_cbdb073cd628",
+      "offer": "offer_47a06f465083",
+      "deal": "deal_e1ca9ea0820c",
+      "handoff": "handoff_5be519c2acbd",
+      "project": "proj_81ae52b3536d",
+      "invoice_draft": "inv_e1ec8a036f41"
+    },
+    "idempotent_replay_revision": 97,
+    "idempotent_no_duplicate": true,
+    "test_only_entities": 6, "real_entities": 0, "payments": 0
+  },
+  "invariants_after_e2e": {
+    "canonical_writer_count": 1,
+    "store_revision": 97,
+    "historical_sends": 7,
+    "send_ledger_lines_unchanged": true,
+    "email_ledger_lines_unchanged": true,
+    "queue_total": 41, "queue_failed": 0, "dead_letters": 0,
+    "telegram_pid": 7757, "telegram_poller_count": 1, "telegram_restarted": false,
+    "imap_timer": "active", "imap_flag_mutations": 0,
+    "kpi_excludes_test_only": true,
+    "real_messages_sent": 0, "smtp_calls": 0, "payment_facts_created": 0
+  }
+}

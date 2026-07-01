@@ -1,0 +1,116 @@
+{
+  "eligible": [
+    {
+      "lead_id": "KZ-JBI_RU",
+      "company": "Краснодарский Завод ЖБИ",
+      "score": 84,
+      "quality": 98,
+      "hook": "WEAK_WEBSITE",
+      "email_source": "scraped_site_contact",
+      "last_send_status": null,
+      "uncertain": false,
+      "has_send_history": false,
+      "clean_pilot": true
+    },
+    {
+      "lead_id": "GBIRESURS_RU",
+      "company": "ГБИ Ресурс",
+      "score": 84,
+      "quality": 98,
+      "hook": "REQUEST_PATH_FRICTION",
+      "email_source": "manual_verified",
+      "last_send_status": "uncertain_no_smtp_proof",
+      "uncertain": true,
+      "has_send_history": true,
+      "clean_pilot": false
+    },
+    {
+      "lead_id": "DKBI_RU",
+      "company": "ДКБИ",
+      "score": 84,
+      "quality": 98,
+      "hook": "WEAK_WEBSITE",
+      "email_source": "manual_verified",
+      "last_send_status": "success",
+      "uncertain": false,
+      "has_send_history": true,
+      "clean_pilot": false
+    },
+    {
+      "lead_id": "BETON-MASTERS_RU",
+      "company": "Бетон-Мастер",
+      "score": 84,
+      "quality": 98,
+      "hook": "CONTACT_DISCOVERY_FRICTION",
+      "email_source": "manual_verified",
+      "last_send_status": "uncertain_no_smtp_proof",
+      "uncertain": true,
+      "has_send_history": true,
+      "clean_pilot": false
+    },
+    {
+      "lead_id": "STROYDVOR-UG_RU",
+      "company": "СтройДвор-Юг",
+      "score": 84,
+      "quality": 98,
+      "hook": "CONTACT_DISCOVERY_FRICTION",
+      "email_source": "manual_verified",
+      "last_send_status": "success",
+      "uncertain": false,
+      "has_send_history": true,
+      "clean_pilot": false
+    },
+    {
+      "lead_id": "MEGALIT-KRD_RU",
+      "company": "Мегалит Краснодар",
+      "score": 84,
+      "quality": 98,
+      "hook": "WEAK_WEBSITE",
+      "email_source": "manual_verified",
+      "last_send_status": "uncertain_no_smtp_proof",
+      "uncertain": true,
+      "has_send_history": true,
+      "clean_pilot": false
+    },
+    {
+      "lead_id": "ZAVODATOM_RU",
+      "company": "Завод Атом",
+      "score": 84,
+      "quality": 98,
+      "hook": "CONTACT_DISCOVERY_FRICTION",
+      "email_source": "manual_verified",
+      "last_send_status": "success",
+      "uncertain": false,
+      "has_send_history": true,
+      "clean_pilot": false
+    }
+  ],
+  "clean_pilots": [
+    {
+      "lead_id": "KZ-JBI_RU",
+      "company": "Краснодарский Завод ЖБИ",
+      "score": 84,
+      "quality": 98,
+      "hook": "WEAK_WEBSITE",
+      "email_source": "scraped_site_contact",
+      "last_send_status": null,
+      "uncertain": false,
+      "has_send_history": false,
+      "clean_pilot": true
+    }
+  ],
+  "recommended_clean_pilot": {
+    "lead_id": "KZ-JBI_RU",
+    "company": "Краснодарский Завод ЖБИ",
+    "score": 84,
+    "quality": 98,
+    "hook": "WEAK_WEBSITE",
+    "email_source": "scraped_site_contact",
+    "last_send_status": null,
+    "uncertain": false,
+    "has_send_history": false,
+    "clean_pilot": true
+  },
+  "beton_classification": "DELIVERY_STATUS_UNKNOWN",
+  "beton_send_eligible": false
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "High Risk Audit Event V1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["sequence", "timestamp", "actor", "task_id", "action", "resource", "risk", "payload_hash", "result", "previous_hash", "current_hash"],
+  "properties": {
+    "sequence": {"type": "integer", "minimum": 1},
+    "timestamp": {"type": "string"},
+    "actor": {"type": "string"},
+    "task_id": {"type": "string"},
+    "action": {"type": "string"},
+    "resource": {"type": "string"},
+    "risk": {"enum": ["R4", "R5"]},
+    "payload_hash": {"type": "string", "minLength": 1},
+    "approval_id": {"type": "string"},
+    "result": {"type": "string"},
+    "previous_hash": {"type": "string"},
+    "current_hash": {"type": "string"}
+  }
+}

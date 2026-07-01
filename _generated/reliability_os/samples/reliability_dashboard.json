@@ -1,0 +1,99 @@
+{
+  "schema": "reliability_os.dashboard.v1",
+  "generated_ts": "20260617_000000",
+  "synthetic": true,
+  "note": "Derived reliability view. All live health = UNKNOWN (no live checks). References Analytics/Security/Executive owners.",
+  "service_catalog": 16,
+  "health_status": "ALL_LIVE=UNKNOWN (offline; synthetic only)",
+  "critical_services": [
+    "canonical_store",
+    "mc_api",
+    "worker",
+    "job_queue",
+    "caddy",
+    "tls_cert",
+    "git_repo"
+  ],
+  "single_points_of_failure": [
+    "vps_host",
+    "canonical_store",
+    "caddy",
+    "tls_cert",
+    "local_workstation"
+  ],
+  "slo_proposals": 8,
+  "error_budgets": "INSUFFICIENT_DATA (no live actuals)",
+  "alerts": 13,
+  "incidents": 0,
+  "queue_worker_scheduler": "contracts defined; live UNKNOWN",
+  "communication_services": [
+    "telegram (one-poller)",
+    "imap (read-only)"
+  ],
+  "backups": 11,
+  "restore": "synthetic restore standard; production restore NOT executed",
+  "rpo_rto": [
+    {
+      "asset": "canonical_data",
+      "status": "PROPOSED"
+    },
+    {
+      "asset": "job_queue",
+      "status": "PROPOSED"
+    },
+    {
+      "asset": "source_repository",
+      "status": "OWNER_APPROVED"
+    },
+    {
+      "asset": "file_vault",
+      "status": "UNKNOWN"
+    }
+  ],
+  "capacity": [
+    {
+      "resource": "disk",
+      "status": "MODEL_ESTIMATE"
+    },
+    {
+      "resource": "RAM",
+      "status": "MODEL_ESTIMATE"
+    },
+    {
+      "resource": "queue_depth",
+      "status": "MODEL_ESTIMATE"
+    },
+    {
+      "resource": "owner_review_capacity",
+      "status": "UNKNOWN"
+    },
+    {
+      "resource": "delivery_capacity",
+      "status": "UNKNOWN"
+    },
+    {
+      "resource": "support_capacity",
+      "status": "UNKNOWN"
+    }
+  ],
+  "release_readiness": "READY_FOR_INTERNAL_REVIEW",
+  "owner_actions": [
+    "select alert delivery channel (none chosen)",
+    "approve SLO targets + RPO/RTO",
+    "confirm owner/delivery/support capacity (UNKNOWN)",
+    "authorize future live production verification"
+  ],
+  "live_verification_required": [
+    "canonical_store",
+    "mc_api",
+    "worker",
+    "scheduler",
+    "job_queue",
+    "telegram_service",
+    "imap_sync",
+    "caddy",
+    "tls_cert",
+    "backup_timer",
+    "android_client"
+  ]
+}

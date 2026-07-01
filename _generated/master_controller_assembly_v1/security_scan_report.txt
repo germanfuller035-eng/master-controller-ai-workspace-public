@@ -1,0 +1,5 @@
+SECRET_SCAN_STATUS=NO_MATCH
+SOURCE_DOC_LOG_FILES_SCANNED=22
+XML_FILES_SCANNED=10
+PATTERNS=password/token/api-key/bearer/private-key/aws/openai/slack
+NOTE=Android UI XML password=false accessibility attributes are non-secret and excluded from XML password matching.

@@ -1,0 +1,25 @@
+{
+  "schema": "executive_os.weekly_review.v1",
+  "period": "this week",
+  "commitments_last_week": [],
+  "completed": [],
+  "missed": [],
+  "reasons": [],
+  "project_changes": [],
+  "product_readiness": "see Revenue OS",
+  "pipeline": "see Revenue OS funnel",
+  "delivery": "see Delivery OS",
+  "finances": "see Finance OS",
+  "capacity": "UNKNOWN",
+  "risks": [],
+  "decisions": [],
+  "next_week_top_three": [
+    "close soak",
+    "owner acceptance",
+    "confirm capacity"
+  ],
+  "tasks_for_claude": [],
+  "tasks_for_cline": [],
+  "owner_tasks": [],
+  "deferred": []
+}

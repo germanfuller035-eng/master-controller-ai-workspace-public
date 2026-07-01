@@ -1,0 +1,9 @@
+{
+  "schema_version": "crm.reply_monitor_event.v1",
+  "synthetic": true,
+  "reply_id": "synthetic-reply-unsubscribe",
+  "contact_id": "synthetic-contact-alpha",
+  "source": "synthetic_reply_fixture",
+  "body": "STOP unsubscribe this synthetic contact from future drafts.",
+  "real_inbox_access": false
+}

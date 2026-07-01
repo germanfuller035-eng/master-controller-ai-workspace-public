@@ -1,0 +1,112 @@
+{
+  "session": "CONTROLLED_LIVE_COMMERCIAL_MACHINE_V1",
+  "date": "2026-06-29",
+  "device": "Honor ALT-LX1 AMSKBB4914919475",
+  "private_evidence": "D:\\AI_FILE_VAULT\\sales_pilot_private\\controlled_live_commercial_machine_v1\\honor_final_visual_smoke_20260629_090644",
+  "screens": [
+    {
+      "screen": "Connection",
+      "status": "PASS",
+      "evidence": "00_launch, 43_post_install_current",
+      "notes": "Local mode is visible; no outbound action is started."
+    },
+    {
+      "screen": "Today local fallback",
+      "status": "PASS",
+      "evidence": "45_post_install_today_local",
+      "notes": "Server-unavailable state gives a local sales route and clear safety status."
+    },
+    {
+      "screen": "Sales site input",
+      "status": "PASS",
+      "evidence": "03_sales_entry_fixed, 05_current_before_continue",
+      "notes": "Single-site input path is visible; bottom navigation labels fit."
+    },
+    {
+      "screen": "Company review",
+      "status": "PASS",
+      "evidence": "10_after_analyze_visible_button, 12_company_review_edit_fields, 13_company_product_filled",
+      "notes": "Unknown business facts are shown as unknown, not fabricated; manual clarification path works."
+    },
+    {
+      "screen": "Contact review",
+      "status": "PASS",
+      "evidence": "14_contact_screen, 15_contact_filled, 16_contact_confirm_visible",
+      "notes": "Missing contact is not fabricated; owner can add a channel manually."
+    },
+    {
+      "screen": "Draft editor",
+      "status": "PASS",
+      "evidence": "17_draft_screen, 18_draft_check_visible, 21_draft_button_after_hide_keyboard",
+      "notes": "Draft is explicitly not sent; long text remains editable."
+    },
+    {
+      "screen": "QA gate",
+      "status": "PASS",
+      "evidence": "22_qa_after_visible_button_tap, 23_qa_override_reason, 24_qa_override_confirmed_scrolled",
+      "notes": "QA blocks risky edited text; owner override requires a reason and changes readiness only after confirmation."
+    },
+    {
+      "screen": "Manual send packet",
+      "status": "PASS",
+      "evidence": "25_send_packet_top, 26_send_packet_text, 27_send_packet_actions",
+      "notes": "Packet code, final text, risks, and safety status are visible. Packet is not marked sent."
+    },
+    {
+      "screen": "Send approval",
+      "status": "PASS",
+      "evidence": "28_send_approval_screen, 29_send_approval_actions",
+      "notes": "Exact packet check is visible. Email button was not pressed during smoke."
+    },
+    {
+      "screen": "Post-send result",
+      "status": "PASS",
+      "evidence": "32_live_result_screen",
+      "notes": "Result starts as not recorded; system outbound count stays zero."
+    },
+    {
+      "screen": "Reply monitor",
+      "status": "PASS",
+      "evidence": "34_reply_monitor_read_only",
+      "notes": "Read-only reply monitor; auto-reply and CRM write remain off."
+    },
+    {
+      "screen": "Reply detail",
+      "status": "PASS",
+      "evidence": "36_reply_detail",
+      "notes": "Reply classification is read-only and does not auto-respond."
+    },
+    {
+      "screen": "CRM write review",
+      "status": "PASS",
+      "evidence": "37_crm_write_review, 38_crm_actions_visible",
+      "notes": "CRM write is blocked behind separate approval and production-write gate."
+    },
+    {
+      "screen": "Opportunity review",
+      "status": "PASS",
+      "evidence": "39_opportunity_review",
+      "notes": "Opportunity is a draft and does not write CRM."
+    },
+    {
+      "screen": "Invoice draft",
+      "status": "PASS",
+      "evidence": "41_invoice_draft",
+      "notes": "Invoice remains not ready without feedback and payment approval."
+    },
+    {
+      "screen": "Payment gate",
+      "status": "PASS",
+      "evidence": "42_payment_gate",
+      "notes": "Payments are explicitly off."
+    }
+  ],
+  "safety": {
+    "auto_send": "OFF",
+    "payments": "OFF",
+    "production_write": "OFF",
+    "outbound_count": 0,
+    "payment_count": 0,
+    "production_db_writes": 0
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "synthetic": true,
+  "lead_id": "synthetic_lead_clean",
+  "source": {
+    "type": "synthetic_fixture",
+    "external_access": false
+  },
+  "identity": {
+    "organization_name": "Synthetic Clean Operator",
+    "domain_reference": "synthetic-clean.example.invalid",
+    "synthetic_registry_id": "registry-synthetic_lead_clean",
+    "industry": "synthetic services"
+  },
+  "contact": {
+    "website_reference": "synthetic-clean.example.invalid/home",
+    "contact_form_reference": "synthetic-form-synthetic_lead_clean",
+    "public_contact_page_reference": "synthetic-contact-page-synthetic_lead_clean",
+    "role_contact_reference": "synthetic-role-contact-synthetic_lead_clean",
+    "consent_basis": "synthetic_fixture_only"
+  },
+  "signals": {
+    "website_problem": 2,
+    "lead_capture_problem": 4,
+    "response_handling_problem": 1,
+    "trust_problem": 1,
+    "audit_uncertainty": 1
+  },
+  "qualification": {
+    "business_relevance": 3,
+    "urgency": 2,
+    "budget_signal": 2
+  },
+  "roi_inputs": {
+    "monthly_leads": 12,
+    "average_value_units": 100,
+    "expected_improvement_ratio": 0.12
+  },
+  "evidence": [
+    {
+      "id": "ev-synthetic_lead_clean-fixture",
+      "source": "synthetic_lead_fixture",
+      "claim": "Synthetic fixture defines Synthetic Clean Operator problem signals."
+    }
+  ],
+  "site_fixture": "synthetic_site_good"
+}

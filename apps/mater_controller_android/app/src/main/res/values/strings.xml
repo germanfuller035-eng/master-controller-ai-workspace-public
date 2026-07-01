@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Master Controller</string>
+
+    <!-- Bottom navigation -->
+    <string name="nav_today">Сегодня</string>
+    <string name="nav_leads">Лиды</string>
+    <string name="nav_decisions">Решения</string>
+    <string name="nav_evidence">Решения</string>
+    <string name="nav_commerce">Продажи</string>
+    <string name="nav_agents">Агенты</string>
+    <string name="nav_replies">Ответы</string>
+    <string name="nav_deals">Сделки</string>
+    <string name="nav_system">Ещё</string>
+    <string name="nav_projects">Проекты</string>
+    <string name="nav_automation">Автоматизация</string>
+    <string name="nav_pipeline">Пайплайн</string>
+    <string name="nav_settings">Настройки</string>
+
+    <!-- Connection / pairing -->
+    <string name="connect_title">Подключение к Master Controller</string>
+    <string name="connect_local">Подключить локальный компьютер</string>
+    <string name="connect_remote">Подключить удалённый сервер</string>
+    <string name="connect_base_url">Адрес сервера</string>
+    <string name="connect_pairing_code">Код подключения</string>
+    <string name="connect_device_name">Имя устройства</string>
+    <string name="connect_check">Проверить соединение</string>
+    <string name="connect_pair">Подключить устройство</string>
+    <string name="connect_api_ok">Сервер доступен</string>
+    <string name="connect_api_down">Сервер недоступен</string>
+    <string name="connect_code_invalid">Неверный код подключения</string>
+    <string name="connect_token_expired">Токен истёк — подключитесь заново</string>
+    <string name="connect_device_revoked">Устройство отозвано</string>
+    <string name="connect_reconnect_needed">Требуется повторное подключение</string>
+
+    <!-- Today -->
+    <string name="today_greeting">Добро пожаловать, Дмитрий</string>
+    <string name="today_next_action">Следующее действие</string>
+    <string name="today_active_projects">Активные проекты</string>
+    <string name="today_blockers">Критические блокеры</string>
+    <string name="today_new_replies">Новые ответы</string>
+    <string name="today_followups_due">Повторный контакт к отправке</string>
+    <string name="today_system_health">Состояние системы</string>
+
+    <!-- Projects -->
+    <string name="projects_title">Проекты</string>
+    <string name="projects_open">Открыть</string>
+    <string name="projects_add_later">Добавление модулей — позже</string>
+
+    <!-- Мини-аудит -->
+    <string name="ma_title">Мини-аудит</string>
+    <string name="ma_next_action">Следующее действие</string>
+    <string name="ma_ready_send">Готовы к отправке</string>
+    <string name="ma_preparing">Готовят аудит</string>
+    <string name="ma_waiting_reply">Ожидают ответа</string>
+    <string name="ma_followups">Повторный контакт</string>
+    <string name="ma_needs_check">Требуют проверки</string>
+    <string name="ma_send_uncertain">Неопределённые отправки</string>
+    <string name="ma_status">Статус</string>
+    <string name="ma_search">Поиск по компании, домену, email</string>
+    <string name="ma_tab_overview">Обзор</string>
+    <string name="ma_tab_audit">Аудит</string>
+    <string name="ma_tab_email">Письмо</string>
+    <string name="ma_tab_history">История</string>
+    <string name="ma_prepare_audit">Подготовить аудит</string>
+    <string name="ma_refresh">Обновить</string>
+    <string name="ma_open_full">Открыть полностью</string>
+    <string name="ma_go_email">Перейти к письму</string>
+    <string name="ma_prepare_email">Подготовить письмо</string>
+    <string name="ma_regenerate">Пересоздать</string>
+    <string name="ma_reject">Отклонить</string>
+    <string name="ma_confirm_send">Подтвердить отправку</string>
+    <string name="ma_send_email">Отправить письмо</string>
+    <string name="ma_postpone">Отложить</string>
+    <string name="ma_open">Открыть</string>
+    <string name="ma_check_proof">Проверить доказательство</string>
+    <string name="ma_keep_uncertain">Оставить неопределённым</string>
+    <string name="ma_real_send_warning">Это реальная отправка письма клиенту. Подтвердите осознанно.</string>
+
+    <!-- System -->
+    <string name="sys_title">Система</string>
+    <string name="sys_api">Сервер</string>
+    <string name="sys_telegram">Telegram-бот</string>
+    <string name="sys_lead_store">Хранилище лидов</string>
+    <string name="sys_router">Исходящий маршрутизатор</string>
+    <string name="sys_smtp">SMTP настроен</string>
+    <string name="sys_ledger">Реестр</string>
+    <string name="sys_heartbeat">Пульс</string>
+    <string name="sys_last_sync">Последняя синхронизация</string>
+
+    <!-- Settings -->
+    <string name="set_title">Настройки</string>
+    <string name="set_connection">Профиль соединения</string>
+    <string name="set_api_url">Адрес сервера</string>
+    <string name="set_device">Подключённое устройство</string>
+    <string name="set_theme">Тема</string>
+    <string name="set_theme_dark">Тёмная</string>
+    <string name="set_theme_light">Светлая</string>
+    <string name="set_theme_system">Системная</string>
+    <string name="set_bg_refresh">Фоновое обновление</string>
+    <string name="set_notifications">Уведомления</string>
+    <string name="set_logout">Выйти / отвязать</string>
+    <string name="set_version">Версия приложения</string>
+    <string name="set_diag_export">Экспорт диагностики</string>
+
+    <!-- States -->
+    <string name="state_loading">Загрузка…</string>
+    <string name="state_empty">Нет данных</string>
+    <string name="state_error">Ошибка</string>
+    <string name="state_retry">Повторить</string>
+    <string name="state_offline">Офлайн — отображаются данные от %1$s</string>
+    <string name="autosend_blocked">Ручная отправка владельцем</string>
+</resources>

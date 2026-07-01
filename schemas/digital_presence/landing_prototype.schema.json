@@ -1,0 +1,19 @@
+{
+  "$schema": "urn:json-schema:draft-2020-12",
+  "$id": "urn:master-controller:schemas:digital_presence:landing_prototype",
+  "title": "landing_prototype",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["artifact_id", "artifact_type", "draft_only"],
+  "properties": {
+    "artifact_id": {"type": "string"},
+    "artifact_type": {"const": "landing_prototype"},
+    "site_id": {"type": "string"},
+    "draft_only": {"type": "boolean"},
+    "deployment_allowed": {"type": "boolean"},
+    "publish_allowed": {"type": "boolean"},
+    "owner_approval_required_for_future_deploy_or_send": {"type": "boolean"},
+    "sections": {"type": "array"},
+    "claims": {"type": "array"}
+  }
+}

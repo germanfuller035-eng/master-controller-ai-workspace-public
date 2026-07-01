@@ -1,0 +1,12 @@
+{
+  "schema": "consolidation.apply_manifest.v1",
+  "note": "MP11-12 — proposed docs applied into the CONSOLIDATION BRANCH tree only (vault = branch worktree). NOT a production canonical write. Pre-apply backup taken.",
+  "vault_used": "feature/canonical-consolidation-v1 worktree (NOT D:/AI_WORKSPACE production vault)",
+  "status": "APPLIED_IN_CONSOLIDATION_BRANCH",
+  "production_canonical_writes": 0,
+  "proposals_total": 261,
+  "apply_order": ["standards", "source_of_truth", "contract_registry", "domain_canonical_notes", "policies", "sop", "dashboards", "owner_command_centers", "project_registry", "ai_system_map", "what_already_exists", "start_here_home"],
+  "engine": "tools/ai_hq/apply_canonical.mjs (existing, owner-gated; no second engine created)",
+  "pre_apply_backup": "_generated/consolidation/backups/pre_apply_20260617",
+  "production_vault_untouched": true
+}

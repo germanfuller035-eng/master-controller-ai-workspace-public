@@ -1,0 +1,13 @@
+{
+  "id": "c2",
+  "title": "Mini Audit pricing",
+  "project": "mini_audit_10k",
+  "source": "chatgpt_export",
+  "source_date": 1234999,
+  "summary": "Rule: PDF audit only after payment. Next step: text hook.",
+  "decisions": [],
+  "tasks": [
+    "Rule: PDF audit only after payment. Next step: text hook."
+  ],
+  "route": "02_context_packs/imported/mini_audit_10k/"
+}

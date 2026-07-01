@@ -1,0 +1,325 @@
+{
+  "browser": {
+    "evidence": {
+      "artifact_hash_required": true,
+      "artifact_id": "synthetic-browser-evidence-alpha",
+      "real_capture": false,
+      "status": "PASS",
+      "synthetic": true
+    },
+    "external": {
+      "browser_used": false,
+      "decision": "DENY_EXTERNAL_BROWSER",
+      "owner_approval_required": true,
+      "production_action": false,
+      "request_id": "forbidden-external-browser-alpha",
+      "synthetic": true
+    },
+    "result": {
+      "browser_actions_off": true,
+      "browser_used": false,
+      "decision": "CONTRACT_RECORDED",
+      "owner_approval_required_for_future_browser_action": true,
+      "production_action": false,
+      "request_id": "synthetic-browser-preview-alpha",
+      "synthetic": true
+    },
+    "stop": {
+      "browser_used": false,
+      "decision": "BLOCKED_BY_STOP",
+      "owner_approval_required": true,
+      "production_action": false,
+      "request_id": "synthetic-browser-preview-alpha",
+      "synthetic": true
+    },
+    "submit": {
+      "browser_used": false,
+      "decision": "DENY_FORM_SUBMIT",
+      "owner_approval_required": true,
+      "production_action": false,
+      "request_id": "forbidden-form-submit-alpha",
+      "synthetic": true
+    }
+  },
+  "intentional": {
+    "daily_cap_exceeded_blocked": true,
+    "form_submit_blocked": true,
+    "send_attempt_blocked": true,
+    "social_send_blocked": true,
+    "stop_blocks_outbound": true,
+    "suppressed_contact_blocked": true
+  },
+  "multichannel": {
+    "outbound_count": 0,
+    "owner_approval_required_for_send": true,
+    "payload_hash_generated": true,
+    "payment_count": 0,
+    "pipeline_status": "PASS",
+    "production_db_writes": 0,
+    "reply_classifications": [
+      {
+        "confidence": 0.95,
+        "label": "positive",
+        "real_reply_monitoring": false,
+        "reply_id": "synthetic-reply-positive",
+        "synthetic": true
+      },
+      {
+        "confidence": 0.94,
+        "label": "negative",
+        "real_reply_monitoring": false,
+        "reply_id": "synthetic-reply-negative",
+        "synthetic": true
+      },
+      {
+        "confidence": 0.92,
+        "label": "question",
+        "real_reply_monitoring": false,
+        "reply_id": "synthetic-reply-question",
+        "synthetic": true
+      },
+      {
+        "confidence": 0.99,
+        "label": "spam",
+        "real_reply_monitoring": false,
+        "reply_id": "synthetic-reply-spam",
+        "synthetic": true
+      }
+    ],
+    "results": [
+      {
+        "context_ref": "synthetic-mail-alpha",
+        "draft": {
+          "body": "Synthetic email draft only. No send.",
+          "channel": "MAIL_DRAFT",
+          "draft_id": "mail-synthetic-mail-alpha",
+          "draft_only": true,
+          "owner_approval_required_for_future_send": true,
+          "payload_hash": "8af6fca9921c553be6e64b159533a775c179f7f07307c13bc50f7bb3c30e6cec",
+          "payload_hash_required_for_future_send": true,
+          "recipient_ref": "reserved-mailbox-alpha",
+          "send_allowed": false,
+          "sent": false,
+          "subject": "Synthetic local mail draft",
+          "synthetic": true
+        },
+        "no_send_guard": {
+          "action": "send",
+          "allowed": false,
+          "decision": "BLOCK",
+          "owner_approval_required": true
+        },
+        "selection": {
+          "daily_cap": {
+            "allowed": true,
+            "channel": "MAIL_DRAFT",
+            "daily_cap": 2,
+            "decision": "ALLOW",
+            "used_today": 0
+          },
+          "decision": "DRAFT_CONTRACT_SELECTED",
+          "owner_approval_required_for_future_send": true,
+          "payload_hash": "e078c536c429f179b6d871f34791b861d67ba15216557018bf3802d2c7c1918d",
+          "payload_hash_required_for_future_send": true,
+          "selected_channel": "MAIL_DRAFT",
+          "send_allowed": false,
+          "synthetic": true
+        }
+      },
+      {
+        "context_ref": "synthetic-form-alpha",
+        "draft": {
+          "browser_used": false,
+          "channel": "FORM_DRAFT",
+          "draft_id": "form-synthetic-form-alpha",
+          "draft_only": true,
+          "fields": {
+            "message": "Synthetic form preview only. No submit.",
+            "name_ref": "synthetic-owner"
+          },
+          "owner_approval_required_for_future_send": true,
+          "payload_hash": "8520e7d799909b61a7a3a08968cb01d146e92b0cd5876faf36d0ac8b5b1fafc3",
+          "payload_hash_required_for_future_send": true,
+          "submit_allowed": false,
+          "submitted": false,
+          "synthetic": true,
+          "target_form_ref": "reserved-form-alpha"
+        },
+        "no_send_guard": {
+          "action": "send",
+          "allowed": false,
+          "decision": "BLOCK",
+          "owner_approval_required": true
+        },
+        "selection": {
+          "daily_cap": {
+            "allowed": true,
+            "channel": "FORM_DRAFT",
+            "daily_cap": 2,
+            "decision": "ALLOW",
+            "used_today": 0
+          },
+          "decision": "DRAFT_CONTRACT_SELECTED",
+          "owner_approval_required_for_future_send": true,
+          "payload_hash": "8178224642b9a406fca363e63a663509c7899d8aac7b27dfa0cf41434ddc1561",
+          "payload_hash_required_for_future_send": true,
+          "selected_channel": "FORM_DRAFT",
+          "send_allowed": false,
+          "synthetic": true
+        }
+      },
+      {
+        "context_ref": "synthetic-telegram-alpha",
+        "draft": {
+          "channel": "TELEGRAM_RESERVE",
+          "draft_id": "telegram-synthetic-telegram-alpha",
+          "message": "Synthetic Telegram reserve notice only.",
+          "owner_approval_required_for_future_send": true,
+          "payload_hash": "006eafe5cc3c3c40af491ea718683815994b8e612b80a5cb2c4cfe418f95552e",
+          "payload_hash_required_for_future_send": true,
+          "reserve_only": true,
+          "send_allowed": false,
+          "synthetic": true,
+          "telegram_ref": "reserved-telegram-alpha",
+          "telegram_sent": false
+        },
+        "no_send_guard": {
+          "action": "send",
+          "allowed": false,
+          "decision": "BLOCK",
+          "owner_approval_required": true
+        },
+        "selection": {
+          "daily_cap": {
+            "allowed": true,
+            "channel": "TELEGRAM_RESERVE",
+            "daily_cap": 2,
+            "decision": "ALLOW",
+            "used_today": 0
+          },
+          "decision": "DRAFT_CONTRACT_SELECTED",
+          "owner_approval_required_for_future_send": true,
+          "payload_hash": "e83a29963bb869c5451bcc221e8031ad112e3a17b048699c81bdd3535c1093dc",
+          "payload_hash_required_for_future_send": true,
+          "selected_channel": "TELEGRAM_RESERVE",
+          "send_allowed": false,
+          "synthetic": true
+        }
+      },
+      {
+        "context_ref": "synthetic-social-alpha",
+        "draft": {
+          "body": "Synthetic social draft contract only. No publish.",
+          "channel": "SOCIAL_DRAFT",
+          "draft_id": "social-synthetic-social-alpha",
+          "draft_only": true,
+          "owner_approval_required_for_future_send": true,
+          "payload_hash": "dcf046ee61370afdcf98f31dc5e3a925ccb3a13374c20023c70495b7fda96d6e",
+          "payload_hash_required_for_future_send": true,
+          "publish_allowed": false,
+          "published": false,
+          "send_allowed": false,
+          "social_ref": "reserved-social-alpha",
+          "synthetic": true
+        },
+        "no_send_guard": {
+          "action": "send",
+          "allowed": false,
+          "decision": "BLOCK",
+          "owner_approval_required": true
+        },
+        "selection": {
+          "daily_cap": {
+            "allowed": true,
+            "channel": "SOCIAL_DRAFT",
+            "daily_cap": 2,
+            "decision": "ALLOW",
+            "used_today": 0
+          },
+          "decision": "DRAFT_CONTRACT_SELECTED",
+          "owner_approval_required_for_future_send": true,
+          "payload_hash": "5a517add67b271acc3ac3f26b5203e50d60af37781dec3cc5c47582af529def0",
+          "payload_hash_required_for_future_send": true,
+          "selected_channel": "SOCIAL_DRAFT",
+          "send_allowed": false,
+          "synthetic": true
+        }
+      }
+    ],
+    "stop_active": false,
+    "synthetic_drafts_processed": 4
+  },
+  "status": "PASS",
+  "voice": {
+    "payment": {
+      "decision": "DENY_PAYMENT_BY_VOICE",
+      "execute_allowed": false,
+      "intent_id": "voice-payment-denied",
+      "intent_type": "payment",
+      "outbound_count": 0,
+      "owner_approval_required": true,
+      "payment_count": 0,
+      "production_db_writes": 0,
+      "real_voice_capture": false,
+      "risk": "R5",
+      "screen_approval_required": true,
+      "synthetic": true
+    },
+    "push_to_talk": {
+      "always_on_listening": false,
+      "real_audio_capture": false,
+      "request_id": "synthetic-ptt-alpha",
+      "status": "PASS",
+      "synthetic": true
+    },
+    "risky": {
+      "decision": "REQUIRES_SCREEN_APPROVAL",
+      "execute_allowed": false,
+      "intent_id": "synthetic-voice-risky-alpha",
+      "intent_type": "risky_send",
+      "outbound_count": 0,
+      "owner_approval_required": true,
+      "payment_count": 0,
+      "production_db_writes": 0,
+      "real_voice_capture": false,
+      "risk": "R4",
+      "screen_approval_required": true,
+      "synthetic": true
+    },
+    "safe": {
+      "decision": "SAFE_LOCAL_PLAN_ONLY",
+      "execute_allowed": false,
+      "intent_id": "synthetic-voice-safe-alpha",
+      "intent_type": "safe_local_note",
+      "outbound_count": 0,
+      "owner_approval_required": false,
+      "payment_count": 0,
+      "production_db_writes": 0,
+      "real_voice_capture": false,
+      "risk": "R1",
+      "screen_approval_required": false,
+      "synthetic": true
+    },
+    "stop": {
+      "decision": "BLOCKED_BY_STOP",
+      "execute_allowed": false,
+      "intent_id": "synthetic-voice-safe-alpha",
+      "intent_type": "safe_local_note",
+      "outbound_count": 0,
+      "owner_approval_required": true,
+      "payment_count": 0,
+      "production_db_writes": 0,
+      "real_voice_capture": false,
+      "risk": "R1",
+      "screen_approval_required": true,
+      "synthetic": true
+    },
+    "stt": {
+      "provider_used": "SYNTHETIC_FIXTURE",
+      "real_stt_call": false,
+      "status": "PASS",
+      "stt_id": "synthetic-stt-alpha",
+      "synthetic": true
+    }
+  }
+}

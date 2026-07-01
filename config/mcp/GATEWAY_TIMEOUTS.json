@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-26",
+  "session": "MASTER_CONTROLLER_MCP_GATEWAY_V1",
+  "timeouts_required": true,
+  "defaults": {
+    "gateway_request_ms": 30000,
+    "subprocess_ms": 30000,
+    "filesystem_read_ms": 5000,
+    "git_read_ms": 10000,
+    "artifact_write_ms": 5000,
+    "test_runner_ms": 120000
+  },
+  "max": {
+    "gateway_request_ms": 300000,
+    "subprocess_ms": 300000,
+    "filesystem_read_ms": 30000,
+    "git_read_ms": 60000,
+    "artifact_write_ms": 30000,
+    "test_runner_ms": 300000
+  },
+  "adapter_timeouts_ms": {
+    "filesystem_read": 5000,
+    "git_read": 10000,
+    "artifact_local": 5000,
+    "test_runner_local": 120000
+  }
+}

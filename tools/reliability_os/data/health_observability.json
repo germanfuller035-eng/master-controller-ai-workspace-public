@@ -1,0 +1,137 @@
+{
+  "schema": "reliability_os.health_observability.v1",
+  "note": "MP9-14, MP18-25 — health-check standard, per-service health contracts, logging/correlation/metric/cardinality standards, observability events, alert taxonomy + fatigue. No live checks, no emitter, no alert sending.",
+  "synthetic": true,
+
+  "health_standard": {
+    "check_types": ["LIVENESS", "READINESS", "DEPENDENCY", "FRESHNESS", "INTEGRITY", "CAPACITY", "SECURITY_BOUNDARY", "BUSINESS_PROCESS"],
+    "semantic_rules": [
+      "liveness does not prove readiness",
+      "API 200 does not prove canonical write path",
+      "service running does not prove scheduler freshness",
+      "timer active does not prove successful job",
+      "backup exists does not prove restorability",
+      "no errors in logs does not prove health",
+      "contract test does not prove live service health",
+      "synthetic result must be marked synthetic"
+    ],
+    "statuses": ["UNKNOWN", "HEALTHY", "DEGRADED", "UNHEALTHY", "STALE", "MAINTENANCE", "NOT_CONNECTED", "NOT_APPLICABLE"],
+    "default_live_status": "UNKNOWN"
+  },
+
+  "health_contracts": {
+    "master_controller": {
+      "checks": [
+        { "check_id": "mc_api_liveness", "type": "LIVENESS", "method": "GET /health (future)", "expected": "200", "live_required": true },
+        { "check_id": "mc_api_readiness", "type": "READINESS", "method": "GET /system/status (future)", "expected": "ready+canonical_writer=VPS", "live_required": true },
+        { "check_id": "mc_canonical_writer_mode", "type": "INTEGRITY", "method": "config/store inspection", "expected": "CANONICAL_WRITER=VPS_ONLY", "live_required": true },
+        { "check_id": "mc_canonical_readable", "type": "INTEGRITY", "method": "store read (future)", "expected": "valid JSON + revision", "live_required": true },
+        { "check_id": "mc_revision_valid", "type": "INTEGRITY", "method": "revision monotonic", "expected": "no stagnation, no regression", "live_required": true },
+        { "check_id": "mc_queue_readable", "type": "DEPENDENCY", "method": "queue read", "expected": "readable + backlog bounded", "live_required": true },
+        { "check_id": "mc_worker_heartbeat", "type": "FRESHNESS", "method": "api_heartbeat.json age", "expected": "age < threshold", "live_required": true },
+        { "check_id": "mc_scheduler_freshness", "type": "FRESHNESS", "method": "last discovery job age", "expected": "age < interval*2", "live_required": true },
+        { "check_id": "mc_dead_letter_count", "type": "CAPACITY", "method": "dead-letter count", "expected": "below threshold", "live_required": true },
+        { "check_id": "mc_autosend_state", "type": "SECURITY_BOUNDARY", "method": "config", "expected": "AUTOSEND=BLOCKED", "live_required": true },
+        { "check_id": "mc_live_send_state", "type": "SECURITY_BOUNDARY", "method": "config", "expected": "SEND_ALLOWED_LIVE=OFF", "live_required": true },
+        { "check_id": "mc_backup_freshness", "type": "FRESHNESS", "method": "backup mtime", "expected": "age < 1 interval", "live_required": true },
+        { "check_id": "mc_storage_pressure", "type": "CAPACITY", "method": "disk free", "expected": "preserve atomic+backup space", "live_required": true }
+      ]
+    },
+    "telegram": {
+      "checks": [
+        { "check_id": "tg_service_state", "type": "LIVENESS", "method": "systemd state (future)", "expected": "active", "live_required": true },
+        { "check_id": "tg_one_poller", "type": "INTEGRITY", "method": "single instance invariant", "expected": "exactly 1 poller", "live_required": true },
+        { "check_id": "tg_heartbeat", "type": "FRESHNESS", "method": "bot_heartbeat.json age", "expected": "fresh", "live_required": true },
+        { "check_id": "tg_api_readiness", "type": "READINESS", "method": "getMe (future, owner-gated)", "expected": "ok", "live_required": true },
+        { "check_id": "tg_canonical_isolation", "type": "SECURITY_BOUNDARY", "method": "no direct canonical file access", "expected": "isolated", "live_required": false },
+        { "check_id": "tg_no_local_fallback", "type": "SECURITY_BOUNDARY", "method": "static", "expected": "no local send fallback", "live_required": false },
+        { "check_id": "tg_callback_error_rate", "type": "READINESS", "method": "callback metrics", "expected": "below threshold", "live_required": true }
+      ]
+    },
+    "imap": {
+      "checks": [
+        { "check_id": "imap_timer_freshness", "type": "FRESHNESS", "method": "timer last-run age", "expected": "within interval", "live_required": true },
+        { "check_id": "imap_last_success", "type": "READINESS", "method": "last successful read cycle", "expected": "recent", "live_required": true },
+        { "check_id": "imap_read_only", "type": "SECURITY_BOUNDARY", "method": "static + config", "expected": "EXAMINE read-only", "live_required": false },
+        { "check_id": "imap_no_flag_mutation", "type": "SECURITY_BOUNDARY", "method": "static", "expected": "no STORE/APPEND/expunge", "live_required": false },
+        { "check_id": "imap_tls", "type": "SECURITY_BOUNDARY", "method": "IMAPS", "expected": "TLS", "live_required": true },
+        { "check_id": "imap_bounded_scan", "type": "CAPACITY", "method": "bounded reads", "expected": "bounded", "live_required": false },
+        { "check_id": "imap_stale_warning", "type": "FRESHNESS", "method": "inbox-sync age", "expected": "warn if stale", "live_required": true }
+      ]
+    },
+    "backup": {
+      "checks": [
+        { "check_id": "bk_exists", "type": "INTEGRITY", "method": "expected backup present", "expected": "exists", "live_required": true },
+        { "check_id": "bk_interval", "type": "FRESHNESS", "method": "interval check", "expected": "within schedule", "live_required": true },
+        { "check_id": "bk_size_nonzero", "type": "INTEGRITY", "method": "size > 0", "expected": "non-zero", "live_required": true },
+        { "check_id": "bk_checksum", "type": "INTEGRITY", "method": "sha256", "expected": "matches manifest", "live_required": true },
+        { "check_id": "bk_manifest", "type": "INTEGRITY", "method": "manifest present", "expected": "present", "live_required": true },
+        { "check_id": "bk_revision_recorded", "type": "INTEGRITY", "method": "canonical revision in backup", "expected": "recorded", "live_required": true },
+        { "check_id": "bk_retention", "type": "CAPACITY", "method": "rotation", "expected": "within policy", "live_required": true },
+        { "check_id": "bk_encryption_status", "type": "SECURITY_BOUNDARY", "method": "status", "expected": "PLANNED -> owner decision", "live_required": true },
+        { "check_id": "bk_restore_test_age", "type": "FRESHNESS", "method": "last restore test", "expected": "within policy", "live_required": true },
+        { "check_id": "bk_offsite", "type": "INTEGRITY", "method": "off-site status", "expected": "owner-defined", "live_required": true }
+      ]
+    },
+    "android": {
+      "checks": [
+        { "check_id": "and_api_reachable", "type": "DEPENDENCY", "method": "https (future)", "expected": "reachable", "live_required": true },
+        { "check_id": "and_cache_freshness", "type": "FRESHNESS", "method": "room cache age", "expected": "fresh or stale-indicated", "live_required": true },
+        { "check_id": "and_revision_conflict", "type": "INTEGRITY", "method": "409 handling", "expected": "handled", "live_required": false },
+        { "check_id": "and_no_offline_mutation", "type": "SECURITY_BOUNDARY", "method": "static", "expected": "no offline canonical mutation", "live_required": false },
+        { "check_id": "and_room_migration", "type": "INTEGRITY", "method": "migration integrity", "expected": "ok", "live_required": false },
+        { "check_id": "and_stale_indicator", "type": "READINESS", "method": "UI stale flag", "expected": "shown", "live_required": false }
+      ]
+    }
+  },
+
+  "logging_standard": {
+    "fields": ["timestamp", "level", "service", "environment", "event", "request_id", "correlation_id", "operation", "entity_type", "entity_id", "revision", "duration_ms", "result", "error_code", "retryable", "synthetic"],
+    "prohibited": ["secrets", "passwords", "tokens", "authorization_headers", "private_keys", "raw_message_bodies", "unnecessary_email_phone", "full_attachments", "financial_credentials", "special_category_data"],
+    "integrates": "Security OS redaction standard",
+    "levels": ["TRACE", "DEBUG", "INFO", "WARN", "ERROR", "CRITICAL", "AUDIT"],
+    "level_rules": ["no DEBUG secrets", "AUDIT is semantic category", "retryable errors not always CRITICAL", "expected validation failures not ERROR spam", "owner-action events distinguishable", "repeated identical errors deduplicated"]
+  },
+
+  "correlation_standard": {
+    "ids": ["request_id", "correlation_id", "causation_id", "task_id", "job_id", "lead_id", "conversation_id", "project_id", "run_id"],
+    "rules": ["no personal identifier as correlation ID", "ID stable through cross-system handoff", "logs/events/reports link by reference", "no mandatory distributed-tracing vendor"]
+  },
+
+  "metric_standard": {
+    "types": ["counter", "gauge", "histogram", "duration", "freshness", "ratio", "state"],
+    "rules": ["bounded labels", "no raw email/lead ID as label", "no unbounded error message label", "no secret", "units explicit", "owner/source recorded", "collection method recorded", "synthetic marker", "retention defined"],
+    "cardinality_forbidden_labels": ["canonical_lead_id", "message_id", "url", "error_stack", "email", "phone", "free_text", "filename_raw"],
+    "cardinality_allowed_labels": ["service", "operation", "status", "error_code", "queue", "job_type", "environment", "product_category"]
+  },
+
+  "observability_events": ["service_started", "service_stopped", "readiness_changed", "dependency_failed", "heartbeat_stale", "queue_backlog", "worker_stalled", "scheduler_stale", "backup_completed", "backup_failed", "restore_verified", "certificate_expiry_warning", "disk_pressure", "memory_pressure", "unexpected_send_detected", "duplicate_poller_detected", "dead_letter_created", "recovery_started", "recovery_completed", "release_gate_changed"],
+  "observability_note": "contracts only; NO emitter in this task",
+
+  "alert_taxonomy": {
+    "severity": ["P0_CRITICAL", "P1_HIGH", "P2_MEDIUM", "P3_LOW", "INFO"],
+    "categories": ["availability", "integrity", "data_loss", "queue", "worker", "scheduler", "communication", "backup", "certificate", "capacity", "dependency", "security", "release"],
+    "auto_action_default": false
+  },
+  "alert_rules": [
+    { "alert_id": "a_api_down", "name": "API unavailable", "category": "availability", "severity": "P0_CRITICAL", "condition": "liveness fail", "duration": "2m", "dedupe_key": "service:mc_api", "suppression": "maintenance_window", "owner": "owner", "routing": "owner (channel TBD)", "runbook": "rb_api_unavailable", "auto_action": false },
+    { "alert_id": "a_canonical_unreadable", "name": "Canonical store unreadable", "category": "integrity", "severity": "P0_CRITICAL", "condition": "read fail / parse fail", "duration": "0m", "dedupe_key": "service:canonical", "suppression": "none", "owner": "owner", "routing": "owner", "runbook": "rb_canonical_unreadable", "auto_action": false },
+    { "alert_id": "a_unexpected_send", "name": "Unexpected outbound send", "category": "security", "severity": "P0_CRITICAL", "condition": "send while AUTOSEND=BLOCKED", "duration": "0m", "dedupe_key": "unexpected_send", "suppression": "none", "owner": "owner", "routing": "owner+security", "runbook": "rb_unexpected_send", "auto_action": false, "hard_blocker": true },
+    { "alert_id": "a_worker_stalled", "name": "Worker stalled", "category": "worker", "severity": "P1_HIGH", "condition": "heartbeat age > threshold", "duration": "5m", "dedupe_key": "service:worker", "suppression": "dependency:vps_host", "owner": "owner", "routing": "owner", "runbook": "rb_worker_stalled", "auto_action": false },
+    { "alert_id": "a_queue_backlog", "name": "Queue backlog", "category": "queue", "severity": "P1_HIGH", "condition": "backlog > threshold OR oldest job age", "duration": "10m", "dedupe_key": "service:queue", "suppression": "dependency:worker", "owner": "owner", "routing": "owner", "runbook": "rb_queue_backlog", "auto_action": false },
+    { "alert_id": "a_scheduler_stale", "name": "Scheduler stale", "category": "scheduler", "severity": "P2_MEDIUM", "condition": "no job in interval*2", "duration": "1 interval", "dedupe_key": "service:scheduler", "suppression": "maintenance", "owner": "owner", "routing": "owner", "runbook": "rb_scheduler_stale", "auto_action": false },
+    { "alert_id": "a_duplicate_poller", "name": "Duplicate Telegram poller", "category": "communication", "severity": "P1_HIGH", "condition": "poller count > 1", "duration": "0m", "dedupe_key": "telegram_poller", "suppression": "none", "owner": "owner", "routing": "owner", "runbook": "rb_duplicate_poller", "auto_action": false },
+    { "alert_id": "a_imap_stale", "name": "IMAP sync stale", "category": "communication", "severity": "P2_MEDIUM", "condition": "timer age > interval*2", "duration": "1 interval", "dedupe_key": "service:imap", "suppression": "dependency:network", "owner": "owner", "routing": "owner", "runbook": "rb_imap_stale", "auto_action": false },
+    { "alert_id": "a_backup_failed", "name": "Backup failed/missing", "category": "backup", "severity": "P1_HIGH", "condition": "no fresh backup OR checksum fail", "duration": "1 interval", "dedupe_key": "backup", "suppression": "none", "owner": "owner", "routing": "owner", "runbook": "rb_backup_missing", "auto_action": false },
+    { "alert_id": "a_cert_expiry", "name": "TLS certificate expiry", "category": "certificate", "severity": "P2_MEDIUM", "condition": "expiry < 14d", "duration": "0m", "dedupe_key": "tls_cert", "suppression": "none", "owner": "owner", "routing": "owner", "runbook": "rb_tls_warning", "auto_action": false },
+    { "alert_id": "a_disk_pressure", "name": "Disk pressure", "category": "capacity", "severity": "P1_HIGH", "condition": "free < critical (preserve backup/atomic space)", "duration": "5m", "dedupe_key": "disk", "suppression": "none", "owner": "owner", "routing": "owner", "runbook": "rb_disk_pressure", "auto_action": false },
+    { "alert_id": "a_dead_letter_spike", "name": "Dead-letter spike", "category": "queue", "severity": "P2_MEDIUM", "condition": "dead-letter rate > threshold", "duration": "10m", "dedupe_key": "dead_letter", "suppression": "none", "owner": "owner", "routing": "owner", "runbook": "rb_queue_backlog", "auto_action": false },
+    { "alert_id": "a_revision_stagnation", "name": "Canonical revision stagnation", "category": "integrity", "severity": "P2_MEDIUM", "condition": "revision unchanged while activity expected", "duration": "30m", "dedupe_key": "revision", "suppression": "maintenance", "owner": "owner", "routing": "owner", "runbook": "rb_canonical_unreadable", "auto_action": false }
+  ],
+  "alert_fatigue_controls": {
+    "policies": ["deduplication by dedupe_key", "grouping by service/category", "minimum duration before firing", "recovery notification", "maintenance suppression", "dependency-based suppression", "repeated-failure throttling", "explicit alert ownership", "stale unresolved alert review"],
+    "do_not_wake_owner": ["P3_LOW", "INFO", "expected validation failures", "self-recovered transient with recovery notice"],
+    "wake_owner": ["P0_CRITICAL", "data_loss", "integrity", "unexpected_send", "backup_failed (sustained)"],
+    "external_channel": "NONE_SELECTED (owner action required)"
+  }
+}

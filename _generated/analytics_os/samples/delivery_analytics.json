@@ -1,0 +1,24 @@
+[
+  {
+    "project_id": "TEST_p01",
+    "cycle_time_days": 10,
+    "client_delay_days": 2,
+    "owner_delay_days": 0,
+    "qa_failure": false,
+    "rework_count": 0,
+    "change_requests": 1,
+    "acceptance_time_days": 2,
+    "plan_vs_actual": 1
+  },
+  {
+    "project_id": "TEST_p02",
+    "cycle_time_days": 18,
+    "client_delay_days": 4,
+    "owner_delay_days": 2,
+    "qa_failure": true,
+    "rework_count": 2,
+    "change_requests": 3,
+    "acceptance_time_days": 6,
+    "plan_vs_actual": 8
+  }
+]

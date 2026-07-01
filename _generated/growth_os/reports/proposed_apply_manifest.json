@@ -1,0 +1,203 @@
+{
+  "schema": "growth_os.apply_manifest.v1",
+  "generated_ts": "20260617_223000",
+  "vault": "D:\\AI_WORKSPACE",
+  "apply_command": "AI_HQ_APPLY_OK=1 node tools/ai_hq/apply_canonical.mjs --apply  (owner only, post-review)",
+  "note": "Proposed growth docs NOT applied. Production freeze in effect.",
+  "canonical_docs_applied": 0,
+  "total": 24,
+  "rows": [
+    {
+      "source_proposed": "docs_canonical_proposed/07_revenue_os/growth_os_command_center.md",
+      "target_path": "07_revenue_os/growth_os_command_center.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/09_dashboards/growth_dashboard.md",
+      "target_path": "09_dashboards/growth_dashboard.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/09_dashboards/owner_growth_command_center.md",
+      "target_path": "09_dashboards/owner_growth_command_center.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/12_growth_os/campaign_economics.md",
+      "target_path": "12_growth_os/campaign_economics.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/12_growth_os/campaign_readiness_gate.md",
+      "target_path": "12_growth_os/campaign_readiness_gate.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/12_growth_os/channel_strategy.md",
+      "target_path": "12_growth_os/channel_strategy.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/12_growth_os/content_strategy.md",
+      "target_path": "12_growth_os/content_strategy.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/12_growth_os/controlled_commercial_cycle_runbook.md",
+      "target_path": "12_growth_os/controlled_commercial_cycle_runbook.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/12_growth_os/experiment_backlog.md",
+      "target_path": "12_growth_os/experiment_backlog.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/12_growth_os/icp_standard.md",
+      "target_path": "12_growth_os/icp_standard.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/12_growth_os/integration_contracts.md",
+      "target_path": "12_growth_os/integration_contracts.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/12_growth_os/landing_standard.md",
+      "target_path": "12_growth_os/landing_standard.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/12_growth_os/lead_magnet_policy.md",
+      "target_path": "12_growth_os/lead_magnet_policy.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/12_growth_os/local_presence_strategy.md",
+      "target_path": "12_growth_os/local_presence_strategy.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/12_growth_os/market_segmentation_standard.md",
+      "target_path": "12_growth_os/market_segmentation_standard.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/12_growth_os/nurture_policy.md",
+      "target_path": "12_growth_os/nurture_policy.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/12_growth_os/outbound_campaign_policy.md",
+      "target_path": "12_growth_os/outbound_campaign_policy.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/12_growth_os/partnership_policy.md",
+      "target_path": "12_growth_os/partnership_policy.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/12_growth_os/positioning_standard.md",
+      "target_path": "12_growth_os/positioning_standard.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/12_growth_os/referral_policy.md",
+      "target_path": "12_growth_os/referral_policy.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/12_growth_os/seo_planning_policy.md",
+      "target_path": "12_growth_os/seo_planning_policy.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/12_growth_os/social_proof_policy.md",
+      "target_path": "12_growth_os/social_proof_policy.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/12_growth_os/source_of_truth_extension.md",
+      "target_path": "12_growth_os/source_of_truth_extension.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/12_growth_os/what_already_exists_links.md",
+      "target_path": "12_growth_os/what_already_exists_links.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    }
+  ]
+}

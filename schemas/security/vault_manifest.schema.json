@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Local Vault Manifest V1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["manifest_id", "runtime_status", "references", "grants"],
+  "properties": {
+    "manifest_id": {"type": "string"},
+    "runtime_status": {"const": "CONTRACT_ONLY_NOT_DEPLOYED"},
+    "references": {"type": "array", "items": {"type": "object"}},
+    "grants": {"type": "array", "items": {"type": "object"}},
+    "stop_revokes_grants": {"type": "boolean"}
+  }
+}

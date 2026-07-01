@@ -1,0 +1,19 @@
+{
+  "additionalProperties": true,
+  "properties": {
+    "browser_used": {},
+    "decision": {},
+    "production_action": {},
+    "request_id": {},
+    "synthetic": {}
+  },
+  "required": [
+    "synthetic",
+    "request_id",
+    "decision",
+    "browser_used",
+    "production_action"
+  ],
+  "title": "Browser Action Result",
+  "type": "object"
+}

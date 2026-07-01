@@ -1,0 +1,8 @@
+{
+  "action_type": "external_navigation",
+  "external_browser": true,
+  "form_submit": false,
+  "request_id": "forbidden-external-browser-alpha",
+  "synthetic": true,
+  "target_ref": "reserved-invalid-site"
+}

@@ -1,0 +1,151 @@
+{
+  "schema": "reliability_os.reliability_plans.v1",
+  "note": "MP15-36 — SLI/SLO, error budgets, incidents, runbooks, backup, RPO/RTO, restore, DR, continuity, capacity. Synthetic/proposed; no live targets claimed, no real backup/restore, no notification.",
+  "synthetic": true,
+
+  "sli_catalog": [
+    { "sli_id": "sli_api_availability", "service_id": "mc_api", "name": "API availability", "source": "future health probe", "formula": "successful_health/total_health", "unit": "ratio", "window": "30d" },
+    { "sli_id": "sli_api_success_ratio", "service_id": "mc_api", "name": "Successful request ratio", "source": "api logs (future)", "formula": "2xx+expected_4xx / total", "unit": "ratio", "window": "7d" },
+    { "sli_id": "sli_mutation_conflict_rate", "service_id": "mc_api", "name": "Mutation conflict rate", "source": "409 count", "formula": "409 / mutations", "unit": "ratio", "window": "7d" },
+    { "sli_id": "sli_queue_latency", "service_id": "job_queue", "name": "Queue latency", "source": "job enqueue->start", "formula": "p95 wait", "unit": "seconds", "window": "1d" },
+    { "sli_id": "sli_job_completion", "service_id": "worker", "name": "Job completion rate", "source": "queue", "formula": "completed / claimed", "unit": "ratio", "window": "1d" },
+    { "sli_id": "sli_worker_heartbeat_age", "service_id": "worker", "name": "Worker heartbeat age", "source": "api_heartbeat.json", "formula": "now - last_heartbeat", "unit": "seconds", "window": "instant" },
+    { "sli_id": "sli_scheduler_freshness", "service_id": "scheduler", "name": "Scheduler freshness", "source": "last discovery job", "formula": "now - last_job", "unit": "seconds", "window": "instant" },
+    { "sli_id": "sli_dead_letter_rate", "service_id": "job_queue", "name": "Dead-letter rate", "source": "queue", "formula": "dead_letter / total", "unit": "ratio", "window": "7d" },
+    { "sli_id": "sli_canonical_write_integrity", "service_id": "canonical_store", "name": "Canonical write integrity", "source": "revision+checksum", "formula": "valid_writes / writes", "unit": "ratio", "window": "30d" },
+    { "sli_id": "sli_backup_freshness", "service_id": "backup_timer", "name": "Backup freshness", "source": "backup mtime", "formula": "now - last_backup", "unit": "hours", "window": "instant" },
+    { "sli_id": "sli_reply_ingest_freshness", "service_id": "imap_sync", "name": "Reply ingestion freshness", "source": "imap timer", "formula": "now - last_sync", "unit": "minutes", "window": "instant" },
+    { "sli_id": "sli_duplicate_rate", "service_id": "imap_sync", "name": "Reply duplicate rate", "source": "dedupe", "formula": "dup / ingested", "unit": "ratio", "window": "7d" },
+    { "sli_id": "sli_tg_command_success", "service_id": "telegram_service", "name": "Owner command success", "source": "telegram logs", "formula": "ok / commands", "unit": "ratio", "window": "7d" },
+    { "sli_id": "sli_tg_one_poller", "service_id": "telegram_service", "name": "One-poller compliance", "source": "instance count", "formula": "poller_count==1", "unit": "boolean", "window": "instant" },
+    { "sli_id": "sli_pipeline_progression", "service_id": "mc_api", "name": "Pipeline progression", "source": "pipeline states", "formula": "advanced / active", "unit": "ratio", "window": "7d" }
+  ],
+
+  "slo_proposals": [
+    { "slo_id": "slo_api_avail", "sli_id": "sli_api_availability", "target": "99.0% (proposed)", "window": "30d", "category": "availability", "status": "INTERNAL_TARGET", "owner": "owner", "evidence": "none-live", "live_validation_required": true },
+    { "slo_id": "slo_worker_heartbeat", "sli_id": "sli_worker_heartbeat_age", "target": "< 300s", "window": "instant", "category": "freshness", "status": "INTERNAL_TARGET", "owner": "owner", "evidence": "none-live", "live_validation_required": true },
+    { "slo_id": "slo_scheduler_fresh", "sli_id": "sli_scheduler_freshness", "target": "< 2x interval", "window": "instant", "category": "freshness", "status": "INTERNAL_TARGET", "owner": "owner", "evidence": "none-live", "live_validation_required": true },
+    { "slo_id": "slo_canonical_integrity", "sli_id": "sli_canonical_write_integrity", "target": "100% (hard)", "window": "30d", "category": "data_integrity", "status": "OWNER_APPROVAL_REQUIRED", "owner": "owner", "evidence": "design", "live_validation_required": true },
+    { "slo_id": "slo_backup_fresh", "sli_id": "sli_backup_freshness", "target": "< 24h", "window": "instant", "category": "durability", "status": "OWNER_APPROVAL_REQUIRED", "owner": "owner", "evidence": "documented daily", "live_validation_required": true },
+    { "slo_id": "slo_one_poller", "sli_id": "sli_tg_one_poller", "target": "always 1 (hard)", "window": "instant", "category": "operational_safety", "status": "INTERNAL_TARGET", "owner": "owner", "evidence": "design", "live_validation_required": true },
+    { "slo_id": "slo_dead_letter", "sli_id": "sli_dead_letter_rate", "target": "< 1% (proposed)", "window": "7d", "category": "operational_safety", "status": "INTERNAL_TARGET", "owner": "owner", "evidence": "none-live", "live_validation_required": true },
+    { "slo_id": "slo_recovery_rto", "sli_id": "sli_backup_freshness", "target": "RTO < 4h (proposed)", "window": "incident", "category": "recovery", "status": "OWNER_APPROVAL_REQUIRED", "owner": "owner", "evidence": "restore drill documented", "live_validation_required": true }
+  ],
+
+  "error_budget_model": {
+    "rules": ["no budget from synthetic samples represented as production", "no release decision solely from one metric", "integrity/security hard blocker overrides error budget", "insufficient data -> UNKNOWN not PASS"],
+    "examples": [
+      { "budget_id": "eb_api", "slo_id": "slo_api_avail", "window": "30d", "allowed_failure": "1%", "observed_failure": "UNKNOWN", "remaining": "UNKNOWN", "burn_rate": "UNKNOWN", "status": "INSUFFICIENT_DATA", "source_status": "no-live" }
+    ],
+    "burn_states": ["fast_burn", "slow_burn", "no_burn", "insufficient_data", "unknown_actuals"]
+  },
+
+  "incident_reconciliation": {
+    "shared_envelope": ["incident_id", "incident_domain", "severity", "affected_services", "customer_impact", "data_impact", "security_impact", "business_impact", "status", "owner", "correlation_ids", "evidence"],
+    "domains": { "security": "Security OS owns", "customer_success": "CS OS owns", "reliability": "Reliability owns", "delivery": "Delivery OS owns", "orchestration": "Orchestration owns" },
+    "rule": "do not collapse different incident lifecycles destructively; reliability lifecycle is distinct from security lifecycle",
+    "separation": "security incident (Security OS lifecycle) vs reliability incident (this lifecycle); a single event may open BOTH with cross-linked correlation_ids"
+  },
+  "reliability_incident_lifecycle": ["DETECTED", "TRIAGED", "OWNER_NOTIFIED_REFERENCE", "MITIGATING", "MONITORING", "RECOVERED", "ROOT_CAUSE_ANALYSIS", "CORRECTIVE_ACTION", "VERIFIED", "CLOSED"],
+
+  "runbooks": [
+    { "runbook_id": "rb_api_unavailable", "title": "API unavailable", "trigger": "liveness fail", "safe_diagnostics": ["check systemd status (owner)", "check caddy", "check disk"], "owner_gated_actions": ["restart api service"], "dangerous_actions": ["reboot VPS"], "production_command_placeholder": "<owner runs systemctl status master-controller-api>", "verification": "health 200 + readiness", "rollback": "n/a", "owner_gate": true },
+    { "runbook_id": "rb_canonical_unreadable", "title": "Canonical store unreadable", "trigger": "read/parse fail", "safe_diagnostics": ["inspect file (owner)", "check revision", "check disk"], "owner_gated_actions": ["restore from verified backup"], "dangerous_actions": ["manual edit canonical"], "production_command_placeholder": "<owner restores backup>", "verification": "valid JSON + revision + counts", "rollback": "restore prior backup", "owner_gate": true },
+    { "runbook_id": "rb_revision_conflict_spike", "title": "Canonical revision conflict spike", "trigger": "409 rate high", "safe_diagnostics": ["identify clients", "check concurrent writers"], "owner_gated_actions": ["pause client", "investigate second writer"], "dangerous_actions": [], "verification": "409 rate normal", "rollback": "n/a", "owner_gate": true },
+    { "runbook_id": "rb_worker_stalled", "title": "Worker stalled", "trigger": "heartbeat stale", "safe_diagnostics": ["heartbeat age", "queue state", "logs"], "owner_gated_actions": ["restart worker"], "dangerous_actions": [], "verification": "heartbeat fresh + jobs progressing", "rollback": "n/a", "owner_gate": true },
+    { "runbook_id": "rb_queue_backlog", "title": "Queue backlog", "trigger": "backlog/oldest age", "safe_diagnostics": ["backlog size", "job ages", "worker health"], "owner_gated_actions": ["scale processing", "pause enqueue"], "dangerous_actions": ["purge queue"], "verification": "backlog draining", "rollback": "n/a", "owner_gate": true },
+    { "runbook_id": "rb_scheduler_stale", "title": "Scheduler stale", "trigger": "no job in interval*2", "safe_diagnostics": ["timer status", "last job"], "owner_gated_actions": ["restart timer", "manual trigger"], "dangerous_actions": [], "verification": "job runs", "rollback": "n/a", "owner_gate": true },
+    { "runbook_id": "rb_telegram_poller_stopped", "title": "Telegram poller stopped", "trigger": "heartbeat stale", "safe_diagnostics": ["service state", "heartbeat"], "owner_gated_actions": ["restart telegram service"], "dangerous_actions": [], "verification": "heartbeat fresh", "rollback": "n/a", "owner_gate": true },
+    { "runbook_id": "rb_duplicate_poller", "title": "Duplicate Telegram poller", "trigger": "poller count > 1", "safe_diagnostics": ["enumerate instances"], "owner_gated_actions": ["stop extra instance"], "dangerous_actions": [], "verification": "exactly 1 poller", "rollback": "n/a", "owner_gate": true },
+    { "runbook_id": "rb_imap_stale", "title": "IMAP sync stale", "trigger": "timer age high", "safe_diagnostics": ["timer status", "last success", "network"], "owner_gated_actions": ["restart timer"], "dangerous_actions": [], "verification": "fresh read cycle", "rollback": "n/a", "owner_gate": true },
+    { "runbook_id": "rb_imap_auth_failure", "title": "IMAP authentication failure", "trigger": "auth error", "safe_diagnostics": ["error redacted", "credential reference present"], "owner_gated_actions": ["rotate Yandex app-password (owner)"], "dangerous_actions": [], "verification": "read cycle ok", "rollback": "n/a", "owner_gate": true },
+    { "runbook_id": "rb_backup_missing", "title": "Backup missing", "trigger": "no fresh backup", "safe_diagnostics": ["timer status", "disk", "permissions"], "owner_gated_actions": ["re-run backup", "fix timer"], "dangerous_actions": [], "verification": "fresh backup + checksum", "rollback": "n/a", "owner_gate": true },
+    { "runbook_id": "rb_backup_checksum", "title": "Backup checksum failure", "trigger": "checksum mismatch", "safe_diagnostics": ["recompute", "compare manifest"], "owner_gated_actions": ["regenerate backup", "investigate corruption"], "dangerous_actions": ["delete suspect backup"], "verification": "checksum matches", "rollback": "use prior good backup", "owner_gate": true },
+    { "runbook_id": "rb_restore_failure", "title": "Restore failure", "trigger": "restore test fails", "safe_diagnostics": ["isolated restore", "schema check"], "owner_gated_actions": ["try prior backup"], "dangerous_actions": ["restore over production"], "verification": "isolated restore valid", "rollback": "n/a (isolated)", "owner_gate": true },
+    { "runbook_id": "rb_disk_pressure", "title": "Disk pressure", "trigger": "free < critical", "safe_diagnostics": ["du", "log size", "backup size"], "owner_gated_actions": ["rotate logs", "free space preserving backup/atomic"], "dangerous_actions": ["delete backups"], "verification": "free > warning", "rollback": "n/a", "owner_gate": true },
+    { "runbook_id": "rb_memory_pressure", "title": "Memory pressure", "trigger": "RAM high", "safe_diagnostics": ["top", "service memory"], "owner_gated_actions": ["restart leaking service"], "dangerous_actions": [], "verification": "memory normal", "rollback": "n/a", "owner_gate": true },
+    { "runbook_id": "rb_tls_warning", "title": "TLS certificate warning", "trigger": "expiry < 14d", "safe_diagnostics": ["cert expiry", "caddy renew status"], "owner_gated_actions": ["force renew"], "dangerous_actions": [], "verification": "cert valid > 30d", "rollback": "n/a", "owner_gate": true },
+    { "runbook_id": "rb_caddy_unavailable", "title": "Caddy unavailable", "trigger": "ingress fail", "safe_diagnostics": ["caddy status", "config", "ports"], "owner_gated_actions": ["restart caddy"], "dangerous_actions": [], "verification": "HTTPS reachable", "rollback": "prior config", "owner_gate": true },
+    { "runbook_id": "rb_dependency_unavailable", "title": "Dependency unavailable", "trigger": "dependency check fail", "safe_diagnostics": ["identify dependency", "failure mode"], "owner_gated_actions": ["apply fallback if defined"], "dangerous_actions": [], "verification": "dependency restored", "rollback": "n/a", "owner_gate": true },
+    { "runbook_id": "rb_unexpected_send", "title": "Unexpected outbound send", "trigger": "send while AUTOSEND=BLOCKED", "safe_diagnostics": ["identify send path", "ledger", "security handoff"], "owner_gated_actions": ["disable send path", "security incident"], "dangerous_actions": [], "verification": "no further sends + root cause", "rollback": "n/a", "owner_gate": true, "hard_blocker": true, "security_handoff": true },
+    { "runbook_id": "rb_canonical_corruption", "title": "Canonical corruption suspicion", "trigger": "integrity check fail", "safe_diagnostics": ["checksum", "revision", "diff vs backup"], "owner_gated_actions": ["freeze writes", "restore verified backup"], "dangerous_actions": ["manual edit"], "verification": "integrity restored + counts", "rollback": "restore", "owner_gate": true },
+    { "runbook_id": "rb_vps_unavailable", "title": "VPS unavailable", "trigger": "host unreachable", "safe_diagnostics": ["provider console", "network"], "owner_gated_actions": ["provider recovery", "rebuild + restore"], "dangerous_actions": ["rebuild without backup"], "verification": "services healthy", "rollback": "n/a", "owner_gate": true },
+    { "runbook_id": "rb_workstation_loss", "title": "Local workstation loss", "trigger": "device lost", "safe_diagnostics": ["bundle availability"], "owner_gated_actions": ["new workstation", "clone bundles"], "dangerous_actions": [], "verification": "repo restored + tests", "rollback": "n/a", "owner_gate": true },
+    { "runbook_id": "rb_git_loss", "title": "Git repository loss", "trigger": "repo corrupt/lost", "safe_diagnostics": ["bundle integrity"], "owner_gated_actions": ["clone from bundle"], "dangerous_actions": [], "verification": "history + tests", "rollback": "n/a", "owner_gate": true },
+    { "runbook_id": "rb_release_rollback", "title": "Release rollback", "trigger": "post-release failure", "safe_diagnostics": ["health", "smoke", "error rate"], "owner_gated_actions": ["rollback code+config", "restart", "verify"], "dangerous_actions": ["rollback over newer canonical data"], "verification": "health + no data loss", "rollback": "this IS rollback", "owner_gate": true },
+    { "runbook_id": "rb_security_handoff", "title": "Security incident handoff", "trigger": "reliability event with security impact", "safe_diagnostics": ["classify", "preserve evidence"], "owner_gated_actions": ["open security incident", "Security OS lifecycle"], "dangerous_actions": [], "verification": "security incident opened + linked", "rollback": "n/a", "owner_gate": true, "security_handoff": true }
+  ],
+
+  "backup_inventory": [
+    { "backup_asset": "canonical_data", "owner": "master_controller", "source": "canonical store", "frequency": "daily (documented)", "retention": "owner-defined", "location": "vps", "encryption_status": "PLANNED", "integrity": "checksum", "restore_test": "documented drill", "rpo": "PROPOSED 24h", "rto": "PROPOSED 4h", "offsite": "owner-defined", "known_gap": "encryption + offsite owner decision" },
+    { "backup_asset": "queue_state", "owner": "master_controller", "source": "queue", "frequency": "with canonical", "retention": "owner-defined", "location": "vps", "encryption_status": "PLANNED", "integrity": "checksum", "restore_test": "documented", "rpo": "PROPOSED 24h", "rto": "PROPOSED 4h", "offsite": "owner-defined", "known_gap": "verify inclusion" },
+    { "backup_asset": "source_repository", "owner": "owner", "source": "git", "frequency": "per-OS bundle", "retention": "kept", "location": "local _generated", "encryption_status": "UNKNOWN", "integrity": "git bundle verify + SHA256", "restore_test": "per-OS restore tests PASS", "rpo": "per-commit", "rto": "minutes", "offsite": "owner-defined", "known_gap": "offsite copy" },
+    { "backup_asset": "git_bundles", "owner": "owner", "source": "git bundle create", "frequency": "per block", "retention": "kept", "location": "_generated/**/backups", "encryption_status": "UNKNOWN", "integrity": "bundle verify", "restore_test": "PASS (clean clone)", "rpo": "per-block", "rto": "minutes", "offsite": "owner-defined", "known_gap": "offsite" },
+    { "backup_asset": "android_artifacts", "owner": "owner", "source": "release build", "frequency": "per-release", "retention": "release", "location": "release store", "encryption_status": "store-managed", "integrity": "signing", "restore_test": "n/a", "rpo": "per-release", "rto": "rebuild", "offsite": "store", "known_gap": "none" },
+    { "backup_asset": "proposed_docs", "owner": "owner", "source": "docs_canonical_proposed", "frequency": "per block", "retention": "kept", "location": "repo", "encryption_status": "n/a", "integrity": "git", "restore_test": "via repo", "rpo": "per-commit", "rto": "minutes", "offsite": "owner", "known_gap": "none" },
+    { "backup_asset": "reports", "owner": "owner", "source": "_generated reports", "frequency": "per block", "retention": "kept", "location": "repo/_generated", "encryption_status": "n/a", "integrity": "git", "restore_test": "via repo", "rpo": "per-commit", "rto": "minutes", "offsite": "owner", "known_gap": "none" },
+    { "backup_asset": "service_configs", "owner": "infrastructure", "source": "deploy dir", "frequency": "tracked in git", "retention": "kept", "location": "repo", "encryption_status": "n/a (no secrets)", "integrity": "git", "restore_test": "redeploy", "rpo": "per-commit", "rto": "minutes", "offsite": "repo", "known_gap": "secrets external" },
+    { "backup_asset": "credentials_references", "owner": "owner", "source": "env (external)", "frequency": "owner-managed", "retention": "owner", "location": "external", "encryption_status": "owner-managed", "integrity": "n/a", "restore_test": "n/a", "rpo": "owner", "rto": "owner", "offsite": "owner", "known_gap": "never in backup" },
+    { "backup_asset": "file_vault", "owner": "owner", "source": "D:/AI_FILE_VAULT", "frequency": "owner-defined", "retention": "owner", "location": "local", "encryption_status": "UNKNOWN", "integrity": "owner", "restore_test": "owner", "rpo": "UNKNOWN", "rto": "UNKNOWN", "offsite": "owner-defined", "known_gap": "encryption + backup policy" },
+    { "backup_asset": "local_workspace", "owner": "owner", "source": "D:/AI_WORKSPACE", "frequency": "git + owner", "retention": "owner", "location": "local", "encryption_status": "UNKNOWN", "integrity": "git", "restore_test": "clone", "rpo": "per-commit", "rto": "minutes", "offsite": "owner-defined", "known_gap": "offsite + encryption" }
+  ],
+
+  "backup_policy": {
+    "rules": ["full vs incremental defined per asset", "atomic snapshot for canonical", "manifest required", "checksum required", "permissions preserved", "no secret in backup", "retention + rotation", "off-site copy (owner)", "immutability where possible", "corruption detection", "restore test frequency defined"],
+    "this_task": "no off-site copy created, no real backup executed"
+  },
+
+  "rpo_rto": [
+    { "asset": "canonical_data", "criticality": "TIER_0_CANONICAL", "proposed_rpo": "24h", "proposed_rto": "4h", "dependencies": ["backup", "vps"], "business_impact": "operational halt", "data_loss_impact": "lead/approval/reply loss", "owner_approval": "REQUIRED", "live_test_required": true, "status": "PROPOSED" },
+    { "asset": "job_queue", "criticality": "TIER_1_CRITICAL", "proposed_rpo": "24h", "proposed_rto": "4h", "dependencies": ["backup"], "business_impact": "job loss", "data_loss_impact": "in-flight jobs", "owner_approval": "REQUIRED", "live_test_required": true, "status": "PROPOSED" },
+    { "asset": "source_repository", "criticality": "TIER_1_CRITICAL", "proposed_rpo": "per-commit", "proposed_rto": "minutes", "dependencies": ["bundles"], "business_impact": "dev halt", "data_loss_impact": "uncommitted work", "owner_approval": "REQUIRED", "live_test_required": false, "status": "OWNER_APPROVED" },
+    { "asset": "file_vault", "criticality": "TIER_2_IMPORTANT", "proposed_rpo": "UNKNOWN", "proposed_rto": "UNKNOWN", "dependencies": [], "business_impact": "evidence loss", "data_loss_impact": "client documents", "owner_approval": "REQUIRED", "live_test_required": true, "status": "UNKNOWN" }
+  ],
+
+  "restore_test_standard": {
+    "must_verify": ["source backup exists", "checksum", "manifest", "isolated destination", "schema compatibility", "file permissions", "application readability", "data counts", "semantic checks", "revision", "no accidental production overwrite", "cleanup plan", "report"],
+    "this_task": "synthetic restore on fixture only; no production restore"
+  },
+
+  "disaster_recovery": [
+    { "scenario": "vps_loss", "detection": "host unreachable", "declaration": "owner", "containment": "n/a", "recovery_priority": 1, "restore_source": "latest verified backup", "dependencies": ["backup offsite", "new VPS"], "owner_decisions": ["provider", "rebuild vs migrate"], "verification": "all health checks", "fallback": "manual operation", "communication_plan_reference": "owner channels" },
+    { "scenario": "canonical_corruption", "detection": "integrity fail", "declaration": "owner", "containment": "freeze writes", "recovery_priority": 1, "restore_source": "last good backup", "dependencies": ["backup"], "owner_decisions": ["restore point"], "verification": "integrity + counts", "fallback": "read-only mode", "communication_plan_reference": "owner" },
+    { "scenario": "storage_loss", "detection": "fs errors", "declaration": "owner", "containment": "stop writes", "recovery_priority": 1, "restore_source": "backup", "dependencies": ["new storage"], "owner_decisions": [], "verification": "restore valid", "fallback": "n/a", "communication_plan_reference": "owner" },
+    { "scenario": "credential_compromise", "detection": "security incident", "declaration": "owner+security", "containment": "revoke", "recovery_priority": 1, "restore_source": "n/a", "dependencies": ["rotation runbook"], "owner_decisions": ["rotate all"], "verification": "new creds + no unauthorized access", "fallback": "service pause", "communication_plan_reference": "owner", "security_handoff": true },
+    { "scenario": "dns_tls_loss", "detection": "ingress fail", "declaration": "owner", "containment": "n/a", "recovery_priority": 2, "restore_source": "DNS/cert reissue", "dependencies": ["registrar"], "owner_decisions": [], "verification": "HTTPS valid", "fallback": "direct IP (insecure, avoid)", "communication_plan_reference": "owner" },
+    { "scenario": "source_repo_loss", "detection": "integrity", "declaration": "owner", "containment": "n/a", "recovery_priority": 2, "restore_source": "git bundles", "dependencies": ["bundles"], "owner_decisions": [], "verification": "tests pass", "fallback": "n/a", "communication_plan_reference": "owner" },
+    { "scenario": "workstation_loss", "detection": "n/a", "declaration": "owner", "containment": "n/a", "recovery_priority": 3, "restore_source": "bundles + backups", "dependencies": ["offsite copy"], "owner_decisions": ["new device"], "verification": "clone + tests", "fallback": "n/a", "communication_plan_reference": "owner" },
+    { "scenario": "backup_corruption", "detection": "checksum fail", "declaration": "owner", "containment": "use prior", "recovery_priority": 1, "restore_source": "prior good backup", "dependencies": ["retention depth"], "owner_decisions": ["acceptable RPO"], "verification": "restore valid", "fallback": "n/a", "communication_plan_reference": "owner" },
+    { "scenario": "telegram_outage", "detection": "provider", "declaration": "owner", "containment": "n/a", "recovery_priority": 4, "restore_source": "n/a", "dependencies": ["provider"], "owner_decisions": [], "verification": "service restored", "fallback": "direct API monitoring", "communication_plan_reference": "owner" },
+    { "scenario": "email_provider_outage", "detection": "imap fail", "declaration": "owner", "containment": "skip cycles", "recovery_priority": 4, "restore_source": "n/a", "dependencies": ["provider"], "owner_decisions": [], "verification": "read cycle resumes", "fallback": "manual check", "communication_plan_reference": "owner" },
+    { "scenario": "prolonged_network_outage", "detection": "reachability", "declaration": "owner", "containment": "n/a", "recovery_priority": 3, "restore_source": "n/a", "dependencies": ["ISP"], "owner_decisions": [], "verification": "connectivity", "fallback": "mobile", "communication_plan_reference": "owner" },
+    { "scenario": "owner_unavailable", "detection": "no owner response", "declaration": "n/a", "containment": "system fail-safe (no autosend)", "recovery_priority": 5, "restore_source": "n/a", "dependencies": [], "owner_decisions": ["delegate future"], "verification": "system stable read-only", "fallback": "automation paused", "communication_plan_reference": "owner backup contact (future)" }
+  ],
+
+  "business_continuity": {
+    "uses": "Executive OS continuity model",
+    "minimum_viable_operation": [
+      { "outage": "vps_unavailable", "mvo": "owner handles leads manually from last backup export; no automated pipeline" },
+      { "outage": "telegram_unavailable", "mvo": "owner uses direct API/dashboard; approvals manual" },
+      { "outage": "email_unavailable", "mvo": "reply ingestion paused; owner checks mailbox manually" },
+      { "outage": "android_unavailable", "mvo": "owner uses desktop/dashboard" },
+      { "outage": "owner_partially_unavailable", "mvo": "system stays read-only/no-send; no autonomous commercial action" },
+      { "outage": "automation_disabled", "mvo": "manual operation per runbooks" },
+      { "outage": "git_unavailable", "mvo": "restore from bundle; dev paused" },
+      { "outage": "analytics_unavailable", "mvo": "operations continue; reporting deferred" }
+    ],
+    "rule": "no automatic continuity activation"
+  },
+
+  "capacity": {
+    "profiles": [
+      { "capacity_id": "cap_disk", "service_id": "vps_host", "resource": "disk", "baseline": "UNKNOWN", "warning": "MODEL_ESTIMATE 70%", "critical": "MODEL_ESTIMATE 85% (preserve backup+atomic)", "measurement_source": "df (future)", "status": "MODEL_ESTIMATE" },
+      { "capacity_id": "cap_ram", "service_id": "vps_host", "resource": "RAM", "baseline": "UNKNOWN", "warning": "MODEL_ESTIMATE 75%", "critical": "MODEL_ESTIMATE 90%", "measurement_source": "free (future)", "status": "MODEL_ESTIMATE" },
+      { "capacity_id": "cap_queue", "service_id": "job_queue", "resource": "queue_depth", "baseline": "UNKNOWN", "warning": "MODEL_ESTIMATE", "critical": "MODEL_ESTIMATE + oldest-age", "measurement_source": "queue", "status": "MODEL_ESTIMATE" },
+      { "capacity_id": "cap_owner_review", "service_id": "owner", "resource": "owner_review_capacity", "baseline": "UNKNOWN", "warning": "n/a", "critical": "blocks launch", "measurement_source": "owner", "status": "UNKNOWN" },
+      { "capacity_id": "cap_delivery", "service_id": "delivery", "resource": "delivery_capacity", "baseline": "UNKNOWN", "warning": "n/a", "critical": "blocks sales", "measurement_source": "delivery_os", "status": "UNKNOWN" },
+      { "capacity_id": "cap_support", "service_id": "customer_success", "resource": "support_capacity", "baseline": "UNKNOWN", "warning": "n/a", "critical": "blocks campaign", "measurement_source": "cs_os", "status": "UNKNOWN" }
+    ],
+    "thresholds_rules": ["no exact production threshold without data", "disk critical must preserve backup/atomic-write space", "queue threshold considers job age + type", "owner capacity can block launch", "support capacity can block campaign", "delivery capacity can block sales"]
+  }
+}

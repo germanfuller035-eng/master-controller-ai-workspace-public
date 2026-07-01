@@ -1,0 +1,76 @@
+{
+  "evaluated": 7,
+  "hard_gate_pass": 0,
+  "rows": [
+    {
+      "lead_id": "KZ-JBI_RU",
+      "company": "Краснодарский Завод ЖБИ",
+      "identity": "mismatch",
+      "contact_status": "SCRAPED_CONTACT",
+      "last_send": "none",
+      "quality": 98,
+      "hard_gate_pass": false,
+      "exclusion_reason": "BLOCKED_IDENTITY_MISMATCH"
+    },
+    {
+      "lead_id": "GBIRESURS_RU",
+      "company": "ГБИ Ресурс",
+      "identity": "match",
+      "contact_status": "EVIDENCED_PUBLIC_BUSINESS_CONTACT",
+      "last_send": "uncertain_no_smtp_proof",
+      "quality": 98,
+      "hard_gate_pass": false,
+      "exclusion_reason": "BLOCKED_UNCERTAIN_PRIOR_SEND"
+    },
+    {
+      "lead_id": "DKBI_RU",
+      "company": "ДКБИ",
+      "identity": "match",
+      "contact_status": "EVIDENCED_PUBLIC_BUSINESS_CONTACT",
+      "last_send": "success",
+      "quality": 98,
+      "hard_gate_pass": false,
+      "exclusion_reason": "BLOCKED_PRIOR_SEND"
+    },
+    {
+      "lead_id": "BETON-MASTERS_RU",
+      "company": "Бетон-Мастер",
+      "identity": "match",
+      "contact_status": "EVIDENCED_PUBLIC_BUSINESS_CONTACT",
+      "last_send": "uncertain_no_smtp_proof",
+      "quality": 98,
+      "hard_gate_pass": false,
+      "exclusion_reason": "BLOCKED_UNCERTAIN_PRIOR_SEND"
+    },
+    {
+      "lead_id": "STROYDVOR-UG_RU",
+      "company": "СтройДвор-Юг",
+      "identity": "match",
+      "contact_status": "EVIDENCED_PUBLIC_BUSINESS_CONTACT",
+      "last_send": "success",
+      "quality": 98,
+      "hard_gate_pass": false,
+      "exclusion_reason": "BLOCKED_PRIOR_SEND"
+    },
+    {
+      "lead_id": "MEGALIT-KRD_RU",
+      "company": "Мегалит Краснодар",
+      "identity": "match",
+      "contact_status": "EVIDENCED_PUBLIC_BUSINESS_CONTACT",
+      "last_send": "uncertain_no_smtp_proof",
+      "quality": 98,
+      "hard_gate_pass": false,
+      "exclusion_reason": "BLOCKED_UNCERTAIN_PRIOR_SEND"
+    },
+    {
+      "lead_id": "ZAVODATOM_RU",
+      "company": "Завод Атом",
+      "identity": "match",
+      "contact_status": "EVIDENCED_PUBLIC_BUSINESS_CONTACT",
+      "last_send": "success",
+      "quality": 98,
+      "hard_gate_pass": false,
+      "exclusion_reason": "BLOCKED_PRIOR_SEND"
+    }
+  ]
+}

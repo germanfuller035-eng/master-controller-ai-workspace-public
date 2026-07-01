@@ -1,0 +1,91 @@
+{
+  "schema": "growth_os.positioning.v1",
+  "version": "1.0",
+  "note": "Positioning per priority product. claims must be Product-OS-supportable; prohibited_claims enforced by validator. Mini Audit reflects confirmed 10000 RUB price, evidence-backed findings, NOT redesign/implementation/guaranteed growth.",
+  "positionings": [
+    {
+      "positioning_id": "pos_mini_audit", "product_id": "mini_audit", "segment_id": "seg_weak_site",
+      "category": "Fixed-price website request-path audit",
+      "problem": "Your website gets visitors but few turn into requests, and it is unclear why.",
+      "alternative": ["do nothing", "ask a freelancer for opinion", "buy a full redesign blindly"],
+      "differentiation": "Evidence-backed findings on the path-to-request, fixed price, fast turnaround — diagnosis before spend.",
+      "value_proposition": "For 10 000 ₽ you get a concrete, evidence-based list of what blocks requests on your site and the prioritized first steps to fix it.",
+      "proof": ["sample audit structure", "evidence/citation methodology", "Product OS mini_audit deliverables"],
+      "limitations": ["not a redesign", "not implementation", "does not guarantee more requests/revenue", "findings depend on what is publicly observable"],
+      "claims": ["evidence-backed findings", "fixed 10000 RUB price", "fast turnaround (Day 0-2)", "prioritized recommendations"],
+      "prohibited_claims": ["guaranteed growth", "guaranteed more requests", "we will rebuild your site", "we implement the fixes", "ranking #1 in search"],
+      "price_status": "CONFIRMED 10000 RUB (approved)",
+      "status": "READY"
+    },
+    {
+      "positioning_id": "pos_digital_presence_check", "product_id": "digital_presence_check", "segment_id": "seg_no_site_local",
+      "category": "Online presence map for low-maturity businesses",
+      "problem": "Customers cannot find you online and you have no owned place to send them.",
+      "alternative": ["rely on word of mouth", "platform-only presence", "DIY profile setup"],
+      "differentiation": "Maps WHERE you exist online (channels) and the first owned-presence step — distinct from a website audit.",
+      "value_proposition": "A clear picture of where your business shows up online, the gaps, and the recommended first owned-presence step.",
+      "proof": ["Product OS digital_presence_check deliverables", "presence map sample"],
+      "limitations": ["not a website audit", "not implementation", "price not yet approved", "no guaranteed visibility"],
+      "claims": ["presence map", "gap list", "recommended next step"],
+      "prohibited_claims": ["guaranteed visibility", "guaranteed customers", "we manage your profiles"],
+      "price_status": "UNKNOWN (owner to set)",
+      "status": "DRAFT"
+    },
+    {
+      "positioning_id": "pos_full_business_audit", "product_id": "full_business_audit", "segment_id": "seg_good_site_weak_funnel",
+      "category": "Comprehensive multi-channel business audit",
+      "problem": "Your business underperforms across several areas and you need a complete diagnosis, not a single-page check.",
+      "alternative": ["mini audit only", "agency engagement", "internal review"],
+      "differentiation": "Greater depth and breadth than Mini Audit — multiple channels, deeper evidence.",
+      "value_proposition": "A thorough, evidence-based assessment across your channels with prioritized recommendations.",
+      "proof": ["Product OS full_business_audit deliverables"],
+      "limitations": ["not implementation", "deeper = more owner input", "price not approved", "no guaranteed outcomes"],
+      "claims": ["multi-channel depth", "evidence-based", "prioritized roadmap"],
+      "prohibited_claims": ["guaranteed turnaround", "guaranteed revenue", "we fix everything"],
+      "price_status": "UNKNOWN",
+      "status": "DRAFT"
+    },
+    {
+      "positioning_id": "pos_start_page_sprint", "product_id": "start_page_sprint", "segment_id": "seg_maps_directory_only",
+      "category": "Single owned start page, fast",
+      "problem": "You have nowhere of your own to send interested people.",
+      "alternative": ["platform profile only", "full website build", "do nothing"],
+      "differentiation": "One focused owned page, quickly — a starting point, not a full site.",
+      "value_proposition": "A single, clear owned page so you have a credible place to send prospects.",
+      "proof": ["Product OS start_page_sprint deliverables"],
+      "limitations": ["single page only", "not a full website", "price not approved"],
+      "claims": ["one owned page", "fast", "clear CTA"],
+      "prohibited_claims": ["full website", "guaranteed leads", "SEO ranking"],
+      "price_status": "UNKNOWN",
+      "status": "DRAFT"
+    },
+    {
+      "positioning_id": "pos_landing_sprint", "product_id": "landing_sprint", "segment_id": "seg_good_site_weak_funnel",
+      "category": "Dedicated conversion landing page",
+      "problem": "You promote an offer but have no dedicated page that converts.",
+      "alternative": ["send traffic to homepage", "full site", "do nothing"],
+      "differentiation": "A focused conversion page for a specific offer — distinct from a general start page or full site.",
+      "value_proposition": "A dedicated landing page built around one offer and one clear action.",
+      "proof": ["Product OS landing_sprint deliverables"],
+      "limitations": ["one offer focus", "not a full site", "requires a defined offer", "price not approved"],
+      "claims": ["offer-focused page", "clear conversion path"],
+      "prohibited_claims": ["guaranteed conversion rate", "guaranteed sales"],
+      "price_status": "UNKNOWN",
+      "status": "DRAFT"
+    },
+    {
+      "positioning_id": "pos_business_website", "product_id": "business_website", "segment_id": "seg_weak_site",
+      "category": "Full small-business website",
+      "problem": "You need a credible, complete web presence, not just one page.",
+      "alternative": ["template builder DIY", "freelancer", "agency"],
+      "differentiation": "A complete, scoped website with clear ownership and process — bounded scope vs open-ended agency work.",
+      "value_proposition": "A complete business website built to an agreed scope.",
+      "proof": ["Product OS business_website deliverables"],
+      "limitations": ["bounded scope", "needs content readiness", "price not approved", "not ongoing marketing"],
+      "claims": ["complete site", "agreed scope", "ownership transfer"],
+      "prohibited_claims": ["guaranteed traffic", "guaranteed leads", "unlimited revisions"],
+      "price_status": "UNKNOWN",
+      "status": "DRAFT"
+    }
+  ]
+}

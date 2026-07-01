@@ -1,0 +1,78 @@
+{
+  "schema": "revenue_os.proposal.v1",
+  "title": "Предложение: Сайт / каталог под заявки",
+  "client": "[client]",
+  "approval_state": "INTERNAL_REVIEW",
+  "send_allowed": false,
+  "current_situation": "Customers cannot understand range/terms/prices or leave a request.",
+  "verified_observations": [
+    {
+      "claim": "weak conversion path verified",
+      "type": "FACT",
+      "source": "https://good.test/funnel"
+    }
+  ],
+  "objectives": [
+    "address the verified problem with a scoped deliverable"
+  ],
+  "proposed_solution": {
+    "id": "business_website",
+    "name": "Business Website / Catalog",
+    "client_name": "Сайт / каталог под заявки"
+  },
+  "scope": [
+    "site/catalog structure",
+    "service/product pages",
+    "texts",
+    "trust blocks",
+    "request form",
+    "basic CRM/table",
+    "Telegram notifications"
+  ],
+  "deliverables": [
+    "site/catalog structure",
+    "service/product pages",
+    "texts",
+    "trust blocks",
+    "request form",
+    "basic CRM/table",
+    "Telegram notifications"
+  ],
+  "timeline": "2-4 weeks",
+  "price": {
+    "amount": null,
+    "amount_min": 180000,
+    "amount_max": 350000,
+    "currency": "RUB",
+    "type": "range",
+    "source": "CONFIRMED",
+    "status": "OWNER_TARGET",
+    "valid_from": null,
+    "valid_until": null,
+    "approved_by_owner": false,
+    "display": "180000–350000 RUB"
+  },
+  "responsibilities": [
+    "current presence evidence",
+    "scope confirmation",
+    "client content",
+    "client access",
+    "possible subcontractor"
+  ],
+  "exclusions": [
+    "paid ad management",
+    "guaranteed growth"
+  ],
+  "acceptance": [
+    "price OWNER_TARGET (NOT approved)",
+    "evidence gate PASS",
+    "scope valid",
+    "product readiness DRAFT"
+  ],
+  "next_step": "Internal only — product not client-ready.",
+  "validity": "14 days from owner approval",
+  "blockers": [
+    "product_DRAFT_not_client_ready",
+    "owner_price_approval_required"
+  ]
+}

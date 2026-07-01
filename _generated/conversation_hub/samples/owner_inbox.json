@@ -1,0 +1,59 @@
+{
+  "schema": "conversation_hub.owner_inbox.v1",
+  "mutates_canonical": false,
+  "queues": {
+    "needs_reply": [
+      "c01",
+      "conv_f02_email_duplicate",
+      "conv_f04_email_hard_bounce",
+      "conv_f05_auto_reply",
+      "conv_f08_price_question",
+      "conv_f09_meeting_request",
+      "conv_f13_referral_message",
+      "conv_f14_testimonial_permission",
+      "conv_f18_unknown_sender",
+      "conv_f19_telegram_owner_command",
+      "conv_f20_webform_consented",
+      "conv_f21_webform_missing_consent",
+      "conv_f32_max_future_envelope",
+      "conv_f33_whatsapp_future_envelope",
+      "conv_f35_renewal_request"
+    ],
+    "needs_approval": [],
+    "identity_conflict": [],
+    "opt_out_review": [
+      "conv_f06_explicit_opt_out",
+      "conv_f07_ambiguous_opt_out"
+    ],
+    "support_escalation": [
+      "conv_f10_support_request",
+      "c34",
+      "conv_f36_complaint_escalation"
+    ],
+    "billing_question": [
+      "conv_f12_billing_question"
+    ],
+    "incident": [
+      "conv_f11_critical_incident"
+    ],
+    "waiting_contact": [
+      "c24"
+    ],
+    "waiting_channel": [],
+    "stale_conversation": [],
+    "no_action": []
+  },
+  "counts": {
+    "needs_reply": 15,
+    "needs_approval": 0,
+    "identity_conflict": 0,
+    "opt_out_review": 2,
+    "support_escalation": 3,
+    "billing_question": 1,
+    "incident": 1,
+    "waiting_contact": 1,
+    "waiting_channel": 0,
+    "stale_conversation": 0,
+    "no_action": 0
+  }
+}

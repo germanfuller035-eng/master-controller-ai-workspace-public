@@ -1,0 +1,17 @@
+{
+  "captured_at_utc": "2026-06-18T12:18:54Z",
+  "drift_verdict": "EXPECTED_ORGANIC_ACTIVITY",
+  "drift_window_start": "2026-06-16T18:51:54Z",
+  "drift_window_end": "2026-06-18T10:15:50Z",
+  "server_timezone": "US/Eastern (EDT, UTC-4)",
+  "revisions": { "old": 66, "new": 90, "increments": 24, "explained": 24, "unexplained": 0, "gaps": 0, "direct_file_writes": 0, "multi_writer_revisions": 0 },
+  "events": [
+    { "timestamp": "2026-06-16T18:51:54Z", "event_type": "freeze", "entity_type": "store", "revision_after": 66, "writer": "verify", "source_service": "api", "classification": "EXPECTED_AUTOMATION", "evidence_source": "backup lead_pipeline_store.20260618_072634.json" },
+    { "timestamp": "2026-06-18T10:15:34Z", "event_type": "scheduled_run", "entity_type": "discovery_cycle", "writer": "mcworker", "source_service": "master-controller-discovery.service", "result": "success", "exec_status": 0, "classification": "EXPECTED_AUTOMATION", "evidence_source": "systemctl show ExecMainStartTimestamp/Result" },
+    { "timestamp": "2026-06-18T10:15:43Z", "event_type": "lead_create_batch", "entity_type": "lead", "entity_count": 12, "source": "osm_overpass", "status": "manual_review_product_routing", "writer": "verify_via_api", "classification": "EXPECTED_AUTOMATION", "evidence_source": "live store created_at" },
+    { "timestamp": "2026-06-18T10:15:50Z", "event_type": "store_persist", "entity_type": "store", "revision_after": 90, "writer": "verify", "source_service": "api", "classification": "EXPECTED_AUTOMATION", "evidence_source": "live store updated_at" },
+    { "timestamp": "2026-06-18T10:15:50Z", "event_type": "queue_persist", "entity_type": "queue", "queue_revision": 146, "jobs_total": 41, "jobs_created_today": 13, "classification": "EXPECTED_AUTOMATION", "evidence_source": "job_queue.json updated_at" }
+  ],
+  "send": { "ledger_entries": 7, "ledger_mtime": "2026-06-16T07:10:14Z", "new_sends_in_window": 0, "smtp_calls_in_window": 0, "autosend_enable_events": 0, "classification": "NO_8TH_SEND_METRIC_DEFINITION_ERROR" },
+  "anomalies": []
+}

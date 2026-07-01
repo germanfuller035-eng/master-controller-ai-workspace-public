@@ -1,0 +1,39 @@
+{
+  "invoice_id": "TEST_inv_T-005",
+  "deal_id": null,
+  "project_id": null,
+  "client_reference": "TEST_c05",
+  "business_unit_id": "mini_audit",
+  "number": "T-005",
+  "issue_date": null,
+  "due_date": null,
+  "currency": "RUB",
+  "subtotal": 150000,
+  "tax": 0,
+  "total": 150000,
+  "status": "DRAFT",
+  "payment_schedule": [
+    {
+      "payment_stage_id": "stg1",
+      "name": "Prepayment",
+      "percentage": 50,
+      "amount": 75000,
+      "due_condition": "on_issue",
+      "due_date": null,
+      "status": "EXPECTED"
+    },
+    {
+      "payment_stage_id": "stg2",
+      "name": "On delivery",
+      "percentage": 50,
+      "amount": 75000,
+      "due_condition": "on_delivery",
+      "due_date": null,
+      "status": "EXPECTED"
+    }
+  ],
+  "price_status": "OWNER_TARGET",
+  "evidence": null,
+  "test_only": true,
+  "revision": 1
+}

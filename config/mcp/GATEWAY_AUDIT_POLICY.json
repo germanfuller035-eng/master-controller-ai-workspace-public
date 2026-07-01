@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-26",
+  "session": "MASTER_CONTROLLER_MCP_GATEWAY_V1",
+  "audit_required": true,
+  "audit_root": "_generated/mcp_gateway_v1/synthetic_audit",
+  "event_log": "_generated/mcp_gateway_v1/synthetic_audit/events.jsonl",
+  "hash_algorithm": "sha256",
+  "hash_chain": true,
+  "redact_inputs": true,
+  "redact_outputs": true,
+  "do_not_log_fields": ["input.raw_content", "approval", "credential_material"],
+  "required_fields": ["sequence", "timestamp", "request_id", "task_id", "actor", "adapter_id", "action", "resource", "risk", "policy_decision", "result", "artifact_ids", "payload_hash", "previous_hash", "current_hash"]
+}

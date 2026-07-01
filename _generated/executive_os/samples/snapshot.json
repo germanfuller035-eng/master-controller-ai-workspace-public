@@ -1,0 +1,276 @@
+{
+  "schema": "executive_os.snapshot.v1",
+  "generated_at": "20260617_180000",
+  "source_commits": {
+    "ai_hq": "d4bf77f",
+    "revenue_os": "2ff079d",
+    "delivery_os": "0f642d1",
+    "finance_os": "9e8ec2f"
+  },
+  "projects": [
+    {
+      "project_id": "master_controller",
+      "status": "ACCEPTANCE",
+      "priority": "P0_CRITICAL",
+      "sensitive": false
+    },
+    {
+      "project_id": "telegram_master_controller",
+      "status": "ACTIVE_PRODUCTION",
+      "priority": "P0_CRITICAL",
+      "sensitive": false
+    },
+    {
+      "project_id": "android_master_controller",
+      "status": "ACCEPTANCE",
+      "priority": "P1_REVENUE",
+      "sensitive": false
+    },
+    {
+      "project_id": "mini_audit_10k",
+      "status": "ACTIVE_DEVELOPMENT",
+      "priority": "P1_REVENUE",
+      "sensitive": false
+    },
+    {
+      "project_id": "lead_hunter",
+      "status": "ACTIVE_DEVELOPMENT",
+      "priority": "P2_INFRASTRUCTURE",
+      "sensitive": false
+    },
+    {
+      "project_id": "obsidian_hq",
+      "status": "ACTIVE_DEVELOPMENT",
+      "priority": "P1_REVENUE",
+      "sensitive": false
+    },
+    {
+      "project_id": "reminder_secretary",
+      "status": "ACTIVE_DEVELOPMENT",
+      "priority": "P3_PRODUCTIVITY",
+      "sensitive": false
+    },
+    {
+      "project_id": "file_vault",
+      "status": "MAINTENANCE",
+      "priority": "P2_INFRASTRUCTURE",
+      "sensitive": false
+    },
+    {
+      "project_id": "revenue_os",
+      "status": "ACTIVE_DEVELOPMENT",
+      "priority": "P1_REVENUE",
+      "sensitive": false
+    },
+    {
+      "project_id": "kgbi_b2b_audit",
+      "status": "ACTIVE_DEVELOPMENT",
+      "priority": "P2_INFRASTRUCTURE",
+      "sensitive": false
+    },
+    {
+      "project_id": "edera_rest_mini_audit",
+      "status": "PAUSED",
+      "priority": "P3_PRODUCTIVITY",
+      "sensitive": false
+    },
+    {
+      "project_id": "lead_gen_test_jbi",
+      "status": "PAUSED",
+      "priority": "P3_PRODUCTIVITY",
+      "sensitive": false
+    },
+    {
+      "project_id": "chatgpt_pipeline",
+      "status": "ACTIVE_DEVELOPMENT",
+      "priority": "P3_PRODUCTIVITY",
+      "sensitive": false
+    },
+    {
+      "project_id": "backup_dr",
+      "status": "MAINTENANCE",
+      "priority": "P2_INFRASTRUCTURE",
+      "sensitive": false
+    },
+    {
+      "project_id": "local_ai_hq",
+      "status": "PLANNED",
+      "priority": "P4_RESEARCH",
+      "sensitive": false
+    },
+    {
+      "project_id": "cline_integration",
+      "status": "ACTIVE_DEVELOPMENT",
+      "priority": "P3_PRODUCTIVITY",
+      "sensitive": false
+    },
+    {
+      "project_id": "claude_code_integration",
+      "status": "ACTIVE_DEVELOPMENT",
+      "priority": "P3_PRODUCTIVITY",
+      "sensitive": false
+    },
+    {
+      "project_id": "legal_documents",
+      "status": "SENSITIVE_READ_ONLY",
+      "priority": "P5_ARCHIVE",
+      "sensitive": true
+    },
+    {
+      "project_id": "personal_assistant",
+      "status": "SENSITIVE_READ_ONLY",
+      "priority": "P5_ARCHIVE",
+      "sensitive": true
+    },
+    {
+      "project_id": "file_vault_red",
+      "status": "SENSITIVE_READ_ONLY",
+      "priority": "P5_ARCHIVE",
+      "sensitive": true
+    },
+    {
+      "project_id": "boxon",
+      "status": "PLANNED",
+      "priority": "P5_ARCHIVE",
+      "sensitive": false
+    },
+    {
+      "project_id": "kgbi_standalone",
+      "status": "PLANNED",
+      "priority": "P5_ARCHIVE",
+      "sensitive": false
+    },
+    {
+      "project_id": "project_maria",
+      "status": "PLANNED",
+      "priority": "P5_ARCHIVE",
+      "sensitive": false
+    },
+    {
+      "project_id": "strength_form_35",
+      "status": "PLANNED",
+      "priority": "P5_ARCHIVE",
+      "sensitive": false
+    },
+    {
+      "project_id": "ai_content_factory",
+      "status": "PLANNED",
+      "priority": "P5_ARCHIVE",
+      "sensitive": false
+    }
+  ],
+  "products": [
+    {
+      "product_id": "express_review",
+      "status": "ACTIVE"
+    },
+    {
+      "product_id": "mini_audit",
+      "status": "ACTIVE"
+    },
+    {
+      "product_id": "mini_audit_plus",
+      "status": "DRAFT"
+    },
+    {
+      "product_id": "full_business_audit",
+      "status": "DRAFT"
+    },
+    {
+      "product_id": "funnel_audit",
+      "status": "DRAFT"
+    },
+    {
+      "product_id": "process_comm_audit",
+      "status": "PLANNED"
+    },
+    {
+      "product_id": "implementation_sprint",
+      "status": "DRAFT"
+    },
+    {
+      "product_id": "start_page_sprint",
+      "status": "DRAFT"
+    },
+    {
+      "product_id": "landing_sprint",
+      "status": "DRAFT"
+    },
+    {
+      "product_id": "business_website",
+      "status": "DRAFT"
+    },
+    {
+      "product_id": "lead_system",
+      "status": "PLANNED"
+    },
+    {
+      "product_id": "ai_front_office",
+      "status": "PLANNED"
+    },
+    {
+      "product_id": "growth_support",
+      "status": "PLANNED"
+    },
+    {
+      "product_id": "digital_presence_check",
+      "status": "PLANNED"
+    },
+    {
+      "product_id": "owned_presence_pack",
+      "status": "PLANNED"
+    },
+    {
+      "product_id": "domain_recovery",
+      "status": "PLANNED"
+    },
+    {
+      "product_id": "audit_plus_prototype",
+      "status": "PLANNED"
+    },
+    {
+      "product_id": "prototype_preview",
+      "status": "PLANNED"
+    }
+  ],
+  "delivery": {
+    "status": "UNKNOWN (inject)",
+    "note": "see Delivery OS readiness"
+  },
+  "finance": {
+    "status": "UNKNOWN (inject)",
+    "note": "see Finance OS metrics"
+  },
+  "release": {
+    "tag": "v0.4.0-rc1",
+    "state": "no-send soak (FREEZE)",
+    "source": "release metadata (read-only)"
+  },
+  "risks": [],
+  "decisions": "see decision backlog",
+  "owner_actions": [],
+  "kpis": "see KPI tree",
+  "warnings": [
+    "missing: finance_metrics (inject for live values)",
+    "missing: delivery_readiness (inject for live values)"
+  ],
+  "freshness": {
+    "stamp": "20260617_180000",
+    "note": "projects/products from canonical indexes; live finance/delivery require injection"
+  },
+  "provenance": [
+    {
+      "field": "projects",
+      "source": "tools/ai_hq/lib/projects.mjs (seed)"
+    },
+    {
+      "field": "products",
+      "source": "tools/revenue_os/data/product_catalog.json"
+    },
+    {
+      "field": "release",
+      "source": "documented release metadata (no VPS call)"
+    }
+  ],
+  "conflicts": []
+}

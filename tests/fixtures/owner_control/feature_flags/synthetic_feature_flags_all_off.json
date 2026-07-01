@@ -1,0 +1,21 @@
+{
+  "synthetic": true,
+  "display_only": true,
+  "can_enable_flags": false,
+  "flags": [
+    {"id": "PRODUCTION_DEPLOY", "state": "OFF"},
+    {"id": "OUTBOUND_EMAIL", "state": "OFF"},
+    {"id": "OUTBOUND_SOCIAL", "state": "OFF"},
+    {"id": "AUTO_SAFE", "state": "OFF"},
+    {"id": "VOICE", "state": "OFF"},
+    {"id": "PAYMENTS", "state": "OFF"},
+    {"id": "PRODUCTION_DB_WRITE", "state": "OFF"}
+  ],
+  "evidence": [
+    {
+      "id": "ev-owner-control-synthetic",
+      "source": "synthetic_fixture",
+      "claim": "Local synthetic owner-control evidence."
+    }
+  ]
+}

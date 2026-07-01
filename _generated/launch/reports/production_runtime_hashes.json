@@ -1,0 +1,25 @@
+{
+  "schema": "launch.production_runtime_hashes.v1",
+  "note": "Phase 13 — live read-only SHA256 of deployed production runtime vs release 9d346f3 and consolidation 7ea6993. Secrets/canonical-data/logs/docs/offline-OS excluded.",
+  "captured_utc": "2026-06-17T19:33Z",
+  "vps": "195.96.132.82 (debian12)",
+  "release_commit": "9d346f3",
+  "consolidation_head": "7ea6993",
+  "files": [
+    { "path": "tools/mater_controller_api/src/server/index.mjs", "prod_sha256": "5853f84f11108c2df25509df08a9a9c69109751d8b79216276b0254f48e66bac", "release_9d346f3": "5853f84f11108c2df25509df08a9a9c69109751d8b79216276b0254f48e66bac", "consolidation_7ea6993": "5853f84f11108c2df25509df08a9a9c69109751d8b79216276b0254f48e66bac", "delta": "NO_DIFFERENCE" },
+    { "path": "tools/mater_controller_api/src/worker/index.mjs", "prod_sha256": "86358ac578f8be91d738c739d9771dcc72e12ba472b461732f474d2b85492239", "release_9d346f3": "86358ac578f8be91d738c739d9771dcc72e12ba472b461732f474d2b85492239", "consolidation_7ea6993": "86358ac578f8be91d738c739d9771dcc72e12ba472b461732f474d2b85492239", "delta": "NO_DIFFERENCE" },
+    { "path": "tools/telegram_gateway/api_only/index.mjs", "prod_sha256": "d6ad71460f8ade5477532cb2e1226790af4ab01812ebab57717ffd422ca14298", "consolidation_7ea6993": "d6ad71460f8ade5477532cb2e1226790af4ab01812ebab57717ffd422ca14298", "delta": "NO_DIFFERENCE" },
+    { "path": "tools/telegram_gateway/api_only/api_client.mjs", "prod_sha256": "4904d7a51f99117c5255d74b1bf306d14280ed6218d6928fedcbf4b1ce37eb7e", "consolidation_7ea6993": "4904d7a51f99117c5255d74b1bf306d14280ed6218d6928fedcbf4b1ce37eb7e", "delta": "NO_DIFFERENCE" },
+    { "path": "tools/telegram_gateway/api_only/mc_service.mjs", "prod_sha256": "5a09559c15ddeafebe32b2f3c99ee7754334094d3319edb436f3bd3295cb2523", "consolidation_7ea6993": "5a09559c15ddeafebe32b2f3c99ee7754334094d3319edb436f3bd3295cb2523", "delta": "NO_DIFFERENCE" },
+    { "path": "tools/telegram_gateway/api_only/views.mjs", "prod_sha256": "787d7544d5462f18aa659af308cddfe823dd79caff926a50cde3cb13e292a4dc", "consolidation_7ea6993": "787d7544d5462f18aa659af308cddfe823dd79caff926a50cde3cb13e292a4dc", "delta": "NO_DIFFERENCE" }
+  ],
+  "imap_runtime": { "execstart": "/opt/master-controller/tools/mater_controller_api/deploy/master-controller-imap-sync.sh", "stage": "stage1_readonly", "last_cycle_exit": 0, "delta": "NO_DIFFERENCE_EXPECTED" },
+  "result": {
+    "WHOLE_REPO_DEPLOYMENT_REQUIRED": "NO",
+    "MINIMAL_RUNTIME_DEPLOYMENT_SCOPE": "NONE",
+    "DATA_MIGRATION_REQUIRED": "NO",
+    "SERVICE_RESTART_REQUIRED": "NO",
+    "GATE_B_REQUIRED": "NO",
+    "PRODUCTION_RELEASE_MATCH": "EXACT (prod == 9d346f3 == 7ea6993 for all runtime files hashed)"
+  }
+}

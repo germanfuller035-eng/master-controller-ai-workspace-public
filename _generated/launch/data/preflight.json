@@ -1,0 +1,25 @@
+{
+  "schema": "launch.preflight.v1",
+  "note": "Phase 1 — local release-candidate preflight on feature/controlled-production-launch-v1 (HEAD 7ea6993, == consolidation candidate). Offline only; no production touched.",
+  "worktree_clean": "YES (only _generated/launch/ untracked work product)",
+  "head": "7ea6993",
+  "head_match": "YES",
+  "full_chain_linear": "YES",
+  "ancestors_verified": "14/14 OS heads",
+  "lost_commits": 0,
+  "duplicate_canonical_writers": 0,
+  "tracked_live_secrets": 0,
+  "real_data_in_fixtures": 0,
+  "master_offline_validation": "17 suites PASS, 0 required-failed, android_unit EXPLICIT_NOT_RUN",
+  "consolidation_validate_all": "OK blockers=0 dimensions=8",
+  "clean_clone": "PROVEN in consolidation block (bundle on consolidation worktree disk, gitignored)",
+  "result": {
+    "LOCAL_CANDIDATE_VALID": "YES",
+    "HEAD_MATCH": "YES",
+    "FULL_CHAIN_LINEAR": "YES",
+    "LOST_COMMITS": 0,
+    "DUPLICATE_CANONICAL_WRITERS": 0,
+    "TRACKED_LIVE_SECRETS": 0,
+    "REAL_DATA_IN_FIXTURES": 0
+  }
+}

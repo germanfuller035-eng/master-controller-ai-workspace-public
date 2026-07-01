@@ -1,0 +1,11 @@
+{
+  "scenario": "A",
+  "production_affected": false,
+  "name": "Healthy synthetic system",
+  "ok": true,
+  "steps": [
+    "all checks HEALTHY (synthetic, marked)",
+    "no alerts",
+    "release gate evaluated"
+  ]
+}

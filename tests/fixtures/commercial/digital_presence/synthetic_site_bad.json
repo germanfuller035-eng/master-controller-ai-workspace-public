@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "synthetic": true,
+  "site_id": "synthetic_site_bad",
+  "analysis_mode": "LOCAL_SYNTHETIC_FIXTURE",
+  "signals": {
+    "website_problem": 5,
+    "lead_capture_problem": 2,
+    "response_handling_problem": 1,
+    "trust_problem": 3,
+    "audit_uncertainty": 1
+  },
+  "evidence": [
+    {
+      "id": "ev-site-bad-1",
+      "source": "synthetic_site_fixture",
+      "claim": "Synthetic site fixture marks conversion and trust proof gaps."
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "external_system_accessed": false,
+  "kind": "automotive_task",
+  "request_id": "syn_vehicle_alpha",
+  "synthetic": true,
+  "task": "prepare maintenance checklist draft",
+  "vehicle_label": "synthetic_vehicle_alias",
+  "vehicle_transaction_requested": false
+}

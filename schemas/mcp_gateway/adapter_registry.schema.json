@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MCP Gateway Adapter Registry",
+  "type": "object",
+  "required": ["schema_version", "adapters", "contract_only_adapters"],
+  "properties": {
+    "schema_version": {"type": "integer"},
+    "adapters": {"type": "array", "items": {"type": "object", "required": ["id", "lifecycle", "production_enabled", "max_risk", "allowed_actions"]}},
+    "contract_only_adapters": {"type": "array", "items": {"type": "object", "required": ["id", "lifecycle", "implementation", "production_enabled"]}}
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "intent_id": "synthetic-voice-risky-alpha",
+  "intent_type": "risky_send",
+  "risky": true,
+  "synthetic": true,
+  "transcript": "Send the synthetic draft"
+}

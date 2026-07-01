@@ -1,0 +1,32 @@
+{
+  "matrix_version": "android_functional_test_matrix_0.8.0_acceptance_lab",
+  "production_api": "https://195-96-132-82.sslip.io/api/v1",
+  "evidence": "auto Compose scan + on-device visible emulator paired to production",
+  "defects_found_and_fixed_rc4": [
+    {"class": "FAKE_STATUS", "file": "settings/SettingsScreen.kt:29", "fix": "live health probe (connected true/false/checking)"},
+    {"class": "DANGEROUS_NO_CONFIRM", "file": "settings/SettingsScreen.kt:53", "fix": "AlertDialog confirm before unpair"},
+    {"class": "MISSING_TESTTAG", "file": "push/PushSettingsScreen.kt + settings theme chips", "fix": "push_switch_*/push_severity_*/theme_chip_* tags"}
+  ],
+  "control_summary": {
+    "action_kinds": ["NAVIGATION", "API_READ", "API_WRITE", "LOCAL_TOGGLE", "EXTERNAL_LINK", "REFRESH", "DECORATIVE_DISABLED"],
+    "dangerous_controls": 23,
+    "dangerous_gated": 23,
+    "dangerous_ungated_remaining": 0,
+    "note": "unpair was the only ungated dangerous control; now gated by confirmation dialog"
+  },
+  "screen_matrix": [
+    {"screen": "Today", "control": "card_command_center", "action": "NAVIGATION", "status": "PASS"},
+    {"screen": "Today", "control": "card_campaigns", "action": "NAVIGATION", "status": "PASS"},
+    {"screen": "CommandCenter", "control": "screen", "action": "API_READ", "endpoint": "GET /next-actions,/command-brief", "status": "PASS", "live_evidence": "HEALTH_RECHECK/recovered rendered"},
+    {"screen": "Reliability", "control": "autopilot_OBSERVE/PREPARE/MANAGED", "action": "API_WRITE", "endpoint": "POST /autopilot/mode", "reread": "GET /autopilot", "status": "PASS"},
+    {"screen": "Reliability", "control": "overview", "action": "API_READ", "endpoint": "GET /reliability", "status": "PASS"},
+    {"screen": "Cost", "control": "overview", "action": "API_READ", "endpoint": "GET /costs", "status": "PASS", "note": "UNKNOWN != 0"},
+    {"screen": "Backup", "control": "overview+drill", "action": "API_READ", "endpoint": "GET /backups/status,/restore-drill", "status": "PASS"},
+    {"screen": "Push", "control": "status+switches", "action": "API_READ+WRITE", "endpoint": "GET/POST /push/*", "status": "PASS", "note": "CREDENTIAL_REQUIRED honest"},
+    {"screen": "Incidents", "control": "btn_ack", "action": "API_WRITE", "endpoint": "POST /incidents/{id}/acknowledge", "reread": "GET /incidents", "status": "PASS"},
+    {"screen": "Notifications", "control": "mark_read", "action": "API_WRITE", "endpoint": "POST /notifications/{id}/read", "reread": "GET /notifications", "status": "PASS"},
+    {"screen": "Settings", "control": "btn_unpair", "action": "DESTRUCTIVE_LOCAL", "status": "PASS", "note": "now confirmation-gated"},
+    {"screen": "Settings", "control": "conn_status", "action": "API_READ", "endpoint": "GET /health", "status": "PASS", "note": "now live, was hardcoded"},
+    {"screen": "LeadDetail", "control": "btn_send_email", "action": "DANGEROUS", "status": "GATED", "note": "2-step + server no-send"}
+  ]
+}

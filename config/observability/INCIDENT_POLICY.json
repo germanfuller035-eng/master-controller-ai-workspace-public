@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "session": "AGENT_SANDBOX_OBSERVABILITY_AND_EVALS_V1",
+  "local_synthetic_only": true,
+  "required_fields": [
+    "incident_id",
+    "trace_id",
+    "task_id",
+    "severity",
+    "policy_decision",
+    "verification",
+    "final_status"
+  ],
+  "notify_external": false
+}

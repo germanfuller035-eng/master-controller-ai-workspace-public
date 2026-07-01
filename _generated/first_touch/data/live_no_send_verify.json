@@ -1,0 +1,112 @@
+{
+  "harness": "first_touch_live_no_send_verify",
+  "store_path": "D:\\AI_WORKSPACE_WORKTREES\\first-touch-strategist-controlled-pilot-v1\\13_sales\\lead_pipeline_store.json",
+  "summary": {
+    "leads_scored": 50,
+    "pilot_eligible": 7,
+    "top_5_count": 5,
+    "top_3_count": 3,
+    "recommended_pilot": "BETON-MASTERS_RU",
+    "controlled_send_gate": "DISABLED",
+    "transport_enabled": false,
+    "no_send": true,
+    "scope": "COMMERCIAL_REAL_ONLY"
+  },
+  "candidates_overview": {
+    "leads_scored": 50,
+    "pilot_eligible": 7,
+    "top_5": [
+      {
+        "lead_id": "BETON-MASTERS_RU",
+        "company": "Бетон-Мастер",
+        "hook_type": "CONTACT_DISCOVERY_FRICTION",
+        "quality_score": 98,
+        "score": 84
+      },
+      {
+        "lead_id": "DKBI_RU",
+        "company": "ДКБИ",
+        "hook_type": "WEAK_WEBSITE",
+        "quality_score": 98,
+        "score": 84
+      },
+      {
+        "lead_id": "GBIRESURS_RU",
+        "company": "ГБИ Ресурс",
+        "hook_type": "REQUEST_PATH_FRICTION",
+        "quality_score": 98,
+        "score": 84
+      },
+      {
+        "lead_id": "KZ-JBI_RU",
+        "company": "Краснодарский Завод ЖБИ",
+        "hook_type": "WEAK_WEBSITE",
+        "quality_score": 98,
+        "score": 84
+      },
+      {
+        "lead_id": "MEGALIT-KRD_RU",
+        "company": "Мегалит Краснодар",
+        "hook_type": "WEAK_WEBSITE",
+        "quality_score": 98,
+        "score": 84
+      }
+    ],
+    "recommended_pilot": "BETON-MASTERS_RU",
+    "excluded_reason_histogram": {
+      "MISSING_CONTACT": 9,
+      "MISSING_REAL_AUDIT": 42,
+      "REJECTED": 9,
+      "CONTACT_NOT_EVIDENCED": 10,
+      "TEST_ONLY": 2
+    }
+  },
+  "recommended_artifact": {
+    "lead_id": "BETON-MASTERS_RU",
+    "status": "QA_PASSED",
+    "hook_type": "CONTACT_DISCOVERY_FRICTION",
+    "quality": {
+      "total_score": 98,
+      "gate_result": "PASS"
+    },
+    "compliance_gate": "PASS",
+    "deliverability_status": "READY_NO_SEND",
+    "subject_variant_count": 3,
+    "body_variant_count": 2,
+    "uniqueness": {
+      "max_similarity_to_other_drafts": 0,
+      "duplicate_risk": "LOW"
+    },
+    "content_hash": "08d2ed71976f61c9dcb332fac3751ade",
+    "no_send": true
+  },
+  "no_send_invariants": {
+    "summary_no_send": true,
+    "summary_transport_enabled": true,
+    "summary_controlled_send_gate": "DISABLED",
+    "candidates_no_send": true,
+    "artifact_no_send": true,
+    "artifact_status": "QA_PASSED",
+    "artifact_deliverability": "READY_NO_SEND",
+    "artifact_smtp_probing": false
+  },
+  "ledger_store_before": {
+    "store": "01ba740f63acbdd4bad4682342cdc2d23570d69df2b5c33ddc2bca99e8d09dc6",
+    "send_ledger": "81fe6b76fbdd8d2790330467182e45c95bfeaa7b0e71fdd5b0ef8ac811901884",
+    "send_ledger_lines": 1,
+    "email_ledger": "ABSENT",
+    "email_ledger_lines": 0
+  },
+  "ledger_store_after": {
+    "store": "01ba740f63acbdd4bad4682342cdc2d23570d69df2b5c33ddc2bca99e8d09dc6",
+    "send_ledger": "81fe6b76fbdd8d2790330467182e45c95bfeaa7b0e71fdd5b0ef8ac811901884",
+    "send_ledger_lines": 1,
+    "email_ledger": "ABSENT",
+    "email_ledger_lines": 0
+  },
+  "LEDGERS_AND_STORE_UNCHANGED": true,
+  "REAL_OUTBOUND_MESSAGES": 0,
+  "SMTP_CALLS": 0,
+  "EMAILS_SENT": 0,
+  "verdict": "PASS"
+}

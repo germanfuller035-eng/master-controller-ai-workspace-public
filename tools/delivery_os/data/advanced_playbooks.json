@@ -1,0 +1,58 @@
+{
+  "schema": "delivery_os.advanced_playbooks.v1",
+  "version": "1.0",
+  "note": "Lead System and AI Front Office require architectural specs beyond simple milestones. Both remain DRAFT/PLANNED; readiness not auto-elevated.",
+  "lead_system": {
+    "product_id": "lead_system", "readiness": "PLANNED",
+    "purpose": "Deliver a request-capture + processing system for a client (forms, routing, notifications, basic handling).",
+    "mandatory_architecture": [
+      "one canonical source of truth",
+      "API-only writers (no direct store writes)",
+      "approval gate before any client send",
+      "no guessed contacts",
+      "no autosend by default",
+      "audit trail for every state change",
+      "idempotency on writes",
+      "rollback capability"
+    ],
+    "scope_areas": ["lead sources", "qualification", "evidence", "deduplication", "product routing", "audit generation", "draft generation", "approval", "communication", "reply monitoring", "follow-up", "reporting", "safety", "opt-out", "backup", "monitoring"],
+    "client_prerequisites": ["company_information", "contacts", "process_descriptions", "crm_access (reference only)", "approval_contacts"],
+    "deployment_options": [
+      {"option": "client-owned instance", "note": "client infra; we configure"},
+      {"option": "managed", "note": "requires explicit future packaging decision; NOT a reuse of Master Controller production runtime"}
+    ],
+    "explicit_constraint": "Do NOT reuse Master Controller production runtime as a generic client deployment without an explicit future packaging decision.",
+    "risk_matrix": [
+      {"risk": "duplicate architecture vs Master Controller", "probability": "high", "impact": "high", "mitigation": "reference architecture + packaging decision first"},
+      {"risk": "security failure (open writers)", "probability": "medium", "impact": "high", "mitigation": "API-only + approval gate + audit"},
+      {"risk": "autosend / unapproved contact", "probability": "medium", "impact": "high", "mitigation": "autosend BLOCKED default + opt-out"},
+      {"risk": "guessed contacts", "probability": "medium", "impact": "high", "mitigation": "evidence gate, no guessing"}
+    ],
+    "security_checklist": ["secrets only in approved store", "no embedded credentials", "API auth", "audit log", "backup", "opt-out honored", "rollback tested"],
+    "acceptance_tests": ["no direct store write path", "approval gate enforced", "autosend blocked", "opt-out suppresses all channels", "idempotent re-run", "rollback works"]
+  },
+  "ai_front_office": {
+    "product_id": "ai_front_office", "readiness": "PLANNED",
+    "purpose": "AI-assisted handling of incoming requests/communication (intake, classification, draft replies — owner-approved).",
+    "capabilities": ["intake", "classification", "FAQs", "conversation routing", "draft replies", "owner approval", "appointment/request routing", "CRM/API integration", "analytics"],
+    "mandatory": [
+      "no autonomous client communication without explicit product policy",
+      "data privacy",
+      "opt-out shared across channels",
+      "escalation to human",
+      "human review of drafts",
+      "logging",
+      "backup",
+      "failure handling / graceful degradation"
+    ],
+    "privacy_requirements": ["no PII in logs beyond necessity", "consent/opt-out", "data retention policy", "no secrets in prompts"],
+    "client_prerequisites": ["company_information", "contacts", "process_descriptions", "approval_contacts"],
+    "readiness_note": "Remains DRAFT/PLANNED until evidence supports readiness (no autonomous sending capability built).",
+    "risk_matrix": [
+      {"risk": "autonomous send to client", "probability": "low", "impact": "critical", "mitigation": "owner approval mandatory; send_allowed=false default"},
+      {"risk": "privacy breach", "probability": "medium", "impact": "high", "mitigation": "privacy requirements + escalation"},
+      {"risk": "wrong classification", "probability": "medium", "impact": "medium", "mitigation": "human review"}
+    ],
+    "acceptance_tests": ["no autonomous client send", "opt-out respected", "human review gate present", "privacy checklist passes", "failure handling present"]
+  }
+}

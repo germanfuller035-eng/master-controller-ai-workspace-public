@@ -1,0 +1,21 @@
+{
+  "approvals_replayed": false,
+  "outbound_replayed": false,
+  "owner_review_required": true,
+  "payments_replayed": false,
+  "pending_actions": [
+    {
+      "id": "SYNTH-ACTION-001",
+      "risk": "R4",
+      "state": "blocked_pending_owner_gate"
+    },
+    {
+      "id": "SYNTH-ACTION-002",
+      "risk": "R5",
+      "state": "blocked_pending_strong_owner_gate"
+    }
+  ],
+  "production_writes_replayed": false,
+  "session_id": "synthetic-restart-v1",
+  "synthetic": true
+}

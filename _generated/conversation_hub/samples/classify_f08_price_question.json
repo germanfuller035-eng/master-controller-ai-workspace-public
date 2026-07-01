@@ -1,0 +1,12 @@
+{
+  "classification_id": "cls_f08",
+  "message_id": "f08",
+  "primary_intent": "price_question",
+  "secondary_intents": [],
+  "urgency": "P2_NORMAL",
+  "confidence": 0.8,
+  "rules_triggered": [
+    "price_question"
+  ],
+  "manual_review": false
+}

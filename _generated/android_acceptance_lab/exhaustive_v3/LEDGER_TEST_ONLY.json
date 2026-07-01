@@ -1,0 +1,25 @@
+{
+  "screen": "test_only",
+  "anchor": "test_only",
+  "title_ru": "Тестовые коммерческие записи",
+  "app_version": "0.8.0-rc7 (code 31) [debug под тестом; runtime conv-change rebuild]",
+  "session": "2026-06-23 live AVD a56lab re-verification, API token valid, health ok",
+  "backend": "prod VPS https://195-96-132-82.sslip.io/api/v1",
+  "nav": "tab_today -> card_commercial -> scroll -> cs_test_only (центрирован) -> anchor=test_only",
+  "api_truth": {
+    "endpoint": "/commercial/technical-acceptance",
+    "test_only_opportunities": 0, "test_only_offers": 0, "test_only_deals": 0,
+    "test_only_handoffs": 0, "test_only_projects": 0, "test_only_invoice_drafts": 0, "test_only_payments": 0,
+    "excluded_from_business_kpi": true
+  },
+  "ui_vs_api": "MATCH: UI показал Возможности/Предложения/Сделки/Передачи/Проекты/Счета (тест) = 0; 'Исключены из бизнес-показателей: да' (==excluded_from_business_kpi=true). Badge 'TEST — не учитывается в выручке'.",
+  "controls": [
+    {"id": "CTRL-0306", "sel": "to_badge", "type": "AssistChip DECORATIVE_OR_STATUS", "status": "PASS_DISABLED_WITH_REASON", "evidence": "AssistChip enabled=false (onClick={} disabled), text 'TEST — не учитывается в выручке'. tap @401,542 no-op, anchor STILL test_only. Статусный декоративный чип — корректно disabled."},
+    {"id": "CTRL-0307", "sel": "to_badge", "type": "SectionCard NAVIGATION(plan)", "status": "PASS_VISIBLE_ENABLED", "evidence": "to_badge — единственный testTag на экране (тот же узел, что 0306). НЕ навигирует (disabled chip, не карточка). tap no-op, anchor STILL test_only. regen-дубль типа SectionCard; фактически нет отдельной nav-карточки to_badge."}
+  ],
+  "totals": {"SCREEN_CONTROLS_TOTAL": 2, "EXECUTED": 2, "PASSED": 2, "FAILED": 0, "UNEXECUTED": 0, "UNKNOWN": 0},
+  "test_only_isolation": "Экран — диагностический TEST_ONLY view. На проде все commercial test_only_* = 0. Owner production (includeTest=false) везде 0 (events/notifications/incidents/decisions/campaigns/brief). Acceptance (includeTest=true) ещё содержит owner_center fixtures (4 events/4 notif/1 incident/1 campaign run_id=acceptance_v3) — ждут финального cleanup по SSH.",
+  "controls_extra_back_refresh": "screen.transport.control.back -> commercial_summary OK; screen.transport.control.refresh -> reread, anchor сохранён (общий scaffold с transport/conversations).",
+  "safety": {"CLIENT_MESSAGES_SENT": 0, "SMTP_CALLS": 0, "FOLLOWUPS_SENT": 0, "PAYMENT_OPERATIONS": 0, "mutations": 0},
+  "status": "CLEAN"
+}

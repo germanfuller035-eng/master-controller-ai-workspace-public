@@ -1,0 +1,27 @@
+[Unit]
+Description=Master Controller Telegram bot (API-only)
+After=network-online.target master-controller-api.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=mctelegram
+Group=mctelegram
+WorkingDirectory=/opt/master-controller/tools/telegram_gateway/api_only
+EnvironmentFile=/etc/master-controller/telegram.env
+Environment=MATER_API_BASE=https://195-96-132-82.sslip.io/api/v1
+ExecStart=/usr/bin/node index.mjs
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=15
+KillSignal=SIGTERM
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+MemoryMax=160M
+TasksMax=32
+# no ReadWritePaths → cannot write canonical dir (owned by masterctl, 0750)
+
+[Install]
+WantedBy=multi-user.target

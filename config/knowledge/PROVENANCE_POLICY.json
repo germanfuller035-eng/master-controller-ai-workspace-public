@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-26",
+  "session": "KNOWLEDGE_MEMORY_QDRANT_DOCLING_V1",
+  "provenance_required": true,
+  "mandatory_fields": ["provenance_id", "artifact_id", "source_id", "source_uri", "retrieved_at", "retrieval_method", "confidence"],
+  "allowed_retrieval_methods": ["local_synthetic_fixture", "owner_supplied_future", "approved_read_only_future"],
+  "minimum_confidence": 0.5,
+  "source_date_required_for_temporal_claims": true,
+  "retain_source_hash": true,
+  "direct_memory_write_from_provenance": "DENY"
+}

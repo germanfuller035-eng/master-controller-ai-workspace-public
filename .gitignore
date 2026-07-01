@@ -1,0 +1,245 @@
+# ============================================================
+# AI_WORKSPACE .gitignore
+# Updated: 2026-05-26 — Git Hygiene Audit
+# Backup: .gitignore.bak_2026-05-26
+# ============================================================
+
+# --- Secrets: never commit any .env ---
+.env
+.env.*
+*.env
+**/.env
+
+# Project-specific .env locations (explicit for safety)
+tools/communication_monitor/.env
+tools/telegram_gateway/.env
+13_sales/daily_lead_factory/.env
+
+# --- Secrets: SSH keys, certificates, private keys ---
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+secrets.*
+
+# --- Credential/token wildcard patterns ---
+*token*
+*password*
+
+# --- VPN / Xray / 3X-UI specific ---
+*vless*
+*xray*
+*3xui*
+*webbasepath*
+
+# --- AI_SECRETS folder (outside workspace — D:\AI_SECRETS) ---
+AI_SECRETS/
+../AI_SECRETS/
+
+# ============================================================
+# GIT HYGIENE — ADDED 2026-05-26
+# ============================================================
+
+# --- Node modules (largest noise source) ---
+node_modules/
+**/node_modules/
+
+# --- Archive files ---
+*.zip
+*.7z
+*.rar
+*.tar
+*.gz
+
+# --- Backup files ---
+*.bak
+*.bak_*
+*_backup*
+*_backup_*
+*.backup
+*.BACKUP
+
+# --- Temp / scratch / diagnostic root files ---
+_diag_*.txt
+_diag_*.json
+_diag_*.ps1
+_phase1_diag.txt
+_smoke_out.txt
+_tmp_*.txt
+_import_out.txt
+_backup_finalize_result.json
+_mini_audit_diag_result.json
+
+# --- Log files ---
+*.log
+*.tmp
+*.pyc
+__pycache__/
+
+# --- Manifest and checksum files (generated) ---
+*_manifest.txt
+*.sha256.txt
+
+# --- Cache / temp directories ---
+.cache/
+cache/
+tmp/
+temp/
+
+# --- Obsidian local settings (UI state, not content) ---
+.obsidian/
+
+# --- Generated dashboard state (auto-rebuilt by tools) ---
+09_dashboards/dashboard_state.json
+09_dashboards/dashboard_state.bak_*.json
+
+# --- 00_IMPORTS: large ChatGPT export raw data ---
+00_IMPORTS/chatgpt_official_export_raw/
+00_IMPORTS/chatgpt_official_export_extracted/
+
+# --- 99_backups / 00_BACKUPS — local backup staging areas ---
+99_backups/
+00_BACKUPS/
+99_EXPORTS/
+
+# --- OS artifacts ---
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# NOTE: D:\AI_BACKUPS is OUTSIDE the repository (D:\AI_WORKSPACE)
+# and is never tracked by git — no rule needed, confirmed safe.
+
+# ============================================================
+# GIT IGNORE FINAL HARDENING — 2026-05-26
+# ============================================================
+
+# Root temp/fix/diag scripts (scratch files at repo root)
+_fix_*.mjs
+_diag_*.mjs
+_batch_*.mjs
+_tmp_*.mjs
+_temp_*.mjs
+_test_*.mjs
+output.json
+
+# Raw downloaded/generated html snapshots
+*homepage.html
+*_homepage.html
+*_page.html
+
+# High-risk local infra contour — HOLD, do not commit
+bonding_vpn/
+05_security/vps_access_register.md
+
+# Real lead datasets / runtime sales data — do not commit REAL leads
+13_sales/daily_lead_factory/input/*REAL*.csv
+13_sales/daily_lead_factory/input/*real*.csv
+13_sales/daily_lead_factory/input/*leads*.csv
+!13_sales/daily_lead_factory/input/*template*.csv
+!13_sales/daily_lead_factory/input/*example*.csv
+
+# Runtime generated queues/state (already declared above, explicit path repeated for clarity)
+# 09_dashboards/dashboard_state.json  ← already covered at line 93 
+# =========================
+# Secrets / credentials
+# =========================
+.env
+.env.*
+!.env.example
+AI_SECRETS/
+**/AI_SECRETS/
+*secret*
+*password*
+*token*
+*credentials*
+# Android source files that match the broad secret patterns above but contain NO secrets
+# (Keystore-API token STORAGE class — only pref key names, never token values). Tracked so a
+# clean checkout of the branch compiles.
+!apps/mater_controller_android/**/SecureTokenStore.kt
+!apps/mater_controller_android/**/TokenRefresher.kt
+
+# =========================
+# Node / dependencies
+# =========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# =========================
+# Backups
+# =========================
+*.bak
+*.bak*
+**/*.bak
+**/*.bak*
+**/_backups/
+13_sales/_backups/
+00_BACKUPS/
+11_backup/
+
+# =========================
+# Temp / sandbox / generated tests
+# =========================
+tmp/
+**/tmp/
+tools/tests/tmp/
+tools/tests/**/tmp/
+*.tmp
+
+# =========================
+# Logs / runtime
+# =========================
+*.log
+logs/
+**/logs/
+events_log.json
+telegram_queue.json
+daily_report.json
+.runtime/
+var/local/
+*.local.json
+*.local.jsonl
+*.writelock
+tools/mater_controller_api/.mater_controller_api.pid
+tools/mater_controller_api/.mater_controller_api.lock
+tools/mater_controller_api/data/api_heartbeat.json
+tools/mater_controller_api/data/devices.json
+tools/mater_controller_api/data/pairing.json
+13_sales/job_queue.json
+
+# Yandex mail read-only runtime snapshots and allowlists contain private headers.
+data/yandex_mail_allowlist.json
+data/yandex_mail_stage1_headers.json
+data/yandex_mail_stage1_state.json
+data/events_log.json
+tools/communication_monitor/yandex_mail_imap_read_log.md
+
+# =========================
+# Generated dashboard/runtime state
+# =========================
+09_dashboards/dashboard_state.json
+
+# =========================
+# OS / editor junk
+# =========================
+.DS_Store
+Thumbs.db
+.vscode/.ropeproject
+_release_backup_*/
+_generated/ai_hq/test_out/
+
+# AI HQ backup blobs
+*.gitbundle
+_generated/ai_hq/backups/restore_test_*/
+_generated/revenue_os/test_out/
+_generated/delivery_os/test_out/
+_generated/finance_os/test_out/
+_generated/executive_os/test_out/
+_generated/product_os/test_out/
+_generated/customer_success_os/test_out/
+
+# Android acceptance lab transient sandbox (not committed; large/runtime)
+_generated/android_acceptance/sandbox/
+_generated/android_acceptance/*.xml

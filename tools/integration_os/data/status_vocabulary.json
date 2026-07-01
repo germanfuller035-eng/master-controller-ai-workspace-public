@@ -1,0 +1,57 @@
+{
+  "schema": "integration_os.status_vocabulary.v1",
+  "note": "MP8 — status consolidation across domains. Domain states are NOT collapsed destructively; each maps to an executive_summary_status for the Executive read model without writing back to the domain.",
+  "synthetic": true,
+  "statuses": [
+    { "source_system": "master_controller", "source_status": "NEW", "canonical_domain": "lead", "semantic_definition": "lead created, not yet verified", "executive_summary_status": "PIPELINE_EARLY", "terminal": false, "mutation_owner": "master_controller", "allowed_transitions": ["VERIFIED", "DISQUALIFIED"] },
+    { "source_system": "master_controller", "source_status": "VERIFIED", "canonical_domain": "lead", "semantic_definition": "contact/identity verified", "executive_summary_status": "PIPELINE_ACTIVE", "terminal": false, "mutation_owner": "master_controller", "allowed_transitions": ["DRAFTED", "DISQUALIFIED"] },
+    { "source_system": "master_controller", "source_status": "DRAFTED", "canonical_domain": "lead", "semantic_definition": "outbound draft prepared, awaiting approval", "executive_summary_status": "PIPELINE_ACTIVE", "terminal": false, "mutation_owner": "master_controller", "allowed_transitions": ["APPROVED", "REJECTED"] },
+    { "source_system": "master_controller", "source_status": "OPTED_OUT", "canonical_domain": "lead", "semantic_definition": "contact opted out of commercial comms", "executive_summary_status": "SUPPRESSED", "terminal": true, "mutation_owner": "master_controller", "allowed_transitions": [] },
+    { "source_system": "revenue_os", "source_status": "DEAL_OPEN", "canonical_domain": "deal", "semantic_definition": "active commercial opportunity", "executive_summary_status": "COMMERCIAL_ACTIVE", "terminal": false, "mutation_owner": "revenue_os", "allowed_transitions": ["WON", "LOST"] },
+    { "source_system": "revenue_os", "source_status": "WON", "canonical_domain": "deal", "semantic_definition": "deal won", "executive_summary_status": "COMMERCIAL_WON", "terminal": true, "mutation_owner": "revenue_os", "allowed_transitions": [] },
+    { "source_system": "revenue_os", "source_status": "ACTIVE", "canonical_domain": "product_commercial", "semantic_definition": "product available to sell", "executive_summary_status": "PRODUCT_SELLABLE", "terminal": false, "mutation_owner": "revenue_os", "allowed_transitions": ["RETIRED"], "conflict_note": "ACTIVE also used by Growth campaign + Conversation status with different meaning -> domain-namespaced" },
+    { "source_system": "product_os", "source_status": "READY", "canonical_domain": "product_readiness", "semantic_definition": "product implementation ready to market", "executive_summary_status": "PRODUCT_READY", "terminal": false, "mutation_owner": "product_os", "allowed_transitions": ["DEPRECATED"] },
+    { "source_system": "product_os", "source_status": "PLANNED", "canonical_domain": "product_readiness", "semantic_definition": "product planned, not buildable yet", "executive_summary_status": "PRODUCT_NOT_READY", "terminal": false, "mutation_owner": "product_os", "allowed_transitions": ["DRAFT", "READY"] },
+    { "source_system": "product_os", "source_status": "DRAFT", "canonical_domain": "product_readiness", "semantic_definition": "product spec in progress", "executive_summary_status": "PRODUCT_NOT_READY", "terminal": false, "mutation_owner": "product_os", "allowed_transitions": ["READY"], "conflict_note": "DRAFT also used by Conversation draft + lead draft -> different domains" },
+    { "source_system": "delivery_os", "source_status": "IN_PROGRESS", "canonical_domain": "project", "semantic_definition": "delivery work underway", "executive_summary_status": "DELIVERY_ACTIVE", "terminal": false, "mutation_owner": "delivery_os", "allowed_transitions": ["ACCEPTED", "BLOCKED"] },
+    { "source_system": "delivery_os", "source_status": "ACCEPTED", "canonical_domain": "project", "semantic_definition": "client accepted deliverable", "executive_summary_status": "DELIVERY_DONE", "terminal": true, "mutation_owner": "delivery_os", "allowed_transitions": [] },
+    { "source_system": "finance_os", "source_status": "INVOICED", "canonical_domain": "finance", "semantic_definition": "invoice issued", "executive_summary_status": "FINANCE_RECEIVABLE", "terminal": false, "mutation_owner": "finance_os", "allowed_transitions": ["PAID", "OVERDUE"] },
+    { "source_system": "finance_os", "source_status": "PAID", "canonical_domain": "finance", "semantic_definition": "payment received", "executive_summary_status": "FINANCE_SETTLED", "terminal": true, "mutation_owner": "finance_os", "allowed_transitions": [] },
+    { "source_system": "customer_success_os", "source_status": "HEALTHY", "canonical_domain": "customer_success", "semantic_definition": "account healthy", "executive_summary_status": "CS_HEALTHY", "terminal": false, "mutation_owner": "customer_success_os", "allowed_transitions": ["AT_RISK", "CHURNED"] },
+    { "source_system": "customer_success_os", "source_status": "CHURNED", "canonical_domain": "customer_success", "semantic_definition": "customer churned", "executive_summary_status": "CS_LOST", "terminal": true, "mutation_owner": "customer_success_os", "allowed_transitions": [] },
+    { "source_system": "conversation_hub", "source_status": "ACTIVE", "canonical_domain": "conversation", "semantic_definition": "conversation active", "executive_summary_status": "COMMS_ACTIVE", "terminal": false, "mutation_owner": "conversation_hub", "allowed_transitions": ["RESOLVED", "OPTED_OUT", "CLOSED"], "conflict_note": "ACTIVE shared name w/ Revenue product + Growth campaign — distinct domains" },
+    { "source_system": "conversation_hub", "source_status": "WAITING_APPROVAL", "canonical_domain": "conversation", "semantic_definition": "draft awaiting owner approval (reference)", "executive_summary_status": "COMMS_PENDING_APPROVAL", "terminal": false, "mutation_owner": "conversation_hub", "allowed_transitions": ["ACTIVE", "CLOSED"] },
+    { "source_system": "growth_os", "source_status": "READY", "canonical_domain": "campaign", "semantic_definition": "campaign ready to launch (gated)", "executive_summary_status": "CAMPAIGN_READY", "terminal": false, "mutation_owner": "growth_os", "allowed_transitions": ["ACTIVE", "STOPPED"], "conflict_note": "READY shared w/ product_readiness + migration — distinct domains" },
+    { "source_system": "growth_os", "source_status": "ACTIVE", "canonical_domain": "campaign", "semantic_definition": "campaign running (prohibited this chain)", "executive_summary_status": "CAMPAIGN_ACTIVE", "terminal": false, "mutation_owner": "growth_os", "allowed_transitions": ["PAUSED", "STOPPED", "COMPLETED"] },
+    { "source_system": "analytics_os", "source_status": "READY", "canonical_domain": "experiment", "semantic_definition": "experiment ready (RUNNING prohibited)", "executive_summary_status": "EXPERIMENT_READY", "terminal": false, "mutation_owner": "analytics_os", "allowed_transitions": [] },
+    { "source_system": "master_controller", "source_status": "v0.4.0-rc1", "canonical_domain": "release", "semantic_definition": "release candidate tag", "executive_summary_status": "RELEASE_RC", "terminal": false, "mutation_owner": "owner", "allowed_transitions": [] },
+    { "source_system": "executive_os", "source_status": "GO", "canonical_domain": "owner_decision", "semantic_definition": "owner approves proceeding", "executive_summary_status": "DECISION_GO", "terminal": false, "mutation_owner": "executive_os", "allowed_transitions": ["PAUSE", "STOP"] }
+  ],
+  "detections": {
+    "same_name_different_meaning": [
+      { "name": "ACTIVE", "domains": ["product_commercial(revenue)", "conversation", "campaign(growth)"], "resolution": "domain-namespaced; never collapsed" },
+      { "name": "READY", "domains": ["product_readiness", "campaign(growth)", "experiment(analytics)", "migration"], "resolution": "domain-namespaced" },
+      { "name": "DRAFT", "domains": ["product_readiness", "lead", "conversation"], "resolution": "domain-namespaced" },
+      { "name": "OPTED_OUT", "domains": ["lead(master_controller)", "conversation"], "resolution": "single canonical opt-out owned by master_controller; conversation reflects it" }
+    ],
+    "different_name_same_meaning": [
+      { "names": ["WON(revenue)", "ACCEPTED(delivery)"], "note": "different lifecycle stages, NOT synonyms — kept distinct" }
+    ],
+    "invalid_cross_domain_transition": [
+      { "issue": "campaign ACTIVE -> deal WON", "detail": "no direct transition; deal owned by Revenue, campaign by Growth" }
+    ],
+    "status_in_wrong_system": [],
+    "derived_executive_written_back": { "found": false, "rule": "executive_summary_status is READ-ONLY derived; never written back to domain stores" }
+  },
+  "mini_audit_lifecycle": {
+    "note": "MP requirement: Mini Audit lifecycle reconciled as 5 macro-phases + ~18 detailed operational stages.",
+    "macro_phases": [
+      { "phase": 1, "name": "Discovery & Intake", "stages": ["candidate_discovered", "source_provenance_recorded", "contact_evidence_collected"] },
+      { "phase": 2, "name": "Canonical Lead & Qualification", "stages": ["canonical_lead_created", "verified", "product_routed"] },
+      { "phase": 3, "name": "Commercial Offer & Outreach", "stages": ["offer_built", "draft_request_created", "owner_approval_reference", "synthetic_transport_result"] },
+      { "phase": 4, "name": "Reply & Deal", "stages": ["reply_received", "classified_routed", "deal_open", "deal_won"] },
+      { "phase": 5, "name": "Delivery, Finance & Aftercare", "stages": ["delivery_project_started", "acceptance", "invoice_payment", "customer_success_onboarding"] }
+    ],
+    "detailed_stage_count": 18
+  }
+}

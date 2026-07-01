@@ -1,0 +1,2 @@
+66693d5a2da83d8c4bc71a2f9754998afed0050161a4bd4cfd742c9022c6e3be *MasterController-release-v0.6.0-rc11.apk
+79be678fc53fc3f302a10592d56c346fa5d6d081b340806a2d93d4c5cea28f14 *MasterController-release-v0.6.0-rc11.aab

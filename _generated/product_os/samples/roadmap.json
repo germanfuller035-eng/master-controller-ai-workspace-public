@@ -1,0 +1,62 @@
+{
+  "schema": "product_os.roadmap.v1",
+  "label": "PROPOSED_INTERNAL",
+  "now": [
+    {
+      "product_id": "mini_audit",
+      "goal": "refine reference + readiness evidence",
+      "pilot": "reference pilot",
+      "readiness_target": "READY_FOR_PILOT (owner)",
+      "owner_action": "approve pilot"
+    },
+    {
+      "product_id": "digital_presence_check",
+      "goal": "internal pilot + spec",
+      "pilot": "6 scenarios",
+      "readiness_target": "READY_FOR_INTERNAL_TEST",
+      "owner_action": "set price"
+    },
+    {
+      "product_id": "full_business_audit",
+      "goal": "internal pilot + distinction",
+      "pilot": "happy+fail",
+      "readiness_target": "READY_FOR_INTERNAL_TEST",
+      "owner_action": "approve scope"
+    }
+  ],
+  "next": [
+    {
+      "product_id": "start_page_sprint",
+      "goal": "resolve price conflict + pilot",
+      "owner_action": "resolve d_startpack_conflict"
+    },
+    {
+      "product_id": "landing_sprint",
+      "goal": "pilot + price",
+      "owner_action": "set price"
+    },
+    {
+      "product_id": "business_website",
+      "goal": "tier scope, control scope creep",
+      "owner_action": "approve tiers"
+    }
+  ],
+  "later": [
+    {
+      "product_id": "lead_system",
+      "goal": "packaging decision",
+      "owner_action": "d_lead_system_packaging"
+    },
+    {
+      "product_id": "ai_front_office",
+      "goal": "boundary decision",
+      "owner_action": "d_ai_front_office_boundary"
+    },
+    {
+      "product_id": "growth_support",
+      "goal": "define retainer",
+      "owner_action": "define"
+    }
+  ],
+  "note": "Every item: goal/dependency/owner action/product action/pilot/readiness target/done definition."
+}

@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-26",
+  "session": "MASTER_CONTROLLER_MCP_GATEWAY_V1",
+  "cancellation_required": true,
+  "token_fields": ["token_id", "cancelled"],
+  "checkpoints": ["before_policy", "before_adapter", "after_adapter", "before_response"],
+  "cancelled_status": "CANCELLED",
+  "subprocess_policy": {
+    "check_before_start": true,
+    "timeout_kills_process": true,
+    "shell": false
+  }
+}

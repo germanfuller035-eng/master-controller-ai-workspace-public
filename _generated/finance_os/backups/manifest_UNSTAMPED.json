@@ -1,0 +1,172 @@
+{
+  "schema": "ai_hq.backup_manifest.v1",
+  "generated_ts": "UNSTAMPED",
+  "src": "D:\\AI_WORKSPACE_WORKTREES\\finance-os-business-control-v1\\tools\\finance_os",
+  "file_count": 32,
+  "total_size": 111168,
+  "excluded_secret_files": 0,
+  "git_head": "2fe5b5d58852ce4fd4dd08b151d292bcd4bd6fb2",
+  "entries": [
+    {
+      "path": "apply_manifest.mjs",
+      "size": 2180,
+      "sha256": "3bd8c251deec42489ca4d61609e19663f7b200676e2859be94b785e2dc68f35d"
+    },
+    {
+      "path": "finance.mjs",
+      "size": 8491,
+      "sha256": "baa19789bf94b29e032557a3e90822999cbee48d75c3eb000bfa4091cd09c2f8"
+    },
+    {
+      "path": "tests/finance.test.mjs",
+      "size": 10334,
+      "sha256": "451df43b4195750dc4362f72a1d6c6b902b56f277b2a25c32d013fbcab1974de"
+    },
+    {
+      "path": "tests/run_all.mjs",
+      "size": 871,
+      "sha256": "d5233c06c4fadf9cde58da4ebd496a3ae9569311adb1e0fe35bdef2aac8afb1f"
+    },
+    {
+      "path": "tests/security.test.mjs",
+      "size": 3615,
+      "sha256": "dc69f146ceef87a4615e2e76f210ccc4d325c7173ce45912d8fbbbdf78a2a6a3"
+    },
+    {
+      "path": "schemas/domain.mjs",
+      "size": 9089,
+      "sha256": "df8658026d4faa87dd6ec41ac63d0d1bdd22dc0959671280d8934a3d9d85dd83"
+    },
+    {
+      "path": "lib/assets.mjs",
+      "size": 2620,
+      "sha256": "8a811ee4373f98a53147c4692243d6a27a3329bce4221b655ff710e7cd21ca9e"
+    },
+    {
+      "path": "lib/budget.mjs",
+      "size": 1735,
+      "sha256": "323525d2ac36514569932202aa3a6c4baecc61f9aa5d70f6ef9bcae1b9b4e3ee"
+    },
+    {
+      "path": "lib/cashflow.mjs",
+      "size": 2928,
+      "sha256": "179b1f02f27c84840afb2d311d98a742f533b348d82fc5392a7a4e21fd22404d"
+    },
+    {
+      "path": "lib/classification.mjs",
+      "size": 2710,
+      "sha256": "e021af25cfb42cc3a44d8ad45a70d4fedc180558ea32ca1939cadff815015204"
+    },
+    {
+      "path": "lib/close.mjs",
+      "size": 1775,
+      "sha256": "adce2578afaed90faa2d177cc523383bb805c31265b72725b9bd5952d17c5e80"
+    },
+    {
+      "path": "lib/common.mjs",
+      "size": 2805,
+      "sha256": "030e1e7c1b03af2f2a1faf7471c7a45f31be4c1ae01c4f90e8b088c6a4fbe4d8"
+    },
+    {
+      "path": "lib/dashboard.mjs",
+      "size": 5781,
+      "sha256": "27d96b6c0b24ae5eb16483ed9542afc91592e69c21f0f296a6029069a8ad94ca"
+    },
+    {
+      "path": "lib/debt.mjs",
+      "size": 1858,
+      "sha256": "4e41960b6cbcfb755a3bc51fb08c946df23daa597636e3d6dd8aa70af95456d6"
+    },
+    {
+      "path": "lib/economics.mjs",
+      "size": 5097,
+      "sha256": "c2da38de3b1ea685b41ed9d2fa618eb7543fe004bb2c3858be8e8b6360cbe61c"
+    },
+    {
+      "path": "lib/expense.mjs",
+      "size": 3291,
+      "sha256": "ec8c2832a994c22b2f75dc9378fb97322c523994e563676035fec770a62a0e86"
+    },
+    {
+      "path": "lib/forecast.mjs",
+      "size": 3612,
+      "sha256": "10631ffe6dc8621763756c1fb24e24427ab745d9294c8b8e4f33ff8ebccb0bd7"
+    },
+    {
+      "path": "lib/import_contracts.mjs",
+      "size": 2675,
+      "sha256": "0dadb84d85834f6751c2d8ee05fb981d33d3a2328d0668d3eda6f3613095fbb6"
+    },
+    {
+      "path": "lib/invoice.mjs",
+      "size": 5487,
+      "sha256": "b6c38db847d63a6e2dc4e664875efed20e6e41bd93669d40d9bebf9aaaab94bf"
+    },
+    {
+      "path": "lib/kpi.mjs",
+      "size": 1740,
+      "sha256": "dea498a1dc614d7fc49077f68a25150a79fbe3c81df1b522de97d44e1752a11d"
+    },
+    {
+      "path": "lib/pnl.mjs",
+      "size": 1852,
+      "sha256": "ab5b88b68b10a8ed11941fcdd3bea4e772f55bc12c89a37094b82552846044e1"
+    },
+    {
+      "path": "lib/receivables.mjs",
+      "size": 2968,
+      "sha256": "40391a36dfd763d7e2b546f021dd6eabb24d18eba874fa4bdade3dbf07e51525"
+    },
+    {
+      "path": "lib/reconcile.mjs",
+      "size": 2755,
+      "sha256": "42766915381b342e169eed662dbd344cbeda74175961e97fe9cba22dedd82cae"
+    },
+    {
+      "path": "lib/registry_contract.mjs",
+      "size": 1180,
+      "sha256": "d8e3bbbe2040da18600133de52e04db323f6f7dbdae069fd9670925ff121cd6f"
+    },
+    {
+      "path": "lib/reports.mjs",
+      "size": 1563,
+      "sha256": "86d0f9e95a203b2e21600160fc891a6b12fddb9af9734b9cc71dd780e66824c6"
+    },
+    {
+      "path": "lib/reserves.mjs",
+      "size": 2450,
+      "sha256": "6b0fb67771adac2a74fc0af7cc0a97a5a48d8e81c1f188c2719144a9c6bddd30"
+    },
+    {
+      "path": "lib/separation.mjs",
+      "size": 1974,
+      "sha256": "260b3e533a8116ecd95e562dc137a57f6c568849150b49d76cd4299bbeb23b4c"
+    },
+    {
+      "path": "lib/validators.mjs",
+      "size": 3151,
+      "sha256": "23525df57f282154c7d7ffa8dc81e9fd8a4be124f235564d859f7b20eb2872b4"
+    },
+    {
+      "path": "fixtures/finance.json",
+      "size": 5278,
+      "sha256": "f2ddeb3b54ab04deb247f4c045b9451714aedd087622f00b533751752c6b4a76"
+    },
+    {
+      "path": "data/business_units.json",
+      "size": 2713,
+      "sha256": "edb18b74ef99c9bb9aa0efdee53e346c04b46ae479ce459ab728bec4fc814d5d"
+    },
+    {
+      "path": "data/chart_of_accounts.json",
+      "size": 2710,
+      "sha256": "f09b176f6c262dd1b78ab94403cef4b6b81be8411fce94b3c7f0a48a380e67ac"
+    },
+    {
+      "path": "data/kpi_definitions.json",
+      "size": 3880,
+      "sha256": "307ccf047f8aa9b2544f848c61296785ec07658abac553534c5206f20e793681"
+    }
+  ],
+  "restore_instructions": "Verify with: for each entry sha256sum -c. Restore by copying files; secrets restored separately from D:\\AI_SECRETS encrypted store."
+}

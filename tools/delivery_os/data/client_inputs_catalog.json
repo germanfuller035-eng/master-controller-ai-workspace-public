@@ -1,0 +1,38 @@
+{
+  "schema": "delivery_os.client_inputs_catalog.v1",
+  "version": "1.0",
+  "note": "Reusable client-input catalog. Credential fields reference approved secret storage (D:\\AI_SECRETS) — values are NEVER embedded or stored here.",
+  "categories": [
+    {"key": "company_information", "required": true, "sensitive": false, "formats": ["text"], "validation": "non-empty", "blocker_if_missing": true, "owner_responsibility": "request", "client_responsibility": "provide", "fallback": "public sources (verify)"},
+    {"key": "brand_assets", "required": false, "sensitive": false, "formats": ["png","svg","pdf"], "validation": "file present", "blocker_if_missing": false, "owner_responsibility": "request", "client_responsibility": "provide", "fallback": "neutral defaults"},
+    {"key": "logo", "required": false, "sensitive": false, "formats": ["png","svg"], "validation": "image", "blocker_if_missing": false, "owner_responsibility": "request", "client_responsibility": "provide", "fallback": "text logo"},
+    {"key": "contacts", "required": true, "sensitive": true, "formats": ["text"], "validation": "verified contact", "blocker_if_missing": true, "owner_responsibility": "verify", "client_responsibility": "confirm", "fallback": "none (no guessing)"},
+    {"key": "products_services", "required": true, "sensitive": false, "formats": ["text","table"], "validation": "non-empty", "blocker_if_missing": true, "owner_responsibility": "request", "client_responsibility": "provide", "fallback": "audit-derived draft"},
+    {"key": "pricing", "required": false, "sensitive": false, "formats": ["text","table"], "validation": "optional", "blocker_if_missing": false, "owner_responsibility": "request", "client_responsibility": "provide", "fallback": "omit prices"},
+    {"key": "photos", "required": false, "sensitive": false, "formats": ["jpg","png"], "validation": "image", "blocker_if_missing": false, "owner_responsibility": "request", "client_responsibility": "provide", "fallback": "stock placeholder (labeled)"},
+    {"key": "videos", "required": false, "sensitive": false, "formats": ["mp4"], "validation": "optional", "blocker_if_missing": false, "owner_responsibility": "request", "client_responsibility": "provide", "fallback": "omit"},
+    {"key": "testimonials", "required": false, "sensitive": false, "formats": ["text"], "validation": "verified", "blocker_if_missing": false, "owner_responsibility": "request", "client_responsibility": "provide", "fallback": "omit (no fake proof)"},
+    {"key": "legal_details", "required": false, "sensitive": true, "formats": ["text"], "validation": "optional", "blocker_if_missing": false, "owner_responsibility": "request", "client_responsibility": "provide", "fallback": "legal placeholders"},
+    {"key": "domain_access", "required": false, "sensitive": true, "formats": ["credential_reference"], "validation": "reference to D:\\AI_SECRETS only", "blocker_if_missing": false, "owner_responsibility": "handle access", "client_responsibility": "grant", "fallback": "client-side deploy"},
+    {"key": "hosting_access", "required": false, "sensitive": true, "formats": ["credential_reference"], "validation": "reference to D:\\AI_SECRETS only", "blocker_if_missing": false, "owner_responsibility": "handle access", "client_responsibility": "grant", "fallback": "client-side deploy"},
+    {"key": "analytics_access", "required": false, "sensitive": true, "formats": ["credential_reference"], "validation": "reference only", "blocker_if_missing": false, "owner_responsibility": "handle", "client_responsibility": "grant", "fallback": "skip analytics setup"},
+    {"key": "crm_access", "required": false, "sensitive": true, "formats": ["credential_reference"], "validation": "reference only", "blocker_if_missing": false, "owner_responsibility": "handle", "client_responsibility": "grant", "fallback": "table-based"},
+    {"key": "email_access", "required": false, "sensitive": true, "formats": ["credential_reference"], "validation": "reference only", "blocker_if_missing": false, "owner_responsibility": "handle", "client_responsibility": "grant", "fallback": "client-side"},
+    {"key": "process_descriptions", "required": false, "sensitive": false, "formats": ["text"], "validation": "optional", "blocker_if_missing": false, "owner_responsibility": "request", "client_responsibility": "provide", "fallback": "interview"},
+    {"key": "existing_materials", "required": false, "sensitive": false, "formats": ["any"], "validation": "optional", "blocker_if_missing": false, "owner_responsibility": "request", "client_responsibility": "provide", "fallback": "build new"},
+    {"key": "target_audience", "required": false, "sensitive": false, "formats": ["text"], "validation": "optional", "blocker_if_missing": false, "owner_responsibility": "request", "client_responsibility": "provide", "fallback": "audit-derived"},
+    {"key": "geographic_coverage", "required": false, "sensitive": false, "formats": ["text"], "validation": "optional", "blocker_if_missing": false, "owner_responsibility": "request", "client_responsibility": "provide", "fallback": "assume local"},
+    {"key": "competitors", "required": false, "sensitive": false, "formats": ["text"], "validation": "optional", "blocker_if_missing": false, "owner_responsibility": "request", "client_responsibility": "provide", "fallback": "research"},
+    {"key": "approval_contacts", "required": true, "sensitive": true, "formats": ["text"], "validation": "verified decision maker", "blocker_if_missing": true, "owner_responsibility": "confirm", "client_responsibility": "designate", "fallback": "none"}
+  ],
+  "product_required_inputs": {
+    "mini_audit": ["company_information", "contacts", "products_services"],
+    "digital_presence_check": ["company_information", "contacts"],
+    "full_business_audit": ["company_information", "contacts", "products_services"],
+    "landing_sprint": ["company_information", "contacts", "products_services", "brand_assets", "approval_contacts"],
+    "start_page_sprint": ["company_information", "contacts", "products_services", "approval_contacts"],
+    "business_website": ["company_information", "contacts", "products_services", "brand_assets", "domain_access", "hosting_access", "approval_contacts"],
+    "lead_system": ["company_information", "contacts", "process_descriptions", "crm_access", "approval_contacts"],
+    "ai_front_office": ["company_information", "contacts", "process_descriptions", "approval_contacts"]
+  }
+}

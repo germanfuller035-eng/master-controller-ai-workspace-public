@@ -1,0 +1,10 @@
+{
+  "scenario": "F",
+  "production_affected": false,
+  "name": "Duplicate Telegram poller",
+  "ok": true,
+  "steps": [
+    "duplicate_poller -> detect:poller count > 1 health:DEGRADED alert:a_duplicate_poller runbook:rb_duplicate_poller"
+  ],
+  "alert": "a_duplicate_poller"
+}

@@ -1,0 +1,27 @@
+# Owner Pre-Send Review Evidence Index
+
+SESSION_NAME=OWNER_PRE_SEND_DECISION_CAPTURE_V1
+
+## Git Evidence
+
+- _generated/owner_pre_send_review_v1/OWNER_PRE_SEND_REVIEW_SUMMARY.md
+- _generated/owner_pre_send_review_v1/OWNER_PRE_SEND_REVIEW_EVIDENCE_INDEX.md
+- _generated/owner_pre_send_review_v1/OWNER_PRE_SEND_REVIEW_HANDOFF.md
+- CURRENT_TASK_CHECKPOINT.md
+
+## Private Evidence
+
+PRIVATE_DECISIONS_FILE=D:\AI_FILE_VAULT\sales_pilot_private\real_leads_pre_send_pilot_20260627_231529\PRIVATE_OWNER_PRE_SEND_DECISIONS.md
+PRIVATE_MANUAL_SEND_PACKET_LEAD_1=D:\AI_FILE_VAULT\sales_pilot_private\real_leads_pre_send_pilot_20260627_231529\manual_send_packets\LEAD_1_MANUAL_SEND_PACKET.md
+PRIVATE_OWNER_REVIEW_EVIDENCE=D:\AI_FILE_VAULT\sales_pilot_private\real_leads_pre_send_pilot_20260627_231529\private_owner_review_20260628_003912
+
+Private files contain real lead identifiers and must remain outside Git.
+
+## Safety
+
+RUNTIME_DATA_COMMITTED=NO
+SCREENSHOTS_COMMITTED=NO
+REAL_COMPANY_NAMES_COMMITTED=NO
+REAL_DOMAINS_COMMITTED=NO
+REAL_CONTACTS_COMMITTED=NO
+PRIVATE_NOTES_COMMITTED=NO

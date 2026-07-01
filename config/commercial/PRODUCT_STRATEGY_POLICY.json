@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-26",
+  "session": "COMMERCIAL_AGENT_FACTORY_V1",
+  "scope": "LOCAL_SYNTHETIC_NO_SEND",
+  "production_enabled": false,
+  "production_db_write_enabled": false,
+  "browser_action_allowed": false,
+  "real_crawling_allowed": false,
+  "external_outreach_allowed": false,
+  "payment_allowed": false,
+  "invoice_send_allowed": false,
+  "owner_approval_required_for_future_send": true,
+  "default_decision": "DENY",
+  "product_reason_required": true,
+  "mini_audit_automatic_default": false,
+  "choose_by_actual_problem": true,
+  "product_mix_tracked": true,
+  "max_single_product_share_without_objective_reason": 0.6
+}

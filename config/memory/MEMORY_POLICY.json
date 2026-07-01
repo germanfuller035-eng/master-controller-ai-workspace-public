@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-26",
+  "session": "KNOWLEDGE_MEMORY_QDRANT_DOCLING_V1",
+  "memory_write_status": "OFF",
+  "memory_write_enabled": false,
+  "direct_memory_write": "DENY",
+  "memory_auto_write": "DENY",
+  "memory_proposals_allowed": true,
+  "curator_decision_required": true,
+  "source_date_confidence_required": true,
+  "sensitive_auto_write": "DENY",
+  "secret_like_content_policy": "DENY_AND_REDACT",
+  "production_memory_store_enabled": false,
+  "default_decision": "DENY"
+}

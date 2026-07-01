@@ -1,0 +1,13 @@
+{
+  "schema": "growth_os.lead_magnets.v1",
+  "version": "1.0",
+  "note": "Lead magnet definitions. No download page is published. Follow-up assumptions are consent-aware. Claims must be supported.",
+  "lead_magnets": [
+    {"lead_magnet_id": "lm_request_path_checklist", "name": "Website request-path checklist", "segment_id": "seg_weak_site", "product_id": "mini_audit", "problem": "site gets visits but few requests", "deliverable": "10-point self-check of the path-to-request", "conversion_path": "checklist -> Mini Audit interest", "claims": ["self-diagnostic", "evidence-based methodology"], "status": "DRAFT", "published": false, "follow_up_assumptions": "only with consent + opt-out"},
+    {"lead_magnet_id": "lm_local_visibility_checklist", "name": "Local visibility checklist", "segment_id": "seg_no_site_local", "product_id": "digital_presence_check", "problem": "hard to find online", "deliverable": "local presence self-check", "conversion_path": "checklist -> Presence Check interest", "claims": ["self-diagnostic"], "status": "DRAFT", "published": false, "follow_up_assumptions": "consent + opt-out"},
+    {"lead_magnet_id": "lm_conversion_checklist", "name": "Conversion checklist", "segment_id": "seg_good_site_weak_funnel", "product_id": "mini_audit", "problem": "traffic not converting", "deliverable": "conversion self-check", "conversion_path": "checklist -> Mini Audit", "claims": ["self-diagnostic"], "status": "DRAFT", "published": false, "follow_up_assumptions": "consent + opt-out"},
+    {"lead_magnet_id": "lm_lead_handling_checklist", "name": "Lead-handling checklist", "segment_id": "seg_good_site_weak_process", "product_id": "lead_system", "problem": "requests lost in handling", "deliverable": "handling self-check", "conversion_path": "checklist -> advisory conversation", "claims": ["self-diagnostic"], "status": "DRAFT", "published": false, "follow_up_assumptions": "consent + opt-out", "note": "product PLANNED/advisory — no commercial promise"},
+    {"lead_magnet_id": "lm_audit_sample", "name": "Mini Audit sample", "segment_id": "seg_weak_site", "product_id": "mini_audit", "problem": "unsure what an audit delivers", "deliverable": "redacted sample audit (synthetic, not a real client)", "conversion_path": "sample -> Mini Audit", "claims": ["representative structure"], "status": "DRAFT", "published": false, "follow_up_assumptions": "consent + opt-out"}
+  ],
+  "rules": {"download_page_published": false, "fabricated_sample_client": false}
+}

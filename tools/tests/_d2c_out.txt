@@ -1,0 +1,10 @@
+file:///D:/AI_WORKSPACE/tools/tests/lead_import_prepare_adapter_d2c_sandbox_test.mjs:29
+  buildLeadImportPrepareId,
+  ^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: The requested module '../telegram_gateway/lead_import_prepare_adapter.mjs' does not provide an export named 'buildLeadImportPrepareId'
+    at #asyncInstantiate (node:internal/modules/esm/module_job:326:21)
+    at async ModuleJob.run (node:internal/modules/esm/module_job:429:5)
+    at async node:internal/modules/esm/loader:639:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v24.15.0

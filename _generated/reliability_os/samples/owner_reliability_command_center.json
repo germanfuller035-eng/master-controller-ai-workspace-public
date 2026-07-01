@@ -1,0 +1,33 @@
+{
+  "schema": "reliability_os.owner_command_center.v1",
+  "generated_ts": "20260617_000000",
+  "synthetic": true,
+  "highest_reliability_risk": "single VPS host SPOF (all production services) — DR + backups mitigate; owner accepts residual risk",
+  "service_requiring_live_verification": 11,
+  "stale_component": "none observed (no live data); freshness contracts defined",
+  "backup_restore_blocker": "production backup/restore NOT live-verified; encryption + off-site = owner decision",
+  "capacity_blocker": "owner/delivery/support capacity UNKNOWN",
+  "open_incident": "none (synthetic only)",
+  "release_blocker": [
+    "production_health_unknown_before_live_launch",
+    "owner_capacity_unknown_for_commercial_activation",
+    "canonical_integrity requires live verification"
+  ],
+  "owner_decision": [
+    "alert channel",
+    "SLO/RPO/RTO approval",
+    "capacity",
+    "authorize live verification"
+  ],
+  "next_safe_action": "Owner: approve SLO/RPO/RTO + select alert channel; then authorize the (offline-prepared) production verification plan",
+  "intentionally_not_done": [
+    "no monitoring installed",
+    "no live health checks",
+    "no backup/restore executed",
+    "no load/chaos test",
+    "no service restart",
+    "no alert sent",
+    "no scheduled task",
+    "no proposed doc applied"
+  ]
+}

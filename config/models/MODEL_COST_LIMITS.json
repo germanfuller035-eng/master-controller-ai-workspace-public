@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-26",
+  "session": "VOLTAGENT_RUNTIME_MODEL_ROUTER_AND_COST_GOVERNOR_V1",
+  "currency": "RUB_EQUIVALENT",
+  "cost_limits": [
+    {"model_id": "deterministic_local_classifier", "input_per_1k_rub": 0.0, "output_per_1k_rub": 0.0, "max_task_budget_rub": 50},
+    {"model_id": "cheap_routine_model_class", "input_per_1k_rub": 0.20, "output_per_1k_rub": 0.40, "max_task_budget_rub": 300},
+    {"model_id": "critical_best_model_class", "input_per_1k_rub": 2.50, "output_per_1k_rub": 7.50, "max_task_budget_rub": 2500},
+    {"model_id": "coding_worker_profile", "input_per_1k_rub": 2.00, "output_per_1k_rub": 6.00, "max_task_budget_rub": 3000},
+    {"model_id": "independent_review_model_class", "input_per_1k_rub": 2.00, "output_per_1k_rub": 6.00, "max_task_budget_rub": 1800},
+    {"model_id": "deterministic_fallback_process", "input_per_1k_rub": 0.0, "output_per_1k_rub": 0.0, "max_task_budget_rub": 50}
+  ]
+}

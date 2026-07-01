@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-26",
+  "session": "WEB_COMMAND_CENTER_ANDROID_OWNER_CONTROL_V1",
+  "scope": "LOCAL_SYNTHETIC_CONTRACT_ONLY",
+  "synthetic_only": true,
+  "display_only": true,
+  "can_enable_flags": false,
+  "allowed_display_states": [
+    "OFF",
+    "LOCAL_SYNTHETIC",
+    "SHADOW",
+    "DRAFT_ONLY",
+    "OWNER_APPROVAL_REQUIRED",
+    "PRODUCTION_READ_ONLY",
+    "LIMITED_AUTONOMY"
+  ],
+  "safety": {
+    "production_web_deploy": "OFF",
+    "outbound_email": "OFF",
+    "outbound_social": "OFF",
+    "auto_safe": "OFF",
+    "voice": "OFF",
+    "browser_actions": "OFF",
+    "payments": "OFF",
+    "production_db_write": "OFF"
+  }
+}

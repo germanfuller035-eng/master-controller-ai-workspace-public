@@ -1,0 +1,14 @@
+{
+  "schema_version": "crm.contact.v1",
+  "synthetic": true,
+  "contact_id": "synthetic-contact-suppressed",
+  "display_name": "Synthetic Suppressed Contact",
+  "organization_name": "Synthetic Suppression Test Company",
+  "contact_reference": "synthetic-suppressed at reserved-example-test",
+  "domain_reference": "reserved-example-test",
+  "consent_basis": "synthetic_fixture_only",
+  "suppression_status": "SUPPRESSED",
+  "stop_status": "STOP_ACTIVE",
+  "crm_write_allowed": false,
+  "production_db_write_allowed": false
+}

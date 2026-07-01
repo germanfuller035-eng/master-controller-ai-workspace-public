@@ -1,0 +1,50 @@
+{
+  "product_id": "mini_audit",
+  "scenario": "success",
+  "steps": [
+    {
+      "step": "creation",
+      "result": "ok"
+    },
+    {
+      "step": "inputs",
+      "result": "ready_to_start=true score=100"
+    },
+    {
+      "step": "milestones",
+      "result": "ok=true critical_path=ma1->ma2->ma3->ma4->ma5"
+    },
+    {
+      "step": "tasks",
+      "result": "ok=true by_agent={\"claude\":8,\"owner\":1}"
+    },
+    {
+      "step": "risks",
+      "result": "total=3 blocks_closure=false"
+    },
+    {
+      "step": "change_request",
+      "result": "suggested=PENDING approved=false"
+    },
+    {
+      "step": "qa",
+      "result": "client_ready=true score=100"
+    },
+    {
+      "step": "acceptance",
+      "result": "status=PASS"
+    },
+    {
+      "step": "closure",
+      "result": "CLOSED (synthetic)"
+    }
+  ],
+  "outcome": "DELIVERED_ACCEPTED",
+  "blockers": [],
+  "expected_gate": null,
+  "send_allowed": false,
+  "test_only": true,
+  "lessons": [
+    "clean synthetic pilot"
+  ]
+}

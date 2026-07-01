@@ -1,0 +1,402 @@
+{
+  "schema": "cs.portfolio.v1",
+  "label": "TEST_ONLY (synthetic customers)",
+  "total": 24,
+  "rows": [
+    {
+      "customer_ref": "TEST_cs01",
+      "products": [
+        "mini_audit"
+      ],
+      "health": "UNKNOWN",
+      "adoption": "UNKNOWN",
+      "value": "UNKNOWN",
+      "support": "none",
+      "payment": "UNKNOWN",
+      "risk": "none",
+      "renewal": "n/a",
+      "expansion": "no",
+      "owner_action": "OWNER_DECISION_REQUIRED",
+      "confidence": "low"
+    },
+    {
+      "customer_ref": "TEST_cs02",
+      "products": [
+        "mini_audit"
+      ],
+      "health": "AT_RISK",
+      "adoption": 0,
+      "value": "UNKNOWN",
+      "support": "none",
+      "payment": "UNKNOWN",
+      "risk": "none",
+      "renewal": "n/a",
+      "expansion": "no",
+      "owner_action": "REVIEW",
+      "confidence": "low"
+    },
+    {
+      "customer_ref": "TEST_cs03",
+      "products": [
+        "mini_audit"
+      ],
+      "health": "UNKNOWN",
+      "adoption": "UNKNOWN",
+      "value": "UNKNOWN",
+      "support": "none",
+      "payment": "UNKNOWN",
+      "risk": "none",
+      "renewal": "n/a",
+      "expansion": "no",
+      "owner_action": "MAINTAIN",
+      "confidence": "low"
+    },
+    {
+      "customer_ref": "TEST_cs04",
+      "products": [
+        "digital_presence_check"
+      ],
+      "health": "HEALTHY",
+      "adoption": "UNKNOWN",
+      "value": "UNKNOWN",
+      "support": "none",
+      "payment": "UNKNOWN",
+      "risk": "none",
+      "renewal": "n/a",
+      "expansion": "no",
+      "owner_action": "MAINTAIN",
+      "confidence": "low"
+    },
+    {
+      "customer_ref": "TEST_cs05",
+      "products": [
+        "business_website"
+      ],
+      "health": "HEALTHY",
+      "adoption": 90,
+      "value": "UNKNOWN",
+      "support": "none",
+      "payment": "UNKNOWN",
+      "risk": "none",
+      "renewal": "n/a",
+      "expansion": "no",
+      "owner_action": "MAINTAIN",
+      "confidence": "low"
+    },
+    {
+      "customer_ref": "TEST_cs06",
+      "products": [
+        "business_website"
+      ],
+      "health": "UNKNOWN",
+      "adoption": "UNKNOWN",
+      "value": "UNKNOWN",
+      "support": "none",
+      "payment": "UNKNOWN",
+      "risk": "none",
+      "renewal": "n/a",
+      "expansion": "no",
+      "owner_action": "MAINTAIN",
+      "confidence": "low"
+    },
+    {
+      "customer_ref": "TEST_cs07",
+      "products": [
+        "business_website"
+      ],
+      "health": "UNKNOWN",
+      "adoption": "UNKNOWN",
+      "value": "UNKNOWN",
+      "support": "none",
+      "payment": "UNKNOWN",
+      "risk": "none",
+      "renewal": "n/a",
+      "expansion": "no",
+      "owner_action": "MAINTAIN",
+      "confidence": "low"
+    },
+    {
+      "customer_ref": "TEST_cs08",
+      "products": [
+        "lead_system"
+      ],
+      "health": "CRITICAL",
+      "adoption": "UNKNOWN",
+      "value": "UNKNOWN",
+      "support": "none",
+      "payment": "UNKNOWN",
+      "risk": "none",
+      "renewal": "n/a",
+      "expansion": "no",
+      "owner_action": "RECOVER",
+      "confidence": "low"
+    },
+    {
+      "customer_ref": "TEST_cs09",
+      "products": [
+        "ai_front_office"
+      ],
+      "health": "UNKNOWN",
+      "adoption": "UNKNOWN",
+      "value": "UNKNOWN",
+      "support": "none",
+      "payment": "UNKNOWN",
+      "risk": "none",
+      "renewal": "n/a",
+      "expansion": "no",
+      "owner_action": "MAINTAIN",
+      "confidence": "low"
+    },
+    {
+      "customer_ref": "TEST_cs10",
+      "products": [
+        "business_website"
+      ],
+      "health": "WATCH",
+      "adoption": "UNKNOWN",
+      "value": "UNKNOWN",
+      "support": "none",
+      "payment": "overdue",
+      "risk": "none",
+      "renewal": "n/a",
+      "expansion": "no",
+      "owner_action": "MAINTAIN",
+      "confidence": "low"
+    },
+    {
+      "customer_ref": "TEST_cs11",
+      "products": [
+        "business_website"
+      ],
+      "health": "AT_RISK",
+      "adoption": "UNKNOWN",
+      "value": "UNKNOWN",
+      "support": "none",
+      "payment": "paid",
+      "risk": "none",
+      "renewal": "n/a",
+      "expansion": "no",
+      "owner_action": "REVIEW",
+      "confidence": "low"
+    },
+    {
+      "customer_ref": "TEST_cs12",
+      "products": [
+        "mini_audit"
+      ],
+      "health": "UNKNOWN",
+      "adoption": "UNKNOWN",
+      "value": "UNKNOWN",
+      "support": "none",
+      "payment": "UNKNOWN",
+      "risk": "none",
+      "renewal": "n/a",
+      "expansion": "no",
+      "owner_action": "OWNER_DECISION_REQUIRED",
+      "confidence": "low"
+    },
+    {
+      "customer_ref": "TEST_cs13",
+      "products": [
+        "mini_audit"
+      ],
+      "health": "UNKNOWN",
+      "adoption": "UNKNOWN",
+      "value": "UNKNOWN",
+      "support": "none",
+      "payment": "UNKNOWN",
+      "risk": "none",
+      "renewal": "n/a",
+      "expansion": "no",
+      "owner_action": "CLOSE",
+      "confidence": "low"
+    },
+    {
+      "customer_ref": "TEST_cs14",
+      "products": [
+        "growth_support"
+      ],
+      "health": "HEALTHY",
+      "adoption": "UNKNOWN",
+      "value": "UNKNOWN",
+      "support": "none",
+      "payment": "paid",
+      "risk": "none",
+      "renewal": "due",
+      "expansion": "no",
+      "owner_action": "RENEW",
+      "confidence": "low"
+    },
+    {
+      "customer_ref": "TEST_cs15",
+      "products": [
+        "growth_support"
+      ],
+      "health": "UNKNOWN",
+      "adoption": "UNKNOWN",
+      "value": "UNKNOWN",
+      "support": "none",
+      "payment": "UNKNOWN",
+      "risk": "none",
+      "renewal": "due",
+      "expansion": "no",
+      "owner_action": "SUPPORT",
+      "confidence": "low"
+    },
+    {
+      "customer_ref": "TEST_cs16",
+      "products": [
+        "mini_audit"
+      ],
+      "health": "HEALTHY",
+      "adoption": "UNKNOWN",
+      "value": "UNKNOWN",
+      "support": "none",
+      "payment": "UNKNOWN",
+      "risk": "none",
+      "renewal": "n/a",
+      "expansion": "eligible",
+      "owner_action": "EXPAND",
+      "confidence": "low"
+    },
+    {
+      "customer_ref": "TEST_cs17",
+      "products": [
+        "mini_audit"
+      ],
+      "health": "HEALTHY",
+      "adoption": "UNKNOWN",
+      "value": "UNKNOWN",
+      "support": "none",
+      "payment": "UNKNOWN",
+      "risk": "none",
+      "renewal": "n/a",
+      "expansion": "no",
+      "owner_action": "MAINTAIN",
+      "confidence": "low"
+    },
+    {
+      "customer_ref": "TEST_cs18",
+      "products": [
+        "business_website"
+      ],
+      "health": "UNKNOWN",
+      "adoption": "UNKNOWN",
+      "value": "UNKNOWN",
+      "support": "none",
+      "payment": "paid",
+      "risk": "none",
+      "renewal": "n/a",
+      "expansion": "no",
+      "owner_action": "MAINTAIN",
+      "confidence": "low"
+    },
+    {
+      "customer_ref": "TEST_cs19",
+      "products": [
+        "mini_audit"
+      ],
+      "health": "UNKNOWN",
+      "adoption": "UNKNOWN",
+      "value": "UNKNOWN",
+      "support": "none",
+      "payment": "UNKNOWN",
+      "risk": "none",
+      "renewal": "n/a",
+      "expansion": "no",
+      "owner_action": "MAINTAIN",
+      "confidence": "low"
+    },
+    {
+      "customer_ref": "TEST_cs20",
+      "products": [
+        "business_website"
+      ],
+      "health": "UNKNOWN",
+      "adoption": "UNKNOWN",
+      "value": "UNKNOWN",
+      "support": "none",
+      "payment": "UNKNOWN",
+      "risk": "none",
+      "renewal": "n/a",
+      "expansion": "no",
+      "owner_action": "MAINTAIN",
+      "confidence": "low"
+    },
+    {
+      "customer_ref": "TEST_cs21",
+      "products": [
+        "mini_audit"
+      ],
+      "health": "UNKNOWN",
+      "adoption": "UNKNOWN",
+      "value": "UNKNOWN",
+      "support": "none",
+      "payment": "UNKNOWN",
+      "risk": "none",
+      "renewal": "n/a",
+      "expansion": "no",
+      "owner_action": "MAINTAIN",
+      "confidence": "low"
+    },
+    {
+      "customer_ref": "TEST_cs22",
+      "products": [
+        "mini_audit"
+      ],
+      "health": "UNKNOWN",
+      "adoption": "UNKNOWN",
+      "value": "UNKNOWN",
+      "support": "none",
+      "payment": "UNKNOWN",
+      "risk": "none",
+      "renewal": "n/a",
+      "expansion": "no",
+      "owner_action": "MAINTAIN",
+      "confidence": "low"
+    },
+    {
+      "customer_ref": "TEST_cs23",
+      "products": [
+        "mini_audit"
+      ],
+      "health": "UNKNOWN",
+      "adoption": "UNKNOWN",
+      "value": "UNKNOWN",
+      "support": "none",
+      "payment": "UNKNOWN",
+      "risk": "none",
+      "renewal": "n/a",
+      "expansion": "no",
+      "owner_action": "MAINTAIN",
+      "confidence": "low"
+    },
+    {
+      "customer_ref": "TEST_cs24",
+      "products": [
+        "business_website"
+      ],
+      "health": "UNKNOWN",
+      "adoption": "UNKNOWN",
+      "value": "UNKNOWN",
+      "support": "none",
+      "payment": "UNKNOWN",
+      "risk": "none",
+      "renewal": "n/a",
+      "expansion": "no",
+      "owner_action": "MAINTAIN",
+      "confidence": "low"
+    }
+  ],
+  "actions_vocab": [
+    "MAINTAIN",
+    "SUPPORT",
+    "REVIEW",
+    "RECOVER",
+    "RENEW",
+    "EXPAND",
+    "PAUSE",
+    "CLOSE",
+    "OWNER_DECISION_REQUIRED"
+  ]
+}

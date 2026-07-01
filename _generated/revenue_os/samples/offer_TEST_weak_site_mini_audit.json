@@ -1,0 +1,79 @@
+{
+  "offer_id": "offer_TEST_weak_site_mini_audit",
+  "lead_reference": null,
+  "product_id": "mini_audit",
+  "product_status": "ACTIVE",
+  "not_client_ready_label": null,
+  "owner_summary": "Mini Audit 10K for this profile. Price 10000 RUB (CONFIRMED). Ready for owner review (no send).",
+  "problem_statement": "Site/page/listing exists but requests are weak; unclear where the customer is lost.",
+  "evidence_summary": [
+    {
+      "claim": "weak CTA verified",
+      "type": "FACT",
+      "source": "https://weak.test"
+    }
+  ],
+  "recommended_product": {
+    "id": "mini_audit",
+    "name": "Mini Audit 10K",
+    "client_name": "Мини-аудит сайта и пути клиента до заявки"
+  },
+  "deliverables": [
+    "5-7 key findings",
+    "short fix plan",
+    "next step recommendation",
+    "client-facing PDF or structured note"
+  ],
+  "timeline": "1-2 days",
+  "price": {
+    "amount": 10000,
+    "amount_min": null,
+    "amount_max": null,
+    "currency": "RUB",
+    "type": "fixed",
+    "source": "CONFIRMED",
+    "status": "CONFIRMED",
+    "valid_from": "2026-06-01",
+    "valid_until": null,
+    "approved_by_owner": true,
+    "display": "10000 RUB"
+  },
+  "assumptions": [
+    "evidence verified at time of audit",
+    "client provides required inputs"
+  ],
+  "exclusions": [
+    "full legal audit",
+    "full technical SEO",
+    "deep crawl",
+    "all-pages review",
+    "analytics setup",
+    "site fixes",
+    "admin access",
+    "new blocks",
+    "new website"
+  ],
+  "client_inputs": [
+    "verified page URL",
+    "verified identity",
+    "verified contact path",
+    "verified evidence",
+    "Master Controller audit pipeline (future)"
+  ],
+  "risks": [
+    "scope creep into full audit",
+    "guaranteeing growth",
+    "unverified findings"
+  ],
+  "next_step": "Owner reviews and approves before any client contact.",
+  "approval_checklist": [
+    "price CONFIRMED (approved)",
+    "evidence gate PASS",
+    "scope valid",
+    "product readiness ACTIVE"
+  ],
+  "validity_period": "14 days from owner approval",
+  "approval_state": "INTERNAL_REVIEW",
+  "send_allowed": false,
+  "blockers": []
+}

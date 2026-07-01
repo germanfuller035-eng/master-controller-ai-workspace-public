@@ -1,0 +1,100 @@
+{
+  "schema": "integration_os.standards.v1",
+  "note": "MP6-22 consolidated standards. Descriptive/normative data; no runtime. Each section is enforced by validators + tests.",
+  "synthetic": true,
+
+  "id_standard": {
+    "ids": ["canonical_lead_id", "candidate_id", "product_id", "product_version_id", "deal_id", "campaign_id", "conversation_id", "thread_id", "message_id", "draft_id", "approval_request_id", "project_id", "invoice_id", "payment_id", "customer_ref_id", "support_request_id", "event_id", "snapshot_id", "decision_id", "file_ref_id"],
+    "requirements": ["stable", "immutable", "no join by display name", "no join by guessed email", "test IDs prefixed TEST_", "external IDs namespaced (e.g. tg:, email:)", "no collision across domains", "legacy ID mapping supported", "no silent re-key"],
+    "crosswalk_model": {
+      "fields": ["legacy_id", "legacy_system", "canonical_id", "canonical_system", "mapping_confidence", "mapped_at", "evidence"],
+      "rules": ["mapping is recorded, never a silent re-key", "ambiguous mapping -> owner review", "TEST_ ids never map to production ids"]
+    },
+    "namespacing": { "telegram": "tg:<chat_id>", "email": "email:<message_id>", "web_form": "form:<submission_id>", "test": "TEST_<domain>_<n>" }
+  },
+
+  "temporal_standard": {
+    "storage": "UTC, ISO 8601 with trailing Z",
+    "fields": ["created_at", "updated_at", "observed_at", "effective_at", "received_at", "sent_at", "accepted_at", "generated_at", "source_timestamp"],
+    "display_rule": "store UTC; convert to owner timezone at display only",
+    "detections": ["local-time ambiguity", "date-only misuse for instants", "inconsistent timezone", "synthetic timestamp without synthetic marker", "future timestamp (> now where not allowed)", "stale timestamp beyond freshness window"]
+  },
+
+  "evidence_standard": {
+    "fields": ["evidence_id", "source_type", "source_reference", "observed_at", "freshness", "confidence", "verification_status", "checksum", "limitations"],
+    "confidence_states": ["CONFIRMED", "SYSTEM_OBSERVED", "CUSTOMER_REPORTED", "OWNER_CONFIRMED", "MODEL_ESTIMATE", "INFERENCE", "IMPORTED_UNVERIFIED", "UNKNOWN"],
+    "rules": ["inference cannot become confirmed automatically", "synthetic evidence must remain synthetic", "source freshness mandatory for volatile facts", "missing evidence blocks factual claims"]
+  },
+
+  "revision_standard": {
+    "required": ["canonical revision per mutable entity", "expected_revision on mutation", "409 CONFLICT on mismatch", "current revision returned in response", "retry guidance", "no blind overwrite", "no client-side conflict resolution without user decision"],
+    "conflict_examples": ["approval", "lead status", "product decision", "project update", "invoice update", "conversation draft"]
+  },
+
+  "idempotency_standard": {
+    "fields": ["idempotency_key", "request_id", "attempt_id", "operation", "entity_id", "payload_hash", "created_at", "expires_at", "result_reference"],
+    "rules": ["all external mutations idempotent", "approved send uses durable identity", "retries preserve key", "changed payload requires new key", "ambiguous transport result requires reconciliation", "duplicate request returns same result where safe"]
+  },
+
+  "command_query_separation": {
+    "queries": { "properties": ["read-only", "cacheable where safe", "provenance", "freshness", "revision"] },
+    "commands": { "properties": ["validation", "owner approval where required", "idempotency", "expected revision", "audit event", "canonical owner"] },
+    "rule": "no module may mutate through a query endpoint"
+  },
+
+  "api_envelope": {
+    "request": ["request_id", "idempotency_key", "actor", "source_system", "operation", "entity", "entity_id", "expected_revision", "payload", "metadata"],
+    "response": ["ok", "request_id", "operation", "entity", "entity_id", "revision", "data", "warnings", "errors", "provenance"],
+    "error": ["code", "message", "field", "details", "retryable", "safe_to_retry", "current_revision", "correlation_id"]
+  },
+
+  "error_taxonomy": {
+    "codes": ["VALIDATION_ERROR", "NOT_FOUND", "CONFLICT", "FORBIDDEN", "APPROVAL_REQUIRED", "OPT_OUT_BLOCK", "IDENTITY_CONFLICT", "STALE_EVIDENCE", "UNSUPPORTED_CLAIM", "PRODUCT_NOT_READY", "CAPACITY_BLOCK", "DEPENDENCY_UNAVAILABLE", "RATE_LIMITED", "IDEMPOTENCY_CONFLICT", "DUPLICATE", "TEMPORARY_FAILURE", "PERMANENT_FAILURE", "INTERNAL_ERROR"],
+    "legacy_map": {
+      "409": "CONFLICT", "404": "NOT_FOUND", "403": "FORBIDDEN", "400": "VALIDATION_ERROR",
+      "429": "RATE_LIMITED", "500": "INTERNAL_ERROR", "503": "DEPENDENCY_UNAVAILABLE",
+      "duplicate_guard": "DUPLICATE", "opt_out_stop": "OPT_OUT_BLOCK", "needs_approval": "APPROVAL_REQUIRED"
+    },
+    "retryable": { "TEMPORARY_FAILURE": true, "RATE_LIMITED": true, "DEPENDENCY_UNAVAILABLE": true, "CONFLICT": false, "VALIDATION_ERROR": false, "FORBIDDEN": false, "IDEMPOTENCY_CONFLICT": false }
+  },
+
+  "read_models": [
+    { "name": "Owner Overview", "source_contracts": ["executive.decision.read", "analytics.event_taxonomy"], "mutation": false },
+    { "name": "Lead Summary", "source_contracts": ["mc.lead.read", "lh.candidate.recommendation"], "mutation": false },
+    { "name": "Product Summary", "source_contracts": ["product.readiness.read", "revenue.product_catalog.read"], "mutation": false },
+    { "name": "Deal Summary", "source_contracts": ["revenue.deal.lifecycle"], "mutation": false },
+    { "name": "Project Summary", "source_contracts": ["delivery.project.lifecycle"], "mutation": false },
+    { "name": "Finance Summary", "source_contracts": ["finance.invoice.lifecycle"], "mutation": false },
+    { "name": "Customer Summary", "source_contracts": ["cs.health.read"], "mutation": false },
+    { "name": "Conversation Summary", "source_contracts": ["convhub.draft.request", "mc.reply.state"], "mutation": false },
+    { "name": "Analytics Summary", "source_contracts": ["analytics.data_contract"], "mutation": false },
+    { "name": "System Health", "source_contracts": ["mc.lead.read", "analytics.data_contract"], "mutation": false }
+  ],
+  "read_model_required_fields": ["source_contracts", "freshness", "revision", "missing_data", "confidence", "no_mutation"],
+
+  "event_standard": {
+    "envelope": ["event_id", "event_type", "event_version", "producer", "entity_type", "entity_id", "occurred_at", "recorded_at", "correlation_id", "causation_id", "revision", "payload", "sensitivity", "synthetic"],
+    "rules": ["event fact vs recommendation separated", "event replay safe", "ordering limitations explicit", "no production emitter in this task", "schema version required"]
+  },
+
+  "file_handoff_standard": {
+    "fields": ["file_ref_id", "owner_system", "related_entity", "filename", "mime", "size", "hash", "storage_reference", "sensitivity", "retention", "scan_status", "version"],
+    "rules": ["no binary duplication", "no secret in general notes", "immutable original", "versioned derivative", "delete only after owner approval", "no path traversal", "no uncontrolled external URL"]
+  },
+
+  "consent_standard": {
+    "fields": ["subject_ref", "channel", "purpose", "status", "source", "evidence", "granted_at", "revoked_at", "expires_at", "restrictions"],
+    "purposes": ["commercial_communication", "support", "case_publication", "testimonial", "logo", "referral", "analytics_measurement"],
+    "rule": "no implied permission"
+  },
+
+  "data_classification": {
+    "classes": ["PUBLIC", "INTERNAL", "CONFIDENTIAL", "RESTRICTED", "SECRET_REFERENCE", "PERSONAL", "SENSITIVE_SPECIAL_CATEGORY", "FINANCIAL", "CLIENT_CONFIDENTIAL"],
+    "per_contract_fields": ["input_classification", "output_classification", "allowed_storage", "allowed_logs", "redaction", "retention"]
+  },
+
+  "cache_standard": {
+    "types": ["android_room", "dashboard_snapshot", "local_report", "analytics_snapshot", "read_model_cache"],
+    "rules": ["cache not canonical", "TTL required", "stale indicator", "revision tracked", "invalidation defined", "offline behavior defined", "no offline mutation", "no secret caching"]
+  }
+}

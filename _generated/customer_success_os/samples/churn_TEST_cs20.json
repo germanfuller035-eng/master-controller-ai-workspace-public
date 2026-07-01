@@ -1,0 +1,18 @@
+{
+  "ok": true,
+  "errors": [],
+  "churn": {
+    "churn_id": "CH_TEST_cs20",
+    "customer_ref_id": "TEST_cs20",
+    "reason": "product_mismatch",
+    "source": "exit interview",
+    "preventable": "partially_preventable",
+    "lessons_for": {
+      "product_os": true,
+      "delivery_os": false,
+      "revenue_os": true,
+      "executive_os": true
+    }
+  },
+  "note": "No automatic blame."
+}

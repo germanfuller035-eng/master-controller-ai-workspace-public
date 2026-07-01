@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-26",
+  "session": "MASTER_CONTROLLER_MCP_GATEWAY_V1",
+  "deny_actions": ["unrestricted_shell", "direct_docker_socket", "direct_ssh", "direct_production_filesystem", "production_db_write", "outbound_send", "publish_external", "payment_operation", "browser_action"],
+  "deny_commands": ["commit", "merge", "push", "checkout", "reset", "clean", "tag", "rebase", "ssh", "scp", "docker", "powershell", "cmd"],
+  "deny_path_names": [".env", "devices.json", "pairing.json"],
+  "deny_path_fragments": ["private_key", "access_token", "refresh_token"],
+  "deny_file_extensions": [".pem", ".key", ".p12", ".pfx"],
+  "deny_shell_metacharacters": [";", "&&", "||", "|", "`", "$(", "\n", "\r"],
+  "production_classes": ["production_deploy", "production_db_write", "direct_production_filesystem", "direct_mcp_production_tool_access"],
+  "outbound_classes": ["outbound_send", "publish_external"],
+  "payment_classes": ["payment_operation"],
+  "browser_classes": ["browser_action"]
+}

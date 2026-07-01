@@ -1,0 +1,15 @@
+{
+  "audit": "queue_drift_reconciliation",
+  "metric_definitions": { "queue_revision": "monotonic write counter (NOT job count)", "total_jobs": "jobs object key count", "completed": "jobs with status COMPLETED" },
+  "old_baseline_documented": 28,
+  "old_actual_backup": { "total": 27, "completed": 27, "failed": 0, "queue_revision": 104, "note": "old package said 28; frozen rev66-era backup holds 27 (1-job rounding)" },
+  "live": { "total_jobs": 41, "completed": 41, "pending": 0, "running": 0, "failed": 0, "dead_letters": 0, "cancelled": 0, "queue_revision": 146, "updated_at": "2026-06-18T10:15:50Z" },
+  "by_type": { "LEAD_VERIFY": 29, "LEAD_DISCOVERY": 9, "HEALTH_CHECK": 2, "METRICS_REFRESH": 1 },
+  "jobs_created_2026_06_18": 13,
+  "new_jobs_total": 14,
+  "new_jobs_explained": 14,
+  "send_capable_jobs": 0,
+  "unknown_job_types": 0,
+  "unexpected_send_jobs": 0,
+  "queue_metric_definition_reconciled": true
+}

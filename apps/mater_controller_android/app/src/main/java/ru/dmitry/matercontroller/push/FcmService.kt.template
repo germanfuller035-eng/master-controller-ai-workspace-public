@@ -1,0 +1,43 @@
+// FcmService.kt.template — FCM activation template (0.8.0). DO NOT rename to .kt until the
+// Firebase SDK + google-services.json are provisioned (see FCM_PUSH_ACTIVATION_PACKAGE.md).
+// While this stays a .template file it is NOT compiled, so the build remains green without
+// Firebase credentials. This is owner-facing OPERATIONAL push only — never client outbound.
+//
+// Activation:
+//   1) Add the Firebase BoM + firebase-messaging-ktx and the google-services plugin (see package doc).
+//   2) Rename this file to FcmService.kt and register the service in AndroidManifest.xml.
+//   3) On token refresh, the app POSTs the token to /push/register (owner-auth) via MaterRepository.
+package ru.dmitry.matercontroller.push
+
+import android.util.Log
+import com.google.firebase.messaging.FirebaseMessagingService
+import com.google.firebase.messaging.RemoteMessage
+
+/**
+ * Receives FCM token refreshes and operational push payloads. The token is registered with the
+ * backend (/push/register) so the server can target this device. Incoming messages are owner
+ * operational notifications (incidents/decisions/brief) — they are surfaced as local notifications;
+ * they NEVER trigger any client outbound action.
+ */
+class FcmService : FirebaseMessagingService() {
+
+    // Inject MaterRepository via Hilt (EntryPointAccessors) when activated; pseudo-wired here.
+    override fun onNewToken(token: String) {
+        super.onNewToken(token)
+        Log.d(TAG, "FCM token refreshed (hash=${token.takeLast(6)})")
+        // TODO on activation: enqueue a WorkManager job that calls repo.pushRegister(token, appVersion, prefs).
+        // Token registration must be idempotent and retry on transient failure (WorkManager backoff).
+    }
+
+    override fun onMessageReceived(message: RemoteMessage) {
+        super.onMessageReceived(message)
+        // Owner operational push only. Render a local notification from message.data:
+        //   severity, title_ru, summary_ru, deep_link. NEVER perform a send/approve from here.
+        val title = message.data["title_ru"] ?: message.notification?.title ?: "Master Controller"
+        val body = message.data["summary_ru"] ?: message.notification?.body ?: ""
+        Log.d(TAG, "operational push: $title — $body")
+        // TODO on activation: build a NotificationCompat notification on an owner channel and post it.
+    }
+
+    companion object { private const val TAG = "FcmService" }
+}

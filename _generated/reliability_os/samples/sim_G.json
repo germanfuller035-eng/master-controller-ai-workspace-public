@@ -1,0 +1,10 @@
+{
+  "scenario": "G",
+  "production_affected": false,
+  "name": "IMAP stale",
+  "ok": true,
+  "steps": [
+    "imap_stale -> detect:timer age high health:STALE alert:a_imap_stale runbook:rb_imap_stale"
+  ],
+  "alert": "a_imap_stale"
+}

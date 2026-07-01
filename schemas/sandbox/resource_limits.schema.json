@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "resource_limits.schema",
+  "type": "object",
+  "required": [
+    "timeout_seconds",
+    "cpu_cores",
+    "memory_mb"
+  ],
+  "properties": {
+    "timeout_seconds": {
+      "type": [
+        "string",
+        "number",
+        "boolean",
+        "array",
+        "object"
+      ]
+    },
+    "cpu_cores": {
+      "type": [
+        "string",
+        "number",
+        "boolean",
+        "array",
+        "object"
+      ]
+    },
+    "memory_mb": {
+      "type": [
+        "string",
+        "number",
+        "boolean",
+        "array",
+        "object"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

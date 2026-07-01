@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/finance/accounting_entry_draft.schema.json",
+  "title": "Accounting Entry Draft V1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "synthetic",
+    "accounting_entry_draft_id",
+    "draft_only",
+    "export_allowed",
+    "debits",
+    "credits",
+    "payload_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "finance.accounting_entry_draft.v1"},
+    "synthetic": {"const": true},
+    "accounting_entry_draft_id": {"type": "string"},
+    "draft_only": {"const": true},
+    "export_allowed": {"const": false},
+    "debits": {"type": "array"},
+    "credits": {"type": "array"},
+    "payload_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "additionalProperties": true
+}

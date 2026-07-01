@@ -1,0 +1,21 @@
+# UI Defects Fixed
+
+- Today now shows the action dashboard even when the server summary is unavailable.
+- Data freshness is visible near the top: stale status, last refresh, refresh action, and human-readable reason.
+- Bottom navigation is reduced to owner workflow tabs: Today, Leads, Replies, Deals, More.
+- Old first-touch and commercial summary callbacks no longer open stale owner-visible routes.
+- LeadQueue shows private lead queue, manual site input, source/history/suppression summary, and private-storage wording.
+- LeadReview shows weak facts as manual-review required instead of inventing product/contact facts.
+- Draft Editor shows message structure, factual basis, editable draft, and text hash.
+- QA Gate shows unsupported claims, ROI promises, tone, length, personalization, compliance, deliverability, history, and suppression checks.
+- QA owner override now has a working route to ChannelSelect when the owner confirms a reason.
+- ChannelSelect now covers Email, Contact form, Telegram, WhatsApp, Phone, and Other/manual.
+- SendPacket shows not-sent status, package code, text hash, payload code, final text, audit preview, suppression/history reason, and owner actions.
+- ManualSendResult records local result without starting a sequence.
+- ReplyInbox is read-only and shows classification options, stop request visibility, auto-reply OFF, and CRM write OFF.
+- ReplyDetail shows owner actions: create deal, audit, prepare response, do-not-contact, hold.
+- DealOverview shows stage, next action, product, documents, payment status, history, and full stage ladder.
+- DocumentReview shows version, private data warning, and document actions.
+- InvoiceDraft and PaymentGate keep payments draft-only and link creation OFF.
+- History uses owner-readable audit labels instead of raw audit keys.
+- Safety Center states that the automated funnel prepares next steps but does not send to clients.

@@ -1,0 +1,11 @@
+{
+  "scenario": "C",
+  "name": "Identity conflict",
+  "ok": true,
+  "steps": [
+    "ambiguous inbound -> identity CONFLICT",
+    "routing BLOCKED",
+    "owner review queued"
+  ],
+  "blocked": true
+}

@@ -1,0 +1,13 @@
+{
+  "status": "CRITICAL",
+  "score": null,
+  "dimensions": {},
+  "risk_flags": [],
+  "confidence": "low",
+  "owner_review_required": true,
+  "explanation": {
+    "known_dimensions": 0,
+    "unknown_dimensions": 10,
+    "rule": "payment!=dissatisfaction; silence!=churn; high support=adoption-or-failure"
+  }
+}

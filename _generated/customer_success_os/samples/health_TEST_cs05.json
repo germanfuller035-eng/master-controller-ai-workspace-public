@@ -1,0 +1,24 @@
+{
+  "status": "HEALTHY",
+  "score": 100,
+  "dimensions": {
+    "adoption": "good",
+    "outcome_progress": "good",
+    "engagement": "good",
+    "payment_status": "good",
+    "support_load": "good",
+    "open_risks": "good",
+    "product_fit": "good",
+    "delivery_satisfaction": "good",
+    "owner_capacity": "good",
+    "customer_dependency": "good"
+  },
+  "risk_flags": [],
+  "confidence": "high",
+  "owner_review_required": false,
+  "explanation": {
+    "known_dimensions": 10,
+    "unknown_dimensions": 0,
+    "rule": "payment!=dissatisfaction; silence!=churn; high support=adoption-or-failure"
+  }
+}

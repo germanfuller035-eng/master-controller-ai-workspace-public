@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "synthetic_batch": true,
+  "batch_id": "digital_presence_no_deploy_batch_six",
+  "external_access": false,
+  "sites": [
+    {"fixture": "sites/synthetic_site_bad.json"},
+    {"fixture": "sites/synthetic_site_no_lead_capture.json"},
+    {"fixture": "sites/synthetic_site_slow_response.json"},
+    {"fixture": "sites/synthetic_site_front_office_fit.json"},
+    {"fixture": "sites/synthetic_site_lead_system_fit.json"},
+    {"fixture": "sites/synthetic_site_website_fit.json"}
+  ]
+}

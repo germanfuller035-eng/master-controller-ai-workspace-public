@@ -1,0 +1,8 @@
+{
+  "scenario": "I",
+  "name": "Revision conflict",
+  "ok": true,
+  "steps": [
+    "retry: RETRY_BOUNDED; reconcile expected_revision then re-attempt"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "additionalProperties": true,
+  "properties": {
+    "action_type": {},
+    "external_browser": {},
+    "request_id": {},
+    "synthetic": {},
+    "target_ref": {}
+  },
+  "required": [
+    "synthetic",
+    "request_id",
+    "action_type",
+    "target_ref",
+    "external_browser"
+  ],
+  "title": "Browser Action Request",
+  "type": "object"
+}

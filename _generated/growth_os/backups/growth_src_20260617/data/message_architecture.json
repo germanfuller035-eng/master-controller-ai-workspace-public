@@ -1,0 +1,26 @@
+{
+  "schema": "growth_os.message_architecture.v1",
+  "version": "1.0",
+  "note": "Message hierarchy + variants. All DRAFT/TEST_ONLY. No send. Every message ends with opt-out + limitation. Claims must be Product-OS-supportable.",
+  "hierarchy": [
+    {"level": 1, "element": "brand_promise", "value": "Evidence-based digital diagnostics for small businesses — clarity before spend."},
+    {"level": 2, "element": "product_promise", "value": "Mini Audit: for 10 000 ₽, a concrete evidence-backed list of what blocks requests on your website."},
+    {"level": 3, "element": "segment_problem", "value": "Your site gets visitors but few requests, and it is unclear why."},
+    {"level": 4, "element": "evidence", "value": "Findings cite what is observable on your site; sample structure available."},
+    {"level": 5, "element": "offer", "value": "Fixed-price Mini Audit, delivered in Day 0-2."},
+    {"level": 6, "element": "cta", "value": "Request a Mini Audit / reply to learn more."},
+    {"level": 7, "element": "limitations", "value": "Not a redesign, not implementation, no guaranteed growth."},
+    {"level": 8, "element": "opt_out", "value": "Reply STOP / unsubscribe to receive nothing further."}
+  ],
+  "variants": {
+    "concise": "Your site gets visits but few requests. Our 10 000 ₽ Mini Audit shows exactly what blocks them, with evidence. Not a redesign. Want the sample?",
+    "consultative": "Many owners see traffic but few requests and aren't sure why. The Mini Audit gives an evidence-based read of the path-to-request and the first fixes — fixed price, no redesign commitment.",
+    "audit_led": "We audited the path-to-request on sites like yours and found recurring, fixable gaps. The 10 000 ₽ Mini Audit documents yours with evidence.",
+    "evidence_led": "Every finding in a Mini Audit is tied to something observable on your site — no guesswork, no guaranteed-growth promises.",
+    "problem_led": "Visitors but no requests is a conversion-path problem, not always a traffic problem. The Mini Audit pinpoints where it breaks.",
+    "referral_led": "A peer asked us to look at their request path; here is what a Mini Audit covers if useful to you.",
+    "inbound": "Considering a Mini Audit? Here is exactly what you get, what you don't, and the fixed price.",
+    "outbound_draft": "[DRAFT — NOT SENT] Hello, we noticed your site may be losing requests. A fixed-price Mini Audit documents why, with evidence. No redesign, no obligation. Reply STOP to opt out."
+  },
+  "rules": {"send": false, "every_message_has_opt_out": true, "every_message_has_limitation": true, "claims_must_be_supported": true}
+}

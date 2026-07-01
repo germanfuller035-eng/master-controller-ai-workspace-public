@@ -1,0 +1,53 @@
+{
+  "schema": "product_os.dashboard.v1",
+  "label": "INTERNAL_OWNER_ONLY",
+  "note": "Does NOT duplicate Revenue Dashboard. Product readiness focus.",
+  "catalog_count": 18,
+  "by_status": {
+    "ACTIVE": [
+      "express_review",
+      "mini_audit"
+    ],
+    "DRAFT": [
+      "mini_audit_plus",
+      "full_business_audit",
+      "funnel_audit",
+      "implementation_sprint",
+      "start_page_sprint",
+      "landing_sprint",
+      "business_website"
+    ],
+    "PLANNED": [
+      "process_comm_audit",
+      "lead_system",
+      "ai_front_office",
+      "growth_support",
+      "digital_presence_check",
+      "owned_presence_pack",
+      "domain_recovery",
+      "audit_plus_prototype",
+      "prototype_preview"
+    ]
+  },
+  "active": [
+    "express_review",
+    "mini_audit"
+  ],
+  "delivery_defined": [
+    "mini_audit"
+  ],
+  "pilot_candidates": [
+    "mini_audit",
+    "digital_presence_check",
+    "full_business_audit",
+    "start_page_sprint",
+    "landing_sprint",
+    "business_website"
+  ],
+  "blocked": [],
+  "paused": [],
+  "owner_decisions": 7,
+  "consistency_warnings": "see consistency report",
+  "claims_warnings": "see claims report",
+  "next_product_action": "mini_audit pilot review + digital_presence_check internal pilot"
+}

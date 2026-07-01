@@ -1,0 +1,7 @@
+{
+  "intent_id": "synthetic-voice-safe-alpha",
+  "intent_type": "safe_local_note",
+  "risky": false,
+  "synthetic": true,
+  "transcript": "Create a local synthetic note"
+}

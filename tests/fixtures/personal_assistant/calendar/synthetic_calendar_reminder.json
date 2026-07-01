@@ -1,0 +1,9 @@
+{
+  "calendar_write_attempted": false,
+  "external_system_accessed": false,
+  "kind": "calendar_reminder_draft",
+  "request_id": "syn_calendar_alpha",
+  "synthetic": true,
+  "time_label": "synthetic_morning_window",
+  "title": "Review synthetic household checklist"
+}

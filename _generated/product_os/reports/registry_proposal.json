@@ -1,0 +1,14 @@
+{
+  "schema": "product_os.registry_proposal.v1",
+  "generated_ts": "20260617_200000",
+  "note": "Proposed Project Registry addition; NOT applied during soak.",
+  "target": "00_MASTER_CONTEXT/PROJECT_REGISTRY.md (owner-applied post-soak)",
+  "product_os_project_entry": {
+    "project_id": "product-os",
+    "name": "Product OS / Service Productization & Pilot Factory",
+    "status": "ACTIVE_DEVELOPMENT",
+    "priority": "P1_REVENUE",
+    "source_of_truth": "tools/product_os + docs_canonical_proposed/07_revenue_os/product_os_command_center.md",
+    "note": "Resolves ledger warning (product-os not yet in registry)."
+  }
+}

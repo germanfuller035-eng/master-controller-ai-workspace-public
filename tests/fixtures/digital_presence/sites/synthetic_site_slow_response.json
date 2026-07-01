@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "site_id": "synthetic_site_slow_response",
+  "synthetic": true,
+  "external_access": false,
+  "browser_action_allowed": false,
+  "reserved_domain_reference": "synthetic-slow-response.example.test",
+  "synthetic_company_label": "Synthetic Slow Response Fixture",
+  "metrics": {
+    "response_time_ms": 1400,
+    "mobile_ready": true,
+    "message_clarity": 4,
+    "trust_proofs": 2
+  },
+  "lead_capture": {
+    "forms": 1,
+    "cta_count": 2,
+    "consent_copy": true,
+    "routing_defined": true,
+    "owner_followup_sla_minutes": 180
+  },
+  "front_office": {
+    "response_sla_minutes": 720,
+    "after_hours_plan": false
+  },
+  "signals": {
+    "website_problem": 1,
+    "lead_capture_problem": 1,
+    "response_handling_problem": 5,
+    "trust_problem": 1,
+    "landing_need": 1
+  },
+  "evidence": [
+    {
+      "id": "ev-slow-response-profile",
+      "source": "synthetic_fixture",
+      "claim": "Synthetic response handling SLA is slow while lead capture exists."
+    }
+  ]
+}

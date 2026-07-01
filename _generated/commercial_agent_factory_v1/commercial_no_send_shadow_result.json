@@ -1,0 +1,2117 @@
+{
+  "pipeline_status": "PASS",
+  "stop_active": false,
+  "synthetic_leads_processed": 10,
+  "duplicates_blocked": 1,
+  "suppression_blocked": 0,
+  "low_fit_parked": 1,
+  "contact_completeness_calculated": true,
+  "unsupported_claims_blocked": true,
+  "product_fit_reason_percent": 100,
+  "product_mix_rule": {
+    "status": "PASS",
+    "total": 8,
+    "counts": {
+      "LEAD_SYSTEM": 3,
+      "WEBSITE_CONVERSION": 3,
+      "AI_FRONT_OFFICE": 1,
+      "MINI_AUDIT": 1
+    },
+    "dominant_product": "LEAD_SYSTEM",
+    "max_share": 0.375,
+    "limit": 0.6
+  },
+  "offer_draft_only": true,
+  "owner_approval_required_for_send": true,
+  "outbound_count": 0,
+  "payment_count": 0,
+  "production_db_writes": 0,
+  "expensive_materials_used": 8,
+  "qa_rejected": 0,
+  "results": [
+    {
+      "lead_id": "synthetic_batch_clean",
+      "synthetic": true,
+      "pipeline_entry": {
+        "entry_status": "ACCEPTED_LOCAL_SYNTHETIC",
+        "lead_id": "synthetic_batch_clean",
+        "source_type": "synthetic_fixture",
+        "fingerprint": "synthetic-batch-clean|synthetic-batch-clean-example-invalid",
+        "network_used": false,
+        "production_write": false
+      },
+      "duplicate": {
+        "duplicate": false,
+        "fingerprint": "synthetic-batch-clean|synthetic-batch-clean-example-invalid",
+        "decision": "ALLOW"
+      },
+      "identity": {
+        "identity_status": "PASS",
+        "synthetic_only": true,
+        "organization_name": "Synthetic Batch Clean",
+        "fingerprint": "synthetic-batch-clean|synthetic-batch-clean-example-invalid",
+        "evidence_ids": [
+          "ev-synthetic_batch_clean-fixture"
+        ],
+        "no_personal_data": true,
+        "no_real_contact_data": true
+      },
+      "contact": {
+        "lead_id": "synthetic_batch_clean",
+        "enrichment_mode": "LOCAL_FIXTURE_ONLY",
+        "network_used": false,
+        "contact": {
+          "website_reference": "synthetic-batch-clean.example.invalid/home",
+          "contact_form_reference": "synthetic-form-synthetic_batch_clean",
+          "public_contact_page_reference": "synthetic-contact-page-synthetic_batch_clean",
+          "role_contact_reference": "synthetic-role-contact-synthetic_batch_clean",
+          "consent_basis": "synthetic_fixture_only"
+        },
+        "sources": [
+          "synthetic_fixture"
+        ]
+      },
+      "contact_completeness": {
+        "lead_id": "synthetic_batch_clean",
+        "score": 100,
+        "target_score": 95,
+        "status": "COMPLETE",
+        "missing_fields": [],
+        "real_email_present": false,
+        "real_phone_present": false
+      },
+      "qualification": {
+        "lead_id": "synthetic_batch_clean",
+        "qualification_status": "QUALIFIED",
+        "score": 13,
+        "score_components": {
+          "base_score": 7,
+          "problem_score": 4,
+          "contact_completeness_score": 100,
+          "completeness_bonus": 2
+        },
+        "unsupported_assumptions": [],
+        "evidence_ids": [
+          "ev-synthetic_batch_clean-fixture"
+        ]
+      },
+      "digital_presence": {
+        "lead_id": "synthetic_batch_clean",
+        "analysis_mode": "LOCAL_SYNTHETIC_FIXTURE",
+        "browser_used": false,
+        "network_used": false,
+        "signals": {
+          "website_problem": 2,
+          "lead_capture_problem": 4,
+          "response_handling_problem": 1,
+          "trust_problem": 1,
+          "audit_uncertainty": 1
+        },
+        "issues": [
+          {
+            "issue_id": "lead-capture-problem",
+            "label": "Lead capture issue",
+            "severity": 4,
+            "evidence_id": "ev-synthetic-batch-clean-lead-capture-problem",
+            "observed": "Synthetic fixture signal lead_capture_problem=4"
+          }
+        ],
+        "evidence": [
+          {
+            "id": "ev-synthetic-batch-clean-lead-capture-problem",
+            "source": "synthetic_digital_presence_fixture",
+            "claim": "Synthetic fixture signal lead_capture_problem=4"
+          },
+          {
+            "id": "ev-site-good-1",
+            "source": "synthetic_site_fixture",
+            "claim": "Synthetic site fixture has clear navigation and contact path."
+          }
+        ]
+      },
+      "capacity": {
+        "capacity_status": "ALLOW",
+        "expensive_material_limit": 8,
+        "expensive_materials_used": 0,
+        "requested_expensive_materials": 1,
+        "allowed_expensive_materials": 1,
+        "remaining_after": 7,
+        "throttled": false
+      },
+      "status": "PASS",
+      "product_match": {
+        "lead_id": "synthetic_batch_clean",
+        "product_id": "LEAD_SYSTEM",
+        "product_label": "Lead system and capture pipeline",
+        "score": 8,
+        "reason": "Lead capture and contact completeness problems dominate the synthetic evidence.",
+        "reason_required": true,
+        "has_reason": true,
+        "mini_audit_is_default": false,
+        "objective_concentration_reason": false,
+        "evidence_ids": [
+          "ev-synthetic-batch-clean-lead-capture-problem",
+          "ev-synthetic_batch_clean-fixture",
+          "ev-site-good-1"
+        ]
+      },
+      "mini_audit": {
+        "lead_id": "synthetic_batch_clean",
+        "audit_mode": "LOCAL_SYNTHETIC",
+        "evidence_required": true,
+        "claims": [
+          {
+            "claim": "Synthetic fixture signal lead_capture_problem=4",
+            "evidence_ids": [
+              "ev-synthetic-batch-clean-lead-capture-problem"
+            ],
+            "severity": 4
+          }
+        ],
+        "evidence": [
+          {
+            "id": "ev-synthetic_batch_clean-fixture",
+            "source": "synthetic_lead_fixture",
+            "claim": "Synthetic fixture defines Synthetic Batch Clean problem signals."
+          },
+          {
+            "id": "ev-synthetic-batch-clean-lead-capture-problem",
+            "source": "synthetic_digital_presence_fixture",
+            "claim": "Synthetic fixture signal lead_capture_problem=4"
+          },
+          {
+            "id": "ev-site-good-1",
+            "source": "synthetic_site_fixture",
+            "claim": "Synthetic site fixture has clear navigation and contact path."
+          }
+        ],
+        "draft_only": true
+      },
+      "roi_estimate": {
+        "lead_id": "synthetic_batch_clean",
+        "product_id": "LEAD_SYSTEM",
+        "estimate_units": 144.0,
+        "currency": "SYNTHETIC_UNITS",
+        "assumptions_required": true,
+        "assumptions": [
+          {
+            "id": "assumption.synthetic.baseline",
+            "text": "Synthetic monthly baseline from fixture.",
+            "value": 12
+          },
+          {
+            "id": "assumption.synthetic.improvement",
+            "text": "Synthetic improvement ratio for local estimate only.",
+            "value": 0.12
+          }
+        ],
+        "evidence_ids": [
+          "ev-synthetic-batch-clean-lead-capture-problem",
+          "ev-synthetic_batch_clean-fixture",
+          "ev-site-good-1"
+        ]
+      },
+      "offer_draft": {
+        "lead_id": "synthetic_batch_clean",
+        "product_id": "LEAD_SYSTEM",
+        "product_label": "Lead system and capture pipeline",
+        "product_reason": "Lead capture and contact completeness problems dominate the synthetic evidence.",
+        "draft_only": true,
+        "send_allowed": false,
+        "channel_actions": [],
+        "owner_approval_required_for_send": true,
+        "approval_state": "NOT_REQUESTED",
+        "claims": [
+          {
+            "claim": "Lead capture and contact completeness problems dominate the synthetic evidence.",
+            "evidence_ids": [
+              "ev-synthetic-batch-clean-lead-capture-problem",
+              "ev-synthetic_batch_clean-fixture",
+              "ev-site-good-1"
+            ]
+          }
+        ],
+        "roi_estimate": {
+          "lead_id": "synthetic_batch_clean",
+          "product_id": "LEAD_SYSTEM",
+          "estimate_units": 144.0,
+          "currency": "SYNTHETIC_UNITS",
+          "assumptions_required": true,
+          "assumptions": [
+            {
+              "id": "assumption.synthetic.baseline",
+              "text": "Synthetic monthly baseline from fixture.",
+              "value": 12
+            },
+            {
+              "id": "assumption.synthetic.improvement",
+              "text": "Synthetic improvement ratio for local estimate only.",
+              "value": 0.12
+            }
+          ],
+          "evidence_ids": [
+            "ev-synthetic-batch-clean-lead-capture-problem",
+            "ev-synthetic_batch_clean-fixture",
+            "ev-site-good-1"
+          ]
+        }
+      },
+      "qa_review": {
+        "lead_id": "synthetic_batch_clean",
+        "qa_status": "PASS",
+        "issues": [],
+        "unsupported_claims_blocked": false,
+        "independent_check": true
+      },
+      "send_allowed": false
+    },
+    {
+      "lead_id": "synthetic_batch_missing_contact",
+      "synthetic": true,
+      "pipeline_entry": {
+        "entry_status": "ACCEPTED_LOCAL_SYNTHETIC",
+        "lead_id": "synthetic_batch_missing_contact",
+        "source_type": "synthetic_fixture",
+        "fingerprint": "synthetic-batch-missing-contact|synthetic-batch-missing-contact-example-invalid",
+        "network_used": false,
+        "production_write": false
+      },
+      "duplicate": {
+        "duplicate": false,
+        "fingerprint": "synthetic-batch-missing-contact|synthetic-batch-missing-contact-example-invalid",
+        "decision": "ALLOW"
+      },
+      "identity": {
+        "identity_status": "PASS",
+        "synthetic_only": true,
+        "organization_name": "Synthetic Batch Missing Contact",
+        "fingerprint": "synthetic-batch-missing-contact|synthetic-batch-missing-contact-example-invalid",
+        "evidence_ids": [
+          "ev-synthetic_batch_missing_contact-fixture"
+        ],
+        "no_personal_data": true,
+        "no_real_contact_data": true
+      },
+      "contact": {
+        "lead_id": "synthetic_batch_missing_contact",
+        "enrichment_mode": "LOCAL_FIXTURE_ONLY",
+        "network_used": false,
+        "contact": {
+          "website_reference": "synthetic-batch-missing-contact.example.invalid/home",
+          "consent_basis": "synthetic_fixture_only"
+        },
+        "sources": [
+          "synthetic_fixture"
+        ]
+      },
+      "contact_completeness": {
+        "lead_id": "synthetic_batch_missing_contact",
+        "score": 35,
+        "target_score": 95,
+        "status": "PARTIAL",
+        "missing_fields": [
+          "contact_form_reference",
+          "public_contact_page_reference",
+          "role_contact_reference"
+        ],
+        "real_email_present": false,
+        "real_phone_present": false
+      },
+      "qualification": {
+        "lead_id": "synthetic_batch_missing_contact",
+        "qualification_status": "QUALIFIED",
+        "score": 11,
+        "score_components": {
+          "base_score": 7,
+          "problem_score": 5,
+          "contact_completeness_score": 35,
+          "completeness_bonus": -1
+        },
+        "unsupported_assumptions": [],
+        "evidence_ids": [
+          "ev-synthetic_batch_missing_contact-fixture"
+        ]
+      },
+      "digital_presence": {
+        "lead_id": "synthetic_batch_missing_contact",
+        "analysis_mode": "LOCAL_SYNTHETIC_FIXTURE",
+        "browser_used": false,
+        "network_used": false,
+        "signals": {
+          "website_problem": 1,
+          "lead_capture_problem": 5,
+          "response_handling_problem": 1,
+          "trust_problem": 1,
+          "audit_uncertainty": 1
+        },
+        "issues": [
+          {
+            "issue_id": "lead-capture-problem",
+            "label": "Lead capture issue",
+            "severity": 5,
+            "evidence_id": "ev-synthetic-batch-missing-contact-lead-capture-problem",
+            "observed": "Synthetic fixture signal lead_capture_problem=5"
+          }
+        ],
+        "evidence": [
+          {
+            "id": "ev-synthetic-batch-missing-contact-lead-capture-problem",
+            "source": "synthetic_digital_presence_fixture",
+            "claim": "Synthetic fixture signal lead_capture_problem=5"
+          },
+          {
+            "id": "ev-site-no-capture-1",
+            "source": "synthetic_site_fixture",
+            "claim": "Synthetic site fixture has no clear lead capture path."
+          }
+        ]
+      },
+      "capacity": {
+        "capacity_status": "ALLOW",
+        "expensive_material_limit": 8,
+        "expensive_materials_used": 1,
+        "requested_expensive_materials": 1,
+        "allowed_expensive_materials": 1,
+        "remaining_after": 6,
+        "throttled": false
+      },
+      "status": "PASS",
+      "product_match": {
+        "lead_id": "synthetic_batch_missing_contact",
+        "product_id": "LEAD_SYSTEM",
+        "product_label": "Lead system and capture pipeline",
+        "score": 12,
+        "reason": "Lead capture and contact completeness problems dominate the synthetic evidence.",
+        "reason_required": true,
+        "has_reason": true,
+        "mini_audit_is_default": false,
+        "objective_concentration_reason": false,
+        "evidence_ids": [
+          "ev-synthetic_batch_missing_contact-fixture",
+          "ev-site-no-capture-1",
+          "ev-synthetic-batch-missing-contact-lead-capture-problem"
+        ]
+      },
+      "mini_audit": {
+        "lead_id": "synthetic_batch_missing_contact",
+        "audit_mode": "LOCAL_SYNTHETIC",
+        "evidence_required": true,
+        "claims": [
+          {
+            "claim": "Synthetic fixture signal lead_capture_problem=5",
+            "evidence_ids": [
+              "ev-synthetic-batch-missing-contact-lead-capture-problem"
+            ],
+            "severity": 5
+          }
+        ],
+        "evidence": [
+          {
+            "id": "ev-synthetic_batch_missing_contact-fixture",
+            "source": "synthetic_lead_fixture",
+            "claim": "Synthetic fixture defines Synthetic Batch Missing Contact problem signals."
+          },
+          {
+            "id": "ev-synthetic-batch-missing-contact-lead-capture-problem",
+            "source": "synthetic_digital_presence_fixture",
+            "claim": "Synthetic fixture signal lead_capture_problem=5"
+          },
+          {
+            "id": "ev-site-no-capture-1",
+            "source": "synthetic_site_fixture",
+            "claim": "Synthetic site fixture has no clear lead capture path."
+          }
+        ],
+        "draft_only": true
+      },
+      "roi_estimate": {
+        "lead_id": "synthetic_batch_missing_contact",
+        "product_id": "LEAD_SYSTEM",
+        "estimate_units": 144.0,
+        "currency": "SYNTHETIC_UNITS",
+        "assumptions_required": true,
+        "assumptions": [
+          {
+            "id": "assumption.synthetic.baseline",
+            "text": "Synthetic monthly baseline from fixture.",
+            "value": 12
+          },
+          {
+            "id": "assumption.synthetic.improvement",
+            "text": "Synthetic improvement ratio for local estimate only.",
+            "value": 0.12
+          }
+        ],
+        "evidence_ids": [
+          "ev-synthetic_batch_missing_contact-fixture",
+          "ev-site-no-capture-1",
+          "ev-synthetic-batch-missing-contact-lead-capture-problem"
+        ]
+      },
+      "offer_draft": {
+        "lead_id": "synthetic_batch_missing_contact",
+        "product_id": "LEAD_SYSTEM",
+        "product_label": "Lead system and capture pipeline",
+        "product_reason": "Lead capture and contact completeness problems dominate the synthetic evidence.",
+        "draft_only": true,
+        "send_allowed": false,
+        "channel_actions": [],
+        "owner_approval_required_for_send": true,
+        "approval_state": "NOT_REQUESTED",
+        "claims": [
+          {
+            "claim": "Lead capture and contact completeness problems dominate the synthetic evidence.",
+            "evidence_ids": [
+              "ev-synthetic_batch_missing_contact-fixture",
+              "ev-site-no-capture-1",
+              "ev-synthetic-batch-missing-contact-lead-capture-problem"
+            ]
+          }
+        ],
+        "roi_estimate": {
+          "lead_id": "synthetic_batch_missing_contact",
+          "product_id": "LEAD_SYSTEM",
+          "estimate_units": 144.0,
+          "currency": "SYNTHETIC_UNITS",
+          "assumptions_required": true,
+          "assumptions": [
+            {
+              "id": "assumption.synthetic.baseline",
+              "text": "Synthetic monthly baseline from fixture.",
+              "value": 12
+            },
+            {
+              "id": "assumption.synthetic.improvement",
+              "text": "Synthetic improvement ratio for local estimate only.",
+              "value": 0.12
+            }
+          ],
+          "evidence_ids": [
+            "ev-synthetic_batch_missing_contact-fixture",
+            "ev-site-no-capture-1",
+            "ev-synthetic-batch-missing-contact-lead-capture-problem"
+          ]
+        }
+      },
+      "qa_review": {
+        "lead_id": "synthetic_batch_missing_contact",
+        "qa_status": "PASS",
+        "issues": [],
+        "unsupported_claims_blocked": false,
+        "independent_check": true
+      },
+      "send_allowed": false
+    },
+    {
+      "lead_id": "synthetic_batch_duplicate_a",
+      "synthetic": true,
+      "pipeline_entry": {
+        "entry_status": "ACCEPTED_LOCAL_SYNTHETIC",
+        "lead_id": "synthetic_batch_duplicate_a",
+        "source_type": "synthetic_fixture",
+        "fingerprint": "synthetic-batch-duplicate|synthetic-batch-duplicate-example-invalid",
+        "network_used": false,
+        "production_write": false
+      },
+      "duplicate": {
+        "duplicate": false,
+        "fingerprint": "synthetic-batch-duplicate|synthetic-batch-duplicate-example-invalid",
+        "decision": "ALLOW"
+      },
+      "identity": {
+        "identity_status": "PASS",
+        "synthetic_only": true,
+        "organization_name": "Synthetic Batch Duplicate",
+        "fingerprint": "synthetic-batch-duplicate|synthetic-batch-duplicate-example-invalid",
+        "evidence_ids": [
+          "ev-synthetic_batch_duplicate_a-fixture"
+        ],
+        "no_personal_data": true,
+        "no_real_contact_data": true
+      },
+      "contact": {
+        "lead_id": "synthetic_batch_duplicate_a",
+        "enrichment_mode": "LOCAL_FIXTURE_ONLY",
+        "network_used": false,
+        "contact": {
+          "website_reference": "synthetic-batch-duplicate.example.invalid/home",
+          "contact_form_reference": "synthetic-form-synthetic_batch_duplicate_a",
+          "public_contact_page_reference": "synthetic-contact-page-synthetic_batch_duplicate_a",
+          "role_contact_reference": "synthetic-role-contact-synthetic_batch_duplicate_a",
+          "consent_basis": "synthetic_fixture_only"
+        },
+        "sources": [
+          "synthetic_fixture"
+        ]
+      },
+      "contact_completeness": {
+        "lead_id": "synthetic_batch_duplicate_a",
+        "score": 100,
+        "target_score": 95,
+        "status": "COMPLETE",
+        "missing_fields": [],
+        "real_email_present": false,
+        "real_phone_present": false
+      },
+      "qualification": {
+        "lead_id": "synthetic_batch_duplicate_a",
+        "qualification_status": "QUALIFIED",
+        "score": 15,
+        "score_components": {
+          "base_score": 8,
+          "problem_score": 5,
+          "contact_completeness_score": 100,
+          "completeness_bonus": 2
+        },
+        "unsupported_assumptions": [],
+        "evidence_ids": [
+          "ev-synthetic_batch_duplicate_a-fixture"
+        ]
+      },
+      "digital_presence": {
+        "lead_id": "synthetic_batch_duplicate_a",
+        "analysis_mode": "LOCAL_SYNTHETIC_FIXTURE",
+        "browser_used": false,
+        "network_used": false,
+        "signals": {
+          "website_problem": 5,
+          "lead_capture_problem": 2,
+          "response_handling_problem": 1,
+          "trust_problem": 3,
+          "audit_uncertainty": 1
+        },
+        "issues": [
+          {
+            "issue_id": "website-problem",
+            "label": "Website conversion issue",
+            "severity": 5,
+            "evidence_id": "ev-synthetic-batch-duplicate-a-website-problem",
+            "observed": "Synthetic fixture signal website_problem=5"
+          },
+          {
+            "issue_id": "trust-problem",
+            "label": "Trust proof issue",
+            "severity": 3,
+            "evidence_id": "ev-synthetic-batch-duplicate-a-trust-problem",
+            "observed": "Synthetic fixture signal trust_problem=3"
+          }
+        ],
+        "evidence": [
+          {
+            "id": "ev-synthetic-batch-duplicate-a-website-problem",
+            "source": "synthetic_digital_presence_fixture",
+            "claim": "Synthetic fixture signal website_problem=5"
+          },
+          {
+            "id": "ev-synthetic-batch-duplicate-a-trust-problem",
+            "source": "synthetic_digital_presence_fixture",
+            "claim": "Synthetic fixture signal trust_problem=3"
+          },
+          {
+            "id": "ev-site-bad-1",
+            "source": "synthetic_site_fixture",
+            "claim": "Synthetic site fixture marks conversion and trust proof gaps."
+          }
+        ]
+      },
+      "capacity": {
+        "capacity_status": "ALLOW",
+        "expensive_material_limit": 8,
+        "expensive_materials_used": 2,
+        "requested_expensive_materials": 1,
+        "allowed_expensive_materials": 1,
+        "remaining_after": 5,
+        "throttled": false
+      },
+      "status": "PASS",
+      "product_match": {
+        "lead_id": "synthetic_batch_duplicate_a",
+        "product_id": "WEBSITE_CONVERSION",
+        "product_label": "Website conversion rebuild",
+        "score": 13,
+        "reason": "Website problem dominates the synthetic evidence.",
+        "reason_required": true,
+        "has_reason": true,
+        "mini_audit_is_default": false,
+        "objective_concentration_reason": false,
+        "evidence_ids": [
+          "ev-synthetic-batch-duplicate-a-website-problem",
+          "ev-synthetic_batch_duplicate_a-fixture",
+          "ev-site-bad-1",
+          "ev-synthetic-batch-duplicate-a-trust-problem"
+        ]
+      },
+      "mini_audit": {
+        "lead_id": "synthetic_batch_duplicate_a",
+        "audit_mode": "LOCAL_SYNTHETIC",
+        "evidence_required": true,
+        "claims": [
+          {
+            "claim": "Synthetic fixture signal website_problem=5",
+            "evidence_ids": [
+              "ev-synthetic-batch-duplicate-a-website-problem"
+            ],
+            "severity": 5
+          },
+          {
+            "claim": "Synthetic fixture signal trust_problem=3",
+            "evidence_ids": [
+              "ev-synthetic-batch-duplicate-a-trust-problem"
+            ],
+            "severity": 3
+          }
+        ],
+        "evidence": [
+          {
+            "id": "ev-synthetic_batch_duplicate_a-fixture",
+            "source": "synthetic_lead_fixture",
+            "claim": "Synthetic fixture defines Synthetic Batch Duplicate problem signals."
+          },
+          {
+            "id": "ev-synthetic-batch-duplicate-a-website-problem",
+            "source": "synthetic_digital_presence_fixture",
+            "claim": "Synthetic fixture signal website_problem=5"
+          },
+          {
+            "id": "ev-synthetic-batch-duplicate-a-trust-problem",
+            "source": "synthetic_digital_presence_fixture",
+            "claim": "Synthetic fixture signal trust_problem=3"
+          },
+          {
+            "id": "ev-site-bad-1",
+            "source": "synthetic_site_fixture",
+            "claim": "Synthetic site fixture marks conversion and trust proof gaps."
+          }
+        ],
+        "draft_only": true
+      },
+      "roi_estimate": {
+        "lead_id": "synthetic_batch_duplicate_a",
+        "product_id": "WEBSITE_CONVERSION",
+        "estimate_units": 144.0,
+        "currency": "SYNTHETIC_UNITS",
+        "assumptions_required": true,
+        "assumptions": [
+          {
+            "id": "assumption.synthetic.baseline",
+            "text": "Synthetic monthly baseline from fixture.",
+            "value": 12
+          },
+          {
+            "id": "assumption.synthetic.improvement",
+            "text": "Synthetic improvement ratio for local estimate only.",
+            "value": 0.12
+          }
+        ],
+        "evidence_ids": [
+          "ev-synthetic-batch-duplicate-a-website-problem",
+          "ev-synthetic_batch_duplicate_a-fixture",
+          "ev-site-bad-1",
+          "ev-synthetic-batch-duplicate-a-trust-problem"
+        ]
+      },
+      "offer_draft": {
+        "lead_id": "synthetic_batch_duplicate_a",
+        "product_id": "WEBSITE_CONVERSION",
+        "product_label": "Website conversion rebuild",
+        "product_reason": "Website problem dominates the synthetic evidence.",
+        "draft_only": true,
+        "send_allowed": false,
+        "channel_actions": [],
+        "owner_approval_required_for_send": true,
+        "approval_state": "NOT_REQUESTED",
+        "claims": [
+          {
+            "claim": "Website problem dominates the synthetic evidence.",
+            "evidence_ids": [
+              "ev-synthetic-batch-duplicate-a-website-problem",
+              "ev-synthetic_batch_duplicate_a-fixture",
+              "ev-site-bad-1",
+              "ev-synthetic-batch-duplicate-a-trust-problem"
+            ]
+          }
+        ],
+        "roi_estimate": {
+          "lead_id": "synthetic_batch_duplicate_a",
+          "product_id": "WEBSITE_CONVERSION",
+          "estimate_units": 144.0,
+          "currency": "SYNTHETIC_UNITS",
+          "assumptions_required": true,
+          "assumptions": [
+            {
+              "id": "assumption.synthetic.baseline",
+              "text": "Synthetic monthly baseline from fixture.",
+              "value": 12
+            },
+            {
+              "id": "assumption.synthetic.improvement",
+              "text": "Synthetic improvement ratio for local estimate only.",
+              "value": 0.12
+            }
+          ],
+          "evidence_ids": [
+            "ev-synthetic-batch-duplicate-a-website-problem",
+            "ev-synthetic_batch_duplicate_a-fixture",
+            "ev-site-bad-1",
+            "ev-synthetic-batch-duplicate-a-trust-problem"
+          ]
+        }
+      },
+      "qa_review": {
+        "lead_id": "synthetic_batch_duplicate_a",
+        "qa_status": "PASS",
+        "issues": [],
+        "unsupported_claims_blocked": false,
+        "independent_check": true
+      },
+      "send_allowed": false
+    },
+    {
+      "lead_id": "synthetic_batch_duplicate_b",
+      "synthetic": true,
+      "pipeline_entry": {
+        "entry_status": "ACCEPTED_LOCAL_SYNTHETIC",
+        "lead_id": "synthetic_batch_duplicate_b",
+        "source_type": "synthetic_fixture",
+        "fingerprint": "synthetic-batch-duplicate|synthetic-batch-duplicate-example-invalid",
+        "network_used": false,
+        "production_write": false
+      },
+      "duplicate": {
+        "duplicate": true,
+        "fingerprint": "synthetic-batch-duplicate|synthetic-batch-duplicate-example-invalid",
+        "original_lead_id": "synthetic_batch_duplicate_a",
+        "duplicate_lead_id": "synthetic_batch_duplicate_b",
+        "decision": "BLOCK"
+      },
+      "status": "BLOCKED_DUPLICATE",
+      "send_allowed": false
+    },
+    {
+      "lead_id": "synthetic_batch_low_fit",
+      "synthetic": true,
+      "pipeline_entry": {
+        "entry_status": "ACCEPTED_LOCAL_SYNTHETIC",
+        "lead_id": "synthetic_batch_low_fit",
+        "source_type": "synthetic_fixture",
+        "fingerprint": "synthetic-batch-low-fit|synthetic-batch-low-fit-example-invalid",
+        "network_used": false,
+        "production_write": false
+      },
+      "duplicate": {
+        "duplicate": false,
+        "fingerprint": "synthetic-batch-low-fit|synthetic-batch-low-fit-example-invalid",
+        "decision": "ALLOW"
+      },
+      "identity": {
+        "identity_status": "PASS",
+        "synthetic_only": true,
+        "organization_name": "Synthetic Batch Low Fit",
+        "fingerprint": "synthetic-batch-low-fit|synthetic-batch-low-fit-example-invalid",
+        "evidence_ids": [
+          "ev-synthetic_batch_low_fit-fixture"
+        ],
+        "no_personal_data": true,
+        "no_real_contact_data": true
+      },
+      "contact": {
+        "lead_id": "synthetic_batch_low_fit",
+        "enrichment_mode": "LOCAL_FIXTURE_ONLY",
+        "network_used": false,
+        "contact": {
+          "website_reference": "synthetic-batch-low-fit.example.invalid/home",
+          "contact_form_reference": "synthetic-form-synthetic_batch_low_fit",
+          "public_contact_page_reference": "synthetic-contact-page-synthetic_batch_low_fit",
+          "role_contact_reference": "synthetic-role-contact-synthetic_batch_low_fit",
+          "consent_basis": "synthetic_fixture_only"
+        },
+        "sources": [
+          "synthetic_fixture"
+        ]
+      },
+      "contact_completeness": {
+        "lead_id": "synthetic_batch_low_fit",
+        "score": 100,
+        "target_score": 95,
+        "status": "COMPLETE",
+        "missing_fields": [],
+        "real_email_present": false,
+        "real_phone_present": false
+      },
+      "qualification": {
+        "lead_id": "synthetic_batch_low_fit",
+        "qualification_status": "REJECTED",
+        "score": 3,
+        "score_components": {
+          "base_score": 0,
+          "problem_score": 1,
+          "contact_completeness_score": 100,
+          "completeness_bonus": 2
+        },
+        "unsupported_assumptions": [],
+        "evidence_ids": [
+          "ev-synthetic_batch_low_fit-fixture"
+        ]
+      },
+      "digital_presence": {
+        "lead_id": "synthetic_batch_low_fit",
+        "analysis_mode": "LOCAL_SYNTHETIC_FIXTURE",
+        "browser_used": false,
+        "network_used": false,
+        "signals": {
+          "website_problem": 1,
+          "lead_capture_problem": 1,
+          "response_handling_problem": 1,
+          "trust_problem": 1,
+          "audit_uncertainty": 1
+        },
+        "issues": [],
+        "evidence": [
+          {
+            "id": "ev-site-good-1",
+            "source": "synthetic_site_fixture",
+            "claim": "Synthetic site fixture has clear navigation and contact path."
+          }
+        ]
+      },
+      "status": "REJECTED",
+      "send_allowed": false
+    },
+    {
+      "lead_id": "synthetic_batch_ai_front_office",
+      "synthetic": true,
+      "pipeline_entry": {
+        "entry_status": "ACCEPTED_LOCAL_SYNTHETIC",
+        "lead_id": "synthetic_batch_ai_front_office",
+        "source_type": "synthetic_fixture",
+        "fingerprint": "synthetic-batch-response-desk|synthetic-batch-response-example-invalid",
+        "network_used": false,
+        "production_write": false
+      },
+      "duplicate": {
+        "duplicate": false,
+        "fingerprint": "synthetic-batch-response-desk|synthetic-batch-response-example-invalid",
+        "decision": "ALLOW"
+      },
+      "identity": {
+        "identity_status": "PASS",
+        "synthetic_only": true,
+        "organization_name": "Synthetic Batch Response Desk",
+        "fingerprint": "synthetic-batch-response-desk|synthetic-batch-response-example-invalid",
+        "evidence_ids": [
+          "ev-synthetic_batch_ai_front_office-fixture"
+        ],
+        "no_personal_data": true,
+        "no_real_contact_data": true
+      },
+      "contact": {
+        "lead_id": "synthetic_batch_ai_front_office",
+        "enrichment_mode": "LOCAL_FIXTURE_ONLY",
+        "network_used": false,
+        "contact": {
+          "website_reference": "synthetic-batch-response.example.invalid/home",
+          "contact_form_reference": "synthetic-form-synthetic_batch_ai_front_office",
+          "public_contact_page_reference": "synthetic-contact-page-synthetic_batch_ai_front_office",
+          "role_contact_reference": "synthetic-role-contact-synthetic_batch_ai_front_office",
+          "consent_basis": "synthetic_fixture_only"
+        },
+        "sources": [
+          "synthetic_fixture"
+        ]
+      },
+      "contact_completeness": {
+        "lead_id": "synthetic_batch_ai_front_office",
+        "score": 100,
+        "target_score": 95,
+        "status": "COMPLETE",
+        "missing_fields": [],
+        "real_email_present": false,
+        "real_phone_present": false
+      },
+      "qualification": {
+        "lead_id": "synthetic_batch_ai_front_office",
+        "qualification_status": "QUALIFIED",
+        "score": 15,
+        "score_components": {
+          "base_score": 8,
+          "problem_score": 5,
+          "contact_completeness_score": 100,
+          "completeness_bonus": 2
+        },
+        "unsupported_assumptions": [],
+        "evidence_ids": [
+          "ev-synthetic_batch_ai_front_office-fixture"
+        ]
+      },
+      "digital_presence": {
+        "lead_id": "synthetic_batch_ai_front_office",
+        "analysis_mode": "LOCAL_SYNTHETIC_FIXTURE",
+        "browser_used": false,
+        "network_used": false,
+        "signals": {
+          "website_problem": 1,
+          "lead_capture_problem": 1,
+          "response_handling_problem": 5,
+          "trust_problem": 1,
+          "audit_uncertainty": 1
+        },
+        "issues": [
+          {
+            "issue_id": "response-handling-problem",
+            "label": "Response handling issue",
+            "severity": 5,
+            "evidence_id": "ev-synthetic-batch-ai-front-office-response-handling-problem",
+            "observed": "Synthetic fixture signal response_handling_problem=5"
+          }
+        ],
+        "evidence": [
+          {
+            "id": "ev-synthetic-batch-ai-front-office-response-handling-problem",
+            "source": "synthetic_digital_presence_fixture",
+            "claim": "Synthetic fixture signal response_handling_problem=5"
+          },
+          {
+            "id": "ev-site-good-1",
+            "source": "synthetic_site_fixture",
+            "claim": "Synthetic site fixture has clear navigation and contact path."
+          }
+        ]
+      },
+      "capacity": {
+        "capacity_status": "ALLOW",
+        "expensive_material_limit": 8,
+        "expensive_materials_used": 3,
+        "requested_expensive_materials": 1,
+        "allowed_expensive_materials": 1,
+        "remaining_after": 4,
+        "throttled": false
+      },
+      "status": "PASS",
+      "product_match": {
+        "lead_id": "synthetic_batch_ai_front_office",
+        "product_id": "AI_FRONT_OFFICE",
+        "product_label": "AI front office response handling",
+        "score": 10,
+        "reason": "Response handling problem dominates the synthetic evidence.",
+        "reason_required": true,
+        "has_reason": true,
+        "mini_audit_is_default": false,
+        "objective_concentration_reason": false,
+        "evidence_ids": [
+          "ev-synthetic-batch-ai-front-office-response-handling-problem",
+          "ev-synthetic_batch_ai_front_office-fixture",
+          "ev-site-good-1"
+        ]
+      },
+      "mini_audit": {
+        "lead_id": "synthetic_batch_ai_front_office",
+        "audit_mode": "LOCAL_SYNTHETIC",
+        "evidence_required": true,
+        "claims": [
+          {
+            "claim": "Synthetic fixture signal response_handling_problem=5",
+            "evidence_ids": [
+              "ev-synthetic-batch-ai-front-office-response-handling-problem"
+            ],
+            "severity": 5
+          }
+        ],
+        "evidence": [
+          {
+            "id": "ev-synthetic_batch_ai_front_office-fixture",
+            "source": "synthetic_lead_fixture",
+            "claim": "Synthetic fixture defines Synthetic Batch Response Desk problem signals."
+          },
+          {
+            "id": "ev-synthetic-batch-ai-front-office-response-handling-problem",
+            "source": "synthetic_digital_presence_fixture",
+            "claim": "Synthetic fixture signal response_handling_problem=5"
+          },
+          {
+            "id": "ev-site-good-1",
+            "source": "synthetic_site_fixture",
+            "claim": "Synthetic site fixture has clear navigation and contact path."
+          }
+        ],
+        "draft_only": true
+      },
+      "roi_estimate": {
+        "lead_id": "synthetic_batch_ai_front_office",
+        "product_id": "AI_FRONT_OFFICE",
+        "estimate_units": 144.0,
+        "currency": "SYNTHETIC_UNITS",
+        "assumptions_required": true,
+        "assumptions": [
+          {
+            "id": "assumption.synthetic.baseline",
+            "text": "Synthetic monthly baseline from fixture.",
+            "value": 12
+          },
+          {
+            "id": "assumption.synthetic.improvement",
+            "text": "Synthetic improvement ratio for local estimate only.",
+            "value": 0.12
+          }
+        ],
+        "evidence_ids": [
+          "ev-synthetic-batch-ai-front-office-response-handling-problem",
+          "ev-synthetic_batch_ai_front_office-fixture",
+          "ev-site-good-1"
+        ]
+      },
+      "offer_draft": {
+        "lead_id": "synthetic_batch_ai_front_office",
+        "product_id": "AI_FRONT_OFFICE",
+        "product_label": "AI front office response handling",
+        "product_reason": "Response handling problem dominates the synthetic evidence.",
+        "draft_only": true,
+        "send_allowed": false,
+        "channel_actions": [],
+        "owner_approval_required_for_send": true,
+        "approval_state": "NOT_REQUESTED",
+        "claims": [
+          {
+            "claim": "Response handling problem dominates the synthetic evidence.",
+            "evidence_ids": [
+              "ev-synthetic-batch-ai-front-office-response-handling-problem",
+              "ev-synthetic_batch_ai_front_office-fixture",
+              "ev-site-good-1"
+            ]
+          }
+        ],
+        "roi_estimate": {
+          "lead_id": "synthetic_batch_ai_front_office",
+          "product_id": "AI_FRONT_OFFICE",
+          "estimate_units": 144.0,
+          "currency": "SYNTHETIC_UNITS",
+          "assumptions_required": true,
+          "assumptions": [
+            {
+              "id": "assumption.synthetic.baseline",
+              "text": "Synthetic monthly baseline from fixture.",
+              "value": 12
+            },
+            {
+              "id": "assumption.synthetic.improvement",
+              "text": "Synthetic improvement ratio for local estimate only.",
+              "value": 0.12
+            }
+          ],
+          "evidence_ids": [
+            "ev-synthetic-batch-ai-front-office-response-handling-problem",
+            "ev-synthetic_batch_ai_front_office-fixture",
+            "ev-site-good-1"
+          ]
+        }
+      },
+      "qa_review": {
+        "lead_id": "synthetic_batch_ai_front_office",
+        "qa_status": "PASS",
+        "issues": [],
+        "unsupported_claims_blocked": false,
+        "independent_check": true
+      },
+      "send_allowed": false
+    },
+    {
+      "lead_id": "synthetic_batch_website",
+      "synthetic": true,
+      "pipeline_entry": {
+        "entry_status": "ACCEPTED_LOCAL_SYNTHETIC",
+        "lead_id": "synthetic_batch_website",
+        "source_type": "synthetic_fixture",
+        "fingerprint": "synthetic-batch-website|synthetic-batch-website-example-invalid",
+        "network_used": false,
+        "production_write": false
+      },
+      "duplicate": {
+        "duplicate": false,
+        "fingerprint": "synthetic-batch-website|synthetic-batch-website-example-invalid",
+        "decision": "ALLOW"
+      },
+      "identity": {
+        "identity_status": "PASS",
+        "synthetic_only": true,
+        "organization_name": "Synthetic Batch Website",
+        "fingerprint": "synthetic-batch-website|synthetic-batch-website-example-invalid",
+        "evidence_ids": [
+          "ev-synthetic_batch_website-fixture"
+        ],
+        "no_personal_data": true,
+        "no_real_contact_data": true
+      },
+      "contact": {
+        "lead_id": "synthetic_batch_website",
+        "enrichment_mode": "LOCAL_FIXTURE_ONLY",
+        "network_used": false,
+        "contact": {
+          "website_reference": "synthetic-batch-website.example.invalid/home",
+          "contact_form_reference": "synthetic-form-synthetic_batch_website",
+          "public_contact_page_reference": "synthetic-contact-page-synthetic_batch_website",
+          "role_contact_reference": "synthetic-role-contact-synthetic_batch_website",
+          "consent_basis": "synthetic_fixture_only"
+        },
+        "sources": [
+          "synthetic_fixture"
+        ]
+      },
+      "contact_completeness": {
+        "lead_id": "synthetic_batch_website",
+        "score": 100,
+        "target_score": 95,
+        "status": "COMPLETE",
+        "missing_fields": [],
+        "real_email_present": false,
+        "real_phone_present": false
+      },
+      "qualification": {
+        "lead_id": "synthetic_batch_website",
+        "qualification_status": "QUALIFIED",
+        "score": 15,
+        "score_components": {
+          "base_score": 8,
+          "problem_score": 5,
+          "contact_completeness_score": 100,
+          "completeness_bonus": 2
+        },
+        "unsupported_assumptions": [],
+        "evidence_ids": [
+          "ev-synthetic_batch_website-fixture"
+        ]
+      },
+      "digital_presence": {
+        "lead_id": "synthetic_batch_website",
+        "analysis_mode": "LOCAL_SYNTHETIC_FIXTURE",
+        "browser_used": false,
+        "network_used": false,
+        "signals": {
+          "website_problem": 5,
+          "lead_capture_problem": 2,
+          "response_handling_problem": 1,
+          "trust_problem": 3,
+          "audit_uncertainty": 1
+        },
+        "issues": [
+          {
+            "issue_id": "website-problem",
+            "label": "Website conversion issue",
+            "severity": 5,
+            "evidence_id": "ev-synthetic-batch-website-website-problem",
+            "observed": "Synthetic fixture signal website_problem=5"
+          },
+          {
+            "issue_id": "trust-problem",
+            "label": "Trust proof issue",
+            "severity": 3,
+            "evidence_id": "ev-synthetic-batch-website-trust-problem",
+            "observed": "Synthetic fixture signal trust_problem=3"
+          }
+        ],
+        "evidence": [
+          {
+            "id": "ev-synthetic-batch-website-website-problem",
+            "source": "synthetic_digital_presence_fixture",
+            "claim": "Synthetic fixture signal website_problem=5"
+          },
+          {
+            "id": "ev-synthetic-batch-website-trust-problem",
+            "source": "synthetic_digital_presence_fixture",
+            "claim": "Synthetic fixture signal trust_problem=3"
+          },
+          {
+            "id": "ev-site-bad-1",
+            "source": "synthetic_site_fixture",
+            "claim": "Synthetic site fixture marks conversion and trust proof gaps."
+          }
+        ]
+      },
+      "capacity": {
+        "capacity_status": "ALLOW",
+        "expensive_material_limit": 8,
+        "expensive_materials_used": 4,
+        "requested_expensive_materials": 1,
+        "allowed_expensive_materials": 1,
+        "remaining_after": 3,
+        "throttled": false
+      },
+      "status": "PASS",
+      "product_match": {
+        "lead_id": "synthetic_batch_website",
+        "product_id": "WEBSITE_CONVERSION",
+        "product_label": "Website conversion rebuild",
+        "score": 13,
+        "reason": "Website problem dominates the synthetic evidence.",
+        "reason_required": true,
+        "has_reason": true,
+        "mini_audit_is_default": false,
+        "objective_concentration_reason": false,
+        "evidence_ids": [
+          "ev-synthetic_batch_website-fixture",
+          "ev-synthetic-batch-website-trust-problem",
+          "ev-synthetic-batch-website-website-problem",
+          "ev-site-bad-1"
+        ]
+      },
+      "mini_audit": {
+        "lead_id": "synthetic_batch_website",
+        "audit_mode": "LOCAL_SYNTHETIC",
+        "evidence_required": true,
+        "claims": [
+          {
+            "claim": "Synthetic fixture signal website_problem=5",
+            "evidence_ids": [
+              "ev-synthetic-batch-website-website-problem"
+            ],
+            "severity": 5
+          },
+          {
+            "claim": "Synthetic fixture signal trust_problem=3",
+            "evidence_ids": [
+              "ev-synthetic-batch-website-trust-problem"
+            ],
+            "severity": 3
+          }
+        ],
+        "evidence": [
+          {
+            "id": "ev-synthetic_batch_website-fixture",
+            "source": "synthetic_lead_fixture",
+            "claim": "Synthetic fixture defines Synthetic Batch Website problem signals."
+          },
+          {
+            "id": "ev-synthetic-batch-website-website-problem",
+            "source": "synthetic_digital_presence_fixture",
+            "claim": "Synthetic fixture signal website_problem=5"
+          },
+          {
+            "id": "ev-synthetic-batch-website-trust-problem",
+            "source": "synthetic_digital_presence_fixture",
+            "claim": "Synthetic fixture signal trust_problem=3"
+          },
+          {
+            "id": "ev-site-bad-1",
+            "source": "synthetic_site_fixture",
+            "claim": "Synthetic site fixture marks conversion and trust proof gaps."
+          }
+        ],
+        "draft_only": true
+      },
+      "roi_estimate": {
+        "lead_id": "synthetic_batch_website",
+        "product_id": "WEBSITE_CONVERSION",
+        "estimate_units": 144.0,
+        "currency": "SYNTHETIC_UNITS",
+        "assumptions_required": true,
+        "assumptions": [
+          {
+            "id": "assumption.synthetic.baseline",
+            "text": "Synthetic monthly baseline from fixture.",
+            "value": 12
+          },
+          {
+            "id": "assumption.synthetic.improvement",
+            "text": "Synthetic improvement ratio for local estimate only.",
+            "value": 0.12
+          }
+        ],
+        "evidence_ids": [
+          "ev-synthetic_batch_website-fixture",
+          "ev-synthetic-batch-website-trust-problem",
+          "ev-synthetic-batch-website-website-problem",
+          "ev-site-bad-1"
+        ]
+      },
+      "offer_draft": {
+        "lead_id": "synthetic_batch_website",
+        "product_id": "WEBSITE_CONVERSION",
+        "product_label": "Website conversion rebuild",
+        "product_reason": "Website problem dominates the synthetic evidence.",
+        "draft_only": true,
+        "send_allowed": false,
+        "channel_actions": [],
+        "owner_approval_required_for_send": true,
+        "approval_state": "NOT_REQUESTED",
+        "claims": [
+          {
+            "claim": "Website problem dominates the synthetic evidence.",
+            "evidence_ids": [
+              "ev-synthetic_batch_website-fixture",
+              "ev-synthetic-batch-website-trust-problem",
+              "ev-synthetic-batch-website-website-problem",
+              "ev-site-bad-1"
+            ]
+          }
+        ],
+        "roi_estimate": {
+          "lead_id": "synthetic_batch_website",
+          "product_id": "WEBSITE_CONVERSION",
+          "estimate_units": 144.0,
+          "currency": "SYNTHETIC_UNITS",
+          "assumptions_required": true,
+          "assumptions": [
+            {
+              "id": "assumption.synthetic.baseline",
+              "text": "Synthetic monthly baseline from fixture.",
+              "value": 12
+            },
+            {
+              "id": "assumption.synthetic.improvement",
+              "text": "Synthetic improvement ratio for local estimate only.",
+              "value": 0.12
+            }
+          ],
+          "evidence_ids": [
+            "ev-synthetic_batch_website-fixture",
+            "ev-synthetic-batch-website-trust-problem",
+            "ev-synthetic-batch-website-website-problem",
+            "ev-site-bad-1"
+          ]
+        }
+      },
+      "qa_review": {
+        "lead_id": "synthetic_batch_website",
+        "qa_status": "PASS",
+        "issues": [],
+        "unsupported_claims_blocked": false,
+        "independent_check": true
+      },
+      "send_allowed": false
+    },
+    {
+      "lead_id": "synthetic_batch_mini_audit",
+      "synthetic": true,
+      "pipeline_entry": {
+        "entry_status": "ACCEPTED_LOCAL_SYNTHETIC",
+        "lead_id": "synthetic_batch_mini_audit",
+        "source_type": "synthetic_fixture",
+        "fingerprint": "synthetic-batch-audit|synthetic-batch-audit-example-invalid",
+        "network_used": false,
+        "production_write": false
+      },
+      "duplicate": {
+        "duplicate": false,
+        "fingerprint": "synthetic-batch-audit|synthetic-batch-audit-example-invalid",
+        "decision": "ALLOW"
+      },
+      "identity": {
+        "identity_status": "PASS",
+        "synthetic_only": true,
+        "organization_name": "Synthetic Batch Audit",
+        "fingerprint": "synthetic-batch-audit|synthetic-batch-audit-example-invalid",
+        "evidence_ids": [
+          "ev-synthetic_batch_mini_audit-fixture"
+        ],
+        "no_personal_data": true,
+        "no_real_contact_data": true
+      },
+      "contact": {
+        "lead_id": "synthetic_batch_mini_audit",
+        "enrichment_mode": "LOCAL_FIXTURE_ONLY",
+        "network_used": false,
+        "contact": {
+          "website_reference": "synthetic-batch-audit.example.invalid/home",
+          "contact_form_reference": "synthetic-form-synthetic_batch_mini_audit",
+          "public_contact_page_reference": "synthetic-contact-page-synthetic_batch_mini_audit",
+          "role_contact_reference": "synthetic-role-contact-synthetic_batch_mini_audit",
+          "consent_basis": "synthetic_fixture_only"
+        },
+        "sources": [
+          "synthetic_fixture"
+        ]
+      },
+      "contact_completeness": {
+        "lead_id": "synthetic_batch_mini_audit",
+        "score": 100,
+        "target_score": 95,
+        "status": "COMPLETE",
+        "missing_fields": [],
+        "real_email_present": false,
+        "real_phone_present": false
+      },
+      "qualification": {
+        "lead_id": "synthetic_batch_mini_audit",
+        "qualification_status": "QUALIFIED",
+        "score": 14,
+        "score_components": {
+          "base_score": 7,
+          "problem_score": 5,
+          "contact_completeness_score": 100,
+          "completeness_bonus": 2
+        },
+        "unsupported_assumptions": [],
+        "evidence_ids": [
+          "ev-synthetic_batch_mini_audit-fixture"
+        ]
+      },
+      "digital_presence": {
+        "lead_id": "synthetic_batch_mini_audit",
+        "analysis_mode": "LOCAL_SYNTHETIC_FIXTURE",
+        "browser_used": false,
+        "network_used": false,
+        "signals": {
+          "website_problem": 1,
+          "lead_capture_problem": 1,
+          "response_handling_problem": 1,
+          "trust_problem": 1,
+          "audit_uncertainty": 5
+        },
+        "issues": [
+          {
+            "issue_id": "audit-uncertainty",
+            "label": "Discovery uncertainty",
+            "severity": 5,
+            "evidence_id": "ev-synthetic-batch-mini-audit-audit-uncertainty",
+            "observed": "Synthetic fixture signal audit_uncertainty=5"
+          }
+        ],
+        "evidence": [
+          {
+            "id": "ev-synthetic-batch-mini-audit-audit-uncertainty",
+            "source": "synthetic_digital_presence_fixture",
+            "claim": "Synthetic fixture signal audit_uncertainty=5"
+          },
+          {
+            "id": "ev-site-good-1",
+            "source": "synthetic_site_fixture",
+            "claim": "Synthetic site fixture has clear navigation and contact path."
+          }
+        ]
+      },
+      "capacity": {
+        "capacity_status": "ALLOW",
+        "expensive_material_limit": 8,
+        "expensive_materials_used": 5,
+        "requested_expensive_materials": 1,
+        "allowed_expensive_materials": 1,
+        "remaining_after": 2,
+        "throttled": false
+      },
+      "status": "PASS",
+      "product_match": {
+        "lead_id": "synthetic_batch_mini_audit",
+        "product_id": "MINI_AUDIT",
+        "product_label": "Mini audit",
+        "score": 10,
+        "reason": "Discovery uncertainty dominates, so a mini audit is the narrowest first product.",
+        "reason_required": true,
+        "has_reason": true,
+        "mini_audit_is_default": false,
+        "objective_concentration_reason": false,
+        "evidence_ids": [
+          "ev-synthetic-batch-mini-audit-audit-uncertainty",
+          "ev-synthetic_batch_mini_audit-fixture",
+          "ev-site-good-1"
+        ]
+      },
+      "mini_audit": {
+        "lead_id": "synthetic_batch_mini_audit",
+        "audit_mode": "LOCAL_SYNTHETIC",
+        "evidence_required": true,
+        "claims": [
+          {
+            "claim": "Synthetic fixture signal audit_uncertainty=5",
+            "evidence_ids": [
+              "ev-synthetic-batch-mini-audit-audit-uncertainty"
+            ],
+            "severity": 5
+          }
+        ],
+        "evidence": [
+          {
+            "id": "ev-synthetic_batch_mini_audit-fixture",
+            "source": "synthetic_lead_fixture",
+            "claim": "Synthetic fixture defines Synthetic Batch Audit problem signals."
+          },
+          {
+            "id": "ev-synthetic-batch-mini-audit-audit-uncertainty",
+            "source": "synthetic_digital_presence_fixture",
+            "claim": "Synthetic fixture signal audit_uncertainty=5"
+          },
+          {
+            "id": "ev-site-good-1",
+            "source": "synthetic_site_fixture",
+            "claim": "Synthetic site fixture has clear navigation and contact path."
+          }
+        ],
+        "draft_only": true
+      },
+      "roi_estimate": {
+        "lead_id": "synthetic_batch_mini_audit",
+        "product_id": "MINI_AUDIT",
+        "estimate_units": 144.0,
+        "currency": "SYNTHETIC_UNITS",
+        "assumptions_required": true,
+        "assumptions": [
+          {
+            "id": "assumption.synthetic.baseline",
+            "text": "Synthetic monthly baseline from fixture.",
+            "value": 12
+          },
+          {
+            "id": "assumption.synthetic.improvement",
+            "text": "Synthetic improvement ratio for local estimate only.",
+            "value": 0.12
+          }
+        ],
+        "evidence_ids": [
+          "ev-synthetic-batch-mini-audit-audit-uncertainty",
+          "ev-synthetic_batch_mini_audit-fixture",
+          "ev-site-good-1"
+        ]
+      },
+      "offer_draft": {
+        "lead_id": "synthetic_batch_mini_audit",
+        "product_id": "MINI_AUDIT",
+        "product_label": "Mini audit",
+        "product_reason": "Discovery uncertainty dominates, so a mini audit is the narrowest first product.",
+        "draft_only": true,
+        "send_allowed": false,
+        "channel_actions": [],
+        "owner_approval_required_for_send": true,
+        "approval_state": "NOT_REQUESTED",
+        "claims": [
+          {
+            "claim": "Discovery uncertainty dominates, so a mini audit is the narrowest first product.",
+            "evidence_ids": [
+              "ev-synthetic-batch-mini-audit-audit-uncertainty",
+              "ev-synthetic_batch_mini_audit-fixture",
+              "ev-site-good-1"
+            ]
+          }
+        ],
+        "roi_estimate": {
+          "lead_id": "synthetic_batch_mini_audit",
+          "product_id": "MINI_AUDIT",
+          "estimate_units": 144.0,
+          "currency": "SYNTHETIC_UNITS",
+          "assumptions_required": true,
+          "assumptions": [
+            {
+              "id": "assumption.synthetic.baseline",
+              "text": "Synthetic monthly baseline from fixture.",
+              "value": 12
+            },
+            {
+              "id": "assumption.synthetic.improvement",
+              "text": "Synthetic improvement ratio for local estimate only.",
+              "value": 0.12
+            }
+          ],
+          "evidence_ids": [
+            "ev-synthetic-batch-mini-audit-audit-uncertainty",
+            "ev-synthetic_batch_mini_audit-fixture",
+            "ev-site-good-1"
+          ]
+        }
+      },
+      "qa_review": {
+        "lead_id": "synthetic_batch_mini_audit",
+        "qa_status": "PASS",
+        "issues": [],
+        "unsupported_claims_blocked": false,
+        "independent_check": true
+      },
+      "send_allowed": false
+    },
+    {
+      "lead_id": "synthetic_batch_lead_system_second",
+      "synthetic": true,
+      "pipeline_entry": {
+        "entry_status": "ACCEPTED_LOCAL_SYNTHETIC",
+        "lead_id": "synthetic_batch_lead_system_second",
+        "source_type": "synthetic_fixture",
+        "fingerprint": "synthetic-batch-capture-two|synthetic-batch-capture-two-example-invalid",
+        "network_used": false,
+        "production_write": false
+      },
+      "duplicate": {
+        "duplicate": false,
+        "fingerprint": "synthetic-batch-capture-two|synthetic-batch-capture-two-example-invalid",
+        "decision": "ALLOW"
+      },
+      "identity": {
+        "identity_status": "PASS",
+        "synthetic_only": true,
+        "organization_name": "Synthetic Batch Capture Two",
+        "fingerprint": "synthetic-batch-capture-two|synthetic-batch-capture-two-example-invalid",
+        "evidence_ids": [
+          "ev-synthetic_batch_lead_system_second-fixture"
+        ],
+        "no_personal_data": true,
+        "no_real_contact_data": true
+      },
+      "contact": {
+        "lead_id": "synthetic_batch_lead_system_second",
+        "enrichment_mode": "LOCAL_FIXTURE_ONLY",
+        "network_used": false,
+        "contact": {
+          "website_reference": "synthetic-batch-capture-two.example.invalid/home",
+          "contact_form_reference": "synthetic-form-synthetic_batch_lead_system_second",
+          "public_contact_page_reference": "synthetic-contact-page-synthetic_batch_lead_system_second",
+          "role_contact_reference": "synthetic-role-contact-synthetic_batch_lead_system_second",
+          "consent_basis": "synthetic_fixture_only"
+        },
+        "sources": [
+          "synthetic_fixture"
+        ]
+      },
+      "contact_completeness": {
+        "lead_id": "synthetic_batch_lead_system_second",
+        "score": 100,
+        "target_score": 95,
+        "status": "COMPLETE",
+        "missing_fields": [],
+        "real_email_present": false,
+        "real_phone_present": false
+      },
+      "qualification": {
+        "lead_id": "synthetic_batch_lead_system_second",
+        "qualification_status": "QUALIFIED",
+        "score": 15,
+        "score_components": {
+          "base_score": 8,
+          "problem_score": 5,
+          "contact_completeness_score": 100,
+          "completeness_bonus": 2
+        },
+        "unsupported_assumptions": [],
+        "evidence_ids": [
+          "ev-synthetic_batch_lead_system_second-fixture"
+        ]
+      },
+      "digital_presence": {
+        "lead_id": "synthetic_batch_lead_system_second",
+        "analysis_mode": "LOCAL_SYNTHETIC_FIXTURE",
+        "browser_used": false,
+        "network_used": false,
+        "signals": {
+          "website_problem": 1,
+          "lead_capture_problem": 5,
+          "response_handling_problem": 1,
+          "trust_problem": 1,
+          "audit_uncertainty": 1
+        },
+        "issues": [
+          {
+            "issue_id": "lead-capture-problem",
+            "label": "Lead capture issue",
+            "severity": 5,
+            "evidence_id": "ev-synthetic-batch-lead-system-second-lead-capture-problem",
+            "observed": "Synthetic fixture signal lead_capture_problem=5"
+          }
+        ],
+        "evidence": [
+          {
+            "id": "ev-synthetic-batch-lead-system-second-lead-capture-problem",
+            "source": "synthetic_digital_presence_fixture",
+            "claim": "Synthetic fixture signal lead_capture_problem=5"
+          },
+          {
+            "id": "ev-site-no-capture-1",
+            "source": "synthetic_site_fixture",
+            "claim": "Synthetic site fixture has no clear lead capture path."
+          }
+        ]
+      },
+      "capacity": {
+        "capacity_status": "ALLOW",
+        "expensive_material_limit": 8,
+        "expensive_materials_used": 6,
+        "requested_expensive_materials": 1,
+        "allowed_expensive_materials": 1,
+        "remaining_after": 1,
+        "throttled": false
+      },
+      "status": "PASS",
+      "product_match": {
+        "lead_id": "synthetic_batch_lead_system_second",
+        "product_id": "LEAD_SYSTEM",
+        "product_label": "Lead system and capture pipeline",
+        "score": 10,
+        "reason": "Lead capture and contact completeness problems dominate the synthetic evidence.",
+        "reason_required": true,
+        "has_reason": true,
+        "mini_audit_is_default": false,
+        "objective_concentration_reason": false,
+        "evidence_ids": [
+          "ev-synthetic-batch-lead-system-second-lead-capture-problem",
+          "ev-site-no-capture-1",
+          "ev-synthetic_batch_lead_system_second-fixture"
+        ]
+      },
+      "mini_audit": {
+        "lead_id": "synthetic_batch_lead_system_second",
+        "audit_mode": "LOCAL_SYNTHETIC",
+        "evidence_required": true,
+        "claims": [
+          {
+            "claim": "Synthetic fixture signal lead_capture_problem=5",
+            "evidence_ids": [
+              "ev-synthetic-batch-lead-system-second-lead-capture-problem"
+            ],
+            "severity": 5
+          }
+        ],
+        "evidence": [
+          {
+            "id": "ev-synthetic_batch_lead_system_second-fixture",
+            "source": "synthetic_lead_fixture",
+            "claim": "Synthetic fixture defines Synthetic Batch Capture Two problem signals."
+          },
+          {
+            "id": "ev-synthetic-batch-lead-system-second-lead-capture-problem",
+            "source": "synthetic_digital_presence_fixture",
+            "claim": "Synthetic fixture signal lead_capture_problem=5"
+          },
+          {
+            "id": "ev-site-no-capture-1",
+            "source": "synthetic_site_fixture",
+            "claim": "Synthetic site fixture has no clear lead capture path."
+          }
+        ],
+        "draft_only": true
+      },
+      "roi_estimate": {
+        "lead_id": "synthetic_batch_lead_system_second",
+        "product_id": "LEAD_SYSTEM",
+        "estimate_units": 144.0,
+        "currency": "SYNTHETIC_UNITS",
+        "assumptions_required": true,
+        "assumptions": [
+          {
+            "id": "assumption.synthetic.baseline",
+            "text": "Synthetic monthly baseline from fixture.",
+            "value": 12
+          },
+          {
+            "id": "assumption.synthetic.improvement",
+            "text": "Synthetic improvement ratio for local estimate only.",
+            "value": 0.12
+          }
+        ],
+        "evidence_ids": [
+          "ev-synthetic-batch-lead-system-second-lead-capture-problem",
+          "ev-site-no-capture-1",
+          "ev-synthetic_batch_lead_system_second-fixture"
+        ]
+      },
+      "offer_draft": {
+        "lead_id": "synthetic_batch_lead_system_second",
+        "product_id": "LEAD_SYSTEM",
+        "product_label": "Lead system and capture pipeline",
+        "product_reason": "Lead capture and contact completeness problems dominate the synthetic evidence.",
+        "draft_only": true,
+        "send_allowed": false,
+        "channel_actions": [],
+        "owner_approval_required_for_send": true,
+        "approval_state": "NOT_REQUESTED",
+        "claims": [
+          {
+            "claim": "Lead capture and contact completeness problems dominate the synthetic evidence.",
+            "evidence_ids": [
+              "ev-synthetic-batch-lead-system-second-lead-capture-problem",
+              "ev-site-no-capture-1",
+              "ev-synthetic_batch_lead_system_second-fixture"
+            ]
+          }
+        ],
+        "roi_estimate": {
+          "lead_id": "synthetic_batch_lead_system_second",
+          "product_id": "LEAD_SYSTEM",
+          "estimate_units": 144.0,
+          "currency": "SYNTHETIC_UNITS",
+          "assumptions_required": true,
+          "assumptions": [
+            {
+              "id": "assumption.synthetic.baseline",
+              "text": "Synthetic monthly baseline from fixture.",
+              "value": 12
+            },
+            {
+              "id": "assumption.synthetic.improvement",
+              "text": "Synthetic improvement ratio for local estimate only.",
+              "value": 0.12
+            }
+          ],
+          "evidence_ids": [
+            "ev-synthetic-batch-lead-system-second-lead-capture-problem",
+            "ev-site-no-capture-1",
+            "ev-synthetic_batch_lead_system_second-fixture"
+          ]
+        }
+      },
+      "qa_review": {
+        "lead_id": "synthetic_batch_lead_system_second",
+        "qa_status": "PASS",
+        "issues": [],
+        "unsupported_claims_blocked": false,
+        "independent_check": true
+      },
+      "send_allowed": false
+    },
+    {
+      "lead_id": "synthetic_batch_website_second",
+      "synthetic": true,
+      "pipeline_entry": {
+        "entry_status": "ACCEPTED_LOCAL_SYNTHETIC",
+        "lead_id": "synthetic_batch_website_second",
+        "source_type": "synthetic_fixture",
+        "fingerprint": "synthetic-batch-website-two|synthetic-batch-website-two-example-invalid",
+        "network_used": false,
+        "production_write": false
+      },
+      "duplicate": {
+        "duplicate": false,
+        "fingerprint": "synthetic-batch-website-two|synthetic-batch-website-two-example-invalid",
+        "decision": "ALLOW"
+      },
+      "identity": {
+        "identity_status": "PASS",
+        "synthetic_only": true,
+        "organization_name": "Synthetic Batch Website Two",
+        "fingerprint": "synthetic-batch-website-two|synthetic-batch-website-two-example-invalid",
+        "evidence_ids": [
+          "ev-synthetic_batch_website_second-fixture"
+        ],
+        "no_personal_data": true,
+        "no_real_contact_data": true
+      },
+      "contact": {
+        "lead_id": "synthetic_batch_website_second",
+        "enrichment_mode": "LOCAL_FIXTURE_ONLY",
+        "network_used": false,
+        "contact": {
+          "website_reference": "synthetic-batch-website-two.example.invalid/home",
+          "contact_form_reference": "synthetic-form-synthetic_batch_website_second",
+          "public_contact_page_reference": "synthetic-contact-page-synthetic_batch_website_second",
+          "role_contact_reference": "synthetic-role-contact-synthetic_batch_website_second",
+          "consent_basis": "synthetic_fixture_only"
+        },
+        "sources": [
+          "synthetic_fixture"
+        ]
+      },
+      "contact_completeness": {
+        "lead_id": "synthetic_batch_website_second",
+        "score": 100,
+        "target_score": 95,
+        "status": "COMPLETE",
+        "missing_fields": [],
+        "real_email_present": false,
+        "real_phone_present": false
+      },
+      "qualification": {
+        "lead_id": "synthetic_batch_website_second",
+        "qualification_status": "QUALIFIED",
+        "score": 15,
+        "score_components": {
+          "base_score": 8,
+          "problem_score": 5,
+          "contact_completeness_score": 100,
+          "completeness_bonus": 2
+        },
+        "unsupported_assumptions": [],
+        "evidence_ids": [
+          "ev-synthetic_batch_website_second-fixture"
+        ]
+      },
+      "digital_presence": {
+        "lead_id": "synthetic_batch_website_second",
+        "analysis_mode": "LOCAL_SYNTHETIC_FIXTURE",
+        "browser_used": false,
+        "network_used": false,
+        "signals": {
+          "website_problem": 5,
+          "lead_capture_problem": 2,
+          "response_handling_problem": 1,
+          "trust_problem": 3,
+          "audit_uncertainty": 1
+        },
+        "issues": [
+          {
+            "issue_id": "website-problem",
+            "label": "Website conversion issue",
+            "severity": 5,
+            "evidence_id": "ev-synthetic-batch-website-second-website-problem",
+            "observed": "Synthetic fixture signal website_problem=5"
+          },
+          {
+            "issue_id": "trust-problem",
+            "label": "Trust proof issue",
+            "severity": 3,
+            "evidence_id": "ev-synthetic-batch-website-second-trust-problem",
+            "observed": "Synthetic fixture signal trust_problem=3"
+          }
+        ],
+        "evidence": [
+          {
+            "id": "ev-synthetic-batch-website-second-website-problem",
+            "source": "synthetic_digital_presence_fixture",
+            "claim": "Synthetic fixture signal website_problem=5"
+          },
+          {
+            "id": "ev-synthetic-batch-website-second-trust-problem",
+            "source": "synthetic_digital_presence_fixture",
+            "claim": "Synthetic fixture signal trust_problem=3"
+          },
+          {
+            "id": "ev-site-bad-1",
+            "source": "synthetic_site_fixture",
+            "claim": "Synthetic site fixture marks conversion and trust proof gaps."
+          }
+        ]
+      },
+      "capacity": {
+        "capacity_status": "ALLOW",
+        "expensive_material_limit": 8,
+        "expensive_materials_used": 7,
+        "requested_expensive_materials": 1,
+        "allowed_expensive_materials": 1,
+        "remaining_after": 0,
+        "throttled": false
+      },
+      "status": "PASS",
+      "product_match": {
+        "lead_id": "synthetic_batch_website_second",
+        "product_id": "WEBSITE_CONVERSION",
+        "product_label": "Website conversion rebuild",
+        "score": 13,
+        "reason": "Website problem dominates the synthetic evidence.",
+        "reason_required": true,
+        "has_reason": true,
+        "mini_audit_is_default": false,
+        "objective_concentration_reason": false,
+        "evidence_ids": [
+          "ev-site-bad-1",
+          "ev-synthetic-batch-website-second-trust-problem",
+          "ev-synthetic_batch_website_second-fixture",
+          "ev-synthetic-batch-website-second-website-problem"
+        ]
+      },
+      "mini_audit": {
+        "lead_id": "synthetic_batch_website_second",
+        "audit_mode": "LOCAL_SYNTHETIC",
+        "evidence_required": true,
+        "claims": [
+          {
+            "claim": "Synthetic fixture signal website_problem=5",
+            "evidence_ids": [
+              "ev-synthetic-batch-website-second-website-problem"
+            ],
+            "severity": 5
+          },
+          {
+            "claim": "Synthetic fixture signal trust_problem=3",
+            "evidence_ids": [
+              "ev-synthetic-batch-website-second-trust-problem"
+            ],
+            "severity": 3
+          }
+        ],
+        "evidence": [
+          {
+            "id": "ev-synthetic_batch_website_second-fixture",
+            "source": "synthetic_lead_fixture",
+            "claim": "Synthetic fixture defines Synthetic Batch Website Two problem signals."
+          },
+          {
+            "id": "ev-synthetic-batch-website-second-website-problem",
+            "source": "synthetic_digital_presence_fixture",
+            "claim": "Synthetic fixture signal website_problem=5"
+          },
+          {
+            "id": "ev-synthetic-batch-website-second-trust-problem",
+            "source": "synthetic_digital_presence_fixture",
+            "claim": "Synthetic fixture signal trust_problem=3"
+          },
+          {
+            "id": "ev-site-bad-1",
+            "source": "synthetic_site_fixture",
+            "claim": "Synthetic site fixture marks conversion and trust proof gaps."
+          }
+        ],
+        "draft_only": true
+      },
+      "roi_estimate": {
+        "lead_id": "synthetic_batch_website_second",
+        "product_id": "WEBSITE_CONVERSION",
+        "estimate_units": 144.0,
+        "currency": "SYNTHETIC_UNITS",
+        "assumptions_required": true,
+        "assumptions": [
+          {
+            "id": "assumption.synthetic.baseline",
+            "text": "Synthetic monthly baseline from fixture.",
+            "value": 12
+          },
+          {
+            "id": "assumption.synthetic.improvement",
+            "text": "Synthetic improvement ratio for local estimate only.",
+            "value": 0.12
+          }
+        ],
+        "evidence_ids": [
+          "ev-site-bad-1",
+          "ev-synthetic-batch-website-second-trust-problem",
+          "ev-synthetic_batch_website_second-fixture",
+          "ev-synthetic-batch-website-second-website-problem"
+        ]
+      },
+      "offer_draft": {
+        "lead_id": "synthetic_batch_website_second",
+        "product_id": "WEBSITE_CONVERSION",
+        "product_label": "Website conversion rebuild",
+        "product_reason": "Website problem dominates the synthetic evidence.",
+        "draft_only": true,
+        "send_allowed": false,
+        "channel_actions": [],
+        "owner_approval_required_for_send": true,
+        "approval_state": "NOT_REQUESTED",
+        "claims": [
+          {
+            "claim": "Website problem dominates the synthetic evidence.",
+            "evidence_ids": [
+              "ev-site-bad-1",
+              "ev-synthetic-batch-website-second-trust-problem",
+              "ev-synthetic_batch_website_second-fixture",
+              "ev-synthetic-batch-website-second-website-problem"
+            ]
+          }
+        ],
+        "roi_estimate": {
+          "lead_id": "synthetic_batch_website_second",
+          "product_id": "WEBSITE_CONVERSION",
+          "estimate_units": 144.0,
+          "currency": "SYNTHETIC_UNITS",
+          "assumptions_required": true,
+          "assumptions": [
+            {
+              "id": "assumption.synthetic.baseline",
+              "text": "Synthetic monthly baseline from fixture.",
+              "value": 12
+            },
+            {
+              "id": "assumption.synthetic.improvement",
+              "text": "Synthetic improvement ratio for local estimate only.",
+              "value": 0.12
+            }
+          ],
+          "evidence_ids": [
+            "ev-site-bad-1",
+            "ev-synthetic-batch-website-second-trust-problem",
+            "ev-synthetic_batch_website_second-fixture",
+            "ev-synthetic-batch-website-second-website-problem"
+          ]
+        }
+      },
+      "qa_review": {
+        "lead_id": "synthetic_batch_website_second",
+        "qa_status": "PASS",
+        "issues": [],
+        "unsupported_claims_blocked": false,
+        "independent_check": true
+      },
+      "send_allowed": false
+    }
+  ]
+}

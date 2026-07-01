@@ -1,0 +1,51 @@
+{
+  "session": "PRODUCTION_NO_SEND_MASTER_CONTROLLER_V1",
+  "device_serial": "AMSKBB4914919475",
+  "device_brand": "HONOR",
+  "device_model": "ALT-LX1",
+  "app_package": "ru.dmitry.matercontroller.debug",
+  "app_version_name": "0.8.0-rc7",
+  "app_version_code": 31,
+  "installed_at_device_time": "2026-06-28 10:31:23",
+  "mode": "PRODUCTION_NO_SEND",
+  "checks": {
+    "home_anchor": true,
+    "bottom_nav": true,
+    "tabs_all_visible": true,
+    "owner_visible_forbidden_residue": true,
+    "tab_leads": true,
+    "tab_commerce": true,
+    "tab_agents": true,
+    "tab_system": true,
+    "tab_decisions": true,
+    "commerce_send_review": true,
+    "offer_review": true,
+    "offer_detail_entry": true,
+    "offer_detail": true,
+    "commerce_first_touch": true,
+    "first_touch": true,
+    "commerce_catalog": true,
+    "catalog": true,
+    "working_sales_open": true,
+    "working_sales": true,
+    "operator_import_route": true,
+    "operator_import_status": true,
+    "operator_import_loaded_3": true,
+    "reliability_open": true,
+    "reliability": true,
+    "crash_anr_clean": true
+  },
+  "private_data_policy": {
+    "ui_xml_committed": false,
+    "screenshots_committed": false,
+    "real_lead_values_printed": false,
+    "real_contact_values_printed": false
+  },
+  "safety": {
+    "sent_by_system": false,
+    "sent_manually": false,
+    "outbound_count": 0,
+    "payment_count": 0,
+    "production_db_writes": 0
+  }
+}

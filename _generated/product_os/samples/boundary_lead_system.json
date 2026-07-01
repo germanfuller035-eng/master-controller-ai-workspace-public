@@ -1,0 +1,16 @@
+{
+  "ok": true,
+  "product_id": "lead_system",
+  "options": [
+    "sell_mc_derived_architecture",
+    "sell_simplified_deployment",
+    "sell_audit_consulting_only",
+    "sell_managed_service",
+    "pause_product"
+  ],
+  "recommended": "default prohibits: undefined",
+  "keep_status": "PLANNED",
+  "owner_decision": "d_lead_system_packaging",
+  "boundary_risk": "duplicates Master Controller architecture",
+  "note": "No reusable client product created automatically. Owner decides packaging."
+}

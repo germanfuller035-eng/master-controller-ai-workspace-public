@@ -1,0 +1,15 @@
+{
+  "context": {
+    "available_channels": [
+      "MAIL_DRAFT",
+      "FORM_DRAFT"
+    ],
+    "body": "Synthetic email draft only. No send.",
+    "contact_ref": "reserved-mailbox-alpha",
+    "draft_ref": "synthetic-mail-alpha",
+    "lead_ref": "synthetic-lead-alpha",
+    "preferred_channel": "MAIL_DRAFT",
+    "subject": "Synthetic local mail draft",
+    "synthetic": true
+  }
+}

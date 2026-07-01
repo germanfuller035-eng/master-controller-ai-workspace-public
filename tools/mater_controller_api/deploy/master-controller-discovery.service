@@ -1,0 +1,19 @@
+[Unit]
+Description=Master Controller daily lead discovery scheduler (one job/day)
+After=network-online.target master-controller-api.service
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=mcworker
+WorkingDirectory=/opt/master-controller/tools/mater_controller_api
+EnvironmentFile=/etc/master-controller/worker.env
+Environment=MATER_API_BASE=http://127.0.0.1:8787/api/v1
+Environment=DAILY_CANDIDATE_LIMIT=20
+Environment=MAX_PENDING_STAGING=50
+Environment=MC_DISCOVERY_BBOX=44.95,38.85,45.15,39.10
+Environment=MC_DISCOVERY_NICHES=beauty,car_repair,dentist
+Environment=MC_DISCOVERY_REGION=Krasnodar
+ExecStart=/usr/bin/node src/scheduler/daily_discovery.mjs
+Nice=15
+MemoryMax=128M

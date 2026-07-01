@@ -1,0 +1,31 @@
+{
+  "screen": "multichannel",
+  "anchor": "multichannel",
+  "app_version": "0.8.0-rc6 (code 30)",
+  "session": "re-confirmed 2026-06-23 on live AVD a56lab after env restore (API 403 resolved, token valid, health ok)",
+  "backend": "prod VPS https://195-96-132-82.sslip.io/api/v1 (health ok 2026-06-23T11:07Z)",
+  "nav": "tab_today -> card_commercial -> scroll -> cs_multichannel -> anchor=multichannel",
+  "api_truth": {
+    "owner_queue": {"inbound_to_review": 0, "identity_conflicts": 0, "reply_drafts": 0, "quarantine": 0},
+    "sources_total": 14,
+    "sources_status": "osm_overpass:ACTIVE, vk_communities/vk_lead_forms/vk_inbound:PENDING_CREDENTIAL, yandex_business:DISABLED, two_gis/dataforseo:PENDING_CREDENTIAL, web_intake:ACTIVE, max_inbound/telegram_client:PENDING_CREDENTIAL, referral:ACTIVE, csv_manual:ACTIVE, avito:DISABLED, whatsapp:DISABLED",
+    "channels": "EMAIL(in ON/out GATED), VK/MAX/TELEGRAM(in PENDING_CREDENTIAL/out OFF), WEB_FORM(in ON/out OFF), WHATSAPP/SMS/PHONE/AVITO",
+    "inbound_items": 0
+  },
+  "ui_vs_api": "MATCH: queue 4×0 (UI trailing все '0'); 14 источников те же id+статусы (yandex='отключён'=DISABLED, vk='ждёт доступа'=PENDING_CREDENTIAL); 9 каналов те же (EMAIL исходящие='по согласованию'=GATED, VK исходящие='выкл'=OFF); inbound пуст -> секция 'Входящие заявки' не рендерится",
+  "controls": [
+    {"id": "CTRL-0205", "sel": "screen.multichannel.control.back", "status": "PASS_NAVIGATION", "evidence": "tap @77,344 -> вернулся на commercial_summary (cs_* карточки снова видны)"},
+    {"id": "CTRL-0206", "sel": "screen.multichannel.control.refresh", "status": "PASS_LIVE_READ", "evidence": "tap @947,344 -> reread, anchor=multichannel сохранён, очередь/источники/каналы те же, совпали с API"},
+    {"id": "CTRL-0207", "sel": "mc_q_inbound", "status": "PASS_VISIBLE_ENABLED", "evidence": "trailing='0' (==API inbound_to_review=0); tap @540,642 no-op (onClick=null), anchor STILL multichannel"},
+    {"id": "CTRL-0208", "sel": "mc_q_conflicts", "status": "PASS_VISIBLE_ENABLED", "evidence": "trailing='0' (==API identity_conflicts=0); tap @540,841 no-op, anchor STILL multichannel"},
+    {"id": "CTRL-0209", "sel": "mc_q_drafts", "status": "PASS_VISIBLE_ENABLED", "evidence": "trailing='0' (==API reply_drafts=0); tap @540,1040 no-op, anchor STILL multichannel"},
+    {"id": "CTRL-0210", "sel": "mc_q_quarantine", "status": "PASS_VISIBLE_ENABLED", "evidence": "trailing='0' (==API quarantine=0); tap @540,1239 no-op, anchor STILL multichannel"},
+    {"id": "CTRL-0211", "sel": "mc_src_${src.source_id}", "status": "PASS_VISIBLE_ENABLED", "evidence": "14 источников отрисованы (id+статусы совпали с API /sources); tap mc_src_osm_overpass @540,1556 no-op, anchor STILL multichannel; PENDING_CREDENTIAL='ждёт доступа · нет данных', DISABLED='отключён · нет данных'"},
+    {"id": "CTRL-0212", "sel": "mc_ch_${ch.channel}", "status": "PASS_VISIBLE_ENABLED", "evidence": "9 каналов: EMAIL/VK/MAX/TELEGRAM/WEB_FORM/WHATSAPP/SMS/PHONE/AVITO (совпали с API /channels); tap mc_ch_EMAIL @540,1014 no-op, anchor STILL multichannel; нота 'Исходящие через новые каналы пока не разрешены'"},
+    {"id": "CTRL-0213", "sel": "mc_in_${i.id}", "status": "PASS_EMPTY_STATE_VERIFIED", "evidence": "API /inbound items=0 -> секция 'Входящие заявки' условно не рендерится (MultichannelScreen.kt:64-70 if isNotEmpty). Независимо подтверждено owner-queue inbound_to_review=0. Класс карточки доказан сиблингами mc_src_*/mc_ch_* (тот же SectionCard tag). Без error-баннера. EMPTY_STATE_VERIFIED=YES. Реальные каналы/credentials НЕ активированы."}
+  ],
+  "totals": {"SCREEN_CONTROLS_TOTAL": 9, "EXECUTED": 9, "PASSED": 9, "FAILED": 0, "UNEXECUTED": 0, "UNKNOWN": 0},
+  "credential_honesty": "VK/MAX/TELEGRAM без credentials показаны как 'ждёт доступа' (PENDING_CREDENTIAL/CREDENTIAL_REQUIRED), DISABLED как 'отключён', НЕ как ошибка и НЕ как ноль-маскировка",
+  "safety": {"CLIENT_MESSAGES_SENT": 0, "SMTP_CALLS": 0, "FOLLOWUPS_SENT": 0, "mutations": 0, "channels_activated": 0},
+  "status": "CLEAN"
+}

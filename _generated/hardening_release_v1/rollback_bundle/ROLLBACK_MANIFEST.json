@@ -1,0 +1,11 @@
+{
+  "base_head": "1a25dae0b818d8a8ded66afe9624b7a1060fbf39",
+  "commit_list": "_generated/hardening_release_v1/rollback_bundle/COMMIT_LIST.md",
+  "deploy_done": false,
+  "errors": [],
+  "evidence_index": "_generated/hardening_release_v1/rollback_bundle/EVIDENCE_INDEX.md",
+  "merge_done": false,
+  "release_tag_created": false,
+  "result": "PASS",
+  "rollback_docs": "_generated/hardening_release_v1/rollback_bundle/ROLLBACK_DOCS.md"
+}

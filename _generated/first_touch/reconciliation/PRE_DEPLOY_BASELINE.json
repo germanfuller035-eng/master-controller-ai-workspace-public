@@ -1,0 +1,28 @@
+{
+  "captured_at": "2026-06-19",
+  "local": {
+    "branch": "feature/first-touch-strategist-controlled-pilot-v1",
+    "head": "8f88f9e",
+    "worktree_store_leads": 50,
+    "worktree_store_revision": 1,
+    "android": { "versionName": "0.6.0-rc9", "versionCode": 21,
+      "apk_sha256": "ba652780dfa01c6cefdb142dd3a27689e32e1e48efb43748e6c6edd66e05ebec",
+      "aab_sha256": "a8c858d41c3fa2a53860bec7ba69a1ee0a5014459bd750ab9b0bf90062a5c56f",
+      "signer_cert_sha256": "11038fca7db3fab1b0206971a93678b9dd28363ddf61241e162568019a1023f7" }
+  },
+  "production": {
+    "vps": "195.96.132.82", "ssh_user": "masterctl", "ssh_fingerprint_match": true,
+    "host": "debian12",
+    "canonical_store_path": "/opt/master-controller/canonical/lead_pipeline_store.json",
+    "canonical_revision": 106, "canonical_leads": 62, "test_only": 0,
+    "canonical_store_sha256": "04c0160d117afe3c626a3bf7de8b02576e4dea3ba84a45dc279dc3355df06c03",
+    "send_ledger_sha256": "04fda652a15b072bbc729419022c5486746677df3d1a1d6aa07ea0527bbe321e",
+    "send_ledger_lines": 7, "commercial_sends": 0, "test_internal_sends": 7,
+    "queue": { "COMPLETED": 41, "failed": 0, "dead_letters": 0 },
+    "writer_count": 1,
+    "services_active": ["master-controller-api", "master-controller-telegram", "master-controller-worker"],
+    "services_failed": ["master-controller-discovery (pre-existing, out of scope)"],
+    "gates": { "autosend": "BLOCKED", "sendAllowedLive": "OFF", "commercial_send": "OFF", "followup_autosend": "OFF" },
+    "payment_facts": 0
+  }
+}

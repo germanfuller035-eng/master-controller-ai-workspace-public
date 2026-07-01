@@ -1,0 +1,8 @@
+{
+  "decision_id": "memdec_approved_001",
+  "proposal_id": "memprop_valid_001",
+  "decision": "APPROVE_PROPOSED_RECORD",
+  "reviewed_by": "Memory Curator synthetic validator",
+  "reviewed_at": "2026-06-26",
+  "reason": "synthetic valid proposal"
+}

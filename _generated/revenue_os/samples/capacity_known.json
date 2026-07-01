@@ -1,0 +1,20 @@
+{
+  "ok": true,
+  "status": "COMPUTED",
+  "max_parallel_projects": 15,
+  "max_monthly_volume": 31,
+  "bottleneck": "owner delivery hours",
+  "owner_workload": "72 owner-hours/month available",
+  "ai_workload": "50% delivery automatable",
+  "overload_risk": "LOW",
+  "recommended_product_mix": "prioritize low owner-hour products (e.g. mini_audit) up to ~31/month",
+  "label": "MODEL_ESTIMATE",
+  "assumptions": {
+    "owner_weekly_hours": 20,
+    "product_delivery_hours": 4,
+    "ai_automation_pct": 0.5,
+    "revision_reserve_pct": 0.15,
+    "support_load_hours": 0,
+    "context_switch_cost_pct": 0.1
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "session": "AGENT_SANDBOX_OBSERVABILITY_AND_EVALS_V1",
+  "redaction_required": true,
+  "redaction_placeholder": "[REDACTED]",
+  "sensitive_key_fragments": [
+    "credential",
+    "api_key",
+    "private_material",
+    "auth_header",
+    "provider_key"
+  ],
+  "print_raw_sensitive_values": false
+}

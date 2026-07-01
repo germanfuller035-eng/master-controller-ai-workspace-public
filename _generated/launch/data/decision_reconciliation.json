@@ -1,0 +1,29 @@
+{
+  "schema": "launch.decision_reconciliation.v1",
+  "note": "Phase 0 — authoritative machine-readable reconciliation of all 27 owner decisions from the consolidation governance backlog, derived from per-decision blocking FLAGS (not the narrative count). A discrepancy was found and resolved.",
+  "source": "_generated/consolidation/data/governance.json#owner_decision_backlog",
+  "decision_total_reconciled": 27,
+  "duplicate_decisions": 0,
+  "missing_decision_ids": 0,
+  "discrepancy_found": {
+    "narrative_summary_claimed": { "blocking_live_verification": 11, "blocking_commercial_launch": 10 },
+    "authoritative_flag_count": { "blocking_live_verification": 9, "blocking_commercial_launch": 8 },
+    "resolution": "Per-decision flags are authoritative. The consolidation decision_summary narrative over-counted live (+2) and commercial (+2). This reconciliation uses the flags. Non-blocking-but-still-required decisions remain owner-required; the narrative likely folded some non-blocking required decisions into the blocking totals."
+  },
+  "ids": ["od01","od02","od03","od04","od05","od06","od07","od08","od09","od10","od11","od12","od13","od14","od15","od16","od17","od18","od19","od20","od21","od22","od23","od24","od25","od26","od27"],
+  "blocking_live_verification": ["od15","od16","od17","od18","od19","od20","od24","od25","od26"],
+  "blocking_commercial_launch": ["od01","od02","od03","od05","od06","od10","od22","od27"],
+  "blocking_consolidation": [],
+  "legal_review_required": ["od13","od22"],
+  "non_blocking_but_owner_required": ["od04","od07","od08","od09","od11","od12","od14","od21","od23"],
+  "counts": {
+    "total": 27,
+    "blocking_live_verification": 9,
+    "blocking_commercial_launch": 8,
+    "blocking_consolidation": 0,
+    "legal_review_required": 2,
+    "non_blocking_but_owner_required": 9,
+    "overlap_live_and_commercial": 0
+  },
+  "result": { "DECISION_TOTAL_RECONCILED": 27, "DUPLICATE_DECISIONS": 0, "MISSING_DECISION_IDS": 0 }
+}

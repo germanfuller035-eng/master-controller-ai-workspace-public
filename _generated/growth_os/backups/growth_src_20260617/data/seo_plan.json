@@ -1,0 +1,18 @@
+{
+  "schema": "growth_os.seo_plan.v1",
+  "version": "1.0",
+  "note": "Offline SEO planning. Search volumes are NOT invented — every cluster carries volume_status. Future external-data contracts (DataForSEO/Yandex) defined but NO credentials and NO live API calls.",
+  "volume_status_vocab": ["UNKNOWN", "EXTERNAL_DATA_REQUIRED", "OWNER_ESTIMATE"],
+  "clusters": [
+    {"cluster_id": "cl_website_no_requests", "pillar": "website_conversion", "intent": "informational", "page_type": "article", "seed_topics": ["почему сайт не приносит заявок", "сайт есть заявок нет"], "internal_links": ["cl_mini_audit_service", "lm_request_path_checklist"], "volume_status": "EXTERNAL_DATA_REQUIRED"},
+    {"cluster_id": "cl_mini_audit_service", "pillar": "audit_methodology", "intent": "commercial", "page_type": "service_page", "seed_topics": ["аудит сайта", "аудит конверсии сайта цена"], "internal_links": ["cl_website_no_requests", "landing_mini_audit"], "volume_status": "EXTERNAL_DATA_REQUIRED"},
+    {"cluster_id": "cl_local_presence", "pillar": "local_visibility", "intent": "informational", "page_type": "article", "seed_topics": ["как бизнесу попасть в интернет", "нет сайта только карты"], "internal_links": ["cl_presence_check_service"], "volume_status": "EXTERNAL_DATA_REQUIRED"},
+    {"cluster_id": "cl_presence_check_service", "pillar": "digital_presence", "intent": "commercial", "page_type": "service_page", "seed_topics": ["проверка присутствия в интернете"], "internal_links": ["cl_local_presence"], "volume_status": "EXTERNAL_DATA_REQUIRED"},
+    {"cluster_id": "cl_audit_vs_alternatives", "pillar": "audit_methodology", "intent": "comparison", "page_type": "comparison", "seed_topics": ["аудит сайта или фрилансер", "аудит против редизайна"], "internal_links": ["cl_mini_audit_service"], "volume_status": "EXTERNAL_DATA_REQUIRED"}
+  ],
+  "future_contracts": [
+    {"provider": "DataForSEO", "purpose": "keyword volume + SERP", "status": "FUTURE", "credentials": "NONE", "live_calls": false},
+    {"provider": "Yandex Wordstat", "purpose": "RU search volume", "status": "FUTURE", "credentials": "NONE", "live_calls": false}
+  ],
+  "rules": {"invent_volumes": false, "live_api_calls": false, "credentials_stored": false}
+}

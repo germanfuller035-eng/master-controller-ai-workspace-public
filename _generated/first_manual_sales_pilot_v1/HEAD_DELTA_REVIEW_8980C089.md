@@ -1,0 +1,53 @@
+CURRENT_HEAD=8980c0895000f590164d182ca81f64c57c3c9eed
+OWNER_REVIEWED_APP_HEAD=991840b2ee4434c3c9eebcd56cd2c9fa26cb119e
+EXPECTED_HEAD_IS_ANCESTOR=YES
+CONCURRENT_HEAD_ADVANCE_REVIEWED=YES
+
+DELTA_COMMITS=2
+DELTA_COMMIT_LIST:
+- 37286f2c pilot: add Exa research JSON contract for agents
+- 8980c089 pilot: add Exa research result runtime validation
+FILES_CHANGED=17
+
+CHANGED_FILES:
+- 00_SYSTEM_INDEX/MCP_TOOL_REGISTRY.md
+- 04_agents/contact_resolver_agent.md
+- 04_agents/evidence_collector_agent.md
+- 04_agents/lead_research_agent.md
+- 04_agents/master_controller_agent.md
+- 09_dashboards/exa_research_contract_report_2026-06-27.md
+- 09_dashboards/exa_schema_validation_report_2026-06-27.md
+- schemas/commercial/exa_research_result.schema.json
+- tests/commercial/test_exa_research_result.py
+- tests/fixtures/commercial/exa_research/do_not_contact_not_routable.synthetic.json
+- tests/fixtures/commercial/exa_research/invalid_contact_type.synthetic.json
+- tests/fixtures/commercial/exa_research/invalid_low_confidence_confirmed.synthetic.json
+- tests/fixtures/commercial/exa_research/invalid_missing_fact_source_url.synthetic.json
+- tests/fixtures/commercial/exa_research/invalid_source_type.synthetic.json
+- tests/fixtures/commercial/exa_research/risky_high_severity_not_routable.synthetic.json
+- tests/fixtures/commercial/exa_research/valid_exa_research_result.synthetic.json
+- tools/commercial/exa_research_result.py
+
+ANDROID_SOURCE_CHANGED=NO
+ANDROID_UI_CHANGED=NO
+OWNER_VISIBLE_APP_RUNTIME_BEHAVIOR_CHANGED=NO
+RUNTIME_BEHAVIOR_CHANGED=NO
+AGENT_CONTRACT_ONLY=NO
+LOCAL_VALIDATION_TOOLING_CHANGED=YES
+SCHEMA_AND_SYNTHETIC_FIXTURES_CHANGED=YES
+
+SECRETS_FOUND=NO
+REAL_LEAD_DATA_FOUND=NO
+REAL_CONTACT_DATA_FOUND=NO
+PRODUCTION_ENABLEMENT_FOUND=NO
+OUTBOUND_ENABLEMENT_FOUND=NO
+PAYMENT_ENABLEMENT_FOUND=NO
+PROD_DB_WRITE_ENABLEMENT_FOUND=NO
+
+DELTA_SECRET_SCAN_RESULT=PASS_NO_SECRET_VALUES_FOUND
+DELTA_CONTACT_SCAN_RESULT=PASS_NO_REAL_EMAIL_OR_PHONE_CONTACT_DATA_FOUND
+DELTA_ENABLEMENT_SCAN_RESULT=PASS_TERMS_ARE_GUARDRAILS_OR_LOCAL_VALIDATION_NOT_ENABLEMENT
+
+VISUAL_REVIEW_STILL_VALID=YES
+HEAD_DELTA_CLASSIFICATION=SAFE_TO_RECORD_ACCEPTANCE
+NEXT_SAFE_ACTION=RECORD_OWNER_VISUAL_ACCEPTANCE_BEFORE_FIRST_MANUAL_SALES_PILOT

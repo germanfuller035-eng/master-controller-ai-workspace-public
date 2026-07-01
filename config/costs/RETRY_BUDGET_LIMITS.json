@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-26",
+  "session": "VOLTAGENT_RUNTIME_MODEL_ROUTER_AND_COST_GOVERNOR_V1",
+  "max_retries_per_step": 2,
+  "max_retry_budget_rub_per_task": 600,
+  "retry_multiplier_counts_full_estimate": true,
+  "unlimited_retry_policy": "DENY",
+  "provider_fallback_retry_ceiling": 2
+}

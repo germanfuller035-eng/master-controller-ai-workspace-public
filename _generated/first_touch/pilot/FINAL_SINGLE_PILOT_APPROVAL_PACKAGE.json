@@ -1,0 +1,30 @@
+{
+  "generated_at": "2026-06-19",
+  "production_revision": 106,
+  "lead_id": "BETON-MASTERS_RU",
+  "company": "Бетон-Мастер",
+  "segment": "бетон",
+  "region": "Краснодар",
+  "selection": { "eligible_count": 7, "all_scores": 84, "tie_break": "lead_id alphabetical", "hardcoded": false },
+  "contact": { "email": "betonomaster@yandex.ru", "email_source": "manual_verified" },
+  "audit": { "audit_id": "audit_BETON-MASTERS_RU_d13e7c03", "observations": 3 },
+  "hook": { "type": "CONTACT_DISCOVERY_FRICTION", "confidence": 0.7, "evidence_url": "beton-masters.ru" },
+  "recommended_subject_id": "subj_a", "recommended_body_id": "body_a",
+  "body_metrics": { "word_count": 79, "cta_count": 1, "links": 0, "has_price": false },
+  "quality_score": 98, "quality_gate": "PASS", "compliance_gate": "PASS", "deliverability": "READY_NO_SEND",
+  "prior_commercial_send_ledger": false, "prior_opt_out": false, "bounce_suppression": false,
+  "content_hash": "08d2ed71976f61c9dcb332fac3751ade",
+  "source_revision": 106, "current_production_revision": 106,
+  "blocker": {
+    "type": "UNCERTAIN_PRIOR_SEND",
+    "last_send_status": "uncertain_no_smtp_proof",
+    "send_proof_status": "missing",
+    "uncertain_last_sent_at": "2026-06-12T18:09:17.920Z",
+    "note": "Not in commercial ledger (commercial_sends=0 holds), but a real duplicate-contact risk. Owner must confirm the 2026-06-12 attempt was NOT delivered before any send."
+  },
+  "controlled_send_gate": "DISABLED",
+  "transport_enabled": false,
+  "approval_phrase": "APPROVE_ONE_FIRST_TOUCH_SEND:BETON-MASTERS_RU:08d2ed71976f61c9dcb332fac3751ade",
+  "approval_token_issued": false,
+  "real_send_executed": false
+}

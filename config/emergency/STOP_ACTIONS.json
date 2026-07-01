@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-26",
+  "session": "POLICY_SECRETS_AUDIT_EMERGENCY_CONTROL_V1",
+  "actions": [
+    {"id": "STOP_ALL_AGENTS", "effect": "Pause or cancel active workflows by risk and checkpoint R0/R1 analysis."},
+    {"id": "OUTBOUND_OFF", "effect": "Disable outbound send and publish queues."},
+    {"id": "PRODUCTION_WRITE_OFF", "effect": "Disable production deploy and production DB write queues."},
+    {"id": "PAYMENTS_OFF", "effect": "Disable payment and purchase queues."},
+    {"id": "BROWSER_ACTIONS_OFF", "effect": "Disable browser automation and remote UI action queues."},
+    {"id": "REVOKE_ACTIVE_APPROVALS", "effect": "Mark active approvals revoked and deny reuse."}
+  ],
+  "idempotent": true,
+  "runtime_status": "SYNTHETIC_ONLY_NOT_DEPLOYED"
+}

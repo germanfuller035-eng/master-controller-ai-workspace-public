@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-26",
+  "session": "VOLTAGENT_RUNTIME_MODEL_ROUTER_AND_COST_GOVERNOR_V1",
+  "default_unknown_task_policy": "DENY_SAFE_DEFAULT",
+  "rules": [
+    {
+      "id": "critical_to_best_available",
+      "task_types": ["critical", "high_risk_reasoning", "incident_analysis"],
+      "preferred_model_id": "critical_best_model_class",
+      "routing_reason": "critical tasks use the best available synthetic model profile under cost ceilings",
+      "requires_stop_loss": true
+    },
+    {
+      "id": "routine_to_cheaper_model",
+      "task_types": ["routine", "summary", "draft"],
+      "preferred_model_id": "cheap_routine_model_class",
+      "routing_reason": "routine work uses the cheaper model profile",
+      "requires_stop_loss": false
+    },
+    {
+      "id": "classification_to_deterministic_or_cheap",
+      "task_types": ["classification", "triage"],
+      "preferred_model_id": "deterministic_local_classifier",
+      "fallback_model_id": "cheap_routine_model_class",
+      "routing_reason": "classification uses deterministic code first and cheap model profile only if required",
+      "requires_stop_loss": false
+    },
+    {
+      "id": "coding_to_coding_worker_profile",
+      "task_types": ["coding", "code_change", "code_review_fix"],
+      "preferred_model_id": "coding_worker_profile",
+      "routing_reason": "coding is routed through the contract-only Claude Agent SDK or Codex profile",
+      "requires_stop_loss": true
+    },
+    {
+      "id": "review_to_independent_provider",
+      "task_types": ["review", "independent_review", "second_pass"],
+      "preferred_model_id": "independent_review_model_class",
+      "routing_reason": "review uses a different provider profile or an independent run",
+      "requires_different_provider": true,
+      "requires_stop_loss": true
+    }
+  ]
+}

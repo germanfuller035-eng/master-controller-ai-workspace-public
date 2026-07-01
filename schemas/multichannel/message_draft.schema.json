@@ -1,0 +1,21 @@
+{
+  "additionalProperties": true,
+  "properties": {
+    "channel": {},
+    "draft_id": {},
+    "draft_only": {},
+    "payload_hash": {},
+    "send_allowed": {},
+    "synthetic": {}
+  },
+  "required": [
+    "synthetic",
+    "draft_id",
+    "channel",
+    "draft_only",
+    "send_allowed",
+    "payload_hash"
+  ],
+  "title": "Message Draft",
+  "type": "object"
+}

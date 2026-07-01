@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "site_id": "synthetic_site_front_office_fit",
+  "synthetic": true,
+  "external_access": false,
+  "browser_action_allowed": false,
+  "reserved_domain_reference": "synthetic-front-office.example.test",
+  "synthetic_company_label": "Synthetic Front Office Fixture",
+  "metrics": {
+    "response_time_ms": 950,
+    "mobile_ready": true,
+    "message_clarity": 4,
+    "trust_proofs": 2
+  },
+  "lead_capture": {
+    "forms": 1,
+    "cta_count": 2,
+    "consent_copy": true,
+    "routing_defined": true,
+    "owner_followup_sla_minutes": 240
+  },
+  "front_office": {
+    "response_sla_minutes": 540,
+    "after_hours_plan": false
+  },
+  "signals": {
+    "website_problem": 0,
+    "lead_capture_problem": 1,
+    "response_handling_problem": 5,
+    "trust_problem": 1,
+    "landing_need": 1
+  },
+  "evidence": [
+    {
+      "id": "ev-front-office-profile",
+      "source": "synthetic_fixture",
+      "claim": "Synthetic after-hours handling is not represented."
+    }
+  ]
+}

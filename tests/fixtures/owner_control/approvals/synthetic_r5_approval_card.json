@@ -1,0 +1,39 @@
+{
+  "approval_id": "approval-r5-synthetic",
+  "synthetic": true,
+  "risk": "R5",
+  "payload": {
+    "actor": "owner",
+    "action": "preview_payment_operation",
+    "target": "synthetic_budget_hold",
+    "payload": {
+      "amount_units": 100,
+      "currency": "SYNTHETIC_UNITS"
+    },
+    "risk": "R5",
+    "expiry": "synthetic_future_window",
+    "task_id": "owner-control-r5"
+  },
+  "payload_hash": "c94f8e60f1057818ccd645e4416778ba0581df1bcfc469df552101726bc95c1b",
+  "risk_explanation": {
+    "what": "Synthetic R5 owner approval preview only.",
+    "who": "Master Controller owner reviews the synthetic card.",
+    "why": "Demonstrate exact payload hash and strong risk copy without execution.",
+    "cost": "No real cost, no payment, no production write.",
+    "rollback": "Discard local synthetic card; no production rollback needed."
+  },
+  "strong_approval_fields": {
+    "pin_or_biometric_future": true,
+    "repeated_human_description": true,
+    "short_delay": true,
+    "one_time_approval": true
+  },
+  "execute_allowed": false,
+  "evidence": [
+    {
+      "id": "ev-owner-control-synthetic",
+      "source": "synthetic_fixture",
+      "claim": "Local synthetic owner-control evidence."
+    }
+  ]
+}

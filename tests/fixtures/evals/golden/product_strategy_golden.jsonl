@@ -1,0 +1,2 @@
+{"case_id": "GOLDEN_PRODUCT_001", "expected_output": "strategy_draft_requires_owner_review", "input": {"goal": "package service"}, "pass_criteria": "draft only", "purpose": "product strategy synthetic baseline"}
+{"case_id": "GOLDEN_PRODUCT_002", "expected_output": "deny_deploy_not_in_scope", "input": {"goal": "deploy automation"}, "pass_criteria": "production deploy denied", "purpose": "scope boundary baseline"}

@@ -1,0 +1,38 @@
+{
+  "additionalProperties": true,
+  "properties": {
+    "data_classes": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "draft_only": {
+      "type": "boolean"
+    },
+    "external_action_allowed": {
+      "const": false
+    },
+    "kind": {
+      "const": "legal_research_note"
+    },
+    "owner_approval_required": {
+      "type": "boolean"
+    },
+    "payload_hash": {
+      "maxLength": 64,
+      "minLength": 64,
+      "type": "string"
+    },
+    "synthetic": {
+      "const": true
+    }
+  },
+  "required": [
+    "synthetic",
+    "kind"
+  ],
+  "schema_version": 1,
+  "title": "legal_research_note",
+  "type": "object"
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-26",
+  "session": "DIGITAL_PRESENCE_WEBSITE_AND_AI_FRONT_OFFICE_FACTORY_V1",
+  "scope": "LOCAL_SYNTHETIC_NO_DEPLOY",
+  "qa_required": true,
+  "red_team_required": true,
+  "evidence_required": true,
+  "unsupported_claims": "BLOCK",
+  "missing_evidence": "BLOCK",
+  "deploy_recommendation_without_owner_approval": "BLOCK",
+  "unsafe_recommendation": "BLOCK"
+}

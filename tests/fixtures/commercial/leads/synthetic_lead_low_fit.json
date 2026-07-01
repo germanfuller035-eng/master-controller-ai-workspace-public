@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "synthetic": true,
+  "lead_id": "synthetic_lead_low_fit",
+  "source": {
+    "type": "synthetic_fixture",
+    "external_access": false
+  },
+  "identity": {
+    "organization_name": "Synthetic Low Fit Archive",
+    "domain_reference": "synthetic-low-fit.example.invalid",
+    "synthetic_registry_id": "registry-synthetic_lead_low_fit",
+    "industry": "synthetic services"
+  },
+  "contact": {
+    "website_reference": "synthetic-low-fit.example.invalid/home",
+    "contact_form_reference": "synthetic-form-synthetic_lead_low_fit",
+    "public_contact_page_reference": "synthetic-contact-page-synthetic_lead_low_fit",
+    "role_contact_reference": "synthetic-role-contact-synthetic_lead_low_fit",
+    "consent_basis": "synthetic_fixture_only"
+  },
+  "signals": {
+    "website_problem": 1,
+    "lead_capture_problem": 1,
+    "response_handling_problem": 1,
+    "trust_problem": 1,
+    "audit_uncertainty": 1
+  },
+  "qualification": {
+    "business_relevance": 0,
+    "urgency": 0,
+    "budget_signal": 0
+  },
+  "roi_inputs": {
+    "monthly_leads": 12,
+    "average_value_units": 100,
+    "expected_improvement_ratio": 0.12
+  },
+  "evidence": [
+    {
+      "id": "ev-synthetic_lead_low_fit-fixture",
+      "source": "synthetic_lead_fixture",
+      "claim": "Synthetic fixture defines Synthetic Low Fit Archive problem signals."
+    }
+  ],
+  "site_fixture": "synthetic_site_good"
+}

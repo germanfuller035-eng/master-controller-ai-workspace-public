@@ -1,0 +1,10 @@
+{
+  "scenario": "J",
+  "name": "Agent handoff",
+  "ok": true,
+  "steps": [
+    "Claude completes phase 1-2 (isolated worktree)",
+    "handoff package: branch+commit+artifacts+tests+context_checksum",
+    "Cline resumes phase 3 (file-local)"
+  ]
+}

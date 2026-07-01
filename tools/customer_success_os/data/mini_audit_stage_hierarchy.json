@@ -1,0 +1,13 @@
+{
+  "schema": "customer_success_os.mini_audit_stage_hierarchy.v1",
+  "version": "1.0",
+  "note": "Reconciliation: 5 macro-phases (Delivery OS playbook milestones) CONTAIN ~15 detailed operational stages (Mini Audit delivery factory + Product OS spec). Neither model is wrong. Canonical product status NOT changed.",
+  "macro_phases": [
+    {"macro_phase": "ma1_verification", "name": "Identity & website verification", "detailed_stages": ["identity_verified", "website_verified", "contact_verified"], "inputs": ["verified URL", "identity"], "outputs": ["verified_identity_record"], "qa_gate": false, "acceptance_gate": false},
+    {"macro_phase": "ma2_evidence", "name": "Evidence collection", "detailed_stages": ["evidence_collected", "evidence_register_built"], "inputs": ["verified pages"], "outputs": ["evidence_register"], "qa_gate": false, "acceptance_gate": false},
+    {"macro_phase": "ma3_findings", "name": "Finding generation + dedup/conflict", "detailed_stages": ["findings_generated", "findings_count_ok", "no_duplicates", "no_conflicts"], "inputs": ["evidence_register"], "outputs": ["findings_list"], "qa_gate": true, "acceptance_gate": false},
+    {"macro_phase": "ma4_implications", "name": "Business implications + recommendations", "detailed_stages": ["business_implications_reviewed", "recommendations_actionable", "price_correct"], "inputs": ["findings_list"], "outputs": ["recommendations", "priority_matrix"], "qa_gate": true, "acceptance_gate": false},
+    {"macro_phase": "ma5_packaging", "name": "Owner QA + client packaging", "detailed_stages": ["owner_qa", "client_packaging", "delivery_preparation", "acceptance", "upsell_recommendation", "lessons_capture"], "inputs": ["recommendations"], "outputs": ["audit_summary", "qa_report", "commercial_next_step"], "qa_gate": true, "acceptance_gate": true}
+  ],
+  "summary": {"macro_phases": 5, "detailed_stages_total": 18, "interpretation": "5 macro-phases contain the detailed operational stages; Product OS '5-stage' summary = macro-phases, Delivery OS factory '15-stage' = detailed operational stages."}
+}

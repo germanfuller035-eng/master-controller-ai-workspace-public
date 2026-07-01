@@ -1,0 +1,10 @@
+{
+  "proposal_id": "memprop_missing_source_001",
+  "proposed_by": "local_synthetic_agent",
+  "claim": "This synthetic proposal intentionally lacks source.",
+  "source_id": "",
+  "source_date": "2026-06-26",
+  "confidence": 0.9,
+  "classification": "SYNTHETIC_PUBLIC",
+  "retention": "REVIEW_30_DAYS"
+}

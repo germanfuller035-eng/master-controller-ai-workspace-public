@@ -1,0 +1,13 @@
+{
+  "title": "memory_proposal_card",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["proposal_id", "synthetic", "review_only", "can_write_memory", "evidence"],
+  "properties": {
+    "proposal_id": {"type": "string"},
+    "synthetic": {"type": "boolean"},
+    "review_only": {"type": "boolean"},
+    "can_write_memory": {"type": "boolean"},
+    "evidence": {"type": "array"}
+  }
+}

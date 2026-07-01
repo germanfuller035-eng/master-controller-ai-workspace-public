@@ -1,0 +1,14 @@
+{
+  "schema_version": "controlled_outbound.outbound_draft.v1",
+  "synthetic": true,
+  "draft_id": "synthetic-outbound-draft-delta-over-limit",
+  "contact_id": "synthetic-contact-delta",
+  "channel": "synthetic_email_contract",
+  "subject": "Synthetic draft delta over limit",
+  "body": "Synthetic local draft only. This fourth draft must be blocked.",
+  "draft_only": true,
+  "send_allowed": false,
+  "sent": false,
+  "owner_approval_required_for_future_send": true,
+  "payload_hash": ""
+}

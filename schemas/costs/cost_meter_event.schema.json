@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Cost Meter Event",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["event_id", "task_id", "model_id", "provider_id", "estimated_rub", "decision"],
+  "properties": {
+    "event_id": {"type": "string"},
+    "task_id": {"type": "string"},
+    "model_id": {"type": "string"},
+    "provider_id": {"type": "string"},
+    "input_tokens": {"type": "integer", "minimum": 0},
+    "output_tokens": {"type": "integer", "minimum": 0},
+    "retry_count": {"type": "integer", "minimum": 0},
+    "estimated_rub": {"type": "number", "minimum": 0},
+    "decision": {"type": "string"}
+  }
+}

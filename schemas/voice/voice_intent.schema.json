@@ -1,0 +1,17 @@
+{
+  "additionalProperties": true,
+  "properties": {
+    "intent_id": {},
+    "intent_type": {},
+    "risk": {},
+    "synthetic": {}
+  },
+  "required": [
+    "synthetic",
+    "intent_id",
+    "intent_type",
+    "risk"
+  ],
+  "title": "Voice Intent",
+  "type": "object"
+}

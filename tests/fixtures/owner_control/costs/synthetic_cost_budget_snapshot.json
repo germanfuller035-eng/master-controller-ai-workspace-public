@@ -1,0 +1,22 @@
+{
+  "synthetic": true,
+  "panel_id": "costs",
+  "budget": {
+    "currency": "SYNTHETIC_UNITS",
+    "monthly_limit": 20000,
+    "expensive_task_threshold": 1000
+  },
+  "synthetic_spend": {
+    "month_to_date": 3200,
+    "remaining": 16800,
+    "budget_status": "OK"
+  },
+  "stop_loss_required": true,
+  "evidence": [
+    {
+      "id": "ev-owner-control-synthetic",
+      "source": "synthetic_fixture",
+      "claim": "Local synthetic owner-control evidence."
+    }
+  ]
+}

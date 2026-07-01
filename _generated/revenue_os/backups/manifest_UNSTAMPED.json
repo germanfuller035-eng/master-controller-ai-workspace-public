@@ -1,0 +1,177 @@
+{
+  "schema": "ai_hq.backup_manifest.v1",
+  "generated_ts": "UNSTAMPED",
+  "src": "D:\\AI_WORKSPACE_WORKTREES\\revenue-os-command-center-v1\\tools\\revenue_os",
+  "file_count": 33,
+  "total_size": 171506,
+  "excluded_secret_files": 0,
+  "git_head": "68956d663e07af939d2019cd30d778a6f64386a9",
+  "entries": [
+    {
+      "path": "apply_manifest.mjs",
+      "size": 2890,
+      "sha256": "498bac7c01324a5de56e5fdef6e9c3fc22567233020dfe54623bbbe6b997e8e1"
+    },
+    {
+      "path": "revenue.mjs",
+      "size": 8411,
+      "sha256": "9a4da962d34a3522eee1ede6d65bf1da3756b3f623f7ee4e4eabfca1cadd3536"
+    },
+    {
+      "path": "tests/revenue.test.mjs",
+      "size": 12868,
+      "sha256": "6ef175da808308421db965f86dad1de383e05c5bc8e495b4b91145cf94fa507d"
+    },
+    {
+      "path": "tests/run_all.mjs",
+      "size": 909,
+      "sha256": "ddd40ec20addef9ebc60db231f2e6b78e93136343513be02efa41e4366ca6fba"
+    },
+    {
+      "path": "tests/security.test.mjs",
+      "size": 3480,
+      "sha256": "a261352f8b3d03ceb352964a7558784b8b0adbce702ed48686f5dcce953ac9dd"
+    },
+    {
+      "path": "schemas/domain.mjs",
+      "size": 9942,
+      "sha256": "1bb61218846c230c8770a6041dc3a6bd423c8c42b33153c52b7ceb4e65493a49"
+    },
+    {
+      "path": "lib/capacity.mjs",
+      "size": 3049,
+      "sha256": "9da1f5d0c2afae44f8a1e6dd7d9a1de0e52c485cdd47cdbf5cc87b6ff2a0290f"
+    },
+    {
+      "path": "lib/common.mjs",
+      "size": 3445,
+      "sha256": "e99a056f6d3fac5221441f1b4de73020b9d1263e15343358f8bac2846ab399f7"
+    },
+    {
+      "path": "lib/deal.mjs",
+      "size": 4282,
+      "sha256": "2eac1b595a95906eeb363e39801111c7795628499713f29ca810d8e01535e8af"
+    },
+    {
+      "path": "lib/economics.mjs",
+      "size": 3007,
+      "sha256": "1f79304e807309cc9795ebffcdbdfac00b6415b88b3a3b594c6919867d66ce07"
+    },
+    {
+      "path": "lib/evidence.mjs",
+      "size": 4130,
+      "sha256": "181594adea44a4434eecdbc20a07d54b95a5dce7b75055fe4f03bf818af60e8a"
+    },
+    {
+      "path": "lib/findings.mjs",
+      "size": 3309,
+      "sha256": "5870deab0b6344db13c3c47419486444025fb1a35b32bc64bad68bfdd4de13fc"
+    },
+    {
+      "path": "lib/funnel.mjs",
+      "size": 3161,
+      "sha256": "df2bcdd70ffab4209bc7a89c25246249e47ac2b1912c569e1aedf005ab1e3e87"
+    },
+    {
+      "path": "lib/maturity.mjs",
+      "size": 10535,
+      "sha256": "df7a68df4e4a1e354eb738fb216c47bfe0fd2de8656f024d82c5fa39d158292f"
+    },
+    {
+      "path": "lib/messaging.mjs",
+      "size": 5401,
+      "sha256": "9126c2c0562ce58488ebe442b9e75de00e3a7ca15b678d720329a81294185c20"
+    },
+    {
+      "path": "lib/offer.mjs",
+      "size": 4294,
+      "sha256": "3a902b6fe641732d25b741f9b0ef376474163ae3e9fb02c3af48a2b699236982"
+    },
+    {
+      "path": "lib/pricing.mjs",
+      "size": 5494,
+      "sha256": "da8d343d102fadae8c090da15a1c19d93b3ec06384f760105111e1179574efac"
+    },
+    {
+      "path": "lib/proposal.mjs",
+      "size": 4837,
+      "sha256": "e16cf8b11dfb67fe5b6807ca84148720e24e6e0b9684043a897d09b0dc7541a0"
+    },
+    {
+      "path": "lib/recommend.mjs",
+      "size": 5165,
+      "sha256": "b35d31e0f9faa058fc789f03072159d5885d2e4af55ecfeada09edc968a4d7a4"
+    },
+    {
+      "path": "lib/schema.mjs",
+      "size": 2229,
+      "sha256": "b689e4663ea448494405a25d07a245e82bec7a1e406fee42043d852e85fc056c"
+    },
+    {
+      "path": "lib/scope.mjs",
+      "size": 4099,
+      "sha256": "7d488cf6c656783366eb3fde5a7b5ca69aeb612d285e1b18bb81a67efd62e1a6"
+    },
+    {
+      "path": "lib/validators.mjs",
+      "size": 4290,
+      "sha256": "f6a38695b10a02aabfa5f70a5961b245d9e260287fb2a80e9e31d72392479788"
+    },
+    {
+      "path": "fixtures/capacity_known.json",
+      "size": 112,
+      "sha256": "520214f76be597a53759cbd9c50c7e68c08d173e9dfcc8475de93933b36c03bd"
+    },
+    {
+      "path": "fixtures/capacity_unknown.json",
+      "size": 46,
+      "sha256": "07c032fce4271d2c4d302ba08dc64b9c78b557aefd9ea3a12eefdef4cbbd70c8"
+    },
+    {
+      "path": "fixtures/customer_profiles.json",
+      "size": 13352,
+      "sha256": "57cbfd604069c0b0c2061f42e4a2e0999b90c931d6e7760c00c72013f5f656d3"
+    },
+    {
+      "path": "fixtures/funnel_base.json",
+      "size": 108,
+      "sha256": "850d488f3546abfdaf49404fc441886e80f9f42b5c22cd4e7d5649b7ad8a4d54"
+    },
+    {
+      "path": "fixtures/funnel_low_data.json",
+      "size": 75,
+      "sha256": "9820c467d7b0b72ac5c13bb7f08b569b49eb934a7b74cf41d535149f5f062295"
+    },
+    {
+      "path": "fixtures/funnel_no_replies.json",
+      "size": 124,
+      "sha256": "5c57ca2ac7653fbc2d0dd5dbf79cbc93071d4e30b34663e843d31c068a401860"
+    },
+    {
+      "path": "data/asset_library.json",
+      "size": 3474,
+      "sha256": "2df3a686ff780fa3e40b5cd0b89f3a891b9822e345b9bf0157955bf50d4e1a80"
+    },
+    {
+      "path": "data/audit_taxonomy.json",
+      "size": 3763,
+      "sha256": "413371b58c4b8ee7b3bd87aff4f23358e8843917274c007983c4cd3a27c3cd7b"
+    },
+    {
+      "path": "data/mini_audit_standard.json",
+      "size": 2639,
+      "sha256": "d46d1ad3df63c4dc772e7b191b234dede531cf5964966630f5d648f901d8b284"
+    },
+    {
+      "path": "data/objection_playbook.json",
+      "size": 6251,
+      "sha256": "81962f06b81efadfe31a07faf9694a2e90d63daf4c507d62250604ac327df9dd"
+    },
+    {
+      "path": "data/product_catalog.json",
+      "size": 32335,
+      "sha256": "95091b67fce8b5a4e4121e7a770d87dc11959a25f2468e20378585c721d413c9"
+    }
+  ],
+  "restore_instructions": "Verify with: for each entry sha256sum -c. Restore by copying files; secrets restored separately from D:\\AI_SECRETS encrypted store."
+}

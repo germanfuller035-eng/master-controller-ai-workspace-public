@@ -1,0 +1,12 @@
+{
+  "data_classes": [
+    "FAMILY_CONFIDENTIAL"
+  ],
+  "external_system_accessed": false,
+  "health_context": "none",
+  "kind": "family_health_reminder",
+  "medical_processing_requested": false,
+  "reminder_label": "synthetic_family_check_in",
+  "request_id": "syn_family_alpha",
+  "synthetic": true
+}

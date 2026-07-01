@@ -1,0 +1,8 @@
+{
+  "invoiced": 25000,
+  "collected": 18000,
+  "overdue": 7000,
+  "margin": 0.64,
+  "cashflow": 1200,
+  "forecast_error": 0.12
+}

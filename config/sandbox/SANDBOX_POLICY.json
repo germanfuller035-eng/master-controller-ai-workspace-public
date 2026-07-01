@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "session": "AGENT_SANDBOX_OBSERVABILITY_AND_EVALS_V1",
+  "sandbox_enabled": false,
+  "production_enabled": false,
+  "lifecycle": "LOCAL_SYNTHETIC",
+  "future_isolation": {
+    "separate_worktree": true,
+    "future_non_root_container": true,
+    "future_read_only_root_filesystem": true,
+    "direct_docker_socket_allowed": false,
+    "root_filesystem_allowed": false
+  },
+  "required_boundaries": [
+    "cpu_limit",
+    "memory_limit",
+    "timeout",
+    "egress_allowlist",
+    "assigned_worktree",
+    "stop_integration"
+  ],
+  "denied_capabilities": [
+    "direct_docker_socket",
+    "unrestricted_shell",
+    "production_credentials",
+    "production_db",
+    "production_filesystem",
+    "outbound_send",
+    "payments",
+    "browser_actions",
+    "provider_credentials"
+  ],
+  "default_unknown_policy": "DENY"
+}

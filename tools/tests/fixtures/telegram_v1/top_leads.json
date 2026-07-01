@@ -1,0 +1,35 @@
+[
+  {
+    "lead_id": "002",
+    "rank": 1,
+    "company": "ЖЕЛЕЗОБЕТОН",
+    "website": "zb23.ru",
+    "niche": "ЖБИ / производство железобетона",
+    "region": "Краснодарский край",
+    "score": 92,
+    "risk": "low",
+    "status": "top1"
+  },
+  {
+    "lead_id": "001",
+    "rank": 2,
+    "company": "КЖБИ",
+    "website": "",
+    "niche": "Комбинат ЖБИ",
+    "region": "РФ",
+    "score": 81,
+    "risk": "medium",
+    "status": "top3"
+  },
+  {
+    "lead_id": "003",
+    "rank": 3,
+    "company": "ГБИ Ресурс",
+    "website": "",
+    "niche": "ЖБИ / поставка",
+    "region": "РФ",
+    "score": 78,
+    "risk": "medium",
+    "status": "top3"
+  }
+]

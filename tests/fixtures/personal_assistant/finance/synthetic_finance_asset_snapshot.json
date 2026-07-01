@@ -1,0 +1,18 @@
+{
+  "assets": [
+    {
+      "asset_label": "synthetic_cash_bucket",
+      "value_units": 120
+    },
+    {
+      "asset_label": "synthetic_equipment_bucket",
+      "value_units": 45
+    }
+  ],
+  "bank_access_requested": false,
+  "external_system_accessed": false,
+  "kind": "finance_asset_snapshot",
+  "payment_requested": false,
+  "request_id": "syn_finance_alpha",
+  "synthetic": true
+}

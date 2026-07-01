@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Model Cost Limit",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["currency", "cost_limits"],
+  "properties": {
+    "currency": {"type": "string"},
+    "cost_limits": {"type": "array", "items": {"type": "object"}}
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "session": "AGENT_SANDBOX_OBSERVABILITY_AND_EVALS_V1",
+  "denied_capabilities": [
+    "direct_docker_socket",
+    "unrestricted_shell",
+    "production_credentials",
+    "production_db",
+    "production_filesystem",
+    "outbound_send",
+    "payments",
+    "browser_actions",
+    "external_mcp_server",
+    "provider_credentials"
+  ],
+  "denied_paths": [
+    "production_root",
+    "host_root",
+    "home_credentials",
+    "ssh_material"
+  ],
+  "denied_processes": [
+    "docker_socket",
+    "privileged_container",
+    "production_adapter"
+  ]
+}

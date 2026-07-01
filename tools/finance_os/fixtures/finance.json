@@ -1,0 +1,35 @@
+{
+  "schema": "finance_os.fixtures.v1",
+  "note": "TEST_ONLY synthetic fixtures. No real client/bank data. All amounts illustrative.",
+  "invoices": [
+    {"fixture_id": "F01_mini_audit_prepaid", "expect_ok": true, "input": {"product_id": "mini_audit", "client_reference": "TEST_c01", "number": "T-001", "schedule_template": "prepay_100", "issue_date": "2026-06-01", "due_date": "2026-06-08"}},
+    {"fixture_id": "F02_mini_audit_unpaid", "expect_ok": true, "input": {"product_id": "mini_audit", "client_reference": "TEST_c02", "number": "T-002", "issue_date": "2026-06-01", "due_date": "2026-06-15"}},
+    {"fixture_id": "F03_mini_audit_partial", "expect_ok": true, "input": {"product_id": "mini_audit", "client_reference": "TEST_c03", "number": "T-003", "schedule_template": "split_50_50"}},
+    {"fixture_id": "F04_mini_audit_overdue", "expect_ok": true, "input": {"product_id": "mini_audit", "client_reference": "TEST_c04", "number": "T-004", "issue_date": "2026-05-01", "due_date": "2026-05-15"}},
+    {"fixture_id": "F05_landing_5050", "expect_ok": true, "input": {"product_id": "landing_sprint", "client_reference": "TEST_c05", "number": "T-005", "subtotal": 150000, "price_status": "OWNER_TARGET", "price_approved": true, "schedule_template": "split_50_50"}},
+    {"fixture_id": "F06_website_milestones", "expect_ok": true, "input": {"product_id": "business_website", "client_reference": "TEST_c06", "number": "T-006", "subtotal": 250000, "price_status": "OWNER_TARGET", "price_approved": true, "custom_stages": [{"name": "Prepay", "percentage": 30, "due_condition": "on_issue"}, {"name": "Mid", "percentage": 40, "due_condition": "on_milestone"}, {"name": "Final", "percentage": 30, "due_condition": "on_delivery"}]}},
+    {"fixture_id": "F07_dup_number", "expect_ok": false, "existing_numbers": ["T-001"], "input": {"product_id": "mini_audit", "client_reference": "TEST_c07", "number": "T-001"}},
+    {"fixture_id": "F08_bad_schedule", "expect_ok": false, "input": {"product_id": "mini_audit", "client_reference": "TEST_c08", "number": "T-008", "custom_stages": [{"name": "A", "percentage": 40, "due_condition": "x"}, {"name": "B", "percentage": 40, "due_condition": "y"}]}},
+    {"fixture_id": "F09_due_before_issue", "expect_ok": false, "input": {"product_id": "mini_audit", "client_reference": "TEST_c09", "number": "T-009", "issue_date": "2026-06-10", "due_date": "2026-06-01"}},
+    {"fixture_id": "F10_unapproved_draft_price", "expect_ok": false, "input": {"product_id": "funnel_audit", "client_reference": "TEST_c10", "number": "T-010", "test_only": false}}
+  ],
+  "scenarios": {
+    "scope_increase": {"project_id": "TEST_p_scope", "product_id": "business_website", "contracted_value": 250000, "invoiced": 250000, "paid": 75000, "actual_owner_hours": 60, "scope_creep": true},
+    "client_delay": {"project_id": "TEST_p_delay", "product_id": "mini_audit", "contracted_value": 10000, "invoiced": 10000, "paid": 0, "actual_owner_hours": 2, "client_delay": true},
+    "underpriced": {"project_id": "TEST_p_under", "product_id": "landing_sprint", "contracted_value": 30000, "invoiced": 30000, "paid": 30000, "actual_owner_hours": 40},
+    "profitable_unpaid": {"project_id": "TEST_p_unpaid", "product_id": "mini_audit", "contracted_value": 10000, "invoiced": 10000, "paid": 0, "actual_owner_hours": 2, "status": "CONFIRMED", "status_delivery": "completed"},
+    "cash_positive_low_margin": {"project_id": "TEST_p_lowm", "product_id": "business_website", "contracted_value": 180000, "invoiced": 180000, "paid": 180000, "actual_owner_hours": 120, "direct_expenses": 140000}
+  },
+  "payments": {
+    "duplicate": {"invoice": {"invoice_id": "i1", "number": "T-001", "total": 10000, "currency": "RUB", "client_reference": "acme"}, "rows": [{"amount": 10000, "currency": "RUB", "reference": "PAY-1", "client_hint": "acme"}, {"amount": 10000, "currency": "RUB", "reference": "PAY-1", "client_hint": "acme"}]},
+    "unmatched": {"invoice": {"invoice_id": "i2", "number": "T-002", "total": 10000, "currency": "RUB", "client_reference": "beta"}, "row": {"amount": 7777, "currency": "RUB", "reference": "ZZZ", "client_hint": "unknown"}}
+  },
+  "expenses_ambiguous": [
+    {"expense_id": "ex1", "category": "equipment", "amount": 50000, "currency": "RUB", "vendor": "store", "date": "2026-06-05", "source": "INCURRED_UNVERIFIED", "status": "INCURRED_UNVERIFIED", "tax_relevance": "unknown", "recurring": false, "scope": "ambiguous", "direct": false, "evidence": null, "test_only": true}
+  ],
+  "tax_reserve_shortfall": {"category": "tax", "policy_target": 60000, "current_available": 15000, "confidence": "MODEL_ESTIMATE"},
+  "negative_cashflow": {"opening_cash": 20000, "now": "2026-06-17", "horizon_days": 30, "events": [{"type": "operating_outflow", "date": "2026-06-20", "amount": 50000, "currency": "RUB", "status": "expected"}]},
+  "capacity_overload": {"owner_weekly_hours": 20, "active_projects": [{"owner_hours": 15}, {"owner_hours": 12}]},
+  "debt_stress": {"debts": [{"debt_id": "d1", "type": "loan", "payment": 20000, "frequency": "monthly", "principal": 400000, "interest_rate": 0.18, "confirmed": true, "scope": "business", "currency": "RUB", "status": "ACTIVE", "source": "OWNER_TARGET"}], "monthly_cash_inflow": 22000},
+  "business_unit_no_revenue": "boxon"
+}

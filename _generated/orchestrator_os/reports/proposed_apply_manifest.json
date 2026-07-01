@@ -1,0 +1,275 @@
+{
+  "schema": "orchestrator_os.apply_manifest.v1",
+  "generated_ts": "20260617_000000",
+  "vault": "D:\\AI_WORKSPACE",
+  "apply_command": "AI_HQ_APPLY_OK=1 node tools/ai_hq/apply_canonical.mjs --apply  (owner only, post-review)",
+  "note": "Proposed agent-orchestration docs NOT applied. Production freeze in effect.",
+  "canonical_docs_applied": 0,
+  "total": 33,
+  "rows": [
+    {
+      "source_proposed": "docs_canonical_proposed/09_dashboards/orchestration_dashboard.md",
+      "target_path": "09_dashboards/orchestration_dashboard.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/09_dashboards/owner_orchestration_command_center.md",
+      "target_path": "09_dashboards/owner_orchestration_command_center.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/15_agent_orchestration/agent_handoff_standard.md",
+      "target_path": "15_agent_orchestration/agent_handoff_standard.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/15_agent_orchestration/agent_orchestration_note.md",
+      "target_path": "15_agent_orchestration/agent_orchestration_note.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/15_agent_orchestration/agent_selection_policy.md",
+      "target_path": "15_agent_orchestration/agent_selection_policy.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/15_agent_orchestration/anti_loop_policy.md",
+      "target_path": "15_agent_orchestration/anti_loop_policy.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/15_agent_orchestration/approval_gate_policy.md",
+      "target_path": "15_agent_orchestration/approval_gate_policy.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/15_agent_orchestration/artifact_handoff_standard.md",
+      "target_path": "15_agent_orchestration/artifact_handoff_standard.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/15_agent_orchestration/budget_policy.md",
+      "target_path": "15_agent_orchestration/budget_policy.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/15_agent_orchestration/cancellation_policy.md",
+      "target_path": "15_agent_orchestration/cancellation_policy.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/15_agent_orchestration/capability_registry.md",
+      "target_path": "15_agent_orchestration/capability_registry.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/15_agent_orchestration/checkpoint_resume_policy.md",
+      "target_path": "15_agent_orchestration/checkpoint_resume_policy.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/15_agent_orchestration/communication_monitor_reproducibility.md",
+      "target_path": "15_agent_orchestration/communication_monitor_reproducibility.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/15_agent_orchestration/context_pack_contract.md",
+      "target_path": "15_agent_orchestration/context_pack_contract.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/15_agent_orchestration/dead_letter_policy.md",
+      "target_path": "15_agent_orchestration/dead_letter_policy.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/15_agent_orchestration/dependency_policy.md",
+      "target_path": "15_agent_orchestration/dependency_policy.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/15_agent_orchestration/executor_contracts.md",
+      "target_path": "15_agent_orchestration/executor_contracts.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/15_agent_orchestration/lease_policy.md",
+      "target_path": "15_agent_orchestration/lease_policy.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/15_agent_orchestration/model_routing_policy.md",
+      "target_path": "15_agent_orchestration/model_routing_policy.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/15_agent_orchestration/observability_contract.md",
+      "target_path": "15_agent_orchestration/observability_contract.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/15_agent_orchestration/plan_standard.md",
+      "target_path": "15_agent_orchestration/plan_standard.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/15_agent_orchestration/policy_engine.md",
+      "target_path": "15_agent_orchestration/policy_engine.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/15_agent_orchestration/production_queue_boundary.md",
+      "target_path": "15_agent_orchestration/production_queue_boundary.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/15_agent_orchestration/quality_standard.md",
+      "target_path": "15_agent_orchestration/quality_standard.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/15_agent_orchestration/retry_policy.md",
+      "target_path": "15_agent_orchestration/retry_policy.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/15_agent_orchestration/risk_model.md",
+      "target_path": "15_agent_orchestration/risk_model.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/15_agent_orchestration/scheduler_contract.md",
+      "target_path": "15_agent_orchestration/scheduler_contract.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/15_agent_orchestration/security_boundary_report.md",
+      "target_path": "15_agent_orchestration/security_boundary_report.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/15_agent_orchestration/synthetic_e2e_report.md",
+      "target_path": "15_agent_orchestration/synthetic_e2e_report.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/15_agent_orchestration/task_contract_standard.md",
+      "target_path": "15_agent_orchestration/task_contract_standard.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/15_agent_orchestration/token_cost_accounting.md",
+      "target_path": "15_agent_orchestration/token_cost_accounting.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/15_agent_orchestration/verification_standard.md",
+      "target_path": "15_agent_orchestration/verification_standard.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/15_agent_orchestration/what_already_exists_links.md",
+      "target_path": "15_agent_orchestration/what_already_exists_links.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    }
+  ]
+}

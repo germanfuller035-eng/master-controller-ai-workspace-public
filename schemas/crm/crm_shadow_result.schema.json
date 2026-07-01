@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/crm/crm_shadow_result.schema.json",
+  "title": "CRM Shadow Result V1",
+  "type": "object",
+  "required": [
+    "synthetic",
+    "status",
+    "crm_write_allowed",
+    "production_db_write_allowed"
+  ],
+  "properties": {
+    "synthetic": {"const": true},
+    "status": {"enum": ["PASS", "FAIL", "BLOCKED"]},
+    "crm_write_allowed": {"const": false},
+    "production_db_write_allowed": {"const": false}
+  },
+  "additionalProperties": true
+}

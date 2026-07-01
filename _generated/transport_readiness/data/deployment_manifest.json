@@ -1,0 +1,32 @@
+{
+  "manifest_version": 1,
+  "gate": "TRANSPORT_READINESS",
+  "base_evidence_head": "1f51be6",
+  "whole_repository_deployment": false,
+  "note": "Additive transport-readiness change (NO send). 10 backend files (3 new + 7 modified). Adds delivery-status containment, transport approval contract (gated OFF), conversation timeline + pre-sale health read models, APPROVE_DRAFT_FOR_SEND_REVIEW decision (no deal), TEST_ONLY archive command. Android RC3 artifacts are NOT in the VPS backend set.",
+  "entries": [
+    { "path": "tools/commercial_core/lib/reconciliation.mjs", "category": "BACKEND_RUNTIME", "source_sha256_16": "7bbb102998c6585c", "target_path": "/opt/master-controller/tools/commercial_core/lib/reconciliation.mjs", "target_sha256_before": "e7bd19939e8752ae", "service": "master-controller-api", "restart_required": true, "rollback_source": "restore backup (e7bd1993)" },
+    { "path": "tools/commercial_core/lib/lifecycle.mjs", "category": "BACKEND_RUNTIME", "source_sha256_16": "b183b3feedf14655", "target_path": "/opt/master-controller/tools/commercial_core/lib/lifecycle.mjs", "target_sha256_before": "231e9d472f328642", "service": "master-controller-api", "restart_required": true, "rollback_source": "restore backup (231e9d47)" },
+    { "path": "tools/commercial_core/lib/transport_approval.mjs", "category": "BACKEND_RUNTIME", "source_sha256_16": "799204305e265f78", "target_path": "/opt/master-controller/tools/commercial_core/lib/transport_approval.mjs", "target_sha256_before": "ABSENT", "service": "master-controller-api", "restart_required": true, "rollback_source": "remove (was absent)" },
+    { "path": "tools/commercial_core/lib/conversation_read.mjs", "category": "BACKEND_RUNTIME", "source_sha256_16": "77cf60d8b2b4c314", "target_path": "/opt/master-controller/tools/commercial_core/lib/conversation_read.mjs", "target_sha256_before": "ABSENT", "service": "master-controller-api", "restart_required": true, "rollback_source": "remove (was absent)" },
+    { "path": "tools/mater_controller_api/src/commercial/service.mjs", "category": "ROUTE_WIRING", "source_sha256_16": "b06a222ca0227eb6", "target_path": "/opt/master-controller/tools/mater_controller_api/src/commercial/service.mjs", "target_sha256_before": "66733aca6ae3256a", "service": "master-controller-api", "restart_required": true, "rollback_source": "restore backup (66733aca)" },
+    { "path": "tools/mater_controller_api/src/commercial/routes.mjs", "category": "ROUTE_WIRING", "source_sha256_16": "790619910d6b4e11", "target_path": "/opt/master-controller/tools/mater_controller_api/src/commercial/routes.mjs", "target_sha256_before": "71b2dd3f4819330d", "service": "master-controller-api", "restart_required": true, "rollback_source": "restore backup (71b2dd3f)" },
+    { "path": "tools/mater_controller_api/src/commercial/conversations.mjs", "category": "ROUTE_WIRING", "source_sha256_16": "fb20cfff26290414", "target_path": "/opt/master-controller/tools/mater_controller_api/src/commercial/conversations.mjs", "target_sha256_before": "ABSENT", "service": "master-controller-api", "restart_required": true, "rollback_source": "remove (was absent)" },
+    { "path": "tools/mater_controller_api/src/mini_audit/service.mjs", "category": "ROUTE_WIRING", "source_sha256_16": "eb9e102516f3380f", "target_path": "/opt/master-controller/tools/mater_controller_api/src/mini_audit/service.mjs", "target_sha256_before": "d024dcd0351adf17", "service": "master-controller-api", "restart_required": true, "rollback_source": "restore backup (d024dcd0)" },
+    { "path": "tools/mater_controller_api/src/server/index.mjs", "category": "ROUTE_WIRING", "source_sha256_16": "d6c0294a2132dc6b", "target_path": "/opt/master-controller/tools/mater_controller_api/src/server/index.mjs", "target_sha256_before": "f414c26192f5e6a6", "service": "master-controller-api", "restart_required": true, "rollback_source": "restore backup (f414c261)", "diff_summary": "6 conversation read routes (gated). Additive." },
+    { "path": "tools/telegram_gateway/reply_correlation.mjs", "category": "BACKEND_RUNTIME", "source_sha256_16": "eaf571b3bdd9f1b3", "target_path": "/opt/master-controller/tools/telegram_gateway/reply_correlation.mjs", "target_sha256_before": "afe2f25ba8093068", "service": "n/a (read-only correlation; used by reply tooling)", "restart_required": false, "rollback_source": "restore backup (afe2f25b)", "diff_summary": "subject fallback + ambiguous quarantine. Additive, pure." }
+  ],
+  "config_changes": {
+    "CONVERSATION_READ_API": "ON (new)",
+    "CUSTOMER_SUCCESS_READ_API": "ON (new — pre-sale read only)",
+    "COMMERCIAL_READ_API": "ON (unchanged)",
+    "COMMERCIAL_COMMAND_API": "ON (unchanged)",
+    "COMMERCIAL_COMMAND_C1A": "ON (unchanged)",
+    "COMMERCIAL_PAYMENT_COMMAND": "OFF (unchanged)",
+    "COMMERCIAL_SEND": "OFF (unchanged)",
+    "SEND_ALLOWED_LIVE": "OFF",
+    "AUTOSEND": "BLOCKED",
+    "FOLLOWUP_AUTOSEND": "OFF"
+  },
+  "counts": { "backend_deployable_files": 10, "new_files": 3, "modified_files": 7, "new_store_or_writer_or_ledger_or_sendpath": 0 }
+}

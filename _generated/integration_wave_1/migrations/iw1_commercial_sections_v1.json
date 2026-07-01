@@ -1,0 +1,35 @@
+{
+  "migration_id": "iw1_commercial_sections_v1",
+  "status": "PREPARED_NOT_APPLIED",
+  "created": "2026-06-18",
+  "additive": true,
+  "reversible": true,
+  "idempotent": true,
+  "backup_first": true,
+  "destructive": false,
+  "applies_to": "Master Controller canonical store (lead_pipeline_store.json sibling sections)",
+  "description": "Additive namespaced sections for Integration Wave 1 commercial core. Adds empty maps only; touches NO existing key (leads, store_revision, queue). A single MC writer (updateStoreWithRevision) owns these sections; no second writer, no parallel ledger.",
+  "forward": {
+    "ensure_sections": [
+      "commercial.opportunities",
+      "commercial.offers",
+      "commercial.owner_decisions",
+      "commercial.deals",
+      "delivery.handoffs",
+      "delivery.projects",
+      "finance.invoices",
+      "finance.payments"
+    ],
+    "operation": "for each section key absent at store root → create as empty object {}; never overwrite an existing section; bump store_revision by 1 once if any section was added."
+  },
+  "reverse": {
+    "operation": "remove the eight commercial.* / delivery.* / finance.* sections ONLY IF every section is empty; refuse reverse if any section holds entities (manual review required); never touch leads/queue."
+  },
+  "preconditions": [
+    "backup taken and checksum recorded",
+    "CANONICAL_INTEGRITY=PASS before apply",
+    "store_revision read and matched (revision-guarded apply)"
+  ],
+  "execution": "NOT EXECUTED. Apply only under Gate B with owner approval AFTER Telegram soak verdict.",
+  "production_access": "NONE in this branch (no VPS, no real store file touched)."
+}

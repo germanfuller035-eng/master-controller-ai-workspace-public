@@ -1,0 +1,22 @@
+{
+  "schema": "growth_os.nurture.v1",
+  "version": "1.0",
+  "note": "Consent-aware nurture model. opt_out is TERMINAL for commercial nurture. No messages sent. Support communication and customer success are SEPARATE from marketing nurture.",
+  "states": ["new", "engaged", "needs_education", "considering", "not_now", "opted_out", "inactive", "customer"],
+  "transitions": [
+    {"from": "new", "to": "engaged", "trigger": "opened content / downloaded magnet (consented)"},
+    {"from": "engaged", "to": "considering", "trigger": "viewed offer / asked question"},
+    {"from": "considering", "to": "customer", "trigger": "becomes accepted customer (handed to Customer Success OS)"},
+    {"from": "any", "to": "opted_out", "trigger": "opt-out request", "terminal_for": "commercial_nurture"},
+    {"from": "considering", "to": "not_now", "trigger": "declines for now"},
+    {"from": "engaged", "to": "inactive", "trigger": "no engagement over window"}
+  ],
+  "rules": {
+    "opt_out_terminal": true,
+    "no_repeated_pressure": true,
+    "no_auto_nurture_without_consent": true,
+    "support_separate_from_marketing": true,
+    "customer_success_separate_from_growth": true,
+    "messages_sent": false
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MCP Gateway Tool Error",
+  "type": "object",
+  "required": ["error_code", "error_message_redacted"],
+  "properties": {
+    "error_code": {"type": "string"},
+    "error_message_redacted": {"type": "string"}
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "session": "AGENT_SANDBOX_OBSERVABILITY_AND_EVALS_V1",
+  "allowed_root": "assigned_worktree",
+  "artifact_root": "_generated/sandbox_observability_evals_v1/artifacts",
+  "deny_path_traversal": true,
+  "deny_absolute_escape": true,
+  "deny_symlink_escape": true,
+  "production_filesystem_allowed": false,
+  "max_file_bytes": 1048576
+}

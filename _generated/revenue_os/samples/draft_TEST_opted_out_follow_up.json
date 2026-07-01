@@ -1,0 +1,16 @@
+{
+  "draft_type": "follow_up",
+  "channel": "email",
+  "product_id": null,
+  "recipient_evidence": false,
+  "claims": [
+    "weak site"
+  ],
+  "evidence_refs": [
+    "https://optout.test"
+  ],
+  "risk_flags": [],
+  "body": null,
+  "approval_state": "DRAFT_INTERNAL",
+  "send_allowed": false
+}

@@ -1,0 +1,38 @@
+{
+  "status": "running",
+  "last_update_id": 7405162,
+  "last_command": "/sales_status",
+  "last_user_id": "7893144142",
+  "last_run": "2026-05-21T14:41:15.962Z",
+  "mode": "local_polling",
+  "voice_enabled": false,
+  "is_processing": false,
+  "last_result": "Sent",
+  "last_error": "timeout",
+  "heartbeat": {
+    "last_seen": "2026-05-21T15:57:42.414Z",
+    "status": "alive"
+  },
+  "processing_started_at": null,
+  "upgrade_notes": "2026-05-21 — Stability upgrade: lock, heartbeat, watchdog, error handlers, /ping, /gateway status, 60s timeout, backoff polling, self-test.",
+  "version": "v0.7",
+  "started_at": "2026-06-08T17:10:58.025Z",
+  "updated_at": "2026-06-08T17:10:58.025Z",
+  "last_normalized": "/sales_status",
+  "last_risk": "Green",
+  "last_intent": "slash_command",
+  "pid": 2852,
+  "polling_active": true,
+  "startup_time": "2026-05-27T17:15:19.586Z",
+  "commands": [
+    "/ping",
+    "/health",
+    "/sales_today",
+    "/followups",
+    "/replies",
+    "/lead_status"
+  ],
+  "last_updated": "2026-05-27T20:15:02.273Z",
+  "polling_errors": 201,
+  "last_heartbeat": "2026-05-27T19:06:24.086Z"
+}

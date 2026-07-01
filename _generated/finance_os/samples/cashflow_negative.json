@@ -1,0 +1,38 @@
+{
+  "label": "MANAGERIAL_INTERNAL",
+  "horizon_days": 30,
+  "opening_cash": 20000,
+  "actual": {
+    "inflow": 0,
+    "outflow": 0,
+    "net": 0,
+    "closing": 20000
+  },
+  "expected": {
+    "inflow": 0,
+    "outflow": 50000,
+    "net": -50000,
+    "closing": -30000
+  },
+  "forecast": {
+    "inflow": 0,
+    "outflow": 0,
+    "net": 0,
+    "closing": 20000
+  },
+  "risks": {
+    "negative_cash_point": {
+      "date": "2026-06-20",
+      "balance": -30000
+    },
+    "min_balance": -30000,
+    "cash_gap": true,
+    "payment_concentration": []
+  },
+  "assumptions": {
+    "opening_cash": 20000,
+    "horizon_days": 30,
+    "now": "2026-06-17"
+  },
+  "note": "Forecast is not guarantee. expected = scheduled but unconfirmed; actual = confirmed only."
+}

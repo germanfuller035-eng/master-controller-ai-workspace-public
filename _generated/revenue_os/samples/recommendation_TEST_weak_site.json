@@ -1,0 +1,34 @@
+{
+  "recommendation_id": "rec_TEST_weak_site",
+  "customer_profile": "TEST_weak_site",
+  "primary_product": "mini_audit",
+  "secondary_product": "funnel_audit",
+  "do_not_offer": [
+    "domain_recovery",
+    "funnel_audit:not_ready",
+    "landing_sprint:not_ready",
+    "full_business_audit:not_ready"
+  ],
+  "reason_codes": [
+    "maturity:WEAK_WEBSITE",
+    "maturity_reason:declared WEAK_WEBSITE consistent with evidence (3 channel checks)"
+  ],
+  "evidence": [
+    {
+      "category": "website",
+      "claim_type": "FACT",
+      "source_url": "https://weak.test",
+      "source_type": "direct_observation",
+      "checked_at": "2026-06-17",
+      "evidence_excerpt": "weak CTA verified",
+      "confidence": 0.75,
+      "freshness": "fresh",
+      "claim": "weak CTA verified"
+    }
+  ],
+  "confidence": 0.75,
+  "blockers": [],
+  "manual_review": false,
+  "price_range": "10000 RUB (CONFIRMED)",
+  "recommended_next_action": "Prepare internal mini_audit offer draft (no send). Owner approval required before any contact."
+}

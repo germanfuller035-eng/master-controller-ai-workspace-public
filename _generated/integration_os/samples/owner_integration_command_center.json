@@ -1,0 +1,24 @@
+{
+  "schema": "integration_os.owner_command_center.v1",
+  "generated_ts": "20260617_000000",
+  "synthetic": true,
+  "highest_risk_contract": "mc.send_ledger.entry (single SENT truth — must stay single writer)",
+  "duplicate_writer_risk": "NONE detected (ownership matrix enforces exactly-one-writer)",
+  "migration_blocker": "tools/communication_monitor/ untracked in git (referenced by IMAP deploy) — owner must commit",
+  "branch_conflict": "NONE — chain linear; analytics-os-metrics-reporting-v1 superseded (keep, do not delete)",
+  "proposed_doc_collision": "NONE — 114 docs / 114 unique targets; shared MASTER_CONTEXT merged additively last",
+  "legacy_script_decision": "37 historical telegram scripts -> MOVE_TO_ARCHIVE (owner approval)",
+  "next_safe_integration_action": "Owner: commit communication_monitor/, then approve ID crosswalk migration dry-run",
+  "intentionally_not_applied": [
+    "no branch merged",
+    "no migration applied",
+    "no proposed doc applied",
+    "no legacy script deleted",
+    "no production/API/network touched"
+  ],
+  "pairs_pending_proposal": [
+    "conversation_hub->master_controller",
+    "master_controller->telegram",
+    "master_controller->android"
+  ]
+}

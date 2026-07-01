@@ -1,0 +1,42 @@
+{
+  "label": "MODEL_ESTIMATE (forecast, not guarantee)",
+  "stage_counts": {
+    "candidates": 1000,
+    "verified": 600,
+    "audit_ready": 480,
+    "draft_ready": 432,
+    "approved": 302.4,
+    "contacted": 287.28,
+    "delivered": 20,
+    "replied": 4,
+    "interested": 1.6,
+    "proposal": 0.8,
+    "won": 0.24
+  },
+  "expected_deals": 0.24,
+  "expected_revenue_range": {
+    "low": 1680,
+    "mid": 2400,
+    "high": 3120,
+    "currency": "RUB"
+  },
+  "bottleneck": "replied (rate 0.2)",
+  "capacity_note": "delivered capped by capacity_limit 20 (was 258.55)",
+  "required_candidates_for_target": 1612,
+  "assumptions": {
+    "conversions": {
+      "verified": 0.6,
+      "audit_ready": 0.8,
+      "draft_ready": 0.9,
+      "approved": 0.7,
+      "contacted": 0.95,
+      "delivered": 0.9,
+      "replied": 0.2,
+      "interested": 0.4,
+      "proposal": 0.5,
+      "won": 0.3
+    },
+    "product_price": 10000,
+    "capacity_limit": 20
+  }
+}

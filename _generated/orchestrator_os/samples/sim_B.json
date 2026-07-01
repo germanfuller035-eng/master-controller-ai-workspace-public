@@ -1,0 +1,14 @@
+{
+  "scenario": "B",
+  "name": "Multi-phase code task",
+  "ok": true,
+  "steps": [
+    "select agent: CLAUDE_CODE (repo-wide implementation/analysis)",
+    "plan: 4 phases, approval=NOT_REQUIRED",
+    "phase 1 inventory: run (synthetic) -> checkpoint",
+    "phase 2 implement: run (synthetic) -> checkpoint",
+    "phase 3 test: run (synthetic) -> checkpoint",
+    "phase 4 verify: run (synthetic) -> checkpoint",
+    "verification gates: unit+security+no-network+no-send+no-production = PASS (synthetic)"
+  ]
+}

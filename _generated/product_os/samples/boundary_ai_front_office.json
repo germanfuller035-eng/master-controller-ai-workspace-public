@@ -1,0 +1,15 @@
+{
+  "ok": true,
+  "product_id": "ai_front_office",
+  "options": [
+    "advisory_audit",
+    "read_only_assistant",
+    "draft_only_assistant",
+    "approval_gated_assistant"
+  ],
+  "recommended": "default prohibits: autonomous_assistant (no autonomous client communication)",
+  "keep_status": "PLANNED",
+  "owner_decision": "d_ai_front_office_boundary",
+  "boundary_risk": "autonomous-action risk",
+  "note": "No reusable client product created automatically. Owner decides packaging."
+}

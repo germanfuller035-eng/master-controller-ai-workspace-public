@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-26",
+  "session": "COMMERCIAL_AGENT_FACTORY_V1",
+  "scope": "LOCAL_SYNTHETIC_NO_SEND",
+  "production_enabled": false,
+  "production_db_write_enabled": false,
+  "browser_action_allowed": false,
+  "real_crawling_allowed": false,
+  "external_outreach_allowed": false,
+  "payment_allowed": false,
+  "invoice_send_allowed": false,
+  "owner_approval_required_for_future_send": true,
+  "default_decision": "DENY",
+  "products": [
+    {
+      "product_id": "WEBSITE_CONVERSION",
+      "label": "Website conversion rebuild",
+      "problem_fit": [
+        "website_problem",
+        "trust_problem"
+      ],
+      "first_step": "draft_only_diagnostic_offer"
+    },
+    {
+      "product_id": "LEAD_SYSTEM",
+      "label": "Lead system and capture pipeline",
+      "problem_fit": [
+        "lead_capture_problem",
+        "contact_completeness_gap"
+      ],
+      "first_step": "draft_only_capture_plan"
+    },
+    {
+      "product_id": "AI_FRONT_OFFICE",
+      "label": "AI front office response handling",
+      "problem_fit": [
+        "response_handling_problem"
+      ],
+      "first_step": "draft_only_response_workflow"
+    },
+    {
+      "product_id": "MINI_AUDIT",
+      "label": "Mini audit",
+      "problem_fit": [
+        "audit_uncertainty"
+      ],
+      "first_step": "draft_only_evidence_audit"
+    }
+  ]
+}

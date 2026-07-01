@@ -1,0 +1,11 @@
+{
+  "data_classes": [
+    "BUSINESS_INTERNAL"
+  ],
+  "external_system_accessed": false,
+  "kind": "personal_task",
+  "owner_intent": "organize synthetic life operations",
+  "synthetic": true,
+  "task_id": "syn_task_alpha",
+  "title": "Prepare a local weekly operations checklist"
+}

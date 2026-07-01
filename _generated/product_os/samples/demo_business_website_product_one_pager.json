@@ -1,0 +1,28 @@
+{
+  "asset_id": "demo_business_website_product_one_pager",
+  "product_id": "business_website",
+  "asset_type": "product_one_pager",
+  "version": "1.0",
+  "status": "INTERNAL_DRAFT",
+  "content": {
+    "product": "Business Website / Catalog",
+    "client": "[DEMO client — synthetic]",
+    "problem": "Customers cannot understand range/terms/prices or leave a request.",
+    "outcome": "Site/catalog under requests: structure, service/product pages, trust blocks, request form, basic CRM/table, Telegram notifications.",
+    "deliverables": [
+      "site/catalog structure",
+      "service/product pages",
+      "texts",
+      "trust blocks",
+      "request form",
+      "basic CRM/table",
+      "Telegram notifications"
+    ],
+    "price_status": "OWNER_TARGET"
+  },
+  "source": "synthetic (TEST_ONLY)",
+  "approved": false,
+  "client_ready": false,
+  "send_allowed": false,
+  "publish_allowed": false
+}

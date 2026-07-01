@@ -1,0 +1,615 @@
+{
+  "generated_note": "FROZEN deployment allowlist. Only these paths may be copied to production.",
+  "prod_root": "/opt/master-controller",
+  "entrypoints": [
+    "tools/mater_controller_api/src/server/index.mjs",
+    "tools/mater_controller_api/src/worker/index.mjs",
+    "tools/mater_controller_api/src/scheduler/daily_discovery.mjs",
+    "tools/telegram_gateway/contact_site_crawler.mjs",
+    "tools/telegram_gateway/contact_site_crawler_live_smoke.mjs",
+    "tools/mater_controller_api/src/campaigns/service.mjs",
+    "tools/lead_hunter/src/adapters/index.mjs",
+    "tools/telegram_gateway/mini_audit_operator_mode.mjs",
+    "tools/telegram_gateway/queue_navigation.mjs",
+    "tools/telegram_gateway/outbound_channel_router.mjs",
+    "tools/telegram_gateway/reply_monitor.mjs",
+    "tools/telegram_gateway/osm_overpass_connector.mjs"
+  ],
+  "import_closure_complete": true,
+  "unmanifested_runtime_imports": [],
+  "total_files": 74,
+  "files": [
+    {
+      "source_path": "tools/commercial_core/lib/agent_provider_runtime.mjs",
+      "target_path": "/opt/master-controller/tools/commercial_core/lib/agent_provider_runtime.mjs",
+      "sha256": "a5cd9546eac22432353579cb43aa8209c2dde2117ee505ae6f76937eae95d906",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/commercial_core/lib/agent_shadow.mjs",
+      "target_path": "/opt/master-controller/tools/commercial_core/lib/agent_shadow.mjs",
+      "sha256": "cb4102264476c9e90d98195a42c3fcd9c314c7abdd1287fe5302d660a4f08136",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/commercial_core/lib/ai_provider.mjs",
+      "target_path": "/opt/master-controller/tools/commercial_core/lib/ai_provider.mjs",
+      "sha256": "fb29b78cdb68cb50ecd1f963abbb5941a2555954b32f99dd36fb18d8037dd31c",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/commercial_core/lib/channel_router.mjs",
+      "target_path": "/opt/master-controller/tools/commercial_core/lib/channel_router.mjs",
+      "sha256": "e20b28d504671847a0751f417c0bfc893a14d5d9618d34fa33ce24331fbff3eb",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/commercial_core/lib/consent_policy.mjs",
+      "target_path": "/opt/master-controller/tools/commercial_core/lib/consent_policy.mjs",
+      "sha256": "4b978a252a216931d6273db16bb26759997625a8bc8b84e4fff1f68d100bdf4c",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/commercial_core/lib/conversation_read.mjs",
+      "target_path": "/opt/master-controller/tools/commercial_core/lib/conversation_read.mjs",
+      "sha256": "77cf60d8b2b4c31464d860a22ab09103efbcbb9e45d80872718f141224dcc21e",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/commercial_core/lib/first_touch_engine.mjs",
+      "target_path": "/opt/master-controller/tools/commercial_core/lib/first_touch_engine.mjs",
+      "sha256": "b7c15c6da8d9ca62b41190190325cf956c01958f36ab3dec4dc8df2e3065af74",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/commercial_core/lib/identity_graph.mjs",
+      "target_path": "/opt/master-controller/tools/commercial_core/lib/identity_graph.mjs",
+      "sha256": "f1549f6d21bf6d4f7718263918f4e186affb25456e8475861e9bdaaf42708934",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/commercial_core/lib/lifecycle.mjs",
+      "target_path": "/opt/master-controller/tools/commercial_core/lib/lifecycle.mjs",
+      "sha256": "b183b3feedf146555f685c5ceed55c984ede21cfbdc6c7b6678cf24e79718e1f",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/commercial_core/lib/multichannel_agents.mjs",
+      "target_path": "/opt/master-controller/tools/commercial_core/lib/multichannel_agents.mjs",
+      "sha256": "8e1b71852cebebb0774fbe2ebc0056b5602bb6dde592a1037503a7dcf244003e",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/commercial_core/lib/pipeline_state.mjs",
+      "target_path": "/opt/master-controller/tools/commercial_core/lib/pipeline_state.mjs",
+      "sha256": "27d0bb1a4ce48c7ee3f44da8fb9990ed40ed8c026e279316a257a0e81a698b58",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/commercial_core/lib/product_catalog_runtime.mjs",
+      "target_path": "/opt/master-controller/tools/commercial_core/lib/product_catalog_runtime.mjs",
+      "sha256": "4065d882d8e9491ba8915d10f300652d2904513a8d48b2aa74f96b02c28dda57",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/commercial_core/lib/readmodels.mjs",
+      "target_path": "/opt/master-controller/tools/commercial_core/lib/readmodels.mjs",
+      "sha256": "25f1ad25bf4df0dc356f16dbe863f1b5abebe4dc63377cf4177e1bf5f1eed0bd",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/commercial_core/lib/reconciliation.mjs",
+      "target_path": "/opt/master-controller/tools/commercial_core/lib/reconciliation.mjs",
+      "sha256": "7bbb102998c6585c41c079793a38ba87016543f2dcf3773385f7f1a43bcadb19",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/commercial_core/lib/source_registry.mjs",
+      "target_path": "/opt/master-controller/tools/commercial_core/lib/source_registry.mjs",
+      "sha256": "c7b83fedf299507b34fe8860b0b09f4bdc1484e1d1bc5097761692103f5c9119",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/commercial_core/lib/store.mjs",
+      "target_path": "/opt/master-controller/tools/commercial_core/lib/store.mjs",
+      "sha256": "7933b9973e73429470860aa8aac42ec1c61770a5998b7c18c0c3d45050e1b998",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/lead_hunter/src/adapters/base.mjs",
+      "target_path": "/opt/master-controller/tools/lead_hunter/src/adapters/base.mjs",
+      "sha256": "f99902bd0bd10d06af45850fdd01190cce5b29b75e24ead558067e7df6c601e4",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/lead_hunter/src/adapters/index.mjs",
+      "target_path": "/opt/master-controller/tools/lead_hunter/src/adapters/index.mjs",
+      "sha256": "4a1faa1871d3813ff4626fde8f9f09dc56e0bac11f100579ff8386f46ca3d604",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/lead_hunter/src/normalize.mjs",
+      "target_path": "/opt/master-controller/tools/lead_hunter/src/normalize.mjs",
+      "sha256": "a154a22963290131de1a145bed8c7854d491b6a573a17edb4354285e32792f6d",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/mater_controller_api/src/auth/auth.mjs",
+      "target_path": "/opt/master-controller/tools/mater_controller_api/src/auth/auth.mjs",
+      "sha256": "e1068b9038f5a64b2062e31a94e3b894be6ca1dfcc62b7250305303bd505966b",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/mater_controller_api/src/campaigns/service.mjs",
+      "target_path": "/opt/master-controller/tools/mater_controller_api/src/campaigns/service.mjs",
+      "sha256": "365cf8da4515cf95b714f4e67e2395922692713c4bd62d4aa5f31cb90d13f330",
+      "mode": "0644",
+      "runtime_role": "api",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/mater_controller_api/src/commercial/agents.mjs",
+      "target_path": "/opt/master-controller/tools/mater_controller_api/src/commercial/agents.mjs",
+      "sha256": "5674ce73c07720b4c5babebea3ee3c8478cfb9d25b2bcecc458ee1f1ddfd6e16",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/mater_controller_api/src/commercial/ai_usage_ledger.mjs",
+      "target_path": "/opt/master-controller/tools/mater_controller_api/src/commercial/ai_usage_ledger.mjs",
+      "sha256": "0ba1940d9cf1a98341ed20c64d50d89d41f3c8f2fc8842b03b20d7b2baae003c",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/mater_controller_api/src/commercial/audit_artifact.mjs",
+      "target_path": "/opt/master-controller/tools/mater_controller_api/src/commercial/audit_artifact.mjs",
+      "sha256": "6791e23e987f819c4f3dccf640dc8dfe7e940f3dc2a8c0aa81c0fe9cc4118362",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/mater_controller_api/src/commercial/conversations.mjs",
+      "target_path": "/opt/master-controller/tools/mater_controller_api/src/commercial/conversations.mjs",
+      "sha256": "6a580923c9c8e9d6aba3dd279795ac83565f3e5043f923d2aeea80372e6d72fb",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/mater_controller_api/src/commercial/deepseek_provider.mjs",
+      "target_path": "/opt/master-controller/tools/mater_controller_api/src/commercial/deepseek_provider.mjs",
+      "sha256": "347d2495a376b2d86a82ff279477487c06de3eda1e48daa2f480f227f837791a",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/mater_controller_api/src/commercial/delivery_reconciliation.mjs",
+      "target_path": "/opt/master-controller/tools/mater_controller_api/src/commercial/delivery_reconciliation.mjs",
+      "sha256": "ed368495d87fb9694efe4f02ed8393e5cf281a5901b79b7c97bf97d8934fbd87",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/mater_controller_api/src/commercial/domain_reservoir.mjs",
+      "target_path": "/opt/master-controller/tools/mater_controller_api/src/commercial/domain_reservoir.mjs",
+      "sha256": "4514a2e80badaa769c4623c93416f97e6604960d67586b656779a8cfffc3b957",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/mater_controller_api/src/commercial/first_touch_commands.mjs",
+      "target_path": "/opt/master-controller/tools/mater_controller_api/src/commercial/first_touch_commands.mjs",
+      "sha256": "dc59a3a42e3d36a30de8e15e2e2cf5a0ca9e3c3870f1d5570bae1421147ecdc9",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/mater_controller_api/src/commercial/first_touch_service.mjs",
+      "target_path": "/opt/master-controller/tools/mater_controller_api/src/commercial/first_touch_service.mjs",
+      "sha256": "6df2c57e76c82a78f28c07921de2630dc081794303dec980e748c09f684d5174",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/mater_controller_api/src/commercial/knowledge_radar.mjs",
+      "target_path": "/opt/master-controller/tools/mater_controller_api/src/commercial/knowledge_radar.mjs",
+      "sha256": "e39cc05fea6130ef1fed17da656a6597588492250fbae629f7447b02f16043b6",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/mater_controller_api/src/commercial/multichannel.mjs",
+      "target_path": "/opt/master-controller/tools/mater_controller_api/src/commercial/multichannel.mjs",
+      "sha256": "b042979b65fbb23afffd3082d694b0e66fd40fda6229016ec3f7a0915b864af5",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/mater_controller_api/src/commercial/offer_preview.mjs",
+      "target_path": "/opt/master-controller/tools/mater_controller_api/src/commercial/offer_preview.mjs",
+      "sha256": "e178b6d0e73abd9fe4d41ef356b51c0b4ff00a31cd9ec3b2f6ab5d1e6df56361",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/mater_controller_api/src/commercial/owner_commercial_truth.mjs",
+      "target_path": "/opt/master-controller/tools/mater_controller_api/src/commercial/owner_commercial_truth.mjs",
+      "sha256": "5e86b529a4c383988b0455541c5f818d5d8b441de12d1b361d6107e0991ad661",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/mater_controller_api/src/commercial/owner_evidence.mjs",
+      "target_path": "/opt/master-controller/tools/mater_controller_api/src/commercial/owner_evidence.mjs",
+      "sha256": "2edbf3e92418ad0454db7e4cf1570e60c3c578c8e7de66877654b2724930e2cf",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/mater_controller_api/src/commercial/owner_settings.mjs",
+      "target_path": "/opt/master-controller/tools/mater_controller_api/src/commercial/owner_settings.mjs",
+      "sha256": "9fdc2ad1d9ccdda7c4cfb65169e8a7d8b4f80f3877e59636243c965a597796aa",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/mater_controller_api/src/commercial/pipeline_read.mjs",
+      "target_path": "/opt/master-controller/tools/mater_controller_api/src/commercial/pipeline_read.mjs",
+      "sha256": "f3785c4a36a3f02c5ba1a896fb8456c02b1d015a6e7de5d85c764036b8dcb6b7",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/mater_controller_api/src/commercial/product_presentation.mjs",
+      "target_path": "/opt/master-controller/tools/mater_controller_api/src/commercial/product_presentation.mjs",
+      "sha256": "49da24d38a35d4fc0c2b5d76c00c467aa56fe920c95df944161902ff35c0fe31",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/mater_controller_api/src/commercial/provider_registry.mjs",
+      "target_path": "/opt/master-controller/tools/mater_controller_api/src/commercial/provider_registry.mjs",
+      "sha256": "2d048e481a367c5dff42440d247934c363046b6a8b3c9b46d764f69d721fccd4",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/mater_controller_api/src/commercial/routes.mjs",
+      "target_path": "/opt/master-controller/tools/mater_controller_api/src/commercial/routes.mjs",
+      "sha256": "790619910d6b4e11590c33e737d5d5844f106a808ca7944547186e0f462fbb1d",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/mater_controller_api/src/commercial/service.mjs",
+      "target_path": "/opt/master-controller/tools/mater_controller_api/src/commercial/service.mjs",
+      "sha256": "b06a222ca0227eb69e3eab45081d789c2e88c9a8237ccf49e3b27340b4eec751",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/mater_controller_api/src/commercial/tokenator_provider.mjs",
+      "target_path": "/opt/master-controller/tools/mater_controller_api/src/commercial/tokenator_provider.mjs",
+      "sha256": "b463852961fe60d6d3b301276fe86a99c113fe2a1107bea9286e56c0ebd2b824",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/mater_controller_api/src/jobs/queue_store.mjs",
+      "target_path": "/opt/master-controller/tools/mater_controller_api/src/jobs/queue_store.mjs",
+      "sha256": "e8cfb0c08e3908c1ba55727a2b7269e5e036fad0f599217fd294577ae01cdf07",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/mater_controller_api/src/jobs/service.mjs",
+      "target_path": "/opt/master-controller/tools/mater_controller_api/src/jobs/service.mjs",
+      "sha256": "ec01dd681b2445f52c2521ebbdae534cd601f15a5da2bdfdcb7ae62bc583960f",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/mater_controller_api/src/leads/manual_intake.mjs",
+      "target_path": "/opt/master-controller/tools/mater_controller_api/src/leads/manual_intake.mjs",
+      "sha256": "fa1df3b539733058c6f58d2643cb833b85a0258b6a612d75ecfbdd8c160cd650",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/mater_controller_api/src/mini_audit/service.mjs",
+      "target_path": "/opt/master-controller/tools/mater_controller_api/src/mini_audit/service.mjs",
+      "sha256": "4558cb0149a5dafc8c19eb469d1243268c025717b7a6edd20a0de7f32434ae69",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/mater_controller_api/src/pipeline/service.mjs",
+      "target_path": "/opt/master-controller/tools/mater_controller_api/src/pipeline/service.mjs",
+      "sha256": "d2e449b5ec8ca31456228e0f2a95f53c09d29162e3b8973f43b9f686bbc7e42b",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/mater_controller_api/src/projects/projects.mjs",
+      "target_path": "/opt/master-controller/tools/mater_controller_api/src/projects/projects.mjs",
+      "sha256": "99b29b41f111ed6f281166b5e0db35530c1a6bac866586aaf91a9ca618ba19ce",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/mater_controller_api/src/replies/service.mjs",
+      "target_path": "/opt/master-controller/tools/mater_controller_api/src/replies/service.mjs",
+      "sha256": "325d62c41587d8d6587264fbc9267e461be14afdfdb498c114b9ee10c41b0ee8",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/mater_controller_api/src/scheduler/daily_discovery.mjs",
+      "target_path": "/opt/master-controller/tools/mater_controller_api/src/scheduler/daily_discovery.mjs",
+      "sha256": "e4c2fc7533a0b39dbb27f47fd1f9bd4fec6e156c8921d161fef2850ed3daad2e",
+      "mode": "0644",
+      "runtime_role": "scheduler",
+      "restart_owner": "scheduler"
+    },
+    {
+      "source_path": "tools/mater_controller_api/src/server/index.mjs",
+      "target_path": "/opt/master-controller/tools/mater_controller_api/src/server/index.mjs",
+      "sha256": "c7b79a4287d28ddd96dc7aaeba469e37b4c082d639ec8c9c26a63a45535be295",
+      "mode": "0644",
+      "runtime_role": "api",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/mater_controller_api/src/shared/config.mjs",
+      "target_path": "/opt/master-controller/tools/mater_controller_api/src/shared/config.mjs",
+      "sha256": "761134b4ab2064545de8f82230020f7b09823544a0c50f73348f71c1af826f6f",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/mater_controller_api/src/shared/http.mjs",
+      "target_path": "/opt/master-controller/tools/mater_controller_api/src/shared/http.mjs",
+      "sha256": "90009889bf8d5706a741fde4f3c3881a8efb2edbe4639f4515fb9306cf0553ea",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/mater_controller_api/src/shared/store_access.mjs",
+      "target_path": "/opt/master-controller/tools/mater_controller_api/src/shared/store_access.mjs",
+      "sha256": "49a18b4a8738c92b373f3d74db20aa1c1e8157bc2f8239694580a2b92f3b9737",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/mater_controller_api/src/system/system.mjs",
+      "target_path": "/opt/master-controller/tools/mater_controller_api/src/system/system.mjs",
+      "sha256": "c685009e6dfd63bb5ada7514209c1a5c5bb5619e71e12edba0e4a48f6c4e3481",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/mater_controller_api/src/worker/index.mjs",
+      "target_path": "/opt/master-controller/tools/mater_controller_api/src/worker/index.mjs",
+      "sha256": "f0e532d7e8f8e27c0ee8b4e5e1040939ca08a706ca492e079ba77656c554f866",
+      "mode": "0644",
+      "runtime_role": "worker",
+      "restart_owner": "worker"
+    },
+    {
+      "source_path": "tools/mater_controller_api/src/writes/service.mjs",
+      "target_path": "/opt/master-controller/tools/mater_controller_api/src/writes/service.mjs",
+      "sha256": "c5c53da0378c8cf0f91e8b65178b669457ef6d4e4bf373b97a22aec317c3db0c",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/telegram_gateway/audit_send_templates.mjs",
+      "target_path": "/opt/master-controller/tools/telegram_gateway/audit_send_templates.mjs",
+      "sha256": "7d4beabd9030e0614714ed9a4cc9a81cc66add2bcfb29eefed2fcd6b3bd717dc",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/telegram_gateway/contact_channel_extractor.mjs",
+      "target_path": "/opt/master-controller/tools/telegram_gateway/contact_channel_extractor.mjs",
+      "sha256": "a1612f4710524d1a30f613412e866fb0357b29271e7730bafc40416d0421bc2e",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/telegram_gateway/contact_site_crawler.mjs",
+      "target_path": "/opt/master-controller/tools/telegram_gateway/contact_site_crawler.mjs",
+      "sha256": "b2dd97a30c5a484b79fc1155ca7b4a915431a72c01c9bc70a7662fbfda301a33",
+      "mode": "0644",
+      "runtime_role": "worker",
+      "restart_owner": "worker"
+    },
+    {
+      "source_path": "tools/telegram_gateway/contact_site_crawler_live_smoke.mjs",
+      "target_path": "/opt/master-controller/tools/telegram_gateway/contact_site_crawler_live_smoke.mjs",
+      "sha256": "c7749d71fdf847760b3d67caaa8787cdead00f6c988ec27ddc47daf1d2ef306c",
+      "mode": "0644",
+      "runtime_role": "worker",
+      "restart_owner": "worker"
+    },
+    {
+      "source_path": "tools/telegram_gateway/draft_generator_v2.mjs",
+      "target_path": "/opt/master-controller/tools/telegram_gateway/draft_generator_v2.mjs",
+      "sha256": "2aec96373fcbbd7e805c83caf1573e8c84ad20b73bc5e4c4542fc1452c30c703",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/telegram_gateway/followup_engine.mjs",
+      "target_path": "/opt/master-controller/tools/telegram_gateway/followup_engine.mjs",
+      "sha256": "79d5066073acf2449c122364c91411c5064fb55f6e70f7bd1b1793d792fe7e06",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/telegram_gateway/mini_audit_draft_quality.mjs",
+      "target_path": "/opt/master-controller/tools/telegram_gateway/mini_audit_draft_quality.mjs",
+      "sha256": "08ad97079c618308434f03020fda823842e3aa9913a588809e10af99bdfa5ee9",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/telegram_gateway/mini_audit_operator_mode.mjs",
+      "target_path": "/opt/master-controller/tools/telegram_gateway/mini_audit_operator_mode.mjs",
+      "sha256": "13861cfc5431a952e98a0ea1e92aca871c4663c088d525bc392590ef9229dd44",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/telegram_gateway/osm_overpass_connector.mjs",
+      "target_path": "/opt/master-controller/tools/telegram_gateway/osm_overpass_connector.mjs",
+      "sha256": "aa2f7a571e68628f4bd762f46298855fad547d621f2051b050b3ee627439f107",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/telegram_gateway/outbound_channel_router.mjs",
+      "target_path": "/opt/master-controller/tools/telegram_gateway/outbound_channel_router.mjs",
+      "sha256": "25c9d441ca2ac7212bbc6ed707732a9555b55f6262e08327ae52be82459e3c5c",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/telegram_gateway/outbound_send_ledger.mjs",
+      "target_path": "/opt/master-controller/tools/telegram_gateway/outbound_send_ledger.mjs",
+      "sha256": "8c3a618d33365b4ba9a837ccd7ae0a49c318b0c41cced0844a32bc7c73997ab2",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/telegram_gateway/queue_navigation.mjs",
+      "target_path": "/opt/master-controller/tools/telegram_gateway/queue_navigation.mjs",
+      "sha256": "e0e7b87f7ff9827bbd8f8a44072177478d7f4729c69058d43749cf33d7e2aa2d",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/telegram_gateway/reply_monitor.mjs",
+      "target_path": "/opt/master-controller/tools/telegram_gateway/reply_monitor.mjs",
+      "sha256": "7f11674787dcf0a6b849297078adb03dcb5fb97de641e8e1f0f4cf840d674260",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/telegram_gateway/telegram_approved_email_send_adapter.mjs",
+      "target_path": "/opt/master-controller/tools/telegram_gateway/telegram_approved_email_send_adapter.mjs",
+      "sha256": "2d40dba0d59ca5c76e6cbd637cbc757892d88d231d9aaf07fd8ed336e8db359d",
+      "mode": "0644",
+      "runtime_role": "shared",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/mater_controller_api/package.json",
+      "target_path": "/opt/master-controller/tools/mater_controller_api/package.json",
+      "sha256": "eaeafa1dbb4ada44302997d3b7ee18d67fd0b0a433002493894f959c40b7dcca",
+      "mode": "0644",
+      "runtime_role": "deploy_config",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/mater_controller_api/deploy/master-controller-api.service",
+      "target_path": "/opt/master-controller/tools/mater_controller_api/deploy/master-controller-api.service",
+      "sha256": "c632d381d4b51c516363e0329d88ea24e929adf48ec1370932ca60b4bd6f14bf",
+      "mode": "0644",
+      "runtime_role": "deploy_config",
+      "restart_owner": "api"
+    },
+    {
+      "source_path": "tools/mater_controller_api/deploy/master-controller-worker.service",
+      "target_path": "/opt/master-controller/tools/mater_controller_api/deploy/master-controller-worker.service",
+      "sha256": "73e70fe50890753394e137da83f57b10be031ed6e0c4d085c93a6ceecf732086",
+      "mode": "0644",
+      "runtime_role": "deploy_config",
+      "restart_owner": "api"
+    }
+  ]
+}

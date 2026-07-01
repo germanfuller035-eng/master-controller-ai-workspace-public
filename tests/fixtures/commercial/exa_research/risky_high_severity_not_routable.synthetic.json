@@ -1,0 +1,39 @@
+{
+  "research_task_id": "synthetic-research-task-006",
+  "lead_id": "synthetic-lead-exa-006",
+  "company_name": "Synthetic High Risk Company",
+  "website": "synthetic-high-risk.test",
+  "source_type": "public_web_research",
+  "facts": [
+    {
+      "fact_type": "public_status",
+      "fact_value": "Synthetic public source contains a suppression warning.",
+      "source_url": "synthetic://public-web/risk-page",
+      "source_title": "Synthetic Risk Page",
+      "evidence_snippet": "Synthetic source says outreach should be reviewed before action.",
+      "confidence": "high",
+      "status": "confirmed"
+    }
+  ],
+  "buying_signals": [],
+  "contact_candidates": [
+    {
+      "contact_type": "contact_page",
+      "value": "synthetic-contact-page-reference",
+      "source_url": "synthetic://public-web/contact-page",
+      "source_title": "Synthetic Contact Page",
+      "confidence": "medium",
+      "status": "candidate"
+    }
+  ],
+  "risk_flags": [
+    {
+      "risk_type": "manual_review_required",
+      "description": "Synthetic source requires owner review before outreach.",
+      "severity": "high",
+      "source_url": "synthetic://public-web/risk-page"
+    }
+  ],
+  "recommended_next_action": "owner_review_before_any_outreach",
+  "do_not_contact": false
+}

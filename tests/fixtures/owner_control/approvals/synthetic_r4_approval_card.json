@@ -1,0 +1,32 @@
+{
+  "approval_id": "approval-r4-synthetic",
+  "synthetic": true,
+  "risk": "R4",
+  "payload": {
+    "actor": "owner",
+    "action": "preview_outbound_draft",
+    "target": "synthetic_lead_alpha",
+    "payload": {
+      "draft_ref": "synthetic_offer_preview_alpha"
+    },
+    "risk": "R4",
+    "expiry": "synthetic_future_window",
+    "task_id": "owner-control-r4"
+  },
+  "payload_hash": "425327d6c7c67cce7d44bd403c0270aec0b99220477bbc6aa6ac496d6e708b42",
+  "risk_explanation": {
+    "what": "Synthetic R4 owner approval preview only.",
+    "who": "Master Controller owner reviews the synthetic card.",
+    "why": "Demonstrate exact payload hash and risk copy without execution.",
+    "cost": "No real cost, no send, no production write.",
+    "rollback": "Discard local synthetic card; no production rollback needed."
+  },
+  "execute_allowed": false,
+  "evidence": [
+    {
+      "id": "ev-owner-control-synthetic",
+      "source": "synthetic_fixture",
+      "claim": "Local synthetic owner-control evidence."
+    }
+  ]
+}

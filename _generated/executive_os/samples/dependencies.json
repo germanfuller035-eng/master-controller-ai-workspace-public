@@ -1,0 +1,23 @@
+{
+  "ok": true,
+  "errors": [],
+  "warnings": [
+    "product sold before delivery ready: sale -> deliv"
+  ],
+  "circular_dependency": null,
+  "blocked_chains": [
+    {
+      "blocked": "sale",
+      "by": "deliv",
+      "reason": "DRAFT"
+    }
+  ],
+  "single_points_of_failure": [],
+  "owner_dependencies": [],
+  "critical_path": [
+    "sale",
+    "deliv"
+  ],
+  "node_count": 2,
+  "edge_count": 1
+}

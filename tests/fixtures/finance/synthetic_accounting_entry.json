@@ -1,0 +1,22 @@
+{
+  "schema_version": "finance.accounting_entry_draft.v1",
+  "synthetic": true,
+  "accounting_entry_draft_id": "synthetic-accounting-entry-alpha",
+  "source_invoice_draft_id": "synthetic-invoice-draft-alpha",
+  "draft_only": true,
+  "export_allowed": false,
+  "currency": "SYNTHETIC_UNITS",
+  "debits": [
+    {
+      "account": "synthetic_accounts_receivable",
+      "amount": 1200
+    }
+  ],
+  "credits": [
+    {
+      "account": "synthetic_revenue",
+      "amount": 1200
+    }
+  ],
+  "payload_hash": ""
+}

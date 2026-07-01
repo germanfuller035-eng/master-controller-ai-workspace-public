@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agent Task",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["task_id", "purpose", "risk", "state"],
+  "properties": {
+    "task_id": {"type": "string"},
+    "purpose": {"type": "string"},
+    "risk": {"type": "string", "enum": ["R0", "R1", "R2", "R3", "R4", "R5"]},
+    "state": {"type": "string"},
+    "memory_enabled": {"type": "boolean", "const": false},
+    "production_capabilities": {"type": "integer", "const": 0}
+  }
+}

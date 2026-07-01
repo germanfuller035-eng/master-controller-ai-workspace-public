@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/controlled_outbound/daily_cap_check.schema.json",
+  "title": "Daily Cap Check V1",
+  "type": "object",
+  "required": [
+    "synthetic",
+    "daily_cap",
+    "requested_count",
+    "decision"
+  ],
+  "properties": {
+    "synthetic": {"const": true},
+    "daily_cap": {"type": "integer", "maximum": 3},
+    "requested_count": {"type": "integer"},
+    "decision": {"enum": ["ALLOW", "BLOCK"]}
+  },
+  "additionalProperties": true
+}

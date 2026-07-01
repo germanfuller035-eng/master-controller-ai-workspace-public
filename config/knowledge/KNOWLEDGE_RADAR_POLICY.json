@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-26",
+  "session": "KNOWLEDGE_MEMORY_QDRANT_DOCLING_V1",
+  "radar_status": "PROPOSAL_ONLY",
+  "production_automation_enabled": false,
+  "crawler_enabled": false,
+  "github_polling_enabled": false,
+  "legal_tax_government_monitoring_enabled": false,
+  "external_network_enabled": false,
+  "install_components_allowed": false,
+  "memory_write_allowed": false,
+  "proposal_required_fields": ["proposal_id", "source_id", "reason", "classification", "confidence", "created_at"],
+  "default_action": "PROPOSE_ONLY"
+}

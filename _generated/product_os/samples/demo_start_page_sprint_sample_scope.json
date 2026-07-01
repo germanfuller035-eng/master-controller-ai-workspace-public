@@ -1,0 +1,27 @@
+{
+  "asset_id": "demo_start_page_sprint_sample_scope",
+  "product_id": "start_page_sprint",
+  "asset_type": "sample_scope",
+  "version": "1.0",
+  "status": "INTERNAL_DRAFT",
+  "content": {
+    "product": "Start Page Sprint",
+    "client": "[DEMO client — synthetic]",
+    "included": [
+      "first screen",
+      "CTA",
+      "forms",
+      "trust"
+    ],
+    "excluded": [
+      "full site",
+      "CRM",
+      "analytics setup beyond basic"
+    ]
+  },
+  "source": "synthetic (TEST_ONLY)",
+  "approved": false,
+  "client_ready": false,
+  "send_allowed": false,
+  "publish_allowed": false
+}

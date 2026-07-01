@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "temporal_fact",
+  "type": "object",
+  "required": ["fact_id", "subject", "predicate", "value", "valid_from", "source_id", "confidence"],
+  "properties": {
+    "fact_id": {"type": "string"},
+    "subject": {"type": "string"},
+    "predicate": {"type": "string"},
+    "value": {},
+    "valid_from": {"type": "string"},
+    "valid_to": {"type": "string"},
+    "source_id": {"type": "string"},
+    "confidence": {"type": "number"}
+  },
+  "additionalProperties": true
+}

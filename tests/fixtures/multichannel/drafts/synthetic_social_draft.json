@@ -1,0 +1,14 @@
+{
+  "context": {
+    "available_channels": [
+      "SOCIAL_DRAFT"
+    ],
+    "body": "Synthetic social draft contract only. No publish.",
+    "contact_ref": "reserved-social-contact-alpha",
+    "draft_ref": "synthetic-social-alpha",
+    "lead_ref": "synthetic-lead-delta",
+    "preferred_channel": "SOCIAL_DRAFT",
+    "social_ref": "reserved-social-alpha",
+    "synthetic": true
+  }
+}

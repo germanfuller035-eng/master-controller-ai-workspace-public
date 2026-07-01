@@ -1,0 +1,18 @@
+{
+  "baseline_version": 2,
+  "captured_at_utc": "2026-06-18T12:18:54Z",
+  "drift_verdict": "EXPECTED_ORGANIC_ACTIVITY",
+  "canonical": { "revision": 90, "leads": 62, "writer_count": 1, "commercial_sections": 0, "commercial_entities": 0 },
+  "sends": { "historical_successful_sends": 7, "note": "ledger truth = 7; prior 8 was a metric error" },
+  "queue": { "total_jobs": 41, "completed": 41, "failed": 0, "dead_letters": 0, "queue_revision": 146 },
+  "flags": { "COMMERCIAL_READ_API": "OFF", "COMMERCIAL_COMMAND_API": "OFF", "COMMERCIAL_SEND": "OFF", "AUTOSEND": "BLOCKED", "SEND_ALLOWED_LIVE": "OFF" },
+  "hashes": {
+    "canonical_store_sha256": "42bec108840ca9a0039ae913f5ce1259d09a0bf5e14ee0afd3ff3ac9b19a9e0f",
+    "job_queue_sha256": "c7a2ed596d6c753aef2bd66e2ec5cdbb51ca87f9450b5ebf60f63189fa4ec01f",
+    "send_ledger_sha256": "04fda652a15b072bbc729419022c5486746677df3d1a1d6aa07ea0527bbe321e",
+    "email_ledger_sha256": "0c44821fbc5526d3d6af04737cb4f2c122ea653a44c74f086fd5b7c887bfee9d",
+    "api_server_index_mjs_sha256": "5853f84f11108c2df25509df08a9a9c69109751d8b79216276b0254f48e66bac",
+    "telegram_index_mjs_sha256": "b7b5eea04666dbcbdb38a2b10afbaa49b8412ae5d4f39c9ddf104b60a8822dec"
+  },
+  "migration_expectation": { "from_revision": 90, "expected_after": 91, "sections_added": 8, "entities_created": 0, "idempotent": true, "rollback_restores_revision": 90 }
+}

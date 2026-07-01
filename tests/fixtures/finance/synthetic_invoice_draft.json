@@ -1,0 +1,19 @@
+{
+  "schema_version": "finance.invoice_draft.v1",
+  "synthetic": true,
+  "invoice_draft_id": "synthetic-invoice-draft-alpha",
+  "invoice_reference": "synthetic-invoice-reference-alpha",
+  "contact_id": "synthetic-contact-alpha",
+  "draft_only": true,
+  "send_allowed": false,
+  "owner_approval_required_for_future_send": true,
+  "currency": "SYNTHETIC_UNITS",
+  "line_items": [
+    {
+      "description": "Synthetic service draft line",
+      "quantity": 1,
+      "unit_amount": 1200
+    }
+  ],
+  "payload_hash": ""
+}

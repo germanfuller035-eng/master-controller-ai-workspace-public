@@ -1,0 +1,27 @@
+{
+  "ok": true,
+  "errors": [],
+  "warnings": [],
+  "project": {
+    "project_id": "TEST_proj_mini_audit_TEST_d01",
+    "deal_id": "TEST_d01",
+    "canonical_lead_id": null,
+    "product_id": "mini_audit",
+    "name": "Mini Audit 10K project",
+    "status": "PLANNED",
+    "priority": "P2",
+    "owner": "owner",
+    "project_manager": "owner",
+    "created_at": null,
+    "planned_start": null,
+    "actual_start": null,
+    "planned_end": null,
+    "actual_end": null,
+    "scope_version": 1,
+    "commercial_reference": "TEST_offer01",
+    "client_reference": null,
+    "revision": 1,
+    "test_only": true
+  },
+  "product_status": "ACTIVE"
+}

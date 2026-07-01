@@ -1,0 +1,38 @@
+[
+  {
+    "component": "imapflow",
+    "version": "^1.0.156",
+    "ecosystem": "npm",
+    "source": "tools/communication_monitor/package.json",
+    "license_reference": "MIT_REVIEW",
+    "runtime_usage": "imap_read_only_lazy",
+    "development_only": false,
+    "network_capable": true,
+    "known_review_status": "REVIEW",
+    "update_policy": "owner_gated"
+  },
+  {
+    "component": "node_builtin (fs/path/crypto/child_process)",
+    "version": "runtime",
+    "ecosystem": "node",
+    "source": "all tools",
+    "license_reference": "node",
+    "runtime_usage": "core",
+    "development_only": false,
+    "network_capable": false,
+    "known_review_status": "TRUSTED",
+    "update_policy": "node_version"
+  },
+  {
+    "component": "gradle/android_plugins",
+    "version": "see android build",
+    "ecosystem": "gradle",
+    "source": "android project",
+    "license_reference": "REVIEW",
+    "runtime_usage": "build",
+    "development_only": true,
+    "network_capable": true,
+    "known_review_status": "REVIEW",
+    "update_policy": "owner_gated"
+  }
+]

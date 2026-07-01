@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Runtime Event",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["event_id", "task_id", "event_type", "decision"],
+  "properties": {
+    "event_id": {"type": "string"},
+    "task_id": {"type": "string"},
+    "event_type": {"type": "string"},
+    "decision": {"type": "string"},
+    "evidence_refs": {"type": "array", "items": {"type": "string"}}
+  }
+}

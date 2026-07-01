@@ -1,0 +1,21 @@
+{
+  "total": 2,
+  "by_severity": {
+    "HIGH": 1,
+    "MEDIUM": 1
+  },
+  "anomalies": [
+    {
+      "kind": "NEGATIVE_DURATION",
+      "ref": "p2",
+      "severity": "HIGH",
+      "note": "duration=-1"
+    },
+    {
+      "kind": "SUPPORT_SPIKE",
+      "ref": "support",
+      "severity": "MEDIUM",
+      "note": "support 6 vs baseline 2"
+    }
+  ]
+}

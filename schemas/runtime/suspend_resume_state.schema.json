@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Suspend Resume State",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["task_id", "lifecycle_state", "step_index", "retry_count", "budget_spent_rub", "evidence_refs", "memory_enabled", "production_capabilities"],
+  "properties": {
+    "task_id": {"type": "string"},
+    "lifecycle_state": {"type": "string", "enum": ["PLANNED", "ROUTED", "RUNNING", "SUSPENDED", "RESUMED", "STOPPED", "CANCELLED", "COMPLETED", "FAILED"]},
+    "step_index": {"type": "integer", "minimum": 0},
+    "retry_count": {"type": "integer", "minimum": 0},
+    "budget_spent_rub": {"type": "number", "minimum": 0},
+    "evidence_refs": {"type": "array", "items": {"type": "string"}},
+    "memory_enabled": {"type": "boolean", "const": false},
+    "production_capabilities": {"type": "integer", "const": 0}
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "communication-monitor",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Yandex Mail Stage 1 read-only IMAP connector (headers only, allowlist). No SMTP. No body. No attachments.",
+  "scripts": {
+    "dry-run": "node yandex_mail_imap_read.mjs"
+  },
+  "dependencies": {
+    "imapflow": "^1.0.156"
+  }
+}

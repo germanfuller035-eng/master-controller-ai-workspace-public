@@ -1,0 +1,1012 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Owner Commercial Workflow V2</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f5f7fb;
+      --surface: #ffffff;
+      --soft: #f9fafc;
+      --text: #111827;
+      --muted: #667085;
+      --faint: #98a2b3;
+      --line: #e4e8f0;
+      --primary: #2563eb;
+      --primary-dark: #1747a6;
+      --green-bg: #e7f7ed;
+      --green-text: #166534;
+      --amber-bg: #fff3d5;
+      --amber-text: #92400e;
+      --red-bg: #ffe8e8;
+      --red-text: #b42318;
+      --violet-bg: #efe7ff;
+      --violet-text: #4b267a;
+      --blue-bg: #e8f0ff;
+      --shadow: 0 16px 42px rgba(15, 23, 42, 0.10);
+      font-family: Roboto, Inter, "Segoe UI", Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #e9eef7;
+      color: var(--text);
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .page {
+      min-height: 100vh;
+      padding: 28px;
+    }
+
+    .header {
+      max-width: 1540px;
+      margin: 0 auto 24px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 18px;
+      align-items: end;
+    }
+
+    .title {
+      margin: 0;
+      font-size: 32px;
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+
+    .subtitle {
+      max-width: 820px;
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.45;
+    }
+
+    .safety {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    .canvas {
+      max-width: 1540px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 280px minmax(393px, 1fr);
+      gap: 24px;
+      align-items: start;
+    }
+
+    .rail {
+      position: sticky;
+      top: 24px;
+      max-height: calc(100vh - 48px);
+      overflow: auto;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 14px;
+    }
+
+    .rail-title {
+      font-weight: 900;
+      font-size: 14px;
+      margin: 2px 6px 12px;
+    }
+
+    .screen-button {
+      width: 100%;
+      border: 0;
+      border-radius: 12px;
+      background: transparent;
+      color: var(--muted);
+      padding: 10px 12px;
+      text-align: left;
+      cursor: pointer;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .screen-button:hover {
+      background: var(--soft);
+    }
+
+    .screen-button.active {
+      background: var(--blue-bg);
+      color: var(--primary-dark);
+      font-weight: 900;
+    }
+
+    .screen-button small {
+      color: var(--faint);
+      font-size: 11px;
+    }
+
+    .stage {
+      display: grid;
+      grid-template-columns: 393px minmax(340px, 1fr);
+      gap: 28px;
+      align-items: start;
+    }
+
+    .phone {
+      width: 393px;
+      height: 852px;
+      border-radius: 30px;
+      overflow: hidden;
+      background: var(--bg);
+      box-shadow: 0 24px 80px rgba(15, 23, 42, 0.24);
+      border: 1px solid #d8dee8;
+      display: grid;
+      grid-template-rows: 82px 1fr 82px;
+    }
+
+    .topbar {
+      background: var(--surface);
+      padding: 18px 24px 10px;
+      border-bottom: 1px solid #eef1f6;
+    }
+
+    .topbar h2 {
+      margin: 0;
+      font-size: 23px;
+      line-height: 1.15;
+      letter-spacing: 0;
+    }
+
+    .topbar p {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.25;
+    }
+
+    .content {
+      padding: 16px 24px 18px;
+      overflow: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .bottom-nav {
+      background: #eef3fb;
+      border-top: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      padding: 8px 8px 10px;
+    }
+
+    .nav-item {
+      min-width: 0;
+      min-height: 58px;
+      border: 0;
+      border-radius: 14px;
+      background: transparent;
+      color: #485467;
+      font-size: 11px;
+      display: grid;
+      gap: 5px;
+      justify-items: center;
+      align-content: center;
+      cursor: pointer;
+    }
+
+    .nav-item.active {
+      color: var(--primary);
+      font-weight: 900;
+    }
+
+    .nav-dot {
+      width: 20px;
+      height: 20px;
+      border-radius: 999px;
+      background: currentColor;
+      opacity: .92;
+    }
+
+    .progress {
+      display: grid;
+      gap: 7px;
+      margin-bottom: 2px;
+    }
+
+    .progress-label {
+      display: flex;
+      justify-content: space-between;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .progress-track {
+      height: 6px;
+      border-radius: 999px;
+      background: #e4e8f0;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      border-radius: 999px;
+      background: var(--primary);
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 14px 16px;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+      display: grid;
+      gap: 9px;
+    }
+
+    .card.flat {
+      box-shadow: none;
+    }
+
+    .card.warning {
+      background: var(--amber-bg);
+      border-color: #f6c765;
+      box-shadow: none;
+    }
+
+    .card.danger {
+      background: var(--red-bg);
+      border-color: #f2aaa7;
+      box-shadow: none;
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: 17px;
+      line-height: 1.22;
+      letter-spacing: 0;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .chip {
+      border-radius: 10px;
+      padding: 6px 10px;
+      font-size: 12px;
+      font-weight: 900;
+      line-height: 1;
+      background: var(--blue-bg);
+      color: var(--primary-dark);
+      white-space: nowrap;
+    }
+
+    .chip.safe {
+      background: var(--green-bg);
+      color: var(--green-text);
+    }
+
+    .chip.warn {
+      background: var(--amber-bg);
+      color: var(--amber-text);
+    }
+
+    .chip.danger {
+      background: var(--red-bg);
+      color: var(--red-text);
+    }
+
+    .chip.off {
+      background: var(--violet-bg);
+      color: var(--violet-text);
+    }
+
+    .primary,
+    .secondary,
+    .danger-action {
+      min-height: 48px;
+      border-radius: 24px;
+      font-weight: 900;
+      cursor: pointer;
+      width: 100%;
+      padding: 0 18px;
+    }
+
+    .primary {
+      border: 0;
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .secondary {
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--primary);
+    }
+
+    .danger-action {
+      border: 1px solid #f2aaa7;
+      background: #fff5f5;
+      color: var(--red-text);
+    }
+
+    .field {
+      min-height: 64px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--soft);
+      padding: 8px 12px;
+      display: grid;
+      gap: 3px;
+    }
+
+    .field span {
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .field strong {
+      font-size: 15px;
+      line-height: 1.25;
+      font-weight: 500;
+    }
+
+    .row {
+      min-height: 28px;
+      display: grid;
+      grid-template-columns: minmax(120px, 1fr) minmax(110px, 1fr);
+      gap: 10px;
+      align-items: center;
+      font-size: 13px;
+    }
+
+    .row span:first-child {
+      color: var(--muted);
+    }
+
+    .row span:last-child {
+      font-weight: 900;
+      text-align: right;
+    }
+
+    .list-row {
+      min-height: 64px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--soft);
+      padding: 10px 12px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .list-row strong {
+      display: block;
+      font-size: 14px;
+      line-height: 1.25;
+    }
+
+    .list-row span {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.3;
+      margin-top: 2px;
+    }
+
+    .check-row {
+      min-height: 34px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 10px;
+      align-items: center;
+      font-size: 13px;
+    }
+
+    .action-grid {
+      display: grid;
+      gap: 9px;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 8px;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 14px minmax(0, 1fr);
+      gap: 10px;
+      align-items: center;
+      min-height: 28px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .step::before {
+      content: "";
+      width: 14px;
+      height: 14px;
+      border-radius: 999px;
+      background: #d0d5dd;
+    }
+
+    .step.current {
+      color: var(--text);
+      font-weight: 900;
+    }
+
+    .step.current::before {
+      background: var(--primary);
+    }
+
+    .notes {
+      min-height: 320px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 20px;
+    }
+
+    .notes h3 {
+      margin: 0 0 10px;
+      font-size: 20px;
+    }
+
+    .notes p {
+      margin: 0 0 12px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .notes ul {
+      padding-left: 18px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    @media (max-width: 900px) {
+      .page {
+        padding: 16px;
+      }
+
+      .header,
+      .canvas,
+      .stage {
+        grid-template-columns: 1fr;
+      }
+
+      .safety {
+        justify-content: flex-start;
+      }
+
+      .rail {
+        position: static;
+      }
+
+      .phone {
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="header">
+      <div>
+        <h1 class="title">Owner Commercial Workflow V2</h1>
+        <p class="subtitle">Второй прототип: меньше технических слов, правильный раздел “Ещё”, усиленный отправочный пакет и разложенная сделка. Данные обезличены.</p>
+      </div>
+      <div class="safety">
+        <span class="chip off">автоотправка выключена</span>
+        <span class="chip off">платежи выключены</span>
+        <span class="chip off">рабочая база отдельно</span>
+      </div>
+    </header>
+
+    <section class="canvas">
+      <aside class="rail" aria-label="Экраны">
+        <div class="rail-title">Экраны</div>
+        <div id="rail"></div>
+      </aside>
+
+      <div class="stage">
+        <section class="phone" aria-label="Мобильный экран">
+          <div class="topbar">
+            <h2 id="screen-title"></h2>
+            <p id="screen-subtitle"></p>
+          </div>
+          <div class="content" id="content"></div>
+          <nav class="bottom-nav" aria-label="Нижняя навигация" id="bottom-nav"></nav>
+        </section>
+
+        <aside class="notes">
+          <h3 id="note-title"></h3>
+          <p id="note-body"></p>
+          <ul id="note-list"></ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const nav = [
+      ["today", "Сегодня"],
+      ["leads", "Лиды"],
+      ["replies", "Ответы"],
+      ["deal", "Сделки"],
+      ["system", "Ещё"]
+    ];
+
+    const screens = [
+      {
+        id: "today",
+        rail: "Сегодня",
+        title: "Сегодня",
+        subtitle: "Следующее действие владельца",
+        nav: "Сегодня",
+        step: 1,
+        noteTitle: "Dashboard",
+        noteBody: "Экран не является заставкой. Он показывает одно ближайшее действие, свежесть данных и безопасные ограничения человеческим языком.",
+        notes: ["Один главный CTA.", "Без технических кодов на первом экране.", "Статусы безопасности видны, но не доминируют."],
+        blocks: [
+          ["chips", [["данные свежие", "safe"], ["ручной режим", "off"]]],
+          ["card", "Следующее действие", "Разобрать новый лид, проверить факты и подготовить первое касание. Система не отправляет сообщения сама.", [["primary", "Разобрать лид", "leads"]]],
+          ["summary", "Сводка", [["Новые лиды", "3"], ["Ответы требуют решения", "1"], ["Сделки в работе", "2"], ["Платежи", "выключены"]]],
+          ["card", "Последнее обновление", "Сегодня, 10:45. Если данные устареют, владелец увидит причину и кнопку обновления.", []]
+        ]
+      },
+      {
+        id: "leads",
+        rail: "Лиды",
+        title: "Лиды",
+        subtitle: "Очередь и ручной ввод сайта",
+        nav: "Лиды",
+        step: 2,
+        noteTitle: "Лиды",
+        noteBody: "Очередь должна быстро отвечать: что разобрать дальше и почему этот лид безопасен или требует внимания.",
+        notes: ["Источник, уверенность и дата видны в строке.", "Ограничение контакта не скрывается.", "Нет реальных доменов в прототипе."],
+        blocks: [
+          ["card", "Новый сайт", "", [["field", "Сайт компании", "скрыт в прототипе"], ["primary", "Разобрать сайт", "review"]]],
+          ["list", "Очередь лидов", [
+            ["Компания A", "каталог · уверенность 82% · сегодня", "готов", "safe"],
+            ["Компания B", "сайт · найдена старая переписка", "проверить", "warn"],
+            ["Компания C", "импорт · есть ограничение контакта", "подтвердить", "danger"]
+          ], [["primary", "Разобрать следующий", "review"]]]
+        ]
+      },
+      {
+        id: "review",
+        rail: "Разбор",
+        title: "Разбор лида",
+        subtitle: "Факты перед первым касанием",
+        nav: "Лиды",
+        step: 3,
+        noteTitle: "Разбор",
+        noteBody: "Главный дефект прошлой версии закрыт: поле “что продаёт” не должно угадывать. Оно показывает уверенность и источник.",
+        notes: ["Факты отделены от предположений.", "Если факта нет, владелец видит “проверьте вручную”.", "История и ограничения видны до черновика."],
+        blocks: [
+          ["chips", [["факты из источника", "safe"], ["не выдумывать", "warn"]]],
+          ["summary", "Факты о компании", [["Название", "Компания A"], ["Что продаёт", "найдено в описании сайта"], ["Уверенность", "средняя"], ["Регион", "требует проверки"]]],
+          ["card", "Основание", "Источник показывает услуги компании, но регион и точный сегмент требуют ручной проверки владельцем.", []],
+          ["summary", "Контакт и история", [["Контактный путь", "форма на сайте"], ["Старая переписка", "не найдена"], ["Ограничение контакта", "нет"], ["Дубликаты", "не найдены"]]],
+          ["primary", "Подготовить первое касание", "draft"]
+        ]
+      },
+      {
+        id: "draft",
+        rail: "Первое касание",
+        title: "Первое касание",
+        subtitle: "Черновик можно править",
+        nav: "Лиды",
+        step: 4,
+        noteTitle: "Черновик",
+        noteBody: "Экран должен выглядеть как редактор, а не как отчёт. После правки текста проверка качества становится устаревшей.",
+        notes: ["Черновик сохраняется как draft.", "Отправки с этого экрана нет.", "Контрольная метка меняется при изменении текста."],
+        blocks: [
+          ["summary", "Черновик сообщения", [["Тема", "Короткая проверка видимости"], ["Персонализация", "только по найденным фактам"], ["Контрольная метка", "text-a91f3c"]]],
+          ["card", "Текст", "Здравствуйте. Посмотрел открытые данные компании и подготовил короткую идею для улучшения входящих обращений. Если актуально, отправлю краткий материал для просмотра.", []],
+          ["primary", "Проверить качество", "quality"]
+        ]
+      },
+      {
+        id: "quality",
+        rail: "Качество",
+        title: "Проверка качества",
+        subtitle: "Можно ли готовить пакет",
+        nav: "Лиды",
+        step: 5,
+        noteTitle: "Проверка качества",
+        noteBody: "Технический термин убран из интерфейса. Владелец видит понятные проверки: обещания, тон, длина, факты, доставляемость.",
+        notes: ["Нет неподтверждённых обещаний.", "Нет обещаний ROI.", "Если владелец правит текст, проверка требует повтора."],
+        blocks: [
+          ["checklist", "Проверки", [
+            ["Неподтверждённые заявления", "пройдено", "safe"],
+            ["Обещания результата", "пройдено", "safe"],
+            ["Тон сообщения", "пройдено", "safe"],
+            ["Длина", "пройдено", "safe"],
+            ["Юридическая аккуратность", "пройдено", "safe"],
+            ["Доставляемость", "проверить вручную", "warn"]
+          ]],
+          ["cardWarn", "Правило", "После изменения текста проверка становится устаревшей. Пакет создаётся только после новой проверки или явного решения владельца."],
+          ["primary", "Выбрать канал", "channel"]
+        ]
+      },
+      {
+        id: "channel",
+        rail: "Канал",
+        title: "Канал",
+        subtitle: "Куда отправить вручную",
+        nav: "Лиды",
+        step: 6,
+        noteTitle: "Канал",
+        noteBody: "Теперь это не просто список. Каждая строка показывает наличие канала, источник, риск и историю контакта.",
+        notes: ["Выбор канала не скрывает риск.", "Email не считается безопасным без подтверждения.", "Внешнее действие остаётся ручным."],
+        blocks: [
+          ["list", "Каналы", [
+            ["Email", "найден · источник: сайт · риск средний", "проверить", "warn"],
+            ["Форма сайта", "найдена · источник: контакты · риск низкий", "выбрать", "safe"],
+            ["Telegram", "не подтверждён · источник отсутствует", "нет", "danger"],
+            ["WhatsApp", "не подтверждён · источник отсутствует", "нет", "danger"],
+            ["Телефон", "ручной звонок · история не найдена", "ручной", ""],
+            ["Другое", "любой канал владельца · нужен комментарий", "ручной", ""]
+          ], [["primary", "Создать отправочный пакет", "packet"]]]
+        ]
+      },
+      {
+        id: "packet",
+        rail: "Пакет",
+        title: "Отправочный пакет",
+        subtitle: "Пакет ещё не отправлен",
+        nav: "Лиды",
+        step: 7,
+        noteTitle: "Отправочный пакет",
+        noteBody: "Это ключевой экран. Он должен полностью снять ощущение “уже отправлено”: крупный статус, канал, текст, контрольные метки, риски и действия владельца.",
+        notes: ["Номер пакета виден.", "Финальный текст привязан к контрольной метке.", "Система не отправляет сообщение сама."],
+        blocks: [
+          ["chips", [["ПАКЕТ НЕ ОТПРАВЛЕН", "warn"], ["проверка пройдена", "safe"]]],
+          ["summary", "Пакет PKT-2026-001", [["Канал", "форма сайта"], ["Получатель", "контактный путь"], ["Метка текста", "text-a91f3c"], ["Метка пакета", "pack-f7b20d"], ["Истекает", "через 24 часа"], ["Одноразовый", "да"]]],
+          ["card", "Финальный текст", "Здравствуйте. Посмотрел открытые данные компании и подготовил короткую идею для улучшения входящих обращений. Если актуально, отправлю краткий материал для просмотра.", []],
+          ["cardWarn", "Что может пойти не так", "Канал может быть неактуален, форма может не принять сообщение, а предыдущий контакт мог быть не найден в истории. Владелец подтверждает это перед ручной отправкой."],
+          ["primary", "Открыть для ручной отправки", "result"],
+          ["secondary", "Править текст", "draft"]
+        ]
+      },
+      {
+        id: "result",
+        rail: "Результат",
+        title: "Результат отправки",
+        subtitle: "Отметить только после действия",
+        nav: "Лиды",
+        step: 8,
+        noteTitle: "Результат",
+        noteBody: "Строки “выбрать” заменены на крупные понятные кнопки. Это снижает риск случайной ложной отметки.",
+        notes: ["“Я отправил” нажимается только после реального ручного действия.", "Запись остаётся локальной.", "Автосерия не запускается."],
+        blocks: [
+          ["card", "Что произошло?", "Выберите результат только после действия владельца.", [
+            ["primary", "Я отправил вручную", "replies"],
+            ["secondary", "Не отправлял", "today"],
+            ["secondary", "Ошибка канала", "channel"],
+            ["secondary", "Получен ответ", "replies"],
+            ["secondary", "Отложить", "today"]
+          ]],
+          ["summary", "Аудит", [["Событие", "локально"], ["Запись в рабочую базу", "отдельное разрешение"], ["Автосерия", "не запускается"]]]
+        ]
+      },
+      {
+        id: "replies",
+        rail: "Ответы",
+        title: "Ответы",
+        subtitle: "Только просмотр входящих",
+        nav: "Ответы",
+        step: 9,
+        noteTitle: "Ответы",
+        noteBody: "Ответы остаются мониторингом. Система не отвечает автоматически и не пишет в CRM без отдельного разрешения.",
+        notes: ["Stop request виден отдельно.", "Положительный ответ ведёт в сделку.", "Подготовка ответа не равна отправке."],
+        blocks: [
+          ["chips", [["только просмотр", "safe"], ["без автоответа", "off"]]],
+          ["list", "Входящие", [
+            ["Ответ #1", "сегодня 09:20 · интерес", "открыть", "safe"],
+            ["Ответ #2", "вчера · вопрос", "открыть", ""],
+            ["Ответ #3", "стоп-запрос", "не контактировать", "danger"]
+          ], []],
+          ["summary", "Открытый ответ", [["Классификация", "интерес"], ["Риск", "низкий"], ["Следующее действие", "создать сделку"]]],
+          ["primary", "Создать сделку", "deal"]
+        ]
+      },
+      {
+        id: "deal",
+        rail: "Сделка",
+        title: "Сделка",
+        subtitle: "Интерес превращается в работу",
+        nav: "Сделки",
+        step: 10,
+        noteTitle: "Сделка",
+        noteBody: "Сделка стала отдельным коммерческим контуром. Лиды заканчиваются пакетом, дальше начинается работа с продуктом и материалами.",
+        notes: ["Этап сделки виден.", "Следующее действие меняется по стадии.", "Платежи находятся в сделке, не в лидах."],
+        blocks: [
+          ["timeline", "Этапы", ["Новый интерес", "Уточнение задачи", "Продукт выбран", "Материал готов", "PDF/КП готово", "Счёт подготовлен"]],
+          ["summary", "Состояние", [["Клиент", "скрыт в прототипе"], ["Источник", "ответ на первое касание"], ["Следующее действие", "выбрать продукт"]]],
+          ["primary", "Выбрать продукт", "product"]
+        ]
+      },
+      {
+        id: "product",
+        rail: "Продукт",
+        title: "Продукт",
+        subtitle: "Что предложить клиенту",
+        nav: "Сделки",
+        step: 11,
+        noteTitle: "Продукт",
+        noteBody: "Продукт выбирается после интереса, а не до него. Это делает коммерческий путь управляемым.",
+        notes: ["Владелец видит набор продуктов.", "Цена пока рекомендация, не счёт.", "Можно выбрать custom без ломки сценария."],
+        blocks: [
+          ["list", "Варианты", [
+            ["Mini Audit", "быстрая проверка и рекомендации", "подходит", "safe"],
+            ["Digital Presence Check", "сайт, карты, видимость, доверие", "подходит", "safe"],
+            ["AI Front Office", "обработка входящих и сценарии", "после уточнения", "warn"],
+            ["Lead System Setup", "контур лидогенерации", "позже", ""],
+            ["Custom", "если запрос нестандартный", "ручной", ""]
+          ], [["primary", "Собрать данные", "material"]]]
+        ]
+      },
+      {
+        id: "material",
+        rail: "Материал",
+        title: "Материал",
+        subtitle: "Черновик аудита или предложения",
+        nav: "Сделки",
+        step: 12,
+        noteTitle: "Материал",
+        noteBody: "Перед PDF нужен редактируемый материал: находки, рекомендации, риски и недостающие данные.",
+        notes: ["Можно править выводы.", "Недостающие данные явно видны.", "Документ ещё не отправляется."],
+        blocks: [
+          ["summary", "Черновик Mini Audit", [["Находки", "3"], ["Рекомендации", "4"], ["Риски", "1"], ["Не хватает", "подтверждения канала"]]],
+          ["card", "Главная рекомендация", "Сначала улучшить путь входящего обращения и понятность предложения на публичных страницах.", []],
+          ["primary", "Сформировать PDF/КП", "document"]
+        ]
+      },
+      {
+        id: "document",
+        rail: "PDF/КП",
+        title: "PDF/КП",
+        subtitle: "Документ перед ручной отправкой",
+        nav: "Сделки",
+        step: 13,
+        noteTitle: "Документ",
+        noteBody: "Документ должен иметь версию, дату, продукт и действия владельца. Реальные клиентские данные в Git не попадают.",
+        notes: ["PDF можно открыть перед отправкой.", "КП можно пересобрать.", "Отправка остаётся ручной."],
+        blocks: [
+          ["summary", "Документ", [["Версия", "v1"], ["Продукт", "Mini Audit"], ["Дата", "сегодня"], ["Статус", "готов к просмотру"]]],
+          ["card", "Содержимое", "Краткая диагностика, рекомендации, следующий шаг и условия работы. Данные клиента скрыты в прототипе.", []],
+          ["primary", "Открыть PDF", "invoice"],
+          ["secondary", "Сформировать заново", "material"]
+        ]
+      },
+      {
+        id: "invoice",
+        rail: "Счёт",
+        title: "Черновик счёта",
+        subtitle: "Платёж пока не включён",
+        nav: "Сделки",
+        step: 14,
+        noteTitle: "Счёт",
+        noteBody: "Счёт живёт внутри сделки. Пока платежи выключены, это только черновик без рабочей ссылки оплаты.",
+        notes: ["Сумма и условия проверяются владельцем.", "Нет запроса оплаты клиенту.", "Нет платёжной операции."],
+        blocks: [
+          ["summary", "Черновик", [["Продукт", "Mini Audit"], ["Сумма", "ожидает владельца"], ["Срок", "после согласования"], ["Статус", "черновик"]]],
+          ["cardWarn", "Платежи выключены", "Рабочая ссылка оплаты и запрос платежа создаются только после отдельного разрешения."],
+          ["primary", "Проверить платёжный gate", "payment"],
+          ["secondary", "Вернуться к документу", "document"]
+        ]
+      },
+      {
+        id: "payment",
+        rail: "Оплата",
+        title: "Платёжный gate",
+        subtitle: "Отдельное разрешение",
+        nav: "Сделки",
+        step: 15,
+        noteTitle: "Оплата",
+        noteBody: "Платежи не включаются внутри обычного сценария. Gate показывает, что нужно проверить до live-оплаты.",
+        notes: ["Провайдер настроен.", "Сумма подтверждена.", "Есть отмена и аудит."],
+        blocks: [
+          ["checklist", "Перед включением", [
+            ["Провайдер оплаты настроен", "нет", "danger"],
+            ["Юридический текст проверен", "нет", "danger"],
+            ["Сумма подтверждена", "ожидает", "warn"],
+            ["Получатель подтверждён", "ожидает", "warn"],
+            ["Отмена и возврат понятны", "ожидает", "warn"]
+          ]],
+          ["cardWarn", "Итог", "Платежи выключены. В этом прототипе можно только подготовить черновик счёта."],
+          ["primary", "Перейти в историю", "history"]
+        ]
+      },
+      {
+        id: "history",
+        rail: "История",
+        title: "История",
+        subtitle: "Локальный след действий",
+        nav: "Сделки",
+        step: 16,
+        noteTitle: "История",
+        noteBody: "Важные действия должны оставлять локальный след: кто подтвердил, какой текст, какой пакет, какой риск.",
+        notes: ["События неизменяемые по номеру.", "Есть контрольная метка события.", "Синхронизация с рабочей базой отдельно."],
+        blocks: [
+          ["list", "События", [
+            ["Лид разобран", "локально · метка lead-01", "готово", "safe"],
+            ["Черновик создан", "локально · метка text-a91f3c", "готово", "safe"],
+            ["Пакет создан", "локально · код PKT-2026-001", "готово", "safe"],
+            ["Результат отмечен", "локально · рабочая база отдельно", "готово", "safe"]
+          ], []],
+          ["primary", "Открыть центр системы", "system"]
+        ]
+      },
+      {
+        id: "system",
+        rail: "Ещё",
+        title: "Центр системы",
+        subtitle: "Настройки, безопасность, обновление",
+        nav: "Ещё",
+        step: 17,
+        noteTitle: "Ещё",
+        noteBody: "Раздел “Ещё” больше не ведёт в отправочный пакет. Это системный центр: безопасность, обновление данных, аудит, настройки.",
+        notes: ["Пакет остаётся шагом в лидах.", "Системные статусы не мешают продаже.", "Владелец видит, что включено и что требует отдельного разрешения."],
+        blocks: [
+          ["summary", "Безопасность", [["Автоотправка", "выключена"], ["Платежи", "выключены"], ["Запись в рабочую базу", "отдельно"], ["Внешние действия", "по подтверждению"]]],
+          ["list", "Действия", [
+            ["Обновить данные", "показать время и причину, если не удалось", "открыть", ""],
+            ["Локальный аудит", "события и контрольные метки", "открыть", ""],
+            ["Настройки каналов", "источники, риски, подтверждения", "открыть", ""],
+            ["Разрешения", "live-действия только отдельным gate", "открыть", "warn"]
+          ], []],
+          ["primary", "Вернуться на сегодня", "today"]
+        ]
+      }
+    ];
+
+    const byId = Object.fromEntries(screens.map(screen => [screen.id, screen]));
+    const rail = document.getElementById("rail");
+    const bottomNav = document.getElementById("bottom-nav");
+    const content = document.getElementById("content");
+    const title = document.getElementById("screen-title");
+    const subtitle = document.getElementById("screen-subtitle");
+    const noteTitle = document.getElementById("note-title");
+    const noteBody = document.getElementById("note-body");
+    const noteList = document.getElementById("note-list");
+
+    function escapeHtml(value) {
+      return String(value)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll("\"", "&quot;");
+    }
+
+    function chip(label, tone) {
+      return `<span class="chip ${tone || ""}">${escapeHtml(label)}</span>`;
+    }
+
+    function actionHtml(action) {
+      const [kind, label, target] = action;
+      const cls = kind === "primary" ? "primary" : kind === "danger" ? "danger-action" : "secondary";
+      return `<button class="${cls}" data-jump="${escapeHtml(target)}">${escapeHtml(label)}</button>`;
+    }
+
+    function rowHtml(row) {
+      return `<div class="row"><span>${escapeHtml(row[0])}</span><span>${escapeHtml(row[1])}</span></div>`;
+    }
+
+    function listRowHtml(item) {
+      const [titleText, meta, label, tone] = item;
+      return `<div class="list-row"><div><strong>${escapeHtml(titleText)}</strong><span>${escapeHtml(meta)}</span></div>${chip(label, tone)}</div>`;
+    }
+
+    function renderBlock(block) {
+      const [type, a, b, c] = block;
+      if (type === "chips") {
+        return `<div class="chips">${a.map(item => chip(item[0], item[1])).join("")}</div>`;
+      }
+      if (type === "primary" || type === "secondary" || type === "danger") {
+        return actionHtml(block);
+      }
+      if (type === "field") {
+        return `<div class="field"><span>${escapeHtml(a)}</span><strong>${escapeHtml(b)}</strong></div>`;
+      }
+      if (type === "card") {
+        const actions = (c || []).map(actionHtml).join("");
+        return `<div class="card"><h3>${escapeHtml(a)}</h3>${b ? `<p>${escapeHtml(b)}</p>` : ""}${actions}</div>`;
+      }
+      if (type === "cardWarn") {
+        return `<div class="card warning"><h3>${escapeHtml(a)}</h3><p>${escapeHtml(b)}</p></div>`;
+      }
+      if (type === "summary") {
+        return `<div class="card flat"><h3>${escapeHtml(a)}</h3>${b.map(rowHtml).join("")}</div>`;
+      }
+      if (type === "list") {
+        const actions = (c || []).map(actionHtml).join("");
+        return `<div class="card flat"><h3>${escapeHtml(a)}</h3>${b.map(listRowHtml).join("")}${actions}</div>`;
+      }
+      if (type === "checklist") {
+        const rows = b.map(item => `<div class="check-row"><span>${escapeHtml(item[0])}</span>${chip(item[1], item[2])}</div>`).join("");
+        return `<div class="card flat"><h3>${escapeHtml(a)}</h3>${rows}</div>`;
+      }
+      if (type === "timeline") {
+        const rows = b.map((item, index) => `<div class="step ${index === 0 ? "current" : ""}">${escapeHtml(item)}</div>`).join("");
+        return `<div class="card flat"><h3>${escapeHtml(a)}</h3><div class="timeline">${rows}</div></div>`;
+      }
+      return "";
+    }
+
+    function renderRail(activeId) {
+      rail.innerHTML = screens.map((screen, index) => `
+        <button class="screen-button ${screen.id === activeId ? "active" : ""}" data-jump="${screen.id}">
+          <span>${escapeHtml(screen.rail)}</span>
+          <small>${String(index + 1).padStart(2, "0")}</small>
+        </button>
+      `).join("");
+    }
+
+    function renderNav(activeLabel) {
+      bottomNav.innerHTML = nav.map(([target, label]) => `
+        <button class="nav-item ${label === activeLabel ? "active" : ""}" data-jump="${target}" data-nav="${escapeHtml(label)}">
+          <span class="nav-dot"></span>
+          <span>${escapeHtml(label)}</span>
+        </button>
+      `).join("");
+    }
+
+    function render(id) {
+      const screen = byId[id] || byId.today;
+      title.textContent = screen.title;
+      subtitle.textContent = screen.subtitle;
+      noteTitle.textContent = screen.noteTitle;
+      noteBody.textContent = screen.noteBody;
+      noteList.innerHTML = screen.notes.map(item => `<li>${escapeHtml(item)}</li>`).join("");
+      content.innerHTML = `
+        <div class="progress">
+          <div class="progress-label"><span>Шаг ${screen.step} из 17</span><span>${escapeHtml(screen.rail)}</span></div>
+          <div class="progress-track"><div class="progress-fill" style="width:${Math.round(screen.step / 17 * 100)}%"></div></div>
+        </div>
+        ${screen.blocks.map(renderBlock).join("")}
+      `;
+      renderRail(screen.id);
+      renderNav(screen.nav);
+    }
+
+    document.addEventListener("click", event => {
+      const target = event.target.closest("[data-jump]");
+      if (!target) return;
+      render(target.dataset.jump);
+    });
+
+    render("today");
+  </script>
+</body>
+</html>

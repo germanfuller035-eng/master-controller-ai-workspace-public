@@ -1,0 +1,14 @@
+CTRL_LEDGER: BATCH_BEGIN screens=1 only=multichannel total_controls=282
+CTRL_LEDGER: SCREEN_BEGIN screen=multichannel controls=9 anchor=multichannel
+CTRL_LEDGER: NAVDIAG{"at":"step_notfound:cs_multichannel","loading":false,"ids":"cs_send_review,cs_leads,cs_replies,cs_catalog,cs_queues,cs_agents,commercial_summary,screen.commercial.control.refresh,tab_today,tab_decisions,tab_commerce,tab_agents,tab_system,bottom_nav,content"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0205","screen":"multichannel","selector":"screen.multichannel.control.back","type":"IconButton","risk":"ACTION","visible":false,"enabled":false,"action":"none","status":"UNEXECUTED_NAV_FAILED"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0206","screen":"multichannel","selector":"screen.multichannel.control.refresh","type":"TextButton","risk":"REFRESH","visible":false,"enabled":false,"action":"none","status":"UNEXECUTED_NAV_FAILED"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0207","screen":"multichannel","selector":"mc_q_inbound","type":"SectionCard","risk":"NAVIGATION","visible":false,"enabled":false,"action":"none","status":"UNEXECUTED_NAV_FAILED"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0208","screen":"multichannel","selector":"mc_q_conflicts","type":"SectionCard","risk":"NAVIGATION","visible":false,"enabled":false,"action":"none","status":"UNEXECUTED_NAV_FAILED"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0209","screen":"multichannel","selector":"mc_q_drafts","type":"SectionCard","risk":"NAVIGATION","visible":false,"enabled":false,"action":"none","status":"UNEXECUTED_NAV_FAILED"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0210","screen":"multichannel","selector":"mc_q_quarantine","type":"SectionCard","risk":"NAVIGATION","visible":false,"enabled":false,"action":"none","status":"UNEXECUTED_NAV_FAILED"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0211","screen":"multichannel","selector":"mc_src_${src.source_id}","type":"SectionCard","risk":"NAVIGATION","visible":false,"enabled":false,"action":"none","status":"UNEXECUTED_NAV_FAILED"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0212","screen":"multichannel","selector":"mc_ch_${ch.channel}","type":"SectionCard","risk":"NAVIGATION","visible":false,"enabled":false,"action":"none","status":"UNEXECUTED_NAV_FAILED"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0213","screen":"multichannel","selector":"mc_in_${i.id}","type":"SectionCard","risk":"NAVIGATION","visible":false,"enabled":false,"action":"none","status":"UNEXECUTED_NAV_FAILED"}
+CTRL_LEDGER: SCREEN_END screen=multichannel executed=9 passed=0 failed=0 unexecuted=9
+CTRL_LEDGER: BATCH_END executed=9 passed=0 failed=0 unexecuted=9

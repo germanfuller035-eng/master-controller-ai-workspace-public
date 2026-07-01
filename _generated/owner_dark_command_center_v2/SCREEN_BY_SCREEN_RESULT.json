@@ -1,0 +1,23 @@
+{
+  "device": "Honor ALT-LX1 AMSKBB4914919475",
+  "visual_acceptance": "PASS",
+  "screens": [
+    {"screen": "Connection / Local Mode", "status": "PASS", "notes": "Dark style, local mode available."},
+    {"screen": "Today Focus", "status": "PASS", "notes": "Stale/offline reason and next action visible."},
+    {"screen": "Drawer", "status": "PASS", "notes": "Owner top-level sections and pinned shortcuts visible."},
+    {"screen": "Lead Queue", "status": "PASS", "notes": "Manual site input and private lead queue state visible."},
+    {"screen": "Lead Review", "status": "PASS", "notes": "Weak facts are not invented; manual correction available."},
+    {"screen": "Draft Editor", "status": "PASS", "notes": "Draft is not marked sent; final text is editable."},
+    {"screen": "Quality Check", "status": "PASS", "notes": "Missing channel blocks packet until owner action."},
+    {"screen": "Channel Select", "status": "PASS", "notes": "Compact channel list; manual channel supported."},
+    {"screen": "Send Packet", "status": "PASS", "notes": "Not-sent status, text, channel, markers and risks visible."},
+    {"screen": "Manual Result", "status": "PASS", "notes": "Manual result route available from packet path; no hidden send."},
+    {"screen": "Reply Inbox", "status": "PASS", "notes": "Only viewing; no auto-reply."},
+    {"screen": "Deals", "status": "PASS", "notes": "Local deal draft and next action visible."},
+    {"screen": "Documents", "status": "PASS", "notes": "Document workflow route reachable."},
+    {"screen": "History", "status": "PASS", "notes": "Local history route reachable."},
+    {"screen": "Safety", "status": "PASS", "notes": "External actions remain disabled and gated."},
+    {"screen": "Settings", "status": "PASS", "notes": "Dark theme default and safety toggles visible."}
+  ],
+  "all_required_screens_reached": "PASS"
+}

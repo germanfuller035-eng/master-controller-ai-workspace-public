@@ -1,0 +1,17 @@
+{
+  "version": "0.6.0-rc9",
+  "version_code": 21,
+  "apk_sha256": "ba652780dfa01c6cefdb142dd3a27689e32e1e48efb43748e6c6edd66e05ebec",
+  "aab_sha256": "a8c858d41c3fa2a53860bec7ba69a1ee0a5014459bd750ab9b0bf90062a5c56f",
+  "signer_cert_sha256": "11038fca7db3fab1b0206971a93678b9dd28363ddf61241e162568019a1023f7",
+  "signer_match": true,
+  "signer_match_baseline": "RC1..RC8 (identical signer)",
+  "apksigner_verify": "PASS",
+  "tests": "pass (158 unit tests, 0 failures; incl. 3 FirstTouchDtoMappingTest)",
+  "build": "assembleRelease + bundleRelease BUILD SUCCESSFUL (R8 minify + resource shrink)",
+  "new_feature": "First Touch Strategist owner screen «Первое касание» (read-only, no-send): summary + top-5 candidates + recommended pilot + per-candidate artifact dialog (hook/subject/body/quality/compliance/deliverability). Reachable from Commercial hub and Operations home.",
+  "no_send_ui": "no send button anywhere; controlled send gate surfaced as «выключен»; offline mutation not possible (all First Touch endpoints are GET/read-through cache)",
+  "room_migration": "none (no new entities; read-through cache reused)",
+  "owner_install": "PENDING",
+  "build_log": "_generated/first_touch/data/android_release_build.log"
+}

@@ -1,0 +1,17 @@
+{
+  "schema": "growth_os.problem_outcome_map.v1",
+  "version": "1.0",
+  "note": "Separates client problem -> delivery result -> adoption result -> business outcome. Business outcomes require evidence and are NEVER promised. Each row names suitable + unsuitable products.",
+  "outcome_layers": {
+    "client_problem": "what the owner experiences (subjective)",
+    "delivery_result": "what we produce (the deliverable)",
+    "adoption_result": "whether the client uses it",
+    "business_outcome": "downstream business effect — EVIDENCE REQUIRED, never guaranteed"
+  },
+  "rows": [
+    {"segment": "seg_weak_site", "verified_problem": "website attracts visitors but generates few requests", "allowed_outcome": "evidence-backed list of conversion gaps + prioritized recommendations (delivery_result)", "prohibited_outcome": "guaranteed increase in requests/revenue (business_outcome without evidence)", "suitable_product": "mini_audit", "unsuitable_product": "business_website (jumps to build before diagnosis)", "evidence_requirement": "verified URL + findings with screenshots/citations"},
+    {"segment": "seg_no_site_local", "verified_problem": "business is hard to find and has no owned online path", "allowed_outcome": "presence map + gap list + recommended first step", "prohibited_outcome": "guaranteed new customers", "suitable_product": "digital_presence_check", "unsuitable_product": "full_business_audit (too deep for low maturity)", "evidence_requirement": "presence evidence across channels"},
+    {"segment": "seg_good_site_weak_funnel", "verified_problem": "traffic does not convert to requests", "allowed_outcome": "funnel gap analysis + conversion recommendations", "prohibited_outcome": "promised conversion rate", "suitable_product": "mini_audit (entry), funnel_audit (depth, DRAFT)", "unsuitable_product": "start_page_sprint (already has pages)", "evidence_requirement": "funnel evidence"},
+    {"segment": "seg_good_site_weak_process", "verified_problem": "incoming requests are lost or handled slowly", "allowed_outcome": "process gap assessment + handling recommendations (advisory)", "prohibited_outcome": "guaranteed faster sales / autonomous handling claims", "suitable_product": "process_comm_audit (PLANNED), lead_system advisory (PLANNED)", "unsuitable_product": "landing_sprint (does not fix handling)", "evidence_requirement": "process + volume evidence"}
+  ]
+}

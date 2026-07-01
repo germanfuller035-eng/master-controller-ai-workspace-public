@@ -1,0 +1,11 @@
+Signer #1 certificate DN: CN=Mater Controller, OU=Personal, O=Dmitry, L=NA, ST=NA, C=RU
+Signer #1 certificate SHA-256 digest: 11038fca7db3fab1b0206971a93678b9dd28363ddf61241e162568019a1023f7
+Signer #1 certificate SHA-1 digest: cdab03c5840ae52a8657b6fc15b2237e34adb09d
+Signer #1 certificate MD5 digest: eb22039e0f75b7cda97eb449bb5acbb8
+Signer matches RC1-RC5 (SHA-256 11038fca7db3fab1b0206971a93678b9dd28363ddf61241e162568019a1023f7)
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): true
+Verified using v3 scheme (APK Signature Scheme v3): false
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Number of signers: 1

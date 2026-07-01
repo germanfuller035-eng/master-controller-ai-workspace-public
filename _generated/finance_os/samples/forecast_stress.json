@@ -1,0 +1,24 @@
+{
+  "scenario": "stress",
+  "label": "MODEL_ESTIMATE (forecast, not guarantee)",
+  "deals": 8,
+  "monthly_revenue": 80000,
+  "monthly_cash_receipts": 80000,
+  "expenses": 38000,
+  "profit_estimate": 42000,
+  "cash_balance": 82000,
+  "owner_workload_hours": 16,
+  "cash_gap": false,
+  "reserve_status": "BELOW_TARGET",
+  "assumptions": {
+    "monthly_deals": 20,
+    "avg_deal_value": 10000,
+    "monthly_fixed_costs": 30000,
+    "monthly_variable_ratio": 0.1,
+    "opening_cash": 50000,
+    "debt_service": 10000,
+    "reserves_target": 90000,
+    "capacity_limit_deals": 15,
+    "owner_hours_per_deal": 2
+  }
+}

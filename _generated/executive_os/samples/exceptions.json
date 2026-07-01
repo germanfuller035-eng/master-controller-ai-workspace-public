@@ -1,0 +1,55 @@
+{
+  "total": 3,
+  "by_severity": {
+    "CRITICAL": 1,
+    "HIGH": 1,
+    "MEDIUM": 1,
+    "LOW": 0,
+    "INFO": 0
+  },
+  "critical": [
+    {
+      "exception_id": "exc_negative_cash_forecast_2",
+      "category": "negative_cash_forecast",
+      "severity": "CRITICAL",
+      "source_system": "executive",
+      "description": "Negative cash point in forecast",
+      "evidence": "Finance OS cashflow",
+      "owner_action": "review cashflow",
+      "status": "OPEN"
+    }
+  ],
+  "exceptions": [
+    {
+      "exception_id": "exc_capacity_unknown_1",
+      "category": "capacity_unknown",
+      "severity": "HIGH",
+      "source_system": "executive",
+      "description": "Owner weekly capacity not confirmed",
+      "evidence": "attention budget",
+      "owner_action": "confirm capacity",
+      "status": "OPEN"
+    },
+    {
+      "exception_id": "exc_negative_cash_forecast_2",
+      "category": "negative_cash_forecast",
+      "severity": "CRITICAL",
+      "source_system": "executive",
+      "description": "Negative cash point in forecast",
+      "evidence": "Finance OS cashflow",
+      "owner_action": "review cashflow",
+      "status": "OPEN"
+    },
+    {
+      "exception_id": "exc_product_not_ready_3",
+      "category": "product_not_ready",
+      "severity": "MEDIUM",
+      "source_system": "executive",
+      "description": "Product ai_front_office not sellable",
+      "evidence": "Revenue OS",
+      "owner_action": "do not sell",
+      "status": "OPEN"
+    }
+  ],
+  "note": "No external notifications. Owner reviews."
+}

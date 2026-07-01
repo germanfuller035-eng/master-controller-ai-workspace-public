@@ -1,0 +1,13 @@
+{
+  "id": "c1",
+  "title": "Lead Hunter Overpass plan",
+  "project": "lead_hunter",
+  "source": "chatgpt_export",
+  "source_date": 1234567,
+  "summary": "We decided Overpass single implementation. TODO: reconcile runtime.",
+  "decisions": [],
+  "tasks": [
+    "We decided Overpass single implementation. TODO: reconcile runtime."
+  ],
+  "route": "02_context_packs/imported/lead_hunter/"
+}

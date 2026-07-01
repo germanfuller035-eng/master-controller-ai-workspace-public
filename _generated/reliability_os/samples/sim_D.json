@@ -1,0 +1,10 @@
+{
+  "scenario": "D",
+  "production_affected": false,
+  "name": "Queue backlog",
+  "ok": true,
+  "steps": [
+    "queue_backlog -> detect:backlog > threshold health:DEGRADED alert:a_queue_backlog runbook:rb_queue_backlog"
+  ],
+  "alert": "a_queue_backlog"
+}

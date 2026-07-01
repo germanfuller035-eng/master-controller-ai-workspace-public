@@ -1,0 +1,63 @@
+{
+  "schema": "integration_os.system_inventory.v1",
+  "note": "MP2 full system inventory + MP3 legacy communication risk audit. Read-only scan of the full chain at base b096766. No production code modified.",
+  "synthetic": false,
+  "systems_total": 12,
+  "counts": {
+    "os_with_data_contracts": 12,
+    "analytics_data_contracts": 8,
+    "analytics_event_definitions": 33,
+    "growth_data_files": 20,
+    "mc_api_src_files": 15,
+    "mc_endpoints_inventoried": 34,
+    "legacy_underscore_oneoffs_in_telegram_gateway": 43,
+    "emergency_scripts": 15,
+    "getme_scripts": 6,
+    "route_probe_scripts": 16,
+    "network_capable_legacy_scripts": 13
+  },
+  "rows": [
+    { "path": "tools/mater_controller_api/src/server/index.mjs", "system": "master_controller", "component_type": "API_ROUTER", "entity": "lead/pipeline/reply/job/project/system", "version": "v0.4.0-rc1", "writer": "master_controller", "readers": ["android", "telegram", "lead_hunter"], "canonical": true, "derived": false, "legacy": false, "duplicate": false, "conflict": false, "production_sensitive": true, "network_capable": true, "recommended_action": "REFERENCE_ONLY — sole canonical API; gap analysis only, no modification" },
+    { "path": "tools/telegram_gateway/outbound_send_ledger.mjs", "system": "master_controller", "component_type": "LEDGER", "entity": "send_ledger_entry", "version": "1", "writer": "master_controller", "readers": ["reply_correlation", "pipeline"], "canonical": true, "derived": false, "legacy": false, "duplicate": false, "conflict": false, "production_sensitive": true, "network_capable": false, "recommended_action": "REFERENCE_ONLY — single SENT-email source of truth; no second ledger" },
+    { "path": "tools/telegram_gateway/reply_monitor.mjs", "system": "master_controller", "component_type": "STATE", "entity": "reply/opt_out", "version": "1", "writer": "master_controller", "readers": ["conversation_hub_view"], "canonical": true, "derived": false, "legacy": false, "duplicate": false, "conflict": false, "production_sensitive": true, "network_capable": false, "recommended_action": "REFERENCE_ONLY — reply+opt-out canonical state owner" },
+    { "path": "tools/telegram_gateway/reply_correlation.mjs", "system": "master_controller", "component_type": "ADAPTER", "entity": "reply", "version": "1", "writer": "master_controller", "readers": [], "canonical": false, "derived": true, "legacy": false, "duplicate": false, "conflict": true, "production_sensitive": true, "network_capable": false, "recommended_action": "FIX_DANGLING_REF — references untracked tools/communication_monitor/yandex_mail_imap_read.mjs (see legacy_audit)" },
+    { "path": "tools/analytics_os/data/data_contracts.json", "system": "analytics_os", "component_type": "CONTRACT", "entity": "metric/dataset", "version": "1", "writer": "analytics_os", "readers": ["executive_os"], "canonical": false, "derived": true, "legacy": false, "duplicate": false, "conflict": false, "production_sensitive": false, "network_capable": false, "recommended_action": "REGISTER — 8 data contracts folded into unified registry" },
+    { "path": "tools/analytics_os/data/event_taxonomy.json", "system": "analytics_os", "component_type": "EVENT", "entity": "event_definition", "version": "1", "writer": "analytics_os", "readers": ["executive_os"], "canonical": false, "derived": true, "legacy": false, "duplicate": false, "conflict": false, "production_sensitive": false, "network_capable": false, "recommended_action": "RECONCILE — base for event compatibility (MP18)" },
+    { "path": "tools/growth_os/data/integration_contracts.json", "system": "growth_os", "component_type": "CONTRACT", "entity": "campaign/conversation_hub_handoff", "version": "1", "writer": "growth_os", "readers": ["conversation_hub", "master_controller"], "canonical": false, "derived": false, "legacy": false, "duplicate": false, "conflict": false, "production_sensitive": false, "network_capable": false, "recommended_action": "REGISTER — 11 integration contracts folded into registry" },
+    { "path": "tools/conversation_hub/data/source_of_truth_extension.json", "system": "conversation_hub", "component_type": "CONTRACT", "entity": "conversation/message/draft", "version": "1", "writer": "conversation_hub", "readers": ["analytics_os", "executive_os"], "canonical": false, "derived": true, "legacy": false, "duplicate": false, "conflict": false, "production_sensitive": false, "network_capable": false, "recommended_action": "REGISTER — SoT extension reconciled into ownership matrix" },
+    { "path": "tools/revenue_os/data/product_catalog.json", "system": "revenue_os", "component_type": "READ_MODEL", "entity": "product/price", "version": "1", "writer": "revenue_os", "readers": ["growth_os", "product_os", "conversation_hub"], "canonical": true, "derived": false, "legacy": false, "duplicate": false, "conflict": true, "production_sensitive": false, "network_capable": false, "recommended_action": "RECONCILE — product status granularity differs vs Product/Delivery (MP8)" },
+    { "path": "tools/product_os/data/product_packs.json", "system": "product_os", "component_type": "READ_MODEL", "entity": "product/product_version/claims", "version": "1", "writer": "product_os", "readers": ["revenue_os", "conversation_hub"], "canonical": true, "derived": false, "legacy": false, "duplicate": false, "conflict": true, "production_sensitive": false, "network_capable": false, "recommended_action": "RECONCILE — product readiness vocabulary vs Revenue (MP8)" },
+    { "path": "tools/telegram_gateway/_emergency_*.mjs", "system": "master_controller", "component_type": "LEGACY_SCRIPT", "entity": "telegram_diag", "version": "n/a", "writer": "none", "readers": [], "canonical": false, "derived": false, "legacy": true, "duplicate": false, "conflict": false, "production_sensitive": true, "network_capable": true, "recommended_action": "RETIRE_PLAN — 15 historical diag scripts; classify DANGEROUS_UNUSED/HISTORICAL; no delete" },
+    { "path": "tools/telegram_gateway/_getme_*.mjs", "system": "master_controller", "component_type": "LEGACY_SCRIPT", "entity": "telegram_diag", "version": "n/a", "writer": "none", "readers": [], "canonical": false, "derived": false, "legacy": true, "duplicate": false, "conflict": false, "production_sensitive": true, "network_capable": true, "recommended_action": "RETIRE_PLAN — 6 getMe probes; classify HISTORICAL; no delete" }
+  ],
+  "legacy_communication_audit": {
+    "dangling_import": {
+      "missing_file": "tools/communication_monitor/yandex_mail_imap_read.mjs",
+      "finding": "The file EXISTS on the main workspace disk (D:/AI_WORKSPACE/tools/communication_monitor/) but is UNTRACKED in git (not committed, not gitignored). Every worktree/clone therefore lacks it.",
+      "referenced_by": [
+        "tools/mater_controller_api/deploy/master-controller-imap-sync.sh (PRODUCTION deploy script)",
+        "tools/telegram_gateway/reply_correlation.mjs (comment/contract)",
+        "tools/telegram_gateway/reply_inbox_sync_cli.mjs (comment/usage)"
+      ],
+      "classification": "ACTIVE_PRODUCTION (referenced by deploy) but UNTRACKED -> reproducibility + portability risk",
+      "resolution_options": [
+        "CONTRACT_CORRECTION: document that communication_monitor/ must be committed (owner action)",
+        "IMPORT_PATH_PROPOSAL: no path change needed; the file is correct, only untracked",
+        "COMPATIBILITY_SHIM_PROPOSAL: define an inbound-email-reader contract so consumers depend on a contract, not a path",
+        "DEPRECATION_PROPOSAL: not recommended — file is actively used by IMAP sync"
+      ],
+      "recommended": "Propose owner commit communication_monitor/ to git + define inbound-email-reader contract. NO production modification in this task.",
+      "production_modified": false
+    },
+    "scripts": [
+      { "glob": "_emergency_*.mjs", "count": 15, "class": "HISTORICAL", "network_capable": true, "credentials_usage": "reads .env (some)", "canonical_writes": false, "send_capability": "diagnostic getMe/probe only", "referenced_by_runtime": false, "referenced_by_tests": false, "safe_to_archive": true, "safe_to_delete": false, "owner_approval_required": true, "disposition": "MOVE_TO_ARCHIVE" },
+      { "glob": "_getme_*.mjs", "count": 6, "class": "HISTORICAL", "network_capable": true, "credentials_usage": "reads token", "canonical_writes": false, "send_capability": "getMe only", "referenced_by_runtime": false, "referenced_by_tests": false, "safe_to_archive": true, "safe_to_delete": false, "owner_approval_required": true, "disposition": "MOVE_TO_ARCHIVE" },
+      { "glob": "_route_*/*_probe_*", "count": 16, "class": "HISTORICAL", "network_capable": true, "credentials_usage": "varies", "canonical_writes": false, "send_capability": "route probes", "referenced_by_runtime": false, "referenced_by_tests": false, "safe_to_archive": true, "safe_to_delete": false, "owner_approval_required": true, "disposition": "MOVE_TO_ARCHIVE" }
+    ],
+    "direct_send_paths": 2,
+    "direct_canonical_writers": 1,
+    "parallel_ledgers": 0,
+    "duplicate_pollers": 0,
+    "note": "Conversation Hub introduced no second writer/ledger/poller. Direct send paths (approved_email_send_adapter, telegram_api_transport) remain Master Controller's approved seam. No script executed; no file deleted."
+  }
+}

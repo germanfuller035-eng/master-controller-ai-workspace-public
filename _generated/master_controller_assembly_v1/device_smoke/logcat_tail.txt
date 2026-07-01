@@ -1,0 +1,37 @@
+--------- beginning of main
+06-27 11:30:51.771  1406 23731 I APM_AudioPolicyManager: stopInput portId 561
+06-27 11:30:51.771  1406 23731 I APM_AudioPolicyManager: stopInput input:1102, session:2961, uid:99087
+06-27 11:30:51.819  1406 14720 I APM_AudioPolicyManager: closeInput(1102)
+06-27 12:16:49.189  1406  1406 I APM_AudioPolicyManager: getInputForAttr() source 1999, sampling rate 16000, format 0x1, channel mask 0x10, session 3033, flags 0 attributes={ Content type: AUDIO_CONTENT_TYPE_UNKNOWN Usage: AUDIO_USAGE_UNKNOWN Source: AUDIO_SOURCE_HOTWORD Flags: 0x800 Tags:  } requested device ID 0 flagsEx=0
+06-27 12:16:49.203  1406  1406 I APM_AudioPolicyManager: IN QCOM_AUDIO profile name: primary input dev: AUDIO_DEVICE_IN_BUILTIN_MIC, @:bottom
+06-27 12:16:49.203  1406  1406 I APM_AudioPolicyManager: audio source unsupported format=0x6, keep format=0x1
+06-27 12:16:49.235  1406  1406 I APM_AudioPolicyManager: getInputForAttr() returns input 1110 type 0 selectedDeviceId 4 for port ID 564
+06-27 12:16:49.292  1406  1482 I APM_AudioPolicyManager: startInput portId 564
+06-27 12:16:49.292  1406  1482 I APM_AudioPolicyManager: startInput input:1110, session:3033, uid:99087
+06-27 12:16:49.293  1406  1482 I APM_AudioPolicyManager: getNewInputDevice() selected device 0x80000004
+06-27 12:16:49.293  1406  1482 I APM_AudioPolicyManager: setInputDevice() input 1110 device 80000004 force 1
+06-27 12:16:49.308  1406  1482 I APM_AudioPolicyManager: setInputDevice() AF::createAudioPatch returned 0 patchHandle 2268 num_sources 1 num_sinks 1
+06-27 12:52:52.535  1406  1482 I APM_AudioPolicyManager: stopInput portId 564
+06-27 12:52:52.536  1406  1482 I APM_AudioPolicyManager: stopInput input:1110, session:3033, uid:99087
+06-27 12:52:52.597  1406  1482 I APM_AudioPolicyManager: closeInput(1110)
+06-27 14:15:22.152  1406 14720 I APM_AudioPolicyManager: getInputForAttr() source 1999, sampling rate 16000, format 0x1, channel mask 0x10, session 3065, flags 0 attributes={ Content type: AUDIO_CONTENT_TYPE_UNKNOWN Usage: AUDIO_USAGE_UNKNOWN Source: AUDIO_SOURCE_HOTWORD Flags: 0x800 Tags:  } requested device ID 0 flagsEx=0
+06-27 14:15:22.168  1406 14720 I APM_AudioPolicyManager: IN QCOM_AUDIO profile name: primary input dev: AUDIO_DEVICE_IN_BUILTIN_MIC, @:bottom
+06-27 14:15:22.168  1406 14720 I APM_AudioPolicyManager: audio source unsupported format=0x6, keep format=0x1
+06-27 14:15:22.271  1406 14720 I APM_AudioPolicyManager: getInputForAttr() returns input 1118 type 0 selectedDeviceId 4 for port ID 567
+06-27 14:15:22.325  1406 14720 I APM_AudioPolicyManager: startInput portId 567
+06-27 14:15:22.326  1406 14720 I APM_AudioPolicyManager: startInput input:1118, session:3065, uid:99087
+06-27 14:15:22.326  1406 14720 I APM_AudioPolicyManager: getNewInputDevice() selected device 0x80000004
+06-27 14:15:22.326  1406 14720 I APM_AudioPolicyManager: setInputDevice() input 1118 device 80000004 force 1
+06-27 14:15:22.337  1406 14720 I APM_AudioPolicyManager: setInputDevice() AF::createAudioPatch returned 0 patchHandle 2276 num_sources 1 num_sinks 1
+06-27 14:15:31.615  1406 14720 I APM_AudioPolicyManager: stopInput portId 567
+06-27 14:15:31.615  1406 14720 I APM_AudioPolicyManager: stopInput input:1118, session:3065, uid:99087
+06-27 14:15:31.634  1406 18215 I APM_AudioPolicyManager: closeInput(1118)
+06-27 16:50:32.290  1406 18215 I APM_AudioPolicyManager: getInputForAttr() source 1999, sampling rate 16000, format 0x1, channel mask 0x10, session 3105, flags 0 attributes={ Content type: AUDIO_CONTENT_TYPE_UNKNOWN Usage: AUDIO_USAGE_UNKNOWN Source: AUDIO_SOURCE_HOTWORD Flags: 0x800 Tags:  } requested device ID 0 flagsEx=0
+06-27 16:50:32.294  1406 18215 I APM_AudioPolicyManager: IN QCOM_AUDIO profile name: primary input dev: AUDIO_DEVICE_IN_BUILTIN_MIC, @:bottom
+06-27 16:50:32.294  1406 18215 I APM_AudioPolicyManager: audio source unsupported format=0x6, keep format=0x1
+06-27 16:50:32.320  1406 18215 I APM_AudioPolicyManager: getInputForAttr() returns input 1126 type 0 selectedDeviceId 4 for port ID 570
+06-27 16:50:32.361  1406 18215 I APM_AudioPolicyManager: startInput portId 570
+06-27 16:50:32.361  1406 18215 I APM_AudioPolicyManager: startInput input:1126, session:3105, uid:99087
+06-27 16:50:32.362  1406 18215 I APM_AudioPolicyManager: getNewInputDevice() selected device 0x80000004
+06-27 16:50:32.362  1406 18215 I APM_AudioPolicyManager: setInputDevice() input 1126 device 80000004 force 1
+06-27 16:50:32.378  1406 18215 I APM_AudioPolicyManager: setInputDevice() AF::createAudioPatch returned 0 patchHandle 2284 num_sources 1 num_sinks 1

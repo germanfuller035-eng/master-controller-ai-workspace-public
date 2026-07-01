@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "synthetic": true,
+  "panel_id": "today",
+  "main_action": {
+    "id": "act-review-r4",
+    "title": "Review urgent synthetic R4 approval",
+    "risk": "R4",
+    "evidence_ids": ["ev-owner-control-synthetic"]
+  },
+  "decisions": ["dec-r4-send-preview", "dec-cost-watch"],
+  "stop_visible": true,
+  "no_send_state": "VISIBLE_OFF",
+  "evidence": [
+    {
+      "id": "ev-owner-control-synthetic",
+      "source": "synthetic_fixture",
+      "claim": "Local synthetic owner-control evidence."
+    }
+  ]
+}

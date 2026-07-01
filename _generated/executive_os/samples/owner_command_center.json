@@ -1,0 +1,35 @@
+{
+  "schema": "executive_os.owner_command_center.v1",
+  "label": "INTERNAL_OWNER_ONLY",
+  "note": "Single command center. References domain dashboards (does NOT duplicate them).",
+  "sections": {
+    "system_health": "soak in progress (FREEZE)",
+    "current_release_soak": "v0.4.0-rc1 no-send soak",
+    "primary_owner_action": "wait for soak / confirm capacity",
+    "decision_queue": "see decision queue (8 ready, 11 needs-data)",
+    "portfolio_ranking": "see prioritization (mini_audit FOCUS_NOW)",
+    "revenue": "-> [[09_dashboards/revenue_command_dashboard]]",
+    "delivery": "-> [[09_dashboards/delivery_dashboard]]",
+    "finance": "-> [[09_dashboards/finance_dashboard]]",
+    "capacity": "UNKNOWN (owner input needed)",
+    "critical_risks": [
+      "negative cash (model)"
+    ],
+    "external_blockers": [
+      "soak completion"
+    ],
+    "ai_work": [],
+    "waiting_items": [
+      "production changes (soak)",
+      "proposed docs apply (post-soak)"
+    ],
+    "proposed_next_milestone": "soak close -> owner acceptance -> first commercial cycle (approval-gated)"
+  },
+  "references": {
+    "operations": "[[09_dashboards/ai_operations_dashboard]]",
+    "portfolio": "[[09_dashboards/project_portfolio_dashboard]]",
+    "revenue": "[[09_dashboards/revenue_command_dashboard]]",
+    "delivery": "[[09_dashboards/delivery_owner_command_center]]",
+    "finance": "[[09_dashboards/finance_owner_command_center]]"
+  }
+}

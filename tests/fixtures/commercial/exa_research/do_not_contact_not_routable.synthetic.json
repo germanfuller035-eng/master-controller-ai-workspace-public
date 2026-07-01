@@ -1,0 +1,23 @@
+{
+  "research_task_id": "synthetic-research-task-007",
+  "lead_id": "synthetic-lead-exa-007",
+  "company_name": "Synthetic Do Not Contact Company",
+  "website": "synthetic-do-not-contact.test",
+  "source_type": "public_web_research",
+  "facts": [
+    {
+      "fact_type": "suppression_status",
+      "fact_value": "Synthetic source marks outreach as blocked.",
+      "source_url": "synthetic://public-web/suppression-page",
+      "source_title": "Synthetic Suppression Page",
+      "evidence_snippet": "Synthetic page says do not contact.",
+      "confidence": "high",
+      "status": "confirmed"
+    }
+  ],
+  "buying_signals": [],
+  "contact_candidates": [],
+  "risk_flags": [],
+  "recommended_next_action": "suppress_from_outreach",
+  "do_not_contact": true
+}

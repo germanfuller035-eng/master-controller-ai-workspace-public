@@ -1,0 +1,122 @@
+[
+  {
+    "kpi_id": "exec_revenue",
+    "name": "Revenue",
+    "source_system": "Finance_OS",
+    "source_field": "booked_revenue",
+    "frequency": "monthly",
+    "value": "UNKNOWN",
+    "status": "UNKNOWN",
+    "target": "UNKNOWN",
+    "threshold": "< monthly target",
+    "references_authoritative": true
+  },
+  {
+    "kpi_id": "exec_cash",
+    "name": "Cash",
+    "source_system": "Finance_OS",
+    "source_field": "cash_runway",
+    "frequency": "weekly",
+    "value": "UNKNOWN",
+    "status": "UNKNOWN",
+    "target": "UNKNOWN",
+    "threshold": "< 3 months",
+    "references_authoritative": true
+  },
+  {
+    "kpi_id": "exec_profit",
+    "name": "Profit",
+    "source_system": "Finance_OS",
+    "source_field": "operating_result",
+    "frequency": "monthly",
+    "value": "UNKNOWN",
+    "status": "UNKNOWN",
+    "target": "UNKNOWN",
+    "threshold": "< 0",
+    "references_authoritative": true
+  },
+  {
+    "kpi_id": "exec_delivery",
+    "name": "Delivery",
+    "source_system": "Delivery_OS",
+    "source_field": "acceptance_rate",
+    "frequency": "monthly",
+    "value": "UNKNOWN",
+    "status": "UNKNOWN",
+    "target": "UNKNOWN",
+    "threshold": "< 80%",
+    "references_authoritative": true
+  },
+  {
+    "kpi_id": "exec_product_readiness",
+    "name": "Product readiness",
+    "source_system": "Revenue_OS",
+    "source_field": "active_products",
+    "frequency": "monthly",
+    "value": "UNKNOWN",
+    "status": "UNKNOWN",
+    "target": "UNKNOWN",
+    "threshold": "< 2",
+    "references_authoritative": true
+  },
+  {
+    "kpi_id": "exec_pipeline",
+    "name": "Pipeline",
+    "source_system": "Revenue_OS",
+    "source_field": "expected_deals",
+    "frequency": "monthly",
+    "value": "UNKNOWN",
+    "status": "UNKNOWN",
+    "target": "UNKNOWN",
+    "threshold": "< target",
+    "references_authoritative": true
+  },
+  {
+    "kpi_id": "exec_owner_capacity",
+    "name": "Owner capacity",
+    "source_system": "Executive_OS",
+    "source_field": "overload_risk",
+    "frequency": "weekly",
+    "value": "UNKNOWN",
+    "status": "UNKNOWN",
+    "target": "UNKNOWN",
+    "threshold": "HIGH overload",
+    "references_authoritative": true
+  },
+  {
+    "kpi_id": "exec_reliability",
+    "name": "System reliability",
+    "source_system": "Master_Controller",
+    "source_field": "health",
+    "frequency": "weekly",
+    "value": "UNKNOWN",
+    "status": "UNKNOWN",
+    "target": "UNKNOWN",
+    "threshold": "any failure",
+    "references_authoritative": true
+  },
+  {
+    "kpi_id": "exec_acceptance",
+    "name": "Acceptance",
+    "source_system": "Executive_OS",
+    "source_field": "owner_accepted",
+    "frequency": "per_release",
+    "value": "UNKNOWN",
+    "status": "UNKNOWN",
+    "target": "UNKNOWN",
+    "threshold": "deployed but not accepted",
+    "references_authoritative": true
+  },
+  {
+    "kpi_id": "exec_risk",
+    "name": "Risk",
+    "source_system": "Executive_OS",
+    "source_field": "critical_risks",
+    "frequency": "weekly",
+    "value": "UNKNOWN",
+    "status": "UNKNOWN",
+    "target": "UNKNOWN",
+    "threshold": "> 0",
+    "references_authoritative": true
+  }
+]

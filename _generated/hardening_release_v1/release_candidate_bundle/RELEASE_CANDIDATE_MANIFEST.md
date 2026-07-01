@@ -1,0 +1,11 @@
+# Release Candidate Manifest
+
+SESSION_NAME=AI_SYSTEM_HARDENING_DISASTER_RECOVERY_AND_RELEASE_V1
+BASE_HEAD=1a25dae0b818d8a8ded66afe9624b7a1060fbf39
+FINAL_HEAD=ee04e123f55b757e6d7ad8971d5d06908d8ace18
+BRANCH=feature/ai-system-hardening-disaster-recovery-release-v1
+RELEASE_TAG_CREATED=NO
+MERGE_DONE=NO
+DEPLOY_DONE=NO
+OWNER_RELEASE_GATE_PENDING=YES
+BUNDLE_PATH=_generated/hardening_release_v1/release_candidate_bundle

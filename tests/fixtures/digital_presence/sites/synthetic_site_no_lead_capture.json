@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "site_id": "synthetic_site_no_lead_capture",
+  "synthetic": true,
+  "external_access": false,
+  "browser_action_allowed": false,
+  "reserved_domain_reference": "synthetic-no-lead.example.test",
+  "synthetic_company_label": "Synthetic No Lead Fixture",
+  "metrics": {
+    "response_time_ms": 900,
+    "mobile_ready": true,
+    "message_clarity": 4,
+    "trust_proofs": 2
+  },
+  "lead_capture": {
+    "forms": 0,
+    "cta_count": 0,
+    "consent_copy": false,
+    "routing_defined": false,
+    "owner_followup_sla_minutes": 999
+  },
+  "front_office": {
+    "response_sla_minutes": 90,
+    "after_hours_plan": true
+  },
+  "signals": {
+    "website_problem": 1,
+    "lead_capture_problem": 5,
+    "response_handling_problem": 0,
+    "trust_problem": 1,
+    "landing_need": 1
+  },
+  "evidence": [
+    {
+      "id": "ev-no-lead-profile",
+      "source": "synthetic_fixture",
+      "claim": "Synthetic site lacks represented lead capture and routing."
+    }
+  ]
+}

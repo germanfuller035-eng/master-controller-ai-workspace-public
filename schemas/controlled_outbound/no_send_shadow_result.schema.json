@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/controlled_outbound/no_send_shadow_result.schema.json",
+  "title": "No Send Shadow Result V1",
+  "type": "object",
+  "required": [
+    "synthetic",
+    "status",
+    "outbound_count",
+    "payment_count",
+    "production_db_writes",
+    "send_allowed"
+  ],
+  "properties": {
+    "synthetic": {"const": true},
+    "status": {"enum": ["PASS", "FAIL", "BLOCKED"]},
+    "outbound_count": {"const": 0},
+    "payment_count": {"const": 0},
+    "production_db_writes": {"const": 0},
+    "send_allowed": {"const": false}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/crm/reply_monitor_event.schema.json",
+  "title": "CRM Reply Monitor Event V1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "synthetic",
+    "reply_id",
+    "contact_id",
+    "source",
+    "body"
+  ],
+  "properties": {
+    "schema_version": {"const": "crm.reply_monitor_event.v1"},
+    "synthetic": {"const": true},
+    "reply_id": {"type": "string"},
+    "contact_id": {"type": "string"},
+    "source": {"const": "synthetic_reply_fixture"},
+    "body": {"type": "string"},
+    "real_inbox_access": {"const": false}
+  },
+  "additionalProperties": true
+}

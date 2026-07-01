@@ -1,0 +1,42 @@
+{
+  "gate": "C1A",
+  "test_only_e2e": {
+    "marker": "TEST_ONLY_GATE_C1A_ACCEPTANCE",
+    "revision_before": 91,
+    "revision_after": 97,
+    "revision_bumps": 6,
+    "test_only_opportunity": "opp_cbdb073cd628",
+    "test_only_offer": "offer_47a06f465083",
+    "test_only_decision": "APPROVE (offer_47a06f465083)",
+    "test_only_deal": "deal_e1ca9ea0820c",
+    "test_only_handoff": "handoff_5be519c2acbd",
+    "test_only_project": "proj_81ae52b3536d",
+    "test_only_invoice_draft": "inv_e1ec8a036f41",
+    "idempotent_replay_revision": 97,
+    "idempotent_no_duplicate": true,
+    "mini_audit_price_snapshot": 10000
+  },
+  "real_commercial_entities_created": 0,
+  "real_messages_sent": 0,
+  "payment_facts_created": 0,
+  "smtp_calls": 0,
+  "telegram_client_messages": 0,
+  "test_only_excluded_from_kpi": true,
+  "kpi_after_e2e": { "open_opportunities": 0, "deals_won": 0, "invoices_due": 0, "owner_decisions_required": 0 },
+  "invariants": {
+    "canonical_writer_count": 1,
+    "historical_sends": 7,
+    "send_ledger_unchanged": true,
+    "email_ledger_unchanged": true,
+    "queue_total": 41,
+    "queue_failed": 0,
+    "dead_letters": 0,
+    "telegram_poller_count": 1,
+    "telegram_restarted": false,
+    "imap_mode": "stage1_readonly"
+  },
+  "latent_bugs_found_and_fixed": [
+    "commands._apply called lifecycle(args, store) instead of lifecycle(store, args) — fixed",
+    "commands._apply bumped revision on idempotent replay — fixed to abort write on replay"
+  ]
+}

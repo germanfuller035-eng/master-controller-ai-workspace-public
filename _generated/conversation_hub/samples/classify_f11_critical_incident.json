@@ -1,0 +1,12 @@
+{
+  "classification_id": "cls_f11",
+  "message_id": "f11",
+  "primary_intent": "incident",
+  "secondary_intents": [],
+  "urgency": "P0_CRITICAL",
+  "confidence": 0.85,
+  "rules_triggered": [
+    "incident"
+  ],
+  "manual_review": false
+}

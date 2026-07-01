@@ -1,0 +1,44 @@
+{
+  "schema": "finance_os.business_units.v1",
+  "version": "1.0",
+  "note": "Only units found in the AI HQ Project Registry. No units invented from memory. Placeholders have no confirmed financials.",
+  "units": [
+    {
+      "business_unit_id": "mini_audit_digital", "name": "Mini Audit / digital services", "status": "ACTIVE",
+      "category": "services", "owner": "owner", "currency": "RUB",
+      "source_of_truth": "Revenue OS catalog + 09_dashboards/money_revenue_board.md",
+      "active_products": ["express_review", "mini_audit", "full_business_audit", "landing_sprint", "business_website"],
+      "active_projects": [], "cost_centers": ["hosting", "paid_apis", "contractors"], "revenue_centers": ["audit", "website", "implementation"],
+      "monthly_target": {"amount": 300000, "currency": "RUB", "status": "OWNER_TARGET", "source": "money_revenue_board.md"},
+      "confirmed_revenue": {"amount": 10000, "currency": "RUB", "status": "CONFIRMED", "source": "Edera Rest receipt"},
+      "confidence": "OWNER_TARGET"
+    },
+    {
+      "business_unit_id": "boxon", "name": "BOXON (шины/хранение)", "status": "PLANNED",
+      "category": "placeholder", "owner": "owner", "currency": "RUB",
+      "source_of_truth": "Project Registry placeholder (18_boxon empty)",
+      "active_products": [], "active_projects": [], "cost_centers": [], "revenue_centers": [],
+      "monthly_target": {"amount": null, "currency": "RUB", "status": "UNKNOWN"},
+      "confirmed_revenue": {"amount": null, "currency": "RUB", "status": "UNKNOWN"},
+      "confidence": "UNKNOWN"
+    },
+    {
+      "business_unit_id": "project_maria", "name": "Проект Марии", "status": "PLANNED",
+      "category": "placeholder", "owner": "owner", "currency": "RUB",
+      "source_of_truth": "Project Registry placeholder (20_project_maria empty)",
+      "active_products": [], "active_projects": [], "cost_centers": [], "revenue_centers": [],
+      "monthly_target": {"amount": null, "currency": "RUB", "status": "UNKNOWN"},
+      "confirmed_revenue": {"amount": null, "currency": "RUB", "status": "UNKNOWN"},
+      "confidence": "UNKNOWN"
+    },
+    {
+      "business_unit_id": "strength_form_35", "name": "Силовая форма 35+", "status": "PLANNED",
+      "category": "placeholder", "owner": "owner", "currency": "RUB",
+      "source_of_truth": "Project Registry placeholder (21_strength_form_35 empty)",
+      "active_products": [], "active_projects": [], "cost_centers": [], "revenue_centers": [],
+      "monthly_target": {"amount": null, "currency": "RUB", "status": "UNKNOWN"},
+      "confirmed_revenue": {"amount": null, "currency": "RUB", "status": "UNKNOWN"},
+      "confidence": "UNKNOWN"
+    }
+  ]
+}

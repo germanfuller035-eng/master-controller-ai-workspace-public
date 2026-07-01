@@ -1,0 +1,10 @@
+{
+  "errors": [],
+  "external_request_sent": false,
+  "fallback_used": "LOCAL_SYNTHETIC",
+  "owner_visible_status": "DEGRADED_SYNTHETIC_MODE",
+  "paid_provider_called": false,
+  "provider_failure_detected": true,
+  "result": "PASS",
+  "synthetic": true
+}

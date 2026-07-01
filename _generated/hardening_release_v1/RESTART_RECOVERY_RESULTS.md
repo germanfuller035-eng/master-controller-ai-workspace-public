@@ -1,0 +1,12 @@
+# Restart Recovery Results
+
+RESTART_RECOVERY_RESULT=PASS
+SYNTHETIC_ONLY=YES
+PENDING_ACTIONS_PRESERVED=YES
+OUTBOUND_REPLAYED=NO
+PAYMENTS_REPLAYED=NO
+PRODUCTION_WRITES_REPLAYED=NO
+RECOVERED_STATE=_generated/hardening_release_v1/restart_recovery/synthetic_recovered_state.json
+
+## Errors
+- None

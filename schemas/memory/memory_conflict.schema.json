@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "memory_conflict",
+  "type": "object",
+  "required": ["conflict_id", "subject", "key", "record_ids", "decision"],
+  "properties": {
+    "conflict_id": {"type": "string"},
+    "subject": {"type": "string"},
+    "key": {"type": "string"},
+    "record_ids": {"type": "array"},
+    "decision": {"type": "string"}
+  },
+  "additionalProperties": true
+}

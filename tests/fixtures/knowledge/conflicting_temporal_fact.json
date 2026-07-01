@@ -1,0 +1,20 @@
+[
+  {
+    "fact_id": "tf_conflict_a_001",
+    "subject": "knowledge_memory_v1",
+    "predicate": "qdrant_status",
+    "value": "CONTRACT_ONLY_NOT_DEPLOYED",
+    "valid_from": "2026-06-26",
+    "source_id": "src_synthetic_public_001",
+    "confidence": 0.9
+  },
+  {
+    "fact_id": "tf_conflict_b_001",
+    "subject": "knowledge_memory_v1",
+    "predicate": "qdrant_status",
+    "value": "DEPLOYED",
+    "valid_from": "2026-06-26",
+    "source_id": "src_synthetic_business_001",
+    "confidence": 0.9
+  }
+]

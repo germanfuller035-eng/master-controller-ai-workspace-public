@@ -1,0 +1,78 @@
+{
+  "schema": "reliability_os.release_deployment.v1",
+  "note": "MP39-46 — release readiness gate, change mgmt, maintenance, deployment contract, rollback, soak, production verification plan, observability contracts. No deployment, no release approval, no script execution.",
+  "synthetic": true,
+
+  "release_readiness_gate": {
+    "combines": ["security_release_gate", "integration_compatibility", "tests", "backup", "restore", "rollback", "service_health_contract", "data_integrity", "capacity", "owner_approval", "unresolved_incidents", "known_limitations"],
+    "statuses": ["NOT_READY", "BLOCKED", "READY_FOR_INTERNAL_REVIEW", "READY_FOR_OWNER_REVIEW", "OWNER_ACCEPTED_REFERENCE"],
+    "hard_blockers": ["critical_security_finding", "tracked_live_secret", "backup_unverified", "restore_unverified", "missing_rollback", "duplicate_writer", "direct_send_bypass", "unknown_canonical_integrity", "production_health_unknown_before_live_launch", "owner_capacity_unknown_for_commercial_activation"],
+    "current_status": "READY_FOR_INTERNAL_REVIEW",
+    "evaluation": {
+      "critical_security_finding": false,
+      "tracked_live_secret": false,
+      "security_gate": "READY_FOR_OWNER_REVIEW (from Security OS)",
+      "tests": "all OS suites green",
+      "backup_verified": "synthetic + bundle verify PASS; production backup NOT live-verified",
+      "restore_verified": "synthetic restore PASS; production restore NOT executed",
+      "rollback": "rollback standard defined",
+      "duplicate_writer": false,
+      "direct_send_bypass": false,
+      "canonical_integrity": "UNKNOWN (requires live verification)",
+      "production_health": "UNKNOWN (requires live verification)",
+      "owner_capacity": "UNKNOWN",
+      "owner_approval": "PENDING"
+    },
+    "blocked_to_owner_review_by": ["production_health_unknown_before_live_launch", "owner_capacity_unknown_for_commercial_activation", "canonical_integrity requires live verification"],
+    "note": "Cannot reach READY_FOR_OWNER_REVIEW for a LIVE launch until production health + canonical integrity are live-verified and owner capacity is known. READY_FOR_INTERNAL_REVIEW reflects offline completeness."
+  },
+
+  "change_management": {
+    "record_fields": ["change_id", "scope", "services", "risk", "owner", "preconditions", "deployment_plan", "verification", "rollback", "maintenance_window", "approval", "status"],
+    "max_status": "READY_FOR_OWNER_REVIEW",
+    "example": { "change_id": "chg_example", "scope": "future controlled launch prep", "services": ["mc_api"], "risk": "high", "owner": "owner", "preconditions": ["security gate", "backup verified", "rollback ready"], "deployment_plan": "see deployment_contract", "verification": "production_verification_plan", "rollback": "rollback_standard", "maintenance_window": "owner-scheduled", "approval": "PENDING", "status": "READY_FOR_OWNER_REVIEW" }
+  },
+
+  "maintenance_window": {
+    "fields": ["affected_services", "start_proposal", "end_proposal", "customer_impact", "backup_prerequisite", "owner_availability", "rollback_deadline", "communication_references", "verification_period"],
+    "this_task": "no schedule created"
+  },
+
+  "deployment_contract": {
+    "phases": ["PRECHECK", "BACKUP", "DEPLOY", "CONFIG_VERIFY", "SERVICE_RESTART", "HEALTH_VERIFY", "FUNCTIONAL_SMOKE", "SAFETY_VERIFY", "OBSERVATION", "ACCEPT", "ROLLBACK"],
+    "rule": "every production deployment requires explicit owner approval; no script execution in this task",
+    "safety_verify_includes": ["AUTOSEND=BLOCKED", "SEND_ALLOWED_LIVE=OFF", "one canonical writer", "one poller"]
+  },
+
+  "rollback_standard": {
+    "must_define": ["trigger", "maximum_decision_time", "code_rollback", "config_rollback", "schema_data_compatibility", "service_restart", "health_validation", "incident_record", "evidence"],
+    "hard_rule": "no rollback can overwrite newer canonical data blindly",
+    "max_decision_time_proposal": "15 minutes post-deploy observation"
+  },
+
+  "soak_standard": {
+    "fields": ["exact_start", "exact_end", "version", "services", "counters", "expected_no_change_invariants", "observations", "invalidation_conditions", "final_decision"],
+    "prevent": ["calling partial observation final PASS", "changing code during unchanged-version soak", "ambiguous send-count definitions", "missing baseline"],
+    "send_count_definition": "explicit: sends recorded in outbound_send_ledger.jsonl during soak window; expected delta = 0 under AUTOSEND=BLOCKED"
+  },
+
+  "production_verification_plan": {
+    "note": "FUTURE live-verification only; executed by owner AFTER approval. NOT executed in this task.",
+    "checks": ["VPS_identity", "service_state", "one_canonical_writer", "API_health", "worker_heartbeat", "scheduler_freshness", "queue", "dead_letters", "telegram_one_poller", "imap_read_only_freshness", "backups", "restore_evidence", "caddy_tls", "ufw_fail2ban", "disk_memory", "security_boundaries", "no_send_gates"],
+    "executed": false
+  },
+
+  "observability_contracts": {
+    "master_controller": ["health contract", "heartbeat freshness", "revision integrity", "queue/dead-letter", "no-send gates"],
+    "telegram": ["one-poller", "heartbeat", "callback errors"],
+    "imap": ["timer freshness", "read-only", "last success"],
+    "android": ["api reachability", "cache freshness", "no offline mutation"],
+    "analytics_os": ["derived metrics + time series owner; reliability emits SLI source contracts only"],
+    "security_os": ["security incidents + boundaries owner; reliability hands off security-impacting events"],
+    "executive_os": ["business continuity decisions + stop/go owner"],
+    "agent_orchestration": ["offline verification gates + observability contract reuse"],
+    "conversation_hub": ["future channel health references"],
+    "file_vault": ["future integrity references"],
+    "rule": "no runtime integration; contracts only"
+  }
+}

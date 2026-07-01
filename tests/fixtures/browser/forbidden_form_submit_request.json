@@ -1,0 +1,8 @@
+{
+  "action_type": "form_submit",
+  "external_browser": false,
+  "form_submit": true,
+  "request_id": "forbidden-form-submit-alpha",
+  "synthetic": true,
+  "target_ref": "reserved-form-alpha"
+}

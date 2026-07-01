@@ -1,0 +1,11 @@
+{
+  "scenario": "Q",
+  "production_affected": false,
+  "name": "Owner unavailable continuity",
+  "ok": true,
+  "steps": [
+    "system read-only/no-send",
+    "no autonomous commercial action",
+    "automation paused"
+  ]
+}

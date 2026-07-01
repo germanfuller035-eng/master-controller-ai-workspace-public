@@ -1,0 +1,50 @@
+{
+  "schema": "conversation_hub.dashboard.v1",
+  "generated_ts": "20260617_000000",
+  "synthetic": true,
+  "note": "Derived view. Does not duplicate Master Controller queues; references canonical owners.",
+  "conversations_total": 36,
+  "needs_reply": 15,
+  "needs_approval": 0,
+  "identity_conflicts": 0,
+  "opt_outs": 2,
+  "support": 3,
+  "billing": 1,
+  "escalations": 4,
+  "channel_readiness": [
+    {
+      "channel": "EMAIL",
+      "status": "NOT_CONNECTED"
+    },
+    {
+      "channel": "TELEGRAM",
+      "status": "NOT_CONNECTED"
+    },
+    {
+      "channel": "WEB_FORM",
+      "status": "NOT_CONNECTED"
+    },
+    {
+      "channel": "MAX_FUTURE",
+      "status": "NOT_CONNECTED"
+    },
+    {
+      "channel": "WHATSAPP_OFFICIAL_FUTURE",
+      "status": "NOT_CONNECTED"
+    }
+  ],
+  "classification_quality": {
+    "note": "deterministic rule engine; manual_review when confidence < 0.7"
+  },
+  "stale_conversations": 0,
+  "owner_actions": 17,
+  "intentionally_disconnected_channels": [
+    "EMAIL",
+    "TELEGRAM",
+    "WEB_FORM",
+    "MAX_FUTURE",
+    "WHATSAPP_OFFICIAL_FUTURE",
+    "PHONE_MANUAL_REFERENCE",
+    "INTERNAL"
+  ]
+}

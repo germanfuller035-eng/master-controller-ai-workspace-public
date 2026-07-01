@@ -1,0 +1,157 @@
+{
+  "schema": "ai_hq.backup_manifest.v1",
+  "generated_ts": "UNSTAMPED",
+  "src": "D:\\AI_WORKSPACE_WORKTREES\\executive-os-owner-command-center-v1\\tools\\executive_os",
+  "file_count": 29,
+  "total_size": 109447,
+  "excluded_secret_files": 0,
+  "git_head": "cbb965ba7e469ea41e29cad36017f664ec320fee",
+  "entries": [
+    {
+      "path": "apply_manifest.mjs",
+      "size": 2867,
+      "sha256": "fa06d47dd15fb36abab13252c06b78a7ae7512923be7758ae35046506187db18"
+    },
+    {
+      "path": "executive.mjs",
+      "size": 6124,
+      "sha256": "584463b31d2ed509a0f395f4fb6f91d4da073827005a89783e3f7ef192efa089"
+    },
+    {
+      "path": "tests/executive.test.mjs",
+      "size": 8620,
+      "sha256": "5e8a48d485f2c353888476be3ad2bd54e456389678a297a96161cab13b1804d0"
+    },
+    {
+      "path": "tests/run_all.mjs",
+      "size": 877,
+      "sha256": "9ecc7f5ba45cc28dac3da155cc0b4435b23aa0cb4f80f9a1c1cce6c8cff1e36c"
+    },
+    {
+      "path": "tests/security.test.mjs",
+      "size": 3022,
+      "sha256": "7fdef1f5a2d4c20d0eb066bc081afac6d67ef2fade7d3e6fa00af186f0779967"
+    },
+    {
+      "path": "schemas/domain.mjs",
+      "size": 6002,
+      "sha256": "5c23dbcb3753b130806aab789b1becc38217b9eb334fc3d2152f396b3ea573a4"
+    },
+    {
+      "path": "lib/allocation.mjs",
+      "size": 3156,
+      "sha256": "95251335c0092c09bca874eeff097f0b55408339d09892553e3481e92b52e4ce"
+    },
+    {
+      "path": "lib/attention.mjs",
+      "size": 2043,
+      "sha256": "7d2a86fedd81e3a16a1440cc421387d0078227cdafe534758b0a8f598e13ec74"
+    },
+    {
+      "path": "lib/common.mjs",
+      "size": 2626,
+      "sha256": "28355566a4afe9798298935fc4c06a10c805be025ef7c849e9a7f9f50c32f18e"
+    },
+    {
+      "path": "lib/decisions.mjs",
+      "size": 2896,
+      "sha256": "7c49397304ef38d97ed4deb21262dcceb094f1d32b4964bfd72f624556172e02"
+    },
+    {
+      "path": "lib/dependencies.mjs",
+      "size": 3404,
+      "sha256": "500303fd5159f4971d744f8848113608438312128ced7af365bb63638a070b26"
+    },
+    {
+      "path": "lib/exceptions.mjs",
+      "size": 2746,
+      "sha256": "b02858b2e5e716bf9e7f9fc9345c6aa2afe9c4365ceed0c239d14a44b3d1d8a0"
+    },
+    {
+      "path": "lib/goals.mjs",
+      "size": 2833,
+      "sha256": "fba558422fded6ba0f04892c5ef5b6670926b454026e44e34867e26b5fad91d7"
+    },
+    {
+      "path": "lib/governance.mjs",
+      "size": 4723,
+      "sha256": "da66922837f1f7faf84b8df1641cf149b8917cfc2dd5c2722b244a9b66066b50"
+    },
+    {
+      "path": "lib/nba.mjs",
+      "size": 2612,
+      "sha256": "bd5f3a7810be363a1552b8c8e2432cdfdabcf169d0628dc1d1bada3fb5eff9eb"
+    },
+    {
+      "path": "lib/policy.mjs",
+      "size": 2300,
+      "sha256": "ec2fa67168270e25e7627176e7311a4dff8c3d58386f02c71b79f887640b192a"
+    },
+    {
+      "path": "lib/portfolio.mjs",
+      "size": 4285,
+      "sha256": "0f1b4b656387eda2cd1347c264e98dbee436de29feeb5da588eb032b79117312"
+    },
+    {
+      "path": "lib/reports.mjs",
+      "size": 3370,
+      "sha256": "dc1d208ab5f2d0454a244de3f94ca9f862f19154db1302a8bf953addb1216eac"
+    },
+    {
+      "path": "lib/reviews.mjs",
+      "size": 5665,
+      "sha256": "1ae9ae12ac43b55cca1efe1888cd21d5432e59601cfc9fc1ef5ba983150f1e52"
+    },
+    {
+      "path": "lib/risk.mjs",
+      "size": 2053,
+      "sha256": "54fd89988b705d3f54cc406d3820cc6f9e3ee59a2d9c00fdf33c725622da7ff0"
+    },
+    {
+      "path": "lib/scenarios.mjs",
+      "size": 2465,
+      "sha256": "43346101d4de9632258580f022c1ca8497cbb0c6d9b51f78aabf937d83becec2"
+    },
+    {
+      "path": "lib/snapshot.mjs",
+      "size": 3310,
+      "sha256": "925ecc10aa3e72f2ac7a92afb978e5b7a56de0cca14f3e2319a83ae6e249b68e"
+    },
+    {
+      "path": "lib/sot.mjs",
+      "size": 2022,
+      "sha256": "d065c05416d43dd6ac494837128dcd9ae541efdb44dfbba3f1a4b4ecd9eb3394"
+    },
+    {
+      "path": "lib/status.mjs",
+      "size": 3664,
+      "sha256": "f50a739afc4eafa364132709c1c594598473e4bbedd6fa92059481f901d2bd7a"
+    },
+    {
+      "path": "lib/validators.mjs",
+      "size": 2292,
+      "sha256": "b57c89073a8a69f70b3c18ae8b82563e61f38c66bf322c4b595b14a3b8ac6b5c"
+    },
+    {
+      "path": "fixtures/executive.json",
+      "size": 4636,
+      "sha256": "bf4eb23aedfff5199141e9a1913682c1fdeaaaf932131ad48fc952335106eac7"
+    },
+    {
+      "path": "data/decision_backlog.json",
+      "size": 8394,
+      "sha256": "3a85f1a1ce712cf2abc30f1ba5c3084c221865cb1e7e6b58c720ab58ec7b133c"
+    },
+    {
+      "path": "data/kpi_tree.json",
+      "size": 3043,
+      "sha256": "d54785699791f0351515fd5d74b7fd0ff486fe27495244585f4b910606c50032"
+    },
+    {
+      "path": "data/source_of_truth_matrix.json",
+      "size": 7397,
+      "sha256": "07d1d81e923d4120bc571c34071608eeb5b8b65b0157c3ab5a8111234dcb4fcd"
+    }
+  ],
+  "restore_instructions": "Verify with: for each entry sha256sum -c. Restore by copying files; secrets restored separately from D:\\AI_SECRETS encrypted store."
+}

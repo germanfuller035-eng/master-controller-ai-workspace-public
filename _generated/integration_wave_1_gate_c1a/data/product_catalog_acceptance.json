@@ -1,0 +1,22 @@
+{
+  "topic": "PRODUCT_CATALOG_ANDROID_ACCEPTANCE",
+  "products_total": 18,
+  "active": 2,
+  "draft": 7,
+  "planned": 9,
+  "active_products": [
+    { "product_id": "express_review", "name": "Краткий разбор сайта", "price": 0, "price_display": "free" },
+    { "product_id": "mini_audit", "name": "Мини-аудит сайта и пути клиента до заявки", "price": 10000, "currency": "RUB" }
+  ],
+  "mini_audit_detail": { "status": "ACTIVE", "price": 10000, "currency": "RUB", "scope_included": 8, "scope_excluded": 9, "inputs_required": 3, "acceptance_criteria": 6 },
+  "android": {
+    "list_screen": "feature/catalog/CatalogListScreen.kt — 18 cards, search, ACTIVE/DRAFT/PLANNED filters, ACTIVE-first sort, offline cache, counts header",
+    "detail_screen": "feature/catalog/ProductDetailScreen.kt — status, price, version, scope/exclusions/inputs/result/acceptance/claims",
+    "navigation": "Коммерческая сводка → Каталог продуктов → карточка продукта",
+    "unknown_price_rendering": "renderProductPriceRu: null → 'цена не определена', free → 'бесплатно'; never 0 ₽",
+    "data_source": "API/cache only (no hardcoded catalog or price)"
+  },
+  "backend_endpoints": ["GET /api/v1/products", "GET /api/v1/products/:id"],
+  "android_unit_tests": "GateC1aMappingTest (9): catalog 18, mini audit 10000, unknown≠0, free, status RU, detail scope fields, lead-count 62/52/10, send recon 7, catalog filter/sort",
+  "verified_on_production": true
+}

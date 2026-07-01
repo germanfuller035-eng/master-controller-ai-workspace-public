@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MCP Gateway Response",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["request_id", "status", "artifact_ids", "audit_event_id", "policy_decision", "duration_ms"],
+  "properties": {
+    "request_id": {"type": "string"},
+    "status": {"type": "string", "enum": ["OK", "DENIED", "ERROR", "TIMEOUT", "CANCELLED"]},
+    "result_ref": {"type": ["string", "null"]},
+    "redacted_result": {"type": ["object", "array", "string", "number", "boolean", "null"]},
+    "artifact_ids": {"type": "array", "items": {"type": "string"}},
+    "audit_event_id": {"type": "string"},
+    "policy_decision": {"type": "object"},
+    "duration_ms": {"type": "integer", "minimum": 0},
+    "error_code": {"type": ["string", "null"]},
+    "error_message_redacted": {"type": ["string", "null"]}
+  }
+}

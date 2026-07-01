@@ -1,0 +1,14 @@
+{
+  "schema": "reliability_os.registry_proposal.v1",
+  "generated_ts": "20260617_000000",
+  "note": "Proposed Project Registry addition; NOT applied.",
+  "target": "00_MASTER_CONTEXT/PROJECT_REGISTRY.md (owner-applied)",
+  "reliability_observability_project_entry": {
+    "project_id": "reliability-observability",
+    "name": "Reliability / Observability / Business Continuity Control Plane",
+    "status": "ACTIVE_DEVELOPMENT",
+    "priority": "P1_RELIABILITY",
+    "source_of_truth": "tools/reliability_os + docs_canonical_proposed/17_reliability/",
+    "note": "Reliability governance + health/SLO/alert/runbook/backup/DR/release standards. Static/offline; never installs monitoring, runs live checks, restarts services, executes backup/restore, or claims live status without verification."
+  }
+}

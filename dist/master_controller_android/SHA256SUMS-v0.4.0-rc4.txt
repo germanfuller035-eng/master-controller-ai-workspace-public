@@ -1,0 +1,2 @@
+e3c9487b842c8658bd484ceef27aefc13da5cd4a9a315fbb46e6646d4895e597 *MasterController-release-v0.4.0-rc4.apk
+d6f24819b03ba2a3e1be598827a968eabbe804434663eae449dc45a14a607eab *MasterController-release-v0.4.0-rc4.aab

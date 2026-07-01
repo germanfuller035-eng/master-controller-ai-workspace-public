@@ -1,0 +1,14 @@
+{
+  "_note": "E1C1 fixture. NON-SECRET placeholder values only. Used to test KEY-NAME presence detection. No real credentials. These are not read from process env / dotenv / secret store — they are passed explicitly via context.env in offline tests.",
+  "EMAIL_PROVIDER": "placeholder-provider",
+  "EMAIL_SMTP_HOST": "placeholder-host",
+  "EMAIL_SMTP_PORT": "placeholder-port",
+  "EMAIL_SMTP_SECURE": "placeholder-secure",
+  "EMAIL_SMTP_USER": "placeholder-user",
+  "EMAIL_SMTP_PASS": "placeholder-not-a-real-secret",
+  "EMAIL_FROM": "placeholder-from",
+  "EMAIL_FROM_LABEL": "Дмитрий Смагин",
+  "EMAIL_TEST_TO": "owner-test-recipient@example.com",
+  "EMAIL_REAL_SEND_ENABLED": "false",
+  "EMAIL_TEST_ONLY": "true"
+}

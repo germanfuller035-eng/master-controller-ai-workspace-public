@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "synthetic": true,
+  "lead_id": "synthetic_lead_missing_contact",
+  "source": {
+    "type": "synthetic_fixture",
+    "external_access": false
+  },
+  "identity": {
+    "organization_name": "Synthetic Missing Contact Studio",
+    "domain_reference": "synthetic-missing-contact.example.invalid",
+    "synthetic_registry_id": "registry-synthetic_lead_missing_contact",
+    "industry": "synthetic services"
+  },
+  "contact": {
+    "website_reference": "synthetic-missing-contact.example.invalid/home",
+    "consent_basis": "synthetic_fixture_only"
+  },
+  "signals": {
+    "website_problem": 1,
+    "lead_capture_problem": 5,
+    "response_handling_problem": 1,
+    "trust_problem": 1,
+    "audit_uncertainty": 1
+  },
+  "qualification": {
+    "business_relevance": 3,
+    "urgency": 2,
+    "budget_signal": 2
+  },
+  "roi_inputs": {
+    "monthly_leads": 12,
+    "average_value_units": 100,
+    "expected_improvement_ratio": 0.12
+  },
+  "evidence": [
+    {
+      "id": "ev-synthetic_lead_missing_contact-fixture",
+      "source": "synthetic_lead_fixture",
+      "claim": "Synthetic fixture defines Synthetic Missing Contact Studio problem signals."
+    }
+  ],
+  "site_fixture": "synthetic_site_no_lead_capture"
+}

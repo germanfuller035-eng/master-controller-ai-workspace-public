@@ -1,0 +1,11 @@
+{
+  "scenario": "H",
+  "name": "Capacity blocked",
+  "ok": true,
+  "steps": [
+    "campaign ready but owner/delivery capacity unconfirmed",
+    "CAPACITY_BLOCK",
+    "not activated"
+  ],
+  "error_code": "CAPACITY_BLOCK"
+}

@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MCP Gateway Tool Audit Event",
+  "type": "object",
+  "required": ["sequence", "timestamp", "request_id", "task_id", "actor", "adapter_id", "action", "resource", "risk", "policy_decision", "result", "artifact_ids", "payload_hash", "previous_hash", "current_hash"]
+}

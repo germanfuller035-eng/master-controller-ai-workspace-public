@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MCP Gateway Tool Result",
+  "type": "object",
+  "required": ["status", "data", "artifact_ids"],
+  "properties": {
+    "status": {"type": "string"},
+    "data": {},
+    "artifact_ids": {"type": "array", "items": {"type": "string"}}
+  }
+}

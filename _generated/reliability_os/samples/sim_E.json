@@ -1,0 +1,10 @@
+{
+  "scenario": "E",
+  "production_affected": false,
+  "name": "Scheduler stale",
+  "ok": true,
+  "steps": [
+    "scheduler_stale -> detect:no job interval*2 health:STALE alert:a_scheduler_stale runbook:rb_scheduler_stale"
+  ],
+  "alert": "a_scheduler_stale"
+}

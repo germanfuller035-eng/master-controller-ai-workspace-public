@@ -1,0 +1,38 @@
+{
+  "schema": "ai_hq.context_pack.v1",
+  "project_id": "file_vault",
+  "agent": "claude",
+  "task": "final validation",
+  "generated_ts": "20260617_025903",
+  "max_size": 16000,
+  "actual_size": 6028,
+  "truncated": false,
+  "estimated_tokens": 1507,
+  "sources": [
+    {
+      "path": "20_file_vault_index/FILE_INTAKE_PIPELINE.md",
+      "sha256": "76eb01db0804edbd52ff984cc01dc5fc835bd2621c20b7e19809735c8ab380a2",
+      "redactions": 0,
+      "freshness": "STALE"
+    },
+    {
+      "path": "20_file_vault_index/FILE_VAULT_OPERATING_PROTOCOL.md",
+      "sha256": "1911b45005ab7590400c3cd10f2a42b2ab42db217ade58f5e67bf951a2078cda",
+      "redactions": 0,
+      "freshness": "STALE"
+    },
+    {
+      "path": "20_file_vault_index/FILE_VAULT_STRUCTURE.md",
+      "sha256": "c9e1e2154e88d69288f0b53bce20b079f0e40c034bf35bac547ff54b98bc5514",
+      "redactions": 0,
+      "freshness": "STALE"
+    }
+  ],
+  "source_count": 3,
+  "sensitive_excluded": [
+    "06_projects/file_vault/PROJECT_PASSPORT.md"
+  ],
+  "secret_findings_in_pack": [],
+  "content_sha256": "b9bd50ab18da18abc263d32d15bd19ee3cf420b4d15280f7a43190c39aaa54d0",
+  "freshness_days": 7
+}

@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-26",
+  "session": "WEB_COMMAND_CENTER_ANDROID_OWNER_CONTROL_V1",
+  "scope": "LOCAL_SYNTHETIC_CONTRACT_ONLY",
+  "synthetic_only": true,
+  "owner_decision_surface_only": true,
+  "sections": [
+    {
+      "id": "today_decisions",
+      "label": "Today & Decisions",
+      "panels": ["today", "decisions", "approvals", "stop"]
+    },
+    {
+      "id": "commerce",
+      "label": "Commerce",
+      "panels": ["commercial_funnel", "leads", "offer_preview", "replies", "deals"]
+    },
+    {
+      "id": "ai_circuit",
+      "label": "AI Circuit",
+      "panels": ["agents", "workflows", "risk", "approvals"]
+    },
+    {
+      "id": "knowledge",
+      "label": "Knowledge",
+      "panels": ["memory_proposals", "knowledge_status"]
+    },
+    {
+      "id": "system",
+      "label": "System",
+      "panels": ["costs", "incidents", "feature_flags", "health", "stop"]
+    }
+  ],
+  "safety": {
+    "production_web_deploy": "OFF",
+    "outbound_email": "OFF",
+    "outbound_social": "OFF",
+    "auto_safe": "OFF",
+    "voice": "OFF",
+    "browser_actions": "OFF",
+    "payments": "OFF",
+    "production_db_write": "OFF"
+  }
+}

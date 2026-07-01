@@ -1,0 +1,36 @@
+{
+  "schema": "analytics_os.reconcile_fixture.v1",
+  "note": "Synthetic cross-system reconciliation scenario. Intentionally contains violations for detection tests. No real data.",
+  "deals": [
+    {"deal_id": "TEST_d01", "status": "WON", "value": 10000},
+    {"deal_id": "TEST_d02", "status": "WON", "value": 8000},
+    {"deal_id": "TEST_d03", "status": "LOST"}
+  ],
+  "projects": [
+    {"project_id": "TEST_p01", "deal_id": "TEST_d01", "state": "ACCEPTED"},
+    {"project_id": "TEST_p02", "deal_id": "TEST_d02", "state": "IN_PROGRESS"}
+  ],
+  "invoices": [
+    {"invoice_id": "TEST_i01", "project_id": "TEST_p01", "status": "PAID"},
+    {"invoice_id": "TEST_i99", "project_id": "TEST_pX", "status": "PAID"}
+  ],
+  "payments": [
+    {"invoice_id": "TEST_i01", "amount": 10000}
+  ],
+  "customers": [
+    {"customer_ref_id": "TEST_cs01", "status": "HEALTHY", "project_ids": ["TEST_p01"], "renewal_eligible": true, "open_critical_support": true},
+    {"customer_ref_id": "TEST_cs02", "status": "ADOPTION", "project_ids": ["TEST_p02"]}
+  ],
+  "products": [
+    {"product_id": "mini_audit", "state": "ACTIVE", "owner_approved_readiness": true},
+    {"product_id": "lead_system", "state": "ACTIVE", "owner_approved_readiness": false}
+  ],
+  "dashboard_counts": {"won_deals": 2, "active_customers": 3},
+  "source_counts": {"won_deals": 2, "active_customers": 2},
+  "sends": [
+    {"id": "s1", "window": "historical", "test_only": false, "in_commercial_funnel": false},
+    {"id": "s2", "test_only": true, "in_commercial_funnel": true}
+  ],
+  "finance": {"profit_equals_payment": true},
+  "mini_audit": {"macro_phases": 5, "detailed_stages": 18, "uses_contradictory_legacy_description": false}
+}

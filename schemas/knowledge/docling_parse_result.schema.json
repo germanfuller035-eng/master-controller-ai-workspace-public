@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "docling_parse_result",
+  "type": "object",
+  "required": ["parse_id", "artifact_id", "synthetic", "pages", "text_chunks", "parser_status"],
+  "properties": {
+    "parse_id": {"type": "string"},
+    "artifact_id": {"type": "string"},
+    "synthetic": {"type": "boolean"},
+    "pages": {"type": "array"},
+    "text_chunks": {"type": "array"},
+    "parser_status": {"type": "string"}
+  },
+  "additionalProperties": true
+}

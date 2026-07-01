@@ -1,0 +1,12 @@
+{
+  "scenario": "F",
+  "name": "Duplicate idempotent command",
+  "ok": true,
+  "steps": [
+    "command with idempotency_key=K",
+    "duplicate command same K + same payload",
+    "returns same result (DUPLICATE safe)",
+    "no double mutation"
+  ],
+  "error_code": "DUPLICATE"
+}

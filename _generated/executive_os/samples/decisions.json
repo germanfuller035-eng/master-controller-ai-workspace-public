@@ -1,0 +1,493 @@
+{
+  "total": 19,
+  "ready_for_owner": 8,
+  "needs_data": 11,
+  "queue": [
+    {
+      "decision_id": "d_weekly_capacity",
+      "question": "Confirm owner weekly available hours",
+      "why_it_matters": "Capacity, break-even, allocation all blocked without this.",
+      "options": [
+        "10h",
+        "20h",
+        "30h",
+        "other"
+      ],
+      "evidence": "NONE — gather before owner review",
+      "recommendation": "no recommendation (insufficient data)",
+      "consequences": {
+        "impact": "high",
+        "reversibility": "reversible"
+      },
+      "risk": "high cost of delay",
+      "required_owner_input": [
+        "10h",
+        "20h",
+        "30h",
+        "other"
+      ],
+      "default_safe_action": "defer until data complete",
+      "deadline": null,
+      "score": 11,
+      "status": "NEEDS_DATA",
+      "owner_required": true
+    },
+    {
+      "decision_id": "d_cash_balance",
+      "question": "Provide current cash balances",
+      "why_it_matters": "Cashflow/runway need opening cash.",
+      "options": [
+        "provide"
+      ],
+      "evidence": "NONE — gather before owner review",
+      "recommendation": "no recommendation (insufficient data)",
+      "consequences": {
+        "impact": "high",
+        "reversibility": "reversible"
+      },
+      "risk": "high cost of delay",
+      "required_owner_input": [
+        "provide"
+      ],
+      "default_safe_action": "defer until data complete",
+      "deadline": null,
+      "score": 11,
+      "status": "NEEDS_DATA",
+      "owner_required": true
+    },
+    {
+      "decision_id": "d_monthly_target",
+      "question": "Confirm monthly revenue target",
+      "why_it_matters": "money_revenue_board shows 300k OWNER_TARGET; confirm or adjust.",
+      "options": [
+        "300k",
+        "500k",
+        "other"
+      ],
+      "evidence": "09_dashboards/money_revenue_board.md",
+      "recommendation": "300k",
+      "consequences": {
+        "impact": "high",
+        "reversibility": "reversible"
+      },
+      "risk": "manageable",
+      "required_owner_input": [
+        "300k",
+        "500k",
+        "other"
+      ],
+      "default_safe_action": "defer until data complete",
+      "deadline": null,
+      "score": 8,
+      "status": "READY_FOR_OWNER",
+      "owner_required": true
+    },
+    {
+      "decision_id": "d_product_status",
+      "question": "Approve product catalog statuses",
+      "why_it_matters": "Only Mini Audit ACTIVE; approve readiness of DRAFT products.",
+      "options": [
+        "approve as-is",
+        "promote some",
+        "keep DRAFT"
+      ],
+      "evidence": "tools/revenue_os/data/product_catalog.json",
+      "recommendation": "keep DRAFT until pilot",
+      "consequences": {
+        "impact": "high",
+        "reversibility": "reversible"
+      },
+      "risk": "manageable",
+      "required_owner_input": [
+        "approve as-is",
+        "promote some",
+        "keep DRAFT"
+      ],
+      "default_safe_action": "defer until data complete",
+      "deadline": null,
+      "score": 8,
+      "status": "READY_FOR_OWNER",
+      "owner_required": true
+    },
+    {
+      "decision_id": "d_pilot_readiness",
+      "question": "Approve product(s) for pilot",
+      "why_it_matters": "READY_FOR_PILOT requires owner approval.",
+      "options": [
+        "mini_audit pilot",
+        "wait"
+      ],
+      "evidence": "readiness gate",
+      "recommendation": "mini_audit pilot",
+      "consequences": {
+        "impact": "high",
+        "reversibility": "reversible"
+      },
+      "risk": "manageable",
+      "required_owner_input": [
+        "mini_audit pilot",
+        "wait"
+      ],
+      "default_safe_action": "defer until data complete",
+      "deadline": null,
+      "score": 8,
+      "status": "READY_FOR_OWNER",
+      "owner_required": true
+    },
+    {
+      "decision_id": "d_first_commercial_cycle",
+      "question": "Approve first controlled commercial cycle",
+      "why_it_matters": "First real outreach batch — separate explicit approval + daily limit.",
+      "options": [
+        "approve with limit",
+        "wait for soak"
+      ],
+      "evidence": "revenue 30-day plan",
+      "recommendation": "wait for soak",
+      "consequences": {
+        "impact": "high",
+        "reversibility": "partial"
+      },
+      "risk": "manageable",
+      "required_owner_input": [
+        "approve with limit",
+        "wait for soak"
+      ],
+      "default_safe_action": "defer until data complete",
+      "deadline": null,
+      "score": 8,
+      "status": "READY_FOR_OWNER",
+      "owner_required": true
+    },
+    {
+      "decision_id": "d_android_acceptance",
+      "question": "Android physical-device acceptance",
+      "why_it_matters": "Emulator != physical device; needs owner device smoke.",
+      "options": [
+        "run smoke",
+        "defer"
+      ],
+      "evidence": "ANDROID_RELEASE_COMPLETENESS_MATRIX",
+      "recommendation": "run smoke after soak",
+      "consequences": {
+        "impact": "high",
+        "reversibility": "reversible"
+      },
+      "risk": "manageable",
+      "required_owner_input": [
+        "run smoke",
+        "defer"
+      ],
+      "default_safe_action": "defer until data complete",
+      "deadline": null,
+      "score": 8,
+      "status": "READY_FOR_OWNER",
+      "owner_required": true
+    },
+    {
+      "decision_id": "d_telegram_acceptance",
+      "question": "Telegram owner acceptance",
+      "why_it_matters": "Owner interaction acceptance after soak.",
+      "options": [
+        "accept",
+        "defer"
+      ],
+      "evidence": "OWNER_ACCEPTANCE_CHECKLIST",
+      "recommendation": "after soak",
+      "consequences": {
+        "impact": "high",
+        "reversibility": "reversible"
+      },
+      "risk": "manageable",
+      "required_owner_input": [
+        "accept",
+        "defer"
+      ],
+      "default_safe_action": "defer until data complete",
+      "deadline": null,
+      "score": 8,
+      "status": "READY_FOR_OWNER",
+      "owner_required": true
+    },
+    {
+      "decision_id": "d_proposed_docs_apply",
+      "question": "Apply proposed canonical docs after soak",
+      "why_it_matters": "5 OS layers produced proposed docs (owner-gated apply_canonical).",
+      "options": [
+        "apply all",
+        "apply selectively",
+        "wait"
+      ],
+      "evidence": "apply manifests",
+      "recommendation": "apply after soak",
+      "consequences": {
+        "impact": "high",
+        "reversibility": "reversible"
+      },
+      "risk": "manageable",
+      "required_owner_input": [
+        "apply all",
+        "apply selectively",
+        "wait"
+      ],
+      "default_safe_action": "defer until data complete",
+      "deadline": null,
+      "score": 8,
+      "status": "READY_FOR_OWNER",
+      "owner_required": true
+    },
+    {
+      "decision_id": "d_product_prices",
+      "question": "Approve product prices",
+      "why_it_matters": "Confirm OWNER_TARGET price ranges.",
+      "options": [
+        "approve",
+        "revise"
+      ],
+      "evidence": "pricing_scope_matrix",
+      "recommendation": "no recommendation (insufficient data)",
+      "consequences": {
+        "impact": "high",
+        "reversibility": "reversible"
+      },
+      "risk": "manageable",
+      "required_owner_input": [
+        "approve",
+        "revise"
+      ],
+      "default_safe_action": "defer until data complete",
+      "deadline": null,
+      "score": 7,
+      "status": "NEEDS_DATA",
+      "owner_required": true
+    },
+    {
+      "decision_id": "d_tax_regime",
+      "question": "Confirm tax regime and rate",
+      "why_it_matters": "Tax reserve model needs regime/rate.",
+      "options": [
+        "USN 6%",
+        "USN 15%",
+        "other"
+      ],
+      "evidence": "NONE — gather before owner review",
+      "recommendation": "no recommendation (insufficient data)",
+      "consequences": {
+        "impact": "high",
+        "reversibility": "reversible"
+      },
+      "risk": "manageable",
+      "required_owner_input": [
+        "USN 6%",
+        "USN 15%",
+        "other"
+      ],
+      "default_safe_action": "defer until data complete",
+      "deadline": null,
+      "score": 7,
+      "status": "NEEDS_DATA",
+      "owner_required": true
+    },
+    {
+      "decision_id": "d_closed_deals",
+      "question": "Confirm real closed deals/payments",
+      "why_it_matters": "Only Edera 10000 confirmed.",
+      "options": [
+        "provide list"
+      ],
+      "evidence": "payment_and_receipt_control_sop",
+      "recommendation": "no recommendation (insufficient data)",
+      "consequences": {
+        "impact": "high",
+        "reversibility": "reversible"
+      },
+      "risk": "manageable",
+      "required_owner_input": [
+        "provide list"
+      ],
+      "default_safe_action": "defer until data complete",
+      "deadline": null,
+      "score": 7,
+      "status": "NEEDS_DATA",
+      "owner_required": true
+    },
+    {
+      "decision_id": "d_startpack_conflict",
+      "question": "Resolve Start Pack price conflict",
+      "why_it_matters": "50k vs 90-250k across source files.",
+      "options": [
+        "50k entry",
+        "90-250k",
+        "tiered"
+      ],
+      "evidence": "three_sellable_offers vs pricing_scope_matrix",
+      "recommendation": "tiered",
+      "consequences": {
+        "impact": "medium",
+        "reversibility": "reversible"
+      },
+      "risk": "manageable",
+      "required_owner_input": [
+        "50k entry",
+        "90-250k",
+        "tiered"
+      ],
+      "default_safe_action": "defer until data complete",
+      "deadline": null,
+      "score": 3,
+      "status": "READY_FOR_OWNER",
+      "owner_required": true
+    },
+    {
+      "decision_id": "d_case_examples",
+      "question": "Approve case-study examples",
+      "why_it_matters": "Which delivered work can be referenced.",
+      "options": [
+        "Edera",
+        "none yet"
+      ],
+      "evidence": "NONE — gather before owner review",
+      "recommendation": "no recommendation (insufficient data)",
+      "consequences": {
+        "impact": "medium",
+        "reversibility": "reversible"
+      },
+      "risk": "manageable",
+      "required_owner_input": [
+        "Edera",
+        "none yet"
+      ],
+      "default_safe_action": "defer until data complete",
+      "deadline": null,
+      "score": 2,
+      "status": "NEEDS_DATA",
+      "owner_required": true
+    },
+    {
+      "decision_id": "d_expense_classification",
+      "question": "Classify ambiguous business/personal expenses",
+      "why_it_matters": "Separation validator flags ambiguous flows.",
+      "options": [
+        "classify each"
+      ],
+      "evidence": "NONE — gather before owner review",
+      "recommendation": "no recommendation (insufficient data)",
+      "consequences": {
+        "impact": "medium",
+        "reversibility": "reversible"
+      },
+      "risk": "manageable",
+      "required_owner_input": [
+        "classify each"
+      ],
+      "default_safe_action": "defer until data complete",
+      "deadline": null,
+      "score": 2,
+      "status": "NEEDS_DATA",
+      "owner_required": true
+    },
+    {
+      "decision_id": "d_git_remote",
+      "question": "Choose Git remote destination",
+      "why_it_matters": "Where to publish branches/bundles.",
+      "options": [
+        "private GitHub",
+        "self-hosted",
+        "none"
+      ],
+      "evidence": "NONE — gather before owner review",
+      "recommendation": "no recommendation (insufficient data)",
+      "consequences": {
+        "impact": "medium",
+        "reversibility": "reversible"
+      },
+      "risk": "manageable",
+      "required_owner_input": [
+        "private GitHub",
+        "self-hosted",
+        "none"
+      ],
+      "default_safe_action": "defer until data complete",
+      "deadline": null,
+      "score": 2,
+      "status": "NEEDS_DATA",
+      "owner_required": true
+    },
+    {
+      "decision_id": "d_branch_publication",
+      "question": "Approve branch/tag publication",
+      "why_it_matters": "Publish OS branches + v0.4.0-rc1 tag.",
+      "options": [
+        "publish",
+        "keep local"
+      ],
+      "evidence": "NONE — gather before owner review",
+      "recommendation": "no recommendation (insufficient data)",
+      "consequences": {
+        "impact": "medium",
+        "reversibility": "partial"
+      },
+      "risk": "manageable",
+      "required_owner_input": [
+        "publish",
+        "keep local"
+      ],
+      "default_safe_action": "defer until data complete",
+      "deadline": null,
+      "score": 2,
+      "status": "NEEDS_DATA",
+      "owner_required": true
+    },
+    {
+      "decision_id": "d_local_ai_budget",
+      "question": "Local AI workstation budget",
+      "why_it_matters": "Future HQ workstation hardware.",
+      "options": [
+        "approve budget",
+        "defer"
+      ],
+      "evidence": "NONE — gather before owner review",
+      "recommendation": "no recommendation (insufficient data)",
+      "consequences": {
+        "impact": "medium",
+        "reversibility": "reversible"
+      },
+      "risk": "manageable",
+      "required_owner_input": [
+        "approve budget",
+        "defer"
+      ],
+      "default_safe_action": "defer until data complete",
+      "deadline": null,
+      "score": 2,
+      "status": "NEEDS_DATA",
+      "owner_required": true
+    },
+    {
+      "decision_id": "d_lead_hunter_credentials",
+      "question": "Lead Hunter credential purchase (2GIS/DataForSEO/Yandex)",
+      "why_it_matters": "External API credentials for discovery scale.",
+      "options": [
+        "purchase",
+        "defer"
+      ],
+      "evidence": "Lead Hunter integration report",
+      "recommendation": "no recommendation (insufficient data)",
+      "consequences": {
+        "impact": "medium",
+        "reversibility": "reversible"
+      },
+      "risk": "manageable",
+      "required_owner_input": [
+        "purchase",
+        "defer"
+      ],
+      "default_safe_action": "defer until data complete",
+      "deadline": null,
+      "score": 2,
+      "status": "NEEDS_DATA",
+      "owner_required": true
+    }
+  ],
+  "note": "Decisions are never auto-approved. Owner decides."
+}

@@ -1,0 +1,28 @@
+{
+  "synthetic": true,
+  "incidents": [
+    {
+      "incident_id": "inc-synthetic-delay",
+      "severity": "LOW",
+      "status": "OPEN",
+      "next_action": "Review synthetic workflow queue",
+      "evidence_ids": ["ev-owner-control-synthetic"]
+    }
+  ],
+  "health": {
+    "overall": "PASS",
+    "production_checked": false,
+    "evidence_ids": ["ev-owner-control-synthetic"]
+  },
+  "next_action": {
+    "id": "health-next-review",
+    "title": "Review synthetic low severity incident"
+  },
+  "evidence": [
+    {
+      "id": "ev-owner-control-synthetic",
+      "source": "synthetic_fixture",
+      "claim": "Local synthetic owner-control evidence."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-26",
+  "session": "VOLTAGENT_RUNTIME_MODEL_ROUTER_AND_COST_GOVERNOR_V1",
+  "state_must_be_serializable": true,
+  "allowed_states": ["PLANNED", "ROUTED", "RUNNING", "SUSPENDED", "RESUMED", "STOPPED", "CANCELLED", "COMPLETED", "FAILED"],
+  "resume_requires_stop_inactive": true,
+  "resume_restores": ["task_id", "lifecycle_state", "step_index", "retry_count", "budget_spent_rub", "evidence_refs"],
+  "excluded_from_state": ["provider_credentials", "raw_secret_values", "production_tokens", "persistent_memory"],
+  "memory_enabled": false,
+  "production_capabilities": 0
+}

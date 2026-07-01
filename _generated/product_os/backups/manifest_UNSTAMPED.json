@@ -1,0 +1,122 @@
+{
+  "schema": "ai_hq.backup_manifest.v1",
+  "generated_ts": "UNSTAMPED",
+  "src": "D:\\AI_WORKSPACE_WORKTREES\\product-os-service-productization-v1\\tools\\product_os",
+  "file_count": 22,
+  "total_size": 78161,
+  "excluded_secret_files": 0,
+  "git_head": "d0da81968c9b96713aeeec516e8a1366cb734cda",
+  "entries": [
+    {
+      "path": "apply_manifest.mjs",
+      "size": 2867,
+      "sha256": "79bd84cf95e2c77e975c778ab15318de047d455367f7c2950c6477e8d41b3156"
+    },
+    {
+      "path": "product.mjs",
+      "size": 5993,
+      "sha256": "730b280142fac6635f12dc4dbea86da1bd4fddc92be8576c5d1deba18d63681e"
+    },
+    {
+      "path": "tests/product.test.mjs",
+      "size": 7374,
+      "sha256": "99b4709ea1f0be1f72626fada409360590796d3c02c93c3c0bb8265fde4712d1"
+    },
+    {
+      "path": "tests/run_all.mjs",
+      "size": 871,
+      "sha256": "df42ba81ff32be3a8f9458f5a254fa6f633561ef711c14b7d8a5e66ac20ad833"
+    },
+    {
+      "path": "tests/security.test.mjs",
+      "size": 3247,
+      "sha256": "727819cc3d78bbf2a9d438a19997130141fb21ddcc11369d3a7ce3e1fd3302f5"
+    },
+    {
+      "path": "schemas/domain.mjs",
+      "size": 5462,
+      "sha256": "e604b85548003198105c1179f149b0da2aa9dad5f81ab54ff7de18262a9ee182"
+    },
+    {
+      "path": "lib/catalog.mjs",
+      "size": 937,
+      "sha256": "a42ce13223a3ed20d28fc77139e6402efe50d99978d2ac5cb7f782317d7d772c"
+    },
+    {
+      "path": "lib/claims.mjs",
+      "size": 2994,
+      "sha256": "b21d1a30ffb19e948a19e26f339741073da47e6dd89588e29a1975ba3eb83772"
+    },
+    {
+      "path": "lib/common.mjs",
+      "size": 2757,
+      "sha256": "e2779389f601383ce4e62d8d47b06a551ff054a0bcba8b3184e7249d38bdcb3b"
+    },
+    {
+      "path": "lib/components.mjs",
+      "size": 2603,
+      "sha256": "962ee75ea48b4341083233a345f860af2e30cd26a0c550440d7debc342d620dd"
+    },
+    {
+      "path": "lib/consistency.mjs",
+      "size": 3779,
+      "sha256": "a9ff41b512597790124ca783d31a23377705c21679c3a3cf5cf9ea36aec94098"
+    },
+    {
+      "path": "lib/dashboard.mjs",
+      "size": 4976,
+      "sha256": "118b986982a54ee77adecd0eee9faf86c352e75e6f908ba6b7c04b0aff038426"
+    },
+    {
+      "path": "lib/demo.mjs",
+      "size": 3032,
+      "sha256": "81a6f85a22061d5fbcd4a490fe7726459a4bda396724393d0e3ea09f51b79d0e"
+    },
+    {
+      "path": "lib/pilot.mjs",
+      "size": 3478,
+      "sha256": "6075e305c8460c40d1d31eeb4baa802af4b370ab49439e3ed755dbade0a866ce"
+    },
+    {
+      "path": "lib/productize.mjs",
+      "size": 2860,
+      "sha256": "7bdb2e9d8067587550f5fbf258b2adbdd3985bfbc987cdcf6013395261d20488"
+    },
+    {
+      "path": "lib/qa.mjs",
+      "size": 2558,
+      "sha256": "b60b27b70c9ff6f066f84c4482451a3c9547439e012d3cdfa88d8507e7fff0ba"
+    },
+    {
+      "path": "lib/readiness.mjs",
+      "size": 5036,
+      "sha256": "2721bfad2afa66393c4614fb5aa44970747b5ff6ed7bc7525b5b73fcb311c511"
+    },
+    {
+      "path": "lib/spec.mjs",
+      "size": 4339,
+      "sha256": "a12a4cebf2a4ce1a48009b1238b5cde6292d7a3ce829292924e43cb874982b9f"
+    },
+    {
+      "path": "lib/validators.mjs",
+      "size": 3103,
+      "sha256": "f689055b4ac361cf7e5fd22db58e2e39ecd3779c89cf9ff684737dc6e72add5f"
+    },
+    {
+      "path": "lib/versioning.mjs",
+      "size": 2159,
+      "sha256": "4c4c54bbca39bcee244a58574c0ed5796a84f94d85eac67aa38dc662a79d7739"
+    },
+    {
+      "path": "fixtures/product.json",
+      "size": 2992,
+      "sha256": "29f5b0da5db19fd73ceb921fc90586ebaf9921a3374c0e02101f79f1dfffa43f"
+    },
+    {
+      "path": "data/product_packs.json",
+      "size": 4744,
+      "sha256": "bd149e74b4b7e4ce75940d19d755dbb9524cc618acdbb447a8ac3d40d3e36f8d"
+    }
+  ],
+  "restore_instructions": "Verify with: for each entry sha256sum -c. Restore by copying files; secrets restored separately from D:\\AI_SECRETS encrypted store."
+}

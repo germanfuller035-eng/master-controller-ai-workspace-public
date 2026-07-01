@@ -1,0 +1,82 @@
+{
+  "schema": "ai_hq.file_intake.v1",
+  "generated_ts": "20260617_025903",
+  "incoming": "tools/ai_hq/fixtures/incoming",
+  "mode": "DRY_RUN",
+  "totals": {
+    "files": 5,
+    "duplicates": 1,
+    "sensitive": 1,
+    "to_review_queue": 1
+  },
+  "records": [
+    {
+      "path": "holiday.jpg",
+      "size": 19,
+      "sha256": "054283f4a358218c5887baaed380a0708bd871a1aeb8b4a2714412f90301a0e1",
+      "duplicate_of": null,
+      "type": "photo",
+      "sensitivity": "normal",
+      "suggested_project": "review_queue",
+      "proposed_destination": "D:\\AI_FILE_VAULT\\04_photos",
+      "obsidian_index_entry": "20_file_vault_index/cards/holiday.jpg.md",
+      "action": "DRY_RUN_PROPOSE_ONLY"
+    },
+    {
+      "path": "kgbi_audit_report.pdf",
+      "size": 17,
+      "sha256": "ca7d62c27cfeff4756ecb34b67fa415d64588444021aa9c68b74c55764488d82",
+      "duplicate_of": null,
+      "type": "document",
+      "sensitivity": "normal",
+      "suggested_project": "kgbi_b2b_audit",
+      "proposed_destination": "D:\\AI_FILE_VAULT\\01_documents",
+      "obsidian_index_entry": "20_file_vault_index/cards/kgbi_audit_report.pdf.md",
+      "action": "DRY_RUN_PROPOSE_ONLY"
+    },
+    {
+      "path": "kgbi_audit_report_copy.pdf",
+      "size": 17,
+      "sha256": "ca7d62c27cfeff4756ecb34b67fa415d64588444021aa9c68b74c55764488d82",
+      "duplicate_of": "kgbi_audit_report.pdf",
+      "type": "document",
+      "sensitivity": "normal",
+      "suggested_project": "kgbi_b2b_audit",
+      "proposed_destination": "D:\\AI_FILE_VAULT\\01_documents",
+      "obsidian_index_entry": "20_file_vault_index/cards/kgbi_audit_report_copy.pdf.md",
+      "action": "DRY_RUN_PROPOSE_ONLY"
+    },
+    {
+      "path": "medical_passport_scan.pdf",
+      "size": 23,
+      "sha256": "bd8712dcea2d35efe10ca8129c72213ab827fe62f74c079df818a380a9ad6ba6",
+      "duplicate_of": null,
+      "type": "document",
+      "sensitivity": "sensitive",
+      "suggested_project": "sensitive_review",
+      "proposed_destination": "D:\\AI_FILE_VAULT\\00_INBOX_RED_APPROVAL_REQUIRED",
+      "obsidian_index_entry": "20_file_vault_index/cards/RED_medical_passport_scan.pdf.md (index-only, approval_required)",
+      "action": "DRY_RUN_PROPOSE_ONLY"
+    },
+    {
+      "path": "revenue_invoice.txt",
+      "size": 18,
+      "sha256": "10e7cd556470cc40d68a5692aa056b4828e57e0d445744c169ec2550787e7ef7",
+      "duplicate_of": null,
+      "type": "document",
+      "sensitivity": "normal",
+      "suggested_project": "revenue_os",
+      "proposed_destination": "D:\\AI_FILE_VAULT\\01_documents",
+      "obsidian_index_entry": "20_file_vault_index/cards/revenue_invoice.txt.md",
+      "action": "DRY_RUN_PROPOSE_ONLY"
+    }
+  ],
+  "safety": {
+    "files_moved": 0,
+    "files_deleted": 0,
+    "files_renamed": 0,
+    "ocr_performed": 0,
+    "files_sent": 0,
+    "content_read_for_sensitive": 0
+  }
+}

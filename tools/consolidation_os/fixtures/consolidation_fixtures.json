@@ -1,0 +1,32 @@
+{
+  "schema": "consolidation.fixtures.v1",
+  "version": 1,
+  "note": "MP44 — 25 synthetic consolidation fixtures. No real data.",
+  "scenarios": [
+    { "id": "f01_linear_full_chain", "ancestry": { "result": { "FULL_CHAIN_LINEAR": "YES", "ALL_REQUIRED_HEADS_INCLUDED": "YES", "LOST_COMMITS": 0 }, "chain": [{ "system": "X", "is_ancestor_of_a6048a8": true }] }, "expect": { "valid": true } },
+    { "id": "f02_missing_ancestor", "ancestry": { "result": { "FULL_CHAIN_LINEAR": "YES", "ALL_REQUIRED_HEADS_INCLUDED": "NO", "LOST_COMMITS": 0 }, "chain": [] }, "expect": { "valid": false } },
+    { "id": "f03_lost_commit", "ancestry": { "result": { "FULL_CHAIN_LINEAR": "YES", "ALL_REQUIRED_HEADS_INCLUDED": "YES", "LOST_COMMITS": 2 }, "chain": [] }, "expect": { "valid": false } },
+    { "id": "f04_superseded_branch", "ancestry": { "result": { "FULL_CHAIN_LINEAR": "YES", "ALL_REQUIRED_HEADS_INCLUDED": "YES", "LOST_COMMITS": 0, "SUPERSEDED_BRANCHES": 1 }, "chain": [] }, "expect": { "valid": true, "retained": true } },
+    { "id": "f05_duplicate_project_id", "system_registry": { "systems": [{ "system_id": "dup", "canonical_source": "a" }, { "system_id": "dup", "canonical_source": "b" }] }, "expect": { "valid": false } },
+    { "id": "f06_duplicate_canonical_writer", "system_registry": { "source_of_truth_matrix": { "entities": [{ "entity": "lead", "canonical_writer": ["a", "b"] }], "duplicate_canonical_writers": 1 } }, "expect": { "valid": false } },
+    { "id": "f07_doc_exact_duplicate", "docs": { "totals": { "collisions": 0, "exact_duplicate_content": 1 } }, "expect": { "valid": false } },
+    { "id": "f08_doc_semantic_conflict", "docs": { "totals": { "collisions": 1, "exact_duplicate_content": 0 } }, "expect": { "valid": false } },
+    { "id": "f09_doc_stale_source", "docs": { "totals": { "collisions": 0, "exact_duplicate_content": 0, "stale_proposals": 1 } }, "expect": { "valid": true, "note": "stale flagged not blocking" } },
+    { "id": "f10_owner_decision_unresolved", "decision": { "decision_id": "d", "owner_status": "OWNER_DECISION_REQUIRED" }, "expect": { "valid": true } },
+    { "id": "f11_product_recommendation_vs_status", "product": { "readiness": "recommended", "canonical_status": "PLANNED" }, "expect": { "separated": true } },
+    { "id": "f12_capacity_unknown", "capacity": "UNKNOWN", "expect": { "blocks_launch": true } },
+    { "id": "f13_security_gate_not_ready", "security": { "security_release_gate": "BLOCKED" }, "expect": { "blocks_launch": true } },
+    { "id": "f14_reliability_gate_not_ready", "reliability": { "release_readiness": "NOT_READY" }, "expect": { "blocks_launch": true } },
+    { "id": "f15_broken_link", "doc": { "link": "missing.md" }, "expect": { "invalid_link": true } },
+    { "id": "f16_stale_branch_reference", "doc": { "ref": "old-branch" }, "expect": { "flagged": true } },
+    { "id": "f17_secret_in_proposed_doc", "doc": { "content": "password = 'realsecret123456'" }, "expect": { "secret_detected": true } },
+    { "id": "f18_real_email_in_fixture", "fixture": { "content": "x@realcorp.com" }, "expect": { "real_data_detected": true } },
+    { "id": "f19_required_untracked_source", "source": { "untracked_required_source": 1 }, "expect": { "blocks": true } },
+    { "id": "f20_generated_backup_tracked", "artifact": "x.gitbundle", "expect": { "should_be_ignored": true } },
+    { "id": "f21_contract_version_mismatch", "contract": { "producer_version": "1", "consumer_version": "2" }, "expect": { "adapter_required": true } },
+    { "id": "f22_revision_mismatch", "mutation": { "expected_revision": 1, "current_revision": 2 }, "expect": { "conflict": true } },
+    { "id": "f23_android_dto_mismatch", "dto": { "missing": "revision" }, "expect": { "proposal": "ADD_FIELD" } },
+    { "id": "f24_telegram_callback_mismatch", "callback": { "missing": "revision" }, "expect": { "proposal": "CALLBACK_REVISION" } },
+    { "id": "f25_complete_clean_candidate", "release_candidate": { "production_changes": 0, "release_tag": "NONE", "status": "CANONICAL_CONSOLIDATION_CANDIDATE" }, "expect": { "valid": true } }
+  ]
+}

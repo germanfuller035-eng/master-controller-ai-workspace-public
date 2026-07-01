@@ -1,0 +1,27 @@
+{
+  "ok": true,
+  "label": "MANAGERIAL_INTERNAL (not official accounting)",
+  "period": "2026-06",
+  "currency": "RUB",
+  "accrual_view": {
+    "revenue": 10000,
+    "direct_costs": 500,
+    "gross_profit": 9500,
+    "operating_expenses": 1000,
+    "operating_result": 8500,
+    "finance_costs": 0,
+    "tax_reserve": 0,
+    "estimated_net_result": 8500
+  },
+  "cash_view": {
+    "revenue": 10000,
+    "direct_costs": 500,
+    "gross_profit": 9500,
+    "operating_expenses": 1000,
+    "operating_result": 8500,
+    "finance_costs": 0,
+    "tax_reserve": 0,
+    "estimated_net_result": 8500
+  },
+  "note": "Forecast/target entries excluded unless explicitly confirmed. Verify with accountant for statutory use."
+}

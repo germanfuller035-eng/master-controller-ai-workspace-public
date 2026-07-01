@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-26",
+  "session": "MASTER_CONTROLLER_MCP_GATEWAY_V1",
+  "registry_kind": "mcp_gateway_adapters",
+  "default_enabled": false,
+  "default_production_enabled": false,
+  "adapters": [
+    {
+      "id": "filesystem_read",
+      "implementation": "tools.mcp_gateway.adapters.filesystem_read.FilesystemReadAdapter",
+      "lifecycle": "LOCAL_SYNTHETIC_ALLOWED",
+      "enabled": false,
+      "production_enabled": false,
+      "max_risk": "R0",
+      "allowed_roots": ["assigned_worktree"],
+      "deny_path_traversal": true,
+      "deny_secret_files": true,
+      "write": false,
+      "allowed_actions": ["read_file"],
+      "denied_capabilities": ["unrestricted_shell", "direct_docker_socket", "direct_ssh", "direct_production_filesystem", "production_db_write", "outbound_send", "payments"]
+    },
+    {
+      "id": "git_read",
+      "implementation": "tools.mcp_gateway.adapters.git_read.GitReadAdapter",
+      "lifecycle": "LOCAL_SYNTHETIC_ALLOWED",
+      "enabled": false,
+      "production_enabled": false,
+      "max_risk": "R0",
+      "allowed_commands": ["status", "log", "show", "diff", "branch --show-current", "rev-parse"],
+      "denied_commands": ["commit", "merge", "push", "checkout", "reset", "clean", "tag", "rebase"],
+      "allowed_actions": ["status", "log", "show", "diff", "branch_show_current", "rev_parse"],
+      "denied_capabilities": ["unrestricted_shell", "direct_docker_socket", "direct_ssh", "direct_production_filesystem", "production_db_write", "outbound_send", "payments"]
+    },
+    {
+      "id": "artifact_local",
+      "implementation": "tools.mcp_gateway.adapters.artifact_local.ArtifactLocalAdapter",
+      "lifecycle": "LOCAL_SYNTHETIC_ALLOWED",
+      "enabled": false,
+      "production_enabled": false,
+      "max_risk": "R1",
+      "allowed_write_root": "_generated/mcp_gateway_v1/artifacts",
+      "hash_outputs": true,
+      "no_secret_content": true,
+      "allowed_actions": ["write_artifact"],
+      "denied_capabilities": ["unrestricted_shell", "direct_docker_socket", "direct_ssh", "direct_production_filesystem", "production_db_write", "outbound_send", "payments"]
+    },
+    {
+      "id": "test_runner_local",
+      "implementation": "tools.mcp_gateway.adapters.test_runner_local.TestRunnerLocalAdapter",
+      "lifecycle": "LOCAL_SYNTHETIC_ALLOWED",
+      "enabled": false,
+      "production_enabled": false,
+      "max_risk": "R1",
+      "allowlist": [
+        "python tools/foundation/validate_foundation.py",
+        "python tools/policies/validate_policy_security.py",
+        "python tools/policy_security/run_all_policy_security_tests.py",
+        "python tools/mcp_gateway/validate_mcp_gateway.py"
+      ],
+      "timeouts_required": true,
+      "cancellation_required": true,
+      "allowed_actions": ["run"],
+      "denied_capabilities": ["unrestricted_shell", "direct_docker_socket", "direct_ssh", "direct_production_filesystem", "production_db_write", "outbound_send", "payments"]
+    }
+  ],
+  "contract_only_adapters": [
+    {"id": "vps_health_read_contract", "lifecycle": "OFF", "implementation": "CONTRACT_ONLY", "production_enabled": false, "direct_ssh": false},
+    {"id": "mysql_read_contract", "lifecycle": "OFF", "implementation": "CONTRACT_ONLY", "production_enabled": false, "direct_credentials": false},
+    {"id": "github_read_contract", "lifecycle": "OFF", "implementation": "CONTRACT_ONLY", "production_enabled": false, "no_token_in_repo": true},
+    {"id": "mail_draft_contract", "lifecycle": "OFF", "implementation": "CONTRACT_ONLY", "production_enabled": false, "send": false},
+    {"id": "browser_contract", "lifecycle": "OFF", "implementation": "CONTRACT_ONLY", "production_enabled": false, "browser_actions": false}
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": "crm.contact.v1",
+  "synthetic": true,
+  "contact_id": "synthetic-contact-alpha",
+  "display_name": "Synthetic Contact Alpha",
+  "organization_name": "Synthetic Example Test Company",
+  "contact_reference": "synthetic-contact-alpha at reserved-example-test",
+  "domain_reference": "reserved-example-test",
+  "role": "synthetic_operations_contact",
+  "consent_basis": "synthetic_fixture_only",
+  "suppression_status": "CLEAR",
+  "stop_status": "CLEAR",
+  "crm_write_allowed": false,
+  "production_db_write_allowed": false
+}

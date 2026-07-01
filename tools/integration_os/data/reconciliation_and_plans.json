@@ -1,0 +1,117 @@
+{
+  "schema": "integration_os.reconciliation_and_plans.v1",
+  "note": "MP23-31 — Android/Telegram reconciliation, MC API gaps, compatibility matrix, adapter policy, migration model, branch plan, proposed-doc plan, legacy retirement plan. Analysis only; nothing merged/applied/deleted.",
+  "synthetic": true,
+
+  "android_reconciliation": {
+    "note": "MP23 — Android DTO/repository vs MC API + OS read models. No Android code changed; no new APK/AAB.",
+    "findings": [
+      { "dto": "LeadDto", "vs": "mc.lead.read", "issue": "revision field presence — must carry canonical revision for 409 handling", "severity": "HIGH", "action": "ADD_FIELD_PROPOSAL revision:int" },
+      { "dto": "ApprovalDto", "vs": "mc.approval.command", "issue": "idempotency_key must be sent on approve/reject", "severity": "HIGH", "action": "ADD_FIELD_PROPOSAL idempotency_key" },
+      { "dto": "PipelineStageDto", "vs": "lead status enum", "issue": "enum must match canonical lead statuses exactly (no client-invented states)", "severity": "MEDIUM", "action": "ENUM_ALIGN_PROPOSAL" },
+      { "dto": "Room cache", "vs": "cache_standard", "issue": "Room is a cache, never canonical; must carry stale indicator + TTL + no offline mutation", "severity": "HIGH", "action": "CACHE_POLICY_PROPOSAL" },
+      { "dto": "timestamps", "vs": "temporal_standard", "issue": "must store UTC ISO; convert at display only", "severity": "MEDIUM", "action": "TEMPORAL_ALIGN_PROPOSAL" }
+    ],
+    "offline_write_risk": "Room must NOT accept offline mutations of canonical entities; queue-as-intent only with idempotency_key, applied online via MC command."
+  },
+
+  "telegram_reconciliation": {
+    "note": "MP24 — Telegram client/views vs MC API + Executive + Conversation Hub inbox. No deployment.",
+    "findings": [
+      { "view": "approval card", "issue": "must use buttons (callback) not command strings; callback must carry revision + idempotency_key", "severity": "HIGH", "action": "CALLBACK_REVISION_PROPOSAL" },
+      { "view": "lead/reply display", "issue": "must show canonical IDs, not raw internal objects or raw enums", "severity": "MEDIUM", "action": "VIEW_MAPPING_PROPOSAL" },
+      { "risk": "direct local fallback", "issue": "owner-control Telegram must not have a direct local file/SMTP fallback path", "severity": "HIGH", "action": "REMOVE_FALLBACK_PROPOSAL (owner review)" },
+      { "risk": "mutation without idempotency", "issue": "any send/approve callback must be idempotent", "severity": "HIGH", "action": "IDEMPOTENCY_PROPOSAL" }
+    ]
+  },
+
+  "mc_api_gaps": {
+    "note": "MP25 — actual endpoints inventoried (read-only). Proposed additions only; no production API modified.",
+    "endpoints": [
+      { "endpoint": "/health", "method": "GET", "domain": "system", "type": "QUERY", "revision": false, "idempotency": false, "approval": false },
+      { "endpoint": "/system/status", "method": "GET", "domain": "system", "type": "QUERY", "revision": false, "idempotency": false, "approval": false },
+      { "endpoint": "/store/revision", "method": "GET", "domain": "system", "type": "QUERY", "revision": true, "idempotency": false, "approval": false },
+      { "endpoint": "/leads/stage", "method": "POST", "domain": "lead", "type": "COMMAND", "revision": true, "idempotency": "PARTIAL", "approval": false },
+      { "endpoint": "/pipeline/leads/:id/verify", "method": "POST", "domain": "lead", "type": "COMMAND", "revision": true, "idempotency": "PARTIAL", "approval": false },
+      { "endpoint": "/pipeline/leads/:id/draft", "method": "POST", "domain": "approval", "type": "COMMAND", "revision": true, "idempotency": "PARTIAL", "approval": true },
+      { "endpoint": "/pipeline/leads/:id/reply-draft", "method": "POST", "domain": "conversation", "type": "COMMAND", "revision": true, "idempotency": "PARTIAL", "approval": true },
+      { "endpoint": "/pipeline/leads/:id/followup", "method": "POST", "domain": "followup", "type": "COMMAND", "revision": true, "idempotency": "PARTIAL", "approval": true },
+      { "endpoint": "/replies", "method": "GET", "domain": "reply", "type": "QUERY", "revision": false, "idempotency": false, "approval": false },
+      { "endpoint": "/jobs/enqueue", "method": "POST", "domain": "job", "type": "COMMAND", "revision": false, "idempotency": "KEYED", "approval": false }
+    ],
+    "endpoints_inventoried": 34,
+    "proposed_additions": [
+      { "endpoint": "/conversations/:id/draft-request", "rationale": "accept Conversation Hub draft request (send_allowed=false) for owner approval", "status": "PROPOSED_ONLY" },
+      { "endpoint": "/opt-out/recommendation", "rationale": "accept Hub opt-out recommendation -> canonical opt-out (owner gated)", "status": "PROPOSED_ONLY" },
+      { "endpoint": "/leads/:id/crosswalk", "rationale": "legacy<->canonical ID crosswalk read", "status": "PROPOSED_ONLY" }
+    ],
+    "gaps": [
+      { "gap": "idempotency formalization", "detail": "several commands are PARTIAL idempotent; standard idempotency_key envelope proposed", "severity": "HIGH" },
+      { "gap": "uniform 409 envelope", "detail": "current_revision must be returned uniformly on CONFLICT", "severity": "MEDIUM" }
+    ]
+  },
+
+  "compatibility_matrix": {
+    "note": "MP26 — producer/consumer pairs. test_status reflects synthetic contract checks.",
+    "pairs": [
+      { "producer": "lead_hunter", "consumer": "master_controller", "contract": "lh.candidate.recommendation", "producer_version": "score_v2", "consumer_version": "v1", "compatible": true, "issues": [], "adapter_required": false, "migration_required": false, "test_status": "PASS" },
+      { "producer": "growth_os", "consumer": "master_controller", "contract": "growth.campaign.definition", "producer_version": "1", "consumer_version": "1", "compatible": true, "issues": ["recommendation-only; MC never auto-imports"], "adapter_required": false, "migration_required": false, "test_status": "PASS" },
+      { "producer": "conversation_hub", "consumer": "master_controller", "contract": "convhub.draft.request", "producer_version": "1", "consumer_version": "1", "compatible": true, "issues": ["needs /conversations/:id/draft-request endpoint (proposed)"], "adapter_required": false, "migration_required": false, "test_status": "PASS_WITH_PROPOSED_ENDPOINT" },
+      { "producer": "revenue_os", "consumer": "delivery_os", "contract": "revenue.deal.lifecycle", "producer_version": "1", "consumer_version": "1", "compatible": true, "issues": [], "adapter_required": false, "migration_required": false, "test_status": "PASS" },
+      { "producer": "revenue_os", "consumer": "finance_os", "contract": "revenue.deal.lifecycle", "producer_version": "1", "consumer_version": "1", "compatible": true, "issues": [], "adapter_required": false, "migration_required": false, "test_status": "PASS" },
+      { "producer": "delivery_os", "consumer": "finance_os", "contract": "delivery.project.lifecycle", "producer_version": "1", "consumer_version": "1", "compatible": true, "issues": [], "adapter_required": false, "migration_required": false, "test_status": "PASS" },
+      { "producer": "delivery_os", "consumer": "customer_success_os", "contract": "delivery.project.lifecycle", "producer_version": "1", "consumer_version": "1", "compatible": true, "issues": [], "adapter_required": false, "migration_required": false, "test_status": "PASS" },
+      { "producer": "product_os", "consumer": "revenue_os", "contract": "product.readiness.read", "producer_version": "1", "consumer_version": "1", "compatible": true, "issues": ["status granularity differs — status adapter recommended"], "adapter_required": true, "migration_required": false, "test_status": "PASS_WITH_ADAPTER" },
+      { "producer": "product_os", "consumer": "delivery_os", "contract": "product.readiness.read", "producer_version": "1", "consumer_version": "1", "compatible": true, "issues": [], "adapter_required": false, "migration_required": false, "test_status": "PASS" },
+      { "producer": "customer_success_os", "consumer": "product_os", "contract": "cs.health.read", "producer_version": "1", "consumer_version": "1", "compatible": true, "issues": [], "adapter_required": false, "migration_required": false, "test_status": "PASS" },
+      { "producer": "finance_os", "consumer": "executive_os", "contract": "finance.invoice.lifecycle", "producer_version": "1", "consumer_version": "1", "compatible": true, "issues": [], "adapter_required": false, "migration_required": false, "test_status": "PASS" },
+      { "producer": "analytics_os", "consumer": "executive_os", "contract": "analytics.data_contract", "producer_version": "1", "consumer_version": "1", "compatible": true, "issues": [], "adapter_required": false, "migration_required": false, "test_status": "PASS" },
+      { "producer": "master_controller", "consumer": "telegram", "contract": "mc.approval.command", "producer_version": "1", "consumer_version": "1", "compatible": true, "issues": ["callback revision + idempotency proposal"], "adapter_required": false, "migration_required": false, "test_status": "PASS_WITH_PROPOSAL" },
+      { "producer": "master_controller", "consumer": "android", "contract": "mc.lead.read", "producer_version": "1", "consumer_version": "1", "compatible": true, "issues": ["revision field proposal"], "adapter_required": false, "migration_required": false, "test_status": "PASS_WITH_PROPOSAL" },
+      { "producer": "conversation_hub", "consumer": "analytics_os", "contract": "convhub.optout.recommendation", "producer_version": "1", "consumer_version": "1", "compatible": true, "issues": [], "adapter_required": false, "migration_required": false, "test_status": "PASS" }
+    ]
+  },
+
+  "adapter_policy": {
+    "note": "MP27 — adapters allowed ONLY when semantics preserved, version mismatch unavoidable, no duplicate truth, explicit owner, tested, deprecation path exists.",
+    "allowed_types": ["legacy_id_adapter", "status_adapter", "schema_version_adapter", "read_model_adapter", "timestamp_adapter"],
+    "proposed_adapters": [
+      { "adapter": "product_status_adapter", "from": "product_os readiness", "to": "revenue_os product status", "owner": "product_os", "deprecation_path": "converge vocabularies in schema v2", "deployed": false },
+      { "adapter": "legacy_lead_id_adapter", "from": "legacy_id", "to": "canonical_lead_id", "owner": "master_controller", "deprecation_path": "crosswalk table; no silent re-key", "deployed": false }
+    ],
+    "runtime_deployment": false
+  },
+
+  "migration_model": {
+    "note": "MP28 — migration stages; max status this task = READY. No real migration.",
+    "stages": ["INVENTORY", "MAPPING", "DRY_RUN", "VALIDATED", "OWNER_REVIEW", "READY", "APPLIED", "VERIFIED", "ROLLED_BACK"],
+    "max_status_this_task": "READY",
+    "migrations": [
+      { "migration_id": "mig_legacy_lead_id_crosswalk", "source": "legacy lead store", "target": "canonical_lead_id", "entity": "lead", "schema_from": "legacy", "schema_to": "v1", "row_count": "UNKNOWN", "transform": "map legacy_id->canonical_id via crosswalk", "validation": "no silent re-key; ambiguous->owner review", "backup": "required", "rollback": "restore legacy mapping", "owner_approval": "REQUIRED", "status": "READY" },
+      { "migration_id": "mig_commit_communication_monitor", "source": "untracked tools/communication_monitor", "target": "git-tracked", "entity": "file", "schema_from": "n/a", "schema_to": "n/a", "row_count": "9 files", "transform": "git add + commit (owner)", "validation": "no secret in committed files", "backup": "existing on disk", "rollback": "git rm --cached", "owner_approval": "REQUIRED", "status": "READY" }
+    ]
+  },
+
+  "branch_consolidation_plan": {
+    "note": "MP29 — branch ancestry + dependency graph. NOTHING merged. NOTHING deleted.",
+    "chain_linear": true,
+    "linear_order": ["ai_hq(d4bf77f)", "revenue(2ff079d)", "delivery(0f642d1)", "finance(9e8ec2f)", "executive(9e93eae)", "product(c7300e3)", "customer_success(e7eccab)", "analytics_completion(e2e14e7)", "growth(5f054c2)", "conversation_hub(b096766)"],
+    "current_head": "b096766",
+    "proposed_merge_order": ["the chain is already linear through conversation_hub; integration-data-contracts-v1 (this branch) extends it; recommended future merge order follows linear_order then integration"],
+    "obsolete_parallel_branch": { "branch": "feature/analytics-os-metrics-reporting-v1", "head": "8014e43", "diverged_at": "9e93eae (Executive OS)", "unique_commits": 3, "status": "SUPERSEDED by analytics-os-completion-v1 (e2e14e7, in chain)", "action": "DO_NOT_MERGE, DO_NOT_DELETE — keep for history, flag superseded" },
+    "cherry_pick_risk": "low — chain is linear; no cherry-pick needed",
+    "merge_executed": false
+  },
+
+  "legacy_retirement_plan": {
+    "note": "MP31 — dispositions only. No deletion. Each item requires runtime+test reference check, docs, backup, rollback, owner approval.",
+    "items": [
+      { "target": "tools/telegram_gateway/_emergency_*.mjs (15)", "disposition": "MOVE_TO_ARCHIVE", "runtime_ref": false, "test_ref": false, "owner_approval_required": true },
+      { "target": "tools/telegram_gateway/_getme_*.mjs (6)", "disposition": "MOVE_TO_ARCHIVE", "runtime_ref": false, "test_ref": false, "owner_approval_required": true },
+      { "target": "tools/telegram_gateway/_route_*/_*_probe_* (16)", "disposition": "MOVE_TO_ARCHIVE", "runtime_ref": false, "test_ref": false, "owner_approval_required": true },
+      { "target": "tools/communication_monitor/ (untracked)", "disposition": "KEEP_ACTIVE", "runtime_ref": true, "test_ref": false, "owner_approval_required": true, "note": "actively referenced by IMAP deploy script; must be COMMITTED, not retired" },
+      { "target": "feature/analytics-os-metrics-reporting-v1 branch", "disposition": "KEEP_REFERENCE", "runtime_ref": false, "test_ref": false, "owner_approval_required": true, "note": "superseded; keep for history" }
+    ],
+    "deletions_executed": 0
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Retry Budget",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["max_retries_per_step", "unlimited_retry_policy"],
+  "properties": {
+    "max_retries_per_step": {"type": "integer", "maximum": 2},
+    "max_retry_budget_rub_per_task": {"type": "number"},
+    "unlimited_retry_policy": {"type": "string", "const": "DENY"}
+  }
+}

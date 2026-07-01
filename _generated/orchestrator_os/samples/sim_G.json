@@ -1,0 +1,9 @@
+{
+  "scenario": "G",
+  "name": "Terminal failure -> dead letter",
+  "ok": true,
+  "steps": [
+    "retry: STOP (TERMINAL_CODE not retryable)",
+    "dead_letter: owner_action required"
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "package": "GATE_C1_COMMAND_ACTIVATION_MATRIX",
+  "status": "TECHNICAL_READY_NOT_APPROVED_NOT_EXECUTED",
+  "commercial_command_api": "OFF",
+  "gate_c1_approved": false,
+  "gate_c1_executed": false,
+  "source_of_truth": "tools/commercial_core/lib/lifecycle.mjs + store.mjs (single writer, revision+idempotency)",
+  "commands": [
+    {
+      "id": 1, "route": "POST /opportunities", "fn": "createOpportunity",
+      "business_effect": "Create commercial opportunity from a verified lead + product snapshot",
+      "entities_changed": ["commercial.opportunities"],
+      "revision_requirement": "expectedRevision (409 on mismatch)",
+      "idempotency_requirement": "Idempotency-Key header + natural key opp_<hash(lead:product)>",
+      "owner_confirmation": "single", "double_confirmation": false,
+      "evidence_requirement": "lead.verification_status=verified, product ACTIVE",
+      "rollback_strategy": "remove opportunity by id while empty downstream; reverse migration only if all sections empty",
+      "send_capability": "NONE", "stage": "C1-A"
+    },
+    {
+      "id": 2, "route": "POST /opportunities/:id/prepare-offer", "fn": "prepareOffer",
+      "business_effect": "Snapshot product into an offer READY_FOR_OWNER_REVIEW (NOT a send)",
+      "entities_changed": ["commercial.offers", "commercial.opportunities(stage)"],
+      "revision_requirement": "expectedRevision", "idempotency_requirement": "Idempotency-Key + offer_<hash(opp)>",
+      "owner_confirmation": "single", "double_confirmation": false,
+      "evidence_requirement": "opportunity exists, product ACTIVE",
+      "rollback_strategy": "remove offer by id; revert opp.stage", "send_capability": "NONE", "stage": "C1-A"
+    },
+    {
+      "id": 3, "route": "POST /offers/:id/decision", "fn": "recordOwnerDecision",
+      "business_effect": "Record owner APPROVE/REJECT/RETURN/PAUSE/CANCEL on an offer",
+      "entities_changed": ["commercial.offers", "commercial.opportunities(stage)"],
+      "revision_requirement": "expectedRevision", "idempotency_requirement": "Idempotency-Key (decision is authority record)",
+      "owner_confirmation": "single (this IS the owner authority record)", "double_confirmation": false,
+      "evidence_requirement": "offer exists; decision in allowed set",
+      "rollback_strategy": "decision is an authority fact — correct via new decision event, not deletion", "send_capability": "NONE", "stage": "C1-A"
+    },
+    {
+      "id": 4, "route": "POST /deals/:id/delivery-handoff", "fn": "createHandoff",
+      "business_effect": "Create delivery handoff from a WON deal",
+      "entities_changed": ["delivery.handoffs"],
+      "revision_requirement": "expectedRevision", "idempotency_requirement": "Idempotency-Key + handoff_<hash(deal)>",
+      "owner_confirmation": "single", "double_confirmation": false,
+      "evidence_requirement": "deal.status=WON, product_version present",
+      "rollback_strategy": "remove handoff by id while no project exists", "send_capability": "NONE", "stage": "C1-A"
+    },
+    {
+      "id": 5, "route": "POST /delivery/handoffs/:id/create-project", "fn": "createProject",
+      "business_effect": "Create delivery project from a handoff",
+      "entities_changed": ["delivery.projects"],
+      "revision_requirement": "expectedRevision", "idempotency_requirement": "Idempotency-Key + proj_<hash(handoff)>",
+      "owner_confirmation": "single", "double_confirmation": false,
+      "evidence_requirement": "handoff exists",
+      "rollback_strategy": "remove project by id while no invoice references it", "send_capability": "NONE", "stage": "C1-A"
+    },
+    {
+      "id": 6, "route": "POST /finance/invoices", "fn": "createInvoice",
+      "business_effect": "Create DRAFT invoice schedule (classification TARGET; real_issuance DISABLED, bank NONE)",
+      "entities_changed": ["finance.invoices"],
+      "revision_requirement": "expectedRevision", "idempotency_requirement": "Idempotency-Key + inv_<hash(deal)>",
+      "owner_confirmation": "single", "double_confirmation": false,
+      "evidence_requirement": "deal exists; amount = agreed_price (TARGET until paid)",
+      "rollback_strategy": "remove draft invoice by id while no payment", "send_capability": "NONE",
+      "note": "No real invoice issuance, no bank integration. Internal financial DRAFT only.", "stage": "C1-A"
+    },
+    {
+      "id": 7, "route": "POST /finance/payments/record", "fn": "recordPayment",
+      "business_effect": "Record a payment FACT against an invoice (owner-confirmed evidence → invoice PAID)",
+      "entities_changed": ["finance.payments", "finance.invoices(status=PAID)"],
+      "revision_requirement": "expectedRevision", "idempotency_requirement": "Idempotency-Key + pay_<hash(invoice:evidenceRef)>",
+      "owner_confirmation": "double (financial FACT — requires owner confirmation + evidenceType + evidenceReference)",
+      "double_confirmation": true,
+      "evidence_requirement": "invoice exists; evidenceType AND evidenceReference REQUIRED; classification=FACT, confidence=OWNER_CONFIRMED",
+      "rollback_strategy": "payment is a financial FACT — never silently deleted; correction is a reversing evidence entry under separate owner approval",
+      "send_capability": "NONE", "stage": "C1-B",
+      "note": "Separate evidence gate. Financial truth. Highest scrutiny."
+    }
+  ],
+  "stage_split": {
+    "C1-A": { "label": "Safe internal commands, no send, no financial FACT", "commands": [1,2,3,4,5,6] },
+    "C1-B": { "label": "Financial FACT (payment evidence)", "commands": [7], "requires": "separate evidence gate + double confirmation" },
+    "C1-C": { "label": "Transport (email/Telegram/follow-up send)", "commands": [], "status": "FORBIDDEN — not part of any C1 stage" }
+  },
+  "global_invariants_when_activated": {
+    "single_writer": true,
+    "revision_guarded": true,
+    "idempotent": true,
+    "send_capability": "NONE",
+    "autosend": "BLOCKED",
+    "smtp_calls": 0,
+    "unknown_never_coerced_to_zero": true
+  }
+}

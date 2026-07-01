@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/crm/contact.schema.json",
+  "title": "CRM Contact V1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "synthetic",
+    "contact_id",
+    "display_name",
+    "organization_name",
+    "contact_reference",
+    "consent_basis",
+    "crm_write_allowed"
+  ],
+  "properties": {
+    "schema_version": {"const": "crm.contact.v1"},
+    "synthetic": {"const": true},
+    "contact_id": {"type": "string"},
+    "display_name": {"type": "string"},
+    "organization_name": {"type": "string"},
+    "contact_reference": {"type": "string"},
+    "consent_basis": {"type": "string"},
+    "suppression_status": {"type": "string"},
+    "crm_write_allowed": {"const": false}
+  },
+  "additionalProperties": true
+}

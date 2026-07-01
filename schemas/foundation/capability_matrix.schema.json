@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Foundation Capability Matrix",
+  "type": "object",
+  "required": ["schema_version", "generated_at", "session", "registry_kind", "capabilities"],
+  "properties": {
+    "registry_kind": {"const": "capability_matrix"},
+    "capabilities": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/foundationEntry"}
+    }
+  },
+  "$defs": {
+    "foundationEntry": {
+      "type": "object",
+      "required": ["id", "purpose", "owner", "status", "allowed_lifecycle", "current_lifecycle", "allowed_tools", "denied_capabilities", "data_classes", "risk_max", "approval_requirement", "tests_required", "rollback_note", "review_date", "source_provenance"],
+      "properties": {
+        "id": {"type": "string"},
+        "allowed_lifecycle": {"type": "array", "items": {"type": "string"}},
+        "risk_max": {"enum": ["R0", "R1", "R2", "R3", "R4", "R5"]}
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "parse_id": "docling_parse_synthetic_001",
+  "artifact_id": "artifact_synthetic_public_001",
+  "synthetic": true,
+  "pages": [{"page_number": 1, "text": "Synthetic public page."}],
+  "text_chunks": [{"chunk_id": "chunk_synthetic_001", "text": "Synthetic public page."}],
+  "parser_status": "CONTRACT_ONLY_NOT_INSTALLED",
+  "docling_imported": false
+}

@@ -1,0 +1,815 @@
+{
+  "schema_version": 1,
+  "generator_version": "1.0.0",
+  "generated_from_source_path": "tools/revenue_os/data/product_catalog.json",
+  "generated_from_source_sha256": "sha256:95091b67fce8b5a4e4121e7a770d87dc11959a25f2468e20378585c721d413c9",
+  "products_total": 18,
+  "products": [
+    {
+      "acceptance_criteria": [
+        "owner-approved scenarios",
+        "no autosend"
+      ],
+      "category": "automation",
+      "client_name": "AI-обработка обращений (AI-администратор)",
+      "currency": "RUB",
+      "deliverables": [
+        "AI handling scenarios",
+        "channel integration design"
+      ],
+      "description": "AI-assisted handling of incoming requests/communication. Concept stage.",
+      "evidence_required": [
+        "inbound volume evidence"
+      ],
+      "implementation_readiness": "PLANNED",
+      "name": "AI Front Office",
+      "price": {
+        "amount": null,
+        "amount_max": null,
+        "amount_min": null,
+        "approved_by_owner": false,
+        "currency": "RUB",
+        "source": "UNKNOWN",
+        "status": "UNKNOWN",
+        "type": "monthly",
+        "valid_from": null,
+        "valid_until": null
+      },
+      "product_id": "ai_front_office",
+      "product_version": "v1",
+      "scope_excluded": [
+        "autonomous client sending",
+        "unapproved automation"
+      ],
+      "scope_included": [
+        "request triage",
+        "draft responses (owner-approved)"
+      ],
+      "status": "PLANNED"
+    },
+    {
+      "acceptance_criteria": [
+        "audit + prototype delivered"
+      ],
+      "category": "audit",
+      "client_name": "Аудит с прототипом улучшений",
+      "currency": "RUB",
+      "deliverables": [
+        "audit findings",
+        "prototype preview"
+      ],
+      "description": "Audit plus a visual prototype of the recommended improvements. Concept stage.",
+      "evidence_required": [
+        "verified website"
+      ],
+      "implementation_readiness": "PLANNED",
+      "name": "Audit + Prototype",
+      "price": {
+        "amount": null,
+        "amount_max": null,
+        "amount_min": null,
+        "approved_by_owner": false,
+        "currency": "RUB",
+        "source": "UNKNOWN",
+        "status": "UNKNOWN",
+        "type": "range",
+        "valid_from": null,
+        "valid_until": null
+      },
+      "product_id": "audit_plus_prototype",
+      "product_version": "v1",
+      "scope_excluded": [
+        "full build",
+        "multiple iterations"
+      ],
+      "scope_included": [
+        "audit",
+        "single prototype screen"
+      ],
+      "status": "PLANNED"
+    },
+    {
+      "acceptance_criteria": [
+        "site delivered + accepted",
+        "owner-approved price",
+        "scope frozen"
+      ],
+      "category": "build",
+      "client_name": "Сайт / каталог под заявки",
+      "currency": "RUB",
+      "deliverables": [
+        "site/catalog structure",
+        "service/product pages",
+        "texts",
+        "trust blocks",
+        "request form",
+        "basic CRM/table",
+        "Telegram notifications"
+      ],
+      "description": "Site/catalog under requests: structure, service/product pages, trust blocks, request form, basic CRM/table, Telegram notifications.",
+      "evidence_required": [
+        "current presence evidence",
+        "scope confirmation"
+      ],
+      "implementation_readiness": "DRAFT",
+      "name": "Business Website / Catalog",
+      "price": {
+        "amount": null,
+        "amount_max": 350000,
+        "amount_min": 180000,
+        "approved_by_owner": false,
+        "currency": "RUB",
+        "source": "CONFIRMED",
+        "status": "OWNER_TARGET",
+        "type": "range",
+        "valid_from": null,
+        "valid_until": null
+      },
+      "product_id": "business_website",
+      "product_version": "v1",
+      "scope_excluded": [
+        "paid ad management",
+        "guaranteed growth"
+      ],
+      "scope_included": [
+        "structure",
+        "pages",
+        "forms",
+        "basic lead tracking"
+      ],
+      "status": "DRAFT"
+    },
+    {
+      "acceptance_criteria": [
+        "presence map evidence-backed"
+      ],
+      "category": "audit",
+      "client_name": "Проверка цифрового присутствия",
+      "currency": "RUB",
+      "deliverables": [
+        "presence map",
+        "gaps",
+        "recommended first step"
+      ],
+      "description": "Diagnostic of where a business exists online (maps, marketplaces, messengers, social) and what is missing. For low-maturity businesses.",
+      "evidence_required": [
+        "verified identity",
+        "verified channels checked"
+      ],
+      "implementation_readiness": "PLANNED",
+      "name": "Digital Presence Check",
+      "price": {
+        "amount": null,
+        "amount_max": null,
+        "amount_min": null,
+        "approved_by_owner": false,
+        "currency": "RUB",
+        "source": "UNKNOWN",
+        "status": "UNKNOWN",
+        "type": "fixed",
+        "valid_from": null,
+        "valid_until": null
+      },
+      "product_id": "digital_presence_check",
+      "product_version": "v1",
+      "scope_excluded": [
+        "website build",
+        "deep audit"
+      ],
+      "scope_included": [
+        "presence inventory",
+        "gap list"
+      ],
+      "status": "PLANNED"
+    },
+    {
+      "acceptance_criteria": [
+        "working presence restored or clear plan delivered"
+      ],
+      "category": "technical",
+      "client_name": "Восстановление сайта/домена",
+      "currency": "RUB",
+      "deliverables": [
+        "recovered/working presence",
+        "diagnosis"
+      ],
+      "description": "Recover a broken/expired website or domain so the business has a working asset again.",
+      "evidence_required": [
+        "verified broken-state evidence (HTTP/DNS check)"
+      ],
+      "implementation_readiness": "PLANNED",
+      "name": "Domain Recovery",
+      "price": {
+        "amount": null,
+        "amount_max": null,
+        "amount_min": null,
+        "approved_by_owner": false,
+        "currency": "RUB",
+        "source": "UNKNOWN",
+        "status": "UNKNOWN",
+        "type": "custom_quote",
+        "valid_from": null,
+        "valid_until": null
+      },
+      "product_id": "domain_recovery",
+      "product_version": "v1",
+      "scope_excluded": [
+        "full redesign",
+        "guaranteed SEO recovery"
+      ],
+      "scope_included": [
+        "recovery diagnosis",
+        "basic restoration"
+      ],
+      "status": "PLANNED"
+    },
+    {
+      "acceptance_criteria": [
+        "observations are evidence-backed facts",
+        "no growth promises"
+      ],
+      "category": "lead_generation",
+      "client_name": "Краткий разбор сайта",
+      "currency": "RUB",
+      "deliverables": [
+        "3-5 observations in a short message",
+        "suggested next step (Mini Audit)"
+      ],
+      "description": "Free quick review surfacing 3-5 obvious problems to demonstrate competence and warm up toward Mini Audit.",
+      "evidence_required": [
+        "verified page URL",
+        "verified identity link"
+      ],
+      "implementation_readiness": "ACTIVE",
+      "name": "Express Review",
+      "price": {
+        "amount": 0,
+        "amount_max": null,
+        "amount_min": null,
+        "approved_by_owner": true,
+        "currency": "RUB",
+        "source": "CONFIRMED",
+        "status": "CONFIRMED",
+        "type": "free",
+        "valid_from": null,
+        "valid_until": null
+      },
+      "product_id": "express_review",
+      "product_version": "v1",
+      "scope_excluded": [
+        "PDF",
+        "20+ findings",
+        "full SEO",
+        "deep research",
+        "legal block"
+      ],
+      "scope_included": [
+        "first-screen glance",
+        "obvious CTA/form/trust gaps"
+      ],
+      "status": "ACTIVE"
+    },
+    {
+      "acceptance_criteria": [
+        "all findings evidence-backed",
+        "owner-approved price"
+      ],
+      "category": "audit",
+      "client_name": "Расширенный аудит сайта и пути клиента",
+      "currency": "RUB",
+      "deliverables": [
+        "evidence register",
+        "findings register",
+        "executive report"
+      ],
+      "description": "Deep UX + SEO + technical audit (Evidence -> Findings -> Executive Report).",
+      "evidence_required": [
+        "browser sweep evidence",
+        "verified URLs"
+      ],
+      "implementation_readiness": "DRAFT",
+      "name": "Full Business / B2B UX + Technical SEO Audit",
+      "price": {
+        "amount": null,
+        "amount_max": 70000,
+        "amount_min": 30000,
+        "approved_by_owner": false,
+        "currency": "RUB",
+        "source": "CONFIRMED",
+        "status": "OWNER_TARGET",
+        "type": "range",
+        "valid_from": null,
+        "valid_until": null
+      },
+      "product_id": "full_business_audit",
+      "product_version": "v1",
+      "scope_excluded": [
+        "implementation",
+        "legal opinion"
+      ],
+      "scope_included": [
+        "UX",
+        "technical SEO",
+        "performance signals"
+      ],
+      "status": "DRAFT"
+    },
+    {
+      "acceptance_criteria": [
+        "evidence-backed funnel findings",
+        "owner-approved price"
+      ],
+      "category": "audit",
+      "client_name": "Аудит воронки и пути до заявки",
+      "currency": "RUB",
+      "deliverables": [
+        "funnel findings",
+        "conversion recommendations"
+      ],
+      "description": "Focused audit of the conversion funnel for sites with good presence but weak funnel.",
+      "evidence_required": [
+        "verified funnel pages",
+        "form/CTA evidence"
+      ],
+      "implementation_readiness": "DRAFT",
+      "name": "Funnel Audit",
+      "price": {
+        "amount": null,
+        "amount_max": null,
+        "amount_min": null,
+        "approved_by_owner": false,
+        "currency": "RUB",
+        "source": "ESTIMATE",
+        "status": "UNKNOWN",
+        "type": "range",
+        "valid_from": null,
+        "valid_until": null
+      },
+      "product_id": "funnel_audit",
+      "product_version": "v1",
+      "scope_excluded": [
+        "implementation",
+        "ad campaigns"
+      ],
+      "scope_included": [
+        "funnel path",
+        "CTA",
+        "forms",
+        "conversion blockers"
+      ],
+      "status": "DRAFT"
+    },
+    {
+      "acceptance_criteria": [
+        "monthly deliverables accepted"
+      ],
+      "category": "retainer",
+      "client_name": "Сопровождение и развитие",
+      "currency": "RUB",
+      "deliverables": [
+        "monthly improvements",
+        "reporting"
+      ],
+      "description": "Ongoing support/iteration retainer after a build or audit.",
+      "evidence_required": [
+        "existing delivery"
+      ],
+      "implementation_readiness": "PLANNED",
+      "name": "Growth Support",
+      "price": {
+        "amount": null,
+        "amount_max": null,
+        "amount_min": null,
+        "approved_by_owner": false,
+        "currency": "RUB",
+        "source": "UNKNOWN",
+        "status": "UNKNOWN",
+        "type": "monthly",
+        "valid_from": null,
+        "valid_until": null
+      },
+      "product_id": "growth_support",
+      "product_version": "v1",
+      "scope_excluded": [
+        "unlimited scope",
+        "guaranteed growth"
+      ],
+      "scope_included": [
+        "monthly iteration",
+        "monitoring"
+      ],
+      "status": "PLANNED"
+    },
+    {
+      "acceptance_criteria": [
+        "agreed findings closed",
+        "owner-approved price",
+        "scope frozen"
+      ],
+      "category": "implementation",
+      "client_name": "Спринт внедрения исправлений",
+      "currency": "RUB",
+      "deliverables": [
+        "closed P0/P1 issues",
+        "before/after where applicable"
+      ],
+      "description": "Fix P0/P1 issues found in an audit. Point-based pricing 50k-150k by scope.",
+      "evidence_required": [
+        "audit findings",
+        "access scope"
+      ],
+      "implementation_readiness": "DRAFT",
+      "name": "Implementation Sprint",
+      "price": {
+        "amount": null,
+        "amount_max": 150000,
+        "amount_min": 50000,
+        "approved_by_owner": false,
+        "currency": "RUB",
+        "source": "CONFIRMED",
+        "status": "OWNER_TARGET",
+        "type": "milestone",
+        "valid_from": null,
+        "valid_until": null
+      },
+      "product_id": "implementation_sprint",
+      "product_version": "v1",
+      "scope_excluded": [
+        "new website",
+        "guaranteed growth"
+      ],
+      "scope_included": [
+        "fix visible problems",
+        "basic request-flow logic"
+      ],
+      "status": "DRAFT"
+    },
+    {
+      "acceptance_criteria": [
+        "landing accepted",
+        "owner-approved price"
+      ],
+      "category": "build",
+      "client_name": "Спринт лендинга под заявки",
+      "currency": "RUB",
+      "deliverables": [
+        "landing structure",
+        "texts",
+        "form",
+        "trust"
+      ],
+      "description": "Build/repackage a landing page focused on requests.",
+      "evidence_required": [
+        "current landing evidence"
+      ],
+      "implementation_readiness": "DRAFT",
+      "name": "Landing Sprint",
+      "price": {
+        "amount": null,
+        "amount_max": null,
+        "amount_min": null,
+        "approved_by_owner": false,
+        "currency": "RUB",
+        "source": "ESTIMATE",
+        "status": "UNKNOWN",
+        "type": "range",
+        "valid_from": null,
+        "valid_until": null
+      },
+      "product_id": "landing_sprint",
+      "product_version": "v1",
+      "scope_excluded": [
+        "multi-page site",
+        "CRM"
+      ],
+      "scope_included": [
+        "landing structure",
+        "copy",
+        "form"
+      ],
+      "status": "DRAFT"
+    },
+    {
+      "acceptance_criteria": [
+        "system delivered + accepted"
+      ],
+      "category": "build",
+      "client_name": "Система заявок и обработки лидов",
+      "currency": "RUB",
+      "deliverables": [
+        "form/CRM connection",
+        "Telegram pipeline",
+        "basic lead handling scenario"
+      ],
+      "description": "Request capture + processing system (forms, CRM/table, Telegram, basic lead handling).",
+      "evidence_required": [
+        "current process evidence"
+      ],
+      "implementation_readiness": "PLANNED",
+      "name": "Lead System",
+      "price": {
+        "amount": null,
+        "amount_max": null,
+        "amount_min": null,
+        "approved_by_owner": false,
+        "currency": "RUB",
+        "source": "UNKNOWN",
+        "status": "UNKNOWN",
+        "type": "custom_quote",
+        "valid_from": null,
+        "valid_until": null
+      },
+      "product_id": "lead_system",
+      "product_version": "v1",
+      "scope_excluded": [
+        "full custom CRM dev unless scoped"
+      ],
+      "scope_included": [
+        "lead capture",
+        "routing",
+        "notifications"
+      ],
+      "status": "PLANNED"
+    },
+    {
+      "acceptance_criteria": [
+        "5-7 findings each evidence-backed",
+        "no duplicate findings",
+        "actionable recommendations",
+        "price = 10000 RUB",
+        "recipient evidence present",
+        "no guessed data"
+      ],
+      "category": "audit",
+      "client_name": "Мини-аудит сайта и пути клиента до заявки",
+      "currency": "RUB",
+      "deliverables": [
+        "5-7 key findings",
+        "short fix plan",
+        "next step recommendation",
+        "client-facing PDF or structured note"
+      ],
+      "description": "Paid entry product: short audit of the site and the customer path to a request. 5-7 key findings + quick fix plan + next step.",
+      "evidence_required": [
+        "verified page URL",
+        "verified identity",
+        "verified contact path"
+      ],
+      "implementation_readiness": "ACTIVE",
+      "name": "Mini Audit 10K",
+      "price": {
+        "amount": 10000,
+        "amount_max": null,
+        "amount_min": null,
+        "approved_by_owner": true,
+        "currency": "RUB",
+        "source": "CONFIRMED",
+        "status": "CONFIRMED",
+        "type": "fixed",
+        "valid_from": "2026-06-01",
+        "valid_until": null
+      },
+      "product_id": "mini_audit",
+      "product_version": "v1",
+      "scope_excluded": [
+        "full legal audit",
+        "full technical SEO",
+        "deep crawl",
+        "all-pages review",
+        "analytics setup",
+        "site fixes",
+        "admin access",
+        "new blocks",
+        "new website"
+      ],
+      "scope_included": [
+        "first screen",
+        "customer path to request",
+        "CTA",
+        "forms",
+        "contacts",
+        "trust",
+        "visible quality errors",
+        "basic SEO signals"
+      ],
+      "status": "ACTIVE"
+    },
+    {
+      "acceptance_criteria": [
+        "8-12 evidence-backed findings",
+        "owner-approved price"
+      ],
+      "category": "audit",
+      "client_name": "Расширенный мини-аудит сайта",
+      "currency": "RUB",
+      "deliverables": [
+        "8-12 findings",
+        "short PDF",
+        "1-2 week plan"
+      ],
+      "description": "Extended mini audit (8-12 findings, short PDF, 1-2 week plan) when the client wants a bit deeper but not a full audit.",
+      "evidence_required": [
+        "verified page URL",
+        "verified identity"
+      ],
+      "implementation_readiness": "DRAFT",
+      "name": "Mini Audit Plus",
+      "price": {
+        "amount": null,
+        "amount_max": 30000,
+        "amount_min": 20000,
+        "approved_by_owner": false,
+        "currency": "RUB",
+        "source": "CONFIRMED",
+        "status": "OWNER_TARGET",
+        "type": "range",
+        "valid_from": null,
+        "valid_until": null
+      },
+      "product_id": "mini_audit_plus",
+      "product_version": "v1",
+      "scope_excluded": [
+        "full technical SEO",
+        "implementation",
+        "legal opinion"
+      ],
+      "scope_included": [
+        "deeper UX path",
+        "more findings"
+      ],
+      "status": "DRAFT"
+    },
+    {
+      "acceptance_criteria": [
+        "owned page delivered + accepted"
+      ],
+      "category": "build",
+      "client_name": "Базовое собственное присутствие",
+      "currency": "RUB",
+      "deliverables": [
+        "basic owned page",
+        "contacts",
+        "trust block"
+      ],
+      "description": "Establish a minimal owned presence (start page, contacts, trust) for businesses with none.",
+      "evidence_required": [
+        "verified identity",
+        "verified channel-only status"
+      ],
+      "implementation_readiness": "PLANNED",
+      "name": "Owned Presence Pack",
+      "price": {
+        "amount": null,
+        "amount_max": null,
+        "amount_min": null,
+        "approved_by_owner": false,
+        "currency": "RUB",
+        "source": "UNKNOWN",
+        "status": "UNKNOWN",
+        "type": "fixed",
+        "valid_from": null,
+        "valid_until": null
+      },
+      "product_id": "owned_presence_pack",
+      "product_version": "v1",
+      "scope_excluded": [
+        "full website",
+        "catalog"
+      ],
+      "scope_included": [
+        "minimal owned page",
+        "contacts"
+      ],
+      "status": "PLANNED"
+    },
+    {
+      "acceptance_criteria": [
+        "evidence-backed process findings"
+      ],
+      "category": "audit",
+      "client_name": "Аудит процессов и обработки обращений",
+      "currency": "RUB",
+      "deliverables": [
+        "process findings",
+        "response/follow-up recommendations"
+      ],
+      "description": "Audit of lead response and communication process for sites with good presence but weak process.",
+      "evidence_required": [
+        "verified contact channels",
+        "response evidence"
+      ],
+      "implementation_readiness": "PLANNED",
+      "name": "Process and Communication Audit",
+      "price": {
+        "amount": null,
+        "amount_max": null,
+        "amount_min": null,
+        "approved_by_owner": false,
+        "currency": "RUB",
+        "source": "UNKNOWN",
+        "status": "UNKNOWN",
+        "type": "custom_quote",
+        "valid_from": null,
+        "valid_until": null
+      },
+      "product_id": "process_comm_audit",
+      "product_version": "v1",
+      "scope_excluded": [
+        "implementation",
+        "CRM build"
+      ],
+      "scope_included": [
+        "response process",
+        "follow-up",
+        "communication channels"
+      ],
+      "status": "PLANNED"
+    },
+    {
+      "acceptance_criteria": [
+        "preview delivered"
+      ],
+      "category": "build",
+      "client_name": "Превью прототипа",
+      "currency": "RUB",
+      "deliverables": [
+        "single prototype preview"
+      ],
+      "description": "Standalone visual prototype preview of an improved page. Concept stage.",
+      "evidence_required": [
+        "verified current page"
+      ],
+      "implementation_readiness": "PLANNED",
+      "name": "Prototype Preview",
+      "price": {
+        "amount": null,
+        "amount_max": null,
+        "amount_min": null,
+        "approved_by_owner": false,
+        "currency": "RUB",
+        "source": "UNKNOWN",
+        "status": "UNKNOWN",
+        "type": "fixed",
+        "valid_from": null,
+        "valid_until": null
+      },
+      "product_id": "prototype_preview",
+      "product_version": "v1",
+      "scope_excluded": [
+        "functional site",
+        "multiple revisions"
+      ],
+      "scope_included": [
+        "one prototype screen"
+      ],
+      "status": "PLANNED"
+    },
+    {
+      "acceptance_criteria": [
+        "deliverables accepted",
+        "owner-approved price"
+      ],
+      "category": "build",
+      "client_name": "Спринт первого экрана и упаковки",
+      "currency": "RUB",
+      "deliverables": [
+        "first screen",
+        "CTA",
+        "forms",
+        "trust block"
+      ],
+      "description": "Package the first screen, CTA, forms and trust to be ready to receive requests.",
+      "evidence_required": [
+        "current page evidence"
+      ],
+      "implementation_readiness": "DRAFT",
+      "name": "Start Page Sprint",
+      "price": {
+        "amount": null,
+        "amount_max": 250000,
+        "amount_min": 90000,
+        "approved_by_owner": false,
+        "currency": "RUB",
+        "source": "CONFIRMED",
+        "status": "OWNER_TARGET",
+        "type": "range",
+        "valid_from": null,
+        "valid_until": null
+      },
+      "product_id": "start_page_sprint",
+      "product_version": "v1",
+      "scope_excluded": [
+        "full site",
+        "CRM",
+        "analytics setup beyond basic"
+      ],
+      "scope_included": [
+        "first screen",
+        "CTA",
+        "forms",
+        "trust"
+      ],
+      "status": "DRAFT"
+    }
+  ]
+}

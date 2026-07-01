@@ -1,0 +1,22 @@
+{
+  "schema": "growth_os.partner_referral_social_proof.v1",
+  "version": "1.0",
+  "note": "Partner programs, referral policy, social-proof register. No real partner contact, no automatic referral requests, no permission inferred from positive feedback, no publication.",
+  "partner_programs": [
+    {"partner_program_id": "pp_web_designers", "partner_type": "designers", "target_profile": "freelance/studio web designers", "value_exchange": "we send audit clients needing design; they send clients needing diagnosis", "rules": ["no client poaching", "clear lead ownership"], "risks": ["quality variance", "conflict of interest"], "approval": "owner", "status": "DRAFT"},
+    {"partner_program_id": "pp_accountants", "partner_type": "accountants", "target_profile": "SMB accountants", "value_exchange": "referrals of SMB owners needing online presence", "rules": ["privacy", "no data sharing without consent"], "risks": ["mismatch of audience"], "approval": "owner", "status": "DRAFT"},
+    {"partner_program_id": "pp_it_support", "partner_type": "it_support", "target_profile": "local IT providers", "value_exchange": "mutual referrals", "rules": ["lead ownership clear"], "risks": ["overlap of services"], "approval": "owner", "status": "DRAFT"},
+    {"partner_program_id": "pp_conflict_example", "partner_type": "marketers", "target_profile": "full-service marketing agencies", "value_exchange": "ambiguous", "rules": ["high conflict — they may compete"], "risks": ["direct competition", "client conflict"], "approval": "owner", "status": "FLAGGED_CONFLICT"}
+  ],
+  "referral_policy": {
+    "eligibility": ["accepted project", "positive customer evidence", "no critical support open", "customer permission", "owner approval", "appropriate timing"],
+    "auto_request": false,
+    "rules": ["no automatic referral request", "permission required", "timing after value realized"],
+    "status": "DRAFT"
+  },
+  "social_proof": [
+    {"proof_id": "sp_anon_case_mini_audit", "type": "anonymized_case", "source": "synthetic example", "evidence": "synthetic", "permission": "n/a (synthetic, not real client)", "restrictions": ["must stay anonymized"], "expiry": null, "product_relevance": "mini_audit", "status": "DRAFT", "published": false},
+    {"proof_id": "sp_testimonial_pending", "type": "testimonial", "source": "future real customer", "evidence": "NONE YET", "permission": "NOT_OBTAINED", "restrictions": ["cannot use until explicit written permission"], "expiry": null, "product_relevance": "mini_audit", "status": "BLOCKED_NO_PERMISSION", "published": false}
+  ],
+  "rules": {"real_partner_contact": false, "auto_referral": false, "permission_inferred_from_feedback": false, "publication": false}
+}

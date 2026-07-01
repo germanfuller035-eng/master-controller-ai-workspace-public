@@ -1,0 +1,26 @@
+{
+  "policy_id": "finance_approval_policy_v1",
+  "scope": "LOCAL_SYNTHETIC_ONLY",
+  "required_controls": [
+    "owner_approval_required_for_future_invoice_send",
+    "owner_approval_required_for_future_payment",
+    "payload_hash_required",
+    "stop_blocks_payment_and_production_write"
+  ],
+  "safety": {
+    "OUTBOUND_EMAIL": "OFF",
+    "OUTBOUND_SOCIAL": "OFF",
+    "AUTO_SAFE": "OFF",
+    "PAYMENTS": "OFF",
+    "PRODUCTION_DB_WRITE": "OFF",
+    "CRM_WRITE": "OFF",
+    "INVOICE_SEND": "OFF",
+    "ACCOUNTING_EXPORT": "OFF",
+    "REAL_REPLY_MONITOR": "OFF"
+  },
+  "rules": {
+    "owner_approval_required_for_future_send_or_payment": true,
+    "bind_approval_to_payload_hash": true,
+    "payment_execution_allowed": false
+  }
+}

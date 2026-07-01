@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/crm/deal.schema.json",
+  "title": "CRM Deal V1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "synthetic",
+    "deal_id",
+    "opportunity_id",
+    "stage",
+    "close_probability_percent",
+    "draft_only",
+    "crm_write_allowed"
+  ],
+  "properties": {
+    "schema_version": {"const": "crm.deal.v1"},
+    "synthetic": {"const": true},
+    "deal_id": {"type": "string"},
+    "opportunity_id": {"type": "string"},
+    "stage": {"type": "string"},
+    "close_probability_percent": {"type": "number", "minimum": 0, "maximum": 100},
+    "draft_only": {"const": true},
+    "crm_write_allowed": {"const": false}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,102 @@
+{
+  "captured_at_utc": "2026-06-20",
+  "production": { "host": "195.96.132.82", "canonical_revision": 221, "canonical_leads": 13 },
+  "release_branch": "feature/contact-enrichment-campaign-hub-release-v1",
+  "source_baseline": "c5be621",
+  "acceptance": {
+    "UNCLASSIFIED_DRIFT": 0,
+    "UNKNOWN_DATA_MUTATIONS": 0,
+    "UNKNOWN_SEND_EVENTS": 0,
+    "UNKNOWN_RUNTIME_WRITERS": 0,
+    "C_UNKNOWN_OR_UNSAFE_DRIFT": 0
+  },
+  "entries": [
+    {
+      "path_or_entity": "canonical_revision",
+      "production_value": 221, "release_value": 1,
+      "classification": "A_EXPECTED_DATA_DRIFT",
+      "origin": "active discovery + pipeline jobs", "evidence": "141 COMPLETED jobs, monotonic revision",
+      "risk": "none", "resolution": "preserve; never copy back", "deployment_action": "none"
+    },
+    {
+      "path_or_entity": "canonical_leads",
+      "production_value": 13, "release_value": null,
+      "classification": "A_EXPECTED_DATA_DRIFT",
+      "origin": "discovery scheduler (1 timer)", "evidence": "lead_ids captured",
+      "risk": "none", "resolution": "preserve", "deployment_action": "none"
+    },
+    {
+      "path_or_entity": "enriched_leads",
+      "production_value": "9 verify_v2_enrich / 4 official emails", "release_value": 0,
+      "classification": "A_EXPECTED_DATA_DRIFT",
+      "origin": "prod enrichEmailFromSite", "evidence": "emails are real domains, not placeholders",
+      "risk": "none", "resolution": "preserve", "deployment_action": "none"
+    },
+    {
+      "path_or_entity": "tools/mater_controller_api/src/worker/index.mjs",
+      "production_value": "+87 lines: FIRST_TOUCH_DRAFT_GENERATE + enrichEmailFromSite + verify_v2_enrich",
+      "release_value": "baseline + my LEAD_ENRICH_CRAWL",
+      "classification": "B_AUTHORIZED_RUNTIME_DRIFT",
+      "origin": "prod first-touch+enrichment (uncommitted)", "evidence": "handler list, 10-ft-draft-type.conf drop-in",
+      "risk": "high if overwritten (would delete first-touch)",
+      "resolution": "PROD IS NEWER — adopt prod; drop my superseded LEAD_ENRICH_CRAWL",
+      "deployment_action": "capture-to-git; DO NOT deploy my version"
+    },
+    {
+      "path_or_entity": "tools/mater_controller_api/src/pipeline/service.mjs",
+      "production_value": "+40 lines: enrichment params on applyVerification, identity_match_status",
+      "release_value": "baseline + my applyEnrichment/classifyEnrichedEmailStatus",
+      "classification": "B_AUTHORIZED_RUNTIME_DRIFT",
+      "origin": "prod", "evidence": "applyVerification signature with email/emailSource/...",
+      "risk": "high if overwritten",
+      "resolution": "PROD IS NEWER — adopt prod; drop my superseded applyEnrichment",
+      "deployment_action": "capture-to-git; DO NOT deploy my version"
+    },
+    {
+      "path_or_entity": "tools/mater_controller_api/src/server/index.mjs",
+      "production_value": "+42 lines: /first-touch/* routes",
+      "release_value": "baseline + my /campaigns + /enrich routes",
+      "classification": "B_AUTHORIZED_RUNTIME_DRIFT",
+      "origin": "prod first-touch", "evidence": "/first-touch route block",
+      "risk": "high if overwritten",
+      "resolution": "adopt prod server; graft /campaigns additively; drop /enrich",
+      "deployment_action": "deploy prod+campaigns grafted version"
+    },
+    {
+      "path_or_entity": "tools/telegram_gateway/contact_channel_extractor.mjs",
+      "production_value": "baseline (no placeholder filter)",
+      "release_value": "hardened: isPlaceholderEmail + emailMatchesDomain",
+      "classification": "B_AUTHORIZED_RUNTIME_DRIFT",
+      "origin": "release (mine)", "evidence": "prod sha == baseline sha (clean apply)",
+      "risk": "low; additive safety on prod's live enrichEmailFromSite",
+      "resolution": "RELEASE IS NEWER — deploy",
+      "deployment_action": "DEPLOY"
+    },
+    {
+      "path_or_entity": "tools/mater_controller_api/src/campaigns/service.mjs",
+      "production_value": "absent", "release_value": "Campaign Governor (no-send)",
+      "classification": "B_AUTHORIZED_RUNTIME_DRIFT",
+      "origin": "release (mine)", "evidence": "no /campaigns on prod, no campaign store",
+      "risk": "low; net-new, empty-by-default",
+      "resolution": "deploy additively",
+      "deployment_action": "DEPLOY"
+    },
+    {
+      "path_or_entity": "tools/telegram_gateway/{osm_overpass_connector,mini_audit_operator_mode,queue_navigation,outbound_channel_router,draft_generator_v2,email_send_policy,mini_audit_draft_quality}.mjs",
+      "production_value": "present (untracked in git)", "release_value": "recovered into git",
+      "classification": "B_AUTHORIZED_RUNTIME_DRIFT",
+      "origin": "prior authorized runtime", "evidence": "prod sha == local sha, no secrets, no SMTP transport",
+      "risk": "none", "resolution": "recovered to git (commit e12fe16)", "deployment_action": "already on prod; git-only reconcile"
+    },
+    {
+      "path_or_entity": "LEAD_ENRICH_CRAWL / applyEnrichment / /enrich / contact_site_crawler stage",
+      "production_value": "n/a", "release_value": "my separate enrichment stage",
+      "classification": "B_AUTHORIZED_RUNTIME_DRIFT",
+      "origin": "release (mine)", "evidence": "prod already enriches in LEAD_VERIFY",
+      "risk": "would create a SECOND enrichment writer",
+      "resolution": "SUPERSEDED by prod — drop from deploy",
+      "deployment_action": "DO NOT DEPLOY"
+    }
+  ],
+  "class_C_unknown_unsafe": []
+}

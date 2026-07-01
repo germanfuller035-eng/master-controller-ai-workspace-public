@@ -1,0 +1,13 @@
+{
+  "schema_version": "crm.deal.v1",
+  "synthetic": true,
+  "deal_id": "synthetic-deal-alpha",
+  "opportunity_id": "synthetic-opportunity-alpha",
+  "stage": "draft_shadow",
+  "close_probability_percent": 40,
+  "amount_units": 1200,
+  "currency": "SYNTHETIC_UNITS",
+  "draft_only": true,
+  "crm_write_allowed": false,
+  "production_db_write_allowed": false
+}

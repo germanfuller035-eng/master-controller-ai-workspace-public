@@ -1,0 +1,12 @@
+{
+  "title": "cost_budget_snapshot",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["synthetic", "budget", "synthetic_spend", "evidence"],
+  "properties": {
+    "synthetic": {"type": "boolean"},
+    "budget": {"type": "object"},
+    "synthetic_spend": {"type": "object"},
+    "evidence": {"type": "array"}
+  }
+}

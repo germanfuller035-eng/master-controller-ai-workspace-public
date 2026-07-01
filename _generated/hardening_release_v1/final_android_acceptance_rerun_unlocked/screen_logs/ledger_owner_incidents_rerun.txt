@@ -1,0 +1,6 @@
+CTRL_LEDGER: BATCH_BEGIN screens=1 only=owner_incidents total_controls=282
+CTRL_LEDGER: SCREEN_BEGIN screen=owner_incidents controls=2 anchor=owner_list_incidents
+CTRL_LEDGER: ROW {"control_id":"CTRL-0078","screen":"owner_incidents","selector":"incident_ack_${i.incident_id}","type":"TextButton","risk":"ACTION","visible":false,"enabled":false,"action":"none","status":"UNEXECUTED_NOT_FOUND_ON_SCREEN"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0079","screen":"owner_incidents","selector":"incident_ack_${i.incident_id}","type":"Clickable","risk":"ACTION","visible":false,"enabled":false,"action":"none","status":"UNEXECUTED_NOT_FOUND_ON_SCREEN"}
+CTRL_LEDGER: SCREEN_END screen=owner_incidents executed=2 passed=0 failed=0 unexecuted=2
+CTRL_LEDGER: BATCH_END executed=2 passed=0 failed=0 unexecuted=2

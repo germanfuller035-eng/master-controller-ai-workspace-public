@@ -1,0 +1,19 @@
+{
+  "pid": 13512,
+  "started_at": "2026-06-08T17:10:57.997Z",
+  "last_heartbeat_at": "2026-06-08T17:22:28.219Z",
+  "polling": true,
+  "last_update_at": "2026-06-08T17:19:24.377Z",
+  "last_command": "🏠 Меню",
+  "last_route": "t1_hotkey_menu",
+  "last_update_type": "text",
+  "last_voice_at": null,
+  "last_voice_status": null,
+  "last_voice_error": null,
+  "last_ping_at": null,
+  "last_error_at": "2026-06-08T17:21:44.579Z",
+  "last_error_msg": "unknown",
+  "updates_count": 16,
+  "errors_count": 1,
+  "status": "running"
+}

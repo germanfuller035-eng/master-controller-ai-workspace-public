@@ -1,0 +1,85 @@
+{
+  "finding": "DUPLICATE_MAPPING_WITH_PROOF",
+  "control_kept": "CTRL-0084",
+  "control_removed": "CTRL-0085",
+  "reason": "Both map to selector_kind=testTag, selector_value=cc_confirm_btn. UI cc_confirm_dialog has a single testTag node 'cc_confirm_btn' (confirmButton, CommandCenterScreen.kt:104). The dismissButton 'Отмена' (line 105) has NO testTag, so it is not addressable by selector_value. CTRL-0085 (visible_text 'Отмена') therefore points to the SAME node as CTRL-0084 (visible_text 'Подтвердить'). The cancel action is already exercised inside CTRL-0084's handler (open dialog -> tap 'Отмена'). No separate executable control exists.",
+  "fields_compared": {
+    "screen_id": [
+      "commandcenter_commercial",
+      "commandcenter_commercial"
+    ],
+    "selector_kind": [
+      "testTag",
+      "testTag"
+    ],
+    "selector_value": [
+      "cc_confirm_btn",
+      "cc_confirm_btn"
+    ],
+    "control_type": [
+      "TextButton",
+      "TextButton"
+    ],
+    "risk_class": [
+      "ACTION",
+      "ACTION"
+    ],
+    "nav": [
+      [
+        {
+          "by": "res",
+          "sel": "tab_today"
+        },
+        {
+          "by": "res",
+          "sel": "card_commercial"
+        },
+        {
+          "by": "res",
+          "sel": "cs_commands"
+        }
+      ],
+      [
+        {
+          "by": "res",
+          "sel": "tab_today"
+        },
+        {
+          "by": "res",
+          "sel": "card_commercial"
+        },
+        {
+          "by": "res",
+          "sel": "cs_commands"
+        }
+      ]
+    ],
+    "visible_text_codepoints": {
+      "CTRL-0084": [
+        "0x41f",
+        "0x43e",
+        "0x434",
+        "0x442",
+        "0x432",
+        "0x435",
+        "0x440",
+        "0x434",
+        "0x438",
+        "0x442",
+        "0x44c"
+      ],
+      "CTRL-0085": [
+        "0x41e",
+        "0x442",
+        "0x43c",
+        "0x435",
+        "0x43d",
+        "0x430"
+      ]
+    }
+  },
+  "ui_source": "apps/mater_controller_android/app/src/main/java/ru/dmitry/matercontroller/feature/commercial/CommandCenterScreen.kt:92-106",
+  "ledger_evidence": "CTRL-0084 PASS_UNSAFE_ACTION_BLOCKED (c1a_confirm_present_then_cancel); CTRL-0085 UNEXECUTED_NAV_FAILED — same testTag, no independent target",
+  "denominator_before": 283,
+  "denominator_after": 282
+}

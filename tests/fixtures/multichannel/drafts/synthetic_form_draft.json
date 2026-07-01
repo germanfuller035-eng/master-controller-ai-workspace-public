@@ -1,0 +1,18 @@
+{
+  "context": {
+    "available_channels": [
+      "FORM_DRAFT",
+      "MAIL_DRAFT"
+    ],
+    "contact_ref": "reserved-form-contact-alpha",
+    "draft_ref": "synthetic-form-alpha",
+    "form_fields": {
+      "message": "Synthetic form preview only. No submit.",
+      "name_ref": "synthetic-owner"
+    },
+    "form_ref": "reserved-form-alpha",
+    "lead_ref": "synthetic-lead-beta",
+    "preferred_channel": "FORM_DRAFT",
+    "synthetic": true
+  }
+}

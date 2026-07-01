@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-26",
+  "session": "KNOWLEDGE_MEMORY_QDRANT_DOCLING_V1",
+  "qdrant_status": "CONTRACT_ONLY_NOT_DEPLOYED",
+  "server_deployed": false,
+  "production_collection_enabled": false,
+  "network_connection_enabled": false,
+  "real_embeddings_enabled": false,
+  "deterministic_fake_embedding_id": true,
+  "record_required_fields": ["record_id", "artifact_id", "payload", "embedding_id", "adapter_status"],
+  "adapter_status_required": "CONTRACT_ONLY_NOT_DEPLOYED"
+}

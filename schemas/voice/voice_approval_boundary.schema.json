@@ -1,0 +1,17 @@
+{
+  "additionalProperties": true,
+  "properties": {
+    "owner_approval_required": {},
+    "risk": {},
+    "screen_approval_required": {},
+    "synthetic": {}
+  },
+  "required": [
+    "synthetic",
+    "risk",
+    "screen_approval_required",
+    "owner_approval_required"
+  ],
+  "title": "Voice Approval Boundary",
+  "type": "object"
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "memory_id": "memory_conflict_a_001",
+    "subject": "knowledge_memory_v1",
+    "key": "memory_write_status",
+    "value": "OFF",
+    "source_id": "src_synthetic_public_001"
+  },
+  {
+    "memory_id": "memory_conflict_b_001",
+    "subject": "knowledge_memory_v1",
+    "key": "memory_write_status",
+    "value": "ON",
+    "source_id": "src_synthetic_business_001"
+  }
+]

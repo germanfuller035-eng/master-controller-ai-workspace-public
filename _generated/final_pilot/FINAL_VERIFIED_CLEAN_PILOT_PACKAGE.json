@@ -1,0 +1,27 @@
+{
+  "generated_at": "2026-06-19", "production_revision": 125,
+  "status": "STOP_NO_VERIFIED_CONTACT_AVAILABLE",
+  "verified_clean_pilot_selected": false,
+  "candidates_reevaluated": 7, "hard_gate_pass_count": 0, "hard_gate_fail_count": 7,
+  "candidates": [
+    {"lead_id":"KZ-JBI_RU","identity":"mismatch","contact":"SCRAPED_CONTACT","last_send":"none","reason":"BLOCKED_IDENTITY_MISMATCH"},
+    {"lead_id":"BETON-MASTERS_RU","identity":"match","contact":"EVIDENCED_PUBLIC_BUSINESS_CONTACT","last_send":"uncertain_no_smtp_proof","reason":"BLOCKED_UNCERTAIN_PRIOR_SEND"},
+    {"lead_id":"GBIRESURS_RU","identity":"match","contact":"EVIDENCED_PUBLIC_BUSINESS_CONTACT","last_send":"uncertain_no_smtp_proof","reason":"BLOCKED_UNCERTAIN_PRIOR_SEND"},
+    {"lead_id":"MEGALIT-KRD_RU","identity":"match","contact":"EVIDENCED_PUBLIC_BUSINESS_CONTACT","last_send":"uncertain_no_smtp_proof","reason":"BLOCKED_UNCERTAIN_PRIOR_SEND"},
+    {"lead_id":"DKBI_RU","identity":"match","contact":"EVIDENCED_PUBLIC_BUSINESS_CONTACT","last_send":"success_proven","reason":"BLOCKED_PRIOR_SEND"},
+    {"lead_id":"STROYDVOR-UG_RU","identity":"match","contact":"EVIDENCED_PUBLIC_BUSINESS_CONTACT","last_send":"success_proven","reason":"BLOCKED_PRIOR_SEND"},
+    {"lead_id":"ZAVODATOM_RU","identity":"match","contact":"EVIDENCED_PUBLIC_BUSINESS_CONTACT","last_send":"success_proven","reason":"BLOCKED_PRIOR_SEND"}
+  ],
+  "kz_jbi": {"identity_status":"MISMATCH","contact_status":"SCRAPED_CONTACT","send_eligible":false,"site_reachable":false,"exclusion_reason":"BLOCKED_IDENTITY_MISMATCH"},
+  "beton_masters": {"classification":"DELIVERY_STATUS_UNKNOWN","send_eligible":false},
+  "missing_evidence": [
+    "KZ-JBI_RU: reachable kz-jbi.ru or public source proving Krasnodar company + contact ownership",
+    "BETON/GBIRESURS/MEGALIT: provider SMTP logs proving 2026-06-12 attempt was NOT delivered",
+    "OR a new lead with verifiable public website+contact+audit via FREE_ONLY discovery"
+  ],
+  "old_approval_phrase": "APPROVE_ONE_FIRST_TOUCH_SEND:KZ-JBI_RU:cfd6a59cec98500a25197699d48d04b7",
+  "old_approval_phrase_status": "SUPERSEDED_NOT_VALID",
+  "new_approval_phrase": null,
+  "approval_token_issued": false, "real_send_executed": false,
+  "controlled_send_gate": "DISABLED", "transport_enabled": false
+}

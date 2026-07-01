@@ -1,0 +1,9 @@
+{
+  "version": "0.6.0-rc11", "version_code": 23,
+  "apk_sha256": "66693d5a2da83d8c4bc71a2f9754998afed0050161a4bd4cfd742c9022c6e3be",
+  "aab_sha256": "79be678fc53fc3f302a10592d56c346fa5d6d081b340806a2d93d4c5cea28f14",
+  "signer_cert_sha256": "11038fca7db3fab1b0206971a93678b9dd28363ddf61241e162568019a1023f7",
+  "signer_match": true, "apksigner_verify": "PASS", "unit_tests": "158/0",
+  "new_feature": "Honest hard-gate eligibility: blocked candidates listed with Russian reasons (identity mismatch / scraped contact / prior/uncertain send). No lead shown as safe when it fails hard gates.",
+  "install_over_rc10": "Success (22->23, 0 crash)", "owner_install": "PENDING"
+}

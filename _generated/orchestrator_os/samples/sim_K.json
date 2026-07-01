@@ -1,0 +1,9 @@
+{
+  "scenario": "K",
+  "name": "Production request blocked",
+  "ok": true,
+  "steps": [
+    "select: HUMAN_OWNER (risk/owner-gated)",
+    "policy: no production without owner approval -> BLOCKED for agents"
+  ]
+}

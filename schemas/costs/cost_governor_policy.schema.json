@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Cost Governor Policy",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["monthly_budget_min_rub", "monthly_budget_max_rub", "active_monthly_budget_rub", "unlimited_loops"],
+  "properties": {
+    "monthly_budget_min_rub": {"type": "integer", "const": 10000},
+    "monthly_budget_max_rub": {"type": "integer", "const": 30000},
+    "active_monthly_budget_rub": {"type": "integer", "minimum": 10000, "maximum": 30000},
+    "unlimited_loops": {"type": "string", "const": "DENY"}
+  }
+}

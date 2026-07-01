@@ -1,0 +1,92 @@
+[
+  {
+    "product_id": "express_review",
+    "status": "ACTIVE",
+    "has_price": true
+  },
+  {
+    "product_id": "mini_audit",
+    "status": "ACTIVE",
+    "has_price": true
+  },
+  {
+    "product_id": "mini_audit_plus",
+    "status": "DRAFT",
+    "has_price": true
+  },
+  {
+    "product_id": "full_business_audit",
+    "status": "DRAFT",
+    "has_price": true
+  },
+  {
+    "product_id": "funnel_audit",
+    "status": "DRAFT",
+    "has_price": false
+  },
+  {
+    "product_id": "process_comm_audit",
+    "status": "PLANNED",
+    "has_price": false
+  },
+  {
+    "product_id": "implementation_sprint",
+    "status": "DRAFT",
+    "has_price": true
+  },
+  {
+    "product_id": "start_page_sprint",
+    "status": "DRAFT",
+    "has_price": true
+  },
+  {
+    "product_id": "landing_sprint",
+    "status": "DRAFT",
+    "has_price": false
+  },
+  {
+    "product_id": "business_website",
+    "status": "DRAFT",
+    "has_price": true
+  },
+  {
+    "product_id": "lead_system",
+    "status": "PLANNED",
+    "has_price": false
+  },
+  {
+    "product_id": "ai_front_office",
+    "status": "PLANNED",
+    "has_price": false
+  },
+  {
+    "product_id": "growth_support",
+    "status": "PLANNED",
+    "has_price": false
+  },
+  {
+    "product_id": "digital_presence_check",
+    "status": "PLANNED",
+    "has_price": false
+  },
+  {
+    "product_id": "owned_presence_pack",
+    "status": "PLANNED",
+    "has_price": false
+  },
+  {
+    "product_id": "domain_recovery",
+    "status": "PLANNED",
+    "has_price": false
+  },
+  {
+    "product_id": "audit_plus_prototype",
+    "status": "PLANNED",
+    "has_price": false
+  },
+  {
+    "product_id": "prototype_preview",
+    "status": "PLANNED",
+    "has_price": false
+  }
+]

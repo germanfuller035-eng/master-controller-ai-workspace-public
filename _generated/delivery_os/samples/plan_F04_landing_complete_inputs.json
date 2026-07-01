@@ -1,0 +1,72 @@
+{
+  "ok": true,
+  "errors": [],
+  "warnings": [],
+  "milestone_sequence": [
+    "ls1",
+    "ls2",
+    "ls3",
+    "ls4"
+  ],
+  "critical_path": [
+    "ls1",
+    "ls2",
+    "ls3",
+    "ls4"
+  ],
+  "estimated_duration_days": 7,
+  "timeline": [
+    {
+      "milestone_id": "ls1",
+      "name": "Discovery + input collection",
+      "relative": "Day 0",
+      "owner": "owner",
+      "deliverables": [
+        "brief"
+      ],
+      "qa_gate": false,
+      "acceptance_gate": false
+    },
+    {
+      "milestone_id": "ls2",
+      "name": "Structure + copy",
+      "relative": "after ls1",
+      "owner": "claude",
+      "deliverables": [
+        "structure",
+        "copy"
+      ],
+      "qa_gate": true,
+      "acceptance_gate": false
+    },
+    {
+      "milestone_id": "ls3",
+      "name": "Build + form + responsive",
+      "relative": "after ls2",
+      "owner": "claude",
+      "deliverables": [
+        "landing"
+      ],
+      "qa_gate": true,
+      "acceptance_gate": false
+    },
+    {
+      "milestone_id": "ls4",
+      "name": "Owner+client review + launch",
+      "relative": "after owner approval",
+      "owner": "owner",
+      "deliverables": [
+        "launched_landing",
+        "handoff_guide"
+      ],
+      "qa_gate": true,
+      "acceptance_gate": true
+    }
+  ],
+  "owner_checkpoints": [
+    "ls1",
+    "ls4"
+  ],
+  "client_checkpoints": [],
+  "note": "Relative timeline only. No exact client dates without approved start date."
+}

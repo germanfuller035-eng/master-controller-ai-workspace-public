@@ -1,0 +1,25 @@
+{
+  "schema": "orchestrator_os.dashboard.v1",
+  "generated_ts": "20260617_000000",
+  "synthetic": true,
+  "note": "Derived orchestration view. No real agent/scheduler/queue. References AI HQ task ledger + Executive priorities.",
+  "tasks_total": 8,
+  "running_synthetic_simulations": 12,
+  "ready": 3,
+  "waiting_dependency": 0,
+  "waiting_owner": 8,
+  "budget_warnings": 2,
+  "retries": 1,
+  "failures": 0,
+  "dead_letters": 1,
+  "verification_pending": 1,
+  "agent_allocation": {
+    "CLAUDE_CODE": "repo-wide",
+    "CLINE": "file-local",
+    "DETERMINISTIC": "validation/reports",
+    "HUMAN_OWNER": "gated"
+  },
+  "token_estimates": "ESTIMATED only; confirmed=UNKNOWN (no real runs)",
+  "context_freshness": "reuses AI HQ context_pack_builder (deterministic content-date freshness)",
+  "production_prohibited_tasks": 3
+}

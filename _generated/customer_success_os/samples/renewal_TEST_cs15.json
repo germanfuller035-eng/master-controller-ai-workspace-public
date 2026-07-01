@@ -1,0 +1,9 @@
+{
+  "recommended_action": "DO_NOT_RENEW",
+  "blockers": [
+    "unresolved_critical_incident"
+  ],
+  "value_evidence": false,
+  "owner_approval_required": true,
+  "note": "No live renewal deal created. No renewal message sent."
+}

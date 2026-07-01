@@ -1,0 +1,26 @@
+Master Controller Android — Build Info
+========================================
+versionName       : 0.6.0-rc2
+versionCode        : 14
+applicationId      : ru.dmitry.matercontroller
+compileSdk/target  : 34
+minSdk             : 26
+build_type         : release (minify + shrinkResources)
+signer SHA-256      : 11038fca7db3fab1b0206971a93678b9dd28363ddf61241e162568019a1023f7 (== RC1..RC5)
+signature_scheme   : v2 (single signer)
+AGP / Gradle / Kotlin : 8.5.2 / 8.7 / 1.9.24
+git_branch         : feature/multichannel-activation-acceptance-v1
+git_base           : b61f0a1
+git_head (pre-commit): b61f0a1b0d68ec707b062eb6d80f4c80588b9eb2
+room_db_version    : 2 (exportSchema=false; MIGRATION_1_2 present) — schemas not emitted by design
+build_date         : 2026-06-18
+
+Changes vs RC1:
+- queue navigation wired (7 cards → routes + list screens)
+- commercial summary mapping fixed (snake_case @SerialName; offers_ready_for_send_review)
+- offer review list + detail (СтройДвор-Юг / ДКБИ / Завод Атом), text-only actions, no send
+- product/owner UI localization (offer status/decision/confidence + Operations RU)
+- no outbound action anywhere; agent provider state surfaced honestly
+
+APK SHA-256: 476fa3b2a2cb43669110714b62ddb7c676f5fbe882f2accd25c4feb18903921a
+AAB SHA-256: a13b86cb65eccad83f5cec2faac4a638207112339c19a9190829435fe811f146

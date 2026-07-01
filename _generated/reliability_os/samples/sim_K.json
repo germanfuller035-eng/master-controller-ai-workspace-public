@@ -1,0 +1,11 @@
+{
+  "scenario": "K",
+  "production_affected": false,
+  "name": "Restore fails safely",
+  "ok": true,
+  "steps": [
+    "restore_failure -> detect:restore test fail health:UNHEALTHY alert:a_backup_failed runbook:rb_restore_failure",
+    "isolated; no production touched",
+    "try prior backup"
+  ]
+}

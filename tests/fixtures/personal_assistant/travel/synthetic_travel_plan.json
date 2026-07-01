@@ -1,0 +1,8 @@
+{
+  "booking_requested": false,
+  "external_system_accessed": false,
+  "kind": "travel_plan_draft",
+  "request_id": "syn_travel_alpha",
+  "route_label": "synthetic_origin_to_synthetic_destination",
+  "synthetic": true
+}

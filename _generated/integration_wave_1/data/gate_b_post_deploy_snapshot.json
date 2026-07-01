@@ -1,0 +1,65 @@
+{
+  "snapshot": "GATE_B_POST_DEPLOY",
+  "captured_at_utc": "2026-06-18T12:52:00Z",
+  "canonical": {
+    "store_revision": 91,
+    "leads": 62,
+    "duplicate_ids": 0,
+    "missing_status": 0,
+    "writer_count": 1,
+    "updated_by": "iw1_migration",
+    "migrations_applied": ["iw1_commercial_sections_v1"],
+    "commercial_sections_present": 8,
+    "commercial_sections": [
+      "commercial.opportunities", "commercial.offers", "commercial.owner_decisions", "commercial.deals",
+      "delivery.handoffs", "delivery.projects", "finance.invoices", "finance.payments"
+    ],
+    "commercial_entities": 0,
+    "nonempty_sections": []
+  },
+  "sends": { "historical_successful_sends": 7, "unauthorized_sends": 0, "smtp_calls": 0 },
+  "queue": { "total_jobs": 41, "completed": 41, "failed": 0, "dead_letters": 0, "queue_revision": 146, "send_capable_jobs": 0 },
+  "flags": {
+    "COMMERCIAL_READ_API": "ON",
+    "COMMERCIAL_COMMAND_API": "OFF",
+    "COMMERCIAL_SEND": "OFF",
+    "AUTOSEND": "BLOCKED",
+    "SEND_ALLOWED_LIVE": "OFF",
+    "EMAIL_REAL_SEND_ENABLED": "false",
+    "MATER_NO_SEND": "true"
+  },
+  "read_endpoints": {
+    "total": 16,
+    "valid": 16,
+    "http_500": 0,
+    "collections_empty": true,
+    "products_total": 18,
+    "products_active": 2,
+    "products_draft": 7,
+    "products_planned": 9,
+    "mini_audit_price": 10000,
+    "unknown_as_zero": false,
+    "integration_status": { "commercialApiEnabled": true, "commercialCommandsEnabled": false, "sendCapability": "NONE", "singleWriter": true }
+  },
+  "command_endpoints": {
+    "total": 7,
+    "disabled": 7,
+    "http_status_without_owner_token": 401,
+    "feature_disabled_with_synthetic_owner": "403 FEATURE_DISABLED 7/7",
+    "engine_reached": false,
+    "mutations": 0
+  },
+  "services": {
+    "api": { "pid": 13717, "nrestarts": 0, "active": "running" },
+    "worker": { "active": true, "nrestarts": 0 },
+    "telegram": { "pid": 7757, "poller_count": 1, "nrestarts": 0, "getupdates_conflicts": 0, "restarted": false },
+    "imap_timer": "active",
+    "caddy": "active"
+  },
+  "live_hashes": {
+    "canonical_store_changed_vs_v2": true,
+    "canonical_store_note": "expected: migration added 8 empty sections + revision 90->91",
+    "job_queue_sha256": "c7a2ed596d6c753aef2bd66e2ec5cdbb51ca87f9450b5ebf60f63189fa4ec01f",
+    "send_ledger_sha256": "04fda652a15b072bbc729419022c5486746677df3d1a1d6aa07ea0527bbe321e"
+  }
+}

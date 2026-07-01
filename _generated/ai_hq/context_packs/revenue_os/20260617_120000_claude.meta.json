@@ -1,0 +1,90 @@
+{
+  "schema": "ai_hq.context_pack.v1",
+  "project_id": "revenue_os",
+  "agent": "claude",
+  "task": "build Revenue OS Command Center",
+  "generated_ts": "20260617_120000",
+  "max_size": 16000,
+  "actual_size": 15948,
+  "truncated": true,
+  "estimated_tokens": 3987,
+  "sources": [
+    {
+      "path": "13_sales/dashboard_legacy_active_leads_overlay.json",
+      "sha256": "a8207f3c4279889cba505e121bedf8321fae3410dee3a87fd8070a027650bc2b",
+      "redactions": 0,
+      "freshness": "fresh"
+    },
+    {
+      "path": "13_sales/generate_commercial_pipeline_rebuild_report.js",
+      "sha256": "685452049bed91ae3e5ca8198fb67fa2a7c6916ad9a6272197c7dfd4054bf5dd",
+      "redactions": 0,
+      "freshness": "fresh"
+    },
+    {
+      "path": "13_sales/lead_pipeline_store.backup_zavodatom_repair_2026-06-13T18-43-28-364Z.json",
+      "sha256": "1671fcaf04bc76ff225408faff468795665b547da8be6e0520516c6824d6be50",
+      "redactions": 0,
+      "freshness": "fresh"
+    },
+    {
+      "path": "13_sales/lead_contacts.json",
+      "sha256": "e9687cf13eddd3b53f32004418501ed47c66ea7d6dd47c8d846366a22f750d83",
+      "redactions": 0,
+      "freshness": "STALE"
+    },
+    {
+      "path": "13_sales/lead_contacts.backup_2026-06-05.json",
+      "sha256": "d84f66c5636821b306e0d1192bc747da827cefae2eef2a969336bf15cad7b5ba",
+      "redactions": 0,
+      "freshness": "STALE"
+    },
+    {
+      "path": "13_sales/first_10_leads_plan.md",
+      "sha256": "448b704a14b968d2905c78228160089ef02bdae74631171f60b081a5709b1faa",
+      "redactions": 0,
+      "freshness": "STALE"
+    },
+    {
+      "path": "13_sales/client_communication_standard.md",
+      "sha256": "90766cb3f3229895c2a68979e2294dd29fc827f7d0786748f8077d4bf097b2fc",
+      "redactions": 0,
+      "freshness": "STALE"
+    },
+    {
+      "path": "13_sales/client_delivery_standard.md",
+      "sha256": "846c086a9698bf3ccbdf7ae56b3facc6c3849c51f844b22d5589007199265506",
+      "redactions": 0,
+      "freshness": "STALE"
+    },
+    {
+      "path": "13_sales/audit_product_ladder.md",
+      "sha256": "a866aad33ceab42524d5a0d9dd91edde4cf2a38e007cc102a1c69d86cc1ec5ee",
+      "redactions": 0,
+      "freshness": "STALE"
+    },
+    {
+      "path": "13_sales/implementation_sprint_pricing.md",
+      "sha256": "fb8d05685fbaff58211c87d79dc1e90b8e415707bac5447719bdadea50c36c25",
+      "redactions": 0,
+      "freshness": "STALE"
+    },
+    {
+      "path": "13_sales/audit_tool_stack.md",
+      "sha256": "a919df3f02bd59533fd629ab3652f937b7e081a1608507a162cdbca5ce498d34",
+      "redactions": 0,
+      "freshness": "STALE"
+    },
+    {
+      "path": "13_sales/follow_up_tracker.md",
+      "sha256": "2b28ce407931e8e84c87c36f51a921906991dd25b644088c19354f40eab21618",
+      "redactions": 0,
+      "freshness": "STALE"
+    }
+  ],
+  "source_count": 12,
+  "sensitive_excluded": [],
+  "secret_findings_in_pack": [],
+  "content_sha256": "3dd72385d7b4499da6cb5a08630eb66d1dcb1af280a79df1fcc872b9f27d0e68",
+  "freshness_days": 7
+}

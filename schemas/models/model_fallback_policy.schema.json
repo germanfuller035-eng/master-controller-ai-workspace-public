@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Model Fallback Policy",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["ai_unavailable_policy", "no_unlimited_fallback_loops", "fallback_chains"],
+  "properties": {
+    "ai_unavailable_policy": {"type": "string"},
+    "no_unlimited_fallback_loops": {"type": "boolean", "const": true},
+    "fallback_chains": {"type": "array", "items": {"type": "object"}}
+  }
+}

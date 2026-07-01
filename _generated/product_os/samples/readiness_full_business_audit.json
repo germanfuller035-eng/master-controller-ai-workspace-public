@@ -1,0 +1,40 @@
+{
+  "assessment_id": "assess_full_business_audit",
+  "product_id": "full_business_audit",
+  "current_status": "DRAFT",
+  "recommended_status": "DELIVERY_DEFINED",
+  "score": 59,
+  "dimensions": {
+    "definition": "COMPLETE",
+    "icp": "COMPLETE",
+    "problem": "COMPLETE",
+    "outcome": "COMPLETE",
+    "deliverables": "COMPLETE",
+    "scope": "COMPLETE",
+    "exclusions": "COMPLETE",
+    "price": "PARTIAL",
+    "delivery_playbook": "COMPLETE",
+    "inputs": "COMPLETE",
+    "milestones": "COMPLETE",
+    "qa": "COMPLETE",
+    "acceptance": "COMPLETE",
+    "risks": "COMPLETE",
+    "capacity": "MISSING",
+    "economics": "PARTIAL",
+    "demo": "MISSING",
+    "internal_pilot": "MISSING",
+    "sales_assets": "PARTIAL",
+    "delivery_assets": "PARTIAL",
+    "case_evidence": "MISSING",
+    "owner_approval": "MISSING"
+  },
+  "blocking_gaps": [
+    "capacity",
+    "demo",
+    "internal_pilot",
+    "case_evidence",
+    "owner_approval"
+  ],
+  "owner_decision_required": true,
+  "auto_promote": false
+}

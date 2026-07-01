@@ -1,0 +1,32 @@
+# Real Leads Pre-Send Pilot Summary
+
+SESSION_NAME=OPERATOR_IMPORT_ROUTE_AND_REAL_LEADS_PRE_SEND_RESUME_V1
+STATUS=PASS
+
+REAL_LEADS_COUNT=3
+LEADS_LOADED_WITHOUT_OWNER_TYPING=YES
+APP_WALKTHROUGH_STATUS=PASS
+OFFERS_DRAFTED=3
+QA_PASSED=3
+READY_FOR_OWNER_REVIEW_COUNT=3
+READY_TO_SEND_MANUALLY_COUNT=3
+
+SENT_BY_SYSTEM=NO
+SENT_MANUALLY=NO
+NO_SEND_STATUS=PASS
+NO_PAYMENT_STATUS=PASS
+NO_PRODUCTION_WRITE_STATUS=PASS
+OUTBOUND_COUNT=0
+PAYMENT_COUNT=0
+PRODUCTION_DB_WRITES=0
+
+PRIVATE_EVIDENCE=D:\AI_FILE_VAULT\sales_pilot_private\real_leads_pre_send_pilot_20260627_231529\private_device_evidence_operator_import_20260627_235050
+GIT_EVIDENCE=_generated/real_leads_pre_send_pilot_v1
+
+## Walkthrough Result
+
+| Lead | Loaded | Qualification | Draft | QA | Owner Decisions | System / STOP | Sent | Payment | Production Write |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| LEAD_1 | YES | PASS | PASS | PASS | PASS | PASS | NO | NO | NO |
+| LEAD_2 | YES | PASS | PASS | PASS | PASS | PASS | NO | NO | NO |
+| LEAD_3 | YES | PASS | PASS | PASS | PASS | PASS | NO | NO | NO |

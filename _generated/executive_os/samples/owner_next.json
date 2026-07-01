@@ -1,0 +1,31 @@
+{
+  "primary_owner_action": {
+    "action": "d_monthly_target",
+    "kind": "owner_decision",
+    "reason": "ready owner decision"
+  },
+  "secondary_actions": [
+    {
+      "action": "d_product_status",
+      "kind": "owner_decision",
+      "reason": "ready owner decision"
+    },
+    {
+      "action": "d_pilot_readiness",
+      "kind": "owner_decision",
+      "reason": "ready owner decision"
+    },
+    {
+      "action": "d_first_commercial_cycle",
+      "kind": "owner_decision",
+      "reason": "ready owner decision"
+    }
+  ],
+  "ai_actions_without_owner": [
+    "generate weekly review",
+    "refresh snapshot"
+  ],
+  "blocked_actions": [],
+  "freeze_active": true,
+  "note": "Production freeze active — no production mutation recommended."
+}

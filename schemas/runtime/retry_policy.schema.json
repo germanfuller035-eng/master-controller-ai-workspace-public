@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Retry Policy",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["max_retries_per_step", "unlimited_loop_policy"],
+  "properties": {
+    "max_retries_per_step": {"type": "integer", "maximum": 2},
+    "max_total_retries_per_task": {"type": "integer"},
+    "unlimited_loop_policy": {"type": "string", "const": "DENY"}
+  }
+}

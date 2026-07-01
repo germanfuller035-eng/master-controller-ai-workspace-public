@@ -1,0 +1,1 @@
+from .core import generate_ai_front_office_architecture

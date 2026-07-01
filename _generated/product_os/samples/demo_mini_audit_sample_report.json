@@ -1,0 +1,23 @@
+{
+  "asset_id": "demo_mini_audit_sample_report",
+  "product_id": "mini_audit",
+  "asset_type": "sample_report",
+  "version": "1.0",
+  "status": "INTERNAL_DRAFT",
+  "content": {
+    "product": "Mini Audit 10K",
+    "client": "[DEMO client — synthetic]",
+    "sections": [
+      "5-7 key findings",
+      "short fix plan",
+      "next step recommendation",
+      "client-facing PDF or structured note"
+    ],
+    "note": "synthetic findings, no real data"
+  },
+  "source": "synthetic (TEST_ONLY)",
+  "approved": false,
+  "client_ready": false,
+  "send_allowed": false,
+  "publish_allowed": false
+}

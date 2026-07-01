@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-26",
+  "session": "DIGITAL_PRESENCE_WEBSITE_AND_AI_FRONT_OFFICE_FACTORY_V1",
+  "scope": "LOCAL_SYNTHETIC_NO_DEPLOY",
+  "analysis_mode": "SYNTHETIC_FIXTURE_ONLY",
+  "browser_actions_allowed": false,
+  "real_scraping_allowed": false,
+  "external_website_access_allowed": false,
+  "factual_claims_require_evidence": true,
+  "unsupported_claims": "BLOCK",
+  "quality_score_deterministic": true,
+  "lead_capture_readiness_required": true
+}

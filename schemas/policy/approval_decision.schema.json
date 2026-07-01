@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Approval Decision V1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["decision", "reason", "payload_hash", "approval_id"],
+  "properties": {
+    "decision": {"enum": ["ALLOW", "DENY", "REQUIRE_OWNER_APPROVAL", "REQUIRE_STRONG_OWNER_APPROVAL", "STOP_BLOCKED"]},
+    "reason": {"type": "string"},
+    "payload_hash": {"type": "string"},
+    "approval_id": {"type": "string"},
+    "expires_at": {"type": "string"},
+    "replay_checked": {"type": "boolean"}
+  }
+}

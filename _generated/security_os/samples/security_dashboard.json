@@ -1,0 +1,54 @@
+{
+  "schema": "security_os.dashboard.v1",
+  "generated_ts": "20260617_000000",
+  "synthetic": true,
+  "note": "Derived security view. No secret values. References existing audit/identity/approval owners.",
+  "critical_assets": [
+    "vps",
+    "canonical_store",
+    "mc_api",
+    "ssh_credentials"
+  ],
+  "trust_boundaries": [
+    "service->telegram_api",
+    "local->future_remote",
+    "external_content->agent",
+    "agent->external",
+    "service->store",
+    "dependency->build",
+    "service->yandex",
+    "upload->vault",
+    "internet->vps",
+    "device->api",
+    "agent->approval",
+    "local"
+  ],
+  "open_findings": 5,
+  "secret_findings": 0,
+  "sensitive_data_findings": 7,
+  "access_risks": 2,
+  "supply_chain_risks": 2,
+  "communication_monitor_disposition": {
+    "KEEP_RESTRICTED": 3,
+    "KEEP_AUDIT_EVIDENCE": 5,
+    "REDACT_AND_TRACK": 4,
+    "MOVE_TO_QUARANTINE": 4,
+    "MOVE_TO_ARCHIVE": 4,
+    "DELETE_AFTER_APPROVAL": 1,
+    "ROTATION_REQUIRED": 0
+  },
+  "incidents": 0,
+  "exceptions": 0,
+  "release_gate": "READY_FOR_OWNER_REVIEW",
+  "owner_actions": [
+    "disposition of excluded communication files (quarantine/archive/delete-after-approval)",
+    "encryption-at-rest live verification (workstation/vps/android/backups)",
+    "legal review: privacy + retention + consent",
+    "secret-scan gate before any future Git remote"
+  ],
+  "controls_requiring_legal_review": [
+    "privacy",
+    "retention",
+    "communication_consent"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "content_hash": "4eefdb542313e5c70c9ffed800e2746da3c4aac20486ef91cf2db8f5520b9258",
+  "production_data_touched": false,
+  "record_count": 2,
+  "records": [
+    {
+      "id": "SYNTH-REMINDER-001",
+      "kind": "owner_reminder_draft",
+      "status": "draft_only"
+    },
+    {
+      "id": "SYNTH-APPROVAL-001",
+      "kind": "approval_request",
+      "status": "owner_gate_required"
+    }
+  ],
+  "source_id": "synthetic-restore-source-v1",
+  "synthetic": true
+}

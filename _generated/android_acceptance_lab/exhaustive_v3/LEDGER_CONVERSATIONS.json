@@ -1,0 +1,45 @@
+{
+  "screen": "Conversations (Диалоги)",
+  "status": "CLEAN",
+  "verified_at": "2026-06-23",
+  "runtime": "live AVD a56lab + prod backend 195.96.132.82 (/api/v1)",
+  "apk": "0.8.0-rc7 versionCode=31 (debug, applicationId ru.dmitry.matercontroller.debug)",
+  "root_cause": "route /conversations вызывал listConversations() без includeTest -> всегда owner-mode (REAL_COMMERCIAL_ONLY) -> test/internal диалоги (002/A/MA-1) корректно скрыты -> пустой список на debug-экране.",
+  "fix": {
+    "backend": "index.mjs route 627: listConversations({ includeTest: req.query?.includeTest === 'true' }) (образец /first-touch). default false.",
+    "android": "MaterApi.conversations(@Query includeTest=false); MaterRepository.conversations(BuildConfig.DEBUG).",
+    "deploy": "1 файл index.mjs -> /opt/master-controller/tools/mater_controller_api/src/server/index.mjs; backup .bak_v3_conv (c855f7d8); restart master-controller-api (PID 36846 -> 43636)."
+  },
+  "deploy_proof": {
+    "prod_sha256_before": "c855f7d8e437e2a722d6c125f3fc7403d889c32fc2f437af6b10af640842f228",
+    "prod_sha256_after": "fafa5b19dc101bb21ac8a4ea70620b254ce0444e34f13282c0ac4783d8a80cf5",
+    "local_sha256": "fafa5b19dc101bb21ac8a4ea70620b254ce0444e34f13282c0ac4783d8a80cf5",
+    "node_check": "INSTALLED_SYNTAX_OK",
+    "service_state": "active/running ExecMainStatus=0",
+    "local_health": "HTTP 200",
+    "external_health": "https://195-96-132-82.sslip.io/api/v1/health HTTP 200"
+  },
+  "api_truth": {
+    "includeTest_false": "scope=REAL_COMMERCIAL_ONLY, items=[], total=0 (owner/release НЕ видит test/internal)",
+    "includeTest_true": "scope=ALL, видны conv_002/conv_A/conv_MA-1 (send_capability=NONE)",
+    "pre_deploy_both": "scope=REAL_COMMERCIAL_ONLY total=0 (route игнорировал param — подтверждает root cause)"
+  },
+  "controls": [
+    { "id": "CTRL-0315", "name": "Список диалогов (cs_conversations -> conversations)", "result": "PASS", "evidence": "conv_002/A/MA-1 + др. видны на debug rc7 (includeTest=true)" },
+    { "id": "CTRL-0316", "name": "Открыть ленту (conv_002 -> AlertDialog timeline)", "result": "PASS", "evidence": "Лента: 002, события Лид создан / Отправка зафиксирована, 'Отправка: недоступна (NONE)'" },
+    { "id": "CTRL-0317", "name": "Закрыть ленту (кнопка Закрыть)", "result": "PASS", "evidence": "dialog закрыт, возврат к списку, dialog-элементов нет" }
+  ],
+  "send_safety": {
+    "screen_model": "read-only timeline; send_capability=NONE; нет reply/mark-read контролов в ConversationsScreen (по дизайну)",
+    "replies_screen": "tab_replies пуст (Новых ответов нет, total=0) — нет reply для mark-read/draft",
+    "send_reconciliation": "authoritative_successful_sends=7 (исторические, не этой сессии), records_requiring_reconciliation=0, unauthorized_sends=0, unknown_sends=0",
+    "client_reply_sent": false
+  },
+  "metrics": {
+    "CONVERSATIONS_FAILED": 0,
+    "CONVERSATIONS_UNEXECUTED": 0,
+    "CLIENT_MESSAGES_SENT": 0,
+    "SMTP_CALLS": 0,
+    "SEND_LEDGER_DELTA": 0
+  }
+}

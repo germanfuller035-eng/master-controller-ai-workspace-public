@@ -1,0 +1,7 @@
+{
+  "artifact_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "artifact_id": "synthetic-browser-evidence-alpha",
+  "hash_algorithm": "SHA-256",
+  "real_capture": false,
+  "synthetic": true
+}

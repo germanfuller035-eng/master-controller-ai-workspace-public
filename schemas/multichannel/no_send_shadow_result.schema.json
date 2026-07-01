@@ -1,0 +1,19 @@
+{
+  "additionalProperties": true,
+  "properties": {
+    "outbound_count": {},
+    "payment_count": {},
+    "pipeline_status": {},
+    "production_db_writes": {},
+    "synthetic_drafts_processed": {}
+  },
+  "required": [
+    "pipeline_status",
+    "synthetic_drafts_processed",
+    "outbound_count",
+    "payment_count",
+    "production_db_writes"
+  ],
+  "title": "No Send Shadow Result",
+  "type": "object"
+}

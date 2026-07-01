@@ -1,0 +1,21 @@
+{
+  "additionalProperties": true,
+  "properties": {
+    "draft_id": {},
+    "fields": {},
+    "payload_hash": {},
+    "submit_allowed": {},
+    "synthetic": {},
+    "target_form_ref": {}
+  },
+  "required": [
+    "synthetic",
+    "draft_id",
+    "target_form_ref",
+    "fields",
+    "submit_allowed",
+    "payload_hash"
+  ],
+  "title": "Form Draft",
+  "type": "object"
+}

@@ -1,0 +1,29 @@
+{
+  "session": "OWNER_COMMERCIAL_WORKFLOW_V2_AUTO_VERIFICATION_AND_CLOSEOUT",
+  "device": "Honor ALT-LX1 AMSKBB4914919475",
+  "private_evidence": "D:\\AI_FILE_VAULT\\sales_pilot_private\\owner_commercial_workflow_v2_auto_verification\\20260629_144627",
+  "all_required_screens_reached": true,
+  "forbidden_owner_visible_terms_found": false,
+  "screens": [
+    {"id": "01_today", "owner_screen": "Сегодня", "required_tag": "today_screen", "status": "PASS"},
+    {"id": "02_leads", "owner_screen": "Лиды", "required_tag": "sales_website_screen", "status": "PASS"},
+    {"id": "03_lead_review", "owner_screen": "Разбор лида", "required_tag": "sales_company_review_screen", "status": "PASS"},
+    {"id": "04_first_touch", "owner_screen": "Первое касание", "required_tag": "sales_draft_editor", "status": "PASS"},
+    {"id": "05_quality_gate", "owner_screen": "Проверка качества", "required_tag": "sales_qa_screen", "status": "PASS"},
+    {"id": "06_channel", "owner_screen": "Канал", "required_tag": "sales_contact_screen", "status": "PASS"},
+    {"id": "07_send_packet", "owner_screen": "Отправочный пакет", "required_tag": "pilot_manual_send", "status": "PASS"},
+    {"id": "08_manual_result", "owner_screen": "Результат отправки", "required_tag": "sales_post_send_result", "status": "PASS"},
+    {"id": "08b_manual_result_recorded", "owner_screen": "Результат зафиксирован локально", "required_tag": "sales_post_send_result", "status": "PASS"},
+    {"id": "09_replies", "owner_screen": "Ответы", "required_tag": "reply_inbox_screen", "status": "PASS"},
+    {"id": "10_reply_detail", "owner_screen": "Детали ответа", "required_tag": "reply_detail_screen", "status": "PASS"},
+    {"id": "11_deal_gate", "owner_screen": "Разрешение записи сделки", "required_tag": "crm_write_review_screen", "status": "PASS"},
+    {"id": "12_deal", "owner_screen": "Сделка", "required_tag": "opportunity_review_screen", "status": "PASS"},
+    {"id": "13_product", "owner_screen": "Продукт", "required_tag": "product_select_screen", "status": "PASS"},
+    {"id": "14_material", "owner_screen": "Материал", "required_tag": "product_draft_screen", "status": "PASS"},
+    {"id": "15_document", "owner_screen": "PDF/КП", "required_tag": "document_review_screen", "status": "PASS"},
+    {"id": "16_invoice", "owner_screen": "Черновик счёта", "required_tag": "invoice_draft_screen", "status": "PASS"},
+    {"id": "17_payment_gate", "owner_screen": "Payment Gate", "required_tag": "payment_gate_screen", "status": "PASS"},
+    {"id": "18_history", "owner_screen": "История", "required_tag": "commercial_history_screen", "status": "PASS"},
+    {"id": "19_system_center", "owner_screen": "Центр системы", "required_tag": "commercial_safety_center", "status": "PASS"}
+  ]
+}

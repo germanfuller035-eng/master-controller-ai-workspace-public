@@ -1,0 +1,11 @@
+{
+  "scenario": "G",
+  "name": "Product not ready",
+  "ok": true,
+  "steps": [
+    "draft references product with readiness=PLANNED",
+    "validation -> PRODUCT_NOT_READY",
+    "draft blocked; no send"
+  ],
+  "error_code": "PRODUCT_NOT_READY"
+}

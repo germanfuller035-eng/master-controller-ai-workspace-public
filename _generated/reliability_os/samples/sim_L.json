@@ -1,0 +1,10 @@
+{
+  "scenario": "L",
+  "production_affected": false,
+  "name": "Disk pressure",
+  "ok": true,
+  "steps": [
+    "disk_pressure -> detect:free < critical health:DEGRADED alert:a_disk_pressure runbook:rb_disk_pressure",
+    "preserve backup+atomic space"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "real_send_executed": false,
+  "commercial_send": "OFF", "send_allowed_live": "OFF",
+  "packages": [
+    {"lead_id":"STROYDVOR-UG_RU","company":"СтройДвор-Юг","opportunity":"opp_e70e7ec3cc87","offer":"offer_dbbbf391d547","product":"mini_audit","price":10000,"currency":"RUB","offer_status":"READY_FOR_SEND_REVIEW","recipient_redacted":"s***@stroydvor-***.ru","delivery_class":"CONFIRMED_SENT (prior, awaiting reply)","duplicate_check":"no duplicate opp","approval_line":"APPROVE_ONE_REAL_PILOT_SEND_STROYDVOR-UG_RU","approval_executed":false},
+    {"lead_id":"DKBI_RU","company":"ДКБИ","opportunity":"opp_70378d4e92d3","offer":"offer_ec64d56d08b4","product":"mini_audit","price":10000,"currency":"RUB","offer_status":"READY_FOR_SEND_REVIEW","recipient_redacted":"i***@dkbi.***","delivery_class":"CONFIRMED_SENT (prior, awaiting reply)","audit_preview":false,"duplicate_check":"no duplicate opp","approval_line":"APPROVE_ONE_REAL_PILOT_SEND_DKBI_RU","approval_executed":false},
+    {"lead_id":"ZAVODATOM_RU","company":"Завод Атом","opportunity":"opp_19b1fde46bd4","offer":"offer_f1e0c4948965","product":"mini_audit","price":10000,"currency":"RUB","offer_status":"READY_FOR_SEND_REVIEW","recipient_redacted":"z***@zavodatom.***","delivery_class":"CONFIRMED_SENT (prior, awaiting reply)","audit_preview":true,"duplicate_check":"no duplicate opp","approval_line":"APPROVE_ONE_REAL_PILOT_SEND_ZAVODATOM_RU","approval_executed":false}
+  ],
+  "primary_approval_line": "APPROVE_ONE_REAL_PILOT_SEND_STROYDVOR-UG_RU",
+  "transport_gate": "C1-C (prohibited until separate owner approval + flag activation)"
+}

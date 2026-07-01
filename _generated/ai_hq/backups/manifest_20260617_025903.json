@@ -1,0 +1,3807 @@
+{
+  "schema": "ai_hq.backup_manifest.v1",
+  "generated_ts": "20260617_025903",
+  "src": "D:\\AI_WORKSPACE_WORKTREES\\ai-workspace-hq-v1\\_generated\\ai_hq\\backups\\canonical_20260617_025903",
+  "file_count": 759,
+  "total_size": 4349359,
+  "excluded_secret_files": 12,
+  "git_head": "bd5458535e0a3e091b6edae04de308371cb5a152",
+  "entries": [
+    {
+      "path": "00_ACTIVE_CONTEXT.md",
+      "size": 8340,
+      "sha256": "c823fc345c91dc78fb01220f58d2a8c695147eb00dfe7288443c8bb0b99567f3"
+    },
+    {
+      "path": "00_CONTEXT_BOOTSTRAP_FOR_CLINE.md",
+      "size": 3821,
+      "sha256": "44804174e2f16afcece88d9efdea886eab7121608396a0a19f15a0cda397ff2e"
+    },
+    {
+      "path": "00_START_HERE.md",
+      "size": 5712,
+      "sha256": "371f7374b4064179b4324cf925bca727226f3ef73ecb84b43ea42e68541ecd5a"
+    },
+    {
+      "path": "00_SYSTEM_STATE.md",
+      "size": 3845,
+      "sha256": "8791f93a32a61927bb87f6f21afd147c949cc79e0eeea39ebf79ed75a78e9a5d"
+    },
+    {
+      "path": "09_dashboards/agent_registry.md",
+      "size": 1107,
+      "sha256": "f60e8e969e5c146a6c3c01fdbad54ce1e8683c284bbf1bb3368f4ca290937f37"
+    },
+    {
+      "path": "09_dashboards/agent_skill_readiness_board_2026-05-31.md",
+      "size": 70016,
+      "sha256": "f5f0fbbfb2e12f2cb2ca3e1f4e99bda89a303b4864966b2527d17f9f587afe1a"
+    },
+    {
+      "path": "09_dashboards/agent_skill_readiness_layer_v1_HANDOFF_2026-05-31.md",
+      "size": 4878,
+      "sha256": "9b6a4f66782c631bd678463fe13f336b700e582ebb71ddfec177b9bf4a0fe0ee"
+    },
+    {
+      "path": "09_dashboards/agent_skill_readiness_layer_v1_report_2026-05-31.md",
+      "size": 2576,
+      "sha256": "573f439774625ce9909c4e76fffce862a8f3a1ba764fc9214fdf4ba4f4704a9d"
+    },
+    {
+      "path": "09_dashboards/ANDROID_RELEASE_COMPLETENESS_MATRIX_v0.4.0-rc1_2026-06-17.md",
+      "size": 3838,
+      "sha256": "9956fa022fa923f42e77edd64327b063b1d0132dba16ac4c103cb8ae2c77b0e9"
+    },
+    {
+      "path": "09_dashboards/approval_center.md",
+      "size": 1993,
+      "sha256": "a59bacde3d4d781f52a215a06b6f199d69afbf725468fe739830c8712967d44a"
+    },
+    {
+      "path": "09_dashboards/approved_email_send_adapter_c1_dry_run_report_2026-05-31.md",
+      "size": 4976,
+      "sha256": "47b679a9df6dc5977584445485be52b567d123c38d59776545f4383ddef61977"
+    },
+    {
+      "path": "09_dashboards/approved_email_send_commands_c21b_tests_report_2026-05-31.md",
+      "size": 4254,
+      "sha256": "7e3f7592cdcb7d398ce592fea3f65878ac59425f8f53406fb4514de29b2b725c"
+    },
+    {
+      "path": "09_dashboards/approved_email_send_commands_c21c_t13_fix_report_2026-05-31.md",
+      "size": 5270,
+      "sha256": "0ece7d4a0276d7572414e88597a37db79df9942fd7a5874f2264ed3fae9e83f4"
+    },
+    {
+      "path": "09_dashboards/approved_email_send_commands_c21_standalone_report_2026-05-31.md",
+      "size": 3256,
+      "sha256": "a11aa0eeeec56852a9b609f2cc5064dc47bee36eb24106eba3059c9480f225ea"
+    },
+    {
+      "path": "09_dashboards/approved_email_send_commands_c23a_bot_patch_HANDOFF_2026-05-31.md",
+      "size": 8711,
+      "sha256": "5973353d81d079804189bc282e3d87453592c37a780c4b9abc4c74c9a5540757"
+    },
+    {
+      "path": "09_dashboards/approved_email_send_commands_c23a_resume_patch_report_2026-05-31.md",
+      "size": 3829,
+      "sha256": "ab4695302b006738ce8302f63983a9952a01ba6ad65efe334e6a65c1e0b5d824"
+    },
+    {
+      "path": "09_dashboards/approved_email_send_commands_c23b_tests_report_2026-05-31.md",
+      "size": 4817,
+      "sha256": "32e62539607e345f64e0e277dd8d4c803d780d2002d5a350b031516d872cb2f7"
+    },
+    {
+      "path": "09_dashboards/approved_email_send_recipient_resolver_c24_final_report_2026-05-31.md",
+      "size": 4530,
+      "sha256": "bed30385ddadc6968a1a3265d638969299ca0010e200e4fa5605165ff903e629"
+    },
+    {
+      "path": "09_dashboards/approved_email_send_recipient_resolver_c24_HANDOFF_2026-05-31.md",
+      "size": 5645,
+      "sha256": "b050494a215eec0ad6ae77100ea2c400b19e67aa07506a4f164e2abc87cc5fb2"
+    },
+    {
+      "path": "09_dashboards/approved_email_send_ru_router_c22_final_report_2026-05-31.md",
+      "size": 4492,
+      "sha256": "d3f9551a574593ddf80283ef3939289f49a49a50bf400584aa855f914681b132"
+    },
+    {
+      "path": "09_dashboards/approved_email_send_ru_router_c22_HANDOFF_2026-05-31.md",
+      "size": 8503,
+      "sha256": "ee9bdeca29dbee931141e9c7072148f71d55fa5ed5f8c74ab1e8fc5c6270034a"
+    },
+    {
+      "path": "09_dashboards/audit_agent_run_log.md",
+      "size": 1141,
+      "sha256": "c35f0963d59d97d74ea325634bd12ea6db13b3a0db00ad623eaf1dcf30c257da"
+    },
+    {
+      "path": "09_dashboards/audit_delivery_pipeline.md",
+      "size": 13734,
+      "sha256": "7be11a6c5e76e23fc6e049cb82bcae16335d6b9dda9582c2e183dc22483494c8"
+    },
+    {
+      "path": "09_dashboards/audit_engine_v25_block3_report_2026-06-08.md",
+      "size": 2335,
+      "sha256": "e6a1e25e23878992b5fe83249c774a1841be36558ab309892b2cd50f8887806d"
+    },
+    {
+      "path": "09_dashboards/audit_pdf_approval_block_g_report_2026-06-10.md",
+      "size": 5760,
+      "sha256": "1203f7ec6070e2483b5271e494d7bed59cd0d1134231d714261e365cbce33928"
+    },
+    {
+      "path": "09_dashboards/audit_pdf_block_f_renderer_report_2026-06-10.md",
+      "size": 3009,
+      "sha256": "cae12a088671d5a87697fdc6836b8d9196a2f7fd46f6930fe322b17a34cf08f3"
+    },
+    {
+      "path": "09_dashboards/audit_send_approve_real_client_gate_report_2026-06-08.md",
+      "size": 3249,
+      "sha256": "858223e34846e9db90da7b2da2f2f9221830eb8f8d065e54fe7465f63b59ce7d"
+    },
+    {
+      "path": "09_dashboards/audit_send_architecture_stabilization_report_2026-06-08.md",
+      "size": 6977,
+      "sha256": "62a3a435d0882699cd47062cd29e49841cc4e865e70a8ffb91b94f9d813af1c9"
+    },
+    {
+      "path": "09_dashboards/audit_send_honest_wording_fix_2026-06-08.md",
+      "size": 2662,
+      "sha256": "f02b6b3d0d02afcb995e6efd81d3a98d43d3c08c83f2e4da7063ce24ed5bc380"
+    },
+    {
+      "path": "09_dashboards/audit_send_honest_wording_live_restart_report_2026-06-08.md",
+      "size": 6779,
+      "sha256": "4b2145a9900bf0f2e7e296d6224414819d2e354d89a5b8a8e0750fe3dcde57de"
+    },
+    {
+      "path": "09_dashboards/audit_send_inline_buttons_live_restart_report_2026-06-08.md",
+      "size": 7651,
+      "sha256": "eccf911ff50ef62746774f8996be685ad06ee42697335b481d360de238481024"
+    },
+    {
+      "path": "09_dashboards/audit_send_inline_buttons_patch_report_2026-06-06.md",
+      "size": 5277,
+      "sha256": "383cb87011971e60fea9d646ae1421f2f52f40f8ff780a7c5c082e68e1bdd094"
+    },
+    {
+      "path": "09_dashboards/audit_send_production_templates_report_2026-06-08.md",
+      "size": 3292,
+      "sha256": "4ecc9278cc4bea8d4fa5a21bd387914384802ed35739a05eea0ab77b7ab3e37d"
+    },
+    {
+      "path": "09_dashboards/audit_send_real_adapter_wiring_report_2026-06-08.md",
+      "size": 4225,
+      "sha256": "5ea167829d618cf314f23d39323331452caa7f42d2dd13f908ba189490f5470a"
+    },
+    {
+      "path": "09_dashboards/automation_scripts_registry.md",
+      "size": 3038,
+      "sha256": "f56da5dcecd67166bdba3d4c6e7769c83e3cf4ff23ac0cb17537e995c2afd20d"
+    },
+    {
+      "path": "09_dashboards/automation_status_board.bak_chatgptimport_2026-05-25.md",
+      "size": 2179,
+      "sha256": "3c949c84878eb5d74bb1e0c80d1864d8e85f516278f9f51ada3bb60fd9a952e6"
+    },
+    {
+      "path": "09_dashboards/automation_status_board.md",
+      "size": 2505,
+      "sha256": "e76ef44a960478457c602ab638fe3e847968aefd86dbf21e4e1d44798da2950d"
+    },
+    {
+      "path": "09_dashboards/backup_external_copy_update_report_2026-05-25.md",
+      "size": 2369,
+      "sha256": "51a5213f38d70b229c70e946aec110028fd3b236c8509b3bcd34502f374f8ade"
+    },
+    {
+      "path": "09_dashboards/backup_memory_migration_complete_report_2026-05-25.md",
+      "size": 2627,
+      "sha256": "50d2297ba3bb73a0a8385c8f48497dda0b8efce137f8a610d44f9a0a7267ded2"
+    },
+    {
+      "path": "09_dashboards/backup_register.bak_2026-05-25.md",
+      "size": 933,
+      "sha256": "c94825bfd8d3d365e9c9aa376bae40383a659aa4eaae634a7a8cf82f62dcedc7"
+    },
+    {
+      "path": "09_dashboards/backup_register.md",
+      "size": 7434,
+      "sha256": "ccb57d6441bf73762b25ccfd802bb2ed63272f7b07a5db4170b656271d90c1f8"
+    },
+    {
+      "path": "09_dashboards/backup_register_update_report_2026-05-25.md",
+      "size": 2932,
+      "sha256": "23fd7ff13acb6e002e4d70966454bcfd8d1ebba051ec8a13fead7e38ce48b949"
+    },
+    {
+      "path": "09_dashboards/blocks_12_13_bot_glue_wiring_report_2026-06-09.md",
+      "size": 3230,
+      "sha256": "520fb38d20272d08186a48da9e09fa3c54f19a4e23f038155bbb78222277d5b5"
+    },
+    {
+      "path": "09_dashboards/blocks_12_13_live_restart_report_2026-06-09.md",
+      "size": 2036,
+      "sha256": "1b1877101e2c59e95d2c01aafa1ee86e3cd8f34b19ee2448c92b4414c950a95d"
+    },
+    {
+      "path": "09_dashboards/blocks_12_13_revenue_scale_registry_offline_green_2026-06-09.md",
+      "size": 4003,
+      "sha256": "46eb34d3df1f82bf2ce4c49e46916008b14e1d45ad020761ab5ca01ef134f454"
+    },
+    {
+      "path": "09_dashboards/bug_reports_dashboard.md",
+      "size": 292,
+      "sha256": "dd96458273586b875f339a3c17488ecdb00332174cacc7624c4f0bf0b6d5afbe"
+    },
+    {
+      "path": "09_dashboards/button_surface_audit_pre_restart_2026-06-10.md",
+      "size": 3771,
+      "sha256": "82a89e63d8edbe79b27a61aaf604dbaf4285d4c50cb0bdb469f6b0eaa66bc93f"
+    },
+    {
+      "path": "09_dashboards/canonical_13_block_alignment_2026-06-09.md",
+      "size": 9783,
+      "sha256": "ff392fa63e8a81781b57c1c3abe2a003bab727669d878a2e41150425093ab9a8"
+    },
+    {
+      "path": "09_dashboards/canonical_leads_master_count_verification_2026-06-03.md",
+      "size": 9811,
+      "sha256": "b4e3f7b7a0b6711cd3b5016b07f4e282b2cac2b48174cb6f0665f7487b52094f"
+    },
+    {
+      "path": "09_dashboards/canonical_leads_master_lead_id_integrity_audit_2026-06-03.md",
+      "size": 8184,
+      "sha256": "4e7d7f775cc2e08b448af02f17eb15dc504311d970e309cfabdfaf3cca0eea9c"
+    },
+    {
+      "path": "09_dashboards/chatgpt_available_memory_export_import_report_2026-05-25.md",
+      "size": 5383,
+      "sha256": "14836778933a49ada6a2727c8309f7505695a1a77abe20df114e000e797bc2c3"
+    },
+    {
+      "path": "09_dashboards/chatgpt_business_idea_register_2026-05-28.md",
+      "size": 159240,
+      "sha256": "ba3cbd083fc7d64c8919a7b2c2e1ee46da5df3edfcdddbd1d02b2132ea8e4832"
+    },
+    {
+      "path": "09_dashboards/chatgpt_conversation_intelligence_index_2026-05-28.md",
+      "size": 18902,
+      "sha256": "94bba67f290d5b4edd494c1203ad98bf20d90e619cbcbeb6f6e07eb7a9998ed0"
+    },
+    {
+      "path": "09_dashboards/chatgpt_decision_extraction_register_2026-05-28.md",
+      "size": 161481,
+      "sha256": "299848d845f6d7047b343ed2b276b8d0e6307e584e41c7c86c5d44a9613ce482"
+    },
+    {
+      "path": "09_dashboards/chatgpt_export_full_import_backup_report_2026-05-28.md",
+      "size": 6482,
+      "sha256": "d08315b8e4ffa18ea97f99c89dd6cab93a8cc433770af3f1358bd196294f6905"
+    },
+    {
+      "path": "09_dashboards/chatgpt_export_full_import_preflight_report_2026-05-28.md",
+      "size": 1763,
+      "sha256": "ce96aaade17fee6483a7ab2c240147be06ef2270c029f3fc99923e8aee8efd0c"
+    },
+    {
+      "path": "09_dashboards/chatgpt_export_full_intelligence_import_report_2026-05-28.md",
+      "size": 5266,
+      "sha256": "ed7ee6550c4a0c4daec765eb32d00f368ebf474a8fb03c64de9912437f262d05"
+    },
+    {
+      "path": "09_dashboards/chatgpt_memory_import_scan_report_2026-05-25.md",
+      "size": 2968,
+      "sha256": "a0ea11072845dcb26f827c5cacb37e944910b9e15962f494ed96ff3a81fc5ee3"
+    },
+    {
+      "path": "09_dashboards/chatgpt_memory_integration_audit_report_2026-05-25.md",
+      "size": 17620,
+      "sha256": "200cb1750a2cb1aefa0db9bdfbc2ea076d7000abe9662ad4a27aa829a63c5b68"
+    },
+    {
+      "path": "09_dashboards/chatgpt_memory_stage_2b_apply_report_2026-05-25.md",
+      "size": 6182,
+      "sha256": "f4bcedc4c5fd647cd58be55d73ce161e43e030455bdeb4e5c8ded8f607ec85ce"
+    },
+    {
+      "path": "09_dashboards/chatgpt_official_export_intake_report_2026-05-26.md",
+      "size": 5623,
+      "sha256": "5992263a02a456ea1e847a5d7c79dab63629040fc752d59d981a4d1138a6379c"
+    },
+    {
+      "path": "09_dashboards/chatgpt_official_export_phase2_import_report_2026-05-26.md",
+      "size": 8426,
+      "sha256": "0bc4b3a3a338e66894508c7e2d3acf634aac0af58a9618e1cf3b375b0b4983d8"
+    },
+    {
+      "path": "09_dashboards/chatgpt_official_export_phase2_m01_closure_report_2026-05-26.md",
+      "size": 7742,
+      "sha256": "6e7d91acfbe6c0cef56d81e977fb3e65f75944d754887484493a68dd38bd5bf9"
+    },
+    {
+      "path": "09_dashboards/chatgpt_official_export_phase2_qa_report_2026-05-26.md",
+      "size": 13400,
+      "sha256": "d5d0395021ec962d5c33e994847d9f226d485a761e30fa1be3fe3bb05c5e1f2a"
+    },
+    {
+      "path": "09_dashboards/chatgpt_official_export_preparation_report_2026-05-25.md",
+      "size": 5025,
+      "sha256": "af34174e56f4947da5f1be6f44c2c8b8b2a71ee25bf8967f44e19e12275704c3"
+    },
+    {
+      "path": "09_dashboards/chatgpt_sop_template_extraction_register_2026-05-28.md",
+      "size": 170088,
+      "sha256": "ae413d64295a07c0b9f7bf5952c20da901c9671bb54bbc2b2dc96b267e619c9f"
+    },
+    {
+      "path": "09_dashboards/chatgpt_task_extraction_register_2026-05-28.md",
+      "size": 182366,
+      "sha256": "58dd8387c0905e0b318a435cfe9cf452818c050123cefd71dde121a04c4bacf0"
+    },
+    {
+      "path": "09_dashboards/client_communication_cadence_completion_report_2026-05-26.md",
+      "size": 5720,
+      "sha256": "223012e54f96fe7fa021077f2ce51379ca51942ae694902a02bdf0055fbf9b44"
+    },
+    {
+      "path": "09_dashboards/client_reply_monitor_followup_queue_report_2026-05-26.md",
+      "size": 3517,
+      "sha256": "4253a712c9e89739f313a855681ecf661065d9db1b60c535b7bd3611188df99d"
+    },
+    {
+      "path": "09_dashboards/cline_dashboard.md",
+      "size": 2063,
+      "sha256": "3d2758704208aa9eb919e4504705aa2ad0a0b19f2e0b2b60bb24fe2dc8a5598f"
+    },
+    {
+      "path": "09_dashboards/cline_governance_gate_mirrored_into_pre_task_context_gate_2026-06-07.md",
+      "size": 2080,
+      "sha256": "7a81cbd61d05026d51266949930926774b89c29c09c5f3d4aeb4e51d4d13a86f"
+    },
+    {
+      "path": "09_dashboards/cline_governance_protocol_activation_2026-06-07.md",
+      "size": 3290,
+      "sha256": "4d7ba2ac28fae3b58e58d686439fbc6e0e4ca1cea887a204c26e408e49d1e32f"
+    },
+    {
+      "path": "09_dashboards/cline_governance_protocol_anchored_report_2026-06-07.md",
+      "size": 2813,
+      "sha256": "c79bd2f4b76c338c8c99e4485950b5e423170c7cecd2de688a4401395b421f86"
+    },
+    {
+      "path": "09_dashboards/cline_governance_protocol_mirrored_into_start_here_2026-06-07.md",
+      "size": 2423,
+      "sha256": "b4ac9b1ed4be5687c684a725fc6657cb80cbaac6fbc900a189b961e8797f46cd"
+    },
+    {
+      "path": "09_dashboards/cline_ops_console_readonly_report_2026-06-09.md",
+      "size": 2823,
+      "sha256": "ec694204611a6d19cbe3adec7992047193ba9a3b6d498e3a76a5262691142b2c"
+    },
+    {
+      "path": "09_dashboards/cline_ops_telegram_wiring_report_2026-06-09.md",
+      "size": 3501,
+      "sha256": "ff1ffd5dc789b25437f897b83e60e429cfec5610d0601ac87b7554629303e7b8"
+    },
+    {
+      "path": "09_dashboards/cline_task_completion_guard_skill_report_2026-06-11.md",
+      "size": 1978,
+      "sha256": "b89385bb4fdea8a21649424c13174b88822d8c41dd87076f68ae6783838b9044"
+    },
+    {
+      "path": "09_dashboards/cline_task_log.md",
+      "size": 4055,
+      "sha256": "855cd9c15e86f8c4dfd8cbe146924077458632d17d52943060048e09730dca2f"
+    },
+    {
+      "path": "09_dashboards/cloud_orchestrator_adoption_report_2026-05-30.md",
+      "size": 2340,
+      "sha256": "be57b6a4d700816db80054c0229764c088e3c55a2568bbb9c4621d7bb922050a"
+    },
+    {
+      "path": "09_dashboards/contact_channel_extractor_c27a_report_2026-05-31.md",
+      "size": 5425,
+      "sha256": "47585b35ae64126142688fc707a7c971a11e921119d37fa6a4195550bf84e77d"
+    },
+    {
+      "path": "09_dashboards/contact_enrichment_c27h_live_verification_report_2026-05-31.md",
+      "size": 3234,
+      "sha256": "4951858e21b36270d279f91e9fb011881ae82dd7d5a7df0bc09c574c69781dd6"
+    },
+    {
+      "path": "09_dashboards/contact_enrichment_commands_c27e_bot_patch_report_2026-05-31.md",
+      "size": 4663,
+      "sha256": "b4089fce3906bad6ccae5a0c73ff5adae1789c1e960bd3e6e4d56798b2290e70"
+    },
+    {
+      "path": "09_dashboards/contact_enrichment_commands_c27f_tests_report_2026-05-31.md",
+      "size": 5404,
+      "sha256": "b8830c652b8a94f7ab6597ff62bf863bf2a67301d23fb24cae111eff33f62a96"
+    },
+    {
+      "path": "09_dashboards/contact_enrichment_ru_router_c27d_report_2026-05-31.md",
+      "size": 6677,
+      "sha256": "224f0fe740db149cba329875e009a6e0e303a53af87ac1c972d88f5e8a0e4420"
+    },
+    {
+      "path": "09_dashboards/contact_enrichment_ru_router_c27d_tests_report_2026-05-31.md",
+      "size": 4888,
+      "sha256": "b7dacd640159073aa8b224699cc8852b15ddef9d6c33bbc2d4fe7fb0f571d140"
+    },
+    {
+      "path": "09_dashboards/contact_enrichment_ru_router_new_lead_c27g_report_2026-05-31.md",
+      "size": 3969,
+      "sha256": "d36d76ce45dc446863892697c55a873feff6d2b53a4ed74029d6c479f60c1fea"
+    },
+    {
+      "path": "09_dashboards/contact_resolution_pipeline_report_2026-06-08.md",
+      "size": 3626,
+      "sha256": "ced5ee2dd6b1b6a54b3ac03f9ec9a914536d384cd518848e92ebf4ab16f50209"
+    },
+    {
+      "path": "09_dashboards/context_dashboard.md",
+      "size": 482,
+      "sha256": "1664319b4a5d8c5771337c587526d9be72e8e5bc7ce48fa14509c99afcd8de90"
+    },
+    {
+      "path": "09_dashboards/context_health_check_2026-06-07.md",
+      "size": 2612,
+      "sha256": "70a3580605eda2b61e7288fe71460be12df7523a89f04ac61bae3eae8df70b6b"
+    },
+    {
+      "path": "09_dashboards/d1b_final_readiness_audit_2026-06-05.md",
+      "size": 7293,
+      "sha256": "c61b26f712a7b78f969bc8caabfb03ef8795311037d200716a00c8b3125ae871"
+    },
+    {
+      "path": "09_dashboards/daily_lead_factory_bot_v2_roadmap_2026-05-31.md",
+      "size": 5177,
+      "sha256": "d7cd2faa0cbc2ebac42dca550e3a35de5c72608ea069bb4d2abbfbaac8053bb5"
+    },
+    {
+      "path": "09_dashboards/daily_lead_factory_bot_v2_spec_report_2026-05-31.md",
+      "size": 2211,
+      "sha256": "bfbc4332d55d82865da339819bdd1b91d6985cb8a4736b0d8f6374dc23d29975"
+    },
+    {
+      "path": "09_dashboards/daily_log.md",
+      "size": 3016,
+      "sha256": "0e0e1234ef129685dc36bac385f5ce53b36eea54ae1cefca3d86cc41bcbeab3f"
+    },
+    {
+      "path": "09_dashboards/dashboard_builder_field_mapping_fix_report_2026-06-05.md",
+      "size": 4108,
+      "sha256": "2b9c7cbbb57f36e6199b58c7a4b3a4e53d492636b759a11387c73293046ee4a1"
+    },
+    {
+      "path": "09_dashboards/dashboard_canonical_alignment_audit_2026-06-03.md",
+      "size": 7669,
+      "sha256": "2ce737afeb0d57d5822f05311e8520bc4c0fe84a2ed73e6aab72a42873d873c6"
+    },
+    {
+      "path": "09_dashboards/dashboard_control.md",
+      "size": 645,
+      "sha256": "5ff8cd260b9d248c927cc0664c9e5e39e27553e938eda47badc5c6ae1bb9ea78"
+    },
+    {
+      "path": "09_dashboards/dashboard_production_stabilization_report_2026-05-28.md",
+      "size": 7219,
+      "sha256": "fe9c1f9f43df0f91ab5d40ec9a028419dbffff7fe93deaf41f6e1023f37c30cd"
+    },
+    {
+      "path": "09_dashboards/dashboard_state_controlled_rebuild_report_2026-06-05.md",
+      "size": 2239,
+      "sha256": "e413256d7614d0e8113eaf0943efce569ca249f4858d51c11fec10d8eac06888"
+    },
+    {
+      "path": "09_dashboards/dashboard_state_freshness_diagnostic_report_2026-05-29.md",
+      "size": 9667,
+      "sha256": "a1a3f8b96609421833708aff78b1831465714ebaab57553aa215d2f97382623d"
+    },
+    {
+      "path": "09_dashboards/dataforseo_business_listings_offline_scaffold_report_2026-06-10.md",
+      "size": 3066,
+      "sha256": "2b170d4d0b923b7e3e7ace0c9c2d9fa2e50db2e6189214824fa80ae963b4bcb4"
+    },
+    {
+      "path": "09_dashboards/decision_log.bak_2026-05-25.md",
+      "size": 2933,
+      "sha256": "afd01797c6d82d381ebdde6252f24c71001acab6cd220eb73bcdbcf76b405dfc"
+    },
+    {
+      "path": "09_dashboards/decision_log.bak_2026-05-26.md",
+      "size": 7026,
+      "sha256": "c2c66301f41db149d52778b37aa0687f1459e5fbc61a61e3baa7e354c4ba6301"
+    },
+    {
+      "path": "09_dashboards/decision_log.bak_chatgptimport_2026-05-25.md",
+      "size": 2741,
+      "sha256": "749891e7e8e964a0f2abfeeea0756c6e8a48147ef07d1bef1645a134b23648f6"
+    },
+    {
+      "path": "09_dashboards/decision_log.md",
+      "size": 7595,
+      "sha256": "db423709f1b87a8dd8c2c03f5f03a8383862f1206dcb009c4b0c2edc6a706b51"
+    },
+    {
+      "path": "09_dashboards/documents_dashboard.md",
+      "size": 562,
+      "sha256": "b3856827b13f8199b95953d6f16d2c50a362a6683321dadbdf37b61c8b2937ea"
+    },
+    {
+      "path": "09_dashboards/draft_generator_v2_block4_report_2026-06-08.md",
+      "size": 2679,
+      "sha256": "1b3a9a2023ad7c5fb5cbae2070ab42ddd599db4537f71ba8409bc87c6d290ef4"
+    },
+    {
+      "path": "09_dashboards/email_connection_inventory_e1c0_2026-06-07.md",
+      "size": 11193,
+      "sha256": "c258fafb8bb7c1d129885d05e602a405174778104d4eb4212ac98b6c86ac37a5"
+    },
+    {
+      "path": "09_dashboards/email_first_100_leads_dry_run_2026-06-12.md",
+      "size": 3197,
+      "sha256": "b94f034aa99ee188287a9a88f51f57e2eb3c7fedb2f01e972b0f55a5cf6d3c02"
+    },
+    {
+      "path": "09_dashboards/email_first_6_verified_to_ready_email_2026-06-12.md",
+      "size": 16722,
+      "sha256": "b6d0957f320a9e0380eef911b2a9b382c961f308495084525620cb68c203150e"
+    },
+    {
+      "path": "09_dashboards/email_first_csv_import_operator_workflow_2026-06-12.md",
+      "size": 1320,
+      "sha256": "93fdb57a1c84bd95e7d212435ea3982a120f9ffe2f74d96b8437238226234733"
+    },
+    {
+      "path": "09_dashboards/email_first_domain_first_template_upgrade_2026-06-12.md",
+      "size": 2228,
+      "sha256": "35638bfa7b0d6704a144b43d4f1a46e82c43385fb72359ba386e682959bd76b9"
+    },
+    {
+      "path": "09_dashboards/email_first_lead_parsing_v2_intake_layer_2026-06-12.md",
+      "size": 1972,
+      "sha256": "eb21273c73e2565d1320304b52a81a9c690175de0e8edd1655a6d93e432bed9a"
+    },
+    {
+      "path": "09_dashboards/email_send_proof_gate_patch_2026-06-12.md",
+      "size": 2625,
+      "sha256": "dcb0a77c8405cff31de486f21d8087a2266552f1b855147adb21b6cbbab5c5cd"
+    },
+    {
+      "path": "09_dashboards/file_vault_dashboard.md",
+      "size": 1438,
+      "sha256": "a78b336e59dc5eaaef672852f80ed65457087a012d8953db7294f365066dfdf7"
+    },
+    {
+      "path": "09_dashboards/file_vault_intake_restart_report_2026-06-08.md",
+      "size": 3067,
+      "sha256": "b0d1a63b6c2a3d6b9061b4a066d3380902f2b987f780ec487e49264bec4cb358"
+    },
+    {
+      "path": "09_dashboards/file_vault_intake_system_v2_phases_1_2_report_2026-06-10.md",
+      "size": 3116,
+      "sha256": "cb17b99430bfeda917ee4a62e14bafc15a6b13a9fbc9157a3ecc5c885bd260e6"
+    },
+    {
+      "path": "09_dashboards/file_vault_telegram_intake_implementation_2026-06-08.md",
+      "size": 4010,
+      "sha256": "eeb243f9d5374352c75bb3a633019f9bc089b29c15e2bf608efa2033775c2eb8"
+    },
+    {
+      "path": "09_dashboards/final_pre_telegram_bot_readiness_audit_report_2026-05-26.md",
+      "size": 12933,
+      "sha256": "bef5afb6ea6b6e69931c8a7552c6c4059e7624f0a6c7c1a641748a9ae269f0fe"
+    },
+    {
+      "path": "09_dashboards/folder_inventory.bak_2026-06-02_18-58-51.md",
+      "size": 2045,
+      "sha256": "c643c949391da65b7299c10fdd56137ea034b0df849cd9877d43e4e4eeac5a45"
+    },
+    {
+      "path": "09_dashboards/folder_inventory.md",
+      "size": 2215,
+      "sha256": "d24448573282875848b94232cbc7abb56f0a3d41de8fce64dca3c26f2cb2dee6"
+    },
+    {
+      "path": "09_dashboards/followup_calendar.md",
+      "size": 1054,
+      "sha256": "b478dedb1b2a428c1adef695824bb293563170c58ae48358182354579d04fd22"
+    },
+    {
+      "path": "09_dashboards/followup_engine_block7_report_2026-06-08.md",
+      "size": 5488,
+      "sha256": "0c2114dbc7beaa3cb856a87d23828399cbff3d9712a6813ee1b8763c0c8a4590"
+    },
+    {
+      "path": "09_dashboards/full_autonomy_4_step_plan_2026-06-09.md",
+      "size": 10153,
+      "sha256": "37ca6ce3abd98cc8929a8dfbcf67c5a54ee7707ffa3d2f8fc5ef6d7d95133f7a"
+    },
+    {
+      "path": "09_dashboards/full_system_hardening_pass_report_2026-06-10.md",
+      "size": 3136,
+      "sha256": "8863abc987676beead860c497b3da493540b7d91919e4c28a9212215428de1ea"
+    },
+    {
+      "path": "09_dashboards/git_batch_dashboard_sales_system_plan_2026-05-26.md",
+      "size": 11877,
+      "sha256": "edb4b80333bb64b32c054758912ba2ee5ae4f1da55a09ef217f6c9242d8acbdb"
+    },
+    {
+      "path": "09_dashboards/git_dashboard_sales_system_commit_report_2026-05-26.md",
+      "size": 6053,
+      "sha256": "c58ec977c9164ba1c62cb2888f31f9d9dfde5820121379cb68d53a39aeafe3ea"
+    },
+    {
+      "path": "09_dashboards/git_diff_safety_check_report_2026-05-26.md",
+      "size": 8826,
+      "sha256": "d2ae0edb25ce705742d144618c5c61f9eb58a78945d5b741690a0acf3ae5c284"
+    },
+    {
+      "path": "09_dashboards/git_docs_checkpoint_commit_report_2026-05-26.md",
+      "size": 3141,
+      "sha256": "b259d20f00476fc44418bc3f4f5a7b591f60246d345aebb6e0610a398f61d97c"
+    },
+    {
+      "path": "09_dashboards/git_hygiene_audit_report_2026-05-26.md",
+      "size": 10507,
+      "sha256": "1fe744a07f98576e572f647e2a872b45c954a1cbb69ef46a765533d2e5c0049e"
+    },
+    {
+      "path": "09_dashboards/git_ignore_final_hardening_report_2026-05-26.md",
+      "size": 8668,
+      "sha256": "875e4fff69feff34696526fce9efb565eb19f1f2ac3621b1c5c655c5b7dbe5e9"
+    },
+    {
+      "path": "09_dashboards/git_ignore_hardening_commit_report_2026-05-26.md",
+      "size": 3915,
+      "sha256": "4c59549afa484929e2bb1b74d1d5619e222363c3c7a9e053e4c5992a612e0dfe"
+    },
+    {
+      "path": "09_dashboards/git_remaining_changes_classification_report_2026-05-26.md",
+      "size": 19279,
+      "sha256": "94ce2d639ae85bce98ce704a3a457b579dbbb671e2bf306b5e32069a14fe18be"
+    },
+    {
+      "path": "09_dashboards/git_tracked_files_decision_report_2026-05-26.md",
+      "size": 11703,
+      "sha256": "58c5d1953f8b4a1e50ceae30bd495c24f7d2e30a9bd8326c50ae7ec2294b54e9"
+    },
+    {
+      "path": "09_dashboards/graph_hygiene_dashboard.md",
+      "size": 827,
+      "sha256": "695348e89cfa34241146c290d0bf18883e29216b6c2261fb105a2ab8e211be0a"
+    },
+    {
+      "path": "09_dashboards/graph_orphan_cleanup_A_plus_B_report_2026-06-10.md",
+      "size": 3164,
+      "sha256": "f4183132050d9e15b9606b9157f9fda531c4db0f652a1e17faaa5e64c39877cd"
+    },
+    {
+      "path": "09_dashboards/index_cleanup_pass_1_analysis_2026-06-09.md",
+      "size": 5977,
+      "sha256": "8bd32dc014a1c9b03248e33067af4557e537e0e268d1bbf5a7bce3b32ed8e098"
+    },
+    {
+      "path": "09_dashboards/kgbi_search_report.md",
+      "size": 4561,
+      "sha256": "65f6d3f810132d0a859da274050f00f91a453e3cff98f99a34be4b3f32f93e2d"
+    },
+    {
+      "path": "09_dashboards/kgbi_search_report_2.md",
+      "size": 11383,
+      "sha256": "f7835f7166a9d60a6539f7df71dcfd712d812450c28168e1e9c1de27742dbad6"
+    },
+    {
+      "path": "09_dashboards/launch_pack_step1_registry_fix_report_2026-06-09.md",
+      "size": 3514,
+      "sha256": "8bf177f80b34a5c0f4abfae090a9fdb897cc977513ba457b605fa953d0b637d8"
+    },
+    {
+      "path": "09_dashboards/launch_pack_steps_2_6_offline_regression_2026-06-09.md",
+      "size": 3939,
+      "sha256": "dd5cbc57b511f3558fb9388e2f5a372077bbe9f0c4d99375b057a917d741b26b"
+    },
+    {
+      "path": "09_dashboards/leads_dashboard.md",
+      "size": 553,
+      "sha256": "151c7f9cbf320d43d6a62b1aa91cd8241f9d12478c9a99662696228f2bfb6a13"
+    },
+    {
+      "path": "09_dashboards/lead_contacts_relink_apply_report_2026-06-05.md",
+      "size": 3244,
+      "sha256": "b2b9d45fe0db4532c68a033a06c6f76f6db43a1457dce6bef5e521809f565085"
+    },
+    {
+      "path": "09_dashboards/lead_contacts_relink_plan_2026-06-05.md",
+      "size": 10685,
+      "sha256": "7c6044f336e45ecaecf5839a26fb27017f9f4d6e2823b31a152d9a25699cc07c"
+    },
+    {
+      "path": "09_dashboards/lead_contact_commands_c26a_regression_report_2026-05-31.md",
+      "size": 2965,
+      "sha256": "a031e61eee7aead4b64805bb83b69588e273b7d07794b7b969d66c43d143d00e"
+    },
+    {
+      "path": "09_dashboards/lead_contact_commands_c26a_standalone_report_2026-05-31.md",
+      "size": 4548,
+      "sha256": "5b9228d421be85668c4e80b6caab4fd0d73eaba54546ea74068fc317f43d1118"
+    },
+    {
+      "path": "09_dashboards/lead_contact_commands_c26c_bot_patch_report_2026-05-31.md",
+      "size": 5697,
+      "sha256": "6cf7ffbd1e3db45b4987f2f6f9cb08106f6284e211f09bc558c64ae2759b8510"
+    },
+    {
+      "path": "09_dashboards/lead_contact_commands_c26d_tests_report_2026-05-31.md",
+      "size": 5668,
+      "sha256": "58fbc493e9df8e5fdc21b21b9a0b8e4821790cba28dfa3dffd7728aff2208126"
+    },
+    {
+      "path": "09_dashboards/lead_contact_commands_c26e_live_verification_report_2026-05-31.md",
+      "size": 2410,
+      "sha256": "aaa9a8cdde4f285c2f3d8643da178ac3121d5a0f68dadec7af26be62da9c0a35"
+    },
+    {
+      "path": "09_dashboards/lead_contact_enrichment_commands_c27c_final_report_2026-05-31.md",
+      "size": 5194,
+      "sha256": "d691fbf80d1e51e158e00a6a8ec2c89a3a056faec3a7ada00b6e4e90e195d76f"
+    },
+    {
+      "path": "09_dashboards/lead_contact_enrichment_commands_c27c_standalone_report_2026-05-31.md",
+      "size": 5612,
+      "sha256": "3f20c10b9c4147640d3cd18d34b6282610be525fb5ba242349dc59622176695c"
+    },
+    {
+      "path": "09_dashboards/lead_contact_enrichment_commands_c27c_tests_report_2026-05-31.md",
+      "size": 3561,
+      "sha256": "6e525005c3e2dd4dee39f8536926d2359f2aded4e22ecfb1402dc9c6c5646bcc"
+    },
+    {
+      "path": "09_dashboards/lead_contact_enrichment_pipeline_c27b_report_2026-05-31.md",
+      "size": 6667,
+      "sha256": "71011273eea4043db69c99c073e48cafa70b3e64970fe49cbd09faaf3032afca"
+    },
+    {
+      "path": "09_dashboards/lead_contact_ru_router_c26b_report_2026-05-31.md",
+      "size": 4550,
+      "sha256": "495df0cdd7774e26c93214ee95f1012319c7dd2ba6a156389def83a3acf05dff"
+    },
+    {
+      "path": "09_dashboards/lead_data_backup_rollback_d1_preflight_c_report_2026-05-31.md",
+      "size": 2089,
+      "sha256": "b495ba9609843f21db36e1547de6c09b300c28b70c76baea1b4c615596422b4d"
+    },
+    {
+      "path": "09_dashboards/lead_data_trace_audit_2026-05-31.md",
+      "size": 8985,
+      "sha256": "a4eb20b0822bc94726c815b90af38ecf8d88a8797bb586402ccbb3974f1c43d1"
+    },
+    {
+      "path": "09_dashboards/lead_dedupe_engine_d1_preflight_a_report_2026-05-31.md",
+      "size": 3378,
+      "sha256": "dc8d8a8409733d781b8539eaf97de180f1addbe230de6ecb1307865faddb7cdd"
+    },
+    {
+      "path": "09_dashboards/LEAD_HUNTER_OS_REPORT_2026-06-16.md",
+      "size": 3964,
+      "sha256": "b26d6d0b7384d5288edb74743e492a6e2e242684952bb400c04de68c86464afa"
+    },
+    {
+      "path": "09_dashboards/lead_id_repair_4_canonical_report_2026-06-05.md",
+      "size": 2391,
+      "sha256": "7e3cfc78d4df4dbfa481e259fa03568114375e2038de7b645bba794b91bc0458"
+    },
+    {
+      "path": "09_dashboards/lead_import_approval_d2e1_live_bot_patch_pre_audit_2026-06-06.md",
+      "size": 16354,
+      "sha256": "ce26408a528a610f93e3c18d1f17f124c4b8ee9e65f8263c0cee1c698fbf2c54"
+    },
+    {
+      "path": "09_dashboards/lead_import_approval_d2e1_live_bot_patch_report_2026-06-06.md",
+      "size": 2543,
+      "sha256": "a3ee46d1860e1e12e3a6694ed084fe9e4989ebbb8de28078eb636e7bbd82ee40"
+    },
+    {
+      "path": "09_dashboards/lead_import_approval_d2e1_live_smoke_report_2026-06-06.md",
+      "size": 2666,
+      "sha256": "113aa37ad8b1bedd6c1bb2097cf2613af54afd418f13372bfa08bda8c964a0e5"
+    },
+    {
+      "path": "09_dashboards/lead_import_approval_d2e1_route_miss_diagnostic_2026-06-06.md",
+      "size": 8885,
+      "sha256": "ed5ee6a6151b18bd80b5136275647684d0b7a97c2c42f56c004484ddb10bd758"
+    },
+    {
+      "path": "09_dashboards/lead_import_approval_d2e1_safety_disable_live_smoke_pass_2026-06-06.md",
+      "size": 3587,
+      "sha256": "55790c4162cf2677182bfcbe50e2cccb6e3cb1bb4f641e2cc0eab7c6e92cbd9c"
+    },
+    {
+      "path": "09_dashboards/lead_import_approval_dispatcher_d2e0_offline_sim_report_2026-06-06.md",
+      "size": 3974,
+      "sha256": "e9c5e00bebfddf196742bf8811c99b5daf6495f1d69a7da2cc5cdefdef0d5010"
+    },
+    {
+      "path": "09_dashboards/lead_import_approval_prepare_card_real_d2j_build_report_2026-06-06.md",
+      "size": 4581,
+      "sha256": "d9f07a4b22686f4a503b56637b9cb7ca1b8a9a451722bcfb973d3a368009b50b"
+    },
+    {
+      "path": "09_dashboards/lead_import_approval_queue_d2h_real_queue_snapshot_audit_2026-06-06.md",
+      "size": 6161,
+      "sha256": "725c9679003ce547c26f3456ed2089d6c3d9d10c2360f144c3f73156d5b94eb4"
+    },
+    {
+      "path": "09_dashboards/lead_import_approval_queue_d2i_real_queue_init_close_report_2026-06-06.md",
+      "size": 2603,
+      "sha256": "6e71c20088890d7270a5eb6766cfe405db55031d4c0ac35a3dd3753ecef3d94f"
+    },
+    {
+      "path": "09_dashboards/lead_import_approval_queue_d2i_real_queue_init_done_report_2026-06-06.md",
+      "size": 4673,
+      "sha256": "7505acd9ad6d091488838561dbdf051acd057c9954210f0f191426b2267d0e82"
+    },
+    {
+      "path": "09_dashboards/lead_import_approval_queue_d2i_real_queue_init_plan_2026-06-06.md",
+      "size": 14092,
+      "sha256": "55af47a1b19d8c5ff5adb74b0b369eb71005af1c1fa427f3a9b6213c95eb7129"
+    },
+    {
+      "path": "09_dashboards/lead_import_approval_queue_d2j_real_prepare_card_plan_2026-06-06.md",
+      "size": 15507,
+      "sha256": "ea70df0a4676657819ebb495190508e14fb06f0d803a1a440f1f6f7c71709c4a"
+    },
+    {
+      "path": "09_dashboards/lead_import_approval_queue_d2k_cleanup_cancel_card_report_2026-06-06.md",
+      "size": 3115,
+      "sha256": "d6248a0b2d8113aa7264064ce6dd17de1b9af90c6fa188a4a5ae17aa16ed079d"
+    },
+    {
+      "path": "09_dashboards/lead_import_approval_queue_d2k_synthetic_prepare_card_write_report_2026-06-06.md",
+      "size": 3500,
+      "sha256": "21cb13d241fb18b6256ba2b571aa0f2a61b1ac087e56d32a92917c600f3bcc7c"
+    },
+    {
+      "path": "09_dashboards/lead_import_approval_queue_d2l_candidate_readonly_selection_2026-06-06.md",
+      "size": 5422,
+      "sha256": "b6a6b60f8bb5f79b5643c229aa1315bdd4a46bf8335dc2c584ca4e1e114559fd"
+    },
+    {
+      "path": "09_dashboards/lead_import_approval_queue_d2l_first_real_prepare_card_done_report_2026-06-06.md",
+      "size": 5234,
+      "sha256": "20e777cb3cf3caf8ccc188c8d418c501e9cf03818773c4b75aa0b79821163299"
+    },
+    {
+      "path": "09_dashboards/lead_import_approval_queue_d2l_first_real_prepare_card_plan_2026-06-06.md",
+      "size": 17707,
+      "sha256": "a8fffa213516742b8364dae80226972a8e410e16507edbab017bd560b21c0333"
+    },
+    {
+      "path": "09_dashboards/lead_import_approval_queue_d2m_approval_decision_plan_2026-06-06.md",
+      "size": 8837,
+      "sha256": "8b993bb2648689d92c1ec4af021adcedb156f65ba4e2c5d034d35cdba3e8877a"
+    },
+    {
+      "path": "09_dashboards/lead_import_approval_queue_d2m_b1_approve_done_report_2026-06-06.md",
+      "size": 2686,
+      "sha256": "81b80ae5f144ac973c95d7ca2ded3b790e21b2fe3548d264416aefa8cc6170cb"
+    },
+    {
+      "path": "09_dashboards/lead_import_approval_queue_d2n_approved_card_import_plan_2026-06-06.md",
+      "size": 8674,
+      "sha256": "cee7e99a58a32110f330233ce44fec073f8ad484717129cfbb047f8cbbde60a2"
+    },
+    {
+      "path": "09_dashboards/lead_import_approval_queue_init_real_d2i_build_report_2026-06-06.md",
+      "size": 5759,
+      "sha256": "00d6e0321d1d8a08d8e6fd71c7832774182a888773e50cc7e74e80adc96602cd"
+    },
+    {
+      "path": "09_dashboards/lead_import_approval_queue_write_d2f_build_report_2026-06-06.md",
+      "size": 3490,
+      "sha256": "63012773e48467ff72300f0f9285bf6e92f9ae72ac90e3393ffe442e5b70ca09"
+    },
+    {
+      "path": "09_dashboards/lead_import_approval_queue_write_d2f_plan_2026-06-06.md",
+      "size": 10540,
+      "sha256": "7f29400fb32496ea6640d6625b291f642a9e07a5d0be6fe875ce84ad62e41bb4"
+    },
+    {
+      "path": "09_dashboards/lead_import_approval_queue_write_d2g_build_report_2026-06-06.md",
+      "size": 5227,
+      "sha256": "685a72dac761e55a51b5c59e577b2ea4960721149c9e3dee6ecb99e9833adfe2"
+    },
+    {
+      "path": "09_dashboards/lead_import_approval_queue_write_d2g_real_queue_write_plan_2026-06-06.md",
+      "size": 14174,
+      "sha256": "2aaa784271c878fccd2e34387dcda19c0181cec3f2491070d6df755dd483dad3"
+    },
+    {
+      "path": "09_dashboards/lead_import_approval_review_d2d_bot_command_plan_report_2026-06-06.md",
+      "size": 2649,
+      "sha256": "42c02dfc1fa74ab4f23b59c93098636fc787b6b7233257ab402c2936e51af473"
+    },
+    {
+      "path": "09_dashboards/lead_import_approval_review_d2d_bot_glue_standalone_report_2026-06-06.md",
+      "size": 2370,
+      "sha256": "049e76374086e37c172c4fc304defe86da09008d0369093e154b31c31da2ab93"
+    },
+    {
+      "path": "09_dashboards/lead_import_approval_review_d2d_standalone_report_2026-06-06.md",
+      "size": 1651,
+      "sha256": "833972e40699add22035796b1e7a61a450a9da163dedbd7c3021ba33b83b1171"
+    },
+    {
+      "path": "09_dashboards/lead_import_committed_importer_real_d2n_build_report_2026-06-06.md",
+      "size": 4851,
+      "sha256": "b58c6d52171863e4e53dc8644f2ce54235666151f8d260b23cdd39ec185de37b"
+    },
+    {
+      "path": "09_dashboards/lead_import_committed_importer_real_d2n_phase2_partA_dryrun_run_report_2026-06-06.md",
+      "size": 4281,
+      "sha256": "f603bb6e5626331616d0da39d2f21243e4c18862644caeffc8d3670b72d4c32e"
+    },
+    {
+      "path": "09_dashboards/lead_import_committed_importer_real_d2n_phase2_partC_full_chain_dryrun_run_report_2026-06-06.md",
+      "size": 4064,
+      "sha256": "c09f21766a5426db942367d8c3e91f6431e23c8ca287eacf8c26061ddec69d0e"
+    },
+    {
+      "path": "09_dashboards/lead_import_committed_importer_real_d2n_phase2_tempcopy_dryrun_and_recorder_handoff_plan_2026-06-06.md",
+      "size": 11542,
+      "sha256": "d295b15c2c16c15da1961a9d9430ca5ec4c87418c44157c2160d06b4c2a3cbc9"
+    },
+    {
+      "path": "09_dashboards/lead_import_committed_importer_real_d2n_phase3a_storeshape_fix_build_report_2026-06-06.md",
+      "size": 4433,
+      "sha256": "c13916d193e8610b8336f7ba464158057cc04ff3f31faabc41d6bbd0edea3008"
+    },
+    {
+      "path": "09_dashboards/lead_import_committed_importer_real_d2n_phase3b_realstore_tempcopy_dryrun_run_report_2026-06-06.md",
+      "size": 3686,
+      "sha256": "8c5a9899e9773f7c593aee008a15183e686221fb9b013cabca09a9b3284011fb"
+    },
+    {
+      "path": "09_dashboards/lead_import_committed_importer_real_d2n_phase3c_controlled_production_commit_done_report_2026-06-06.md",
+      "size": 3648,
+      "sha256": "b8eea4093f82cf92706e27a60bcb77accee90f6aca6f08e25170a95786071489"
+    },
+    {
+      "path": "09_dashboards/lead_import_committed_importer_real_d2n_phase3_real_commit_BLOCKED_2026-06-06.md",
+      "size": 3829,
+      "sha256": "e5e7a7226c231c430e9d892c7b1af7e17456f7f6559c1f27b40dc815159213e0"
+    },
+    {
+      "path": "09_dashboards/lead_import_committed_importer_real_d2o_final_regression_report_2026-06-06.md",
+      "size": 4700,
+      "sha256": "cc4081b3c0f20c97d0e24f06e167c8a1f709588154417517b0016963700556dc"
+    },
+    {
+      "path": "09_dashboards/lead_import_commit_recorder_real_d2n_phase2_partB_build_report_2026-06-06.md",
+      "size": 4098,
+      "sha256": "804f34e759c033d12c5189c7bb5debd18d3f630ae7c16ca388d5d5be8436ed95"
+    },
+    {
+      "path": "09_dashboards/lead_import_d2e1_final_safe_checkpoint_2026-06-06.md",
+      "size": 1976,
+      "sha256": "2dc42e3585f146f685df8bd4c7aaa320ed7d0615bf1450276de9c9c81cfa2fe2"
+    },
+    {
+      "path": "09_dashboards/lead_import_prepare_adapter_d2c_fix_report_2026-06-06.md",
+      "size": 3150,
+      "sha256": "a9c584d4a490548a2aeedcd1e7b193029f043a3eb644148f3be0d045fba02fa6"
+    },
+    {
+      "path": "09_dashboards/lead_import_qa_gate_d1_preflight_d_report_2026-05-31.md",
+      "size": 4083,
+      "sha256": "a76612a7bac2f626064fb367fd8e1cf3335962d59518e94b8510f512c342ff7f"
+    },
+    {
+      "path": "09_dashboards/lead_import_qa_gate_d1_preflight_d_report_2026-06-02.md",
+      "size": 3224,
+      "sha256": "1f676b136f3bc6cd6a1797d0ff9fbbe14f6924a25980d8d31a3bcaf07e509260"
+    },
+    {
+      "path": "09_dashboards/lead_intake_bot_adapter_d1d_standalone_report_2026-06-02.md",
+      "size": 2877,
+      "sha256": "907afcae78d6e11d9e584139877fb945f845e67abf4bf34f029763c0a2775cc4"
+    },
+    {
+      "path": "09_dashboards/lead_intake_bot_adapter_d1e0_standalone_report_2026-06-05.md",
+      "size": 2330,
+      "sha256": "34491eb0a43b68d4e11cc7cb93be4c1f940e9522d30b7882b24b60569b33a767"
+    },
+    {
+      "path": "09_dashboards/lead_intake_commands_d1b_standalone_final_report_2026-06-05.md",
+      "size": 1885,
+      "sha256": "4dd0654c68697e071da3d202c2248466075bd99b5dba4bea5ad859e744586987"
+    },
+    {
+      "path": "09_dashboards/lead_intake_commands_d1b_standalone_report_2026-06-02.md",
+      "size": 2303,
+      "sha256": "7268bb0f8372c4fd0025aa1c12b3d8ce20a716aadc78185921217493c391e00e"
+    },
+    {
+      "path": "09_dashboards/lead_intake_contract_d1_preflight_b_HANDOFF_2026-05-31.md",
+      "size": 4206,
+      "sha256": "99c474e791bb8d8a55ea3c45f540fcef1c4773c887cb6633644f6bdbbd5fe895"
+    },
+    {
+      "path": "09_dashboards/lead_intake_contract_d1_preflight_b_report_2026-05-31.md",
+      "size": 4848,
+      "sha256": "d4cbba0b26be8dc7e983a53c5f63a08ab804d0fa7a3e4228a6b83f13f37aac4c"
+    },
+    {
+      "path": "09_dashboards/lead_intake_controlled_100_sandbox_report_2026-06-02.md",
+      "size": 2017,
+      "sha256": "6fcc84058e35f66190056da1bc4f46688514caf9f038ee31f0b9ab7e52673618"
+    },
+    {
+      "path": "09_dashboards/lead_intake_d1d_bot_integration_plan_report_2026-06-05.md",
+      "size": 5426,
+      "sha256": "8c5c41740b9e2244b4570a9b50a88a49cd523fbd90f3972e1c5c2f4164981cd3"
+    },
+    {
+      "path": "09_dashboards/lead_intake_d1e1_bot_patch_pre_audit_2026-06-05.md",
+      "size": 16121,
+      "sha256": "0456b71895bdb8f30b9ce82627191bfab1c9a95ebe9e23225bddaf2b4d33fc82"
+    },
+    {
+      "path": "09_dashboards/lead_intake_d1e2_bot_patch_offline_test_report_2026-06-05.md",
+      "size": 3161,
+      "sha256": "47801b8a3095381099b8b5232b4dc4da236ce54c39319b21a2e1a6bdf50a965f"
+    },
+    {
+      "path": "09_dashboards/lead_intake_d1e2_bot_patch_report_2026-06-05.md",
+      "size": 3407,
+      "sha256": "9aefa03c1253403c16ab835b9d1cb6a9f0227c96366308de23a4807a5a24d748"
+    },
+    {
+      "path": "09_dashboards/lead_intake_d1f_offline_bot_integration_final_report_2026-06-05.md",
+      "size": 2715,
+      "sha256": "ca38cf47b9e781356dec326622831faad6d3bfdbc6a045ead0b4567eb2639c48"
+    },
+    {
+      "path": "09_dashboards/lead_intake_d1g_live_restart_preflight_report_2026-06-05.md",
+      "size": 3145,
+      "sha256": "880166043d8d9ed5e20e20e607adee28aee6f4e4ec0d98935155b3770f696565"
+    },
+    {
+      "path": "09_dashboards/lead_intake_d1g_live_restart_smoke_report_2026-06-05.md",
+      "size": 3315,
+      "sha256": "046d7f8a2eeeb7a24bea506dda93f3fa836191b5c99ab038a5ec23cf37b2177e"
+    },
+    {
+      "path": "09_dashboards/lead_intake_d1_live_bot_final_closure_report_2026-06-05.md",
+      "size": 5150,
+      "sha256": "be4248fd6c821a1376b75b180213c67e2b7976e5517a054f79303f42929e9660"
+    },
+    {
+      "path": "09_dashboards/lead_intake_d2b_approval_queue_standalone_report_2026-06-06.md",
+      "size": 3026,
+      "sha256": "23d06997a3b32d34e85a600b5b7f567f2edc681a365faec2e2a3dab9f5c4a466"
+    },
+    {
+      "path": "09_dashboards/lead_intake_d2_controlled_real_import_approval_plan_report_2026-06-05.md",
+      "size": 3796,
+      "sha256": "127a7539c308dfd16f9ccbf73cf3339fb33406e3c9cfe302749f51ddbebc0518"
+    },
+    {
+      "path": "09_dashboards/lead_intake_pipeline_d1a_path_format_audit_2026-05-31.md",
+      "size": 7643,
+      "sha256": "6abba27fdccd7a979f15197906a2d2531021813679f42aee0e93240e5b811532"
+    },
+    {
+      "path": "09_dashboards/lead_intake_pipeline_d1a_standalone_report_2026-05-31.md",
+      "size": 2871,
+      "sha256": "b968abf341e8ed006a4525c4144efae0c8f54f81666a13a9852656cd8e935ed4"
+    },
+    {
+      "path": "09_dashboards/lead_intake_pipeline_d1a_standalone_report_2026-06-02.md",
+      "size": 2012,
+      "sha256": "968a100df0d4d86fc42c63ee2b68f1f98135aa77450a31c22f81bbbd3fd6fce0"
+    },
+    {
+      "path": "09_dashboards/lead_intake_pipeline_lead_id_minting_fix_report_2026-06-05.md",
+      "size": 3836,
+      "sha256": "5e5d44874473e1dc26ecd461dff7c05960b12287776429ffd1bf16b01836d5bc"
+    },
+    {
+      "path": "09_dashboards/lead_intake_router_d1c_standalone_final_report_2026-06-05.md",
+      "size": 2603,
+      "sha256": "89505b0106a0b71a1d152103647c83fb4f1f88e5d909ca728f44e45c20caa04d"
+    },
+    {
+      "path": "09_dashboards/lead_intake_router_d1c_standalone_report_2026-06-02.md",
+      "size": 3168,
+      "sha256": "66eacb6dba126941a054531f80d7878ac6256c03f77faf4cf63d0f0924f13304"
+    },
+    {
+      "path": "09_dashboards/lead_intake_system_checkpoint_after_d2c_2026-06-06.md",
+      "size": 2001,
+      "sha256": "9010f64c2f0d4a8a10a36c2f61a54b9993a5ad9281610f5d9f89e5e784fa9666"
+    },
+    {
+      "path": "09_dashboards/lead_intake_system_checkpoint_after_d2d_2026-06-06.md",
+      "size": 2390,
+      "sha256": "7c9e2bba1afec477e5018a4ce711092c67984b80c3abd50b823fd013164564a4"
+    },
+    {
+      "path": "09_dashboards/lead_intake_system_checkpoint_after_d2e1_live_smoke_2026-06-06.md",
+      "size": 2212,
+      "sha256": "2d66f002c931540a0f52924d612fe4274f6ddd8313b414195bd78d5711ee1d7b"
+    },
+    {
+      "path": "09_dashboards/lead_intake_system_checkpoint_after_d2f_build_2026-06-06.md",
+      "size": 2292,
+      "sha256": "768bafdbd4e39c82ecdc49ab53c9b4e5b6da5a805695ab15a0dc345529bef667"
+    },
+    {
+      "path": "09_dashboards/lead_intake_system_checkpoint_after_d2f_plan_2026-06-06.md",
+      "size": 1864,
+      "sha256": "3f619fd61e96fc29bb3312ef1b4da4c7aee172a833e3a304d621a3553cd04617"
+    },
+    {
+      "path": "09_dashboards/lead_intake_system_checkpoint_after_d2g_build_2026-06-06.md",
+      "size": 3036,
+      "sha256": "1a9c9254b1875c260f86e4fcd6080f59952fe24308204ea31fcc67270bf532b4"
+    },
+    {
+      "path": "09_dashboards/lead_intake_system_checkpoint_after_d2g_plan_2026-06-06.md",
+      "size": 2822,
+      "sha256": "4a6e8c4b5499d39759b698810c08f8a49c154c0f3161f8d1e991fdfc45708e26"
+    },
+    {
+      "path": "09_dashboards/lead_intake_system_checkpoint_after_d2h_audit_2026-06-06.md",
+      "size": 2007,
+      "sha256": "e0f6d614bd251e3c67aea1ba936d7f4d0cbe03519351619bebcb5fb9607aa938"
+    },
+    {
+      "path": "09_dashboards/lead_intake_system_checkpoint_after_d2i_build_2026-06-06.md",
+      "size": 2288,
+      "sha256": "c1248f443a28606e8c5f03d075fd9cea7dc95f8f263a192da92abb72c84b5027"
+    },
+    {
+      "path": "09_dashboards/lead_intake_system_checkpoint_after_d2i_plan_2026-06-06.md",
+      "size": 2351,
+      "sha256": "30bf0021afb2bac7c084e85a776faa7d7e610bad37d724319db00dc4377743eb"
+    },
+    {
+      "path": "09_dashboards/lead_intake_system_checkpoint_after_d2i_real_queue_init_2026-06-06.md",
+      "size": 2055,
+      "sha256": "61be15dec53ee8865fe2424893943fc7f926a54f5abcc8229d308edd404db660"
+    },
+    {
+      "path": "09_dashboards/lead_intake_system_checkpoint_after_d2j_build_2026-06-06.md",
+      "size": 2311,
+      "sha256": "e9cf3ba4ff12d2e066b32e363de1a8ce5eae29c05cf7c2ec75a0ed265a98eac3"
+    },
+    {
+      "path": "09_dashboards/lead_intake_system_checkpoint_after_d2j_plan_2026-06-06.md",
+      "size": 3690,
+      "sha256": "67ac7918d71d7f3ecd48e98add2ee450b7d13d0606277749072e3574010f6537"
+    },
+    {
+      "path": "09_dashboards/lead_intake_system_checkpoint_after_d2k_cleanup_2026-06-06.md",
+      "size": 2141,
+      "sha256": "3f82059b72735932d9e64d5a0d5d1624fc108287e6dbe775b12eda03986f2c4f"
+    },
+    {
+      "path": "09_dashboards/lead_intake_system_checkpoint_after_d2k_synthetic_prepare_card_2026-06-06.md",
+      "size": 2325,
+      "sha256": "6ec98e6be95bf1d6eccf98ced04e8153f616f7c7f7c5b4ca8275333a10b592fb"
+    },
+    {
+      "path": "09_dashboards/lead_intake_system_checkpoint_after_d2l_candidate_selection_2026-06-06.md",
+      "size": 2191,
+      "sha256": "399bde33b7a8aa36402d9b344f276e2732403f471e0ec82a9fe3f6a9dfb23877"
+    },
+    {
+      "path": "09_dashboards/lead_intake_system_checkpoint_after_d2l_first_real_prepare_card_2026-06-06.md",
+      "size": 1932,
+      "sha256": "d49093b3f0b4b8fd988a68f68e0eabb55efed78ebf13859ba33735b6eae563cd"
+    },
+    {
+      "path": "09_dashboards/lead_intake_system_checkpoint_after_d2l_plan_2026-06-06.md",
+      "size": 2681,
+      "sha256": "2e5f4e895ea95efe89b595c3ef750af4d296c71e49027d222ded953e69e3fd1f"
+    },
+    {
+      "path": "09_dashboards/lead_intake_system_checkpoint_after_d2m_b1_approve_2026-06-06.md",
+      "size": 1998,
+      "sha256": "4ea6998509d8feb3442a37b45430a3b3d0e814baccd824be2ebe2010ce409054"
+    },
+    {
+      "path": "09_dashboards/lead_intake_system_checkpoint_after_d2m_plan_2026-06-06.md",
+      "size": 2336,
+      "sha256": "928aaf00ef3ef6db209ee0da0236ba97f100b68be5c835a000adf4c03fe4d96e"
+    },
+    {
+      "path": "09_dashboards/lead_intake_system_checkpoint_after_d2n_build_2026-06-06.md",
+      "size": 1762,
+      "sha256": "fba3c4cfeca3b80073a1ee22a49a9ef8024fa15092114de826caf3b175b2e959"
+    },
+    {
+      "path": "09_dashboards/lead_intake_system_checkpoint_after_d2n_phase2_partA_dryrun_2026-06-06.md",
+      "size": 1722,
+      "sha256": "b2dd4a2ed861173ed9d442dd42c90625cb157cb9127c26030525448618499f43"
+    },
+    {
+      "path": "09_dashboards/lead_intake_system_checkpoint_after_d2n_phase2_partB_recorder_build_2026-06-06.md",
+      "size": 1994,
+      "sha256": "5716cd6a71024695ea17d8b1de87745e4c9e15537b00af326deba9a595d0955a"
+    },
+    {
+      "path": "09_dashboards/lead_intake_system_checkpoint_after_d2n_phase2_partC_full_chain_dryrun_2026-06-06.md",
+      "size": 2092,
+      "sha256": "7a2d54e4553911fceb212d445c884423f8880c2861a8321599c214450be69902"
+    },
+    {
+      "path": "09_dashboards/lead_intake_system_checkpoint_after_d2n_phase2_plan_2026-06-06.md",
+      "size": 2508,
+      "sha256": "634d35945263dd44ce40372e78756b7ec6a45e1e9a22fa555f081b36ec20cfce"
+    },
+    {
+      "path": "09_dashboards/lead_intake_system_checkpoint_after_d2n_phase3a_storeshape_fix_2026-06-06.md",
+      "size": 2242,
+      "sha256": "feb244430fc7e161e90b85fbc1de63a1a99f7ea2bb1671fb8817be3d95be86a9"
+    },
+    {
+      "path": "09_dashboards/lead_intake_system_checkpoint_after_d2n_phase3b_realstore_tempcopy_dryrun_2026-06-06.md",
+      "size": 2447,
+      "sha256": "4317cddb083113ff1d94aedf59f457980b6812f3bc47c4af6b46559ee706269a"
+    },
+    {
+      "path": "09_dashboards/lead_intake_system_checkpoint_after_d2n_phase3c_controlled_production_commit_2026-06-06.md",
+      "size": 2481,
+      "sha256": "1ef4dcde90cd35c62afa482da6559ca3065f28fa25fe79be3a777cced0f85aa1"
+    },
+    {
+      "path": "09_dashboards/lead_intake_system_checkpoint_after_d2n_plan_2026-06-06.md",
+      "size": 2245,
+      "sha256": "faaf437be8997b46946c5acc4638fbfc879beb198c4eb96cb249187cad717cd1"
+    },
+    {
+      "path": "09_dashboards/lead_intake_system_checkpoint_after_d2o_final_regression_2026-06-06.md",
+      "size": 3387,
+      "sha256": "6181457c40a2ce7a5420cb0ada5763a058c6c20f309ed24dc03023e661d19861"
+    },
+    {
+      "path": "09_dashboards/lead_intake_system_checkpoint_after_d3_1_command_contract_2026-06-06.md",
+      "size": 2544,
+      "sha256": "eedb173bcb9abb96fac82ceaae6c99efe058a0031d8e8cef0a64b47b3b56ca9b"
+    },
+    {
+      "path": "09_dashboards/lead_intake_system_checkpoint_after_d3_2_readonly_live_control_2026-06-06.md",
+      "size": 2534,
+      "sha256": "8ff84f92fc4470d7510617cc99c0eb8853c35b791bcfc86082c41960c5aa62b3"
+    },
+    {
+      "path": "09_dashboards/lead_intake_system_checkpoint_after_d3_3_approve_reject_live_control_2026-06-06.md",
+      "size": 2493,
+      "sha256": "2d51cf48ab30e24a5861173ff8d8b9e2db3b4e26b67cf5633e64720543628331"
+    },
+    {
+      "path": "09_dashboards/lead_markdown_reconciliation_candidate_review_2026-05-31.md",
+      "size": 5389,
+      "sha256": "90c79171368dc3c114d0496056bc0909f674a8380ca3abdd5d39dadb2fabcc84"
+    },
+    {
+      "path": "09_dashboards/lead_markdown_reconciliation_import_4_clean_report_2026-06-03.md",
+      "size": 3323,
+      "sha256": "c59db7d5e772565b1074621880ab3621a31ab2090ec3bd0fd70eaa18ce53ea71"
+    },
+    {
+      "path": "09_dashboards/lead_parser_24_7_design_2026-06-10.md",
+      "size": 3563,
+      "sha256": "b4816af04a2d27ee55287d68cfe4c6670f2becdf0c6c4aab3c7b43be93ffc662"
+    },
+    {
+      "path": "09_dashboards/lead_parser_24_7_phase1_offline_writer_report_2026-06-10.md",
+      "size": 5606,
+      "sha256": "4edaa5f5a8c572bbf04755d14e8d7c4a1d0b9a4061549e0e7466c9e785b5235e"
+    },
+    {
+      "path": "09_dashboards/lead_parser_24_7_phase2a_live_scaffold_report_2026-06-10.md",
+      "size": 4867,
+      "sha256": "3ac77f0f0d491a36cdcc2809d98f789e709be27b5e865e55bc01c2209d6e7de6"
+    },
+    {
+      "path": "09_dashboards/lead_parser_24_7_phase2b_offline_run_sheet_2026-06-10.md",
+      "size": 8371,
+      "sha256": "2ff842540065cd1ad54dcf28277d909dc6a22f2fc5fb7b2ae1274591e64c7127"
+    },
+    {
+      "path": "09_dashboards/lead_pipeline_dashboard.md",
+      "size": 4676,
+      "sha256": "90f33c985766505c55bc0d1e0b2d584462a408dac6ae511786bf090a7b8f391e"
+    },
+    {
+      "path": "09_dashboards/lead_pipeline_v2_contact_resolver_v2_report_2026-06-08.md",
+      "size": 3700,
+      "sha256": "1a1fdb9cddcef7f4bbfdad9a02bdcfca43c56e472c10642aee8a0e7dec8ebb66"
+    },
+    {
+      "path": "09_dashboards/lead_source_keyless_live_probe_blocker_2026-06-10.md",
+      "size": 2745,
+      "sha256": "becea60db7d4d5030cfcac3e35694df3835cf88788b0535cc55766606d6cfa64"
+    },
+    {
+      "path": "09_dashboards/lead_source_staging_bridge_offline_green_2026-06-10.md",
+      "size": 3028,
+      "sha256": "9d312cef86fa0a061ce36fd15c3d19b6b3b18f2ed2a264fb103233ae9f898e7f"
+    },
+    {
+      "path": "09_dashboards/legacy_leads_reactivation_dashboard_report_2026-05-26.md",
+      "size": 5297,
+      "sha256": "2b28f14387bf3f4193e59af648c37ee4c6b8f8a6a8d69511d95fac85187e9234"
+    },
+    {
+      "path": "09_dashboards/LEGACY_TEST_FAILURE_CLASSIFICATION_v0.4.0-rc1_2026-06-17.md",
+      "size": 5664,
+      "sha256": "763e7e8b395a54ab72cda240aa57e1cfbd0839999d98b6c9fbd6d160a53137c2"
+    },
+    {
+      "path": "09_dashboards/LEGACY_TEST_QUARANTINE_MANIFEST_v0.4.0-rc1_2026-06-17.md",
+      "size": 4268,
+      "sha256": "15480e9356712e6b3ce9d2e24b2f7546bb1ef6fdc3388941dc57e6f99c1491c7"
+    },
+    {
+      "path": "09_dashboards/live_launch_pack_handoff_2026-06-09.md",
+      "size": 11377,
+      "sha256": "d38be7c63899c5dfba82944d5a64536e2cc47d32d1dd975a021c8f45bd951802"
+    },
+    {
+      "path": "09_dashboards/live_launch_pack_report_2026-06-09.md",
+      "size": 6041,
+      "sha256": "2792313aee9021e3c5dcd6237d4d11eb51cc5d85298a1ffcdfaac2436e270683"
+    },
+    {
+      "path": "09_dashboards/mail_context_lock_2026-06-07.md",
+      "size": 3275,
+      "sha256": "b186b1bcb9cd50437bffccb3cd589e569a3de90cb4f284ce81c23b74d061a14f"
+    },
+    {
+      "path": "09_dashboards/mail_final_selftest_2026-06-07.md",
+      "size": 5257,
+      "sha256": "d19da5348647e447040f5490cde573042729ace710421ec52ae2b6a031a5902a"
+    },
+    {
+      "path": "09_dashboards/mail_final_selftest_unlock_2026-06-07.md",
+      "size": 5361,
+      "sha256": "08ad206539cc679218c9de99fc3df5f8a0a06e547ffaa14f7b8cd7c109fde74c"
+    },
+    {
+      "path": "09_dashboards/mail_final_smtp_state_machine_fix_2026-06-07.md",
+      "size": 5885,
+      "sha256": "6f37532b6d2489154dc597592b5ee4efd171d8af437050a5dd7a3458cdba586a"
+    },
+    {
+      "path": "09_dashboards/manual_approved_send_channel_fix_2026-06-10.md",
+      "size": 3317,
+      "sha256": "5c669ab00316e3e64b175403ec581e6dc1e12b0cda414ee0b936cf425467affb"
+    },
+    {
+      "path": "09_dashboards/manual_approved_send_live_restart_acceptance_2026-06-11.md",
+      "size": 10215,
+      "sha256": "bc913e9f46f210a22dbd9abd445cc86dae08d8e8367bc449cac1c994c7ef3e60"
+    },
+    {
+      "path": "09_dashboards/MASTER_CONTROLLER_AUTONOMOUS_CORE_REPORT_2026-06-16.md",
+      "size": 3664,
+      "sha256": "07265bcd1fb2b5d0604793005fe4fe1e613bc642f6684a747df3ddc9616ef5c5"
+    },
+    {
+      "path": "09_dashboards/MASTER_CONTROLLER_AUTONOMOUS_PIPELINE_2026-06-16.md",
+      "size": 8915,
+      "sha256": "18f6f07d09b993b483683fdf00c7430db6e4c793630e9f60f7e0de11b6a83dc0"
+    },
+    {
+      "path": "09_dashboards/MASTER_CONTROLLER_AUTONOMOUS_RELEASE_2026-06-16.md",
+      "size": 3656,
+      "sha256": "85c755ac54e75e1d88f2536c7c07a59b2417c187d7e02552b1ada7b3b00df5ce"
+    },
+    {
+      "path": "09_dashboards/MASTER_CONTROLLER_CUTOVER_REPORT_2026-06-16.md",
+      "size": 4046,
+      "sha256": "687c90465b070e2e10c03013fb9ea5fc61cc4c7f99d81186cbffd61044e061c1"
+    },
+    {
+      "path": "09_dashboards/MASTER_CONTROLLER_DATA_MIGRATION_2026-06-16.md",
+      "size": 9188,
+      "sha256": "9734750fb14cab0d2ea26bcf08bfea8a7e2289160d747f6347a71d54b7641950"
+    },
+    {
+      "path": "09_dashboards/MASTER_CONTROLLER_E2E_V030_2026-06-16.md",
+      "size": 3587,
+      "sha256": "9d216f2e7afdbedc76824471285c70c29718617470d92d1a2b39aeea614ab5cc"
+    },
+    {
+      "path": "09_dashboards/MASTER_CONTROLLER_FULL_AUDIT_2026-06-16.md",
+      "size": 7067,
+      "sha256": "3f836cc46f5afe91ec925dc20f5fa7ed55c2c9c63c0fd5d88777f579dbbb0f4f"
+    },
+    {
+      "path": "09_dashboards/MASTER_CONTROLLER_LEADGEN_REPORT_2026-06-16.md",
+      "size": 2560,
+      "sha256": "b140f9d2b4fec33f4e195cc298753a0064cb1ad2c9b2327b0c79c5f1e6afe7a9"
+    },
+    {
+      "path": "09_dashboards/MASTER_CONTROLLER_LEAD_CLEANUP_REPORT_2026-06-16.md",
+      "size": 1851,
+      "sha256": "2f5075279dfddadc3507e96bcb0735470f3736d4a4e0978b7f4a79f0b3b56894"
+    },
+    {
+      "path": "09_dashboards/MASTER_CONTROLLER_LEAD_HUNTER_INTEGRATION_2026-06-16.md",
+      "size": 6385,
+      "sha256": "2e10f837b45f82384daa72614ba3f5a2554db3f02a69dd818fc213f4e72585a4"
+    },
+    {
+      "path": "09_dashboards/MASTER_CONTROLLER_OPERATIONS_RUNBOOK_2026-06-16.md",
+      "size": 3748,
+      "sha256": "254aa0294515092e34374a587c5d5edf27ea20d48a662b9c008586e1b5f7637a"
+    },
+    {
+      "path": "09_dashboards/MASTER_CONTROLLER_RELEASE_2B_2026-06-16.md",
+      "size": 4021,
+      "sha256": "27d888779c6eb1b2060bfb2878b46c82c664c031102f2361e39ef7febe632e41"
+    },
+    {
+      "path": "09_dashboards/MASTER_CONTROLLER_ROLLBACK_AND_CHANGELOG_2026-06-16.md",
+      "size": 2338,
+      "sha256": "35aaa85dbdd85c705f61b1af46585ee8497df1a20d66d102accc0a78f29dd911"
+    },
+    {
+      "path": "09_dashboards/MASTER_CONTROLLER_ROLLBACK_V040_2026-06-16.md",
+      "size": 1998,
+      "sha256": "f9b5318591054bced6af956ad4595803d65a57353047b43c39c26f33f212e098"
+    },
+    {
+      "path": "09_dashboards/MASTER_CONTROLLER_SECURITY_REPORT_2026-06-16.md",
+      "size": 2322,
+      "sha256": "701d4c1d2fcd490a8396f4df81f0a4e2dd60a6b99180350cda38ca040379aab9"
+    },
+    {
+      "path": "09_dashboards/MASTER_CONTROLLER_v0.4.0-rc1_FINAL_RELEASE_REPORT_2026-06-17.md",
+      "size": 3739,
+      "sha256": "ac45ce32e98c8d2f7f50cbff1694d6671bcf8682641465a25ba199652ef2ea66"
+    },
+    {
+      "path": "09_dashboards/MASTER_CONTROLLER_v0.4.0-rc1_RELEASE_VALIDATION_REPORT_2026-06-17.md",
+      "size": 6126,
+      "sha256": "154009e53f4682c069d3750722e77894a73abda9d12def5d242b08ff0d1188f8"
+    },
+    {
+      "path": "09_dashboards/MASTER_CONTROLLER_v0.4.0-rc1_ROLLBACK_RUNBOOK_2026-06-17.md",
+      "size": 5639,
+      "sha256": "a636c1ed9d2af5961f07436ae347ca73d7366f534bbcb41ad7c378dcb4dd9cf7"
+    },
+    {
+      "path": "09_dashboards/MASTER_CONTROLLER_VPS_E2E_FINAL_REPORT_2026-06-16.md",
+      "size": 5760,
+      "sha256": "abe5f28a3aaac0637a07596d8a6f5e96babf1709f7c437bc8b22775998e90af1"
+    },
+    {
+      "path": "09_dashboards/MASTER_CONTROLLER_VPS_REPROVISION_NOTE_2026-06-16.md",
+      "size": 1669,
+      "sha256": "acc384239d9bc5fec4270f79ff914063c717f43ab8fe7b86e51b61374a72a85f"
+    },
+    {
+      "path": "09_dashboards/master_control_dashboard.md",
+      "size": 5985,
+      "sha256": "9c812b77858ddfd6e74d0eb05b07036bcf4578def548bf6bdbe7fa319f561db8"
+    },
+    {
+      "path": "09_dashboards/MATER_CONTROLLER_ANDROID_FINAL_REPORT_2026-06-15.md",
+      "size": 11843,
+      "sha256": "8b7b4222e519ede67a00419560d54ef6af1958e949ff746e9808b83a1019af9e"
+    },
+    {
+      "path": "09_dashboards/memory_migration_register.bak_chatgptimport_2026-05-25.md",
+      "size": 1646,
+      "sha256": "05aae61d814e8bafb64d58dfac2d90014b04e57bc504706a20c55a1ea9f0ae46"
+    },
+    {
+      "path": "09_dashboards/memory_migration_register.md",
+      "size": 4571,
+      "sha256": "cdba3db87cceb79755f53e08bd3fea5378742423579e3c5b2c82c205b87528b9"
+    },
+    {
+      "path": "09_dashboards/mini_audit_10k_approval_flow_report_2026-05-26.md",
+      "size": 4807,
+      "sha256": "7a0f8dfe8b60a40c50f50228d09f302ea808cb554a6b2c9525bf47c43d2cdee9"
+    },
+    {
+      "path": "09_dashboards/mini_audit_10k_auto_lead_discovery_report_2026-05-25.md",
+      "size": 3266,
+      "sha256": "f21d8135157af15453f5f7a726848291b7aaf9be151f4076ef8dbdc3b9e7a57c"
+    },
+    {
+      "path": "09_dashboards/mini_audit_10k_first_battle_cycle_preflight_report_2026-05-25.md",
+      "size": 6677,
+      "sha256": "86e2ee4242bf529d592e4604811f274d5d8016a49d3a2afcaf011217bc131d7f"
+    },
+    {
+      "path": "09_dashboards/mini_audit_10k_lead_prep_50_2026-06-09.md",
+      "size": 4260,
+      "sha256": "77ff4159eec7dd465f932e86798bcf9a97befc512015444c1b92dab0a8f2f5d6"
+    },
+    {
+      "path": "09_dashboards/mini_audit_10k_lead_prep_50_report_2026-06-09.md",
+      "size": 3973,
+      "sha256": "ad9f8e39f536d0a4069789cc8f95ca0018f59849528d1362bb829aa0774c0738"
+    },
+    {
+      "path": "09_dashboards/mini_audit_10k_promote_preview_report_2026-06-09.md",
+      "size": 5121,
+      "sha256": "af9798a10e4c417ad6838cbe7c86797bac9b49ba375deaf9d5a3fa49bb24c536"
+    },
+    {
+      "path": "09_dashboards/mini_audit_10k_scoring_mapping_fix_report_2026-05-26.md",
+      "size": 6455,
+      "sha256": "558264140927fbfab8129a6958030f0f5a99c586c555d46edfa189944d9d84fd"
+    },
+    {
+      "path": "09_dashboards/mini_audit_10k_zb23_outreach_qa_report_2026-05-26.md",
+      "size": 8020,
+      "sha256": "085fd6eead1c1e4752e33a6baff747a65270fdede5896827f4978ccbab84f832"
+    },
+    {
+      "path": "09_dashboards/mini_audit_10k_zb23_yandex_email_send_report_2026-05-26.md",
+      "size": 3401,
+      "sha256": "a587fe994f4b7aee6da39dd7e4716e70cc2933565676ffa76e31686c3b6e917a"
+    },
+    {
+      "path": "09_dashboards/mini_audit_10k_zb23_yandex_email_verification_report_2026-05-26.md",
+      "size": 8898,
+      "sha256": "333399f54ecd6192dd597239996a163e65f5d1add0a4b2d712036207b6d403ec"
+    },
+    {
+      "path": "09_dashboards/mini_audit_bot_live_working_closeout_2026-06-11.md",
+      "size": 2658,
+      "sha256": "9765891fd26e71124be97dce80c7da615992d6ac070eb90483c47573d7b8540a"
+    },
+    {
+      "path": "09_dashboards/mini_audit_buttons_p0_live_wiring_report_2026-06-10.md",
+      "size": 4558,
+      "sha256": "4cc89caa53c3007cf7592e94d0176d2e70d5b594f24b7b4b0d8ac359c38dbf23"
+    },
+    {
+      "path": "09_dashboards/mini_audit_communication_system_backup_finalization_report_2026-05-26.md",
+      "size": 4784,
+      "sha256": "09b3f5e4bdf6815950c566107f7caf796ac808117d94c385a2799ca0c9e78189"
+    },
+    {
+      "path": "09_dashboards/mini_audit_communication_system_backup_report_2026-05-26.md",
+      "size": 3196,
+      "sha256": "799fa65912eb983dd2767f75492eaada1ca99b8219fd21f1b0fdd70fcdc3f895"
+    },
+    {
+      "path": "09_dashboards/mini_audit_communication_system_external_copy_report_2026-05-26.md",
+      "size": 2740,
+      "sha256": "0314800dccc1d45199df90df6752cb701ccf283e3adbdd4b46ec294c4b22bfd5"
+    },
+    {
+      "path": "09_dashboards/mini_audit_dashboard_forensic_report_2026-06-15.md",
+      "size": 16038,
+      "sha256": "4da0609e0412c7c43cf476441df2d72c500592bbe425eb35e6b876ae6415f657"
+    },
+    {
+      "path": "09_dashboards/mini_audit_dashboard_full_recovery_report_2026-06-15.md",
+      "size": 9738,
+      "sha256": "6aca3534afcb01b7acfc22e55b523a2f8b66c062c7f7db5670225bef36e6f14d"
+    },
+    {
+      "path": "09_dashboards/mini_audit_email_discovery_batch_2_2026-06-12.md",
+      "size": 4696,
+      "sha256": "da5c001c89f35a3600332bf2b6e76e8c0fd769deb724d70ad93659f844a77cf7"
+    },
+    {
+      "path": "09_dashboards/mini_audit_email_first_priority_2026-06-12.md",
+      "size": 565,
+      "sha256": "8616917dde50c7e47f1dfa92d10b38ce2f629a6d74c2eadc9474842f2a943c14"
+    },
+    {
+      "path": "09_dashboards/mini_audit_email_first_source_v2_2026-06-12.md",
+      "size": 3011,
+      "sha256": "061d6e197f5f99808f46c3aa8510df32cdb05941f7c21ebb38cc94f2f9a3e6ef"
+    },
+    {
+      "path": "09_dashboards/mini_audit_enrichment_batch_1_2026-06-12.md",
+      "size": 3729,
+      "sha256": "0731831c11a2b465f04eaee57d5677653208adaa2a676252132df3fb236e9a2a"
+    },
+    {
+      "path": "09_dashboards/MINI_AUDIT_FINAL_AUDIT_AND_COMPLETION_REPORT_2026-06-15.md",
+      "size": 26112,
+      "sha256": "438ce59df769dd88dc8da460fa4a9ac7a3cb5945722e47f6c943f27402efaf8a"
+    },
+    {
+      "path": "09_dashboards/mini_audit_first_ready_candidate_kz_jbi_2026-06-12.md",
+      "size": 6160,
+      "sha256": "24ef4f0aad47ecea49c914147b0bcc29d96c26e7030bace458fd76ed84fa009d"
+    },
+    {
+      "path": "09_dashboards/mini_audit_full_audit_fix_report_2026-06-09.md",
+      "size": 4239,
+      "sha256": "6054e39065f695da24b45b54cf473fd7a073e0ec03a0ec1f9f84a6fce23fc8f5"
+    },
+    {
+      "path": "09_dashboards/mini_audit_full_repair_completion_report_2026-06-09.md",
+      "size": 2600,
+      "sha256": "67494be0d511e028f7e2cf74931ab76c6bbb56841ed4109bcdc20760a3878109"
+    },
+    {
+      "path": "09_dashboards/mini_audit_identity_match_gate_2026-06-12.md",
+      "size": 2369,
+      "sha256": "f4221a2d1b707ae716769fa6f9c3f97890da344a89b1f0e46a84953ee2db68b7"
+    },
+    {
+      "path": "09_dashboards/mini_audit_lead_routing_queues_2026-06-12.md",
+      "size": 2660,
+      "sha256": "532ea6fbcb316c8671f20127a8e5117a4de4a58521ec53e3cc6e37b4ef87ba3b"
+    },
+    {
+      "path": "09_dashboards/mini_audit_multichannel_repair_report_2026-06-09.md",
+      "size": 2784,
+      "sha256": "493c63cf07795a60ac7d9bc8d62bfe3c2a9c85179933be14ec4715c1f05045a5"
+    },
+    {
+      "path": "09_dashboards/mini_audit_telegram_approval_send_ux_recovery_report_2026-06-15.md",
+      "size": 8551,
+      "sha256": "fc51d3f359ffba15a44287d9cbd4a87d182ebfce8363cc43e44b1783baab7818"
+    },
+    {
+      "path": "09_dashboards/mini_audit_telegram_operator_mode_final_report_2026-06-15.md",
+      "size": 8842,
+      "sha256": "665e70828ec844dfad2629c2dc6cd0bd097e2530357f7da5c6226af68371e6a2"
+    },
+    {
+      "path": "09_dashboards/mini_audit_vision_to_reality_completion_2026-06-10.md",
+      "size": 4988,
+      "sha256": "99c97ff5da08aeaeb243bc9a02a0567e7e0453f976a19f076cdec45ef273c07a"
+    },
+    {
+      "path": "09_dashboards/mini_audit_vision_vs_reality_audit_2026-06-10.md",
+      "size": 8455,
+      "sha256": "a9fff41bd8a552dea2978a8c3cdb649e6bcd81d32515d233c9d6c0e8ef3a8673"
+    },
+    {
+      "path": "09_dashboards/mini_audit_written_channel_correction_2026-06-12.md",
+      "size": 1848,
+      "sha256": "cfddc804b027345c5c939b9ef89765639b0a1aec2e07a0a851bd8cf7fcf7480a"
+    },
+    {
+      "path": "09_dashboards/mini_audit_written_channel_discovery_batch_1_2026-06-12.md",
+      "size": 4634,
+      "sha256": "f9af7349127cef6971b5a7c14f756d6f2046eb0e801a097f8de5456bf326729b"
+    },
+    {
+      "path": "09_dashboards/money_revenue_board.bak_2026-05-26.md",
+      "size": 1804,
+      "sha256": "61fe6ba0d6040fd51abdaee1e89acd31bc9f992ddd66e57a62950e4781753074"
+    },
+    {
+      "path": "09_dashboards/money_revenue_board.bak_chatgptimport_2026-05-25.md",
+      "size": 2071,
+      "sha256": "5ef1b09b4d9fe43a83231d45e7c3f44da0718cd36aee19463e38ba9b2cb4f5ee"
+    },
+    {
+      "path": "09_dashboards/money_revenue_board.md",
+      "size": 2858,
+      "sha256": "81eab1c7c37ea966f83319a290e9a29ff88fa1e5997ef5e1a92d46867e82a340"
+    },
+    {
+      "path": "09_dashboards/next_money_steps_board.md",
+      "size": 3330,
+      "sha256": "b8ffc5c8d7e0e459be20dd0886c6e40369969622647d47e527038418b87a4405"
+    },
+    {
+      "path": "09_dashboards/obsidian_context_operating_layer_report_2026-06-07.md",
+      "size": 4056,
+      "sha256": "f7ad39e91786a44fd89cca2ca6ece21f02bf4482ae9bc6b4af9776b4dd0c0b9b"
+    },
+    {
+      "path": "09_dashboards/obsidian_graph_link_hygiene_report_2026-05-26.md",
+      "size": 5126,
+      "sha256": "34e67d020562431017bb62c59668e014a711967edca0f0126147fd3beedba2a9"
+    },
+    {
+      "path": "09_dashboards/obsidian_knowledge_graph_link_enrichment_v1_report_2026-05-31.md",
+      "size": 4978,
+      "sha256": "32152088be2fe74c54618e6f9be9c51845badd7b4a319ad9896225fa8b0162e2"
+    },
+    {
+      "path": "09_dashboards/obsidian_knowledge_graph_link_enrichment_v2a_report_2026-05-31.md",
+      "size": 2224,
+      "sha256": "3b206bc65b2930a4b1d0e03ecef2268ad936feeef840d17392d9bf2256f6afa8"
+    },
+    {
+      "path": "09_dashboards/obsidian_knowledge_graph_link_enrichment_v2b_HANDOFF_2026-05-31.md",
+      "size": 5933,
+      "sha256": "3dbf64ce9f18c3e8864a4015dcf54a527d9cf014d98ba99d3bbf92ed2d5b2db7"
+    },
+    {
+      "path": "09_dashboards/obsidian_knowledge_graph_link_enrichment_v2b_report_2026-05-31.md",
+      "size": 2970,
+      "sha256": "cdc0c64a8ca291857ea8b7beb2239672e1174c72689e3cee7dae6569442d893c"
+    },
+    {
+      "path": "09_dashboards/obsidian_pre_telegram_context_pack_qa_report_2026-05-26.md",
+      "size": 17306,
+      "sha256": "7ea5446290ba3c07e866a9de731bc74e4ef525c62ec9d22dcfb6bd01553924ed"
+    },
+    {
+      "path": "09_dashboards/obsidian_telegram_bot_context_pack_report_2026-05-26.md",
+      "size": 10790,
+      "sha256": "8ba2c19c93af228bb82102632e725091d8009a1c222fe2a32ba5e5ad270de650"
+    },
+    {
+      "path": "09_dashboards/operational_day_1_mini_audit_10k_restart_2026-06-06.md",
+      "size": 6666,
+      "sha256": "f24ef804c98873a624a825432c9a532c7e0ea6be031c4cfb5eb73f5d85ecb84e"
+    },
+    {
+      "path": "09_dashboards/osm_first_send_run_sheet_sto_nomer1_2026-06-10.md",
+      "size": 5036,
+      "sha256": "8cdb293240c999edd18a71371bf8a2666951971971d680af1baa401b4d2ead69"
+    },
+    {
+      "path": "09_dashboards/osm_lead_prep_clinerules_compliance_2026-06-10.md",
+      "size": 4890,
+      "sha256": "b415e489dbf08466874e73096c439c5e6f30ef795b3a20614aecc7b4e2eadf80"
+    },
+    {
+      "path": "09_dashboards/osm_overpass_all_phases_execution_2026-06-10.md",
+      "size": 12909,
+      "sha256": "834fb95dd5ad987bfee4861828cc0e94fc8561d3170fd7b40b84a3f664117e94"
+    },
+    {
+      "path": "09_dashboards/osm_overpass_first_live_acceptance_2026-06-10.md",
+      "size": 4356,
+      "sha256": "1ad1414c99adb01be9f3051fcb78ea61a9931c561878b3f5f6e6ea7dc12f9167"
+    },
+    {
+      "path": "09_dashboards/osm_overpass_keyless_connector_offline_green_2026-06-10.md",
+      "size": 3585,
+      "sha256": "26130f1452aaaa1b5867961740291097795c973f124ac7bde36021082e259aa9"
+    },
+    {
+      "path": "09_dashboards/osm_overpass_lead_prep_offline_run_2026-06-10.md",
+      "size": 3491,
+      "sha256": "c2f3b9d3ecfa6c05e43d5fc1ca643352bd6c69bc8b65fc2b9adb6305f0a2daf1"
+    },
+    {
+      "path": "09_dashboards/osm_phase_a_assembled_letter_sto_nomer1_2026-06-10.md",
+      "size": 4113,
+      "sha256": "bc50f7a99f47f317f3deeee06ccf855665b31b7f8c1faadccbbfbd14f56658b0"
+    },
+    {
+      "path": "09_dashboards/osm_phase_a_dns_blocker_sto_nomer1_2026-06-10.md",
+      "size": 5092,
+      "sha256": "c419200d5d479881876afa719aa727090aee035fefb8a76e69d2d48c93cc5c0c"
+    },
+    {
+      "path": "09_dashboards/osm_phase_a_hardstop_report_sto_nomer1_2026-06-10.md",
+      "size": 4077,
+      "sha256": "6cc34720de2834e0e2415bf8657db26879ada0e994f08b50a28277c2d572121d"
+    },
+    {
+      "path": "09_dashboards/osm_send_preview_batch_4_ready_2026-06-10.md",
+      "size": 6913,
+      "sha256": "00b722ac9581a05d6a2a8f39030eaeb811063cab9790cb799ef4c944abb91beb"
+    },
+    {
+      "path": "09_dashboards/osm_send_preview_sto_nomer1_2026-06-10.md",
+      "size": 4551,
+      "sha256": "b42d90954113165839b39de1309925fa57b93f946ae7240eeb71ddc25789ab8c"
+    },
+    {
+      "path": "09_dashboards/OWNER_ACCEPTANCE_CHECKLIST_v0.4.0-rc1_2026-06-17.md",
+      "size": 2420,
+      "sha256": "ce9548250188bef3c820c6642d70bd1c891dadf11e3302cc917ba97862ca2e2e"
+    },
+    {
+      "path": "09_dashboards/p1_email_arming_handoff_2026-06-09.md",
+      "size": 4487,
+      "sha256": "94ff9f8086d731e0b52eed597863b411d8f2ee1212855a4664fbafbf231395ec"
+    },
+    {
+      "path": "09_dashboards/p1_first_send_cycle_verified_jbi_kuban_2026-06-09.md",
+      "size": 2508,
+      "sha256": "af738e35430a041e8fc29330d207a2944665648f0fd0ab7ee6c5b41591a29c06"
+    },
+    {
+      "path": "09_dashboards/p1_first_send_gateway_restart_jbi_kuban_2026-06-09.md",
+      "size": 3479,
+      "sha256": "354e07b78a506e1f0edb160a0db1906d4a338d7469c0accdcc28d8072ee138eb"
+    },
+    {
+      "path": "09_dashboards/p1_first_send_handoff_jbi_kuban_2026-06-09.md",
+      "size": 2894,
+      "sha256": "98790a773adf8b7dedb7b7a1a77ef4c01087ea94ad0ca51f61b1e400862d709e"
+    },
+    {
+      "path": "09_dashboards/p1_first_send_readiness_jbi_kuban_2026-06-09.md",
+      "size": 4348,
+      "sha256": "1bc390e05cbb9b111c9516361124d0e5a87cdabdd78e0e69074a79638a24f232"
+    },
+    {
+      "path": "09_dashboards/p1_first_send_run_sheet_jbi_kuban_2026-06-09.md",
+      "size": 4188,
+      "sha256": "43f49f07817574071c78eb1730e56800e6efc065f6dce05b92079dca2ee2ee7c"
+    },
+    {
+      "path": "09_dashboards/p1_required_after_arming_root_cause_2026-06-08.md",
+      "size": 6697,
+      "sha256": "fd1646e6f057233960af16eaea9a9a6616b7bd23652edba96607945ea9684534"
+    },
+    {
+      "path": "09_dashboards/p1_top1_client_send_2026-06-07.md",
+      "size": 3507,
+      "sha256": "eb15f425b894579409c4f0de2e6854737ee4e930bb775e3425ca9857140d1210"
+    },
+    {
+      "path": "09_dashboards/p1_top1_client_send_implementation_2026-06-07.md",
+      "size": 8377,
+      "sha256": "f5b3787040864a0f11dacca414f0238c7e6ec6040b06cd76dc28239cd7de3445"
+    },
+    {
+      "path": "09_dashboards/p1_top1_client_send_localized_2026-06-07.md",
+      "size": 4483,
+      "sha256": "12b815cac907c9770e433f0515efa3a1e79bbb05ed8076ef37b2f62acf736a0c"
+    },
+    {
+      "path": "09_dashboards/pending_actions.md",
+      "size": 863,
+      "sha256": "efe1a451c57bcf4174a133d38ac72556e829fef9ff07f0cef3a72eb85225e7af"
+    },
+    {
+      "path": "09_dashboards/post_chatgpt_official_export_import_backup_report_2026-05-26.md",
+      "size": 7102,
+      "sha256": "2259c28563ec68739e691603273af2f5fac708d3c1f4edda293b33faa88b3ddb"
+    },
+    {
+      "path": "09_dashboards/post_chatgpt_official_export_import_external_copy_report_2026-05-26.md",
+      "size": 3064,
+      "sha256": "d757f4e414e37c77814445d555239ab79d8a8bb0cf7d9f833d719caa0dc5e8ef"
+    },
+    {
+      "path": "09_dashboards/post_lead_id_repair_sync_audit_2026-06-05.md",
+      "size": 8376,
+      "sha256": "585785b2d44096339bd5922aef672ea01c53c2f727a435e1fe9c9fec425b0d29"
+    },
+    {
+      "path": "09_dashboards/post_memory_migration_health_check_2026-05-25.md",
+      "size": 17473,
+      "sha256": "087c935fc808f45cb12df6ef2ab7dec866c1c6cd3bfae7113f22d79845fd9013"
+    },
+    {
+      "path": "09_dashboards/post_obsidian_context_pack_backup_report_2026-05-26.md",
+      "size": 5470,
+      "sha256": "6517bd5bcecba8ec4964c75eefa142633dcdc2fd1d661ad7f40545ec437f8cf1"
+    },
+    {
+      "path": "09_dashboards/post_obsidian_context_pack_external_copy_report_2026-05-26.md",
+      "size": 3565,
+      "sha256": "1f3eb1df64f63b2124baf56347773422f18a51146b84540ec55e1bc196705bd3"
+    },
+    {
+      "path": "09_dashboards/post_quarantine_regression_gate_2026-06-10.md",
+      "size": 2228,
+      "sha256": "3d6f453254c843e56df1396f4216649155413b84aded39d793e80fb849a44547"
+    },
+    {
+      "path": "09_dashboards/pre_telegram_bot_backup_report_2026-05-26.md",
+      "size": 4655,
+      "sha256": "f06c4a5e680ab224704f5fc775cb1fff5d9641aa24f3c3d97926d52527758c87"
+    },
+    {
+      "path": "09_dashboards/pre_telegram_bot_readiness_audit_report_2026-05-26.md",
+      "size": 11388,
+      "sha256": "a4f1df9b6e618860b954bf5c6fc8abaa5b7b19e216bd4850ed523548c1fcedc9"
+    },
+    {
+      "path": "09_dashboards/projects_dashboard.md",
+      "size": 470,
+      "sha256": "e3a24796f22cd65b59423015d9477a3b7b109288d4c7bab1134a60af4e968e51"
+    },
+    {
+      "path": "09_dashboards/project_control_board.bak_2026-05-26.md",
+      "size": 3487,
+      "sha256": "5eefb3422e2a20d3d5b6fb87467ffe02d51642edb3c92445cfeb7bf3dbf5527e"
+    },
+    {
+      "path": "09_dashboards/project_control_board.bak_chatgptimport_2026-05-25.md",
+      "size": 3990,
+      "sha256": "9d84ef51b327209bd55cb5939066f63b54eb812e51007a0f3f3cad4c6f305f0b"
+    },
+    {
+      "path": "09_dashboards/project_control_board.md",
+      "size": 8632,
+      "sha256": "d0e036036327065f72b0ac9b2046d75e057059811878fbe0e1dc71664ee02b2a"
+    },
+    {
+      "path": "09_dashboards/project_health_dashboard.md",
+      "size": 1691,
+      "sha256": "c3fcd4ea5576788a49fa3c3a2d3f5dcb2863df5bd2213a584b4a12816c88f62b"
+    },
+    {
+      "path": "09_dashboards/project_portfolio_dashboard.md",
+      "size": 1989,
+      "sha256": "f5d2962d3a9d159b55ffdf47e2f4be03552b4e758cee7a46816e7f226a518528"
+    },
+    {
+      "path": "09_dashboards/project_registry.md",
+      "size": 997,
+      "sha256": "4681320f9ad65cfdc67eb18e8ab96c6ac24c4b3a3ac3ff26ebde477575e1ff6e"
+    },
+    {
+      "path": "09_dashboards/queue_navigation_live_restart_report_2026-06-10.md",
+      "size": 5459,
+      "sha256": "5d089f6512f2e4c43ba0a48bd6b5887023751341708d11c9a59e894326458109"
+    },
+    {
+      "path": "09_dashboards/queue_navigation_wiring_gap_report_2026-06-10.md",
+      "size": 5325,
+      "sha256": "09c87780e900e6dd979d17a00a69619549835f08e226dec50a994db2ce3544f6"
+    },
+    {
+      "path": "09_dashboards/queue_navigation_wiring_patch_report_2026-06-10.md",
+      "size": 3872,
+      "sha256": "c729a22d9ce2ceae198b580a7e687647ecb511745d42cf0bd92691efc2073034"
+    },
+    {
+      "path": "09_dashboards/reminders_dashboard.md",
+      "size": 3808,
+      "sha256": "093bf20ce818ec0aae4615dcbb14a802ad68c950719e184cd6b767f6f63be93a"
+    },
+    {
+      "path": "09_dashboards/reply_monitoring_status.md",
+      "size": 1854,
+      "sha256": "f51b837ce82501f575dd1a91f94f4e9f2585e1a8f938414424978a40247934c3"
+    },
+    {
+      "path": "09_dashboards/reply_monitor_block11_bot_glue_wiring_report_2026-06-09.md",
+      "size": 3421,
+      "sha256": "e806c16b19f9ef8b65a3dc567e83bab66fbb10bfd6f0fa0b5a40634a8ad13967"
+    },
+    {
+      "path": "09_dashboards/reply_monitor_block8_report_2026-06-08.md",
+      "size": 4241,
+      "sha256": "49d6e1f97f902146d8d84564de1836ae85ab006848d59bd8f8c7c9f20ae44d58"
+    },
+    {
+      "path": "09_dashboards/reply_monitor_preflight_block_i_report_2026-06-08.md",
+      "size": 4474,
+      "sha256": "d991fbb3f960327280dc0aa398ecc10216644d79030ad482fcc2a49dca755a36"
+    },
+    {
+      "path": "09_dashboards/reply_monitor_router_block10_report_2026-06-08.md",
+      "size": 5252,
+      "sha256": "4f8783bba21444b7bd2593d333157e7a7989e1f6a791fccf60ba8a1ed3c5d990"
+    },
+    {
+      "path": "09_dashboards/report_center_status.md",
+      "size": 3886,
+      "sha256": "7bf887bcd7ec2fcc90a4fc452e349ae1ea0196a5910bb4e10f996baaf9969a63"
+    },
+    {
+      "path": "09_dashboards/revenue_dashboard.md",
+      "size": 1156,
+      "sha256": "1c3099991cf82d058508f0011b0b160e96f33b6c2a9c68231c7aa080b187c01d"
+    },
+    {
+      "path": "09_dashboards/revenue_pipeline_dashboard.md",
+      "size": 1580,
+      "sha256": "fabcb988966ae013410a66b6ff8983e09e0801e247b505cee12b8c3b26b8a9d0"
+    },
+    {
+      "path": "09_dashboards/risk_register.md",
+      "size": 1340,
+      "sha256": "e8abbacd6d74b11e28941e9374eb24265732a820e77224e18e9c4e34cb032d21"
+    },
+    {
+      "path": "09_dashboards/risk_security_board.bak_2026-05-25.md",
+      "size": 2625,
+      "sha256": "2d182e51cd1e9264c47e05596f85b676855cc453aa19d3d35b649f3f2e8c820a"
+    },
+    {
+      "path": "09_dashboards/risk_security_board.bak_2026-05-26.md",
+      "size": 5743,
+      "sha256": "a006acd19e36096d5b6d82c999ad4eff4689ddbcc21a77724f8925c9e74f6318"
+    },
+    {
+      "path": "09_dashboards/risk_security_board.bak_chatgptimport_2026-05-25.md",
+      "size": 2769,
+      "sha256": "96029332780d94c812e22bb4de8a08a20dbfa342ba5062d1c9b2aa9279a9e1ba"
+    },
+    {
+      "path": "09_dashboards/risk_security_board.md",
+      "size": 17030,
+      "sha256": "760e59f76ba654f5e0b19fce4424e945527b31c2b45b7ef70052425a3633c2ba"
+    },
+    {
+      "path": "09_dashboards/root_junk_quarantine_consistency_pass_2026-06-10.md",
+      "size": 2237,
+      "sha256": "05954ee51d3cbb7a5c91b55f9e4307c93c82356fd4bba29685557c390ee18014"
+    },
+    {
+      "path": "09_dashboards/root_junk_quarantine_executed_2026-06-10.md",
+      "size": 99,
+      "sha256": "5498a3eff547a1c43bdc59a543b2d8fc44476476112c4174c4579cf0bd6d5fae"
+    },
+    {
+      "path": "09_dashboards/root_junk_quarantine_report_2026-06-10.md",
+      "size": 4978,
+      "sha256": "72fbd7eed2f6d926aced0214f3e5d34dcb90dfafda6b0b5058a7d15126b3290e"
+    },
+    {
+      "path": "09_dashboards/sales_console_button_surface_report_2026-06-09.md",
+      "size": 2281,
+      "sha256": "e6047507a192017ab75da064ff360e88768136e1e11a65cd0bbaefd622cb0591"
+    },
+    {
+      "path": "09_dashboards/sales_followup_daily_command_layer_report_2026-05-26.md",
+      "size": 5945,
+      "sha256": "4aa54648d188cfb99740e76b8c1d012778c7d82888196f5d109db15d024bac54"
+    },
+    {
+      "path": "09_dashboards/sales_next_production_flow_finalized_2026-06-08.md",
+      "size": 2698,
+      "sha256": "a1660b0ea158f90b43d42f417e61ba0b1751cf49217b328b121ee106a1878537"
+    },
+    {
+      "path": "09_dashboards/skills_dashboard.md",
+      "size": 613,
+      "sha256": "a9f5902b133b3e2731543eee6cbd9fb2b311d876c9685691a31fe8e0e19b786e"
+    },
+    {
+      "path": "09_dashboards/stable_baseline_backup_report_2026-05-30.md",
+      "size": 3157,
+      "sha256": "3256e8ea526df5c2a304c760041b82f76eef2cf54f774cec4b1dbb2f908ddfb4"
+    },
+    {
+      "path": "09_dashboards/stable_baseline_external_copy_report_2026-05-30.md",
+      "size": 1817,
+      "sha256": "af7634b293e9d48aef5c78bebd1a4061660e72f5a82d10476da6d12b8d941be2"
+    },
+    {
+      "path": "09_dashboards/system_context_lock_2026-06-07.md",
+      "size": 1654,
+      "sha256": "78812fa7312b7d87d70bfd2a9d4536a9d91d754c0a4ee662606a7fb2b3cd8324"
+    },
+    {
+      "path": "09_dashboards/system_healthcheck_report.md",
+      "size": 1358,
+      "sha256": "708acb6d6461c0f99b8a067f5d67f04ace3538ff3d62687940380f0c10f10f9e"
+    },
+    {
+      "path": "09_dashboards/t1_today_button_live_closed_t2_unlock_2026-06-10.md",
+      "size": 1907,
+      "sha256": "016922e19986cd5fff7bc90040747a809e125c4cf74bf405cda60dc74bff54de"
+    },
+    {
+      "path": "09_dashboards/t2_next_action_button_live_acceptance_2026-06-10.md",
+      "size": 2540,
+      "sha256": "4eb83a3c4d9a0b2dac69b85beefc2115ad7563bc11eb84c25012d8f4b18d7715"
+    },
+    {
+      "path": "09_dashboards/t2_next_action_button_live_closed_t3_unlock_2026-06-10.md",
+      "size": 2632,
+      "sha256": "b3bb9abd3be41f02cac619ff045a4532e91ad1d4641ccd3b66ac984829ff7b93"
+    },
+    {
+      "path": "09_dashboards/t2_next_action_button_offline_green_handoff_2026-06-10.md",
+      "size": 4703,
+      "sha256": "18039206bf2aee4e765b0a69a43055d72ba8fe92a762b0d3540cdb40d1a83aba"
+    },
+    {
+      "path": "09_dashboards/t2_t3_live_smoke_failure_fix_canonical_restart_report_2026-06-10.md",
+      "size": 4233,
+      "sha256": "00b86c1305d920f73520e239777038b704d3953097b53b4287bd35318118936f"
+    },
+    {
+      "path": "09_dashboards/t2_t3_live_smoke_failure_fix_live_closed_2026-06-10.md",
+      "size": 2219,
+      "sha256": "663027c4450d10d24a2b7323d593981ae4ffcc806de520332ae13f411c8430b3"
+    },
+    {
+      "path": "09_dashboards/t2_t3_live_smoke_failure_fix_live_restart_report_2026-06-10.md",
+      "size": 4311,
+      "sha256": "43861e6b637d6d6dd0830bcf7efca19c5f8aa6c26555c5a3836056d6f5bcb213"
+    },
+    {
+      "path": "09_dashboards/t2_t3_live_smoke_failure_fix_report_2026-06-10.md",
+      "size": 6782,
+      "sha256": "dd8feb2f263d5c9870bc5e1e8cf907dbfd1f1a88be2ffb5a47cc6ab9e99f5b03"
+    },
+    {
+      "path": "09_dashboards/t3_compact_main_menu_live_closed_2026-06-10.md",
+      "size": 2512,
+      "sha256": "2153d13835be4eca4fc7facdc4128fb7e483a0bdd456a7aaecaddc698048a75c"
+    },
+    {
+      "path": "09_dashboards/t3_compact_main_menu_live_restart_report_2026-06-10.md",
+      "size": 2284,
+      "sha256": "30602c8b111b7e844cba008c77e6a9cb33d9ee251b3bce1e3e30744b68d5fbe9"
+    },
+    {
+      "path": "09_dashboards/t3_compact_main_menu_offline_green_handoff_2026-06-10.md",
+      "size": 4389,
+      "sha256": "07b07b8db0e3cb1dfe17d3b1c2b8cf60a02796bf71c3bdc1e866528b8557a212"
+    },
+    {
+      "path": "09_dashboards/t3_compact_main_menu_prestaged_entry_2026-06-10.md",
+      "size": 2272,
+      "sha256": "d8b6c9c125352e7f4fbab1f183a6695482a2d2b491b9887d3179ab2de20cb43d"
+    },
+    {
+      "path": "09_dashboards/t4_t7_telegram_controller_offline_green_2026-06-10.md",
+      "size": 12553,
+      "sha256": "e33ec5545f80bbd90131781dc9e2a2ef1174239a1177e50f80c32016cae82e18"
+    },
+    {
+      "path": "09_dashboards/telegram_approval_commands_standalone_b12_report_2026-05-31.md",
+      "size": 3445,
+      "sha256": "8d50430bff916eb9002af977a900d508ec428785258214402a4984c700607596"
+    },
+    {
+      "path": "09_dashboards/telegram_approval_phase_b_live_verification_report_2026-05-31.md",
+      "size": 2966,
+      "sha256": "62f763f446b10d77c704f2de1f6587bcf9211809b3a0096c66143bbc8270aa42"
+    },
+    {
+      "path": "09_dashboards/telegram_approval_queue_b3_integration_HANDOFF_2026-05-31.md",
+      "size": 8003,
+      "sha256": "65ade3856b06efe946f928fbffa485e4e30f929dff8ec2b225692844a83bfd70"
+    },
+    {
+      "path": "09_dashboards/telegram_approval_queue_b3_patch_only_report_2026-05-31.md",
+      "size": 4999,
+      "sha256": "1e84f1f7b45dfa9710b9a6044e0911a9d44b7125314ae7b508fbb93bb179eaf1"
+    },
+    {
+      "path": "09_dashboards/telegram_approval_queue_b3_tests_report_2026-05-31.md",
+      "size": 5457,
+      "sha256": "82c93103b8984480e75c5efe906693c00cb2c9088e9b0a85f24845c25921c82f"
+    },
+    {
+      "path": "09_dashboards/telegram_approval_queue_phase_b_HANDOFF_2026-05-31.md",
+      "size": 10267,
+      "sha256": "15f6ab10aeadd9d53390b5ab0437153328d74b5e53c910690a4e754e262b4139"
+    },
+    {
+      "path": "09_dashboards/telegram_approval_queue_standalone_b13_report_2026-05-31.md",
+      "size": 4001,
+      "sha256": "905dbe164d30ac0d8ddeddd21e1456c15e11dcfc770fbc6a68adde01e7a53636"
+    },
+    {
+      "path": "09_dashboards/telegram_approval_queue_standalone_b1_HANDOFF_2026-05-31.md",
+      "size": 7313,
+      "sha256": "10a2cfca0d9ad53aa660221f0f68c1fc43509971902d50936c9b5550cdddef3a"
+    },
+    {
+      "path": "09_dashboards/telegram_approval_ru_router_extension_b2_report_2026-05-31.md",
+      "size": 3550,
+      "sha256": "4a95f2ab635c4a7df382fcd684b266b1f4059a83af1801e2363436d94c5d9e21"
+    },
+    {
+      "path": "09_dashboards/telegram_approved_email_send_adapter_e1b_preflight_report_2026-06-07.md",
+      "size": 6054,
+      "sha256": "d3afa949547ef760785d54af231d0cbb17f49f7691f8041477d66c935d9a1308"
+    },
+    {
+      "path": "09_dashboards/telegram_approved_email_send_adapter_e1c1a_r4_unblock_report_2026-06-07.md",
+      "size": 2393,
+      "sha256": "7d2ed16c5c90e45097294b47d0eb66773f915a8a019b31ac2e89873155d7b234"
+    },
+    {
+      "path": "09_dashboards/telegram_approved_email_send_adapter_e1c1_bridge_report_2026-06-07.md",
+      "size": 6848,
+      "sha256": "5956bcb53f975ccd064b735f36f520a9b99e0359600a78f3fcc16d945f4180e4"
+    },
+    {
+      "path": "09_dashboards/telegram_approved_email_send_adapter_e1_report_2026-06-07.md",
+      "size": 4606,
+      "sha256": "bdb31f8385360928c401ac635333ec3b17431fa577ef587e77442f0e337ef0d2"
+    },
+    {
+      "path": "09_dashboards/telegram_bot_no_response_patch_report_2026-05-27.md",
+      "size": 8201,
+      "sha256": "cdc13d2b540740f0299803228c1a7e0b384e79d29b3a91ae6b4903b35a043f83"
+    },
+    {
+      "path": "09_dashboards/telegram_bot_no_response_triage_report_2026-05-27.md",
+      "size": 9617,
+      "sha256": "60cb1d3eea58acce6ec6c75cd87e3c1107c7278951d210ce3962835460390428"
+    },
+    {
+      "path": "09_dashboards/telegram_bot_phase1_live_activation_report_2026-05-26.md",
+      "size": 7423,
+      "sha256": "478ae49fcdacdd3ed926beb4b9179b2a8ce655be75e2e7363fec13f4567b4015"
+    },
+    {
+      "path": "09_dashboards/telegram_bot_sales_commands_phase1_implementation_report_2026-05-26.md",
+      "size": 7487,
+      "sha256": "a6c422bce4291daed22d92b7060297a1385bcbf04bb2b37dc3f3531657624d5a"
+    },
+    {
+      "path": "09_dashboards/telegram_bot_send_path_guard_inspection_report_2026-05-27.md",
+      "size": 24684,
+      "sha256": "cd0d960b3d733f85c14d516173f979b8ca75da8cf7d8c2e14337f4dbf537bf8d"
+    },
+    {
+      "path": "09_dashboards/telegram_bot_transport_patch_report_2026-05-29.md",
+      "size": 11771,
+      "sha256": "1c889010c59b7883e9c8a3faafe91604d7c7ce470ddc66b5e4dfbbdef53f1a59"
+    },
+    {
+      "path": "09_dashboards/telegram_c1a_regression_gate_unblock_report_2026-06-07.md",
+      "size": 3877,
+      "sha256": "cca2a9f6dfd819ff50d1a2a94dbb528d5b7844e2ab911a869d626f36e00400be"
+    },
+    {
+      "path": "09_dashboards/telegram_contact_resolver_c1_report_2026-06-07.md",
+      "size": 6650,
+      "sha256": "a7fb6ae48f3e45ea832aedd5eacd3618f93867de63f827429dc0b02480bc171f"
+    },
+    {
+      "path": "09_dashboards/telegram_draft_buttons_ux1_report_2026-06-07.md",
+      "size": 4218,
+      "sha256": "22ed7932ef00d73eb4da89841516fea8cee27e626b3e31eff716ff819348accf"
+    },
+    {
+      "path": "09_dashboards/telegram_email_env_presence_e1c2b_report_2026-06-07.md",
+      "size": 3829,
+      "sha256": "0b17985663b852764d0f3f99d8cfc77d8e9206671fca9ea3732c9bc9b1de02d8"
+    },
+    {
+      "path": "09_dashboards/telegram_email_preflight_live_smoke_e1c2a_2026-06-07.md",
+      "size": 3356,
+      "sha256": "5f7858ef0629e757a0db046f7067cd502616d50fb691864d63f21879d1dfe982"
+    },
+    {
+      "path": "09_dashboards/telegram_final_live_restart_report_2026-05-29.md",
+      "size": 2584,
+      "sha256": "f18ef183e50aad34bc195b27994eac34e2678d3221fab6056eb7aa9c1b97bc3e"
+    },
+    {
+      "path": "09_dashboards/telegram_gateway_final_acceptance_gate_2026-06-06.md",
+      "size": 5361,
+      "sha256": "c761e2503ea718f81031054c6729b8b78e68c1f00a7c598d42f26f022eb2b68b"
+    },
+    {
+      "path": "09_dashboards/telegram_gateway_incident_response_quick_guide.md",
+      "size": 2359,
+      "sha256": "2026d61e6bdad406587a7ed37d5df085e1b5a6445c6bc1d5da6e6671a218272d"
+    },
+    {
+      "path": "09_dashboards/telegram_gateway_lifecycle_r1_repair_report_2026-06-06.md",
+      "size": 4313,
+      "sha256": "dedbb7eb0cd6a9c4d7e8eb8226fc8095cfca94c77c2e615889a96810883c5939"
+    },
+    {
+      "path": "09_dashboards/telegram_gateway_live_state_reconciliation_report_2026-05-27.md",
+      "size": 6501,
+      "sha256": "1880879c599150eaa930ec13df4e3befd9afec0c7e47daeff0c1f17b6becace3"
+    },
+    {
+      "path": "09_dashboards/telegram_gateway_operational_ready_status_2026-06-06.md",
+      "size": 655,
+      "sha256": "e136ca9dbd30eaeda53d845dc524c31d8ce56d743d1567d550342d5a0ce3daff"
+    },
+    {
+      "path": "09_dashboards/telegram_gateway_operator_cheat_sheet.md",
+      "size": 3265,
+      "sha256": "309ce25daf2b13f68efc954b84617bf85c437023bfd88c492264a4988c86dec3"
+    },
+    {
+      "path": "09_dashboards/telegram_gateway_r2_unified_control_report_2026-06-06.md",
+      "size": 3230,
+      "sha256": "c371dbfbd0c5b34d8641ad9edbcb23ecafcfb90572f0695aa4a1ba3f8914eedc"
+    },
+    {
+      "path": "09_dashboards/telegram_gateway_r3_watchdog_checkonly_report_2026-06-06.md",
+      "size": 4074,
+      "sha256": "b7debbc886a9147e63fcf537e7f6c3883d8fc2f1d9f5b10cd6e8d5fa833a10dd"
+    },
+    {
+      "path": "09_dashboards/telegram_gateway_r4b_regression_wrapper_report_2026-06-06.md",
+      "size": 3186,
+      "sha256": "212662eab546e73db73c69a99556eb425a7d1247107de88d564d1fdc547f264c"
+    },
+    {
+      "path": "09_dashboards/telegram_gateway_r5_controlled_change_protocol_report_2026-06-06.md",
+      "size": 3865,
+      "sha256": "df53552a30472d4e589acb5f3c68f47855d808c3d2deb637b0abe89f04634e40"
+    },
+    {
+      "path": "09_dashboards/telegram_gateway_r6_operator_cheat_sheet_report_2026-06-06.md",
+      "size": 1847,
+      "sha256": "e624545d381b8c54588d7f1f6b15ec3113f9c988fe6fbae3ebe12c073f32f364"
+    },
+    {
+      "path": "09_dashboards/telegram_gateway_r7_stable_baseline_checkpoint_report_2026-06-06.md",
+      "size": 1833,
+      "sha256": "8f3953c544432a4e7f8b4822e193283c6e9437064b936d2643fd9399e2ab64c6"
+    },
+    {
+      "path": "09_dashboards/telegram_gateway_r8_backup_rollback_drill_report_2026-06-06.md",
+      "size": 3939,
+      "sha256": "ad915add0dc8175f89ff7bf81c6bc5937e185ec975c83d6bd288df8b68043307"
+    },
+    {
+      "path": "09_dashboards/telegram_gateway_r9_incident_response_report_2026-06-06.md",
+      "size": 2757,
+      "sha256": "b237584a154b457bd3711ea3804a7a97ccdffca2bc6e617cb782eabd006d1510"
+    },
+    {
+      "path": "09_dashboards/telegram_gateway_restart_blocker_report_2026-06-08.md",
+      "size": 3392,
+      "sha256": "504ad6ebe6c67afb1a2c0f8f1e4f8ff497aaa0e810177c5ae520e4b0d3211a97"
+    },
+    {
+      "path": "09_dashboards/telegram_gateway_stable_baseline_2026-06-06.md",
+      "size": 3776,
+      "sha256": "c74f00666b437c4c4f88ec1ddadda1674999b677dc22a185b2802d0c9aea8d47"
+    },
+    {
+      "path": "09_dashboards/telegram_getme_via_transport_report_2026-05-29.md",
+      "size": 4288,
+      "sha256": "23ced47e62f23998a2b1f6d209e4182ecba55e44c4c8f54b1a7cd85504557ba8"
+    },
+    {
+      "path": "09_dashboards/telegram_hotkey_menu_t1_report_2026-06-06.md",
+      "size": 3375,
+      "sha256": "779cbc4f8d95dd2e4f65d50c8d50505b91e08ac6023f1aafef26ad32f3c462d8"
+    },
+    {
+      "path": "09_dashboards/telegram_lead_import_d3a_battle_audit_2026-06-06.md",
+      "size": 11232,
+      "sha256": "17bf11e1fa8e2cc93c35f75f90ca14fc069c36912ec07405a0e01998783de703"
+    },
+    {
+      "path": "09_dashboards/telegram_lead_import_d3b_approve_reject_build_report_2026-06-06.md",
+      "size": 7141,
+      "sha256": "260f2db4a87d7944f50d929fe5365332057883b5df83510d8038076ce0148006"
+    },
+    {
+      "path": "09_dashboards/telegram_lead_import_d3c_prepare_pending_card_build_report_2026-06-06.md",
+      "size": 5984,
+      "sha256": "f2025f2977e67766792c7ff0aaffe2473c0ad7eed1c28ea734eac546b2c29242"
+    },
+    {
+      "path": "09_dashboards/telegram_lead_import_d3_2_readonly_live_control_report_2026-06-06.md",
+      "size": 4775,
+      "sha256": "d7b42cdeb37c900b83da3dccdbe59f4ce15cf80a0a656ecd55d5f6ef11c55baa"
+    },
+    {
+      "path": "09_dashboards/telegram_lead_import_d3_3_approve_reject_live_control_report_2026-06-06.md",
+      "size": 5123,
+      "sha256": "a8b97086ed164e00b87ea00ed71eb3b72fe46469de2f458a8a6de13df0cf1b1b"
+    },
+    {
+      "path": "09_dashboards/telegram_lead_import_d3_command_contract_report_2026-06-06.md",
+      "size": 3639,
+      "sha256": "e5ef668173ffcdc60acbcf3a0ff286c9bdd0a3520800c6ad291bbddced710849"
+    },
+    {
+      "path": "09_dashboards/telegram_lead_import_r4_smoke_pack_report_2026-06-06.md",
+      "size": 4001,
+      "sha256": "d66601747cf05c0f23fcbe6bb8f4fafe941fbaab6c6d9dac1d62d98393921760"
+    },
+    {
+      "path": "09_dashboards/telegram_master_controller_emergency_live_fix_report_2026-05-27.md",
+      "size": 11094,
+      "sha256": "3bfacaccd9e35fb8d78f295b72cb7c6b20a4f4636d6d84338164eb39fb898540"
+    },
+    {
+      "path": "09_dashboards/telegram_master_controller_network_route_live_restore_report_2026-05-27.md",
+      "size": 12187,
+      "sha256": "510fa01c8e22eb13b3f21028bc4e871839cb6517d6a1cd41e06775718067f4fc"
+    },
+    {
+      "path": "09_dashboards/telegram_master_controller_ux_efficiency_upgrade_2026-06-10.md",
+      "size": 3792,
+      "sha256": "d5df36e1184aa7138ffb87b762e5b930f9dc8d2eac951f1da175f16bc88d19b7"
+    },
+    {
+      "path": "09_dashboards/telegram_menu_mini_audit_funnel_redesign_2026-06-09.md",
+      "size": 3918,
+      "sha256": "b36e6a2658329d8ca918dacc9b46d046dc95abb16ff75e8920b2824908dea8b7"
+    },
+    {
+      "path": "09_dashboards/telegram_money_machine_roadmap_lock_2026-06-07.md",
+      "size": 2524,
+      "sha256": "7a71539dc6b77279c07ba0d4c69fca2e4a47982a516e1d0922fc339de1448fb7"
+    },
+    {
+      "path": "09_dashboards/telegram_node_transport_fix_handoff_2026-05-29.md",
+      "size": 5666,
+      "sha256": "977a84f067ce7faeb798e7150b5749128195a2ad2bdcd751e82b6db539fb3af5"
+    },
+    {
+      "path": "09_dashboards/telegram_node_transport_probe_report_2026-05-29.md",
+      "size": 5075,
+      "sha256": "2b33aa5df976a570b949b60fd4ead592ae45dd76642f08d3735876fc984c55d7"
+    },
+    {
+      "path": "09_dashboards/telegram_ops_executor_t2_report_2026-06-06.md",
+      "size": 3700,
+      "sha256": "2abfcc3bcd5d1641664f315ea733fd3803444241a83e26ad326112be8801281c"
+    },
+    {
+      "path": "09_dashboards/telegram_route_probe_powershell_syntax_fix_report_2026-05-28.md",
+      "size": 3217,
+      "sha256": "1d6c8a162425d27e2eb02e46c6616f959208e062c01f1ae4b83753aadb27df7e"
+    },
+    {
+      "path": "09_dashboards/telegram_runtime_mail_env_restart_e1c2d_2026-06-07.md",
+      "size": 2465,
+      "sha256": "fdb396ec730afbb73441aa166699f05ba9e657eb21a8765fdbae9d85d7189800"
+    },
+    {
+      "path": "09_dashboards/telegram_runtime_mail_env_sync_e1c2d_2026-06-07.md",
+      "size": 2601,
+      "sha256": "66ac143609e1fba7bafd5bd4efa44aa944e9df808630579630b09401b0c956b4"
+    },
+    {
+      "path": "09_dashboards/telegram_ru_router_integration_HANDOFF_2026-05-31.md",
+      "size": 10074,
+      "sha256": "9fc9f416d2419dc98c490b3fe8421a332dd4fdbccbc2b7ec8c9006099dedf5b4"
+    },
+    {
+      "path": "09_dashboards/telegram_ru_router_integration_report_2026-05-31.md",
+      "size": 3417,
+      "sha256": "38fc1b21ec4c655fcf4e9e5e3985990966528c8bffa187f4d7d8bd0c34439caf"
+    },
+    {
+      "path": "09_dashboards/telegram_ru_router_standalone_report_2026-05-31.md",
+      "size": 3463,
+      "sha256": "b208fbe9b863b860a47c801c96341c4cab4c7351e64feb47becdc1172f0731ee"
+    },
+    {
+      "path": "09_dashboards/telegram_sales_audit_system_inventory_2026-06-08.md",
+      "size": 12234,
+      "sha256": "392f98777955cd11eec2863cbced713aa080a1e2950ddab5d994904633f161a3"
+    },
+    {
+      "path": "09_dashboards/telegram_sales_blocks_1_10_status_2026-06-08.md",
+      "size": 5303,
+      "sha256": "254b8db019026762ec82100ce7d313bb720a506c8c8fb7e5cded1e29a0433766"
+    },
+    {
+      "path": "09_dashboards/telegram_sales_blocks_1_13_status_2026-06-09.md",
+      "size": 6443,
+      "sha256": "e6b58a10b8b4db5c2d28e7eafa38a0cebe38d98cf7ff818a5d76f45411489159"
+    },
+    {
+      "path": "09_dashboards/telegram_sales_ops_phase2_commands_report_2026-05-30.md",
+      "size": 4136,
+      "sha256": "d5b333646ddd5ba37bb11ce6fcb78d0786babb2632d9e683b37fa7306073c251"
+    },
+    {
+      "path": "09_dashboards/telegram_sales_today_path_fix_report_2026-05-30.md",
+      "size": 4598,
+      "sha256": "e7d17aa0a72f88425420789fd25f962f74190be96ff83cbfbde08505b35f3a30"
+    },
+    {
+      "path": "09_dashboards/telegram_sales_v1_final_block_report_2026-06-08.md",
+      "size": 4175,
+      "sha256": "b4f1ff7aedafc81060c3078be4c79929ae512932978076144ae4970f1d7acb50"
+    },
+    {
+      "path": "09_dashboards/telegram_sales_v1_live_acceptance_2026-06-08.md",
+      "size": 2475,
+      "sha256": "c041e88e131ccaaa8444eb321ca60c149af0a01091518a8a8752da6a42606cc0"
+    },
+    {
+      "path": "09_dashboards/telegram_sales_v1_ordered_release_final_report_2026-06-08.md",
+      "size": 6405,
+      "sha256": "c67ae310a9c633cdf2d9d8f5e6e98a8d72a928f5d4448227cb8052436da9e162"
+    },
+    {
+      "path": "09_dashboards/telegram_sales_v1_ordered_release_report_2026-06-08.md",
+      "size": 5339,
+      "sha256": "fe409af0a9c64c000ab070ab388a9ab2fa8e926bc404fe33dedcaf39d23be434"
+    },
+    {
+      "path": "09_dashboards/telegram_sales_v1_verification_and_restart_report_2026-06-08.md",
+      "size": 4868,
+      "sha256": "89a4917063ce61dc3d25b0d5ab4adbf422aa8fd3126c33178929309101ee88fb"
+    },
+    {
+      "path": "09_dashboards/telegram_sendmessage_400_fix_report_2026-05-30.md",
+      "size": 4398,
+      "sha256": "7d15cbadd47d37188396b4caf1151b09c68355bcc4720501e5ac156d2b9afba7"
+    },
+    {
+      "path": "09_dashboards/telegram_staged_live_restart_report_2026-05-29.md",
+      "size": 4233,
+      "sha256": "39c4460f454fc6b05d513bf60e7a9ecdece6eb9678f93717e08eeacc3803c0fb"
+    },
+    {
+      "path": "09_dashboards/telegram_text_voice_intent_router_t1b_report_2026-06-06.md",
+      "size": 6071,
+      "sha256": "f4e37ce8393a37a26ecb5111b1ac8850f5e7efe14a3391841893da27b6ba7304"
+    },
+    {
+      "path": "09_dashboards/telegram_today_button_routing_fix_2026-06-10.md",
+      "size": 7434,
+      "sha256": "942fca9d88fdacc827f5e5d59f6c8884babed5aee77b01d91c6f970b58dc9d30"
+    },
+    {
+      "path": "09_dashboards/telegram_today_button_routing_fix_live_restart_report_2026-06-10.md",
+      "size": 2763,
+      "sha256": "cb8224f720321ec57145de34db98ca88eeac3fe1050f6f35d5f26516663f0f18"
+    },
+    {
+      "path": "09_dashboards/telegram_today_button_routing_fix_verification_2026-06-10.md",
+      "size": 2824,
+      "sha256": "21cfe726ff96cfcc92fbb7389ff771e49d33269be28dc9e2ecfdb1caaade3666"
+    },
+    {
+      "path": "09_dashboards/telegram_universal_russian_command_router_HANDOFF_2026-05-31.md",
+      "size": 8966,
+      "sha256": "07e43345ce2ba9ce5d10c80ab0a70657e06854ab33c8640f494ef5218481ae88"
+    },
+    {
+      "path": "09_dashboards/telegram_ux_v2_block5_report_2026-06-08.md",
+      "size": 2519,
+      "sha256": "1a4e5ad9911c884a0cdb92964244d37b4e3d0f519224a70555a303382c5afa4a"
+    },
+    {
+      "path": "09_dashboards/telegram_v1_mini_audit_system_report_2026-06-06.md",
+      "size": 7586,
+      "sha256": "39c5694c83063f8193365e1aa7f4bb207e45ae5639a5b2e81389abd443c57b04"
+    },
+    {
+      "path": "09_dashboards/telegram_yandex_alias_live_smoke_e1c2c_2026-06-07.md",
+      "size": 3086,
+      "sha256": "6e4970d128f8b081ac9ec033e0f5f2f255ea1325c3efd9fd41c85c17e4cf9572"
+    },
+    {
+      "path": "09_dashboards/telegram_yandex_env_alias_e1c2c_report_2026-06-07.md",
+      "size": 4238,
+      "sha256": "5266910b501e58a2244e548bff460bd809a4b95e8ec29375276222d09b82fb4d"
+    },
+    {
+      "path": "09_dashboards/templates_dashboard.md",
+      "size": 767,
+      "sha256": "9a3ab4e48d938d22c5004822a7002c3ef02f455264e5d0e886ffdf1a16dc00e4"
+    },
+    {
+      "path": "09_dashboards/today_dashboard.bak_2026-06-02_19-06-00.md",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "09_dashboards/today_dashboard.md",
+      "size": 2756,
+      "sha256": "8feabebc515c91bd15c7c32c12aea0a4671d04a12230ed821a228494b2a5611c"
+    },
+    {
+      "path": "09_dashboards/tool_registry.md",
+      "size": 1129,
+      "sha256": "0cd90e25bf4417c53f123ed81b2d942303238ee58617eca55afdcca8a965d104"
+    },
+    {
+      "path": "09_dashboards/twogis_api_connector_first_live_acceptance_2026-06-10.md",
+      "size": 4334,
+      "sha256": "faf9bb920fe57e40120171f6df5ea4bc53d9b516ea43dd829c38d761c55410af"
+    },
+    {
+      "path": "09_dashboards/twogis_api_connector_live_blocker_missing_key_2026-06-10.md",
+      "size": 3009,
+      "sha256": "bf667a278a41345bbdb9d8a7e2e3781449c1d6b68ca8ad3f8e63548caf06bf8b"
+    },
+    {
+      "path": "09_dashboards/twogis_api_connector_offline_scaffold_report_2026-06-10.md",
+      "size": 3043,
+      "sha256": "e27886fe5358946c77634924681b01bb7be881062b245f18645adbe737cf34c0"
+    },
+    {
+      "path": "09_dashboards/universal_lead_contact_registry_c25b_HANDOFF_2026-05-31.md",
+      "size": 5224,
+      "sha256": "1ae7f00a1c23143f693efe8613a10197f95e72de15524e6ed511616847bfbc4f"
+    },
+    {
+      "path": "09_dashboards/universal_lead_contact_registry_c25_final_report_2026-05-31.md",
+      "size": 4031,
+      "sha256": "3c95ecf2d4872b6e23abdbf169ca2844a742dcb4785011fb16f87f7981b6d36a"
+    },
+    {
+      "path": "09_dashboards/universal_lead_contact_registry_c25_HANDOFF_2026-05-31.md",
+      "size": 5726,
+      "sha256": "cdd1d42744163f039cf4e95be49a7c96e07757274d04246624e9a88b8cb9d7fd"
+    },
+    {
+      "path": "09_dashboards/v0.4.0-rc1_POST_RELEASE_ACCEPTANCE_ADDENDUM_2026-06-17.md",
+      "size": 4877,
+      "sha256": "16e3d196cecb3690f2c7bd5051e78974bfa2da1d17938a76196abd8ca6af795c"
+    },
+    {
+      "path": "09_dashboards/vision_to_reality_live_restart_report_2026-06-10.md",
+      "size": 5392,
+      "sha256": "5dc1ccd5a27f177caaed92f416bb2c8fc78df1a6530add32b351d9927820a888"
+    },
+    {
+      "path": "09_dashboards/vision_to_reality_pdf_chain_acceptance_run_sheet_2026-06-10.md",
+      "size": 6664,
+      "sha256": "885360c51a5d704dce64e9a4ace133999f0a864c76df68696dfa37109da86672"
+    },
+    {
+      "path": "09_dashboards/visual_dashboard_active_action_board_report_2026-05-26.md",
+      "size": 8801,
+      "sha256": "d2b080f3465334475f617e217d8c55abc041269f1b78b8eecc4850b031b80540"
+    },
+    {
+      "path": "09_dashboards/visual_dashboard_active_leads_render_fix_report_2026-05-26.md",
+      "size": 7440,
+      "sha256": "60659ffed1e59d6e9daba276e5618003dea65d9a385226e145ad111aa03ad57e"
+    },
+    {
+      "path": "09_dashboards/visual_dashboard_autostart_setup_report_2026-05-26.md",
+      "size": 4082,
+      "sha256": "51744c0471f46c85733f7fb6fc4073264c7664bc44896e1fc1f2aa7ca78cb86c"
+    },
+    {
+      "path": "09_dashboards/visual_dashboard_command_guidance_report_2026-05-26.md",
+      "size": 8692,
+      "sha256": "41dfa08829e684da26448431752efbf8ff78747903e9b5a57c1c242223bd9c44"
+    },
+    {
+      "path": "09_dashboards/visual_dashboard_glossary_ru.md",
+      "size": 6501,
+      "sha256": "ea04c7a4f0c2c2a480f24f9d81bab06d0197d3dbd875d705e45916da222af41c"
+    },
+    {
+      "path": "09_dashboards/visual_dashboard_launcher_fix_report_2026-05-26.md",
+      "size": 8271,
+      "sha256": "2ba6a61eef17730140ea67049001a78c3f39b76b682751e3dce4671873e240bf"
+    },
+    {
+      "path": "09_dashboards/visual_dashboard_localhost_fix_report_2026-05-26.md",
+      "size": 5370,
+      "sha256": "7a2b96a6cfde2da5ba096f81b7c21455bdd9be47234311efac339159ec31609d"
+    },
+    {
+      "path": "09_dashboards/visual_dashboard_server_emergency_fix_report_2026-05-26.md",
+      "size": 5505,
+      "sha256": "19a12b7dd10d62a55232ca2e2f3e106048468105099b700ff1537d0b57e4a5ad"
+    },
+    {
+      "path": "09_dashboards/visual_master_dashboard_battle_ready_a_source_audit_2026-05-31.md",
+      "size": 14841,
+      "sha256": "9454b5a29d97fb60fe9d10a8c33ceb772c1f286cacc45810820f7119eaaad0d3"
+    },
+    {
+      "path": "09_dashboards/visual_master_dashboard_battle_ready_b_data_bound_state_report_2026-05-31.md",
+      "size": 4371,
+      "sha256": "074ea03736afa76c67aa1794bdeb510380e3bbbf83109e0fe74ef318d9817f81"
+    },
+    {
+      "path": "09_dashboards/visual_master_dashboard_battle_ready_c_operational_ui_report_2026-05-31.md",
+      "size": 3553,
+      "sha256": "d55667fb9cce0025988b6d820bf4921a8be090f6d17cd0a770abb59ad7f8817a"
+    },
+    {
+      "path": "09_dashboards/visual_master_dashboard_battle_ready_d_HANDOFF_2026-05-31.md",
+      "size": 6454,
+      "sha256": "089124cbe33795674771bcd52824d1078de8a2d2e5b2e217dc27c15ca40af50f"
+    },
+    {
+      "path": "09_dashboards/visual_master_dashboard_battle_ready_d_launcher_freshness_report_2026-05-31.md",
+      "size": 4180,
+      "sha256": "5d81084af0a3d39fa859d84567d3f48b8c9896e88baffb78cb78dcb55b6ee4e5"
+    },
+    {
+      "path": "09_dashboards/visual_master_dashboard_e0_lead_source_binding_HANDOFF_2026-05-31.md",
+      "size": 7394,
+      "sha256": "328f96fc746f3176cbd592eed03dec3ddd12f17ebba7ba4845aedd24da9a0eea"
+    },
+    {
+      "path": "09_dashboards/visual_master_dashboard_f1_minimal_binding_patch_report_2026-05-31.md",
+      "size": 3202,
+      "sha256": "82f9ca9769ea58bacc3c2c7557b89a0de941785b8f5645a11195dff91d1ed804"
+    },
+    {
+      "path": "09_dashboards/visual_master_dashboard_f1_real_lead_binding_fix_HANDOFF_2026-05-31.md",
+      "size": 5879,
+      "sha256": "65cca369bf6edc74da9e75709e9743f8ea7d8f3a444449fce550f2e267338034"
+    },
+    {
+      "path": "09_dashboards/visual_master_dashboard_f1_real_lead_binding_fix_report_2026-05-31.md",
+      "size": 6045,
+      "sha256": "833c1dae23d79e29794ef67ad5fc7fcc6b09cc7be6a06e93be03bd3a8dc85b35"
+    },
+    {
+      "path": "09_dashboards/visual_master_dashboard_reconciliation_report_2026-05-26.md",
+      "size": 6712,
+      "sha256": "ed5c00e300c06a4f97f349ff7208b50f0caf1df1f933cceca29efd7bd7c142a2"
+    },
+    {
+      "path": "09_dashboards/visual_master_dashboard_v3_ru_report_2026-05-26.md",
+      "size": 7395,
+      "sha256": "4532ae9b01c753ade471dfa72fd0524c74d3a7d26189b472bd839b3be81fda64"
+    },
+    {
+      "path": "09_dashboards/vps_deploy_freeze_header_report_2026-05-25.md",
+      "size": 5231,
+      "sha256": "14a1a43dafc85e410c3e76eff250cfb37d435654356c4571d2b06b4261c66fdd"
+    },
+    {
+      "path": "09_dashboards/vps_deploy_header_standardization_report_2026-05-25.md",
+      "size": 7051,
+      "sha256": "c5608e9a401d0a51563197aed7fd95af5bfefb3e6c24cb3b110f8f7f4e2b37dd"
+    },
+    {
+      "path": "09_dashboards/workspace_inventory_2026-05-15_0016.md",
+      "size": 3525,
+      "sha256": "05980de9342de948f131206d2bb90a0ff369ba57472265a407ef3307dd8a71eb"
+    },
+    {
+      "path": "09_dashboards/workspace_map.md",
+      "size": 3044,
+      "sha256": "6b5dd793705e18a65d6409b52d4d048daab9ce143d6529144fc569b8e657924f"
+    },
+    {
+      "path": "09_dashboards/yandex_mail_hardening_verification_report_2026-05-26.md",
+      "size": 7707,
+      "sha256": "568ac9eec0caef88747ac15fd5c77586b7ce6c4e672b292118878a082b283f0f"
+    },
+    {
+      "path": "09_dashboards/yandex_mail_sent_copy_hardening_report_2026-05-26.md",
+      "size": 10225,
+      "sha256": "fe6d3b4cc7bd35373b2600ecce332fc9ad9a53d00c0732a8c72f5b514aba5dfd"
+    },
+    {
+      "path": "04_cline/CLINE_OPERATING_LAYER_INDEX.md",
+      "size": 2295,
+      "sha256": "a64361871d5be3305340066e58da9ad0c148853ae05a56d94c344592a2d1238d"
+    },
+    {
+      "path": "04_agents/account_brief_agent.md",
+      "size": 330,
+      "sha256": "cd2616615ff4a2eaf357b379f8d2443179cd1d64e2a4890e0a15383942d77894"
+    },
+    {
+      "path": "04_agents/action_executor_agent.md",
+      "size": 2616,
+      "sha256": "68b50a571c7c3459c79c22d7896b27c59c70fc0517b066547fa78abe769c8976"
+    },
+    {
+      "path": "04_agents/agent_registry.md",
+      "size": 3239,
+      "sha256": "c6d98d2deeac1e0904f3a62f076c208b1aec4e955bc3ec881ffbe831f595b68b"
+    },
+    {
+      "path": "04_agents/approval_gatekeeper_agent.md",
+      "size": 573,
+      "sha256": "d7ff356c4679096805e16a62123142255435b653c9fef276d1d0cb0dbc9ff2df"
+    },
+    {
+      "path": "04_agents/approval_gate_agent.md",
+      "size": 2265,
+      "sha256": "9bf8d60673d8698cfc8cfcacd22b6eec38027f9f357e448e7d00bfc684462db8"
+    },
+    {
+      "path": "04_agents/audit_orchestrator_agent.md",
+      "size": 2110,
+      "sha256": "c7d00f1aebafd84b25d409da8b712694b46a71530fa7d8dd5eb1b093b0de1517"
+    },
+    {
+      "path": "04_agents/audit_qa_red_team_agent.md",
+      "size": 1849,
+      "sha256": "865dfa9cbae8553f00450c9b77d92a80fdd0b784f78b74b1a69e50d49068a29d"
+    },
+    {
+      "path": "04_agents/browser_sweep_agent.md",
+      "size": 1881,
+      "sha256": "0aa939bd5691faa3520633a12891a59a1002d10444cf89b8c68eea52914c2720"
+    },
+    {
+      "path": "04_agents/client_delivery_packager_agent.md",
+      "size": 1373,
+      "sha256": "8b8e0c8ed14df519ec8b3bae2e3749335b947e1673226cc159c522a956f18c24"
+    },
+    {
+      "path": "04_agents/client_reply_monitor_agent.md",
+      "size": 1289,
+      "sha256": "43759dfa0dcae518c5cf266488c768d60d44a5875ca977d0acdd8ff6f5c47e63"
+    },
+    {
+      "path": "04_agents/cline_task_writer_skill.md",
+      "size": 1725,
+      "sha256": "823ed8c472de72c7e7a93bd978655561363e166351c6bdb64e3c4f88d07d0cd6"
+    },
+    {
+      "path": "04_agents/communication_monitor_agent.md",
+      "size": 3937,
+      "sha256": "9e5c2bd4f3dd264cd7f7db55a6a08a89cda32d6c1e4dbbc44fb7100524886c74"
+    },
+    {
+      "path": "04_agents/contact_enrichment_agent.md",
+      "size": 2106,
+      "sha256": "b36b362211c6378622da463195c8a9254022686e2fa0126289fb070a87146038"
+    },
+    {
+      "path": "04_agents/contact_resolver_agent.md",
+      "size": 2196,
+      "sha256": "5b3bdeffaca2af56a95bbd0cf010b15a54c29260506a28ce944de5f75b68e0e6"
+    },
+    {
+      "path": "04_agents/context_distiller_skill.md",
+      "size": 1482,
+      "sha256": "90bff5dd6708d7024f5a05f98619a18565dbfc65f5e1b0f2c69fe2c0e785f2ee"
+    },
+    {
+      "path": "04_agents/dashboard_controller_agent.md",
+      "size": 1615,
+      "sha256": "2414e39d7dacdb458ca37f0127ce0068cd33df65d3b06cdd41860279bd845aaa"
+    },
+    {
+      "path": "04_agents/dashboard_maintainer_skill.md",
+      "size": 1531,
+      "sha256": "d881a2d4ea468a02db9b7b8f230e48fb574f35a09e8a3fb087dfa0ec93e6157e"
+    },
+    {
+      "path": "04_agents/evidence_collector_agent.md",
+      "size": 1696,
+      "sha256": "c89c78304e10d30716f98a5b57c7e35ceb96165071f44e1eadb4775ba7af8301"
+    },
+    {
+      "path": "04_agents/executive_report_editor_agent.md",
+      "size": 1987,
+      "sha256": "599dd8683ace602fccea71f2e863188aaa21d67d98d2b97e1248918fbb1b79b5"
+    },
+    {
+      "path": "04_agents/express_review_agent.md",
+      "size": 247,
+      "sha256": "19dd092dcfbe45e08743222ae157909812628016ef5f3656b8eaab6838b00272"
+    },
+    {
+      "path": "04_agents/file_vault_librarian_skill.md",
+      "size": 1994,
+      "sha256": "8baa353d21d373f332765000153f98ea99e0b58a631b4431c3ab3190dae51668"
+    },
+    {
+      "path": "04_agents/findings_register_builder_agent.md",
+      "size": 1838,
+      "sha256": "48705dc4b88177124fc55a0107f5c31917aba320679c367dcb77c31bacee2b4c"
+    },
+    {
+      "path": "04_agents/first_message_agent.md",
+      "size": 390,
+      "sha256": "1411e0f83387c8094694489b04b8c309bd73f7b4d1e748a075f4ead51a451a8f"
+    },
+    {
+      "path": "04_agents/follow_up_agent.md",
+      "size": 353,
+      "sha256": "fc1d31e18837937e1792c9a89da9b9c788c703979f3883c305ce361758885fa7"
+    },
+    {
+      "path": "04_agents/implementation_sprint_planner_agent.md",
+      "size": 1979,
+      "sha256": "732aacb9f3173bd603d774f4000699da77e24a9310782097105fe26f3c5ff322"
+    },
+    {
+      "path": "04_agents/lead_dedupe_agent.md",
+      "size": 2864,
+      "sha256": "6b36bc090ccc69c3aef93363f62a8e25c4772e127095e4b42a2d9256a258457c"
+    },
+    {
+      "path": "04_agents/lead_intake_agent.md",
+      "size": 58588,
+      "sha256": "c29c57fbb218b8e1b4f903fb1f62c4eec65bb360ee3fafe56414cc96e1595ef5"
+    },
+    {
+      "path": "04_agents/lead_orchestrator_agent.md",
+      "size": 503,
+      "sha256": "93efb6083145cc6824de8b6b00bdd6b43ad7d4641897ba708e9a2f9595ffb82d"
+    },
+    {
+      "path": "04_agents/lead_research_agent.md",
+      "size": 390,
+      "sha256": "f793939ba74be17c46e8ac8151600eef6e179b3706c8941e9ca55512fccb2075"
+    },
+    {
+      "path": "04_agents/lead_scoring_agent.md",
+      "size": 2041,
+      "sha256": "ff7bdf723e7c72a160cddb878f30d3844817c8268feeefc9ec20c86bd1895063"
+    },
+    {
+      "path": "04_agents/master_controller_agent.md",
+      "size": 1357,
+      "sha256": "ec42f1197cfdfeea839c965b1221e8849a065731672a4350af0493bbbf4a8ff2"
+    },
+    {
+      "path": "04_agents/mini_audit_operator_skill.md",
+      "size": 1141,
+      "sha256": "8aca1ecb11356f7fe508cdadf2c4aea19f179b38144c39bb615778b7b489bf7d"
+    },
+    {
+      "path": "04_agents/mini_audit_sales_agent.md",
+      "size": 9003,
+      "sha256": "a29c53568336a5f33f19a65af61b4ccb59d132bf23efc71d7b76564fc41ea91b"
+    },
+    {
+      "path": "04_agents/mini_audit_scope_controller_agent.md",
+      "size": 2220,
+      "sha256": "763eaf651cdf03d9954e8ba8b97613366d533199c4082e3acbf972e1f08d83aa"
+    },
+    {
+      "path": "04_agents/obsidian_operator_skill.md",
+      "size": 1612,
+      "sha256": "2e497506f1eee84670b15f8de257616b7a653681877f6cda6cf07e68462d396e"
+    },
+    {
+      "path": "04_agents/omission_prevention_reviewer_agent.md",
+      "size": 1949,
+      "sha256": "628572d255b6c87e559e9005922c7d509567d1a79a76858c306c47883543d9c9"
+    },
+    {
+      "path": "04_agents/outreach_compliance_reviewer_agent.md",
+      "size": 377,
+      "sha256": "0472f313d1f1c5763472b5236afa66363c4b8209213495e4dea3f2412e32484e"
+    },
+    {
+      "path": "04_agents/outreach_draft_agent.md",
+      "size": 2211,
+      "sha256": "020326c981d7220813268ba9f7019ca7b28337bf3e3052839ec5ca7cab362c15"
+    },
+    {
+      "path": "04_agents/payment_receipt_controller_agent.md",
+      "size": 670,
+      "sha256": "8ad4ae1d2d7682d42fe505d9f67e79cec523feadcbd81d35a031618d5a765e03"
+    },
+    {
+      "path": "04_agents/pdf_packaging_agent.md",
+      "size": 1589,
+      "sha256": "91dc0521af41e295dc08f4dd492c64870c7ae387c799105762b706f77f2ff54c"
+    },
+    {
+      "path": "04_agents/personal_broker_research_agent.md",
+      "size": 2479,
+      "sha256": "f53dd965a1fbb3d1a035fb3c804b4b0706e3133194e8c7662628516cbf99778c"
+    },
+    {
+      "path": "04_agents/personal_document_librarian_agent.md",
+      "size": 2397,
+      "sha256": "8191d391f2b084ea358b8fe0d1bff32071b0a09b04858d346bb50833abb1708d"
+    },
+    {
+      "path": "04_agents/personal_economist_agent.md",
+      "size": 2494,
+      "sha256": "787d2544e0928558a883a47886ece01a3e258fc03cdf21f7299752dc195dc325"
+    },
+    {
+      "path": "04_agents/personal_health_organizer_agent.md",
+      "size": 2342,
+      "sha256": "f764ab3987ac3899ec4eeec9c9dccd44405e9de1e21ce07d84d40a3c5c57591b"
+    },
+    {
+      "path": "04_agents/personal_legal_draft_agent.md",
+      "size": 2459,
+      "sha256": "00b5e3e5d4059d31d4cce4db8bdf48072c134e3939ca042031ede57385edab8f"
+    },
+    {
+      "path": "04_agents/pricing_scope_controller_agent.md",
+      "size": 1857,
+      "sha256": "d92cfba5f969c8b843e1ad84133914f94d01471fa8eb1a6222c441d670dda672"
+    },
+    {
+      "path": "04_agents/qa_red_team_agent.md",
+      "size": 2362,
+      "sha256": "d1ef3dd2619825c2fcfb4906a5919b58b52bbec5b8e207cf7482281ec6b83d1a"
+    },
+    {
+      "path": "04_agents/qa_safety_reviewer_skill.md",
+      "size": 1473,
+      "sha256": "005046e92488391400234636b7a748e46705dc1e06e65030246338c4a2791764"
+    },
+    {
+      "path": "04_agents/reply_draft_agent.md",
+      "size": 3263,
+      "sha256": "debd2247822d16abf4af85cc24759458be1e23d4012892ac8813d9a10659b73f"
+    },
+    {
+      "path": "04_agents/revenue_os_update_agent.md",
+      "size": 213,
+      "sha256": "909984703b4d9fe67440a0ee942bec2de539b01d850878937027a68ddbb09a2e"
+    },
+    {
+      "path": "04_agents/task_classifier_agent.md",
+      "size": 571,
+      "sha256": "a339bb604203dc81f05b3c254b520602872fbd988e5a022347afd1e1e213376f"
+    },
+    {
+      "path": "04_agents/telegram_gateway_agent.md",
+      "size": 937,
+      "sha256": "cb2e21efbf76dd966a2336bd67a8e905e1b1daebe0fb0cb32d285e648d3dafa2"
+    },
+    {
+      "path": "04_agents/yandex_mail_monitor_agent.md",
+      "size": 6412,
+      "sha256": "5cf565d96e9d032da6e0a6a9bcd3e4ab2e11364753626c43d7c42f03765e3632"
+    },
+    {
+      "path": "03_sop/action_executor_sop.md",
+      "size": 4572,
+      "sha256": "53fac28d0e4fdb8faa22a7b123743c23769468d334d108198bc6c0cd03f12cf4"
+    },
+    {
+      "path": "03_sop/agent_skill_improvement_workflow.md",
+      "size": 3926,
+      "sha256": "0b9fff8d429793782cb8999b5f6cc10eb5a9e69f64508cc1818d6f27f2b558a3"
+    },
+    {
+      "path": "03_sop/AI_ARCHITECTURE_EXECUTION_ROADMAP_FROM_CHATGPT_EXPORT_2026-05-28.md",
+      "size": 2548,
+      "sha256": "b9ba4ae7e3ba825f419e08ebcf974efc893b4f104c03164ea25f2f686eba0292"
+    },
+    {
+      "path": "03_sop/approval_queue_sop.md",
+      "size": 4598,
+      "sha256": "0821d060c1b506c1d0a2770996aa914604580063d84f3c0e7064c48e5daeecf0"
+    },
+    {
+      "path": "03_sop/audit_agent_handoff_protocol.md",
+      "size": 1965,
+      "sha256": "8aa317982136d3f22934466b21ad4f4d908aa05abd6dac0b12b434697182174d"
+    },
+    {
+      "path": "03_sop/audit_conflict_resolution_sop.md",
+      "size": 15843,
+      "sha256": "cf5e3d3cce55d15e1c2d9a73084c5b238a3fe596cbcd8f892f809b981cfcf40a"
+    },
+    {
+      "path": "03_sop/audit_omission_prevention_sop.md",
+      "size": 10419,
+      "sha256": "b1fa0ce1958396806af3f7cd64d2962aad75c268b3a4d4e602f43d97efb47d9e"
+    },
+    {
+      "path": "03_sop/b2b_followup_cadence_sop.bak_2026-05-26.md",
+      "size": 7655,
+      "sha256": "96de150edaded5162698ef8bf49da8be0adec53f0f8b153e45e41188bff07cc1"
+    },
+    {
+      "path": "03_sop/b2b_followup_cadence_sop.md",
+      "size": 7655,
+      "sha256": "96de150edaded5162698ef8bf49da8be0adec53f0f8b153e45e41188bff07cc1"
+    },
+    {
+      "path": "03_sop/b2b_site_audit_phased_sop.md",
+      "size": 18064,
+      "sha256": "6995a9b1b3c403b0110a37d8585fbe33743f30f2f3c761ee74ecfbbd5f1a2d1a"
+    },
+    {
+      "path": "03_sop/chatgpt_official_export_import_sop.md",
+      "size": 8081,
+      "sha256": "43691d40451ac0c9ae3845a8c039b5e530a1f1df58b4b13b8cb3dfe4cee66881"
+    },
+    {
+      "path": "03_sop/client_delivery_packaging_sop.md",
+      "size": 1604,
+      "sha256": "847d00ae6ad38d36cf4c81b91fad41ef0e33ce4d752589b0a40de3426a1424b3"
+    },
+    {
+      "path": "03_sop/client_reply_approval_sop.md",
+      "size": 4518,
+      "sha256": "852f95f4c9803d26941bdcf9d026e64be55c807fef0d5f03fd1637cd247a9543"
+    },
+    {
+      "path": "03_sop/client_reply_monitoring_sop.md",
+      "size": 4326,
+      "sha256": "3a9f4601d18e6dc7584d2442713a419c0be4b1660ccdd78e0507ba75a9ae3b65"
+    },
+    {
+      "path": "03_sop/client_reply_monitor_sop.md",
+      "size": 11368,
+      "sha256": "4ba72b80cc2bca56355d1d2151c33e948b8522e267405c6213d693824ab726a1"
+    },
+    {
+      "path": "03_sop/cline_obsidian_context_protocol.md",
+      "size": 3547,
+      "sha256": "383a49570c3e288f830bb6cec86e8e7337fba145c57e582b748061808dd1a9b6"
+    },
+    {
+      "path": "03_sop/cline_task_completion_guard_skill.md",
+      "size": 4257,
+      "sha256": "3a7be15916cab4e27adf6a3869049bf439862ce95f711061de721b79187c0d03"
+    },
+    {
+      "path": "03_sop/cloud_to_cline_task_handoff_sop.md",
+      "size": 2795,
+      "sha256": "3636f361611b5cc94a2e97c7f418bb0d905aced53d34a8fb946c9b3017102d2a"
+    },
+    {
+      "path": "03_sop/contact_resolution_sop.md",
+      "size": 6476,
+      "sha256": "06f54c288fe6e08e556bfbd8ca8feedfac742efaba5b6f26837d0f273e9875b8"
+    },
+    {
+      "path": "03_sop/daily100_lead_import_report_contract.md",
+      "size": 5014,
+      "sha256": "c7fd47de380c55d75f67dd252066964e2af4eacda277d729cf591fce0ce3d0c2"
+    },
+    {
+      "path": "03_sop/daily_lead_factory_100_leads_per_day_sop.md",
+      "size": 4918,
+      "sha256": "707e7000a95865bfa595f7ae002398de313375fb6c8e50a02f4eadb54eb486c2"
+    },
+    {
+      "path": "03_sop/dashboard_auto_refresh_sop.md",
+      "size": 1599,
+      "sha256": "eb81f7d4ba2552a2debb16acc9de04b52459d2b48e2378a0a72f30e61afeeda5"
+    },
+    {
+      "path": "03_sop/dashboard_update_sop.md",
+      "size": 1468,
+      "sha256": "19ceb2b4aa373aea8650de6429d05497af13848a84a261eaa0f337a42dd54952"
+    },
+    {
+      "path": "03_sop/data_state_sync_sop.md",
+      "size": 3474,
+      "sha256": "f08d8879c0b517a6d092aa1924b035220f0d31318cc3c5260194f0d368b45915"
+    },
+    {
+      "path": "03_sop/email_first_source_v2_rules.md",
+      "size": 1699,
+      "sha256": "b979f7250e61783e77ef597b93e76ad7d8a1a378ee5bbb505b3d0b39de982118"
+    },
+    {
+      "path": "03_sop/email_telegram_monitoring_sop.md",
+      "size": 4990,
+      "sha256": "0808c62e6817216eaaa254d1dcfd6b264f568025f5130b5c7c5de6ef6bebdb21"
+    },
+    {
+      "path": "03_sop/first_work_cycle.md",
+      "size": 2823,
+      "sha256": "aa18274d242653e5e93bf62c4da5076ec2d58b9bafacb63fae6b64d09efa9a71"
+    },
+    {
+      "path": "03_sop/index_refresh_protocol.md",
+      "size": 1582,
+      "sha256": "877328cea7f92c9fbe2189a49920672dde8e95e93fac405ef67cbc0e2da53a44"
+    },
+    {
+      "path": "03_sop/lead_data_backup_rollback_sop.md",
+      "size": 12288,
+      "sha256": "fa09ea4d39896e805410c95e77300ff513e1fe499fa56bb39014a993250bcd17"
+    },
+    {
+      "path": "03_sop/lead_generation_pipeline_sop.md",
+      "size": 2769,
+      "sha256": "74a90a02354a214044563a7373665788366d1c573c53fef27b5bfe0f835e897f"
+    },
+    {
+      "path": "03_sop/lead_import_approval_prepare_card_real_d2j_sop.md",
+      "size": 2746,
+      "sha256": "a05aa19af79de56fed7c2c52b102744c7cb0100dfc598ab4f0cbefda113b2785"
+    },
+    {
+      "path": "03_sop/lead_import_approval_queue_init_real_d2i_sop.md",
+      "size": 3735,
+      "sha256": "3aa22b0f76db9d35a4909eead441fa19de697cab44838d989b2893ad0fc954c8"
+    },
+    {
+      "path": "03_sop/lead_import_approval_queue_write_d2f_sop.md",
+      "size": 4100,
+      "sha256": "b60e4aadadefe6060deda588938fc12682e325f48fc0be175eaef9380d918927"
+    },
+    {
+      "path": "03_sop/lead_import_approval_queue_write_real_d2g_sop.md",
+      "size": 5531,
+      "sha256": "27d4611f073e190459f42481ae6c2abbbccd91718c3c0629e3e5303ab5a79f8a"
+    },
+    {
+      "path": "03_sop/lead_import_approval_review_d2d_bot_command_plan.md",
+      "size": 18132,
+      "sha256": "f71610a63cbeeebff2a7b9bd91387a8b605038e23ff9c28a8f4efbef405e287e"
+    },
+    {
+      "path": "03_sop/lead_import_approval_review_d2d_bot_glue_sop.md",
+      "size": 3845,
+      "sha256": "f1b0a9a7085e8660cd7b4a0e41a045f88e96996c1e37b075f4b71a92f4f18132"
+    },
+    {
+      "path": "03_sop/lead_import_approval_review_d2d_sop.md",
+      "size": 6573,
+      "sha256": "d50d071016e6a568c5238bf8ff766a680baa968a91f7aeb47245e67f1a2b7d05"
+    },
+    {
+      "path": "03_sop/lead_import_committed_importer_real_d2n_sop.md",
+      "size": 2524,
+      "sha256": "3d42a30e9cdba78c360b2d71d24640e03e8aedcfb29196e95428b3377ca6d1f6"
+    },
+    {
+      "path": "03_sop/lead_import_commit_recorder_real_d2n_phase2_partB_sop.md",
+      "size": 3298,
+      "sha256": "5282c5520b11bc3727ec7e6d36f24d9d717330ffda63fdddf2eccf9dc3103550"
+    },
+    {
+      "path": "03_sop/lead_import_qa_gate_sop.md",
+      "size": 12008,
+      "sha256": "e97f239972c70e2f3ec3fd738f93f58aa2a97decdf215d768828feb5bdeab13a"
+    },
+    {
+      "path": "03_sop/lead_intake_bot_adapter_d1e0_sop.md",
+      "size": 5180,
+      "sha256": "ad8fd8f3da657d4b8e7bf617948938d0d20579183f958327a2b16529e019d58b"
+    },
+    {
+      "path": "03_sop/lead_intake_commands_d1b_sop.md",
+      "size": 4221,
+      "sha256": "3bde2a026bbfcedb774c7836164c6ae7b8ab032080dea2fb32e01b0dda426f16"
+    },
+    {
+      "path": "03_sop/lead_intake_contract_v1.md",
+      "size": 7591,
+      "sha256": "a5d6101475ca582a6d27a20d6689b8f7e2dcfc764d554a0d137b81918c1f06e3"
+    },
+    {
+      "path": "03_sop/lead_intake_d1b_telegram_command_contract.md",
+      "size": 7502,
+      "sha256": "22e9930cd84d3d328174bd81607acfb49972667db8927a8bf124643db7e29da3"
+    },
+    {
+      "path": "03_sop/lead_intake_d1c_router_contract.md",
+      "size": 9525,
+      "sha256": "c19281c2686ff17a86bba0caa0ee7a95e93dbdd0884005326eb2e816ec513278"
+    },
+    {
+      "path": "03_sop/lead_intake_d1d_bot_integration_contract.md",
+      "size": 9329,
+      "sha256": "b1ec6330491055462402fad34f94f7df4df0f074667931327a11e67816002ef7"
+    },
+    {
+      "path": "03_sop/lead_intake_d1d_bot_integration_patch_plan.md",
+      "size": 5616,
+      "sha256": "71d2e6a36aa57a0fc79e74ca0391bf6d15d3f7d04cc745e9637cb8d633315031"
+    },
+    {
+      "path": "03_sop/lead_intake_d1d_bot_integration_plan.md",
+      "size": 17444,
+      "sha256": "cfff42a6da0cee6344c7fae7a2809637fecd133b930954e64ba26dec98f8976e"
+    },
+    {
+      "path": "03_sop/lead_intake_d1d_static_integration_test_plan.md",
+      "size": 5985,
+      "sha256": "c1fee2acb191c2beb826c92979b89f6f36ec8200e2b6aeff22155dd155fb85e3"
+    },
+    {
+      "path": "03_sop/lead_intake_d1g_live_restart_smoke_runbook.md",
+      "size": 8665,
+      "sha256": "c11c62a6da03cde86988b5c4ee66e312f9030c24a87a3d258bc4ebf41831fc77"
+    },
+    {
+      "path": "03_sop/lead_intake_d2_controlled_real_import_approval_plan.md",
+      "size": 9007,
+      "sha256": "fa54e67b57338830c911b24ea2fa994887721114518a8ec7a6047de169a161d2"
+    },
+    {
+      "path": "03_sop/lead_intake_pipeline_d1a_sop.md",
+      "size": 5374,
+      "sha256": "ea0c701d536588f5fc26fe0fcccd83a83c5e66ee7a6ce4add81909d954839420"
+    },
+    {
+      "path": "03_sop/lead_intake_pipeline_d1a_standalone_spec.md",
+      "size": 6180,
+      "sha256": "c5d3d5ebfde023c4cbfdd62f69d520337a29703bb49919eb7eb2ed8c1ad4abea"
+    },
+    {
+      "path": "03_sop/lead_intake_real_write_approval_flow.md",
+      "size": 5819,
+      "sha256": "a9bc5c601ac31b9a764e3a8e2cb819df51d89690f54c4cfd6c063a0200f1219a"
+    },
+    {
+      "path": "03_sop/lead_intake_router_d1c_sop.md",
+      "size": 4675,
+      "sha256": "2825e2d953b6c1dc2b514c49172f8556b2f712adbbcaf46e481e0f3c4824cbb2"
+    },
+    {
+      "path": "03_sop/legal_compliance_audit_sop.md",
+      "size": 21357,
+      "sha256": "21bffbec723800a0d0f1ff70cabc0c5d01bf0dce53df0fef5797044cfe7e3e35"
+    },
+    {
+      "path": "03_sop/master_controller_runtime_sop.md",
+      "size": 1557,
+      "sha256": "69200f0b07efea33431d9afb296b1a742a7b32ea8b28dcd1665ba58ece2b551e"
+    },
+    {
+      "path": "03_sop/master_controller_sop.md",
+      "size": 1383,
+      "sha256": "57ddea675c290f8fc33c5ff1faad8de2c57553ccfade4c3742008d147d754190"
+    },
+    {
+      "path": "03_sop/obsidian_graph_hygiene_protocol.md",
+      "size": 879,
+      "sha256": "8f6049cd15a764706a503671f9c052bc0dd12217093afe5a0475991be9075a4f"
+    },
+    {
+      "path": "03_sop/obsidian_linking_and_graph_sop.md",
+      "size": 4641,
+      "sha256": "00c098d01294712d05036940f464b235e8af2d12e3e50b3c78184000e41bd76b"
+    },
+    {
+      "path": "03_sop/outbound_draft_preview_sop.md",
+      "size": 3154,
+      "sha256": "fa8b512682e3e5509d97ba666f9ed9a0a61fb7bf8cd8e018a74f6a03af99c751"
+    },
+    {
+      "path": "03_sop/outreach_compliance_sop.md",
+      "size": 1951,
+      "sha256": "ac69bcdb5ed9962a6e7234efc0bc42c5c1dc0998eaae6309c41fb1ce9e297123"
+    },
+    {
+      "path": "03_sop/payment_and_receipt_control_sop.md",
+      "size": 1781,
+      "sha256": "93b9cd50a3a3ecd8886f8051b10d4caa2f3296c44281f068000df9dac3185ae2"
+    },
+    {
+      "path": "03_sop/personal_assistant_safety_sop.md",
+      "size": 3663,
+      "sha256": "f0e2fece1c7e42a469638f5186e472291f01217e9ff85bb43098524ebc6e30ea"
+    },
+    {
+      "path": "03_sop/personal_document_access_sop.md",
+      "size": 3828,
+      "sha256": "6e2cdcd4922c76563eb607b6966ef91677840d0cc5fc3974eb96f81207b83393"
+    },
+    {
+      "path": "03_sop/personal_document_registry_sop.md",
+      "size": 4517,
+      "sha256": "f64bab32f24053c1f7839d11e69ea75d20ec68884f1b1f92d5e591ca75fb2795"
+    },
+    {
+      "path": "03_sop/post_bug_root_cause_rule.md",
+      "size": 1518,
+      "sha256": "006a2ad2e91ba6cc631cb164e42cfa71a776e6efcc532729ccf03b1a958d59c0"
+    },
+    {
+      "path": "03_sop/pre_task_context_gate.md",
+      "size": 8234,
+      "sha256": "57ee9bb25e9de06b5af4570985eae968cef982635bc517434dc6d36a4a27bf46"
+    },
+    {
+      "path": "03_sop/pricing_scope_control_sop.md",
+      "size": 2882,
+      "sha256": "aba156b83e9627226f0cdec3cda7d6bf43dbdc75cf99da327323418b60eddf18"
+    },
+    {
+      "path": "03_sop/sales_followup_daily_review_sop.md",
+      "size": 8886,
+      "sha256": "b2bd2474a7f94eb0ab72586330e4727472aca29d54adc8b8b009f6f8f06d4326"
+    },
+    {
+      "path": "03_sop/social_media_lead_research_sop.md",
+      "size": 2157,
+      "sha256": "78cabd2bc9ad95f3dafda878ac7ebf98d992199f7ec187737fdb896bd5c11fea"
+    },
+    {
+      "path": "03_sop/source_of_truth_sop.md",
+      "size": 1400,
+      "sha256": "bfa3960d034aef586282be9e673d2342221de5373058aaddb0db10d3ee708a8c"
+    },
+    {
+      "path": "03_sop/system_regression_test_sop.md",
+      "size": 1757,
+      "sha256": "e82aa0382af4d10b049be024d1a1250fb86543300bb80c6db8400fccfdc9a8c6"
+    },
+    {
+      "path": "03_sop/telegram_command_center_sop.md",
+      "size": 4579,
+      "sha256": "c56804ef73c85b84a81309aea9e7e2bb4327938d86ff809765a084a221fcd6aa"
+    },
+    {
+      "path": "03_sop/telegram_gateway_controlled_change_protocol.md",
+      "size": 7280,
+      "sha256": "ddebe99a7ef71f7d757f3f385e1aae77bd935b97c411efba92ed385a615f93f7"
+    },
+    {
+      "path": "03_sop/telegram_gateway_incident_response_protocol.md",
+      "size": 5908,
+      "sha256": "c90ca819b2eb869bd415a35a1e7da1e76a3fb6ae506c5fe7ef98f82fb0314f2b"
+    },
+    {
+      "path": "03_sop/telegram_gateway_operator_runbook.md",
+      "size": 6043,
+      "sha256": "7a853305a1479109ffbf6d53339279c54ddd689447b33b0f56340629bd2d1e1d"
+    },
+    {
+      "path": "03_sop/telegram_gateway_stability_sop.md",
+      "size": 6885,
+      "sha256": "636b25ed3f0c311e7c317be8a89d4f63b8c808f70099472461942e51809f2a50"
+    },
+    {
+      "path": "03_sop/telegram_lead_import_live_control_d3_command_contract.md",
+      "size": 22490,
+      "sha256": "9e1c693c5381e11d8b7f0039c729717b28f9a1f81e812ef03c07acd1c6fbf957"
+    },
+    {
+      "path": "03_sop/telegram_master_controller_gateway_sop.md",
+      "size": 1278,
+      "sha256": "37b796b77f9b49c78a25378199eda6d1685d0c3e28b2142f5acf811eb59c473b"
+    },
+    {
+      "path": "03_sop/telegram_master_controller_user_manual.md",
+      "size": 9347,
+      "sha256": "9eeb6a008ef945213140219682cb06e415a6b0d66f2ebf07854d0d36ce6d473c"
+    },
+    {
+      "path": "03_sop/telegram_money_machine_roadmap_protocol.md",
+      "size": 6480,
+      "sha256": "044c7f43791390eb3f5587d343747c875dd3f9b23190a9e93566da29ebfe80bf"
+    },
+    {
+      "path": "03_sop/telegram_voice_command_sop.md",
+      "size": 9787,
+      "sha256": "ac02fba754128601d4f55ef7c4d2a72c1636c3a33539a53d954a676019e9137d"
+    },
+    {
+      "path": "03_sop/visual_dashboard_autostart_sop.md",
+      "size": 4113,
+      "sha256": "bfb2e09d2f1e983177501f471da6ccdb4e2d8d24affdee42c60115a1502414f3"
+    },
+    {
+      "path": "03_sop/visual_dashboard_daily_use_sop.md",
+      "size": 15519,
+      "sha256": "f6b4373e3fe329cd461b8e7c168731832e37c62f5a3dc2fecc753ec7c1998f48"
+    },
+    {
+      "path": "03_sop/visual_dashboard_update_sop.md",
+      "size": 1631,
+      "sha256": "5f24e3891df1be1d80ea3bf6da9421c5dd9998301a7911e8e4ca92a30d279873"
+    },
+    {
+      "path": "03_sop/visual_master_dashboard_operator_quick_guide.md",
+      "size": 6569,
+      "sha256": "76511fd5341726a206726aae3aafd08add460e84263bd40338ef2fe837f37a48"
+    },
+    {
+      "path": "03_sop/work_account_setup_sop.md",
+      "size": 1766,
+      "sha256": "cef5027c31d16b58ccbd6cc9b152bc7cbb11f95a3989885239b030ed6925c46f"
+    },
+    {
+      "path": "03_sop/yandex_mail_readonly_draft_sop.md",
+      "size": 6219,
+      "sha256": "3a8c225962aad8c3c08d2781b4d4de9e98efe0e4d0ddf888455f36cb9a4131ac"
+    },
+    {
+      "path": "03_sop/yandex_mail_stage0_stage1_sop.md",
+      "size": 4047,
+      "sha256": "181d3929eb4603020185dd6c351a67f77db1d95f1700aa23dab04505419bbeeb"
+    },
+    {
+      "path": "03_sop/yandex_mail_stage1_readonly_sop.md",
+      "size": 4457,
+      "sha256": "242427a565b0a5b4149eefe94d149d7b0ac6cc22254a5fd0b89e7d4c3054142b"
+    },
+    {
+      "path": "02_templates/account_brief_template.md",
+      "size": 368,
+      "sha256": "ceff993146b83b1f898564abc96e5d2ca8083800c03694331de1493b63ad1b76"
+    },
+    {
+      "path": "02_templates/action_queue_item_template.md",
+      "size": 3116,
+      "sha256": "179f5a40ed007fd19cc76ed71d6f7cdba873edf92944a36aa315a3f72509c351"
+    },
+    {
+      "path": "02_templates/active_lead_cline_command_templates.md",
+      "size": 7094,
+      "sha256": "ec2bf028cbfa6d867dd42965c920ad32d91e8533e998e374f3239124bcc6ca27"
+    },
+    {
+      "path": "02_templates/agent_passport_template.md",
+      "size": 4259,
+      "sha256": "230d25c204490e0dd9f712092379f881344af9bbd7d85c35889991c4b70c4f23"
+    },
+    {
+      "path": "02_templates/audit_stage_task_card_template.md",
+      "size": 745,
+      "sha256": "b664f1d7f1ceb59b8e8b199e2b6cae53f408481e98259647948187ad67377d84"
+    },
+    {
+      "path": "02_templates/b2b_audit_report_template.md",
+      "size": 11246,
+      "sha256": "86e0f1a56aa34a6a9e260cb984216d5ef3e305d574a7acfd09ce31c55ea86a56"
+    },
+    {
+      "path": "02_templates/b2b_followup_message_templates.md",
+      "size": 13832,
+      "sha256": "9664cdb1bc622bd398bd004c720027653e37ca3be9687c9eccbfa719ebae28b6"
+    },
+    {
+      "path": "02_templates/chatgpt_official_export_scan_command_template.md",
+      "size": 6998,
+      "sha256": "71bbc48dc7ee1689406a8ed1553c96172c249f9f64d2549019b61cca9afd31be"
+    },
+    {
+      "path": "02_templates/client_card_template.md",
+      "size": 3462,
+      "sha256": "361aebdf980f1d75e13d0ef50420dd72c39a9c3e6cc859238ea8167353cc88b8"
+    },
+    {
+      "path": "02_templates/client_delivery_pack_template.md",
+      "size": 1707,
+      "sha256": "be03f6d656861d9575e1e6d1ac9b06a1c69e9824d260bda817e02732c3fc537c"
+    },
+    {
+      "path": "02_templates/client_reply_draft_template.md",
+      "size": 3990,
+      "sha256": "e5066a03f6ecc6f79379d7b3429a558e296e4adbd223440d103f497bf33d18b8"
+    },
+    {
+      "path": "02_templates/client_reply_triage_template.md",
+      "size": 2512,
+      "sha256": "94f325d1adb84501a6de37309adff9579ad2a6273e65a1cb386c87cefaef9524"
+    },
+    {
+      "path": "02_templates/cline_micro_task_prompt_template.md",
+      "size": 1868,
+      "sha256": "46308d8df9d88588486cad1d23923cf45f65fa60d72e74cee84622dfcfebc746"
+    },
+    {
+      "path": "02_templates/cloud_safe_context_pack_template.md",
+      "size": 1709,
+      "sha256": "db1714288dadbc0592415b5e6a7e7b750a1a9b8754c29b9571121353a1ccddb3"
+    },
+    {
+      "path": "02_templates/commercial_offer_tiers_template.md",
+      "size": 2518,
+      "sha256": "cedab2d6db039333166dc63b00c086355c3325b98b64c68cf2b8888f3c867eb8"
+    },
+    {
+      "path": "02_templates/contact_resolution_result_template.md",
+      "size": 780,
+      "sha256": "546e71a1c19bdb0833e6717ed5a076a6a57f4b5afc7466414e804c4acc611d38"
+    },
+    {
+      "path": "02_templates/dashboard_state_update_template.md",
+      "size": 676,
+      "sha256": "efe9b97c66e5b39dd13eb2b88e778105647053d80a93e0803e43551e34dd128c"
+    },
+    {
+      "path": "02_templates/dashboard_update_card_template.md",
+      "size": 532,
+      "sha256": "864451fd3e4e5b56c97ca434f2d20c3545122df54a96b1d31e132b0fddc031bf"
+    },
+    {
+      "path": "02_templates/document_registry_item_template.md",
+      "size": 1524,
+      "sha256": "5c76bd856b9e548669c7c85e0f5d8ad2237ac88f4e73913370828ee6c04080b3"
+    },
+    {
+      "path": "02_templates/email_client_message_template.md",
+      "size": 635,
+      "sha256": "86849ea15fcebd8da1004f102ec47cb17f170415a17b73f11fa3f222c14de851"
+    },
+    {
+      "path": "02_templates/email_reply_approval_card_template.md",
+      "size": 3120,
+      "sha256": "3914772abca8ae24b16307a1bcd9f6fe218f4e1b9952ded4df0a15aada493285"
+    },
+    {
+      "path": "02_templates/express_review_template.md",
+      "size": 314,
+      "sha256": "3c96ad28a4fa2c1d7b839f2d0197151c61ae7582de8ff40c7bc024aac847421d"
+    },
+    {
+      "path": "02_templates/findings_register_template.md",
+      "size": 12644,
+      "sha256": "f9737a8281cd37de908b80e3435ce5aff8bb9f2ee74747cda27fddd1ad23bdac"
+    },
+    {
+      "path": "02_templates/first_message_template.md",
+      "size": 539,
+      "sha256": "0bad77a4c25594d825a0176a09f998dbd94cb4de5529c850dcfa64f5db04b645"
+    },
+    {
+      "path": "02_templates/follow_up_sequence_template.md",
+      "size": 191,
+      "sha256": "4fdb98f953e7f09307637bb1b9f780113a1437fb17e1253c7b10b2829582f870"
+    },
+    {
+      "path": "02_templates/incoming_message_record_template.md",
+      "size": 3164,
+      "sha256": "f6b6cb3074866168194880480217afb9ab6c5084a8ebe097f3a89327ca763f2f"
+    },
+    {
+      "path": "02_templates/lead_pipeline_command_library.md",
+      "size": 614,
+      "sha256": "88653e6f8017438b9e439bb510b4aecc41946c80b14cc16e2c963aa22f1fd24e"
+    },
+    {
+      "path": "02_templates/lead_scorecard_template.md",
+      "size": 450,
+      "sha256": "608cf1867d1c5a88fb5364df3459f2c4047b993dc86e6a5d2b8c6d0697cddac9"
+    },
+    {
+      "path": "02_templates/lead_scoring_rules_template.md",
+      "size": 3531,
+      "sha256": "983e31272dfc28ab373e92fbad6a90e8982956f122cc5574ff45996c4219c3c9"
+    },
+    {
+      "path": "02_templates/lead_source_adapter_template.md",
+      "size": 3126,
+      "sha256": "bff86eaf3aa040c559606422233cd3d954dc9c8838be322a66b35cda3ce1997d"
+    },
+    {
+      "path": "02_templates/lead_table_template.md",
+      "size": 613,
+      "sha256": "b8a594652fac6cfbe3aae7a3a614f1c7bf6910e4a14a3fb0c42c82bdcdc42e6c"
+    },
+    {
+      "path": "02_templates/legal_risk_disclaimer_template.md",
+      "size": 9538,
+      "sha256": "ad90f28db01c10b940c6a2b81e8226cc042ce7498ac3b91e14c62f5d80a0eae6"
+    },
+    {
+      "path": "02_templates/master_controller_command_template.md",
+      "size": 199,
+      "sha256": "7ca611c38cdab0bed03114a2bf7bacd0d883f18aedc7b9f4354ae7fb7bea1f5b"
+    },
+    {
+      "path": "02_templates/master_controller_decision_brief_template.md",
+      "size": 158,
+      "sha256": "78b675d776cd67fd9bfaf8bd385cd1e3d097c2c144341055b564d839ee2101b5"
+    },
+    {
+      "path": "02_templates/master_controller_runtime_report_template.md",
+      "size": 159,
+      "sha256": "5c12a2193d80cc786b2097e4d4575c853320ac852e0290dd17da9aa54d1443c6"
+    },
+    {
+      "path": "02_templates/master_controller_task_packet_template.md",
+      "size": 208,
+      "sha256": "5ae7c51387910da6a82555b628d5b8980a27745abeb3c46b149b5a9f27a6e610"
+    },
+    {
+      "path": "02_templates/mini_audit_10k_template.md",
+      "size": 3108,
+      "sha256": "38fd11ca1b381732482c8afdcad7cab06df483d186a36f628c3b3a8ac3ea6dfe"
+    },
+    {
+      "path": "02_templates/mini_audit_client_report_template.md",
+      "size": 3435,
+      "sha256": "58f16d22171d48bb25b77c2185744ddea7223f6b739558f0a4c09390d10c70b0"
+    },
+    {
+      "path": "02_templates/mini_audit_qa_template.md",
+      "size": 1984,
+      "sha256": "2642e7bde62dc447aa44dfe1b0374b2824aa7f04d9a1886ef7fceb88e5c618fb"
+    },
+    {
+      "path": "02_templates/objections_library.md.md",
+      "size": 3261,
+      "sha256": "18ad2ed630529ca0a963cebb274cef96e833783b9964f87627d0f1d65b5a5e2a"
+    },
+    {
+      "path": "02_templates/obsidian_project_note_template.md",
+      "size": 1758,
+      "sha256": "15e878dda903d7e2a50f855262299c3c53448cd13481d517daf07261eb3b767d"
+    },
+    {
+      "path": "02_templates/outbound_draft_preview_template.md",
+      "size": 2004,
+      "sha256": "8da2ed2a1961e07038207a11aff1817f080a7306ef35e9c2f4f6484ff03f37c3"
+    },
+    {
+      "path": "02_templates/outreach_account_inventory_template.md",
+      "size": 251,
+      "sha256": "591969a5f972bc3e1960a3dfaf089b499401252de63bd9d9fa44b06e9a04ce30"
+    },
+    {
+      "path": "02_templates/payment_status_update_template.md",
+      "size": 245,
+      "sha256": "8363078ff548a056dae8bd70323f63857715fd96c8f99bb4da0fba9bcedfca18"
+    },
+    {
+      "path": "02_templates/personal_assistant_request_template.md",
+      "size": 3628,
+      "sha256": "aed577f674161929384e640dcffcaeb8a063dd4415735d099829e0b70b65993b"
+    },
+    {
+      "path": "02_templates/pipeline_command_library.md",
+      "size": 18072,
+      "sha256": "d622527d4b21fa0ef5fb9c877467af7fae6580bcd18f5bfe762f0939bc8b6aef"
+    },
+    {
+      "path": "02_templates/pricing_scorecard_template.md",
+      "size": 1487,
+      "sha256": "3437d9ffdef829fe83bf276d72e2ec4ea4733fa0901a7598f67d683527903075"
+    },
+    {
+      "path": "02_templates/receipt_confirmation_template.md",
+      "size": 244,
+      "sha256": "94ae4a99f39a5ff89310bb8144cb014ef81f991788040b3d3a7f1545df87bda0"
+    },
+    {
+      "path": "02_templates/signal_intake_template.md",
+      "size": 2773,
+      "sha256": "ef5993d6e0844b93a15bdcd7f1f7325e6452f75581471575f8f80adae99d8634"
+    },
+    {
+      "path": "02_templates/site_evidence_pack_template.md",
+      "size": 16959,
+      "sha256": "fe72f21779324ebae1d2d364b3ac573b96bd4cdfe6b2cc1416b473f54471b428"
+    },
+    {
+      "path": "02_templates/telegram_client_message_template.md",
+      "size": 1216,
+      "sha256": "3ac35eb2ae8424c509d5606eeaff0dd70337e08c6680b6120ac7989d29838426"
+    },
+    {
+      "path": "02_templates/telegram_followup_cards_template.md",
+      "size": 4357,
+      "sha256": "2d36288f2466949f70e2a809f89d5d0cab7161a681110b2fd929e65005d9438a"
+    },
+    {
+      "path": "02_templates/telegram_master_command_template.md",
+      "size": 355,
+      "sha256": "8868c2378a5557ade3f620773f367528755192c0b3e941394ab921a972f31b36"
+    },
+    {
+      "path": "02_templates/telegram_task_request_template.md",
+      "size": 1516,
+      "sha256": "10e074f5fc79d986dc7f9b1046f05c45bc44929b16ef50973475a92650c20386"
+    },
+    {
+      "path": "02_templates/yandex_mail_allowlist_template.md",
+      "size": 932,
+      "sha256": "cd0cba47970ca2c0d01b5783efafe05cfe262099845d799ca9f168ae1cfecf14"
+    },
+    {
+      "path": "02_templates/yandex_mail_connection_checklist.md",
+      "size": 4511,
+      "sha256": "d91b983d873b291f166ab712b09ce45a94f03b6252b29c01c9873ee0a90b86cd"
+    },
+    {
+      "path": "02_templates/yandex_mail_email_intake_template.md",
+      "size": 1359,
+      "sha256": "921037be91524d10780a08f1d8ae69efd2123aae28c84c5df1f020f92333aae0"
+    },
+    {
+      "path": "00_MASTER_CONTEXT/03_CURRENT_PROJECTS_AND_PRIORITIES.md",
+      "size": 4798,
+      "sha256": "c1ae31a57785b3991961de6a895e79fc6fb6ca0758bd5b4315865ca4dde306b1"
+    },
+    {
+      "path": "00_MASTER_CONTEXT/current_decisions_index.md",
+      "size": 4445,
+      "sha256": "5f86e5124312880e57b58a1921133f5baf059c377395d4114eb8c04180e19ac5"
+    },
+    {
+      "path": "00_MASTER_CONTEXT/current_system_map.md",
+      "size": 4412,
+      "sha256": "d511371a575fad3b086fed3af19c694a40194efd91fc71459de6f6cd28861c2a"
+    },
+    {
+      "path": "00_MASTER_CONTEXT/EXISTING_FOLDER_STRUCTURE.md",
+      "size": 2153,
+      "sha256": "85a4ccf85e51c068ed63dedc921b2e3a0148c978c3f42f19531aa103adaf12c9"
+    },
+    {
+      "path": "00_MASTER_CONTEXT/PROJECT_REGISTRY.md",
+      "size": 4140,
+      "sha256": "e08635fd7a0c1c10d36bbce1080681f5629f9b4b108bf73ca203e21d0943e13e"
+    },
+    {
+      "path": "00_MASTER_CONTEXT/WHAT_ALREADY_EXISTS.md",
+      "size": 20313,
+      "sha256": "e58084aab2b92438e117e2af0effd0ae37039ee1446754b24156cced178478c0"
+    }
+  ],
+  "restore_instructions": "Verify with: for each entry sha256sum -c. Restore by copying files; secrets restored separately from D:\\AI_SECRETS encrypted store."
+}

@@ -1,0 +1,55 @@
+{
+  "manifest_version": 2,
+  "gate": "FIRST_TOUCH_STRATEGIST_CONTROLLED_PILOT",
+  "branch": "feature/first-touch-strategist-controlled-pilot-v1",
+  "base_evidence_head": "55aff3a",
+  "head": "8f88f9e",
+  "frozen_at": "2026-06-19",
+  "whole_repository_deployment": false,
+  "note": "Additive First Touch Strategist (read-only, no-send). Production already had v1 (prior session). This v2 updates 2 files: engine (grammar fixes) + service (honest leads_considered/exclusion_breakdown metrics). index.mjs unchanged on prod (routes already present). No new store/writer/ledger/sendpath. No transport. ControlledSendGate DISABLED.",
+  "entries": [
+    {
+      "path": "tools/commercial_core/lib/first_touch_engine.mjs",
+      "sha256": "b7c15c6da8d9ca62b41190190325cf956c01958f36ab3dec4dc8df2e3065af74",
+      "before": "91a4cfc1f8f91fc2bbcfc52de29e294ded0aa50e279ed6d6fdbe6bb0128126b7",
+      "restart_required": true,
+      "rollback": "restore backup (91a4cfc1)"
+    },
+    {
+      "path": "tools/mater_controller_api/src/commercial/first_touch_service.mjs",
+      "sha256": "0e549bfc4aaae4e11f12ba25c3e6d5b728f3d86ef8bb0079444161bb80067f53",
+      "before": "55ca58a5aedf4433642a81fe7d70a8c2de1e8f56edac255b2d5b4e5a6078ddb4",
+      "restart_required": true,
+      "rollback": "restore backup (55ca58a5)"
+    },
+    {
+      "path": "tools/mater_controller_api/src/server/index.mjs",
+      "sha256": "5876069ea79d4dcd6caff2e9a86075a75092be238f732f163a6344408c23e30a",
+      "before": "5876069ea79d4dcd6caff2e9a86075a75092be238f732f163a6344408c23e30a",
+      "restart_required": false,
+      "rollback": "no change (prod already identical)",
+      "note": "Already deployed on production with first-touch routes; not re-copied."
+    }
+  ],
+  "config_changes": {
+    "FIRST_TOUCH": "read-only endpoints already exposed (/first-touch/summary|candidates|candidates/:id|pilot-readiness)",
+    "CONTROLLED_SEND_GATE": "DISABLED (unchanged)",
+    "TRANSPORT_ENABLED": "false (unchanged)",
+    "SEND_ALLOWED_LIVE": "false (unchanged)",
+    "AUTOSEND": "BLOCKED (unchanged)",
+    "COMMERCIAL_SEND": "OFF (unchanged)"
+  },
+  "counts": {
+    "backend_deployable_files": 3,
+    "files_changed_vs_prod": 2,
+    "files_identical_on_prod": 1,
+    "new_store_or_writer_or_ledger_or_sendpath": 0,
+    "smtp_or_transport_paths_added": 0
+  },
+  "node_check": "PASS (all 3 files)",
+  "unit_tests": "first_touch.test.mjs 25/0; first_touch_reconciliation_test.mjs 12/0",
+  "REAL_OUTBOUND_MESSAGES": 0,
+  "SMTP_CALLS": 0,
+  "EMAILS_SENT": 0,
+  "PAYMENT_FACTS": 0
+}

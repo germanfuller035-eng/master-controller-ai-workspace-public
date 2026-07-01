@@ -1,0 +1,3 @@
+config
+TELEGRAM_BOT_TOKEN=123456789:AAFakeTokenValueForTestingОНLY_abcdefghij12345
+API_KEY=deadbeefdeadbeefdeadbeefdeadbeefdeadbeef

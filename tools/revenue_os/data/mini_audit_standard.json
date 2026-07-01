@@ -1,0 +1,33 @@
+{
+  "schema": "revenue_os.mini_audit_standard.v1",
+  "version": "1.0",
+  "product_id": "mini_audit",
+  "source_of_truth": "13_sales/mini_audit_10k_product_spec.md + audit_product_ladder.md (read-only)",
+  "goal": "Paid entry product: quickly show the owner/director/marketer where the site loses trust and requests.",
+  "icp": "Local business / factories / services / shops / salons / auto services / fitness specialists with a verified website or landing or listing and a reachable decision maker.",
+  "inputs_required": ["verified page URL", "verified identity", "verified contact path", "evidence of weak-funnel/weak-website maturity"],
+  "evidence_standard": "Every finding is a FACT backed by a checked source (URL + checked_at + excerpt) OR direct observation. Inferences/hypotheses must be labeled.",
+  "findings_count": {"min": 5, "max": 7, "note": "5-7 key findings; not 20+ (that is a full audit)"},
+  "categories_allowed": ["identity_and_trust", "contactability", "call_to_action", "forms", "conversion", "content_clarity", "social_proof", "mobile", "seo_discoverability", "local_presence"],
+  "result_format": "Client-facing structured note or short PDF (no PDF generated here unless a safe canonical PDF pipeline exists). Internal by default.",
+  "constraints": ["no full legal audit", "no full technical SEO", "no deep crawl", "no all-pages review", "no analytics setup", "no site fixes", "no admin access", "no new blocks", "no new website"],
+  "turnaround": "1-2 days",
+  "price": {"amount": 10000, "currency": "RUB", "status": "CONFIRMED", "approved_by_owner": true},
+  "readiness_criteria": ["verified evidence present", "5-7 supported findings", "actionable fix plan", "no guessed data", "recipient evidence present"],
+  "criteria_for_refusal": ["no verifiable website", "fully broken site (offer domain recovery)", "no digital presence (offer presence product)", "opted out", "cannot verify identity"],
+  "upsell_paths": ["mini_audit_plus", "full_business_audit", "implementation_sprint"],
+  "forbidden": ["guarantee growth", "full redesign", "website development", "deep technical penetration test", "unverified data", "legal guarantees", "free full audit"],
+  "qa_scorecard": {
+    "identity_verified": "bool",
+    "website_verified": "bool",
+    "contact_verified": "bool",
+    "findings_supported": "bool",
+    "findings_non_duplicate": "bool",
+    "business_implications_reasonable": "bool",
+    "recommendations_actionable": "bool",
+    "price_correct": "bool (== 10000 RUB)",
+    "recipient_evidence": "bool",
+    "no_guessed_data": "bool",
+    "approval_required": "bool (true before any client contact)"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "insight": {
+    "insight_id": "I01",
+    "statement": "AT_RISK customers cluster in low-adoption cohort",
+    "source_metrics": [
+      "cs_adoption_rate",
+      "cs_health_at_risk"
+    ],
+    "evidence": [
+      "cohort decline 4->2"
+    ],
+    "confidence": "MEDIUM",
+    "limitations": [],
+    "recommended_action": "owner review onboarding for low-adoption cohort",
+    "owner_review_required": true
+  },
+  "blocks": [],
+  "valid": true
+}

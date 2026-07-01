@@ -1,0 +1,117 @@
+{
+  "schema": "delivery_os.playbooks.v1",
+  "version": "1.0",
+  "note": "Delivery playbooks. Readiness reflects real evidence; not auto-elevated. Milestones use relative timelines. Each milestone has deliverable + (where final) QA/acceptance gates.",
+  "playbooks": {
+    "mini_audit": {
+      "product_id": "mini_audit", "readiness": "DELIVERY_DEFINED",
+      "purpose": "Deliver a paid entry audit: where the site loses trust and requests.",
+      "prerequisites": ["verified website", "verified identity", "verified contact"],
+      "client_inputs": ["company_information", "contacts", "products_services"],
+      "exclusions": ["full legal audit", "full technical SEO", "site fixes", "new website"],
+      "timeline": "1-2 days", "owner_hours": 2, "ai_hours": 2,
+      "change_rules": "1 review round; scope beyond 5-7 findings -> upsell Mini Audit Plus/Full",
+      "support": "none (one-time)", "case_evidence": "before/after of next-step uptake",
+      "milestones": [
+        {"milestone_id": "ma1", "name": "Identity & website verification", "deliverables": ["verified_identity_record"], "owner": "claude", "est_days": 0.2, "qa_gate": false, "acceptance_gate": false},
+        {"milestone_id": "ma2", "name": "Evidence collection", "deliverables": ["evidence_register"], "dependencies": ["ma1"], "owner": "claude", "est_days": 0.3, "qa_gate": false},
+        {"milestone_id": "ma3", "name": "Finding generation + dedup/conflict", "deliverables": ["findings_list"], "dependencies": ["ma2"], "owner": "claude", "est_days": 0.3, "qa_gate": true},
+        {"milestone_id": "ma4", "name": "Business implications + recommendations", "deliverables": ["recommendations"], "dependencies": ["ma3"], "owner": "claude", "est_days": 0.2, "qa_gate": true},
+        {"milestone_id": "ma5", "name": "Owner QA + client packaging", "deliverables": ["audit_summary", "priority_matrix", "qa_report"], "dependencies": ["ma4"], "owner": "owner", "est_days": 0.2, "qa_gate": true, "acceptance_gate": true}
+      ],
+      "deliverables": ["audit_summary", "findings_list", "evidence_register", "priority_matrix", "recommended_fixes", "commercial_next_step", "qa_report"],
+      "qa": ["scope 5-7 findings", "every finding evidence-backed", "no duplicate/conflict", "client language clean", "no growth promise", "price 10000 correct"],
+      "acceptance": ["5-7 supported findings", "actionable recommendations", "next step present", "no guessed data"],
+      "risks": ["scope creep into full audit", "unverified findings", "guarantee language"],
+      "sla": {"verification": "Day 0", "findings": "Day 0-1", "owner_qa": "Day 1", "delivery_ready": "Day 1-2"}
+    },
+    "digital_presence_check": {
+      "product_id": "digital_presence_check", "readiness": "DRAFT",
+      "purpose": "Map where a low-maturity business exists online and what is missing.",
+      "prerequisites": ["verified identity"],
+      "client_inputs": ["company_information", "contacts"],
+      "exclusions": ["website build", "deep audit"],
+      "timeline": "Day 0-1", "owner_hours": 1, "ai_hours": 1,
+      "milestones": [
+        {"milestone_id": "dp1", "name": "Channel inventory (maps/marketplace/messenger/social/web)", "deliverables": ["presence_map"], "owner": "claude", "est_days": 0.3, "qa_gate": true},
+        {"milestone_id": "dp2", "name": "Gap analysis + first step", "deliverables": ["gap_list", "recommended_first_step"], "dependencies": ["dp1"], "owner": "owner", "est_days": 0.2, "qa_gate": true, "acceptance_gate": true}
+      ],
+      "deliverables": ["presence_map", "gap_list", "recommended_first_step"],
+      "qa": ["all channels checked", "evidence-backed", "no single-URL conclusions"],
+      "acceptance": ["presence map evidence-backed", "first step actionable"],
+      "risks": ["false absence conclusion", "product not formalized"]
+    },
+    "full_business_audit": {
+      "product_id": "full_business_audit", "readiness": "DRAFT",
+      "purpose": "Deep UX + technical SEO audit with executive report.",
+      "prerequisites": ["verified website"],
+      "client_inputs": ["company_information", "contacts", "products_services"],
+      "exclusions": ["implementation", "legal opinion"],
+      "timeline": "5-10 days", "owner_hours": 10, "ai_hours": 10,
+      "milestones": [
+        {"milestone_id": "fa1", "name": "Browser sweep + evidence register", "deliverables": ["evidence_register"], "owner": "claude", "est_days": 2, "qa_gate": false},
+        {"milestone_id": "fa2", "name": "Findings register (UX/SEO/technical)", "deliverables": ["findings_register"], "dependencies": ["fa1"], "owner": "claude", "est_days": 3, "qa_gate": true},
+        {"milestone_id": "fa3", "name": "Executive report + owner QA", "deliverables": ["executive_report", "qa_report"], "dependencies": ["fa2"], "owner": "owner", "est_days": 1, "qa_gate": true, "acceptance_gate": true}
+      ],
+      "deliverables": ["evidence_register", "findings_register", "executive_report", "qa_report"],
+      "qa": ["all findings evidence-backed", "no contradictions", "executive summary clear"],
+      "acceptance": ["report delivered", "findings supported"],
+      "risks": ["wide scope", "effort underestimation"]
+    },
+    "landing_sprint": {
+      "product_id": "landing_sprint", "readiness": "DRAFT",
+      "purpose": "Build/repackage a landing page focused on requests.",
+      "prerequisites": ["client content available"],
+      "client_inputs": ["company_information", "contacts", "products_services", "brand_assets", "approval_contacts"],
+      "exclusions": ["multi-page site", "CRM build", "guaranteed growth"],
+      "timeline": "5-10 days", "owner_hours": null, "ai_hours": null,
+      "milestones": [
+        {"milestone_id": "ls1", "name": "Discovery + input collection", "deliverables": ["brief"], "owner": "owner", "est_days": 1, "qa_gate": false},
+        {"milestone_id": "ls2", "name": "Structure + copy", "deliverables": ["structure", "copy"], "dependencies": ["ls1"], "owner": "claude", "est_days": 2, "qa_gate": true},
+        {"milestone_id": "ls3", "name": "Build + form + responsive", "deliverables": ["landing"], "dependencies": ["ls2"], "owner": "claude", "est_days": 3, "qa_gate": true},
+        {"milestone_id": "ls4", "name": "Owner+client review + launch", "deliverables": ["launched_landing", "handoff_guide"], "dependencies": ["ls3"], "owner": "owner", "est_days": 1, "qa_gate": true, "acceptance_gate": true}
+      ],
+      "deliverables": ["structure", "copy", "landing", "form", "handoff_guide"],
+      "qa": ["content", "ux", "mobile", "accessibility", "performance", "forms", "seo_basics", "security", "ownership"],
+      "acceptance": ["landing accepted", "forms working", "owner approved"],
+      "risks": ["content dependency", "revision overrun", "price not confirmed"]
+    },
+    "start_page_sprint": {
+      "product_id": "start_page_sprint", "readiness": "DRAFT",
+      "purpose": "Package first screen, CTA, forms, trust to receive requests.",
+      "prerequisites": ["has or will have basic presence"],
+      "client_inputs": ["company_information", "contacts", "products_services", "approval_contacts"],
+      "exclusions": ["full site", "CRM"],
+      "timeline": "5-10 days",
+      "milestones": [
+        {"milestone_id": "sp1", "name": "Discovery + inputs", "deliverables": ["brief"], "owner": "owner", "est_days": 1, "qa_gate": false},
+        {"milestone_id": "sp2", "name": "First screen + CTA + forms + trust", "deliverables": ["start_page"], "dependencies": ["sp1"], "owner": "claude", "est_days": 3, "qa_gate": true},
+        {"milestone_id": "sp3", "name": "Review + handoff", "deliverables": ["delivered_page", "handoff_guide"], "dependencies": ["sp2"], "owner": "owner", "est_days": 1, "qa_gate": true, "acceptance_gate": true}
+      ],
+      "deliverables": ["start_page", "form", "trust_block", "handoff_guide"],
+      "qa": ["content", "ux", "mobile", "forms", "ownership"],
+      "acceptance": ["page accepted", "owner approved"],
+      "risks": ["price range conflict (owner reconcile)", "content dependency"]
+    },
+    "business_website": {
+      "product_id": "business_website", "readiness": "DRAFT",
+      "purpose": "Site/catalog under requests with basic lead tracking.",
+      "prerequisites": ["client content available or scoped", "domain/hosting access or plan"],
+      "client_inputs": ["company_information", "contacts", "products_services", "brand_assets", "domain_access", "hosting_access", "approval_contacts"],
+      "exclusions": ["paid ad management", "guaranteed growth"],
+      "timeline": "2-4 weeks", "owner_hours": null, "ai_hours": null,
+      "milestones": [
+        {"milestone_id": "bw1", "name": "Discovery + input collection", "deliverables": ["brief"], "owner": "owner", "est_days": 2, "qa_gate": false},
+        {"milestone_id": "bw2", "name": "Information architecture + content structure", "deliverables": ["ia", "content_structure"], "dependencies": ["bw1"], "owner": "claude", "est_days": 3, "qa_gate": true},
+        {"milestone_id": "bw3", "name": "Wireframe + visual direction + prototype", "deliverables": ["prototype"], "dependencies": ["bw2"], "owner": "claude", "est_days": 4, "qa_gate": true},
+        {"milestone_id": "bw4", "name": "Development + forms + analytics + SEO basics", "deliverables": ["website"], "dependencies": ["bw3"], "owner": "claude", "est_days": 6, "qa_gate": true},
+        {"milestone_id": "bw5", "name": "QA + responsive + security review", "deliverables": ["qa_report"], "dependencies": ["bw4"], "owner": "claude", "est_days": 2, "qa_gate": true},
+        {"milestone_id": "bw6", "name": "Owner+client review + launch + handoff", "deliverables": ["launched_site", "handoff_guide", "support_guide"], "dependencies": ["bw5"], "owner": "owner", "est_days": 2, "qa_gate": true, "acceptance_gate": true}
+      ],
+      "deliverables": ["ia", "content_structure", "prototype", "website", "forms", "basic_lead_tracking", "handoff_guide", "support_guide"],
+      "qa": ["content", "ux", "mobile", "accessibility", "performance", "technical", "forms", "analytics", "seo", "security", "legal_placeholders", "ownership"],
+      "acceptance": ["site delivered + accepted", "forms working", "owner approved", "scope frozen"],
+      "risks": ["large scope", "coordination", "access dependency", "timeline promises need approval"]
+    }
+  }
+}

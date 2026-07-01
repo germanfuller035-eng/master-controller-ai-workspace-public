@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/finance/invoice_draft.schema.json",
+  "title": "Invoice Draft V1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "synthetic",
+    "invoice_draft_id",
+    "draft_only",
+    "send_allowed",
+    "line_items",
+    "payload_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "finance.invoice_draft.v1"},
+    "synthetic": {"const": true},
+    "invoice_draft_id": {"type": "string"},
+    "draft_only": {"const": true},
+    "send_allowed": {"const": false},
+    "line_items": {"type": "array"},
+    "payload_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "additionalProperties": true
+}

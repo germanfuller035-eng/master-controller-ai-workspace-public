@@ -1,0 +1,42 @@
+{
+  "schema": "consolidation.doc_inventory_collisions.v1",
+  "note": "MP9-10 — canonical document target inventory + collision resolution. All proposals are CREATE in the branch tree (target paths not present as tracked files). No collisions, no exact duplicates, no semantic conflicts requiring destructive resolution.",
+  "totals": {
+    "proposal_files": 261,
+    "unique_targets": 261,
+    "create_operations": 261,
+    "update_operations": 0,
+    "collisions": 0,
+    "exact_duplicate_content": 0,
+    "semantic_duplicates": 0,
+    "stale_proposals": 0,
+    "superseded_proposals": 0,
+    "proposals_requiring_owner_decision": 0,
+    "safe_additive_proposals": 261
+  },
+  "by_project": {
+    "reliability-observability": 42, "security-control-plane": 41, "integration-data-contracts": 32,
+    "agent-orchestration": 32, "conversation-hub": 26, "analytics-os": 25, "growth-os": 24,
+    "obsidian_hq": 8, "revenue_os": 6, "delivery-os": 6, "finance-os": 5, "product-os": 4,
+    "executive-os": 4, "customer-success-os": 4, "claude_code_integration": 2,
+    "canonical-consolidation": "added by MP24 (root nav + registries)"
+  },
+  "shared_master_context_targets": [
+    { "target": "00_MASTER_CONTEXT/PROJECT_REGISTRY.md", "proposals": 1, "target_in_branch_tree": false, "operation": "CREATE", "note": "single proposal; canonical consolidation adds the unified entry set" },
+    { "target": "00_MASTER_CONTEXT/WHAT_ALREADY_EXISTS.md", "proposals": 1, "target_in_branch_tree": false, "operation": "CREATE" },
+    { "target": "00_MASTER_CONTEXT/AI_SYSTEM_MAP.md", "proposals": 1, "target_in_branch_tree": false, "operation": "CREATE" },
+    { "target": "00_MASTER_CONTEXT/current_decisions_index.md", "proposals": 1, "target_in_branch_tree": false, "operation": "CREATE" }
+  ],
+  "collision_resolution_rules_applied": [
+    "later full-chain version priority — N/A (no overlapping targets)",
+    "no silent section loss — enforced",
+    "no duplicate identical sections — 0 exact duplicates found",
+    "owner decisions remain pending — captured in decision backlog, not resolved",
+    "recommendation not converted to confirmed state",
+    "synthetic data not converted to real",
+    "proposed control not converted to implemented production control",
+    "source provenance preserved (front-matter related_project + status)",
+    "links to original reports preserved"
+  ],
+  "result": { "DOCUMENT_COLLISIONS_RESOLVED": "PASS (none present)", "DESTRUCTIVE_COLLISION": false }
+}

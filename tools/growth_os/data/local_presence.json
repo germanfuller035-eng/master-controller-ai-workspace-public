@@ -1,0 +1,14 @@
+{
+  "schema": "growth_os.local_presence.v1",
+  "version": "1.0",
+  "note": "Strategy for low-maturity businesses. No profile creation, no directory mutation — checklists and roadmaps only.",
+  "target_states": ["no_website", "maps_only", "directory_only", "social_only", "marketplace_only", "weak_local_presence"],
+  "assets": [
+    {"asset_id": "lp_presence_checklist", "name": "Presence checklist", "covers": ["where the business appears online", "gaps", "consistency of name/address/phone"], "published": false},
+    {"asset_id": "lp_local_profile_checklist", "name": "Local profile checklist", "covers": ["profile completeness", "categories", "photos", "hours"], "published": false},
+    {"asset_id": "lp_contactability_checklist", "name": "Contactability checklist", "covers": ["can a customer reach you in 1 step", "response channels"], "published": false},
+    {"asset_id": "lp_owned_presence_roadmap", "name": "Owned-presence roadmap", "covers": ["from platform-only to owned page", "sequence of steps"], "published": false},
+    {"asset_id": "lp_website_decision_guide", "name": "Website decision guide", "covers": ["start page vs landing vs full site", "when each fits"], "published": false}
+  ],
+  "rules": {"profile_creation": false, "directory_mutation": false}
+}

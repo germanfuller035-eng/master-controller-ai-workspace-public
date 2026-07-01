@@ -1,0 +1,26 @@
+{
+  "synthetic": true,
+  "stop_active": true,
+  "blocked_actions": [
+    "outbound_send",
+    "browser_action",
+    "voice_risky_action",
+    "payment_operation",
+    "production_deploy",
+    "production_db_write"
+  ],
+  "queues": {
+    "outbound": "DISABLED",
+    "browser_action": "DISABLED",
+    "payment": "DISABLED",
+    "production_write": "DISABLED"
+  },
+  "active_approvals": "REVOKED",
+  "evidence": [
+    {
+      "id": "ev-owner-control-synthetic",
+      "source": "synthetic_fixture",
+      "claim": "Local synthetic owner-control evidence."
+    }
+  ]
+}

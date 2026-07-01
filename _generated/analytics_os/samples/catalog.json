@@ -1,0 +1,462 @@
+{
+  "schema": "analytics_os.metric_catalog.v1",
+  "version": "1.0",
+  "note": "Single Metric Catalog. References domain-OS formulas by source; does NOT redefine domain formulas. Categories cover the full OS chain. All values derived read-only.",
+  "categories": [
+    "MASTER_CONTROLLER",
+    "REVENUE",
+    "DELIVERY",
+    "FINANCE",
+    "PRODUCT",
+    "CUSTOMER_SUCCESS",
+    "EXECUTIVE",
+    "AI_HQ",
+    "SYSTEM_HEALTH"
+  ],
+  "metrics": [
+    {
+      "metric_id": "mc_leads_canonical",
+      "name": "Canonical leads",
+      "definition": "Count of canonical leads in Master Controller store",
+      "category": "MASTER_CONTROLLER",
+      "type": "count",
+      "unit": "leads",
+      "formula": "count(canonical_lead)",
+      "source_system": "Master_Controller",
+      "source_fields": [
+        "canonical_lead_id"
+      ],
+      "dimensions": [
+        "source",
+        "status"
+      ],
+      "time_grain": "snapshot",
+      "status_semantics": "CONFIRMED operational count",
+      "refresh_policy": "snapshot-only (no live read in this build)",
+      "confidence": "SYNTHETIC",
+      "owner": "Master_Controller"
+    },
+    {
+      "metric_id": "mc_verified_rate",
+      "name": "Verified rate",
+      "definition": "Share of candidates reaching identity+contact verified",
+      "category": "MASTER_CONTROLLER",
+      "type": "ratio",
+      "unit": "ratio",
+      "formula": "verified / candidates",
+      "source_system": "Master_Controller",
+      "source_fields": [
+        "candidate_count",
+        "verified_count"
+      ],
+      "dimensions": [
+        "source"
+      ],
+      "time_grain": "snapshot",
+      "status_semantics": "derived",
+      "refresh_policy": "snapshot",
+      "confidence": "SYNTHETIC",
+      "owner": "Analytics_OS"
+    },
+    {
+      "metric_id": "rev_pipeline_expected",
+      "name": "Expected pipeline deals",
+      "definition": "Expected deals from funnel",
+      "category": "REVENUE",
+      "type": "count",
+      "unit": "deals",
+      "formula": "Revenue OS funnel expected_deals",
+      "source_system": "Revenue_OS",
+      "source_fields": [
+        "funnel.expected_deals"
+      ],
+      "dimensions": [
+        "product",
+        "source"
+      ],
+      "time_grain": "monthly",
+      "status_semantics": "MODEL_ESTIMATE",
+      "refresh_policy": "monthly",
+      "confidence": "MODEL_ESTIMATE",
+      "owner": "Revenue_OS"
+    },
+    {
+      "metric_id": "rev_conversion_to_paid",
+      "name": "Conversion to paid",
+      "definition": "Paid deals / contacted",
+      "category": "REVENUE",
+      "type": "ratio",
+      "unit": "ratio",
+      "formula": "paid / contacted",
+      "source_system": "Revenue_OS",
+      "source_fields": [
+        "funnel.paid",
+        "funnel.contacted"
+      ],
+      "dimensions": [
+        "product"
+      ],
+      "time_grain": "monthly",
+      "status_semantics": "derived",
+      "refresh_policy": "monthly",
+      "confidence": "MODEL_ESTIMATE",
+      "owner": "Revenue_OS"
+    },
+    {
+      "metric_id": "del_acceptance_rate",
+      "name": "Delivery acceptance rate",
+      "definition": "Accepted deliverables / completed",
+      "category": "DELIVERY",
+      "type": "ratio",
+      "unit": "ratio",
+      "formula": "accepted / completed",
+      "source_system": "Delivery_OS",
+      "source_fields": [
+        "projects.accepted",
+        "projects.completed"
+      ],
+      "dimensions": [
+        "product"
+      ],
+      "time_grain": "monthly",
+      "status_semantics": "MODEL_ESTIMATE",
+      "refresh_policy": "monthly",
+      "confidence": "MODEL_ESTIMATE",
+      "owner": "Delivery_OS"
+    },
+    {
+      "metric_id": "del_cycle_time",
+      "name": "Delivery cycle time",
+      "definition": "Days from project start to acceptance",
+      "category": "DELIVERY",
+      "type": "duration",
+      "unit": "days",
+      "formula": "accepted_date - start_date",
+      "source_system": "Delivery_OS",
+      "source_fields": [
+        "project.start_date",
+        "project.accepted_date"
+      ],
+      "dimensions": [
+        "product"
+      ],
+      "time_grain": "per_project",
+      "status_semantics": "derived",
+      "refresh_policy": "per_project",
+      "confidence": "SYNTHETIC",
+      "owner": "Delivery_OS"
+    },
+    {
+      "metric_id": "fin_booked_revenue",
+      "name": "Booked revenue",
+      "definition": "Revenue from won deals",
+      "category": "FINANCE",
+      "type": "currency",
+      "unit": "EUR",
+      "formula": "Finance OS booked_revenue",
+      "source_system": "Finance_OS",
+      "source_fields": [
+        "deal.value"
+      ],
+      "dimensions": [
+        "product",
+        "client"
+      ],
+      "time_grain": "monthly",
+      "status_semantics": "OWNER_TARGET until confirmed",
+      "refresh_policy": "monthly",
+      "confidence": "OWNER_TARGET",
+      "owner": "Finance_OS"
+    },
+    {
+      "metric_id": "fin_cash_collected",
+      "name": "Cash collected",
+      "definition": "Confirmed payments received",
+      "category": "FINANCE",
+      "type": "currency",
+      "unit": "EUR",
+      "formula": "Finance OS cash_collected",
+      "source_system": "Finance_OS",
+      "source_fields": [
+        "payment.amount"
+      ],
+      "dimensions": [
+        "client"
+      ],
+      "time_grain": "monthly",
+      "status_semantics": "CONFIRMED",
+      "refresh_policy": "monthly",
+      "confidence": "CONFIRMED",
+      "owner": "Finance_OS"
+    },
+    {
+      "metric_id": "fin_overdue_receivables",
+      "name": "Overdue receivables",
+      "definition": "Receivables past due",
+      "category": "FINANCE",
+      "type": "currency",
+      "unit": "EUR",
+      "formula": "receivables where due<now",
+      "source_system": "Finance_OS",
+      "source_fields": [
+        "invoice.total",
+        "invoice.due_date",
+        "payment.confirmed"
+      ],
+      "dimensions": [
+        "client"
+      ],
+      "time_grain": "weekly",
+      "status_semantics": "CONFIRMED",
+      "refresh_policy": "weekly",
+      "confidence": "CONFIRMED",
+      "owner": "Finance_OS"
+    },
+    {
+      "metric_id": "fin_cash_runway",
+      "name": "Cash runway",
+      "definition": "Months of fixed costs covered by cash",
+      "category": "FINANCE",
+      "type": "duration",
+      "unit": "months",
+      "formula": "cash / monthly_fixed_costs",
+      "source_system": "Finance_OS",
+      "source_fields": [
+        "cash",
+        "monthly_fixed_costs"
+      ],
+      "dimensions": [],
+      "time_grain": "monthly",
+      "status_semantics": "MODEL_ESTIMATE",
+      "refresh_policy": "monthly",
+      "confidence": "MODEL_ESTIMATE",
+      "owner": "Finance_OS"
+    },
+    {
+      "metric_id": "fin_forecast_error",
+      "name": "Forecast error (MAPE)",
+      "definition": "Mean abs pct error forecast vs actual",
+      "category": "FINANCE",
+      "type": "ratio",
+      "unit": "ratio",
+      "formula": "mean(|actual-forecast|/actual)",
+      "source_system": "Analytics_OS",
+      "source_fields": [
+        "forecast",
+        "actual"
+      ],
+      "dimensions": [
+        "metric"
+      ],
+      "time_grain": "monthly",
+      "status_semantics": "derived",
+      "refresh_policy": "monthly",
+      "confidence": "MODEL_ESTIMATE",
+      "owner": "Analytics_OS"
+    },
+    {
+      "metric_id": "prod_active_products",
+      "name": "Active products",
+      "definition": "Count of ACTIVE sellable products",
+      "category": "PRODUCT",
+      "type": "count",
+      "unit": "products",
+      "formula": "count(product where state=ACTIVE)",
+      "source_system": "Product_OS",
+      "source_fields": [
+        "product.state"
+      ],
+      "dimensions": [],
+      "time_grain": "monthly",
+      "status_semantics": "CONFIRMED",
+      "refresh_policy": "monthly",
+      "confidence": "SYNTHETIC",
+      "owner": "Product_OS"
+    },
+    {
+      "metric_id": "prod_pilot_pass_rate",
+      "name": "Pilot pass rate",
+      "definition": "PASSED pilots / completed pilots",
+      "category": "PRODUCT",
+      "type": "ratio",
+      "unit": "ratio",
+      "formula": "pilots_passed / pilots_completed",
+      "source_system": "Product_OS",
+      "source_fields": [
+        "pilot.outcome"
+      ],
+      "dimensions": [
+        "product"
+      ],
+      "time_grain": "monthly",
+      "status_semantics": "derived",
+      "refresh_policy": "monthly",
+      "confidence": "SYNTHETIC",
+      "owner": "Product_OS"
+    },
+    {
+      "metric_id": "prod_readiness_score",
+      "name": "Product readiness score",
+      "definition": "Readiness across assessed dimensions",
+      "category": "PRODUCT",
+      "type": "score",
+      "unit": "score",
+      "formula": "mean(readiness_dimension)",
+      "source_system": "Product_OS",
+      "source_fields": [
+        "readiness.dimensions"
+      ],
+      "dimensions": [
+        "product"
+      ],
+      "time_grain": "snapshot",
+      "status_semantics": "MODEL_ESTIMATE",
+      "refresh_policy": "snapshot",
+      "confidence": "SYNTHETIC",
+      "owner": "Product_OS"
+    },
+    {
+      "metric_id": "cs_adoption_rate",
+      "name": "Adoption rate",
+      "definition": "Customers reaching adoption / onboarded",
+      "category": "CUSTOMER_SUCCESS",
+      "type": "ratio",
+      "unit": "ratio",
+      "formula": "adopted / onboarded",
+      "source_system": "Customer_Success_OS",
+      "source_fields": [
+        "customer.status",
+        "customer.adoption"
+      ],
+      "dimensions": [
+        "product"
+      ],
+      "time_grain": "monthly",
+      "status_semantics": "derived",
+      "refresh_policy": "monthly",
+      "confidence": "SYNTHETIC",
+      "owner": "Customer_Success_OS"
+    },
+    {
+      "metric_id": "cs_health_at_risk",
+      "name": "At-risk customers",
+      "definition": "Customers with AT_RISK or worse health",
+      "category": "CUSTOMER_SUCCESS",
+      "type": "count",
+      "unit": "customers",
+      "formula": "count(health in {AT_RISK,CRITICAL})",
+      "source_system": "Customer_Success_OS",
+      "source_fields": [
+        "customer.health"
+      ],
+      "dimensions": [
+        "product"
+      ],
+      "time_grain": "snapshot",
+      "status_semantics": "derived",
+      "refresh_policy": "snapshot",
+      "confidence": "SYNTHETIC",
+      "owner": "Customer_Success_OS"
+    },
+    {
+      "metric_id": "cs_churn_count",
+      "name": "Churn count",
+      "definition": "Customers churned in period",
+      "category": "CUSTOMER_SUCCESS",
+      "type": "count",
+      "unit": "customers",
+      "formula": "count(churn_recorded)",
+      "source_system": "Customer_Success_OS",
+      "source_fields": [
+        "customer.status"
+      ],
+      "dimensions": [
+        "product"
+      ],
+      "time_grain": "monthly",
+      "status_semantics": "CONFIRMED",
+      "refresh_policy": "monthly",
+      "confidence": "SYNTHETIC",
+      "owner": "Customer_Success_OS"
+    },
+    {
+      "metric_id": "exec_decision_backlog",
+      "name": "Decision backlog",
+      "definition": "Open decisions awaiting owner",
+      "category": "EXECUTIVE",
+      "type": "count",
+      "unit": "decisions",
+      "formula": "count(decision where status in {OPEN,READY_FOR_OWNER})",
+      "source_system": "Executive_OS",
+      "source_fields": [
+        "decision.status"
+      ],
+      "dimensions": [
+        "category"
+      ],
+      "time_grain": "snapshot",
+      "status_semantics": "derived",
+      "refresh_policy": "snapshot",
+      "confidence": "SYNTHETIC",
+      "owner": "Executive_OS"
+    },
+    {
+      "metric_id": "exec_owner_attention_load",
+      "name": "Owner attention load",
+      "definition": "Owner attention utilization / overload risk",
+      "category": "EXECUTIVE",
+      "type": "index",
+      "unit": "index",
+      "formula": "Executive attention budget overload_risk",
+      "source_system": "Executive_OS",
+      "source_fields": [
+        "attention.overload_risk"
+      ],
+      "dimensions": [],
+      "time_grain": "weekly",
+      "status_semantics": "UNKNOWN until capacity confirmed",
+      "refresh_policy": "weekly",
+      "confidence": "UNKNOWN",
+      "owner": "Executive_OS"
+    },
+    {
+      "metric_id": "hq_active_projects",
+      "name": "Active projects",
+      "definition": "Projects in ACTIVE state in registry",
+      "category": "AI_HQ",
+      "type": "count",
+      "unit": "projects",
+      "formula": "count(project where state=ACTIVE)",
+      "source_system": "AI_HQ",
+      "source_fields": [
+        "project.state"
+      ],
+      "dimensions": [],
+      "time_grain": "snapshot",
+      "status_semantics": "CONFIRMED",
+      "refresh_policy": "snapshot",
+      "confidence": "SYNTHETIC",
+      "owner": "AI_HQ"
+    },
+    {
+      "metric_id": "sys_backup_health",
+      "name": "Backup health",
+      "definition": "Backup verify pass + recency",
+      "category": "SYSTEM_HEALTH",
+      "type": "boolean",
+      "unit": "bool",
+      "formula": "backup_verify AND recent",
+      "source_system": "Master_Controller",
+      "source_fields": [
+        "backup.verify",
+        "backup.timestamp"
+      ],
+      "dimensions": [],
+      "time_grain": "weekly",
+      "status_semantics": "CONFIRMED",
+      "refresh_policy": "weekly",
+      "confidence": "SYNTHETIC",
+      "owner": "Master_Controller"
+    }
+  ]
+}

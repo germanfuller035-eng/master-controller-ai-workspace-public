@@ -1,0 +1,99 @@
+{
+  "daily_cap_states": [
+    {
+      "channel": "MAIL_DRAFT",
+      "daily_cap": 2,
+      "synthetic": true,
+      "used_today": 0
+    },
+    {
+      "channel": "FORM_DRAFT",
+      "daily_cap": 2,
+      "synthetic": true,
+      "used_today": 0
+    },
+    {
+      "channel": "TELEGRAM_RESERVE",
+      "daily_cap": 2,
+      "synthetic": true,
+      "used_today": 0
+    },
+    {
+      "channel": "SOCIAL_DRAFT",
+      "daily_cap": 2,
+      "synthetic": true,
+      "used_today": 0
+    }
+  ],
+  "draft_contexts": [
+    {
+      "available_channels": [
+        "MAIL_DRAFT",
+        "FORM_DRAFT"
+      ],
+      "body": "Synthetic email draft only. No send.",
+      "contact_ref": "reserved-mailbox-alpha",
+      "draft_ref": "synthetic-mail-alpha",
+      "lead_ref": "synthetic-lead-alpha",
+      "preferred_channel": "MAIL_DRAFT",
+      "subject": "Synthetic local mail draft",
+      "synthetic": true
+    },
+    {
+      "available_channels": [
+        "FORM_DRAFT",
+        "MAIL_DRAFT"
+      ],
+      "contact_ref": "reserved-form-contact-alpha",
+      "draft_ref": "synthetic-form-alpha",
+      "form_fields": {
+        "message": "Synthetic form preview only. No submit.",
+        "name_ref": "synthetic-owner"
+      },
+      "form_ref": "reserved-form-alpha",
+      "lead_ref": "synthetic-lead-beta",
+      "preferred_channel": "FORM_DRAFT",
+      "synthetic": true
+    },
+    {
+      "available_channels": [
+        "TELEGRAM_RESERVE"
+      ],
+      "body": "Synthetic Telegram reserve notice only.",
+      "contact_ref": "reserved-telegram-contact-alpha",
+      "draft_ref": "synthetic-telegram-alpha",
+      "lead_ref": "synthetic-lead-gamma",
+      "preferred_channel": "TELEGRAM_RESERVE",
+      "synthetic": true,
+      "telegram_ref": "reserved-telegram-alpha"
+    },
+    {
+      "available_channels": [
+        "SOCIAL_DRAFT"
+      ],
+      "body": "Synthetic social draft contract only. No publish.",
+      "contact_ref": "reserved-social-contact-alpha",
+      "draft_ref": "synthetic-social-alpha",
+      "lead_ref": "synthetic-lead-delta",
+      "preferred_channel": "SOCIAL_DRAFT",
+      "social_ref": "reserved-social-alpha",
+      "synthetic": true
+    }
+  ],
+  "reply_fixtures": [
+    "tests/fixtures/multichannel/replies/synthetic_positive_reply.json",
+    "tests/fixtures/multichannel/replies/synthetic_negative_reply.json",
+    "tests/fixtures/multichannel/replies/synthetic_question_reply.json",
+    "tests/fixtures/multichannel/replies/synthetic_spam_reply.json"
+  ],
+  "suppression_entries": [
+    {
+      "active": true,
+      "contact_ref": "reserved-suppressed-contact",
+      "reason": "synthetic suppression contract",
+      "synthetic": true
+    }
+  ],
+  "synthetic": true,
+  "synthetic_batch": true
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": "finance.payment_preparation.v1",
+  "synthetic": true,
+  "payment_preparation_id": "synthetic-payment-preparation-alpha",
+  "source_invoice_draft_id": "synthetic-invoice-draft-alpha",
+  "preparation_only": true,
+  "execution_allowed": false,
+  "provider_enabled": false,
+  "payment_provider": "NONE",
+  "owner_approval_required_for_future_payment": true,
+  "currency": "SYNTHETIC_UNITS",
+  "amount": 1200,
+  "payment_reference": "synthetic-payment-reference-alpha",
+  "payload_hash": ""
+}

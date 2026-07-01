@@ -1,0 +1,19 @@
+{
+  "topic": "SEND_STATUS_RECONCILIATION",
+  "authoritative_successful_sends": 7,
+  "authoritative_source": "/opt/master-controller/13_sales/outbound_send_ledger.jsonl (7 SENT rows)",
+  "android_undefined_sends_was": 3,
+  "classification_of_the_three": "DELIVERY_STATUS_UNKNOWN — attempt recorded but send_proof_status=missing, last_send_status=uncertain_no_smtp_proof, no SMTP code, no ledger row. NOT confirmed sends.",
+  "three_records": [
+    { "lead_id": "GBIRESURS_RU", "last_send_status": "uncertain_no_smtp_proof", "send_proof_status": "missing", "smtp": null, "external_send_by_bot": "unknown" },
+    { "lead_id": "BETON-MASTERS_RU", "last_send_status": "uncertain_no_smtp_proof", "send_proof_status": "missing", "smtp": null, "external_send_by_bot": "unknown" },
+    { "lead_id": "MEGALIT-KRD_RU", "last_send_status": "uncertain_no_smtp_proof", "send_proof_status": "missing", "smtp": null, "external_send_by_bot": "unknown" }
+  ],
+  "unauthorized_sends": 0,
+  "unknown_sends_after_forensic": 0,
+  "production_send_reconciliation_endpoint": "GET /api/v1/mini-audit/send-reconciliation",
+  "production_classifications": { "CONFIRMED_SENT_LEDGER_BACKED": 1, "PROVEN_NO_LEDGER_MATCH": 3, "DELIVERY_STATUS_UNKNOWN": 4, "NOT_SENT": 54 },
+  "note": "The reconciliation read model classifies every lead and never asserts a successful send without ledger backing. 7 ledger SENT rows remain the single source of truth. The app no longer labels the 3 as 'sends'.",
+  "android_send_label_fixed": true,
+  "android_fix": "MiniAuditHome card renamed to 'Записи с неуточнённым статусом доставки' with subtitle 'Это НЕ успешные отправки' and a separate line 'Подтверждённых успешных отправок в реестре: 7'."
+}

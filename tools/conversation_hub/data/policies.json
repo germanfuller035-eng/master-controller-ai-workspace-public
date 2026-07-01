@@ -1,0 +1,70 @@
+{
+  "schema": "conversation_hub.policies.v1",
+  "synthetic": true,
+  "note": "MP21-24, MP27-28, MP33-34 policy + contract data. Descriptive only; no runtime, no emitter, no network.",
+  "attachment_model": {
+    "supported_types": ["PDF", "image", "document", "spreadsheet", "archive", "unknown"],
+    "rules": ["no binary duplication in conversation store", "File Vault reference only", "checksum required", "MIME validation", "size limit enforced", "sensitivity classified", "malware-scan contract future", "no automatic opening", "no secret extraction", "no publication"],
+    "size_limit_bytes": 26214400,
+    "scan_status_vocabulary": ["NOT_SCANNED", "SCAN_CONTRACT_PENDING", "CLEAN_REFERENCE", "FLAGGED_REFERENCE"]
+  },
+  "privacy_redaction": {
+    "redact": ["passwords", "api_keys", "tokens", "private_keys", "banking_credentials", "card_numbers", "iban", "sensitive_personal_information", "unnecessary phone/email in analytics views", "medical/legal special-category data outside authorized scope"],
+    "store": ["canonical references", "masked identifiers", "provenance", "minimum necessary text"],
+    "never_store": ["raw production message bodies", "secret values", "binary attachments"]
+  },
+  "retention": {
+    "note": "No automatic deletion. Deletion requires policy + owner approval + canonical impact review + backup consideration.",
+    "entities": [
+      { "entity": "raw_envelopes", "retention": "NOT_STORED (reference only)", "auto_delete": false },
+      { "entity": "normalized_messages", "retention": "view-level, owner-defined", "auto_delete": false },
+      { "entity": "drafts", "retention": "until superseded/expired; never persisted to 13_sales", "auto_delete": false },
+      { "entity": "approvals", "retention": "canonical (Master Controller)", "auto_delete": false },
+      { "entity": "attachments", "retention": "reference + metadata only", "auto_delete": false },
+      { "entity": "delivery_receipts", "retention": "canonical (Master Controller)", "auto_delete": false },
+      { "entity": "opt_outs", "retention": "canonical (Master Controller); recommendation copy view-level", "auto_delete": false },
+      { "entity": "summaries", "retention": "regenerated; invalidated on revision", "auto_delete": false },
+      { "entity": "analytics_events", "retention": "Analytics OS policy", "auto_delete": false },
+      { "entity": "audit_logs", "retention": "append-only", "auto_delete": false }
+    ]
+  },
+  "search_index_contract": {
+    "note": "Local SYNTHETIC index. No semantic embedding service. No external vector DB. No production indexing.",
+    "indexable_fields": ["conversation_id", "canonical_lead_id", "product", "deal", "project", "channel", "date", "intent", "status", "owner_action"],
+    "backend": "in-memory derived index over synthetic fixtures",
+    "external_services": "NONE"
+  },
+  "priority_model": {
+    "levels": ["P0_CRITICAL", "P1_HIGH", "P2_NORMAL", "P3_LOW", "REVIEW_REQUIRED"],
+    "factors": ["message intent", "customer state", "incident severity", "deal stage", "overdue reply", "payment risk", "opt-out", "owner capacity", "support SLA"],
+    "note": "No contractual SLA invented. Priority is a recommendation."
+  },
+  "channel_health": {
+    "note": "In this task ALL live channels are NOT_CONNECTED. Never marked healthy from contract tests alone.",
+    "signals": ["adapter configured", "credentials reference present", "last inbound success", "last outbound success", "rate limit", "webhook/poller status", "queue depth", "failures", "duplicate poller risk"],
+    "channels": [
+      { "channel_id": "EMAIL", "status": "NOT_CONNECTED", "read_only": true, "credentials_state_reference": "MC env (not read by Hub)", "duplicate_poller_risk": "MC owns the only reader" },
+      { "channel_id": "TELEGRAM", "status": "NOT_CONNECTED", "read_only": true, "credentials_state_reference": "MC env (not read by Hub)", "duplicate_poller_risk": "MC owns the only poller" },
+      { "channel_id": "WEB_FORM", "status": "NOT_CONNECTED", "read_only": true, "credentials_state_reference": "none", "duplicate_poller_risk": "n/a" },
+      { "channel_id": "MAX_FUTURE", "status": "NOT_CONNECTED", "read_only": true, "credentials_state_reference": "none", "duplicate_poller_risk": "n/a" },
+      { "channel_id": "WHATSAPP_OFFICIAL_FUTURE", "status": "NOT_CONNECTED", "read_only": true, "credentials_state_reference": "none", "duplicate_poller_risk": "n/a" }
+    ]
+  },
+  "domain_integrations": {
+    "AI_HQ": { "consumes": ["project/context/task references"], "provides": ["conversation-hub project reference"] },
+    "GROWTH_OS": { "consumes": ["campaign_id", "segment", "acquisition intent"], "provides": ["draft request (campaign first-contact)", "opt-out recommendation"] },
+    "REVENUE_OS": { "consumes": ["offer", "deal", "price"], "provides": ["sales reply routing", "draft request"] },
+    "DELIVERY_OS": { "consumes": ["project update", "change request", "acceptance communication"], "provides": ["project comms routing"] },
+    "FINANCE_OS": { "consumes": ["invoice/payment facts"], "provides": ["billing reply routing + draft request"] },
+    "CUSTOMER_SUCCESS_OS": { "consumes": ["support", "onboarding", "renewal", "expansion"], "provides": ["support routing", "opt-out handling recommendation"] },
+    "PRODUCT_OS": { "consumes": ["product claims", "limitations", "current version"], "provides": ["claim validation for drafts"] },
+    "ANALYTICS_OS": { "consumes": [], "provides": ["conversation events + metrics contract (no emitter)"] },
+    "EXECUTIVE_OS": { "consumes": ["owner priority"], "provides": ["escalations", "decision requests"] },
+    "MASTER_CONTROLLER": { "consumes": ["canonical identity/approval/reply/send state"], "provides": ["draft request + approval display + opt-out recommendation only; never mutates"] }
+  },
+  "analytics_contract": {
+    "note": "Contracts only. No emitter in this task.",
+    "events": ["conversation_created", "inbound_normalized", "duplicate_detected", "identity_resolved", "classification_completed", "draft_created", "approval_requested", "approval_reference_updated", "opt_out_detected", "routing_completed", "channel_failure_detected"],
+    "metrics": ["conversations", "inbound_volume", "reply_required_volume", "classification_confidence", "manual_review_rate", "response_time", "approval_time", "duplicate_rate", "unmatched_identity_rate", "opt_out_rate", "channel_failure_rate"]
+  }
+}

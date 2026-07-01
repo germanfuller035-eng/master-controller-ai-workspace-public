@@ -1,0 +1,23 @@
+{
+  "stop_state": "INACTIVE",
+  "workflows": [
+    {"id": "wf-r0", "risk": "R0", "status": "RUNNING"},
+    {"id": "wf-r4", "risk": "R4", "status": "RUNNING", "action": "outbound_send"},
+    {"id": "wf-r5", "risk": "R5", "status": "RUNNING", "action": "payment_operation"}
+  ],
+  "approvals": [
+    {"approval_id": "appr-r4-1", "payload_hash": "0000000000000000000000000000000000000000000000000000000000000000", "revoked": false, "status": "ACTIVE"}
+  ],
+  "feature_flags": {
+    "OUTBOUND_EMAIL": "OFF",
+    "PRODUCTION_DB_WRITE": "OFF",
+    "PAYMENTS": "OFF",
+    "MCP_WRITE": "OFF"
+  },
+  "queues": {
+    "outbound": {"enabled": true, "items": [{"id": "send-1", "recipient": "lead@example.test"}]},
+    "production_write": {"enabled": true, "items": [{"id": "write-1"}]},
+    "payment": {"enabled": true, "items": [{"id": "pay-1"}]},
+    "browser_action": {"enabled": true, "items": [{"id": "browser-1"}]}
+  }
+}

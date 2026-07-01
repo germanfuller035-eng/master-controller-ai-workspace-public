@@ -1,0 +1,191 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://master-controller.local/schemas/commercial/exa_research_result.schema.json",
+  "title": "exa_research_result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "research_task_id",
+    "lead_id",
+    "company_name",
+    "website",
+    "source_type",
+    "facts",
+    "buying_signals",
+    "contact_candidates",
+    "risk_flags",
+    "recommended_next_action",
+    "do_not_contact"
+  ],
+  "properties": {
+    "research_task_id": {
+      "type": "string"
+    },
+    "lead_id": {
+      "type": "string"
+    },
+    "company_name": {
+      "type": "string"
+    },
+    "website": {
+      "type": "string"
+    },
+    "source_type": {
+      "const": "public_web_research"
+    },
+    "facts": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/fact"
+      }
+    },
+    "buying_signals": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/buying_signal"
+      }
+    },
+    "contact_candidates": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/contact_candidate"
+      }
+    },
+    "risk_flags": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/risk_flag"
+      }
+    },
+    "recommended_next_action": {
+      "type": "string"
+    },
+    "do_not_contact": {
+      "type": "boolean"
+    }
+  },
+  "$defs": {
+    "confidence": {
+      "enum": ["low", "medium", "high"]
+    },
+    "status": {
+      "enum": ["candidate", "confirmed"]
+    },
+    "required_source_url": {
+      "type": "string",
+      "minLength": 1
+    },
+    "fact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["fact_type", "fact_value", "source_url", "source_title", "evidence_snippet", "confidence", "status"],
+      "properties": {
+        "fact_type": {
+          "type": "string"
+        },
+        "fact_value": {
+          "type": "string"
+        },
+        "source_url": {
+          "$ref": "#/$defs/required_source_url"
+        },
+        "source_title": {
+          "type": "string"
+        },
+        "evidence_snippet": {
+          "type": "string"
+        },
+        "confidence": {
+          "$ref": "#/$defs/confidence"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "buying_signal": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "signal_type",
+        "signal_description",
+        "source_url",
+        "source_title",
+        "evidence_snippet",
+        "confidence",
+        "score_impact",
+        "status"
+      ],
+      "properties": {
+        "signal_type": {
+          "type": "string"
+        },
+        "signal_description": {
+          "type": "string"
+        },
+        "source_url": {
+          "$ref": "#/$defs/required_source_url"
+        },
+        "source_title": {
+          "type": "string"
+        },
+        "evidence_snippet": {
+          "type": "string"
+        },
+        "confidence": {
+          "$ref": "#/$defs/confidence"
+        },
+        "score_impact": {
+          "type": "number"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "contact_candidate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["contact_type", "value", "source_url", "source_title", "confidence", "status"],
+      "properties": {
+        "contact_type": {
+          "enum": ["email", "phone", "contact_page", "form", "official_social"]
+        },
+        "value": {
+          "type": "string"
+        },
+        "source_url": {
+          "$ref": "#/$defs/required_source_url"
+        },
+        "source_title": {
+          "type": "string"
+        },
+        "confidence": {
+          "$ref": "#/$defs/confidence"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        }
+      }
+    },
+    "risk_flag": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["risk_type", "description", "severity", "source_url"],
+      "properties": {
+        "risk_type": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "severity": {
+          "enum": ["low", "medium", "high"]
+        },
+        "source_url": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

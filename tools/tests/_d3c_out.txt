@@ -1,0 +1,16 @@
+
+=== D3C prepare-adapter offline tests ===
+✅ shouldRouteToPrepare matches /lead_import_prepare only
+✅ parsePrepareCommand splits command from payload
+✅ buildPendingCard sets PENDING + safety flags
+✅ buildPendingCard QA FAIL + valid>0 carries warning flags
+✅ missing text → usage, no queue file created
+✅ non-owner → refused, no mutation
+✅ valid text → exactly one PENDING card
+✅ backup created before write when queue exists
+✅ atomic write: no leftover .tmp- files, card present
+✅ duplicate identical text → refused, no overwrite
+✅ no leads_master / lead_contacts / events writes in sandbox
+✅ PREPARE_SAFETY frozen with BLOCKED flags
+
+12 passed, 0 failed

@@ -1,0 +1,14 @@
+{
+  "record_id": "qdrant_contract_fixture_001",
+  "artifact_id": "artifact_synthetic_public_001",
+  "payload": {
+    "source_id": "src_synthetic_public_001",
+    "data_class": "SYNTHETIC_PUBLIC",
+    "provenance_id": "prov_synthetic_001",
+    "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+  "embedding_id": "fake_embedding_fixture_001",
+  "adapter_status": "CONTRACT_ONLY_NOT_DEPLOYED",
+  "network_connection_attempted": false,
+  "real_embedding_used": false
+}

@@ -1,0 +1,21 @@
+{
+  "schema": "orchestrator_os.owner_command_center.v1",
+  "generated_ts": "20260617_000000",
+  "synthetic": true,
+  "highest_priority_owner_gate": "TEST_t08",
+  "highest_risk_task": "TEST_t09 (R6_EXTERNAL_COMMUNICATION)",
+  "largest_token_estimate": "UNKNOWN (no real runs; estimates only)",
+  "duplicate_task_prevented": "yes (anti-loop BLOCK_DUPLICATE)",
+  "failed_verification": "present",
+  "dead_letter": "present",
+  "task_ready_for_safe_local_execution": "TEST_t01",
+  "production_request_intentionally_blocked": "TEST_t09",
+  "next_orchestration_action": "Owner: review owner-gated tasks; all R3+ remain contract/policy-only this block",
+  "intentionally_not_done": [
+    "no real agent launched",
+    "no scheduler created",
+    "no background process",
+    "no production/network/send",
+    "no proposed doc applied"
+  ]
+}

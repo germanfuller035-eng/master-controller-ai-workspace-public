@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-26",
+  "session": "VOLTAGENT_RUNTIME_MODEL_ROUTER_AND_COST_GOVERNOR_V1",
+  "currency": "RUB_EQUIVALENT",
+  "default_task_budget_rub": 300,
+  "limits": [
+    {"task_type": "classification", "max_task_budget_rub": 50, "requires_stop_loss": false},
+    {"task_type": "routine", "max_task_budget_rub": 300, "requires_stop_loss": false},
+    {"task_type": "critical", "max_task_budget_rub": 2500, "requires_stop_loss": true},
+    {"task_type": "coding", "max_task_budget_rub": 3000, "requires_stop_loss": true},
+    {"task_type": "review", "max_task_budget_rub": 1800, "requires_stop_loss": true}
+  ]
+}

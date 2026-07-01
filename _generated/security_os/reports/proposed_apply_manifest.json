@@ -1,0 +1,355 @@
+{
+  "schema": "security_os.apply_manifest.v1",
+  "generated_ts": "20260617_000000",
+  "vault": "D:\\AI_WORKSPACE",
+  "apply_command": "AI_HQ_APPLY_OK=1 node tools/ai_hq/apply_canonical.mjs --apply  (owner only, post-review)",
+  "note": "Proposed security docs NOT applied. Production freeze in effect.",
+  "canonical_docs_applied": 0,
+  "total": 43,
+  "rows": [
+    {
+      "source_proposed": "docs_canonical_proposed/09_dashboards/owner_security_command_center.md",
+      "target_path": "09_dashboards/owner_security_command_center.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/09_dashboards/security_dashboard.md",
+      "target_path": "09_dashboards/security_dashboard.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/16_security/android_security_reconciliation.md",
+      "target_path": "16_security/android_security_reconciliation.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/16_security/api_security_standard.md",
+      "target_path": "16_security/api_security_standard.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/16_security/application_security_standard.md",
+      "target_path": "16_security/application_security_standard.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/16_security/audit_trail_standard.md",
+      "target_path": "16_security/audit_trail_standard.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/16_security/authentication_standard.md",
+      "target_path": "16_security/authentication_standard.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/16_security/authorization_standard.md",
+      "target_path": "16_security/authorization_standard.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/16_security/backup_security.md",
+      "target_path": "16_security/backup_security.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/16_security/communication_monitor_disposition_plan.md",
+      "target_path": "16_security/communication_monitor_disposition_plan.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/16_security/compliance_control_mapping.md",
+      "target_path": "16_security/compliance_control_mapping.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/16_security/consent_optout_reconciliation.md",
+      "target_path": "16_security/consent_optout_reconciliation.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/16_security/conversation_hub_security.md",
+      "target_path": "16_security/conversation_hub_security.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/16_security/credential_lifecycle.md",
+      "target_path": "16_security/credential_lifecycle.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/16_security/data_classification_mapping.md",
+      "target_path": "16_security/data_classification_mapping.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/16_security/data_exfiltration_policy.md",
+      "target_path": "16_security/data_exfiltration_policy.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/16_security/dependency_supply_chain_policy.md",
+      "target_path": "16_security/dependency_supply_chain_policy.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/16_security/email_imap_security.md",
+      "target_path": "16_security/email_imap_security.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/16_security/encryption_standard.md",
+      "target_path": "16_security/encryption_standard.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/16_security/file_attachment_security.md",
+      "target_path": "16_security/file_attachment_security.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/16_security/identity_role_standard.md",
+      "target_path": "16_security/identity_role_standard.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/16_security/incident_response.md",
+      "target_path": "16_security/incident_response.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/16_security/least_privilege_policy.md",
+      "target_path": "16_security/least_privilege_policy.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/16_security/logging_redaction_standard.md",
+      "target_path": "16_security/logging_redaction_standard.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/16_security/orchestration_security.md",
+      "target_path": "16_security/orchestration_security.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/16_security/privacy_impact_framework.md",
+      "target_path": "16_security/privacy_impact_framework.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/16_security/privacy_minimization_policy.md",
+      "target_path": "16_security/privacy_minimization_policy.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/16_security/prompt_injection_policy.md",
+      "target_path": "16_security/prompt_injection_policy.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/16_security/prompt_injection_report.md",
+      "target_path": "16_security/prompt_injection_report.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/16_security/retention_deletion_policy.md",
+      "target_path": "16_security/retention_deletion_policy.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/16_security/secrets_management_policy.md",
+      "target_path": "16_security/secrets_management_policy.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/16_security/secret_reference_registry.md",
+      "target_path": "16_security/secret_reference_registry.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/16_security/secure_configuration_standard.md",
+      "target_path": "16_security/secure_configuration_standard.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/16_security/security_asset_registry.md",
+      "target_path": "16_security/security_asset_registry.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/16_security/security_boundary_report.md",
+      "target_path": "16_security/security_boundary_report.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/16_security/security_control_plane_note.md",
+      "target_path": "16_security/security_control_plane_note.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/16_security/security_exception_policy.md",
+      "target_path": "16_security/security_exception_policy.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/16_security/security_ownership_matrix.md",
+      "target_path": "16_security/security_ownership_matrix.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/16_security/security_release_gate.md",
+      "target_path": "16_security/security_release_gate.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/16_security/telegram_security_reconciliation.md",
+      "target_path": "16_security/telegram_security_reconciliation.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/16_security/threat_model.md",
+      "target_path": "16_security/threat_model.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/16_security/vulnerability_management.md",
+      "target_path": "16_security/vulnerability_management.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/16_security/what_already_exists_links.md",
+      "target_path": "16_security/what_already_exists_links.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    }
+  ]
+}

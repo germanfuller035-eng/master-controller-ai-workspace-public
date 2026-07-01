@@ -1,0 +1,19 @@
+{
+  "$schema": "urn:json-schema:draft-2020-12",
+  "$id": "urn:master-controller:schemas:digital_presence:lead_system_architecture",
+  "title": "lead_system_architecture",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["artifact_id", "artifact_type", "draft_only"],
+  "properties": {
+    "artifact_id": {"type": "string"},
+    "artifact_type": {"const": "lead_system_architecture"},
+    "site_id": {"type": "string"},
+    "draft_only": {"type": "boolean"},
+    "crm_write_allowed": {"type": "boolean"},
+    "production_db_write_allowed": {"type": "boolean"},
+    "outbound_allowed": {"type": "boolean"},
+    "components": {"type": "array"},
+    "claims": {"type": "array"}
+  }
+}

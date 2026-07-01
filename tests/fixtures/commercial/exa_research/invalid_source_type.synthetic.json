@@ -1,0 +1,13 @@
+{
+  "research_task_id": "synthetic-research-task-005",
+  "lead_id": "synthetic-lead-exa-005",
+  "company_name": "Synthetic Wrong Source Company",
+  "website": "synthetic-wrong-source.test",
+  "source_type": "private_account_scrape",
+  "facts": [],
+  "buying_signals": [],
+  "contact_candidates": [],
+  "risk_flags": [],
+  "recommended_next_action": "manual_review_only",
+  "do_not_contact": false
+}

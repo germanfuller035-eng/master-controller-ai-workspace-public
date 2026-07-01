@@ -1,0 +1,8 @@
+{
+  "scenario": "C",
+  "name": "Duplicate task blocked",
+  "ok": true,
+  "steps": [
+    "anti-loop: BLOCK_DUPLICATE (identical objective already completed)"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "ok": true,
+  "status": "UNKNOWN",
+  "reason": "owner_weekly_hours not confirmed in canonical Revenue OS",
+  "input_fields_needed": [
+    "owner_weekly_hours",
+    "product_delivery_hours",
+    "ai_automation_pct"
+  ],
+  "max_parallel_projects": "UNKNOWN",
+  "max_monthly_volume": "UNKNOWN",
+  "bottleneck": "owner availability unknown",
+  "owner_workload": "UNKNOWN",
+  "ai_workload": "UNKNOWN",
+  "overload_risk": "UNKNOWN",
+  "recommended_product_mix": "define owner hours first",
+  "label": "UNKNOWN_INPUTS"
+}

@@ -1,0 +1,144 @@
+[
+  {
+    "experiment_id": "gx_positioning",
+    "campaign_id": "camp_mini_audit_inbound",
+    "hypothesis": "Problem-led positioning earns more requests than category-led",
+    "variants": [
+      "problem_led",
+      "category_led"
+    ],
+    "primary_metric": "request_rate",
+    "guardrails": [
+      "no unsupported claim",
+      "bounce<2%"
+    ],
+    "sample_requirement": 100,
+    "approval_state": "DRAFT",
+    "status": "READY"
+  },
+  {
+    "experiment_id": "gx_subject",
+    "campaign_id": "camp_mini_audit_outbound_draft",
+    "hypothesis": "Evidence-led subject lifts reply rate vs generic",
+    "variants": [
+      "evidence_led",
+      "generic"
+    ],
+    "primary_metric": "reply_rate",
+    "guardrails": [
+      "bounce<2%",
+      "opt-out honored"
+    ],
+    "sample_requirement": 100,
+    "approval_state": "DRAFT",
+    "status": "DRAFT"
+  },
+  {
+    "experiment_id": "gx_offer_length",
+    "campaign_id": "camp_mini_audit_inbound",
+    "hypothesis": "Concise offer converts better than long",
+    "variants": [
+      "concise",
+      "detailed"
+    ],
+    "primary_metric": "conversion",
+    "guardrails": [
+      "clarity preserved"
+    ],
+    "sample_requirement": 100,
+    "approval_state": "DRAFT",
+    "status": "READY"
+  },
+  {
+    "experiment_id": "gx_cta",
+    "campaign_id": "camp_mini_audit_inbound",
+    "hypothesis": "'Request a Mini Audit' beats 'Learn more'",
+    "variants": [
+      "request",
+      "learn_more"
+    ],
+    "primary_metric": "click_through",
+    "guardrails": [],
+    "sample_requirement": 100,
+    "approval_state": "DRAFT",
+    "status": "READY"
+  },
+  {
+    "experiment_id": "gx_routing",
+    "campaign_id": "camp_mini_audit_inbound",
+    "hypothesis": "Routing low-maturity leads to Presence Check (when ready) beats forcing Mini Audit",
+    "variants": [
+      "mini_audit",
+      "presence_check"
+    ],
+    "primary_metric": "qualified_fit",
+    "guardrails": [
+      "only route to READY products"
+    ],
+    "sample_requirement": 100,
+    "approval_state": "DRAFT",
+    "status": "DRAFT",
+    "blocked_reason": "presence_check PLANNED"
+  },
+  {
+    "experiment_id": "gx_landing_structure",
+    "campaign_id": "camp_mini_audit_inbound",
+    "hypothesis": "Evidence-first landing converts better than offer-first",
+    "variants": [
+      "evidence_first",
+      "offer_first"
+    ],
+    "primary_metric": "conversion",
+    "guardrails": [],
+    "sample_requirement": 100,
+    "approval_state": "DRAFT",
+    "status": "READY"
+  },
+  {
+    "experiment_id": "gx_lead_magnet",
+    "campaign_id": "camp_mini_audit_inbound",
+    "hypothesis": "Checklist magnet outperforms sample audit for capture",
+    "variants": [
+      "checklist",
+      "sample"
+    ],
+    "primary_metric": "download_rate",
+    "guardrails": [],
+    "sample_requirement": 100,
+    "approval_state": "DRAFT",
+    "status": "READY"
+  },
+  {
+    "experiment_id": "gx_followup_timing",
+    "campaign_id": "camp_mini_audit_outbound_draft",
+    "hypothesis": "3-day follow-up beats 7-day",
+    "variants": [
+      "3d",
+      "7d"
+    ],
+    "primary_metric": "reply_rate",
+    "guardrails": [
+      "max 1 follow-up",
+      "opt-out honored"
+    ],
+    "sample_requirement": 100,
+    "approval_state": "DRAFT",
+    "status": "DRAFT"
+  },
+  {
+    "experiment_id": "gx_insufficient_sample",
+    "campaign_id": "camp_mini_audit_inbound",
+    "hypothesis": "(demo) tiny-sample test",
+    "variants": [
+      "a",
+      "b"
+    ],
+    "primary_metric": "conversion",
+    "guardrails": [],
+    "sample_requirement": 100,
+    "current_sample": 12,
+    "approval_state": "DRAFT",
+    "status": "DRAFT",
+    "blocked_reason": "insufficient sample (12 < 100)"
+  }
+]

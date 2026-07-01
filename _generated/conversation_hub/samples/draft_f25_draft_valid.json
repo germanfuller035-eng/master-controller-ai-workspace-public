@@ -1,0 +1,34 @@
+{
+  "draft": {
+    "draft_id": "draft_f6fcae129e09",
+    "conversation_id": "c01",
+    "message_type": "REPLY",
+    "channel": "EMAIL",
+    "recipient_evidence": {
+      "verified": true,
+      "guessed": false,
+      "email_ref": "buyer@synthetic.test"
+    },
+    "subject": "Re: Мини-аудит",
+    "body": "Спасибо за интерес. Мини-аудит — 10000 ₽, evidence-backed findings.",
+    "claims": [
+      "mini_audit_price_10000"
+    ],
+    "evidence_refs": [
+      "revenue_catalog:mini_audit"
+    ],
+    "product_id": null,
+    "canonical_lead_id": "lead_c01",
+    "source_system": "REVENUE_OS",
+    "status": "INTERNAL_DRAFT",
+    "approval_required": true,
+    "send_allowed": false,
+    "revision": 1,
+    "synthetic": true
+  },
+  "validation": {
+    "ok": true,
+    "status": "READY_FOR_OWNER_REVIEW",
+    "errors": []
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "memory_record",
+  "type": "object",
+  "required": ["memory_id", "proposal_id", "claim", "source_id", "classification", "record_status"],
+  "properties": {
+    "memory_id": {"type": "string"},
+    "proposal_id": {"type": "string"},
+    "claim": {"type": "string"},
+    "source_id": {"type": "string"},
+    "classification": {"type": "string"},
+    "record_status": {"type": "string"}
+  },
+  "additionalProperties": true
+}

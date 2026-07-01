@@ -1,0 +1,84 @@
+{
+  "ok": true,
+  "errors": [],
+  "warnings": [],
+  "milestone_sequence": [
+    "ma1",
+    "ma2",
+    "ma3",
+    "ma4",
+    "ma5"
+  ],
+  "critical_path": [
+    "ma1",
+    "ma2",
+    "ma3",
+    "ma4",
+    "ma5"
+  ],
+  "estimated_duration_days": 1.2,
+  "timeline": [
+    {
+      "milestone_id": "ma1",
+      "name": "Identity & website verification",
+      "relative": "Day 0",
+      "owner": "claude",
+      "deliverables": [
+        "verified_identity_record"
+      ],
+      "qa_gate": false,
+      "acceptance_gate": false
+    },
+    {
+      "milestone_id": "ma2",
+      "name": "Evidence collection",
+      "relative": "after ma1",
+      "owner": "claude",
+      "deliverables": [
+        "evidence_register"
+      ],
+      "qa_gate": false,
+      "acceptance_gate": false
+    },
+    {
+      "milestone_id": "ma3",
+      "name": "Finding generation + dedup/conflict",
+      "relative": "after ma2",
+      "owner": "claude",
+      "deliverables": [
+        "findings_list"
+      ],
+      "qa_gate": true,
+      "acceptance_gate": false
+    },
+    {
+      "milestone_id": "ma4",
+      "name": "Business implications + recommendations",
+      "relative": "after ma3",
+      "owner": "claude",
+      "deliverables": [
+        "recommendations"
+      ],
+      "qa_gate": true,
+      "acceptance_gate": false
+    },
+    {
+      "milestone_id": "ma5",
+      "name": "Owner QA + client packaging",
+      "relative": "after owner approval",
+      "owner": "owner",
+      "deliverables": [
+        "audit_summary",
+        "priority_matrix",
+        "qa_report"
+      ],
+      "qa_gate": true,
+      "acceptance_gate": true
+    }
+  ],
+  "owner_checkpoints": [
+    "ma5"
+  ],
+  "client_checkpoints": [],
+  "note": "Relative timeline only. No exact client dates without approved start date."
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "site_id": "synthetic_site_website_fit",
+  "synthetic": true,
+  "external_access": false,
+  "browser_action_allowed": false,
+  "reserved_domain_reference": "synthetic-website-fit.example.test",
+  "synthetic_company_label": "Synthetic Website Fit Fixture",
+  "metrics": {
+    "response_time_ms": 3900,
+    "mobile_ready": false,
+    "message_clarity": 2,
+    "trust_proofs": 0
+  },
+  "lead_capture": {
+    "forms": 1,
+    "cta_count": 2,
+    "consent_copy": true,
+    "routing_defined": true,
+    "owner_followup_sla_minutes": 90
+  },
+  "front_office": {
+    "response_sla_minutes": 90,
+    "after_hours_plan": true
+  },
+  "signals": {
+    "website_problem": 5,
+    "lead_capture_problem": 1,
+    "response_handling_problem": 0,
+    "trust_problem": 4,
+    "landing_need": 2
+  },
+  "evidence": [
+    {
+      "id": "ev-website-fit-profile",
+      "source": "synthetic_fixture",
+      "claim": "Synthetic website quality is below target while lead capture is represented."
+    }
+  ]
+}

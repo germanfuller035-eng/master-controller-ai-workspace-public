@@ -1,0 +1,20 @@
+# Caddyfile — Master Controller API HTTPS reverse proxy.
+# Replace the hostname with the owner domain, or use the sslip.io fallback below.
+# Caddy auto-provisions a Let's Encrypt cert and terminates TLS on :443.
+
+195-96-132-82.sslip.io {
+	encode gzip
+	# Backend listens on loopback only; never exposed directly.
+	reverse_proxy 127.0.0.1:8787 {
+		header_up X-Forwarded-Proto https
+	}
+	# Do not expose anything else; only the API is proxied.
+	header {
+		Strict-Transport-Security "max-age=31536000"
+		X-Content-Type-Options nosniff
+		-Server
+	}
+	request_body {
+		max_size 256kb
+	}
+}

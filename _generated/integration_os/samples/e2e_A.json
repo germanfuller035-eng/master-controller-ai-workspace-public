@@ -1,0 +1,23 @@
+{
+  "scenario": "A",
+  "name": "Mini Audit full lifecycle",
+  "ok": true,
+  "steps": [
+    "lead_hunter recommends candidate (recommendation, not write)",
+    "OK: master_controller is canonical writer of lead",
+    "OK: product_os is canonical writer of product",
+    "OK: revenue_os is canonical writer of offer",
+    "OK: conversation_hub is canonical writer of draft_request",
+    "OK: master_controller is canonical writer of approval",
+    "synthetic transport result (NO real send)",
+    "OK: master_controller is canonical writer of reply",
+    "OK: revenue_os is canonical writer of deal",
+    "OK: delivery_os is canonical writer of project",
+    "OK: delivery_os is canonical writer of acceptance",
+    "OK: finance_os is canonical writer of invoice",
+    "OK: customer_success_os is canonical writer of customer_success_state",
+    "OK: analytics_os is canonical writer of metric",
+    "OK: executive_os is canonical writer of owner_decision"
+  ],
+  "real_send": false
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Runtime Stop State",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["active"],
+  "properties": {
+    "active": {"type": "boolean"},
+    "state": {"type": "string"},
+    "revokes_approvals": {"type": "boolean"}
+  }
+}

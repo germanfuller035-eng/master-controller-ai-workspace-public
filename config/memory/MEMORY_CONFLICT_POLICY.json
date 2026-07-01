@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-26",
+  "session": "KNOWLEDGE_MEMORY_QDRANT_DOCLING_V1",
+  "conflict_detection_required": true,
+  "conflict_key_fields": ["subject", "key"],
+  "conflict_value_field": "value",
+  "on_conflict": "FLAG_FOR_CURATOR",
+  "write_on_conflict": "DENY"
+}

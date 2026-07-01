@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-26",
+  "session": "KNOWLEDGE_MEMORY_QDRANT_DOCLING_V1",
+  "sensitive_memory_auto_write": "DENY",
+  "secret_like_content": "DENY_AND_REDACT",
+  "personal_confidential": "OWNER_APPROVAL_REQUIRED",
+  "client_confidential": "OWNER_APPROVAL_REQUIRED",
+  "military_medical": "OWNER_APPROVAL_REQUIRED",
+  "external_ai_before_owner_approval": "DENY",
+  "synthetic_sensitive_fixture_allowed": true,
+  "raw_sensitive_documents_allowed": false
+}

@@ -1,0 +1,20 @@
+{
+  "external_actions_allowed": false,
+  "fixtures": {
+    "automotive_task": "automotive/synthetic_vehicle_task.json",
+    "calendar_reminder": "calendar/synthetic_calendar_reminder.json",
+    "document_request": "documents/synthetic_document_request.json",
+    "family_reminder": "family_health/synthetic_family_reminder.json",
+    "finance_snapshot": "finance/synthetic_finance_asset_snapshot.json",
+    "health_reminder": "family_health/synthetic_health_reminder_fake.json",
+    "legal_research": "legal/synthetic_legal_research_request.json",
+    "news_briefing": "news/synthetic_news_briefing_request.json",
+    "personal_task": "tasks/synthetic_personal_task.json",
+    "property_task": "property/synthetic_property_task.json",
+    "secret_like": "sensitive/synthetic_secret_like_input.json",
+    "sensitive_military": "sensitive/synthetic_fake_military_doc_request.json",
+    "travel_plan": "travel/synthetic_travel_plan.json"
+  },
+  "kind": "no_external_action_result",
+  "synthetic_batch": true
+}

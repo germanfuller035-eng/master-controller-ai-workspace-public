@@ -1,0 +1,68 @@
+{
+  "cohorts": [
+    {
+      "cohort_key": "2026-04",
+      "size": 3,
+      "periods_observed": 3,
+      "retention_curve": [
+        {
+          "period": 0,
+          "retained": 3,
+          "rate": 1
+        },
+        {
+          "period": 1,
+          "retained": 3,
+          "rate": 1
+        },
+        {
+          "period": 2,
+          "retained": 2,
+          "rate": 0.6667
+        }
+      ],
+      "current_retained": 2,
+      "current_retention_rate": 0.6667,
+      "status": "MODEL_ESTIMATE"
+    },
+    {
+      "cohort_key": "2026-05",
+      "size": 4,
+      "periods_observed": 2,
+      "retention_curve": [
+        {
+          "period": 0,
+          "retained": 4,
+          "rate": 1
+        },
+        {
+          "period": 1,
+          "retained": 3,
+          "rate": 0.75
+        }
+      ],
+      "current_retained": 3,
+      "current_retention_rate": 0.75,
+      "status": "MODEL_ESTIMATE"
+    },
+    {
+      "cohort_key": "2026-06",
+      "size": 2,
+      "periods_observed": 1,
+      "retention_curve": [
+        {
+          "period": 0,
+          "retained": 2,
+          "rate": 1
+        }
+      ],
+      "current_retained": 2,
+      "current_retention_rate": 1,
+      "status": "MODEL_ESTIMATE"
+    }
+  ],
+  "total_cohorts": 3,
+  "total_members": 9,
+  "blended_retention_rate": 0.7778,
+  "status": "MODEL_ESTIMATE"
+}

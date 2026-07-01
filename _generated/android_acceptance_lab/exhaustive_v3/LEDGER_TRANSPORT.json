@@ -1,0 +1,32 @@
+{
+  "screen": "transport",
+  "anchor": "delivery_review",
+  "title_ru": "Статусы доставки требуют сверки",
+  "app_version": "0.8.0-rc6 (code 30)",
+  "session": "2026-06-23 live AVD a56lab, env restored, API token valid, health ok",
+  "backend": "prod VPS https://195-96-132-82.sslip.io/api/v1",
+  "nav": "tab_today -> card_commercial -> scroll -> cs_delivery_review (центрирован, h=204, center в вьюпорте) -> anchor=delivery_review",
+  "api_truth": {
+    "endpoint": "/mini-audit/delivery-containment",
+    "records_total": 0,
+    "owner_review_queue": "[] (len=0)",
+    "automatic_resend_allowed": "see banner: запрещена",
+    "automatic_followup_allowed": "see banner: запрещена"
+  },
+  "ui_vs_api": "MATCH: dr_total text='Записей на сверку: 0' (==API records_total=0); 'Нет записей на сверку.' (==owner_review_queue пуст); баннер 'Подтверждённая отправка: нет. Автоматическая повторная отправка: запрещена. Требуется решение владельца.'",
+  "screen_affordances": "ТОЛЬКО: back (IconButton), refresh (TextButton 'Обновить'), dr_total (text). НЕТ send/kill-switch/limiter/duplicate-guard/confirmation affordance — экран архитектурно read-only (DeliveryReviewScreen.kt). Блокировка отправки = отсутствие любых send-кнопок + баннер запрета авто-повтора. SEND_LEDGER_DELTA=0.",
+  "controls": [
+    {"id": "CTRL-0301", "sel": "screen.transport.control.back", "type": "IconButton", "status": "PASS_NAVIGATION", "evidence": "tap @77,344 -> commercial_summary"},
+    {"id": "CTRL-0302", "sel": "screen.transport.control.refresh", "type": "TextButton REFRESH", "status": "PASS_LIVE_READ", "evidence": "tap @947,344 -> reread, anchor=delivery_review сохранён, records=0 как в API"},
+    {"id": "CTRL-0303", "sel": "dr_${rec.leadId}", "type": "SectionCard NAVIGATION", "status": "PASS_EMPTY_STATE_VERIFIED", "evidence": "API owner_review_queue=[] -> dr_ карточки условно не рендерятся (TransportScreens.kt:43-50), показан 'Нет записей на сверку.'. Подтверждено dump: единственный dr_-rid = dr_total (заголовок), нет dr_<leadId>. Класс карточки = SectionCard (тот же что mc_*/cs_*). EMPTY_STATE_VERIFIED=YES (prod реально пуст). Реальные лиды НЕ менялись."},
+    {"id": "CTRL-0304", "sel": "screen.transport.control.back", "type": "IconButton", "status": "PASS_NAVIGATION", "evidence": "re-entered delivery_review, tap back @77,344 -> commercial_summary"},
+    {"id": "CTRL-0305", "sel": "screen.transport.control.refresh", "type": "TextButton REFRESH", "status": "PASS_LIVE_READ", "evidence": "re-exec refresh -> anchor=delivery_review сохранён, reread"},
+    {"id": "CTRL-0312", "sel": "screen.transport.control.back", "type": "SectionCard DANGEROUS(plan dup-tag)", "status": "PASS_NAVIGATION", "evidence": "selector_value = screen.transport.control.back (НЕ destructive — это та же back-IconButton; risk_class DANGEROUS из regen-дубля). re-entered, tap back -> commercial_summary. Никакого destructive действия не существует на экране. PASS_UNSAFE_ACTION_NOT_APPLICABLE: на read-only экране нет dangerous-кнопки для блокировки."},
+    {"id": "CTRL-0313", "sel": "screen.transport.control.back", "type": "IconButton", "status": "PASS_NAVIGATION", "evidence": "re-entered, tap back -> commercial_summary"},
+    {"id": "CTRL-0314", "sel": "screen.transport.control.refresh", "type": "TextButton REFRESH", "status": "PASS_LIVE_READ", "evidence": "re-exec refresh -> anchor=delivery_review сохранён, reread"}
+  ],
+  "totals": {"SCREEN_CONTROLS_TOTAL": 8, "EXECUTED": 8, "PASSED": 8, "FAILED": 0, "UNEXECUTED": 0, "UNKNOWN": 0},
+  "note_0317": "CTRL-0317 (text 'Закрыть') в exec_plan отнесён к screen_id=conversations (timeline dialog), НЕ к transport. Старый sbs_transport.log ошибочно тянул его в transport-батч — устранено сверкой с планом.",
+  "safety": {"CLIENT_MESSAGES_SENT": 0, "SMTP_CALLS": 0, "FOLLOWUPS_SENT": 0, "PAYMENT_OPERATIONS": 0, "mutations": 0, "send_ledger_delta": 0, "kill_switch_triggered": false, "dangerous_action_confirmed": false},
+  "status": "CLEAN"
+}

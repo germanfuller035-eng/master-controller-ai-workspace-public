@@ -1,0 +1,7 @@
+{
+  "provider_used": "SYNTHETIC_FIXTURE",
+  "real_stt_call": false,
+  "stt_id": "synthetic-stt-alpha",
+  "synthetic": true,
+  "transcript": "Create a local synthetic note"
+}

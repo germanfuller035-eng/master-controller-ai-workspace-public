@@ -1,0 +1,4 @@
+# Do not commit raw backup blobs (large, redundant with source). Manifests are tracked.
+canonical_*/
+!*.sha256
+!*_manifest.sha256

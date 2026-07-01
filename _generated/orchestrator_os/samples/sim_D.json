@@ -1,0 +1,10 @@
+{
+  "scenario": "D",
+  "name": "Owner approval required",
+  "ok": true,
+  "steps": [
+    "select agent: HUMAN_OWNER (risk/owner-gated)",
+    "plan: 3 phases, approval=OWNER_GATE_REQUIRED",
+    "OWNER_GATE_REQUIRED -> stop; owner decision reference required"
+  ]
+}

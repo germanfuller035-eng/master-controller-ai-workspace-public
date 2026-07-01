@@ -1,0 +1,39 @@
+{
+  "schema": "integration_os.event_registry.v1",
+  "note": "MP17-18 — event registry + compatibility reconciliation. Facts vs recommendations separated. No production emitter in this task.",
+  "synthetic": true,
+  "events": [
+    { "event_type": "lead_promoted", "kind": "FACT", "producer": "master_controller", "consumers": ["analytics_os", "executive_os"], "entity_type": "lead", "version": "1", "semantics": "candidate promoted to canonical lead" },
+    { "event_type": "candidate_recommended", "kind": "RECOMMENDATION", "producer": "lead_hunter", "consumers": ["master_controller"], "entity_type": "candidate", "version": "2", "semantics": "lead hunter recommends promotion" },
+    { "event_type": "approval_requested", "kind": "FACT", "producer": "master_controller", "consumers": ["telegram", "android", "analytics_os"], "entity_type": "approval", "version": "1", "semantics": "owner approval requested" },
+    { "event_type": "approval_reference_updated", "kind": "FACT", "producer": "master_controller", "consumers": ["conversation_hub", "analytics_os"], "entity_type": "approval", "version": "1", "semantics": "owner decided (approved/rejected reference)" },
+    { "event_type": "send_recorded", "kind": "FACT", "producer": "master_controller", "consumers": ["analytics_os", "conversation_hub"], "entity_type": "send_ledger_entry", "version": "1", "semantics": "approved send recorded in ledger" },
+    { "event_type": "reply_received", "kind": "FACT", "producer": "master_controller", "consumers": ["conversation_hub", "analytics_os"], "entity_type": "reply", "version": "1", "semantics": "inbound reply correlated" },
+    { "event_type": "opt_out_detected", "kind": "RECOMMENDATION", "producer": "conversation_hub", "consumers": ["master_controller", "growth_os", "revenue_os", "analytics_os"], "entity_type": "opt_out", "version": "1", "semantics": "Hub recommends opt-out; MC applies canonical" },
+    { "event_type": "inbound_normalized", "kind": "FACT", "producer": "conversation_hub", "consumers": ["analytics_os"], "entity_type": "message_view", "version": "1", "semantics": "inbound message normalized (synthetic)" },
+    { "event_type": "classification_completed", "kind": "FACT", "producer": "conversation_hub", "consumers": ["analytics_os"], "entity_type": "message_view", "version": "1", "semantics": "message classified" },
+    { "event_type": "routing_completed", "kind": "RECOMMENDATION", "producer": "conversation_hub", "consumers": ["executive_os"], "entity_type": "message_view", "version": "1", "semantics": "routing recommendation produced" },
+    { "event_type": "deal_won", "kind": "FACT", "producer": "revenue_os", "consumers": ["delivery_os", "finance_os", "analytics_os", "executive_os"], "entity_type": "deal", "version": "1", "semantics": "deal won" },
+    { "event_type": "project_accepted", "kind": "FACT", "producer": "delivery_os", "consumers": ["finance_os", "customer_success_os", "analytics_os"], "entity_type": "acceptance", "version": "1", "semantics": "deliverable accepted" },
+    { "event_type": "payment_received", "kind": "FACT", "producer": "finance_os", "consumers": ["executive_os", "analytics_os"], "entity_type": "payment", "version": "1", "semantics": "payment received" },
+    { "event_type": "customer_health_changed", "kind": "FACT", "producer": "customer_success_os", "consumers": ["executive_os", "analytics_os"], "entity_type": "customer_success_state", "version": "1", "semantics": "account health changed" },
+    { "event_type": "campaign_readiness_changed", "kind": "FACT", "producer": "growth_os", "consumers": ["analytics_os", "executive_os"], "entity_type": "campaign", "version": "1", "semantics": "campaign readiness state changed" },
+    { "event_type": "product_readiness_changed", "kind": "FACT", "producer": "product_os", "consumers": ["revenue_os", "conversation_hub", "analytics_os"], "entity_type": "product_version", "version": "1", "semantics": "product readiness changed" },
+    { "event_type": "owner_decision_recorded", "kind": "FACT", "producer": "executive_os", "consumers": ["all"], "entity_type": "owner_decision", "version": "1", "semantics": "owner decision recorded" },
+    { "event_type": "channel_failure_detected", "kind": "FACT", "producer": "conversation_hub", "consumers": ["analytics_os", "executive_os"], "entity_type": "channel_health", "version": "1", "semantics": "channel failure observed (NOT_CONNECTED in this task)" }
+  ],
+  "compatibility_reconciliation": {
+    "duplicate_event_names": [],
+    "conflicting_payload": [],
+    "missing_producer": [],
+    "ambiguous_semantics": [
+      { "event": "opt_out_detected", "note": "MUST stay a RECOMMENDATION, not a fact — Hub detects, MC applies the canonical opt-out" }
+    ],
+    "event_that_is_actually_a_command": [
+      { "candidate": "routing_completed", "resolution": "kept as RECOMMENDATION event; the actual routing mutation is a downstream command owned by the target system" }
+    ],
+    "recommendation_as_fact": [
+      { "candidate": "candidate_recommended", "resolution": "explicitly kind=RECOMMENDATION; promotion fact (lead_promoted) is owned by master_controller" }
+    ]
+  }
+}

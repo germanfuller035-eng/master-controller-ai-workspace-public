@@ -1,0 +1,16 @@
+{
+  "schema": "growth_os.alternative_framework.v1",
+  "version": "1.0",
+  "note": "Framework-only competitor/alternative comparison. No specific named competitors invented. Public competitor research permitted ONLY read-only, no login, no form submit, no protected scraping, with URL/date/source citation. Absent safe web access -> framework-only (this build).",
+  "web_research_mode": "FRAMEWORK_ONLY (no live web access used in this build)",
+  "alternatives": ["do_nothing", "internal_employee", "freelancer", "agency", "template_builder", "standalone_audit", "full_project", "saas", "diy"],
+  "comparison_dimensions": ["cost", "speed", "depth", "owner_effort", "customization", "delivery_risk", "support", "ownership"],
+  "matrix": [
+    {"alternative": "do_nothing", "cost": "none", "speed": "n/a", "depth": "none", "owner_effort": "none", "customization": "none", "delivery_risk": "none", "support": "none", "ownership": "n/a", "our_edge": "we surface the cost of inaction with evidence"},
+    {"alternative": "freelancer", "cost": "low-medium", "speed": "variable", "depth": "shallow-variable", "owner_effort": "high (managing)", "customization": "high", "delivery_risk": "high", "support": "low", "ownership": "unclear", "our_edge": "fixed scope + evidence methodology + bounded price"},
+    {"alternative": "agency", "cost": "high", "speed": "slow", "depth": "high", "owner_effort": "medium", "customization": "high", "delivery_risk": "medium", "support": "ongoing-paid", "ownership": "agency-dependent", "our_edge": "diagnosis-first, fixed-price entry, no lock-in"},
+    {"alternative": "template_builder", "cost": "low", "speed": "fast", "depth": "none", "owner_effort": "very high", "customization": "low", "delivery_risk": "low", "support": "self", "ownership": "platform", "our_edge": "we diagnose what to fix before you build"},
+    {"alternative": "standalone_audit", "cost": "medium", "speed": "medium", "depth": "medium", "owner_effort": "low", "customization": "medium", "delivery_risk": "low", "support": "none", "ownership": "client", "our_edge": "evidence-backed + clear next-product path"}
+  ],
+  "research_rules": {"read_only": true, "no_login": true, "no_form_submission": true, "no_protected_scraping": true, "citation_required": ["url", "date", "source"], "no_contact_storage": true, "no_uncited_claims": true}
+}

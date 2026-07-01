@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-26",
+  "session": "POLICY_SECRETS_AUDIT_EMERGENCY_CONTROL_V1",
+  "default": "DENY",
+  "denied_capabilities": [
+    {"id": "outbound_send", "risk": "R4", "state": "OFF"},
+    {"id": "payments", "risk": "R5", "state": "OFF"},
+    {"id": "production_deploy", "risk": "R4", "state": "OFF"},
+    {"id": "production_db_write", "risk": "R4", "state": "OFF"},
+    {"id": "autonomous_browser_action", "risk": "R4", "state": "OFF"},
+    {"id": "direct_docker_socket", "risk": "R5", "state": "OFF"},
+    {"id": "unrestricted_shell", "risk": "R5", "state": "OFF"},
+    {"id": "direct_production_filesystem", "risk": "R5", "state": "OFF"},
+    {"id": "direct_mcp_production_tool_access", "risk": "R5", "state": "OFF"},
+    {"id": "secret_read", "risk": "R5", "state": "OFF_WITHOUT_TASK_SCOPED_GRANT"},
+    {"id": "long_term_memory_write", "risk": "R3", "state": "OFF"},
+    {"id": "permission_change", "risk": "R5", "state": "OFF"},
+    {"id": "irreversible_action", "risk": "R5", "state": "OFF"}
+  ]
+}

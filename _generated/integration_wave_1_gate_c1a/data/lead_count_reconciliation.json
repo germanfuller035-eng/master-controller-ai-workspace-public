@@ -1,0 +1,15 @@
+{
+  "topic": "MINI_AUDIT_LEAD_COUNT_RECONCILIATION",
+  "root_cause": "NOT_A_BUG — 52 is the operational subset, 62 is the full canonical base.",
+  "canonical_total_leads": 62,
+  "mini_audit_operational_leads": 52,
+  "excluded_from_mini_audit": 10,
+  "excluded_breakdown_by_status": { "rejected": 9, "waiting_reply": 1 },
+  "exclusion_logic": "telegram_gateway/mini_audit_operator_mode.mjs getMiniAuditOperatorState(): allLeads.filter(!isHidden); rejected/archived excluded from active surfaces (ARCHIVED_STATUSES={rejected}); s.leads (operational) excludes archived. The bare 'total' the app showed = s.leads.length = 52.",
+  "android_label_fixed": true,
+  "android_fix": "MiniAuditHome now shows 'Всего в системе: 62 · В контуре Mini Audit: 52 · Не включены: 10' with a 'Почему отличаются показатели?' expandable explanation and excluded breakdown.",
+  "backend_endpoint": "GET /api/v1/mini-audit/lead-count-definitions",
+  "backend_returns_definitions": true,
+  "unknown_exclusions": 0,
+  "verified_on_production": true
+}

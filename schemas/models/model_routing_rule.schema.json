@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Model Routing Rule",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["default_unknown_task_policy", "rules"],
+  "properties": {
+    "default_unknown_task_policy": {"type": "string", "const": "DENY_SAFE_DEFAULT"},
+    "rules": {"type": "array", "items": {"type": "object"}}
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "policy_id": "crm_policy_v1",
+  "scope": "LOCAL_SYNTHETIC_ONLY",
+  "description": "CRM shadow contracts only; no production CRM writes.",
+  "safety": {
+    "OUTBOUND_EMAIL": "OFF",
+    "OUTBOUND_SOCIAL": "OFF",
+    "AUTO_SAFE": "OFF",
+    "PAYMENTS": "OFF",
+    "PRODUCTION_DB_WRITE": "OFF",
+    "CRM_WRITE": "OFF",
+    "INVOICE_SEND": "OFF",
+    "ACCOUNTING_EXPORT": "OFF",
+    "REAL_REPLY_MONITOR": "OFF"
+  },
+  "adapters": {
+    "send_adapter_enabled": false,
+    "crm_write_adapter_enabled": false,
+    "payment_provider_enabled": false,
+    "real_inbox_enabled": false
+  },
+  "required_controls": [
+    "synthetic_marker",
+    "no_crm_write",
+    "owner_approval_required_for_future_send_or_payment",
+    "payload_hash_required_for_future_send_or_payment",
+    "stop_blocks_outbound_payment_production_write"
+  ]
+}

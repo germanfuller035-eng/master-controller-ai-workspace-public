@@ -1,0 +1,19 @@
+{
+  "label": "RUN_1",
+  "ledger_rows": 283,
+  "unique_controls": 283,
+  "passed": 94,
+  "failed": 2,
+  "unexecuted": 187,
+  "by_status": {
+    "PASS_NAVIGATION": 36,
+    "PASS_VISIBLE_ENABLED": 34,
+    "PASS_UNSAFE_ACTION_BLOCKED": 10,
+    "PASS_LIVE_READ": 10,
+    "UNEXECUTED_NOT_FOUND_ON_SCREEN": 153,
+    "UNEXECUTED_NAV_FAILED": 34,
+    "FAIL": 2,
+    "PASS_LOCAL_SETTING_PERSISTED": 2,
+    "PASS_DISABLED_WITH_REASON": 2
+  }
+}

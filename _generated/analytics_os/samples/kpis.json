@@ -1,0 +1,68 @@
+[
+  {
+    "key": "booked_revenue",
+    "label": "booked_revenue",
+    "value": 25000,
+    "unit": "EUR",
+    "period": "monthly",
+    "period_label": "2026-06",
+    "source_system": "Finance_OS",
+    "source_field": "booked_revenue",
+    "status": "OWNER_TARGET"
+  },
+  {
+    "key": "cash_collected",
+    "label": "cash_collected",
+    "value": 18000,
+    "unit": "EUR",
+    "period": "monthly",
+    "period_label": "2026-06",
+    "source_system": "Finance_OS",
+    "source_field": "cash_collected",
+    "status": "CONFIRMED"
+  },
+  {
+    "key": "operating_result",
+    "label": "operating_result",
+    "value": 1200,
+    "unit": "EUR",
+    "period": "monthly",
+    "period_label": "2026-06",
+    "source_system": "Finance_OS",
+    "source_field": "operating_result",
+    "status": "MODEL_ESTIMATE"
+  },
+  {
+    "key": "cash_runway",
+    "label": "cash_runway",
+    "value": 2.5,
+    "unit": "months",
+    "period": "monthly",
+    "period_label": "2026-06",
+    "source_system": "Finance_OS",
+    "source_field": "cash_runway",
+    "status": "MODEL_ESTIMATE"
+  },
+  {
+    "key": "active_products",
+    "label": "active_products",
+    "value": 2,
+    "unit": "count",
+    "period": "monthly",
+    "period_label": "2026-06",
+    "source_system": "Revenue_OS",
+    "source_field": "active_products",
+    "status": "CONFIRMED"
+  },
+  {
+    "key": "acceptance_rate",
+    "label": "acceptance_rate",
+    "value": 0.85,
+    "unit": "ratio",
+    "period": "monthly",
+    "period_label": "2026-06",
+    "source_system": "Delivery_OS",
+    "source_field": "acceptance_rate",
+    "status": "MODEL_ESTIMATE"
+  }
+]

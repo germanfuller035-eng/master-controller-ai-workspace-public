@@ -1,0 +1,14 @@
+{
+  "title": "approval_card",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["approval_id", "synthetic", "risk", "payload_hash", "risk_explanation", "evidence"],
+  "properties": {
+    "approval_id": {"type": "string"},
+    "synthetic": {"type": "boolean"},
+    "risk": {"type": "string"},
+    "payload_hash": {"type": "string"},
+    "risk_explanation": {"type": "object"},
+    "evidence": {"type": "array"}
+  }
+}

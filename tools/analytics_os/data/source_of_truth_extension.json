@@ -1,0 +1,22 @@
+{
+  "schema": "analytics_os.source_of_truth_extension.v1",
+  "version": "1.0",
+  "note": "Extends Executive OS source_of_truth_matrix. Analytics OS is reader/deriver only. It owns metric_definition + derived_observation; it writes NO canonical domain data.",
+  "entities": [
+    {"entity": "metric_definition", "system_of_record": "Analytics_OS", "readers": ["all"], "writers": ["Analytics_OS"], "forbidden_writers": ["domain_OS_auto"], "note": "definition only; not the metric value"},
+    {"entity": "derived_observation", "system_of_record": "Analytics_OS", "readers": ["Executive_OS", "owner"], "writers": ["Analytics_OS"], "forbidden_writers": [], "requires": ["lineage_ref", "confidence"], "note": "computed from canonical sources; never a canonical write"},
+    {"entity": "dataset_snapshot", "system_of_record": "Analytics_OS", "readers": ["all"], "writers": ["Analytics_OS"], "forbidden_writers": [], "note": "immutable local synthetic snapshot; not production snapshot"},
+    {"entity": "data_contract", "system_of_record": "Analytics_OS", "readers": ["all"], "writers": ["Analytics_OS"], "forbidden_writers": [], "note": "describes producer datasets by reference"},
+    {"entity": "experiment", "system_of_record": "Analytics_OS", "readers": ["Executive_OS", "owner"], "writers": ["Analytics_OS"], "forbidden_writers": [], "running_allowed": false, "note": "governance only; no experiment runs"},
+    {"entity": "attribution_record", "system_of_record": "Analytics_OS", "readers": ["Executive_OS"], "writers": ["Analytics_OS"], "forbidden_writers": [], "note": "transparent, limitation-aware; attribution != causation"},
+    {"entity": "insight", "system_of_record": "Analytics_OS", "readers": ["Executive_OS", "owner"], "writers": ["Analytics_OS"], "forbidden_writers": [], "note": "recommendations only; owner_review_required"}
+  ],
+  "invariants": {
+    "single_canonical_writer_per_entity": true,
+    "metric_requires_source": true,
+    "target_not_actual": true,
+    "forecast_not_confirmed": true,
+    "derived_observation_requires_lineage": true,
+    "analytics_never_mutates_domain_state": true
+  }
+}

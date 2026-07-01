@@ -1,0 +1,15 @@
+{
+  "schema": "launch.production_runtime_scope.v1",
+  "note": "Phase 8 runtime scope manifest. Live source hashing pending (SSH DENIED). Classification from git history post-9d346f3.",
+  "whole_repo_deployment_required": "NO",
+  "minimal_runtime_deployment_scope": "NONE_EXPECTED (pending live source-hash confirmation)",
+  "data_migration_required": "NO",
+  "service_restart_required": "NO_EXPECTED",
+  "rows": [
+    { "path": "docs_canonical_proposed/** + applied canonical docs", "class": "DOCUMENTATION_ONLY", "production_present": false, "candidate_changed": true, "runtime_required": false, "deployment_required": false, "service_affected": "none", "data_migration_required": false, "risk": "none" },
+    { "path": "tools/*_os (14 offline OS layers + consolidation)", "class": "OFFLINE_OS_ONLY", "production_present": false, "candidate_changed": true, "runtime_required": false, "deployment_required": false, "service_affected": "none", "data_migration_required": false, "risk": "none" },
+    { "path": "tools/mater_controller_api/src", "class": "NO_DIFFERENCE_EXPECTED", "production_present": true, "candidate_changed": false, "runtime_required": true, "deployment_required": "LIVE_CONFIRM", "service_affected": "api/worker", "data_migration_required": false, "risk": "low" },
+    { "path": "tools/telegram_gateway runtime", "class": "NO_DIFFERENCE_EXPECTED", "production_present": true, "candidate_changed": false, "runtime_required": true, "deployment_required": "LIVE_CONFIRM", "service_affected": "telegram", "data_migration_required": false, "risk": "low" },
+    { "path": "canonical store / schema", "class": "CANONICAL_DATA", "production_present": true, "candidate_changed": false, "runtime_required": true, "deployment_required": false, "service_affected": "none", "data_migration_required": false, "risk": "none" }
+  ]
+}

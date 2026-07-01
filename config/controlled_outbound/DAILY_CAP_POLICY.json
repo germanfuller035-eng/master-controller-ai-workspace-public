@@ -1,0 +1,17 @@
+{
+  "policy_id": "daily_cap_policy_v1",
+  "scope": "LOCAL_SYNTHETIC_ONLY",
+  "daily_cap": 3,
+  "cap_required_before_future_activation": true,
+  "safety": {
+    "OUTBOUND_EMAIL": "OFF",
+    "OUTBOUND_SOCIAL": "OFF",
+    "AUTO_SAFE": "OFF",
+    "PAYMENTS": "OFF",
+    "PRODUCTION_DB_WRITE": "OFF",
+    "CRM_WRITE": "OFF",
+    "INVOICE_SEND": "OFF",
+    "ACCOUNTING_EXPORT": "OFF",
+    "REAL_REPLY_MONITOR": "OFF"
+  }
+}

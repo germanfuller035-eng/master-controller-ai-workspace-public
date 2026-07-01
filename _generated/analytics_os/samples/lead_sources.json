@@ -1,0 +1,32 @@
+[
+  {
+    "source": "overpass_osm",
+    "candidates": 600,
+    "verified_rate": 0.4,
+    "audit_ready_rate": 0.75,
+    "reply_rate": 0.15,
+    "win_rate": 0.2222,
+    "source_quality": 0.3111,
+    "source_health": "OK"
+  },
+  {
+    "source": "manual_csv",
+    "candidates": 100,
+    "verified_rate": 0.7,
+    "audit_ready_rate": 0.8571,
+    "reply_rate": 0.18,
+    "win_rate": 0.2222,
+    "source_quality": 0.4611,
+    "source_health": "OK"
+  },
+  {
+    "source": "referral",
+    "candidates": 20,
+    "verified_rate": 0.2,
+    "audit_ready_rate": 0.75,
+    "reply_rate": 0.3333,
+    "win_rate": 0,
+    "source_quality": 0.1,
+    "source_health": "LOW"
+  }
+]

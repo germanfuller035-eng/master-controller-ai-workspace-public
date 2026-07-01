@@ -1,0 +1,12 @@
+{
+  "scenario": "D",
+  "name": "Revision conflict",
+  "ok": true,
+  "steps": [
+    "mutate approval with expected_revision=1",
+    "current_revision=2 -> 409 CONFLICT",
+    "response returns current_revision=2",
+    "no blind overwrite; owner decides"
+  ],
+  "error_code": "CONFLICT"
+}

@@ -1,0 +1,72 @@
+{
+  "offer_id": "offer_TEST_good_weak_process_ai_front_office",
+  "lead_reference": null,
+  "product_id": "ai_front_office",
+  "product_status": "PLANNED",
+  "not_client_ready_label": "INTERNAL_DRAFT_NOT_CLIENT_READY",
+  "owner_summary": "AI Front Office for this profile. Price UNKNOWN (UNKNOWN). NOT client-ready (PLANNED) — internal draft only.",
+  "problem_statement": "Owner overloaded handling incoming requests.",
+  "evidence_summary": [
+    {
+      "claim": "slow response evidence",
+      "type": "FACT",
+      "source": "https://good.test"
+    }
+  ],
+  "recommended_product": {
+    "id": "ai_front_office",
+    "name": "AI Front Office",
+    "client_name": "AI-обработка обращений (AI-администратор)"
+  },
+  "deliverables": [
+    "AI handling scenarios",
+    "channel integration design"
+  ],
+  "timeline": "UNKNOWN (owner to confirm)",
+  "price": {
+    "amount": null,
+    "amount_min": null,
+    "amount_max": null,
+    "currency": "RUB",
+    "type": "monthly",
+    "source": "UNKNOWN",
+    "status": "UNKNOWN",
+    "valid_from": null,
+    "valid_until": null,
+    "approved_by_owner": false,
+    "display": "UNKNOWN"
+  },
+  "assumptions": [
+    "evidence verified at time of audit",
+    "client provides required inputs"
+  ],
+  "exclusions": [
+    "autonomous client sending",
+    "unapproved automation"
+  ],
+  "client_inputs": [
+    "inbound volume evidence",
+    "lead_system",
+    "Conversation Hub (future)"
+  ],
+  "risks": [
+    "not built",
+    "send-safety critical",
+    "price unknown"
+  ],
+  "next_step": "Internal only — product not client-ready.",
+  "approval_checklist": [
+    "price UNKNOWN (NOT approved)",
+    "evidence gate PASS",
+    "scope valid",
+    "product readiness PLANNED"
+  ],
+  "validity_period": "14 days from owner approval",
+  "approval_state": "DRAFT",
+  "send_allowed": false,
+  "blockers": [
+    "product_PLANNED_not_client_ready",
+    "price_invalid",
+    "owner_price_approval_required"
+  ]
+}

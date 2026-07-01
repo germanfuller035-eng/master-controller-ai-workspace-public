@@ -1,0 +1,11 @@
+{
+  "proposal_id": "radar_synthetic_001",
+  "source_id": "src_synthetic_public_001",
+  "reason": "Synthetic proposal to review local knowledge policy.",
+  "classification": "SYNTHETIC_PUBLIC",
+  "confidence": 0.9,
+  "created_at": "2026-06-26",
+  "action": "PROPOSE_ONLY",
+  "memory_write": false,
+  "install_attempted": false
+}

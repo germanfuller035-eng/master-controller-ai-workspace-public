@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "site_id": "synthetic_site_lead_system_fit",
+  "synthetic": true,
+  "external_access": false,
+  "browser_action_allowed": false,
+  "reserved_domain_reference": "synthetic-lead-system.example.test",
+  "synthetic_company_label": "Synthetic Lead System Fixture",
+  "metrics": {
+    "response_time_ms": 1100,
+    "mobile_ready": true,
+    "message_clarity": 4,
+    "trust_proofs": 2
+  },
+  "lead_capture": {
+    "forms": 1,
+    "cta_count": 1,
+    "consent_copy": false,
+    "routing_defined": false,
+    "owner_followup_sla_minutes": 360
+  },
+  "front_office": {
+    "response_sla_minutes": 100,
+    "after_hours_plan": true
+  },
+  "signals": {
+    "website_problem": 1,
+    "lead_capture_problem": 5,
+    "response_handling_problem": 0,
+    "trust_problem": 1,
+    "landing_need": 1
+  },
+  "evidence": [
+    {
+      "id": "ev-lead-system-profile",
+      "source": "synthetic_fixture",
+      "claim": "Synthetic lead capture exists but lacks consent and routing representation."
+    }
+  ]
+}

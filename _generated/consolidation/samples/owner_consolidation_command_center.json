@@ -1,0 +1,17 @@
+{
+  "schema": "consolidation.owner_command_center.v1",
+  "generated_ts": "20260617_000000",
+  "consolidation_status": "COMPLETE (offline candidate)",
+  "highest_blocker": "none for consolidation; production launch blocked by owner decisions + live verification",
+  "decisions_required": 27,
+  "decisions_blocking_live": 11,
+  "decisions_blocking_commercial": 10,
+  "systems_offline_only": "all OS except Master Controller + Telegram (active in production)",
+  "production_unchanged": true,
+  "security_gate": "READY_FOR_OWNER_REVIEW",
+  "reliability_gate": "READY_FOR_INTERNAL_REVIEW",
+  "live_verification_readiness": "plan prepared; owner authorization required",
+  "controlled_launch_readiness": "prerequisites checklist defined; not met until owner decisions + live verification",
+  "rollback_readiness": "rollback standard defined (no overwrite newer canonical)",
+  "next_owner_action": "review owner acceptance pack; resolve 11 live-blocking + 10 commercial-blocking decisions"
+}

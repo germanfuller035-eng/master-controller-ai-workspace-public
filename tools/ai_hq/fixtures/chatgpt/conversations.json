@@ -1,0 +1,6 @@
+[
+  {"id":"c1","title":"Lead Hunter Overpass plan","create_time":1234567,"mapping":{"m1":{"message":{"content":{"parts":["We decided Overpass single implementation. TODO: reconcile runtime."]}}}}},
+  {"id":"c2","title":"Mini Audit pricing","create_time":1234999,"mapping":{"m1":{"message":{"content":{"parts":["Rule: PDF audit only after payment. Next step: text hook."]}}}}},
+  {"id":"c3","title":"Мой паспорт и медицинская справка","create_time":1235000,"mapping":{"m1":{"message":{"content":{"parts":["личные данные"]}}}}},
+  {"id":"c4","title":"Server setup","create_time":1235111,"mapping":{"m1":{"message":{"content":{"parts":["export TELEGRAM_BOT_TOKEN=123456789:AAFakeTokenValueForTesting_abcdefghij12345"]}}}}}
+]

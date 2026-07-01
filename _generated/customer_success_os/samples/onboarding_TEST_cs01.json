@@ -1,0 +1,26 @@
+{
+  "customer_ref_id": "TEST_cs01",
+  "product_id": "mini_audit",
+  "stages": [
+    "welcome_internal_prep",
+    "handoff_review",
+    "access_instructions",
+    "customer_responsibilities",
+    "initial_activation",
+    "first_success_checkpoint",
+    "support_orientation",
+    "review_scheduling"
+  ],
+  "assets": [
+    "onboarding_checklist",
+    "getting_started_guide",
+    "responsibilities_matrix",
+    "support_guide",
+    "faq",
+    "first_review_agenda",
+    "customer_action_list"
+  ],
+  "status": "INTERNAL_DRAFT",
+  "specification_only": false,
+  "send_allowed": false
+}

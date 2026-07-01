@@ -1,0 +1,12 @@
+{
+  "title": "stop_status",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["synthetic", "stop_active", "blocked_actions", "evidence"],
+  "properties": {
+    "synthetic": {"type": "boolean"},
+    "stop_active": {"type": "boolean"},
+    "blocked_actions": {"type": "array"},
+    "evidence": {"type": "array"}
+  }
+}

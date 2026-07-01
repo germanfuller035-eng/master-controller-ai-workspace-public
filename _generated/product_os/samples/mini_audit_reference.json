@@ -1,0 +1,60 @@
+{
+  "ok": true,
+  "blueprint": {
+    "product_id": "mini_audit",
+    "name": "Mini Audit 10K",
+    "price": {
+      "amount": 10000,
+      "currency": "RUB",
+      "status": "CONFIRMED"
+    },
+    "scope": [
+      "first screen",
+      "customer path to request",
+      "CTA",
+      "forms",
+      "contacts",
+      "trust",
+      "visible quality errors",
+      "basic SEO signals"
+    ],
+    "exclusions": [
+      "full legal audit",
+      "full technical SEO",
+      "deep crawl",
+      "all-pages review",
+      "analytics setup",
+      "site fixes",
+      "admin access",
+      "new blocks",
+      "new website"
+    ],
+    "deliverables": [
+      "5-7 key findings",
+      "short fix plan",
+      "next step recommendation",
+      "client-facing PDF or structured note"
+    ],
+    "delivery_stages": 5,
+    "qa": [
+      "scope 5-7 findings",
+      "every finding evidence-backed",
+      "no duplicate/conflict",
+      "client language clean",
+      "no growth promise",
+      "price 10000 correct"
+    ],
+    "acceptance": [
+      "5-7 findings each evidence-backed",
+      "no duplicate findings",
+      "actionable recommendations",
+      "price = 10000 RUB",
+      "recipient evidence present",
+      "no guessed data"
+    ],
+    "spec_valid": true,
+    "reference_for": "all audit-category products"
+  },
+  "readiness_matrix_ref": "product readiness assess(mini_audit)",
+  "note": "Confirmed price 10000 RUB not altered. Reference template only."
+}

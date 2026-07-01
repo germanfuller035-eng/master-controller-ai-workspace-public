@@ -1,0 +1,17 @@
+{
+  "additionalProperties": true,
+  "properties": {
+    "artifact_hash": {},
+    "artifact_id": {},
+    "hash_algorithm": {},
+    "synthetic": {}
+  },
+  "required": [
+    "synthetic",
+    "artifact_id",
+    "artifact_hash",
+    "hash_algorithm"
+  ],
+  "title": "Browser Evidence Record",
+  "type": "object"
+}

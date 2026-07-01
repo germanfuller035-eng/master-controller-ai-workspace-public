@@ -1,0 +1,14 @@
+_generated/android_acceptance_lab/reports/junit/
+_generated/android_acceptance_lab/logs/logcat_full.txt
+_generated/android_acceptance_lab/screenshots/current.png
+
+# exhaustive_v3 transient capture artifacts (keep ledgers/reports/proof, drop raw dumps)
+exhaustive_v3/*.xml
+exhaustive_v3/*.png
+exhaustive_v3/canary_live*.txt
+exhaustive_v3/canary_buf*.txt
+exhaustive_v3/canary_logcat_*.txt
+exhaustive_v3/canary_stream*.txt
+exhaustive_v3/screen_*.log
+exhaustive_v3/sbs_*.log
+exhaustive_v3/.probe_token.json

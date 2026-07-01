@@ -1,0 +1,21 @@
+{
+  "session": "HONOR_VISUAL_RECHECK_OWNER_PATH_V1",
+  "device": "Honor ALT-LX1 AMSKBB4914919475",
+  "status": "PASS_AFTER_FIX",
+  "private_evidence_after_fix": "D:\\AI_FILE_VAULT\\sales_pilot_private\\honor_visual_recheck_owner_path_v1_after_fix\\20260629_151205",
+  "checks": {
+    "path_today_to_history": true,
+    "packet_not_sent_exact_visible": true,
+    "not_sent_status_visible": true,
+    "packet_has_text_channel_risk_owner_decision_words": true,
+    "reply_monitor_view_only": true,
+    "deal_to_payment_gate": true,
+    "payment_and_work_db_gated": true,
+    "forbidden_terms_found": []
+  },
+  "counts": {
+    "outbound_count": 0,
+    "payment_count": 0,
+    "production_db_writes": 0
+  }
+}

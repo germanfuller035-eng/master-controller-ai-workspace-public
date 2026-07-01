@@ -1,0 +1,10 @@
+[Unit]
+Description=Master Controller daily discovery timer
+
+[Timer]
+OnCalendar=*-*-* 06:12:00
+Persistent=true
+RandomizedDelaySec=900
+
+[Install]
+WantedBy=timers.target

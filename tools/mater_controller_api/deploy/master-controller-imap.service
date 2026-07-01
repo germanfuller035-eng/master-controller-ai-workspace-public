@@ -1,0 +1,16 @@
+[Unit]
+Description=Master Controller read-only IMAP reply sync (one cycle)
+After=network-online.target master-controller-api.service
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=masterctl
+WorkingDirectory=/opt/master-controller
+# Root-owned credential file (mode 600); systemd reads it as root before dropping to User=.
+EnvironmentFile=/etc/master-controller/credentials/yandex_imap.env
+Environment=MC_REPLY_DIR=/opt/master-controller/canonical/replies
+Environment=MATER_STORE_PATH=/opt/master-controller/canonical/lead_pipeline_store.json
+ExecStart=/opt/master-controller/tools/mater_controller_api/deploy/master-controller-imap-sync.sh
+Nice=10
+MemoryMax=256M

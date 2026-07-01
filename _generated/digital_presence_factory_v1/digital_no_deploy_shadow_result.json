@@ -1,0 +1,2041 @@
+{
+  "artifact_hashes_created": true,
+  "no_deployment": true,
+  "no_dns_or_vps_change": true,
+  "no_form_submit": true,
+  "no_outbound": true,
+  "no_real_external_url_accessed": true,
+  "outbound_count": 0,
+  "owner_approval_required_for_future_deploy_or_send": true,
+  "payment_count": 0,
+  "pipeline_status": "PASS",
+  "product_fit_reason_percent": 100,
+  "production_db_writes": 0,
+  "results": [
+    {
+      "artifact_handoffs": [
+        {
+          "artifact_id": "landing-synthetic-site-bad",
+          "artifact_type": "landing_prototype",
+          "deployment_allowed": false,
+          "draft_only": true,
+          "hash_algorithm": "SHA-256",
+          "owner_approval_required_for_future_deploy_or_send": true,
+          "path": "_generated/digital_presence_factory_v1/artifacts/landing-synthetic-site-bad.json",
+          "sha256": "ec68a25b4b495a611529dd0c405bb711cf2773572ff62afd248bf2a3f26e69b9"
+        },
+        {
+          "artifact_id": "website-synthetic-site-bad",
+          "artifact_type": "website_prototype",
+          "deployment_allowed": false,
+          "draft_only": true,
+          "hash_algorithm": "SHA-256",
+          "owner_approval_required_for_future_deploy_or_send": true,
+          "path": "_generated/digital_presence_factory_v1/artifacts/website-synthetic-site-bad.json",
+          "sha256": "5d8c8831490960b4fadaa715b055aba10029be799bdab2ef04cfcc3968e9e119"
+        },
+        {
+          "artifact_id": "lead-system-synthetic-site-bad",
+          "artifact_type": "lead_system_architecture",
+          "deployment_allowed": false,
+          "draft_only": true,
+          "hash_algorithm": "SHA-256",
+          "owner_approval_required_for_future_deploy_or_send": true,
+          "path": "_generated/digital_presence_factory_v1/artifacts/lead-system-synthetic-site-bad.json",
+          "sha256": "4b4bd73934181fc4fda24eadbe1d66a68a774cce482e95985e5f91574c82e2fb"
+        },
+        {
+          "artifact_id": "ai-front-office-synthetic-site-bad",
+          "artifact_type": "ai_front_office_architecture",
+          "deployment_allowed": false,
+          "draft_only": true,
+          "hash_algorithm": "SHA-256",
+          "owner_approval_required_for_future_deploy_or_send": true,
+          "path": "_generated/digital_presence_factory_v1/artifacts/ai-front-office-synthetic-site-bad.json",
+          "sha256": "5322e107660ea9307fb467c30e9e521513839aec5284fd2c73096022782bc161"
+        }
+      ],
+      "artifacts": [
+        {
+          "artifact_id": "landing-synthetic-site-bad",
+          "artifact_type": "landing_prototype",
+          "claims": [
+            {
+              "claim": "Synthetic fixture supports a draft landing prototype only.",
+              "evidence_ids": [
+                "ev-bad-profile"
+              ]
+            }
+          ],
+          "deployment_allowed": false,
+          "draft_only": true,
+          "form_submit_allowed": false,
+          "owner_approval_required_for_future_deploy_or_send": true,
+          "primary_recommendation": {
+            "evidence_ids": [
+              "ev-bad-profile",
+              "ev-synthetic-site-bad-lead-capture",
+              "ev-synthetic-site-bad-message-clarity",
+              "ev-synthetic-site-bad-mobile",
+              "ev-synthetic-site-bad-performance",
+              "ev-synthetic-site-bad-trust"
+            ],
+            "has_reason": true,
+            "product_id": "WEBSITE_PROTOTYPE",
+            "product_label": "Website prototype draft",
+            "reason": "Website quality and trust signals dominate the synthetic evidence.",
+            "reason_required": true,
+            "score": 18,
+            "site_id": "synthetic_site_bad"
+          },
+          "publish_allowed": false,
+          "sections": [
+            "problem",
+            "offer",
+            "proof",
+            "lead_capture_placeholder",
+            "owner_approval_note"
+          ],
+          "site_id": "synthetic_site_bad"
+        },
+        {
+          "artifact_id": "website-synthetic-site-bad",
+          "artifact_type": "website_prototype",
+          "claims": [
+            {
+              "claim": "Synthetic fixture supports a draft website prototype only.",
+              "evidence_ids": [
+                "ev-bad-profile"
+              ]
+            }
+          ],
+          "deployment_allowed": false,
+          "dns_change_allowed": false,
+          "draft_only": true,
+          "form_submit_allowed": false,
+          "hosting_allowed": false,
+          "owner_approval_required_for_future_deploy_or_send": true,
+          "pages": [
+            "start",
+            "service",
+            "proof",
+            "lead_capture_draft"
+          ],
+          "primary_recommendation": {
+            "evidence_ids": [
+              "ev-bad-profile",
+              "ev-synthetic-site-bad-lead-capture",
+              "ev-synthetic-site-bad-message-clarity",
+              "ev-synthetic-site-bad-mobile",
+              "ev-synthetic-site-bad-performance",
+              "ev-synthetic-site-bad-trust"
+            ],
+            "has_reason": true,
+            "product_id": "WEBSITE_PROTOTYPE",
+            "product_label": "Website prototype draft",
+            "reason": "Website quality and trust signals dominate the synthetic evidence.",
+            "reason_required": true,
+            "score": 18,
+            "site_id": "synthetic_site_bad"
+          },
+          "site_id": "synthetic_site_bad"
+        },
+        {
+          "artifact_id": "lead-system-synthetic-site-bad",
+          "artifact_type": "lead_system_architecture",
+          "claims": [
+            {
+              "claim": "Synthetic fixture supports a lead system handoff draft only.",
+              "evidence_ids": [
+                "ev-bad-profile"
+              ]
+            }
+          ],
+          "components": [
+            "intake_contract",
+            "qualification_queue",
+            "owner_review",
+            "handoff_export"
+          ],
+          "crm_write_allowed": false,
+          "draft_only": true,
+          "outbound_allowed": false,
+          "owner_approval_required_for_future_deploy_or_send": true,
+          "primary_recommendation": {
+            "evidence_ids": [
+              "ev-bad-profile",
+              "ev-synthetic-site-bad-lead-capture",
+              "ev-synthetic-site-bad-message-clarity",
+              "ev-synthetic-site-bad-mobile",
+              "ev-synthetic-site-bad-performance",
+              "ev-synthetic-site-bad-trust"
+            ],
+            "has_reason": true,
+            "product_id": "WEBSITE_PROTOTYPE",
+            "product_label": "Website prototype draft",
+            "reason": "Website quality and trust signals dominate the synthetic evidence.",
+            "reason_required": true,
+            "score": 18,
+            "site_id": "synthetic_site_bad"
+          },
+          "production_db_write_allowed": false,
+          "site_id": "synthetic_site_bad"
+        },
+        {
+          "artifact_id": "ai-front-office-synthetic-site-bad",
+          "artifact_type": "ai_front_office_architecture",
+          "bot_runtime_enabled": false,
+          "claims": [
+            {
+              "claim": "Synthetic fixture supports an AI front office architecture draft only.",
+              "evidence_ids": [
+                "ev-bad-profile"
+              ]
+            }
+          ],
+          "draft_only": true,
+          "outbound_allowed": false,
+          "owner_approval_required_for_future_deploy_or_send": true,
+          "primary_recommendation": {
+            "evidence_ids": [
+              "ev-bad-profile",
+              "ev-synthetic-site-bad-lead-capture",
+              "ev-synthetic-site-bad-message-clarity",
+              "ev-synthetic-site-bad-mobile",
+              "ev-synthetic-site-bad-performance",
+              "ev-synthetic-site-bad-trust"
+            ],
+            "has_reason": true,
+            "product_id": "WEBSITE_PROTOTYPE",
+            "product_label": "Website prototype draft",
+            "reason": "Website quality and trust signals dominate the synthetic evidence.",
+            "reason_required": true,
+            "score": 18,
+            "site_id": "synthetic_site_bad"
+          },
+          "production_db_write_allowed": false,
+          "site_id": "synthetic_site_bad",
+          "workflow": [
+            "inbound_intake",
+            "intent_label",
+            "draft_response",
+            "owner_approval",
+            "manual_send_handoff"
+          ]
+        }
+      ],
+      "deployment_allowed": false,
+      "digital_presence_check": {
+        "browser_used": false,
+        "evidence": [
+          {
+            "claim": "Synthetic bad site has weak message clarity, trust proof, and lead capture representation.",
+            "id": "ev-bad-profile",
+            "source": "synthetic_fixture"
+          },
+          {
+            "claim": "Synthetic bad site has weak message clarity, trust proof, and lead capture representation.",
+            "id": "ev-bad-profile",
+            "source": "synthetic_fixture"
+          },
+          {
+            "claim": "Synthetic response time is 4800 ms.",
+            "id": "ev-synthetic-site-bad-performance",
+            "source": "synthetic_site_profile"
+          },
+          {
+            "claim": "Synthetic fixture marks mobile_ready=false.",
+            "id": "ev-synthetic-site-bad-mobile",
+            "source": "synthetic_site_profile"
+          },
+          {
+            "claim": "Synthetic message clarity is below target.",
+            "id": "ev-synthetic-site-bad-message-clarity",
+            "source": "synthetic_site_profile"
+          },
+          {
+            "claim": "Synthetic trust proof count is below target.",
+            "id": "ev-synthetic-site-bad-trust",
+            "source": "synthetic_site_profile"
+          },
+          {
+            "claim": "Synthetic lead capture readiness is below target.",
+            "id": "ev-synthetic-site-bad-lead-capture",
+            "source": "synthetic_site_profile"
+          }
+        ],
+        "issues": [
+          {
+            "evidence_id": "ev-synthetic-site-bad-performance",
+            "issue_id": "performance",
+            "label": "Slow synthetic response",
+            "observed": "Synthetic response time is 4800 ms.",
+            "severity": 4
+          },
+          {
+            "evidence_id": "ev-synthetic-site-bad-mobile",
+            "issue_id": "mobile",
+            "label": "Mobile readiness gap",
+            "observed": "Synthetic fixture marks mobile_ready=false.",
+            "severity": 3
+          },
+          {
+            "evidence_id": "ev-synthetic-site-bad-message-clarity",
+            "issue_id": "message_clarity",
+            "label": "Message clarity gap",
+            "observed": "Synthetic message clarity is below target.",
+            "severity": 3
+          },
+          {
+            "evidence_id": "ev-synthetic-site-bad-trust",
+            "issue_id": "trust",
+            "label": "Trust proof gap",
+            "observed": "Synthetic trust proof count is below target.",
+            "severity": 3
+          },
+          {
+            "evidence_id": "ev-synthetic-site-bad-lead-capture",
+            "issue_id": "lead_capture",
+            "label": "Lead capture readiness gap",
+            "observed": "Synthetic lead capture readiness is below target.",
+            "severity": 5
+          }
+        ],
+        "lead_capture_score": 0,
+        "lead_capture_status": "MISSING",
+        "network_used": false,
+        "production_write": false,
+        "real_external_url_accessed": false,
+        "represented_as": "digital_presence_check_v1",
+        "site_id": "synthetic_site_bad",
+        "status": "PASS",
+        "synthetic": true,
+        "website_quality_score": 12,
+        "website_quality_status": "POOR"
+      },
+      "form_submit_allowed": false,
+      "lead_capture_readiness": {
+        "evidence_ids": [
+          "ev-bad-profile"
+        ],
+        "form_submit_allowed": false,
+        "missing": [
+          "No synthetic lead form is represented.",
+          "Lead call-to-action coverage is weak.",
+          "Consent copy is missing in the fixture.",
+          "Lead routing is not represented.",
+          "Owner follow-up SLA is slow or undefined."
+        ],
+        "owner_approval_required_for_future_send": true,
+        "score": 0,
+        "site_id": "synthetic_site_bad",
+        "status": "MISSING"
+      },
+      "outbound_allowed": false,
+      "product_recommendation": {
+        "evidence_ids": [
+          "ev-bad-profile",
+          "ev-synthetic-site-bad-lead-capture",
+          "ev-synthetic-site-bad-message-clarity",
+          "ev-synthetic-site-bad-mobile",
+          "ev-synthetic-site-bad-performance",
+          "ev-synthetic-site-bad-trust"
+        ],
+        "has_reason": true,
+        "product_id": "WEBSITE_PROTOTYPE",
+        "product_label": "Website prototype draft",
+        "reason": "Website quality and trust signals dominate the synthetic evidence.",
+        "reason_required": true,
+        "score": 18,
+        "site_id": "synthetic_site_bad"
+      },
+      "qa_review": {
+        "independent_check": true,
+        "issues": [],
+        "qa_status": "PASS",
+        "site_id": "synthetic_site_bad",
+        "unsupported_claims_blocked": false
+      },
+      "site_id": "synthetic_site_bad",
+      "status": "PASS",
+      "website_analysis": {
+        "analysis_mode": "LOCAL_SYNTHETIC_FIXTURE",
+        "browser_used": false,
+        "components": {
+          "lead_capture": 0,
+          "message_clarity": 4,
+          "mobile": 4,
+          "performance": 4,
+          "trust": 0
+        },
+        "evidence": [
+          {
+            "claim": "Synthetic bad site has weak message clarity, trust proof, and lead capture representation.",
+            "id": "ev-bad-profile",
+            "source": "synthetic_fixture"
+          },
+          {
+            "claim": "Synthetic response time is 4800 ms.",
+            "id": "ev-synthetic-site-bad-performance",
+            "source": "synthetic_site_profile"
+          },
+          {
+            "claim": "Synthetic fixture marks mobile_ready=false.",
+            "id": "ev-synthetic-site-bad-mobile",
+            "source": "synthetic_site_profile"
+          },
+          {
+            "claim": "Synthetic message clarity is below target.",
+            "id": "ev-synthetic-site-bad-message-clarity",
+            "source": "synthetic_site_profile"
+          },
+          {
+            "claim": "Synthetic trust proof count is below target.",
+            "id": "ev-synthetic-site-bad-trust",
+            "source": "synthetic_site_profile"
+          },
+          {
+            "claim": "Synthetic lead capture readiness is below target.",
+            "id": "ev-synthetic-site-bad-lead-capture",
+            "source": "synthetic_site_profile"
+          }
+        ],
+        "issues": [
+          {
+            "evidence_id": "ev-synthetic-site-bad-performance",
+            "issue_id": "performance",
+            "label": "Slow synthetic response",
+            "observed": "Synthetic response time is 4800 ms.",
+            "severity": 4
+          },
+          {
+            "evidence_id": "ev-synthetic-site-bad-mobile",
+            "issue_id": "mobile",
+            "label": "Mobile readiness gap",
+            "observed": "Synthetic fixture marks mobile_ready=false.",
+            "severity": 3
+          },
+          {
+            "evidence_id": "ev-synthetic-site-bad-message-clarity",
+            "issue_id": "message_clarity",
+            "label": "Message clarity gap",
+            "observed": "Synthetic message clarity is below target.",
+            "severity": 3
+          },
+          {
+            "evidence_id": "ev-synthetic-site-bad-trust",
+            "issue_id": "trust",
+            "label": "Trust proof gap",
+            "observed": "Synthetic trust proof count is below target.",
+            "severity": 3
+          },
+          {
+            "evidence_id": "ev-synthetic-site-bad-lead-capture",
+            "issue_id": "lead_capture",
+            "label": "Lead capture readiness gap",
+            "observed": "Synthetic lead capture readiness is below target.",
+            "severity": 5
+          }
+        ],
+        "network_used": false,
+        "real_external_url_accessed": false,
+        "score": 12,
+        "site_id": "synthetic_site_bad",
+        "status": "POOR"
+      }
+    },
+    {
+      "artifact_handoffs": [
+        {
+          "artifact_id": "landing-synthetic-site-no-lead-capture",
+          "artifact_type": "landing_prototype",
+          "deployment_allowed": false,
+          "draft_only": true,
+          "hash_algorithm": "SHA-256",
+          "owner_approval_required_for_future_deploy_or_send": true,
+          "path": "_generated/digital_presence_factory_v1/artifacts/landing-synthetic-site-no-lead-capture.json",
+          "sha256": "ddc6f5690589fe76c99b4a1bfedc5e53905c3afeb0bd4ceae7d7d472895ad3d1"
+        },
+        {
+          "artifact_id": "website-synthetic-site-no-lead-capture",
+          "artifact_type": "website_prototype",
+          "deployment_allowed": false,
+          "draft_only": true,
+          "hash_algorithm": "SHA-256",
+          "owner_approval_required_for_future_deploy_or_send": true,
+          "path": "_generated/digital_presence_factory_v1/artifacts/website-synthetic-site-no-lead-capture.json",
+          "sha256": "7f48bfd3130ad104ce3590ad30bedfd8fd2f0ce01178c512438d52acbed2ebdf"
+        },
+        {
+          "artifact_id": "lead-system-synthetic-site-no-lead-capture",
+          "artifact_type": "lead_system_architecture",
+          "deployment_allowed": false,
+          "draft_only": true,
+          "hash_algorithm": "SHA-256",
+          "owner_approval_required_for_future_deploy_or_send": true,
+          "path": "_generated/digital_presence_factory_v1/artifacts/lead-system-synthetic-site-no-lead-capture.json",
+          "sha256": "10477da815a3f00351400c13491cd80f96fd618f81ae9b1f92bfecc8415af695"
+        },
+        {
+          "artifact_id": "ai-front-office-synthetic-site-no-lead-capture",
+          "artifact_type": "ai_front_office_architecture",
+          "deployment_allowed": false,
+          "draft_only": true,
+          "hash_algorithm": "SHA-256",
+          "owner_approval_required_for_future_deploy_or_send": true,
+          "path": "_generated/digital_presence_factory_v1/artifacts/ai-front-office-synthetic-site-no-lead-capture.json",
+          "sha256": "7b68a212a588aa56e962a3f35ef23646524dc3a5b4080fd7b35a9fd1c3c994b3"
+        }
+      ],
+      "artifacts": [
+        {
+          "artifact_id": "landing-synthetic-site-no-lead-capture",
+          "artifact_type": "landing_prototype",
+          "claims": [
+            {
+              "claim": "Synthetic fixture supports a draft landing prototype only.",
+              "evidence_ids": [
+                "ev-no-lead-profile"
+              ]
+            }
+          ],
+          "deployment_allowed": false,
+          "draft_only": true,
+          "form_submit_allowed": false,
+          "owner_approval_required_for_future_deploy_or_send": true,
+          "primary_recommendation": {
+            "evidence_ids": [
+              "ev-no-lead-profile",
+              "ev-synthetic-site-no-lead-capture-lead-capture"
+            ],
+            "has_reason": true,
+            "product_id": "LEAD_SYSTEM",
+            "product_label": "Lead system architecture draft",
+            "reason": "Lead capture readiness is below target in the synthetic evidence.",
+            "reason_required": true,
+            "score": 14,
+            "site_id": "synthetic_site_no_lead_capture"
+          },
+          "publish_allowed": false,
+          "sections": [
+            "problem",
+            "offer",
+            "proof",
+            "lead_capture_placeholder",
+            "owner_approval_note"
+          ],
+          "site_id": "synthetic_site_no_lead_capture"
+        },
+        {
+          "artifact_id": "website-synthetic-site-no-lead-capture",
+          "artifact_type": "website_prototype",
+          "claims": [
+            {
+              "claim": "Synthetic fixture supports a draft website prototype only.",
+              "evidence_ids": [
+                "ev-no-lead-profile"
+              ]
+            }
+          ],
+          "deployment_allowed": false,
+          "dns_change_allowed": false,
+          "draft_only": true,
+          "form_submit_allowed": false,
+          "hosting_allowed": false,
+          "owner_approval_required_for_future_deploy_or_send": true,
+          "pages": [
+            "start",
+            "service",
+            "proof",
+            "lead_capture_draft"
+          ],
+          "primary_recommendation": {
+            "evidence_ids": [
+              "ev-no-lead-profile",
+              "ev-synthetic-site-no-lead-capture-lead-capture"
+            ],
+            "has_reason": true,
+            "product_id": "LEAD_SYSTEM",
+            "product_label": "Lead system architecture draft",
+            "reason": "Lead capture readiness is below target in the synthetic evidence.",
+            "reason_required": true,
+            "score": 14,
+            "site_id": "synthetic_site_no_lead_capture"
+          },
+          "site_id": "synthetic_site_no_lead_capture"
+        },
+        {
+          "artifact_id": "lead-system-synthetic-site-no-lead-capture",
+          "artifact_type": "lead_system_architecture",
+          "claims": [
+            {
+              "claim": "Synthetic fixture supports a lead system handoff draft only.",
+              "evidence_ids": [
+                "ev-no-lead-profile"
+              ]
+            }
+          ],
+          "components": [
+            "intake_contract",
+            "qualification_queue",
+            "owner_review",
+            "handoff_export"
+          ],
+          "crm_write_allowed": false,
+          "draft_only": true,
+          "outbound_allowed": false,
+          "owner_approval_required_for_future_deploy_or_send": true,
+          "primary_recommendation": {
+            "evidence_ids": [
+              "ev-no-lead-profile",
+              "ev-synthetic-site-no-lead-capture-lead-capture"
+            ],
+            "has_reason": true,
+            "product_id": "LEAD_SYSTEM",
+            "product_label": "Lead system architecture draft",
+            "reason": "Lead capture readiness is below target in the synthetic evidence.",
+            "reason_required": true,
+            "score": 14,
+            "site_id": "synthetic_site_no_lead_capture"
+          },
+          "production_db_write_allowed": false,
+          "site_id": "synthetic_site_no_lead_capture"
+        },
+        {
+          "artifact_id": "ai-front-office-synthetic-site-no-lead-capture",
+          "artifact_type": "ai_front_office_architecture",
+          "bot_runtime_enabled": false,
+          "claims": [
+            {
+              "claim": "Synthetic fixture supports an AI front office architecture draft only.",
+              "evidence_ids": [
+                "ev-no-lead-profile"
+              ]
+            }
+          ],
+          "draft_only": true,
+          "outbound_allowed": false,
+          "owner_approval_required_for_future_deploy_or_send": true,
+          "primary_recommendation": {
+            "evidence_ids": [
+              "ev-no-lead-profile",
+              "ev-synthetic-site-no-lead-capture-lead-capture"
+            ],
+            "has_reason": true,
+            "product_id": "LEAD_SYSTEM",
+            "product_label": "Lead system architecture draft",
+            "reason": "Lead capture readiness is below target in the synthetic evidence.",
+            "reason_required": true,
+            "score": 14,
+            "site_id": "synthetic_site_no_lead_capture"
+          },
+          "production_db_write_allowed": false,
+          "site_id": "synthetic_site_no_lead_capture",
+          "workflow": [
+            "inbound_intake",
+            "intent_label",
+            "draft_response",
+            "owner_approval",
+            "manual_send_handoff"
+          ]
+        }
+      ],
+      "deployment_allowed": false,
+      "digital_presence_check": {
+        "browser_used": false,
+        "evidence": [
+          {
+            "claim": "Synthetic site lacks represented lead capture and routing.",
+            "id": "ev-no-lead-profile",
+            "source": "synthetic_fixture"
+          },
+          {
+            "claim": "Synthetic site lacks represented lead capture and routing.",
+            "id": "ev-no-lead-profile",
+            "source": "synthetic_fixture"
+          },
+          {
+            "claim": "Synthetic lead capture readiness is below target.",
+            "id": "ev-synthetic-site-no-lead-capture-lead-capture",
+            "source": "synthetic_site_profile"
+          }
+        ],
+        "issues": [
+          {
+            "evidence_id": "ev-synthetic-site-no-lead-capture-lead-capture",
+            "issue_id": "lead_capture",
+            "label": "Lead capture readiness gap",
+            "observed": "Synthetic lead capture readiness is below target.",
+            "severity": 5
+          }
+        ],
+        "lead_capture_score": 0,
+        "lead_capture_status": "MISSING",
+        "network_used": false,
+        "production_write": false,
+        "real_external_url_accessed": false,
+        "represented_as": "digital_presence_check_v1",
+        "site_id": "synthetic_site_no_lead_capture",
+        "status": "PASS",
+        "synthetic": true,
+        "website_quality_score": 71,
+        "website_quality_status": "NEEDS_WORK"
+      },
+      "form_submit_allowed": false,
+      "lead_capture_readiness": {
+        "evidence_ids": [
+          "ev-no-lead-profile"
+        ],
+        "form_submit_allowed": false,
+        "missing": [
+          "No synthetic lead form is represented.",
+          "Lead call-to-action coverage is weak.",
+          "Consent copy is missing in the fixture.",
+          "Lead routing is not represented.",
+          "Owner follow-up SLA is slow or undefined."
+        ],
+        "owner_approval_required_for_future_send": true,
+        "score": 0,
+        "site_id": "synthetic_site_no_lead_capture",
+        "status": "MISSING"
+      },
+      "outbound_allowed": false,
+      "product_recommendation": {
+        "evidence_ids": [
+          "ev-no-lead-profile",
+          "ev-synthetic-site-no-lead-capture-lead-capture"
+        ],
+        "has_reason": true,
+        "product_id": "LEAD_SYSTEM",
+        "product_label": "Lead system architecture draft",
+        "reason": "Lead capture readiness is below target in the synthetic evidence.",
+        "reason_required": true,
+        "score": 14,
+        "site_id": "synthetic_site_no_lead_capture"
+      },
+      "qa_review": {
+        "independent_check": true,
+        "issues": [],
+        "qa_status": "PASS",
+        "site_id": "synthetic_site_no_lead_capture",
+        "unsupported_claims_blocked": false
+      },
+      "site_id": "synthetic_site_no_lead_capture",
+      "status": "PASS",
+      "website_analysis": {
+        "analysis_mode": "LOCAL_SYNTHETIC_FIXTURE",
+        "browser_used": false,
+        "components": {
+          "lead_capture": 0,
+          "message_clarity": 16,
+          "mobile": 20,
+          "performance": 25,
+          "trust": 10
+        },
+        "evidence": [
+          {
+            "claim": "Synthetic site lacks represented lead capture and routing.",
+            "id": "ev-no-lead-profile",
+            "source": "synthetic_fixture"
+          },
+          {
+            "claim": "Synthetic lead capture readiness is below target.",
+            "id": "ev-synthetic-site-no-lead-capture-lead-capture",
+            "source": "synthetic_site_profile"
+          }
+        ],
+        "issues": [
+          {
+            "evidence_id": "ev-synthetic-site-no-lead-capture-lead-capture",
+            "issue_id": "lead_capture",
+            "label": "Lead capture readiness gap",
+            "observed": "Synthetic lead capture readiness is below target.",
+            "severity": 5
+          }
+        ],
+        "network_used": false,
+        "real_external_url_accessed": false,
+        "score": 71,
+        "site_id": "synthetic_site_no_lead_capture",
+        "status": "NEEDS_WORK"
+      }
+    },
+    {
+      "artifact_handoffs": [
+        {
+          "artifact_id": "landing-synthetic-site-slow-response",
+          "artifact_type": "landing_prototype",
+          "deployment_allowed": false,
+          "draft_only": true,
+          "hash_algorithm": "SHA-256",
+          "owner_approval_required_for_future_deploy_or_send": true,
+          "path": "_generated/digital_presence_factory_v1/artifacts/landing-synthetic-site-slow-response.json",
+          "sha256": "2e7fe2db621acdadaf01aed475c8148cc1bf2aa5adb094c8d5645b8c9b4baa32"
+        },
+        {
+          "artifact_id": "website-synthetic-site-slow-response",
+          "artifact_type": "website_prototype",
+          "deployment_allowed": false,
+          "draft_only": true,
+          "hash_algorithm": "SHA-256",
+          "owner_approval_required_for_future_deploy_or_send": true,
+          "path": "_generated/digital_presence_factory_v1/artifacts/website-synthetic-site-slow-response.json",
+          "sha256": "f179a500bec93231a6275d3333e555bcbfee3da29324ae8f11330fdfe4ba8825"
+        },
+        {
+          "artifact_id": "lead-system-synthetic-site-slow-response",
+          "artifact_type": "lead_system_architecture",
+          "deployment_allowed": false,
+          "draft_only": true,
+          "hash_algorithm": "SHA-256",
+          "owner_approval_required_for_future_deploy_or_send": true,
+          "path": "_generated/digital_presence_factory_v1/artifacts/lead-system-synthetic-site-slow-response.json",
+          "sha256": "a2b1a25dd9722f9502ba213b24121b16a2c04ff360172f45bdd00c57a8c03c8d"
+        },
+        {
+          "artifact_id": "ai-front-office-synthetic-site-slow-response",
+          "artifact_type": "ai_front_office_architecture",
+          "deployment_allowed": false,
+          "draft_only": true,
+          "hash_algorithm": "SHA-256",
+          "owner_approval_required_for_future_deploy_or_send": true,
+          "path": "_generated/digital_presence_factory_v1/artifacts/ai-front-office-synthetic-site-slow-response.json",
+          "sha256": "f6834da92ad09429cd5ebca522027cb91b323465d80a02694eecf8f717175dcd"
+        }
+      ],
+      "artifacts": [
+        {
+          "artifact_id": "landing-synthetic-site-slow-response",
+          "artifact_type": "landing_prototype",
+          "claims": [
+            {
+              "claim": "Synthetic fixture supports a draft landing prototype only.",
+              "evidence_ids": [
+                "ev-slow-response-profile"
+              ]
+            }
+          ],
+          "deployment_allowed": false,
+          "draft_only": true,
+          "form_submit_allowed": false,
+          "owner_approval_required_for_future_deploy_or_send": true,
+          "primary_recommendation": {
+            "evidence_ids": [
+              "ev-slow-response-profile"
+            ],
+            "has_reason": true,
+            "product_id": "AI_FRONT_OFFICE",
+            "product_label": "AI front office architecture draft",
+            "reason": "Response handling delay dominates the synthetic evidence.",
+            "reason_required": true,
+            "score": 13,
+            "site_id": "synthetic_site_slow_response"
+          },
+          "publish_allowed": false,
+          "sections": [
+            "problem",
+            "offer",
+            "proof",
+            "lead_capture_placeholder",
+            "owner_approval_note"
+          ],
+          "site_id": "synthetic_site_slow_response"
+        },
+        {
+          "artifact_id": "website-synthetic-site-slow-response",
+          "artifact_type": "website_prototype",
+          "claims": [
+            {
+              "claim": "Synthetic fixture supports a draft website prototype only.",
+              "evidence_ids": [
+                "ev-slow-response-profile"
+              ]
+            }
+          ],
+          "deployment_allowed": false,
+          "dns_change_allowed": false,
+          "draft_only": true,
+          "form_submit_allowed": false,
+          "hosting_allowed": false,
+          "owner_approval_required_for_future_deploy_or_send": true,
+          "pages": [
+            "start",
+            "service",
+            "proof",
+            "lead_capture_draft"
+          ],
+          "primary_recommendation": {
+            "evidence_ids": [
+              "ev-slow-response-profile"
+            ],
+            "has_reason": true,
+            "product_id": "AI_FRONT_OFFICE",
+            "product_label": "AI front office architecture draft",
+            "reason": "Response handling delay dominates the synthetic evidence.",
+            "reason_required": true,
+            "score": 13,
+            "site_id": "synthetic_site_slow_response"
+          },
+          "site_id": "synthetic_site_slow_response"
+        },
+        {
+          "artifact_id": "lead-system-synthetic-site-slow-response",
+          "artifact_type": "lead_system_architecture",
+          "claims": [
+            {
+              "claim": "Synthetic fixture supports a lead system handoff draft only.",
+              "evidence_ids": [
+                "ev-slow-response-profile"
+              ]
+            }
+          ],
+          "components": [
+            "intake_contract",
+            "qualification_queue",
+            "owner_review",
+            "handoff_export"
+          ],
+          "crm_write_allowed": false,
+          "draft_only": true,
+          "outbound_allowed": false,
+          "owner_approval_required_for_future_deploy_or_send": true,
+          "primary_recommendation": {
+            "evidence_ids": [
+              "ev-slow-response-profile"
+            ],
+            "has_reason": true,
+            "product_id": "AI_FRONT_OFFICE",
+            "product_label": "AI front office architecture draft",
+            "reason": "Response handling delay dominates the synthetic evidence.",
+            "reason_required": true,
+            "score": 13,
+            "site_id": "synthetic_site_slow_response"
+          },
+          "production_db_write_allowed": false,
+          "site_id": "synthetic_site_slow_response"
+        },
+        {
+          "artifact_id": "ai-front-office-synthetic-site-slow-response",
+          "artifact_type": "ai_front_office_architecture",
+          "bot_runtime_enabled": false,
+          "claims": [
+            {
+              "claim": "Synthetic fixture supports an AI front office architecture draft only.",
+              "evidence_ids": [
+                "ev-slow-response-profile"
+              ]
+            }
+          ],
+          "draft_only": true,
+          "outbound_allowed": false,
+          "owner_approval_required_for_future_deploy_or_send": true,
+          "primary_recommendation": {
+            "evidence_ids": [
+              "ev-slow-response-profile"
+            ],
+            "has_reason": true,
+            "product_id": "AI_FRONT_OFFICE",
+            "product_label": "AI front office architecture draft",
+            "reason": "Response handling delay dominates the synthetic evidence.",
+            "reason_required": true,
+            "score": 13,
+            "site_id": "synthetic_site_slow_response"
+          },
+          "production_db_write_allowed": false,
+          "site_id": "synthetic_site_slow_response",
+          "workflow": [
+            "inbound_intake",
+            "intent_label",
+            "draft_response",
+            "owner_approval",
+            "manual_send_handoff"
+          ]
+        }
+      ],
+      "deployment_allowed": false,
+      "digital_presence_check": {
+        "browser_used": false,
+        "evidence": [
+          {
+            "claim": "Synthetic response handling SLA is slow while lead capture exists.",
+            "id": "ev-slow-response-profile",
+            "source": "synthetic_fixture"
+          },
+          {
+            "claim": "Synthetic response handling SLA is slow while lead capture exists.",
+            "id": "ev-slow-response-profile",
+            "source": "synthetic_fixture"
+          }
+        ],
+        "issues": [],
+        "lead_capture_score": 90,
+        "lead_capture_status": "READY",
+        "network_used": false,
+        "production_write": false,
+        "real_external_url_accessed": false,
+        "represented_as": "digital_presence_check_v1",
+        "site_id": "synthetic_site_slow_response",
+        "status": "PASS",
+        "synthetic": true,
+        "website_quality_score": 82,
+        "website_quality_status": "GOOD"
+      },
+      "form_submit_allowed": false,
+      "lead_capture_readiness": {
+        "evidence_ids": [
+          "ev-slow-response-profile"
+        ],
+        "form_submit_allowed": false,
+        "missing": [
+          "Owner follow-up SLA is slow or undefined."
+        ],
+        "owner_approval_required_for_future_send": true,
+        "score": 90,
+        "site_id": "synthetic_site_slow_response",
+        "status": "READY"
+      },
+      "outbound_allowed": false,
+      "product_recommendation": {
+        "evidence_ids": [
+          "ev-slow-response-profile"
+        ],
+        "has_reason": true,
+        "product_id": "AI_FRONT_OFFICE",
+        "product_label": "AI front office architecture draft",
+        "reason": "Response handling delay dominates the synthetic evidence.",
+        "reason_required": true,
+        "score": 13,
+        "site_id": "synthetic_site_slow_response"
+      },
+      "qa_review": {
+        "independent_check": true,
+        "issues": [],
+        "qa_status": "PASS",
+        "site_id": "synthetic_site_slow_response",
+        "unsupported_claims_blocked": false
+      },
+      "site_id": "synthetic_site_slow_response",
+      "status": "PASS",
+      "website_analysis": {
+        "analysis_mode": "LOCAL_SYNTHETIC_FIXTURE",
+        "browser_used": false,
+        "components": {
+          "lead_capture": 18,
+          "message_clarity": 16,
+          "mobile": 20,
+          "performance": 18,
+          "trust": 10
+        },
+        "evidence": [
+          {
+            "claim": "Synthetic response handling SLA is slow while lead capture exists.",
+            "id": "ev-slow-response-profile",
+            "source": "synthetic_fixture"
+          }
+        ],
+        "issues": [],
+        "network_used": false,
+        "real_external_url_accessed": false,
+        "score": 82,
+        "site_id": "synthetic_site_slow_response",
+        "status": "GOOD"
+      }
+    },
+    {
+      "artifact_handoffs": [
+        {
+          "artifact_id": "landing-synthetic-site-front-office-fit",
+          "artifact_type": "landing_prototype",
+          "deployment_allowed": false,
+          "draft_only": true,
+          "hash_algorithm": "SHA-256",
+          "owner_approval_required_for_future_deploy_or_send": true,
+          "path": "_generated/digital_presence_factory_v1/artifacts/landing-synthetic-site-front-office-fit.json",
+          "sha256": "5ded3624da65ca64825f6dacba3921fde241a90ec8a7414caa9ca977464fc441"
+        },
+        {
+          "artifact_id": "website-synthetic-site-front-office-fit",
+          "artifact_type": "website_prototype",
+          "deployment_allowed": false,
+          "draft_only": true,
+          "hash_algorithm": "SHA-256",
+          "owner_approval_required_for_future_deploy_or_send": true,
+          "path": "_generated/digital_presence_factory_v1/artifacts/website-synthetic-site-front-office-fit.json",
+          "sha256": "0c1eb1b7d362bc67b34db14f886c1aef5527310ecd063e1d192714779c37b35b"
+        },
+        {
+          "artifact_id": "lead-system-synthetic-site-front-office-fit",
+          "artifact_type": "lead_system_architecture",
+          "deployment_allowed": false,
+          "draft_only": true,
+          "hash_algorithm": "SHA-256",
+          "owner_approval_required_for_future_deploy_or_send": true,
+          "path": "_generated/digital_presence_factory_v1/artifacts/lead-system-synthetic-site-front-office-fit.json",
+          "sha256": "1e4b122f505be45851da44cc6642d8a1fa24fc0c63a83aaa750639bc41583f9b"
+        },
+        {
+          "artifact_id": "ai-front-office-synthetic-site-front-office-fit",
+          "artifact_type": "ai_front_office_architecture",
+          "deployment_allowed": false,
+          "draft_only": true,
+          "hash_algorithm": "SHA-256",
+          "owner_approval_required_for_future_deploy_or_send": true,
+          "path": "_generated/digital_presence_factory_v1/artifacts/ai-front-office-synthetic-site-front-office-fit.json",
+          "sha256": "c45fad286850fe5747eb68196ef5736423db916b92af02219356e2723aa22782"
+        }
+      ],
+      "artifacts": [
+        {
+          "artifact_id": "landing-synthetic-site-front-office-fit",
+          "artifact_type": "landing_prototype",
+          "claims": [
+            {
+              "claim": "Synthetic fixture supports a draft landing prototype only.",
+              "evidence_ids": [
+                "ev-front-office-profile"
+              ]
+            }
+          ],
+          "deployment_allowed": false,
+          "draft_only": true,
+          "form_submit_allowed": false,
+          "owner_approval_required_for_future_deploy_or_send": true,
+          "primary_recommendation": {
+            "evidence_ids": [
+              "ev-front-office-profile"
+            ],
+            "has_reason": true,
+            "product_id": "AI_FRONT_OFFICE",
+            "product_label": "AI front office architecture draft",
+            "reason": "Response handling delay dominates the synthetic evidence.",
+            "reason_required": true,
+            "score": 13,
+            "site_id": "synthetic_site_front_office_fit"
+          },
+          "publish_allowed": false,
+          "sections": [
+            "problem",
+            "offer",
+            "proof",
+            "lead_capture_placeholder",
+            "owner_approval_note"
+          ],
+          "site_id": "synthetic_site_front_office_fit"
+        },
+        {
+          "artifact_id": "website-synthetic-site-front-office-fit",
+          "artifact_type": "website_prototype",
+          "claims": [
+            {
+              "claim": "Synthetic fixture supports a draft website prototype only.",
+              "evidence_ids": [
+                "ev-front-office-profile"
+              ]
+            }
+          ],
+          "deployment_allowed": false,
+          "dns_change_allowed": false,
+          "draft_only": true,
+          "form_submit_allowed": false,
+          "hosting_allowed": false,
+          "owner_approval_required_for_future_deploy_or_send": true,
+          "pages": [
+            "start",
+            "service",
+            "proof",
+            "lead_capture_draft"
+          ],
+          "primary_recommendation": {
+            "evidence_ids": [
+              "ev-front-office-profile"
+            ],
+            "has_reason": true,
+            "product_id": "AI_FRONT_OFFICE",
+            "product_label": "AI front office architecture draft",
+            "reason": "Response handling delay dominates the synthetic evidence.",
+            "reason_required": true,
+            "score": 13,
+            "site_id": "synthetic_site_front_office_fit"
+          },
+          "site_id": "synthetic_site_front_office_fit"
+        },
+        {
+          "artifact_id": "lead-system-synthetic-site-front-office-fit",
+          "artifact_type": "lead_system_architecture",
+          "claims": [
+            {
+              "claim": "Synthetic fixture supports a lead system handoff draft only.",
+              "evidence_ids": [
+                "ev-front-office-profile"
+              ]
+            }
+          ],
+          "components": [
+            "intake_contract",
+            "qualification_queue",
+            "owner_review",
+            "handoff_export"
+          ],
+          "crm_write_allowed": false,
+          "draft_only": true,
+          "outbound_allowed": false,
+          "owner_approval_required_for_future_deploy_or_send": true,
+          "primary_recommendation": {
+            "evidence_ids": [
+              "ev-front-office-profile"
+            ],
+            "has_reason": true,
+            "product_id": "AI_FRONT_OFFICE",
+            "product_label": "AI front office architecture draft",
+            "reason": "Response handling delay dominates the synthetic evidence.",
+            "reason_required": true,
+            "score": 13,
+            "site_id": "synthetic_site_front_office_fit"
+          },
+          "production_db_write_allowed": false,
+          "site_id": "synthetic_site_front_office_fit"
+        },
+        {
+          "artifact_id": "ai-front-office-synthetic-site-front-office-fit",
+          "artifact_type": "ai_front_office_architecture",
+          "bot_runtime_enabled": false,
+          "claims": [
+            {
+              "claim": "Synthetic fixture supports an AI front office architecture draft only.",
+              "evidence_ids": [
+                "ev-front-office-profile"
+              ]
+            }
+          ],
+          "draft_only": true,
+          "outbound_allowed": false,
+          "owner_approval_required_for_future_deploy_or_send": true,
+          "primary_recommendation": {
+            "evidence_ids": [
+              "ev-front-office-profile"
+            ],
+            "has_reason": true,
+            "product_id": "AI_FRONT_OFFICE",
+            "product_label": "AI front office architecture draft",
+            "reason": "Response handling delay dominates the synthetic evidence.",
+            "reason_required": true,
+            "score": 13,
+            "site_id": "synthetic_site_front_office_fit"
+          },
+          "production_db_write_allowed": false,
+          "site_id": "synthetic_site_front_office_fit",
+          "workflow": [
+            "inbound_intake",
+            "intent_label",
+            "draft_response",
+            "owner_approval",
+            "manual_send_handoff"
+          ]
+        }
+      ],
+      "deployment_allowed": false,
+      "digital_presence_check": {
+        "browser_used": false,
+        "evidence": [
+          {
+            "claim": "Synthetic after-hours handling is not represented.",
+            "id": "ev-front-office-profile",
+            "source": "synthetic_fixture"
+          },
+          {
+            "claim": "Synthetic after-hours handling is not represented.",
+            "id": "ev-front-office-profile",
+            "source": "synthetic_fixture"
+          }
+        ],
+        "issues": [],
+        "lead_capture_score": 90,
+        "lead_capture_status": "READY",
+        "network_used": false,
+        "production_write": false,
+        "real_external_url_accessed": false,
+        "represented_as": "digital_presence_check_v1",
+        "site_id": "synthetic_site_front_office_fit",
+        "status": "PASS",
+        "synthetic": true,
+        "website_quality_score": 89,
+        "website_quality_status": "GOOD"
+      },
+      "form_submit_allowed": false,
+      "lead_capture_readiness": {
+        "evidence_ids": [
+          "ev-front-office-profile"
+        ],
+        "form_submit_allowed": false,
+        "missing": [
+          "Owner follow-up SLA is slow or undefined."
+        ],
+        "owner_approval_required_for_future_send": true,
+        "score": 90,
+        "site_id": "synthetic_site_front_office_fit",
+        "status": "READY"
+      },
+      "outbound_allowed": false,
+      "product_recommendation": {
+        "evidence_ids": [
+          "ev-front-office-profile"
+        ],
+        "has_reason": true,
+        "product_id": "AI_FRONT_OFFICE",
+        "product_label": "AI front office architecture draft",
+        "reason": "Response handling delay dominates the synthetic evidence.",
+        "reason_required": true,
+        "score": 13,
+        "site_id": "synthetic_site_front_office_fit"
+      },
+      "qa_review": {
+        "independent_check": true,
+        "issues": [],
+        "qa_status": "PASS",
+        "site_id": "synthetic_site_front_office_fit",
+        "unsupported_claims_blocked": false
+      },
+      "site_id": "synthetic_site_front_office_fit",
+      "status": "PASS",
+      "website_analysis": {
+        "analysis_mode": "LOCAL_SYNTHETIC_FIXTURE",
+        "browser_used": false,
+        "components": {
+          "lead_capture": 18,
+          "message_clarity": 16,
+          "mobile": 20,
+          "performance": 25,
+          "trust": 10
+        },
+        "evidence": [
+          {
+            "claim": "Synthetic after-hours handling is not represented.",
+            "id": "ev-front-office-profile",
+            "source": "synthetic_fixture"
+          }
+        ],
+        "issues": [],
+        "network_used": false,
+        "real_external_url_accessed": false,
+        "score": 89,
+        "site_id": "synthetic_site_front_office_fit",
+        "status": "GOOD"
+      }
+    },
+    {
+      "artifact_handoffs": [
+        {
+          "artifact_id": "landing-synthetic-site-lead-system-fit",
+          "artifact_type": "landing_prototype",
+          "deployment_allowed": false,
+          "draft_only": true,
+          "hash_algorithm": "SHA-256",
+          "owner_approval_required_for_future_deploy_or_send": true,
+          "path": "_generated/digital_presence_factory_v1/artifacts/landing-synthetic-site-lead-system-fit.json",
+          "sha256": "cc982f407e2e8d195ec40b8fe1c9039b060601162cc1ba72c3e745b55c707730"
+        },
+        {
+          "artifact_id": "website-synthetic-site-lead-system-fit",
+          "artifact_type": "website_prototype",
+          "deployment_allowed": false,
+          "draft_only": true,
+          "hash_algorithm": "SHA-256",
+          "owner_approval_required_for_future_deploy_or_send": true,
+          "path": "_generated/digital_presence_factory_v1/artifacts/website-synthetic-site-lead-system-fit.json",
+          "sha256": "fcfd4f43cbd98c9630ad8f046d836b264c902ac282da2c2dbede30383b694b04"
+        },
+        {
+          "artifact_id": "lead-system-synthetic-site-lead-system-fit",
+          "artifact_type": "lead_system_architecture",
+          "deployment_allowed": false,
+          "draft_only": true,
+          "hash_algorithm": "SHA-256",
+          "owner_approval_required_for_future_deploy_or_send": true,
+          "path": "_generated/digital_presence_factory_v1/artifacts/lead-system-synthetic-site-lead-system-fit.json",
+          "sha256": "3109e6d8cb90918e25149cb6692412d60c19f724d61813a16ad21314e9249489"
+        },
+        {
+          "artifact_id": "ai-front-office-synthetic-site-lead-system-fit",
+          "artifact_type": "ai_front_office_architecture",
+          "deployment_allowed": false,
+          "draft_only": true,
+          "hash_algorithm": "SHA-256",
+          "owner_approval_required_for_future_deploy_or_send": true,
+          "path": "_generated/digital_presence_factory_v1/artifacts/ai-front-office-synthetic-site-lead-system-fit.json",
+          "sha256": "cbb2a930477442dcacc05554b6116d4058728c698209719cd76e0ded48ee64f7"
+        }
+      ],
+      "artifacts": [
+        {
+          "artifact_id": "landing-synthetic-site-lead-system-fit",
+          "artifact_type": "landing_prototype",
+          "claims": [
+            {
+              "claim": "Synthetic fixture supports a draft landing prototype only.",
+              "evidence_ids": [
+                "ev-lead-system-profile"
+              ]
+            }
+          ],
+          "deployment_allowed": false,
+          "draft_only": true,
+          "form_submit_allowed": false,
+          "owner_approval_required_for_future_deploy_or_send": true,
+          "primary_recommendation": {
+            "evidence_ids": [
+              "ev-lead-system-profile",
+              "ev-synthetic-site-lead-system-fit-lead-capture"
+            ],
+            "has_reason": true,
+            "product_id": "LEAD_SYSTEM",
+            "product_label": "Lead system architecture draft",
+            "reason": "Lead capture readiness is below target in the synthetic evidence.",
+            "reason_required": true,
+            "score": 14,
+            "site_id": "synthetic_site_lead_system_fit"
+          },
+          "publish_allowed": false,
+          "sections": [
+            "problem",
+            "offer",
+            "proof",
+            "lead_capture_placeholder",
+            "owner_approval_note"
+          ],
+          "site_id": "synthetic_site_lead_system_fit"
+        },
+        {
+          "artifact_id": "website-synthetic-site-lead-system-fit",
+          "artifact_type": "website_prototype",
+          "claims": [
+            {
+              "claim": "Synthetic fixture supports a draft website prototype only.",
+              "evidence_ids": [
+                "ev-lead-system-profile"
+              ]
+            }
+          ],
+          "deployment_allowed": false,
+          "dns_change_allowed": false,
+          "draft_only": true,
+          "form_submit_allowed": false,
+          "hosting_allowed": false,
+          "owner_approval_required_for_future_deploy_or_send": true,
+          "pages": [
+            "start",
+            "service",
+            "proof",
+            "lead_capture_draft"
+          ],
+          "primary_recommendation": {
+            "evidence_ids": [
+              "ev-lead-system-profile",
+              "ev-synthetic-site-lead-system-fit-lead-capture"
+            ],
+            "has_reason": true,
+            "product_id": "LEAD_SYSTEM",
+            "product_label": "Lead system architecture draft",
+            "reason": "Lead capture readiness is below target in the synthetic evidence.",
+            "reason_required": true,
+            "score": 14,
+            "site_id": "synthetic_site_lead_system_fit"
+          },
+          "site_id": "synthetic_site_lead_system_fit"
+        },
+        {
+          "artifact_id": "lead-system-synthetic-site-lead-system-fit",
+          "artifact_type": "lead_system_architecture",
+          "claims": [
+            {
+              "claim": "Synthetic fixture supports a lead system handoff draft only.",
+              "evidence_ids": [
+                "ev-lead-system-profile"
+              ]
+            }
+          ],
+          "components": [
+            "intake_contract",
+            "qualification_queue",
+            "owner_review",
+            "handoff_export"
+          ],
+          "crm_write_allowed": false,
+          "draft_only": true,
+          "outbound_allowed": false,
+          "owner_approval_required_for_future_deploy_or_send": true,
+          "primary_recommendation": {
+            "evidence_ids": [
+              "ev-lead-system-profile",
+              "ev-synthetic-site-lead-system-fit-lead-capture"
+            ],
+            "has_reason": true,
+            "product_id": "LEAD_SYSTEM",
+            "product_label": "Lead system architecture draft",
+            "reason": "Lead capture readiness is below target in the synthetic evidence.",
+            "reason_required": true,
+            "score": 14,
+            "site_id": "synthetic_site_lead_system_fit"
+          },
+          "production_db_write_allowed": false,
+          "site_id": "synthetic_site_lead_system_fit"
+        },
+        {
+          "artifact_id": "ai-front-office-synthetic-site-lead-system-fit",
+          "artifact_type": "ai_front_office_architecture",
+          "bot_runtime_enabled": false,
+          "claims": [
+            {
+              "claim": "Synthetic fixture supports an AI front office architecture draft only.",
+              "evidence_ids": [
+                "ev-lead-system-profile"
+              ]
+            }
+          ],
+          "draft_only": true,
+          "outbound_allowed": false,
+          "owner_approval_required_for_future_deploy_or_send": true,
+          "primary_recommendation": {
+            "evidence_ids": [
+              "ev-lead-system-profile",
+              "ev-synthetic-site-lead-system-fit-lead-capture"
+            ],
+            "has_reason": true,
+            "product_id": "LEAD_SYSTEM",
+            "product_label": "Lead system architecture draft",
+            "reason": "Lead capture readiness is below target in the synthetic evidence.",
+            "reason_required": true,
+            "score": 14,
+            "site_id": "synthetic_site_lead_system_fit"
+          },
+          "production_db_write_allowed": false,
+          "site_id": "synthetic_site_lead_system_fit",
+          "workflow": [
+            "inbound_intake",
+            "intent_label",
+            "draft_response",
+            "owner_approval",
+            "manual_send_handoff"
+          ]
+        }
+      ],
+      "deployment_allowed": false,
+      "digital_presence_check": {
+        "browser_used": false,
+        "evidence": [
+          {
+            "claim": "Synthetic lead capture exists but lacks consent and routing representation.",
+            "id": "ev-lead-system-profile",
+            "source": "synthetic_fixture"
+          },
+          {
+            "claim": "Synthetic lead capture exists but lacks consent and routing representation.",
+            "id": "ev-lead-system-profile",
+            "source": "synthetic_fixture"
+          },
+          {
+            "claim": "Synthetic lead capture readiness is below target.",
+            "id": "ev-synthetic-site-lead-system-fit-lead-capture",
+            "source": "synthetic_site_profile"
+          }
+        ],
+        "issues": [
+          {
+            "evidence_id": "ev-synthetic-site-lead-system-fit-lead-capture",
+            "issue_id": "lead_capture",
+            "label": "Lead capture readiness gap",
+            "observed": "Synthetic lead capture readiness is below target.",
+            "severity": 5
+          }
+        ],
+        "lead_capture_score": 30,
+        "lead_capture_status": "MISSING",
+        "network_used": false,
+        "production_write": false,
+        "real_external_url_accessed": false,
+        "represented_as": "digital_presence_check_v1",
+        "site_id": "synthetic_site_lead_system_fit",
+        "status": "PASS",
+        "synthetic": true,
+        "website_quality_score": 70,
+        "website_quality_status": "NEEDS_WORK"
+      },
+      "form_submit_allowed": false,
+      "lead_capture_readiness": {
+        "evidence_ids": [
+          "ev-lead-system-profile"
+        ],
+        "form_submit_allowed": false,
+        "missing": [
+          "Lead call-to-action coverage is weak.",
+          "Consent copy is missing in the fixture.",
+          "Lead routing is not represented.",
+          "Owner follow-up SLA is slow or undefined."
+        ],
+        "owner_approval_required_for_future_send": true,
+        "score": 30,
+        "site_id": "synthetic_site_lead_system_fit",
+        "status": "MISSING"
+      },
+      "outbound_allowed": false,
+      "product_recommendation": {
+        "evidence_ids": [
+          "ev-lead-system-profile",
+          "ev-synthetic-site-lead-system-fit-lead-capture"
+        ],
+        "has_reason": true,
+        "product_id": "LEAD_SYSTEM",
+        "product_label": "Lead system architecture draft",
+        "reason": "Lead capture readiness is below target in the synthetic evidence.",
+        "reason_required": true,
+        "score": 14,
+        "site_id": "synthetic_site_lead_system_fit"
+      },
+      "qa_review": {
+        "independent_check": true,
+        "issues": [],
+        "qa_status": "PASS",
+        "site_id": "synthetic_site_lead_system_fit",
+        "unsupported_claims_blocked": false
+      },
+      "site_id": "synthetic_site_lead_system_fit",
+      "status": "PASS",
+      "website_analysis": {
+        "analysis_mode": "LOCAL_SYNTHETIC_FIXTURE",
+        "browser_used": false,
+        "components": {
+          "lead_capture": 6,
+          "message_clarity": 16,
+          "mobile": 20,
+          "performance": 18,
+          "trust": 10
+        },
+        "evidence": [
+          {
+            "claim": "Synthetic lead capture exists but lacks consent and routing representation.",
+            "id": "ev-lead-system-profile",
+            "source": "synthetic_fixture"
+          },
+          {
+            "claim": "Synthetic lead capture readiness is below target.",
+            "id": "ev-synthetic-site-lead-system-fit-lead-capture",
+            "source": "synthetic_site_profile"
+          }
+        ],
+        "issues": [
+          {
+            "evidence_id": "ev-synthetic-site-lead-system-fit-lead-capture",
+            "issue_id": "lead_capture",
+            "label": "Lead capture readiness gap",
+            "observed": "Synthetic lead capture readiness is below target.",
+            "severity": 5
+          }
+        ],
+        "network_used": false,
+        "real_external_url_accessed": false,
+        "score": 70,
+        "site_id": "synthetic_site_lead_system_fit",
+        "status": "NEEDS_WORK"
+      }
+    },
+    {
+      "artifact_handoffs": [
+        {
+          "artifact_id": "landing-synthetic-site-website-fit",
+          "artifact_type": "landing_prototype",
+          "deployment_allowed": false,
+          "draft_only": true,
+          "hash_algorithm": "SHA-256",
+          "owner_approval_required_for_future_deploy_or_send": true,
+          "path": "_generated/digital_presence_factory_v1/artifacts/landing-synthetic-site-website-fit.json",
+          "sha256": "214dacf277430aa9f7b21e014a2931514fd6d76d017ee6bf84c0ba12e7f555fa"
+        },
+        {
+          "artifact_id": "website-synthetic-site-website-fit",
+          "artifact_type": "website_prototype",
+          "deployment_allowed": false,
+          "draft_only": true,
+          "hash_algorithm": "SHA-256",
+          "owner_approval_required_for_future_deploy_or_send": true,
+          "path": "_generated/digital_presence_factory_v1/artifacts/website-synthetic-site-website-fit.json",
+          "sha256": "b5d98fca6d87501946bd95492c872e67bf27a280ea221a5bbc770f191ba4a965"
+        },
+        {
+          "artifact_id": "lead-system-synthetic-site-website-fit",
+          "artifact_type": "lead_system_architecture",
+          "deployment_allowed": false,
+          "draft_only": true,
+          "hash_algorithm": "SHA-256",
+          "owner_approval_required_for_future_deploy_or_send": true,
+          "path": "_generated/digital_presence_factory_v1/artifacts/lead-system-synthetic-site-website-fit.json",
+          "sha256": "168e3e960031de7dbba0557b2c2aa921f5c593506e16645acdf8b1f33b968a21"
+        },
+        {
+          "artifact_id": "ai-front-office-synthetic-site-website-fit",
+          "artifact_type": "ai_front_office_architecture",
+          "deployment_allowed": false,
+          "draft_only": true,
+          "hash_algorithm": "SHA-256",
+          "owner_approval_required_for_future_deploy_or_send": true,
+          "path": "_generated/digital_presence_factory_v1/artifacts/ai-front-office-synthetic-site-website-fit.json",
+          "sha256": "e106bd649a060cf3e24b2ab40745873e71901502aa16686897ccf09de110d71d"
+        }
+      ],
+      "artifacts": [
+        {
+          "artifact_id": "landing-synthetic-site-website-fit",
+          "artifact_type": "landing_prototype",
+          "claims": [
+            {
+              "claim": "Synthetic fixture supports a draft landing prototype only.",
+              "evidence_ids": [
+                "ev-website-fit-profile"
+              ]
+            }
+          ],
+          "deployment_allowed": false,
+          "draft_only": true,
+          "form_submit_allowed": false,
+          "owner_approval_required_for_future_deploy_or_send": true,
+          "primary_recommendation": {
+            "evidence_ids": [
+              "ev-synthetic-site-website-fit-message-clarity",
+              "ev-synthetic-site-website-fit-mobile",
+              "ev-synthetic-site-website-fit-performance",
+              "ev-synthetic-site-website-fit-trust",
+              "ev-website-fit-profile"
+            ],
+            "has_reason": true,
+            "product_id": "WEBSITE_PROTOTYPE",
+            "product_label": "Website prototype draft",
+            "reason": "Website quality and trust signals dominate the synthetic evidence.",
+            "reason_required": true,
+            "score": 17,
+            "site_id": "synthetic_site_website_fit"
+          },
+          "publish_allowed": false,
+          "sections": [
+            "problem",
+            "offer",
+            "proof",
+            "lead_capture_placeholder",
+            "owner_approval_note"
+          ],
+          "site_id": "synthetic_site_website_fit"
+        },
+        {
+          "artifact_id": "website-synthetic-site-website-fit",
+          "artifact_type": "website_prototype",
+          "claims": [
+            {
+              "claim": "Synthetic fixture supports a draft website prototype only.",
+              "evidence_ids": [
+                "ev-website-fit-profile"
+              ]
+            }
+          ],
+          "deployment_allowed": false,
+          "dns_change_allowed": false,
+          "draft_only": true,
+          "form_submit_allowed": false,
+          "hosting_allowed": false,
+          "owner_approval_required_for_future_deploy_or_send": true,
+          "pages": [
+            "start",
+            "service",
+            "proof",
+            "lead_capture_draft"
+          ],
+          "primary_recommendation": {
+            "evidence_ids": [
+              "ev-synthetic-site-website-fit-message-clarity",
+              "ev-synthetic-site-website-fit-mobile",
+              "ev-synthetic-site-website-fit-performance",
+              "ev-synthetic-site-website-fit-trust",
+              "ev-website-fit-profile"
+            ],
+            "has_reason": true,
+            "product_id": "WEBSITE_PROTOTYPE",
+            "product_label": "Website prototype draft",
+            "reason": "Website quality and trust signals dominate the synthetic evidence.",
+            "reason_required": true,
+            "score": 17,
+            "site_id": "synthetic_site_website_fit"
+          },
+          "site_id": "synthetic_site_website_fit"
+        },
+        {
+          "artifact_id": "lead-system-synthetic-site-website-fit",
+          "artifact_type": "lead_system_architecture",
+          "claims": [
+            {
+              "claim": "Synthetic fixture supports a lead system handoff draft only.",
+              "evidence_ids": [
+                "ev-website-fit-profile"
+              ]
+            }
+          ],
+          "components": [
+            "intake_contract",
+            "qualification_queue",
+            "owner_review",
+            "handoff_export"
+          ],
+          "crm_write_allowed": false,
+          "draft_only": true,
+          "outbound_allowed": false,
+          "owner_approval_required_for_future_deploy_or_send": true,
+          "primary_recommendation": {
+            "evidence_ids": [
+              "ev-synthetic-site-website-fit-message-clarity",
+              "ev-synthetic-site-website-fit-mobile",
+              "ev-synthetic-site-website-fit-performance",
+              "ev-synthetic-site-website-fit-trust",
+              "ev-website-fit-profile"
+            ],
+            "has_reason": true,
+            "product_id": "WEBSITE_PROTOTYPE",
+            "product_label": "Website prototype draft",
+            "reason": "Website quality and trust signals dominate the synthetic evidence.",
+            "reason_required": true,
+            "score": 17,
+            "site_id": "synthetic_site_website_fit"
+          },
+          "production_db_write_allowed": false,
+          "site_id": "synthetic_site_website_fit"
+        },
+        {
+          "artifact_id": "ai-front-office-synthetic-site-website-fit",
+          "artifact_type": "ai_front_office_architecture",
+          "bot_runtime_enabled": false,
+          "claims": [
+            {
+              "claim": "Synthetic fixture supports an AI front office architecture draft only.",
+              "evidence_ids": [
+                "ev-website-fit-profile"
+              ]
+            }
+          ],
+          "draft_only": true,
+          "outbound_allowed": false,
+          "owner_approval_required_for_future_deploy_or_send": true,
+          "primary_recommendation": {
+            "evidence_ids": [
+              "ev-synthetic-site-website-fit-message-clarity",
+              "ev-synthetic-site-website-fit-mobile",
+              "ev-synthetic-site-website-fit-performance",
+              "ev-synthetic-site-website-fit-trust",
+              "ev-website-fit-profile"
+            ],
+            "has_reason": true,
+            "product_id": "WEBSITE_PROTOTYPE",
+            "product_label": "Website prototype draft",
+            "reason": "Website quality and trust signals dominate the synthetic evidence.",
+            "reason_required": true,
+            "score": 17,
+            "site_id": "synthetic_site_website_fit"
+          },
+          "production_db_write_allowed": false,
+          "site_id": "synthetic_site_website_fit",
+          "workflow": [
+            "inbound_intake",
+            "intent_label",
+            "draft_response",
+            "owner_approval",
+            "manual_send_handoff"
+          ]
+        }
+      ],
+      "deployment_allowed": false,
+      "digital_presence_check": {
+        "browser_used": false,
+        "evidence": [
+          {
+            "claim": "Synthetic website quality is below target while lead capture is represented.",
+            "id": "ev-website-fit-profile",
+            "source": "synthetic_fixture"
+          },
+          {
+            "claim": "Synthetic website quality is below target while lead capture is represented.",
+            "id": "ev-website-fit-profile",
+            "source": "synthetic_fixture"
+          },
+          {
+            "claim": "Synthetic response time is 3900 ms.",
+            "id": "ev-synthetic-site-website-fit-performance",
+            "source": "synthetic_site_profile"
+          },
+          {
+            "claim": "Synthetic fixture marks mobile_ready=false.",
+            "id": "ev-synthetic-site-website-fit-mobile",
+            "source": "synthetic_site_profile"
+          },
+          {
+            "claim": "Synthetic message clarity is below target.",
+            "id": "ev-synthetic-site-website-fit-message-clarity",
+            "source": "synthetic_site_profile"
+          },
+          {
+            "claim": "Synthetic trust proof count is below target.",
+            "id": "ev-synthetic-site-website-fit-trust",
+            "source": "synthetic_site_profile"
+          }
+        ],
+        "issues": [
+          {
+            "evidence_id": "ev-synthetic-site-website-fit-performance",
+            "issue_id": "performance",
+            "label": "Slow synthetic response",
+            "observed": "Synthetic response time is 3900 ms.",
+            "severity": 4
+          },
+          {
+            "evidence_id": "ev-synthetic-site-website-fit-mobile",
+            "issue_id": "mobile",
+            "label": "Mobile readiness gap",
+            "observed": "Synthetic fixture marks mobile_ready=false.",
+            "severity": 3
+          },
+          {
+            "evidence_id": "ev-synthetic-site-website-fit-message-clarity",
+            "issue_id": "message_clarity",
+            "label": "Message clarity gap",
+            "observed": "Synthetic message clarity is below target.",
+            "severity": 3
+          },
+          {
+            "evidence_id": "ev-synthetic-site-website-fit-trust",
+            "issue_id": "trust",
+            "label": "Trust proof gap",
+            "observed": "Synthetic trust proof count is below target.",
+            "severity": 3
+          }
+        ],
+        "lead_capture_score": 100,
+        "lead_capture_status": "READY",
+        "network_used": false,
+        "production_write": false,
+        "real_external_url_accessed": false,
+        "represented_as": "digital_presence_check_v1",
+        "site_id": "synthetic_site_website_fit",
+        "status": "PASS",
+        "synthetic": true,
+        "website_quality_score": 36,
+        "website_quality_status": "POOR"
+      },
+      "form_submit_allowed": false,
+      "lead_capture_readiness": {
+        "evidence_ids": [
+          "ev-website-fit-profile"
+        ],
+        "form_submit_allowed": false,
+        "missing": [],
+        "owner_approval_required_for_future_send": true,
+        "score": 100,
+        "site_id": "synthetic_site_website_fit",
+        "status": "READY"
+      },
+      "outbound_allowed": false,
+      "product_recommendation": {
+        "evidence_ids": [
+          "ev-synthetic-site-website-fit-message-clarity",
+          "ev-synthetic-site-website-fit-mobile",
+          "ev-synthetic-site-website-fit-performance",
+          "ev-synthetic-site-website-fit-trust",
+          "ev-website-fit-profile"
+        ],
+        "has_reason": true,
+        "product_id": "WEBSITE_PROTOTYPE",
+        "product_label": "Website prototype draft",
+        "reason": "Website quality and trust signals dominate the synthetic evidence.",
+        "reason_required": true,
+        "score": 17,
+        "site_id": "synthetic_site_website_fit"
+      },
+      "qa_review": {
+        "independent_check": true,
+        "issues": [],
+        "qa_status": "PASS",
+        "site_id": "synthetic_site_website_fit",
+        "unsupported_claims_blocked": false
+      },
+      "site_id": "synthetic_site_website_fit",
+      "status": "PASS",
+      "website_analysis": {
+        "analysis_mode": "LOCAL_SYNTHETIC_FIXTURE",
+        "browser_used": false,
+        "components": {
+          "lead_capture": 20,
+          "message_clarity": 8,
+          "mobile": 4,
+          "performance": 4,
+          "trust": 0
+        },
+        "evidence": [
+          {
+            "claim": "Synthetic website quality is below target while lead capture is represented.",
+            "id": "ev-website-fit-profile",
+            "source": "synthetic_fixture"
+          },
+          {
+            "claim": "Synthetic response time is 3900 ms.",
+            "id": "ev-synthetic-site-website-fit-performance",
+            "source": "synthetic_site_profile"
+          },
+          {
+            "claim": "Synthetic fixture marks mobile_ready=false.",
+            "id": "ev-synthetic-site-website-fit-mobile",
+            "source": "synthetic_site_profile"
+          },
+          {
+            "claim": "Synthetic message clarity is below target.",
+            "id": "ev-synthetic-site-website-fit-message-clarity",
+            "source": "synthetic_site_profile"
+          },
+          {
+            "claim": "Synthetic trust proof count is below target.",
+            "id": "ev-synthetic-site-website-fit-trust",
+            "source": "synthetic_site_profile"
+          }
+        ],
+        "issues": [
+          {
+            "evidence_id": "ev-synthetic-site-website-fit-performance",
+            "issue_id": "performance",
+            "label": "Slow synthetic response",
+            "observed": "Synthetic response time is 3900 ms.",
+            "severity": 4
+          },
+          {
+            "evidence_id": "ev-synthetic-site-website-fit-mobile",
+            "issue_id": "mobile",
+            "label": "Mobile readiness gap",
+            "observed": "Synthetic fixture marks mobile_ready=false.",
+            "severity": 3
+          },
+          {
+            "evidence_id": "ev-synthetic-site-website-fit-message-clarity",
+            "issue_id": "message_clarity",
+            "label": "Message clarity gap",
+            "observed": "Synthetic message clarity is below target.",
+            "severity": 3
+          },
+          {
+            "evidence_id": "ev-synthetic-site-website-fit-trust",
+            "issue_id": "trust",
+            "label": "Trust proof gap",
+            "observed": "Synthetic trust proof count is below target.",
+            "severity": 3
+          }
+        ],
+        "network_used": false,
+        "real_external_url_accessed": false,
+        "score": 36,
+        "site_id": "synthetic_site_website_fit",
+        "status": "POOR"
+      }
+    }
+  ],
+  "stop_active": false,
+  "synthetic_site_profiles_processed": 6,
+  "unsupported_claims_blocked": true
+}

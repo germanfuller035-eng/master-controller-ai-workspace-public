@@ -1,0 +1,12 @@
+{
+  "scenario": "J",
+  "production_affected": false,
+  "name": "Restore succeeds",
+  "ok": true,
+  "steps": [
+    "isolated restore",
+    "checksum ok",
+    "counts ok",
+    "no production overwrite"
+  ]
+}

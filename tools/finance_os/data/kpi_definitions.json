@@ -1,0 +1,22 @@
+{
+  "schema": "finance_os.kpi_definitions.v1",
+  "version": "1.0",
+  "kpis": [
+    {"key": "booked_revenue", "definition": "Revenue from signed/won deals", "formula": "sum(deal.value WON)", "source": "Revenue OS", "frequency": "monthly", "default_status": "OWNER_TARGET", "warning_threshold": "< target"},
+    {"key": "invoiced_revenue", "definition": "Total invoiced", "formula": "sum(invoice.total ISSUED+)", "source": "Finance OS invoices", "frequency": "monthly", "default_status": "CONFIRMED", "warning_threshold": "< booked"},
+    {"key": "cash_collected", "definition": "Confirmed payments received", "formula": "sum(payment.amount CONFIRMED)", "source": "Finance OS payments", "frequency": "monthly", "default_status": "CONFIRMED", "warning_threshold": "< invoiced - target_dso"},
+    {"key": "receivables", "definition": "Outstanding invoiced minus paid", "formula": "sum(invoice.total) - sum(payment.confirmed)", "source": "Finance OS", "frequency": "weekly", "default_status": "CONFIRMED", "warning_threshold": "> 1 month revenue"},
+    {"key": "overdue_receivables", "definition": "Receivables past due date", "formula": "receivables where due_date < now", "source": "Finance OS", "frequency": "weekly", "default_status": "CONFIRMED", "warning_threshold": "> 0"},
+    {"key": "gross_margin", "definition": "Gross profit / revenue", "formula": "(revenue - direct_costs)/revenue", "source": "Finance OS", "frequency": "monthly", "default_status": "MODEL_ESTIMATE", "warning_threshold": "< 50%"},
+    {"key": "operating_result", "definition": "Gross profit - opex", "formula": "gross_profit - opex", "source": "Finance OS P&L", "frequency": "monthly", "default_status": "MODEL_ESTIMATE", "warning_threshold": "< 0"},
+    {"key": "cash_runway", "definition": "Months of fixed costs covered by cash", "formula": "cash / monthly_fixed_costs", "source": "Finance OS", "frequency": "monthly", "default_status": "MODEL_ESTIMATE", "warning_threshold": "< 3 months"},
+    {"key": "reserve_coverage", "definition": "Available reserves / target", "formula": "available/target", "source": "Finance OS reserves", "frequency": "monthly", "default_status": "MODEL_ESTIMATE", "warning_threshold": "< 1.0"},
+    {"key": "average_payment_delay", "definition": "Avg days between due and paid", "formula": "avg(paid_date - due_date)", "source": "Finance OS", "frequency": "monthly", "default_status": "CONFIRMED", "warning_threshold": "> 14 days"},
+    {"key": "revenue_per_owner_hour", "definition": "Revenue / owner hours", "formula": "revenue/owner_hours", "source": "Finance OS + Delivery OS", "frequency": "monthly", "default_status": "MODEL_ESTIMATE", "warning_threshold": "< owner_hour_cost"},
+    {"key": "project_margin", "definition": "Project gross profit / value", "formula": "gross_profit/contracted_value", "source": "Finance OS profitability", "frequency": "per_project", "default_status": "MODEL_ESTIMATE", "warning_threshold": "< 20%"},
+    {"key": "product_margin", "definition": "Product contribution margin", "formula": "price - variable_cost", "source": "Finance OS economics", "frequency": "monthly", "default_status": "MODEL_ESTIMATE", "warning_threshold": "< 30%"},
+    {"key": "conversion_to_paid", "definition": "Paid deals / contacted", "formula": "paid/contacted", "source": "Revenue OS funnel", "frequency": "monthly", "default_status": "MODEL_ESTIMATE", "warning_threshold": "< target"},
+    {"key": "monthly_recurring_revenue", "definition": "Recurring revenue", "formula": "sum(recurring revenue)", "source": "Finance OS", "frequency": "monthly", "default_status": "CONFIRMED", "warning_threshold": "decline"},
+    {"key": "client_concentration", "definition": "Largest client share of revenue", "formula": "max_client_revenue/total_revenue", "source": "Finance OS", "frequency": "monthly", "default_status": "CONFIRMED", "warning_threshold": "> 40%"}
+  ]
+}

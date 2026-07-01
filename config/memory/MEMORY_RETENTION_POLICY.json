@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-26",
+  "session": "KNOWLEDGE_MEMORY_QDRANT_DOCLING_V1",
+  "retention_required": true,
+  "allowed_retention_classes": ["SHORT", "STANDARD", "REVIEW_30_DAYS", "UNTIL_SOURCE_EXPIRES"],
+  "default_retention": "REVIEW_30_DAYS",
+  "expired_record_action": "REVIEW_NOT_DELETE_AUTOMATICALLY",
+  "direct_delete_policy": "DENY_WITHOUT_OWNER_APPROVAL"
+}

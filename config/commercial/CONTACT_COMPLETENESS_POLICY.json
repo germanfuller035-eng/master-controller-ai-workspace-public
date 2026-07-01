@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-26",
+  "session": "COMMERCIAL_AGENT_FACTORY_V1",
+  "scope": "LOCAL_SYNTHETIC_NO_SEND",
+  "production_enabled": false,
+  "production_db_write_enabled": false,
+  "browser_action_allowed": false,
+  "real_crawling_allowed": false,
+  "external_outreach_allowed": false,
+  "payment_allowed": false,
+  "invoice_send_allowed": false,
+  "owner_approval_required_for_future_send": true,
+  "default_decision": "DENY",
+  "target_score": 95,
+  "measured_fields": [
+    "website_reference",
+    "contact_form_reference",
+    "public_contact_page_reference",
+    "role_contact_reference",
+    "consent_basis"
+  ],
+  "real_email_policy": "DENY_FIXTURE",
+  "real_phone_policy": "DENY_FIXTURE"
+}

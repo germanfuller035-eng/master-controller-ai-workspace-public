@@ -1,0 +1,15 @@
+{
+  "support_request_id": "T1",
+  "category": "outage",
+  "severity": "SEV1_CRITICAL",
+  "product": "business_website",
+  "likely_owner": "owner",
+  "kind": "defect",
+  "evidence_required": true,
+  "safe_next_action": "acknowledge + gather details",
+  "response_sla_recommendation": "1h",
+  "escalation": true,
+  "flags": [],
+  "auto_resolve_blocked": false,
+  "note": "No client communication. Security/privacy never auto-resolved."
+}

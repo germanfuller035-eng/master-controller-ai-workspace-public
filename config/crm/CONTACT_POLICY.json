@@ -1,0 +1,31 @@
+{
+  "policy_id": "contact_policy_v1",
+  "scope": "LOCAL_SYNTHETIC_ONLY",
+  "required_fields": [
+    "schema_version",
+    "synthetic",
+    "contact_id",
+    "display_name",
+    "organization_name",
+    "contact_reference",
+    "consent_basis",
+    "crm_write_allowed"
+  ],
+  "safety": {
+    "OUTBOUND_EMAIL": "OFF",
+    "OUTBOUND_SOCIAL": "OFF",
+    "AUTO_SAFE": "OFF",
+    "PAYMENTS": "OFF",
+    "PRODUCTION_DB_WRITE": "OFF",
+    "CRM_WRITE": "OFF",
+    "INVOICE_SEND": "OFF",
+    "ACCOUNTING_EXPORT": "OFF",
+    "REAL_REPLY_MONITOR": "OFF"
+  },
+  "rules": {
+    "synthetic_required": true,
+    "real_email_allowed": false,
+    "real_phone_allowed": false,
+    "crm_write_allowed": false
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "device": "HONOR_ALT_LX1",
+  "serial": "AMSKBB4914919475",
+  "package": "ru.dmitry.matercontroller.debug",
+  "screenshots_created": false,
+  "screenshots_committed": false,
+  "ui_dumps_committed": false,
+  "all_pass": true,
+  "main_routes": {
+    "app_launched": true,
+    "today": true,
+    "leads": true,
+    "commerce": true,
+    "decisions": true,
+    "agents": true,
+    "system": true,
+    "no_crash_anr": true
+  },
+  "sales_flow": {
+    "working_sales_mvp": true,
+    "no_send_banner": true,
+    "real_leads_visible_from_private_storage": true,
+    "draft_editor": true,
+    "qa_gate": true,
+    "suppression_gate": true,
+    "owner_override": true,
+    "send_readiness": true,
+    "manual_send_packet": true,
+    "post_send_result_marking": true,
+    "auto_send_off": true,
+    "no_crash_anr": true
+  },
+  "nested_routes": {
+    "offer_review": true,
+    "offer_review_back": true,
+    "first_touch": true,
+    "first_touch_back": true,
+    "catalog": true,
+    "catalog_back": true,
+    "reliability": true,
+    "reliability_back": true,
+    "settings_connection": true,
+    "settings_connection_status": true,
+    "settings_back": true,
+    "no_crash_anr": true
+  },
+  "safety": {
+    "auto_send_status": "OFF",
+    "payment_status": "OFF",
+    "production_write_status": "OFF",
+    "outbound_count": 0,
+    "payment_count": 0,
+    "production_db_writes": 0
+  }
+}

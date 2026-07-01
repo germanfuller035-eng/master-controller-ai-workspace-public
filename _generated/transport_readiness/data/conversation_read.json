@@ -1,0 +1,1 @@
+{"conversation_read_api":"ON","customer_success_presale_read_api":"ON","endpoints":["/conversations","/conversations/:id","/conversations/:id/timeline","/conversations/:id/replies","/conversations/:id/followups","/conversations/:id/presale-health"],"production_conversations_total":8,"second_conversation_truth":false,"send_capability":"NONE"}

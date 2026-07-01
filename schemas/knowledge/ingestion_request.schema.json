@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ingestion_request",
+  "type": "object",
+  "required": ["request_id", "artifact", "provenance", "environment"],
+  "properties": {
+    "request_id": {"type": "string"},
+    "artifact": {"type": "object"},
+    "provenance": {"type": "object"},
+    "environment": {"type": "string"},
+    "owner_approval": {"type": "boolean"}
+  },
+  "additionalProperties": true
+}

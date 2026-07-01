@@ -1,0 +1,14 @@
+{
+  "title": "owner_control_stage_gate_result",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["synthetic", "status", "checks", "outbound_count", "payment_count", "production_db_writes"],
+  "properties": {
+    "synthetic": {"type": "boolean"},
+    "status": {"type": "string"},
+    "checks": {"type": "object"},
+    "outbound_count": {"type": "integer"},
+    "payment_count": {"type": "integer"},
+    "production_db_writes": {"type": "integer"}
+  }
+}

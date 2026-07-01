@@ -1,0 +1,12 @@
+{
+  "product_id": "landing_sprint",
+  "price": null,
+  "price_status": "UNKNOWN",
+  "owner_hours": null,
+  "verdict": "unknown",
+  "reasons": [
+    "price unknown / status UNKNOWN",
+    "owner hours unknown -> capacity unclear"
+  ],
+  "note": "No new approved prices. Recommendation only."
+}

@@ -1,0 +1,136 @@
+{
+  "artifact_type": "FIRST_TOUCH",
+  "schema_version": "first_touch_v1",
+  "lead_id": "BETON-MASTERS_RU",
+  "audit_id": "audit_BETON-MASTERS_RU_d13e7c03",
+  "product_id": "mini_audit",
+  "commercial_truth_revision": 106,
+  "status": "QA_PASSED",
+  "hook": {
+    "hook_type": "CONTACT_DISCOVERY_FRICTION",
+    "title": "Страница контактов показывает «БетонМастерс в Краснодаре», email betonomaster@ya",
+    "finding_id": "f_BETON-MASTERS_RU_1",
+    "evidence_url": "beton-masters.ru",
+    "evidence_text": "Страница контактов показывает «БетонМастерс в Краснодаре», email betonomaster@yandex.ru, телефоны продаж отдельно для ЖБИ и бетона.",
+    "observed_at": "2026-06-12T18:09:17.923Z",
+    "business_impact": "клиенту сложнее быстро найти нужный способ связи",
+    "impact_confidence": 0.7,
+    "reason_selected": "Лучший evidence-backed угол (оценка крючка 88)."
+  },
+  "supporting_hint": {
+    "finding_id": "f_BETON-MASTERS_RU_2",
+    "short_text": "В реквизитах указано ООО «Бетон-Мастер ЖБИ» и фактический адрес в Краснодарском "
+  },
+  "subject_variants": [
+    {
+      "id": "subj_a",
+      "text": "Наблюдение по сайту",
+      "kind": "observation",
+      "score": 100,
+      "risk_flags": [],
+      "reason": "observation"
+    },
+    {
+      "id": "subj_b",
+      "text": "Вопрос по сайту Бетон-Мастер",
+      "kind": "neutral_question",
+      "score": 100,
+      "risk_flags": [],
+      "reason": "neutral_question"
+    },
+    {
+      "id": "subj_c",
+      "text": "Короткий разбор сайта Бетон-Мастер",
+      "kind": "site_mention",
+      "score": 100,
+      "risk_flags": [],
+      "reason": "site_mention"
+    }
+  ],
+  "body_variants": [
+    {
+      "id": "body_a",
+      "text": "Здравствуйте.\n\nПосмотрел путь клиента до обращения на сайте Бетон-Мастер глазами нового посетителя. Клиенту сложнее быстро найти нужный способ связи. Из-за этого часть людей, которые уже заинтересованы, может откладывать обращение или уходить к более понятному поставщику.\n\nОтметил ещё один момент по доверию и удобству на телефоне — это влияет на первое впечатление нового клиента. Могу прислать короткий разбор на одной странице — с конкретными наблюдениями и понятными шагами, без созвона и без обязательств с вашей стороны.\n\nПрислать его ответным письмом?",
+      "kind": "problem_consequence_permission",
+      "metrics": {
+        "word_count": 79,
+        "questions": 1,
+        "exclaims": 0,
+        "links": 0,
+        "has_price": false,
+        "cta_count": 1
+      }
+    },
+    {
+      "id": "body_b",
+      "text": "Здравствуйте.\n\nКоротко посмотрел сайт Бетон-Мастер глазами нового клиента, который ищет поставщика. Клиенту сложнее быстро найти нужный способ связи. Это заметный момент: он влияет на первое впечатление и на то, насколько просто человеку сделать следующий шаг.\n\nЕсть ещё несколько наблюдений по пути до заявки и по доверию. Могу собрать их в короткий разбор на одной странице и прислать, если это будет вам полезно — без созвона и обязательств.\n\nПрислать разбор ответным письмом?",
+      "kind": "observation_curiosity_permission",
+      "metrics": {
+        "word_count": 71,
+        "questions": 1,
+        "exclaims": 0,
+        "links": 0,
+        "has_price": false,
+        "cta_count": 1
+      }
+    }
+  ],
+  "recommended_subject_id": "subj_a",
+  "recommended_body_id": "body_a",
+  "cta": {
+    "type": "REPLY_PERMISSION",
+    "text": "Прислать короткий разбор ответным письмом?"
+  },
+  "opt_out_text": "Если обращения не нужны — ответьте одним словом, и я больше не напишу.",
+  "quality": {
+    "total_score": 98,
+    "evidence_score": 20,
+    "hook_score": 88,
+    "business_relevance_score": 15,
+    "personalization_score": 15,
+    "clarity_score": 10,
+    "cta_score": 10,
+    "human_tone_score": 5,
+    "deliverability_score": 5,
+    "risk_penalty": 0,
+    "gate_result": "PASS",
+    "failure_reasons": []
+  },
+  "compliance": {
+    "public_business_contact": true,
+    "prior_opt_out": false,
+    "prior_commercial_send": false,
+    "jurisdiction_review": "NOT_REQUIRED",
+    "tracking_pixel": false,
+    "attachment": false,
+    "external_link_count": 0,
+    "unsupported_claims": 0,
+    "guessed_data": 0,
+    "gate_result": "PASS"
+  },
+  "deliverability": {
+    "sender_domain": "configured (yandex)",
+    "spf": "UNKNOWN_READ_ONLY",
+    "dkim": "UNKNOWN_READ_ONLY",
+    "dmarc": "UNKNOWN_READ_ONLY",
+    "recipient_syntax": true,
+    "recipient_domain": "yandex.ru",
+    "company_domain_match": false,
+    "smtp_probing": false,
+    "suppression_history": false,
+    "status": "READY_NO_SEND"
+  },
+  "uniqueness": {
+    "max_similarity_to_other_drafts": 0,
+    "duplicate_risk": "LOW"
+  },
+  "provenance": {
+    "generator": "FirstTouchStrategist",
+    "model": "deterministic_no_llm",
+    "prompt_version": "first_touch_v1",
+    "source_revision": 106,
+    "usage_record_id": null
+  },
+  "no_send": true,
+  "content_hash": "08d2ed71976f61c9dcb332fac3751ade"
+}

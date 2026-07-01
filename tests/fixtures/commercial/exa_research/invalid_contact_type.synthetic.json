@@ -1,0 +1,22 @@
+{
+  "research_task_id": "synthetic-research-task-004",
+  "lead_id": "synthetic-lead-exa-004",
+  "company_name": "Synthetic Unsafe Contact Company",
+  "website": "synthetic-unsafe-contact.test",
+  "source_type": "public_web_research",
+  "facts": [],
+  "buying_signals": [],
+  "contact_candidates": [
+    {
+      "contact_type": "personal_mobile",
+      "value": "synthetic-private-contact-reference",
+      "source_url": "synthetic://public-web/contact-page",
+      "source_title": "Synthetic Contact Page",
+      "confidence": "medium",
+      "status": "candidate"
+    }
+  ],
+  "risk_flags": [],
+  "recommended_next_action": "manual_review_only",
+  "do_not_contact": false
+}

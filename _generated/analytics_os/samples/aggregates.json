@@ -1,0 +1,68 @@
+[
+  {
+    "key": "booked_revenue",
+    "source_system": "Finance_OS",
+    "unit": "EUR",
+    "count": 5,
+    "sum": 45000,
+    "avg": 9000,
+    "min": 0,
+    "max": 25000,
+    "status": "OWNER_TARGET"
+  },
+  {
+    "key": "cash_collected",
+    "source_system": "Finance_OS",
+    "unit": "EUR",
+    "count": 5,
+    "sum": 26000,
+    "avg": 5200,
+    "min": 0,
+    "max": 18000,
+    "status": "CONFIRMED"
+  },
+  {
+    "key": "operating_result",
+    "source_system": "Finance_OS",
+    "unit": "EUR",
+    "count": 5,
+    "sum": -7300,
+    "avg": -1460,
+    "min": -3200,
+    "max": 1200,
+    "status": "MODEL_ESTIMATE"
+  },
+  {
+    "key": "cash_runway",
+    "source_system": "Finance_OS",
+    "unit": "months",
+    "count": 5,
+    "sum": 18.5,
+    "avg": 3.7,
+    "min": 2.5,
+    "max": 5,
+    "status": "MODEL_ESTIMATE"
+  },
+  {
+    "key": "active_products",
+    "source_system": "Revenue_OS",
+    "unit": "count",
+    "count": 5,
+    "sum": 5,
+    "avg": 1,
+    "min": 0,
+    "max": 2,
+    "status": "CONFIRMED"
+  },
+  {
+    "key": "acceptance_rate",
+    "source_system": "Delivery_OS",
+    "unit": "ratio",
+    "count": 3,
+    "sum": 2.75,
+    "avg": 0.92,
+    "min": 0.85,
+    "max": 1,
+    "status": "MODEL_ESTIMATE"
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "$schema": "urn:json-schema:draft-2020-12",
+  "$id": "urn:master-controller:schemas:digital_presence:digital_factory_qa_review",
+  "title": "digital_factory_qa_review",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["qa_status", "issues"],
+  "properties": {
+    "site_id": {"type": "string"},
+    "qa_status": {"type": "string"},
+    "issues": {"type": "array"},
+    "unsupported_claims_blocked": {"type": "boolean"},
+    "independent_check": {"type": "boolean"}
+  }
+}

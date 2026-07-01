@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agent Execution Plan",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["task_id", "steps", "limits"],
+  "properties": {
+    "task_id": {"type": "string"},
+    "steps": {"type": "array", "items": {"type": "object"}},
+    "limits": {"type": "object"},
+    "tool_route": {"type": "string", "const": "MCP_GATEWAY_ONLY"}
+  }
+}

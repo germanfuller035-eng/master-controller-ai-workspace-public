@@ -1,0 +1,33 @@
+{
+  "captured_utc": "2026-06-20",
+  "host": {
+    "os": "Windows 11",
+    "build": 26200,
+    "cpu": "Intel Core i3-10110U @ 2.10GHz",
+    "cores": 2,
+    "logical_processors": 4,
+    "ram_gb": 7.8,
+    "disk_c_free_gb": 20.9,
+    "disk_d_free_gb": 85.4,
+    "hypervisor_present": true
+  },
+  "toolchain": {
+    "jdk": "OpenJDK 17.0.19 LTS (Microsoft)",
+    "adb": "1.0.41",
+    "emulator": "36.6.11.0",
+    "build_tools": "34.0.0",
+    "platform": "android-34",
+    "system_image": "android-34;google_apis;x86_64",
+    "cmdline_tools": "latest",
+    "gradle_wrapper": "8.7",
+    "existing_avd": "a56lab"
+  },
+  "decision": {
+    "installs_required": false,
+    "reason": "all required components present and sufficient for targetSdk=34 / minSdk=26",
+    "hyperv_wsl_changes": "none",
+    "test_stack": "AndroidX Test + Compose UI Test + Espresso + UIAutomator (project built-in)",
+    "emulator_mode": "visible window (no -no-window / -headless)"
+  },
+  "honesty_note": "Visible emulator window + recorded video are produced; live human observation is NOT asserted."
+}

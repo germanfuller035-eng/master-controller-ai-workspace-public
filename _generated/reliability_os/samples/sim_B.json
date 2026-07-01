@@ -1,0 +1,10 @@
+{
+  "scenario": "B",
+  "production_affected": false,
+  "name": "API degraded",
+  "ok": true,
+  "steps": [
+    "api_down -> detect:liveness fail health:UNHEALTHY alert:a_api_down runbook:rb_api_unavailable"
+  ],
+  "alert": "a_api_down"
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Model Registry",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["schema_version", "credential_policy", "models"],
+  "properties": {
+    "credential_policy": {"type": "object"},
+    "models": {"type": "array", "items": {"type": "object"}}
+  }
+}

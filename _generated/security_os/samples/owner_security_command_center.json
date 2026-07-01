@@ -1,0 +1,27 @@
+{
+  "schema": "security_os.owner_command_center.v1",
+  "generated_ts": "20260617_000000",
+  "synthetic": true,
+  "highest_security_risk": "future Git remote without secret-scan gate (T02) — owner enforces gate before any push",
+  "tracked_secret_status": "TRACKED_LIVE_SECRETS=0 (2 fake test vectors confirmed)",
+  "files_requiring_disposition": 16,
+  "credential_rotation_proposals": "runbooks ready (ssh/telegram/imap/smtp/signing/external); none executed; ROTATION_REQUIRED=0",
+  "unresolved_access_issue": "none (least-privilege boundaries hold in tests)",
+  "privacy_review": "LEGAL_REVIEW_REQUIRED (privacy, retention, consent)",
+  "release_blocker": "owner approval pending",
+  "owner_approval": "PENDING",
+  "legal_review_item": [
+    "privacy",
+    "retention",
+    "communication_consent"
+  ],
+  "next_safe_security_action": "Owner: confirm encryption-at-rest status + decide excluded-file disposition; then security release gate -> OWNER_ACCEPTED_REFERENCE",
+  "intentionally_not_done": [
+    "no live scan",
+    "no pentest",
+    "no credential use/rotation",
+    "no file deleted",
+    "no production change",
+    "no legal compliance asserted"
+  ]
+}

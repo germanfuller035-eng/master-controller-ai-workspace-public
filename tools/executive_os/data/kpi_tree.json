@@ -1,0 +1,17 @@
+{
+  "schema": "executive_os.kpi_tree.v1",
+  "version": "1.0",
+  "note": "Executive KPI tree REFERENCES authoritative domain metrics; does not reimplement them.",
+  "kpis": [
+    {"kpi_id": "exec_revenue", "name": "Revenue", "definition": "Confirmed booked revenue", "formula": "Finance OS booked_revenue", "source_system": "Finance_OS", "source_field": "booked_revenue", "frequency": "monthly", "default_status": "CONFIRMED", "threshold": "< monthly target"},
+    {"kpi_id": "exec_cash", "name": "Cash", "definition": "Cash balance / runway", "formula": "Finance OS cash_runway", "source_system": "Finance_OS", "source_field": "cash_runway", "frequency": "weekly", "default_status": "MODEL_ESTIMATE", "threshold": "< 3 months"},
+    {"kpi_id": "exec_profit", "name": "Profit", "definition": "Operating result", "formula": "Finance OS operating_result", "source_system": "Finance_OS", "source_field": "operating_result", "frequency": "monthly", "default_status": "MODEL_ESTIMATE", "threshold": "< 0"},
+    {"kpi_id": "exec_delivery", "name": "Delivery", "definition": "On-time accepted deliverables", "formula": "Delivery OS acceptance rate", "source_system": "Delivery_OS", "source_field": "acceptance_rate", "frequency": "monthly", "default_status": "MODEL_ESTIMATE", "threshold": "< 80%"},
+    {"kpi_id": "exec_product_readiness", "name": "Product readiness", "definition": "Sellable products count", "formula": "Revenue OS ACTIVE products", "source_system": "Revenue_OS", "source_field": "active_products", "frequency": "monthly", "default_status": "CONFIRMED", "threshold": "< 2"},
+    {"kpi_id": "exec_pipeline", "name": "Pipeline", "definition": "Expected deals", "formula": "Revenue OS funnel expected_deals", "source_system": "Revenue_OS", "source_field": "expected_deals", "frequency": "monthly", "default_status": "MODEL_ESTIMATE", "threshold": "< target"},
+    {"kpi_id": "exec_owner_capacity", "name": "Owner capacity", "definition": "Owner attention utilization", "formula": "Executive attention budget", "source_system": "Executive_OS", "source_field": "overload_risk", "frequency": "weekly", "default_status": "UNKNOWN", "threshold": "HIGH overload"},
+    {"kpi_id": "exec_reliability", "name": "System reliability", "definition": "Production health + backup", "formula": "MC health + backup verify", "source_system": "Master_Controller", "source_field": "health", "frequency": "weekly", "default_status": "CONFIRMED", "threshold": "any failure"},
+    {"kpi_id": "exec_acceptance", "name": "Acceptance", "definition": "Releases owner-accepted", "formula": "release governance", "source_system": "Executive_OS", "source_field": "owner_accepted", "frequency": "per_release", "default_status": "CONFIRMED", "threshold": "deployed but not accepted"},
+    {"kpi_id": "exec_risk", "name": "Risk", "definition": "Open critical risks", "formula": "executive risk register CRITICAL count", "source_system": "Executive_OS", "source_field": "critical_risks", "frequency": "weekly", "default_status": "CONFIRMED", "threshold": "> 0"}
+  ]
+}

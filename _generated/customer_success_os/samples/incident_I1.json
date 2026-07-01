@@ -1,0 +1,21 @@
+{
+  "incident_id": "I1",
+  "customer_ref_id": null,
+  "product_id": null,
+  "severity": "SEV1_CRITICAL",
+  "impact": "service down",
+  "status": "DETECTED",
+  "timeline": [],
+  "mitigation": null,
+  "root_cause": null,
+  "resolution": null,
+  "customer_communication_draft": {
+    "label": "INTERNAL_DRAFT",
+    "send_allowed": false,
+    "body": "incident update (draft, not sent)"
+  },
+  "owner_decision_required": true,
+  "lessons": [],
+  "test_only": true,
+  "note": "No real incident messages. No production monitoring integration."
+}

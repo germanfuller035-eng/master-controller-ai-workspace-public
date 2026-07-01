@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "provenance_record",
+  "type": "object",
+  "required": ["provenance_id", "artifact_id", "source_id", "source_uri", "retrieved_at", "retrieval_method", "confidence"],
+  "properties": {
+    "provenance_id": {"type": "string"},
+    "artifact_id": {"type": "string"},
+    "source_id": {"type": "string"},
+    "source_uri": {"type": "string"},
+    "retrieved_at": {"type": "string"},
+    "retrieval_method": {"type": "string"},
+    "confidence": {"type": "number"}
+  },
+  "additionalProperties": true
+}

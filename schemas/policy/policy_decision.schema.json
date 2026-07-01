@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Policy Decision V1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["decision", "reason"],
+  "properties": {
+    "decision": {"enum": ["ALLOW", "DENY", "REQUIRE_OWNER_APPROVAL", "REQUIRE_STRONG_OWNER_APPROVAL", "STOP_BLOCKED"]},
+    "reason": {"type": "string"},
+    "risk": {"enum": ["R0", "R1", "R2", "R3", "R4", "R5"]},
+    "action": {"type": "string"},
+    "capability": {"type": "string"},
+    "payload_hash": {"type": "string"}
+  }
+}

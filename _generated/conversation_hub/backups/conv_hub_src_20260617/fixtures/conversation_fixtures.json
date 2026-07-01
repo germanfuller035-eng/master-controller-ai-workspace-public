@@ -1,0 +1,235 @@
+{
+  "schema": "conversation_hub.fixtures.v1",
+  "version": 1,
+  "note": "MP38 — 36 SYNTHETIC scenarios. NO real contacts. All emails use @example.test / @synthetic.test. No real message bodies imported. Used by CLI + tests.",
+  "scenarios": [
+    {
+      "id": "f01_email_reply_valid",
+      "title": "Valid email reply",
+      "envelope": { "channel": "EMAIL", "direction": "INBOUND", "message_id": "f01", "from": "buyer@synthetic.test", "to": "owner@example.test", "subject": "Re: Мини-аудит сайта", "body": "Здравствуйте, интересно. Сколько стоит и что входит?", "date": "2026-06-10T09:00:00Z", "in_reply_to": ["<sent-001@example.test>"], "references": ["<sent-001@example.test>"] },
+      "expect": { "primary_intent": "price_question", "route": "REVENUE_OS", "dedupe": "UNIQUE", "thread_match": "HEADER" },
+      "conversation": { "conversation_id": "c01", "status": "ACTIVE", "primary_channel": "EMAIL", "thread_ids": ["t01"], "revision": 2, "test_only": true, "canonical_lead_id": "lead_c01" }
+    },
+    {
+      "id": "f02_email_duplicate",
+      "title": "Email duplicate (same external ref + content)",
+      "envelope": { "channel": "EMAIL", "direction": "INBOUND", "message_id": "f02", "external_message_ref": "<dup-1@synthetic.test>", "from": "buyer@synthetic.test", "subject": "Re: Мини-аудит", "body": "Интересно, давайте обсудим", "date": "2026-06-10T09:05:00Z" },
+      "duplicate_of": { "external_message_ref": "<dup-1@synthetic.test>", "channel": "EMAIL", "body": "Интересно, давайте обсудим", "subject": "Re: Мини-аудит" },
+      "expect": { "dedupe": "EXACT_DUPLICATE" }
+    },
+    {
+      "id": "f03_email_soft_bounce",
+      "title": "Email soft bounce",
+      "delivery_signal": { "smtp_code": 451, "event": "deferred" },
+      "expect": { "delivery_state": "BOUNCED_SOFT" }
+    },
+    {
+      "id": "f04_email_hard_bounce",
+      "title": "Email hard bounce",
+      "envelope": { "channel": "EMAIL", "direction": "INBOUND", "message_id": "f04", "from": "mailer-daemon@synthetic.test", "subject": "Undeliverable: Mail", "body": "550 5.1.1 host or domain name not found", "date": "2026-06-10T09:10:00Z", "message_type": "BOUNCE" },
+      "delivery_signal": { "smtp_code": 550 },
+      "expect": { "primary_intent": "bounce", "route": "MASTER_CONTROLLER_REPLY_QUEUE", "delivery_state": "BOUNCED_HARD" }
+    },
+    {
+      "id": "f05_auto_reply",
+      "title": "Auto-reply",
+      "envelope": { "channel": "EMAIL", "direction": "INBOUND", "message_id": "f05", "from": "buyer@synthetic.test", "subject": "Автоответ: в отпуске", "body": "Я в отпуске до 20 июня, out of office", "date": "2026-06-10T09:15:00Z" },
+      "expect": { "primary_intent": "auto_reply", "route": "MASTER_CONTROLLER_REPLY_QUEUE" }
+    },
+    {
+      "id": "f06_explicit_opt_out",
+      "title": "Explicit opt-out",
+      "envelope": { "channel": "EMAIL", "direction": "INBOUND", "message_id": "f06", "from": "buyer@synthetic.test", "subject": "Re: предложение", "body": "Не пишите мне больше, удалите мои контакты", "date": "2026-06-10T09:20:00Z", "canonical_lead_id": "lead_c06" },
+      "expect": { "primary_intent": "opt_out", "route": "MASTER_CONTROLLER_REPLY_QUEUE", "opt_out_scope": "ALL_COMMERCIAL" }
+    },
+    {
+      "id": "f07_ambiguous_opt_out",
+      "title": "Ambiguous opt-out",
+      "envelope": { "channel": "EMAIL", "direction": "INBOUND", "message_id": "f07", "from": "buyer@synthetic.test", "subject": "Re", "body": "Пока не надо ничего присылать по этому каналу", "date": "2026-06-10T09:25:00Z", "canonical_lead_id": "lead_c07" },
+      "expect": { "primary_intent": "opt_out", "opt_out_scope": "CHANNEL_ONLY", "owner_review_required": true }
+    },
+    {
+      "id": "f08_price_question",
+      "title": "Price question",
+      "envelope": { "channel": "EMAIL", "direction": "INBOUND", "message_id": "f08", "from": "buyer@synthetic.test", "subject": "Вопрос", "body": "Сколько стоит мини-аудит и какой бюджет нужен?", "date": "2026-06-10T09:30:00Z" },
+      "expect": { "primary_intent": "price_question", "route": "REVENUE_OS" }
+    },
+    {
+      "id": "f09_meeting_request",
+      "title": "Meeting request",
+      "envelope": { "channel": "EMAIL", "direction": "INBOUND", "message_id": "f09", "from": "buyer@synthetic.test", "subject": "Re: аудит", "body": "Давайте созвон, когда удобно на этой неделе?", "date": "2026-06-10T09:35:00Z" },
+      "expect": { "primary_intent": "meeting_request", "route": "REVENUE_OS" }
+    },
+    {
+      "id": "f10_support_request",
+      "title": "Support request",
+      "envelope": { "channel": "EMAIL", "direction": "INBOUND", "message_id": "f10", "from": "client@synthetic.test", "subject": "Вопрос по работе", "body": "Помогите, не получается настроить форму на сайте", "date": "2026-06-10T09:40:00Z" },
+      "expect": { "primary_intent": "support", "route": "CUSTOMER_SUCCESS_OS" }
+    },
+    {
+      "id": "f11_critical_incident",
+      "title": "Critical incident",
+      "envelope": { "channel": "EMAIL", "direction": "INBOUND", "message_id": "f11", "from": "client@synthetic.test", "subject": "СРОЧНО", "body": "Сайт не работает, упал сайт, ошибка 500, срочно не работает", "date": "2026-06-10T09:45:00Z" },
+      "expect": { "primary_intent": "incident", "route": "EXECUTIVE_OS", "priority": "P0_CRITICAL" }
+    },
+    {
+      "id": "f12_billing_question",
+      "title": "Billing question",
+      "envelope": { "channel": "EMAIL", "direction": "INBOUND", "message_id": "f12", "from": "client@synthetic.test", "subject": "Счёт", "body": "Пришлите акт и реквизиты, когда оплата по счёту?", "date": "2026-06-10T09:50:00Z" },
+      "expect": { "primary_intent": "billing", "route": "FINANCE_OS" }
+    },
+    {
+      "id": "f13_referral_message",
+      "title": "Referral message",
+      "envelope": { "channel": "EMAIL", "direction": "INBOUND", "message_id": "f13", "from": "client@synthetic.test", "subject": "Рекомендация", "body": "Мой коллега хотел бы тоже аудит, порекомендовал вас", "date": "2026-06-10T09:55:00Z" },
+      "expect": { "primary_intent": "referral", "route": "CUSTOMER_SUCCESS_OS" }
+    },
+    {
+      "id": "f14_testimonial_permission",
+      "title": "Testimonial permission",
+      "envelope": { "channel": "EMAIL", "direction": "INBOUND", "message_id": "f14", "from": "client@synthetic.test", "subject": "Отзыв", "body": "Разрешаю отзыв использовать, можете использовать отзыв на сайте", "date": "2026-06-10T10:00:00Z" },
+      "expect": { "primary_intent": "testimonial_permission", "route": "CUSTOMER_SUCCESS_OS" }
+    },
+    {
+      "id": "f15_identity_canonical_match",
+      "title": "Identity canonical match",
+      "signals": { "canonical_lead_id": "lead_999" },
+      "expect": { "identity_state": "CANONICAL_MATCH", "auto_link": true }
+    },
+    {
+      "id": "f16_probable_identity",
+      "title": "Probable identity (external channel id)",
+      "signals": { "external_channel_id": "tg_12345", "candidates": [{ "canonical_lead_id": "lead_500", "external_channel_ids": ["tg_12345"] }] },
+      "expect": { "identity_state": "PROBABLE_MATCH", "owner_review": true }
+    },
+    {
+      "id": "f17_identity_conflict",
+      "title": "Identity conflict (email matches multiple)",
+      "signals": { "verified_email": "shared@synthetic.test", "candidates": [{ "canonical_lead_id": "lead_a", "verified_email": "shared@synthetic.test" }, { "canonical_lead_id": "lead_b", "verified_email": "shared@synthetic.test" }] },
+      "expect": { "identity_state": "CONFLICT", "blocked": true }
+    },
+    {
+      "id": "f18_unknown_sender",
+      "title": "Unknown sender",
+      "signals": { "candidates": [] },
+      "envelope": { "channel": "EMAIL", "direction": "INBOUND", "message_id": "f18", "from": "stranger@synthetic.test", "subject": "Hi", "body": "Расскажите подробнее что входит", "date": "2026-06-10T10:05:00Z" },
+      "expect": { "identity_state": "NO_MATCH", "primary_intent": "details_question", "route": "REVENUE_OS" }
+    },
+    {
+      "id": "f19_telegram_owner_command",
+      "title": "Telegram owner command reference",
+      "envelope": { "channel": "TELEGRAM", "direction": "INBOUND", "message_id": "f19", "chat_id": "owner_chat", "reply_to_message_id": "m100", "from": "owner", "body": "/replies_inbox", "date": "2026-06-10T10:10:00Z", "message_type": "SYSTEM_EVENT" },
+      "expect": { "note": "owner-control telegram; API-only; no client send" }
+    },
+    {
+      "id": "f20_webform_consented",
+      "title": "Web-form consented submission",
+      "envelope": { "channel": "WEB_FORM", "direction": "INBOUND", "message_id": "f20", "submission_id": "sub_20", "from": "lead@synthetic.test", "subject": "Заявка на лендинге", "body": "Хочу мини-аудит", "date": "2026-06-10T10:15:00Z", "consent": true, "privacy_version": "v1", "campaign_id": "camp_mini_audit_inbound" },
+      "expect": { "thread_match": "NEW", "primary_intent": "interest", "consent": true }
+    },
+    {
+      "id": "f21_webform_missing_consent",
+      "title": "Web-form missing consent",
+      "envelope": { "channel": "WEB_FORM", "direction": "INBOUND", "message_id": "f21", "submission_id": "sub_21", "from": "lead@synthetic.test", "body": "Заявка", "date": "2026-06-10T10:20:00Z", "consent": false },
+      "expect": { "consent": false, "draft_blocked": true, "reason": "no consent -> blocked" }
+    },
+    {
+      "id": "f22_attachment_safe",
+      "title": "Attachment safe metadata",
+      "attachment": { "attachment_ref_id": "att_22", "message_id": "f22", "filename": "audit_sample.pdf", "mime_type": "application/pdf", "size": 102400, "hash": "sha256:aaa", "sensitivity": "NONE", "scan_status": "CLEAN_REFERENCE", "synthetic": true, "storage_reference": "vault://synthetic/att_22" },
+      "expect": { "valid": true }
+    },
+    {
+      "id": "f23_attachment_secret_risk",
+      "title": "Attachment secret-risk metadata",
+      "attachment": { "attachment_ref_id": "att_23", "message_id": "f23", "filename": "credentials_dump.txt", "mime_type": "text/plain", "size": 2048, "hash": "sha256:bbb", "sensitivity": "SECRET_RISK", "scan_status": "FLAGGED_REFERENCE", "synthetic": true, "storage_reference": "vault://synthetic/att_23" },
+      "expect": { "valid": true, "flagged": true }
+    },
+    {
+      "id": "f24_stale_conversation",
+      "title": "Stale conversation",
+      "conversation": { "conversation_id": "c24", "status": "WAITING_CONTACT", "primary_channel": "EMAIL", "thread_ids": ["t24"], "revision": 1, "test_only": true },
+      "stale": true,
+      "expect": { "queue": "stale_conversation" }
+    },
+    {
+      "id": "f25_draft_valid",
+      "title": "Draft valid",
+      "draft_request": { "conversation_id": "c01", "source_system": "REVENUE_OS", "message_type": "REPLY", "channel": "EMAIL", "recipient_evidence": { "verified": true, "guessed": false, "email_ref": "buyer@synthetic.test" }, "subject": "Re: Мини-аудит", "body": "Спасибо за интерес. Мини-аудит — 10000 ₽, evidence-backed findings.", "claims": ["mini_audit_price_10000"], "evidence_refs": ["revenue_catalog:mini_audit"], "canonical_lead_id": "lead_c01" },
+      "draft_context": { "product_ready": true, "price_approved": true, "allowed_claims": ["mini_audit_price_10000"], "identity_state": "CANONICAL_MATCH", "allowed_channels": ["EMAIL"], "evidence_fresh": true },
+      "expect": { "status": "READY_FOR_OWNER_REVIEW", "errors": 0 }
+    },
+    {
+      "id": "f26_draft_guessed_recipient",
+      "title": "Draft guessed recipient",
+      "draft_request": { "conversation_id": "c26", "source_system": "GROWTH_OS", "message_type": "PLAIN", "channel": "EMAIL", "recipient_evidence": { "verified": false, "guessed": true }, "subject": "Предложение", "body": "Здравствуйте", "claims": [], "evidence_refs": [] },
+      "draft_context": { "product_ready": true, "price_approved": true },
+      "expect": { "status": "VALIDATION_FAILED", "error_contains": "recipient guessed" }
+    },
+    {
+      "id": "f27_draft_unsupported_claim",
+      "title": "Draft unsupported claim",
+      "draft_request": { "conversation_id": "c27", "source_system": "GROWTH_OS", "message_type": "PLAIN", "channel": "EMAIL", "recipient_evidence": { "verified": true, "guessed": false }, "subject": "Рост", "body": "Гарантируем рост продаж в 3 раза", "claims": ["guaranteed_3x_growth"], "evidence_refs": [], "canonical_lead_id": "lead_c27" },
+      "draft_context": { "product_ready": true, "price_approved": true, "allowed_claims": ["mini_audit_price_10000"] },
+      "expect": { "status": "VALIDATION_FAILED", "error_contains": "unsupported claim" }
+    },
+    {
+      "id": "f28_draft_blocked_by_opt_out",
+      "title": "Draft blocked by opt-out",
+      "draft_request": { "conversation_id": "c28", "source_system": "GROWTH_OS", "message_type": "PLAIN", "channel": "EMAIL", "recipient_evidence": { "verified": true, "guessed": false }, "subject": "Снова предложение", "body": "Здравствуйте", "claims": [], "evidence_refs": [], "canonical_lead_id": "lead_c06" },
+      "draft_context": { "product_ready": true, "price_approved": true, "allowed_claims": [], "opt_outs": [{ "canonical_lead_id": "lead_c06", "scope": "ALL_COMMERCIAL", "status": "RECOMMENDED" }] },
+      "expect": { "status": "VALIDATION_FAILED", "error_contains": "blocked by opt-out" }
+    },
+    {
+      "id": "f29_approval_revision_conflict",
+      "title": "Approval revision conflict",
+      "approval": { "approval_request_id": "appr_x", "draft_id": "draft_x", "status": "REQUESTED", "revision": 1 },
+      "current_draft_revision": 2,
+      "expect": { "conflict": true, "status": "REVISION_CONFLICT" }
+    },
+    {
+      "id": "f30_ambiguous_transport_result",
+      "title": "Ambiguous transport result",
+      "retry_attempt": { "idempotency_key": "idem_30", "original_request_id": "req_30", "retry_count": 0, "last_result": "UNKNOWN", "canonical_approved": true },
+      "expect": { "action": "RECONCILE", "safe": false }
+    },
+    {
+      "id": "f31_retry_duplicate",
+      "title": "Retry duplicate (same idempotency key)",
+      "envelope": { "channel": "EMAIL", "direction": "OUTBOUND", "message_id": "f31", "idempotency_key": "idem_31", "subject": "x", "body": "y", "date": "2026-06-10T10:30:00Z" },
+      "duplicate_of": { "idempotency_key": "idem_31" },
+      "expect": { "dedupe": "RETRY_DUPLICATE" }
+    },
+    {
+      "id": "f32_max_future_envelope",
+      "title": "MAX future envelope",
+      "envelope": { "channel": "MAX_FUTURE", "direction": "INBOUND", "message_id": "f32", "from": "max_user_ref", "body": "Здравствуйте", "date": "2026-06-10T10:35:00Z" },
+      "expect": { "channel_state": "NOT_CONNECTED", "note": "future official adapter only" }
+    },
+    {
+      "id": "f33_whatsapp_future_envelope",
+      "title": "Official WhatsApp future envelope",
+      "envelope": { "channel": "WHATSAPP_OFFICIAL_FUTURE", "direction": "INBOUND", "message_id": "f33", "from": "wa_user_ref", "body": "Hello", "date": "2026-06-10T10:40:00Z" },
+      "expect": { "channel_state": "NOT_CONNECTED", "note": "official WhatsApp Business Platform only" }
+    },
+    {
+      "id": "f34_customer_support_conversation",
+      "title": "Customer support conversation",
+      "envelope": { "channel": "EMAIL", "direction": "INBOUND", "message_id": "f34", "from": "client@synthetic.test", "subject": "Инструкция", "body": "Как настроить? Вопрос по работе сервиса", "date": "2026-06-10T10:45:00Z", "canonical_lead_id": "lead_c34" },
+      "conversation": { "conversation_id": "c34", "status": "ACTIVE", "primary_channel": "EMAIL", "thread_ids": ["t34"], "revision": 3, "test_only": true, "canonical_lead_id": "lead_c34" },
+      "expect": { "primary_intent": "support", "route": "CUSTOMER_SUCCESS_OS" }
+    },
+    {
+      "id": "f35_renewal_request",
+      "title": "Renewal request",
+      "envelope": { "channel": "EMAIL", "direction": "INBOUND", "message_id": "f35", "from": "client@synthetic.test", "subject": "Продление", "body": "Хотим продлить, давайте обсудим следующий период", "date": "2026-06-10T10:50:00Z" },
+      "expect": { "primary_intent": "meeting_request", "route": "REVENUE_OS", "note": "renewal intent; CS + Revenue both relevant" }
+    },
+    {
+      "id": "f36_complaint_escalation",
+      "title": "Complaint escalation",
+      "envelope": { "channel": "EMAIL", "direction": "INBOUND", "message_id": "f36", "from": "client@synthetic.test", "subject": "Жалоба", "body": "Это безобразие, возмутительно, жалоба на качество", "date": "2026-06-10T10:55:00Z" },
+      "expect": { "primary_intent": "complaint", "route": "EXECUTIVE_OS", "priority": "P0_CRITICAL" }
+    }
+  ]
+}

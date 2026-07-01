@@ -1,0 +1,180 @@
+{
+  "generated_ts": "20260617_220000",
+  "synthetic": true,
+  "note": "References Revenue/Product/Analytics; does not duplicate their dashboards.",
+  "target_segments": [
+    {
+      "id": "seg_no_site_local",
+      "status": "PRIORITY_CANDIDATE"
+    },
+    {
+      "id": "seg_weak_site",
+      "status": "PRIORITY_PRIMARY"
+    },
+    {
+      "id": "seg_good_site_weak_funnel",
+      "status": "PRIORITY_SECONDARY"
+    },
+    {
+      "id": "seg_good_site_weak_process",
+      "status": "FUTURE"
+    },
+    {
+      "id": "seg_maps_directory_only",
+      "status": "FUTURE"
+    }
+  ],
+  "icp_readiness": [
+    {
+      "id": "icp_mini_audit",
+      "product": "mini_audit",
+      "ready_to_market": true
+    },
+    {
+      "id": "icp_digital_presence_check",
+      "product": "digital_presence_check",
+      "ready_to_market": false
+    },
+    {
+      "id": "icp_full_business_audit",
+      "product": "full_business_audit",
+      "ready_to_market": false
+    },
+    {
+      "id": "icp_start_page_sprint",
+      "product": "start_page_sprint",
+      "ready_to_market": false
+    },
+    {
+      "id": "icp_landing_sprint",
+      "product": "landing_sprint",
+      "ready_to_market": false
+    },
+    {
+      "id": "icp_business_website",
+      "product": "business_website",
+      "ready_to_market": false
+    },
+    {
+      "id": "icp_lead_system",
+      "product": "lead_system",
+      "ready_to_market": false
+    },
+    {
+      "id": "icp_ai_front_office",
+      "product": "ai_front_office",
+      "ready_to_market": false
+    }
+  ],
+  "product_market_readiness": {
+    "marketable": [
+      "express_review",
+      "mini_audit"
+    ],
+    "total_products": 18
+  },
+  "channel_readiness": [
+    {
+      "id": "ch_website",
+      "type": "owned",
+      "readiness": "PLANNED"
+    },
+    {
+      "id": "ch_landing",
+      "type": "owned",
+      "readiness": "PLANNED"
+    },
+    {
+      "id": "ch_content",
+      "type": "inbound",
+      "readiness": "PLANNED"
+    },
+    {
+      "id": "ch_local_search",
+      "type": "inbound",
+      "readiness": "PLANNED"
+    },
+    {
+      "id": "ch_referral",
+      "type": "earned",
+      "readiness": "GATED (needs accepted customers)"
+    },
+    {
+      "id": "ch_partner",
+      "type": "earned",
+      "readiness": "PLANNED"
+    },
+    {
+      "id": "ch_outbound_email",
+      "type": "outbound",
+      "readiness": "GATED (freeze + Conversation Hub)"
+    },
+    {
+      "id": "ch_paid_search_future",
+      "type": "paid_future",
+      "readiness": "FUTURE"
+    }
+  ],
+  "campaign_readiness": {
+    "ready": 0,
+    "near_ready": 1,
+    "active": 0,
+    "total": 4
+  },
+  "content_backlog": 8,
+  "seo_plan": {
+    "clusters": 5,
+    "volumes": "EXTERNAL_DATA_REQUIRED"
+  },
+  "lead_magnets": 5,
+  "partnerships": 4,
+  "referrals": "DRAFT",
+  "social_proof": 2,
+  "experiment_backlog": {
+    "total": 9,
+    "ready": 5,
+    "running": 0
+  },
+  "blockers": [
+    {
+      "campaign": "camp_presence_check_education",
+      "reason": "product PLANNED + price unapproved -> cannot become READY"
+    },
+    {
+      "campaign": "camp_full_audit_referral",
+      "reason": "product DRAFT + price unapproved + no accepted customers"
+    },
+    {
+      "icp": "icp_digital_presence_check",
+      "reason": "product digital_presence_check PLANNED, approved=false"
+    },
+    {
+      "icp": "icp_full_business_audit",
+      "reason": "product full_business_audit DRAFT, approved=false"
+    },
+    {
+      "icp": "icp_start_page_sprint",
+      "reason": "product start_page_sprint DRAFT, approved=false"
+    },
+    {
+      "icp": "icp_landing_sprint",
+      "reason": "product landing_sprint DRAFT, approved=false"
+    },
+    {
+      "icp": "icp_business_website",
+      "reason": "product business_website DRAFT, approved=false"
+    },
+    {
+      "icp": "icp_lead_system",
+      "reason": "product lead_system PLANNED, approved=false"
+    },
+    {
+      "icp": "icp_ai_front_office",
+      "reason": "product ai_front_office PLANNED, approved=false"
+    }
+  ],
+  "qa": {
+    "ok": true,
+    "blockers": 0
+  }
+}

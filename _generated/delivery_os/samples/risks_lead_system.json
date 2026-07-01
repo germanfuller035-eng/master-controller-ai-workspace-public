@@ -1,0 +1,66 @@
+{
+  "risks": [
+    {
+      "risk_id": "proj_lead_system_security",
+      "project_id": "proj_lead_system",
+      "category": "security",
+      "description": "security risk",
+      "probability": "low",
+      "impact": "high",
+      "mitigation": "security checklist",
+      "contingency": "block release",
+      "owner": "owner",
+      "status": "OPEN",
+      "trigger": "security gap"
+    },
+    {
+      "risk_id": "proj_lead_system_integration_failure",
+      "project_id": "proj_lead_system",
+      "category": "integration_failure",
+      "description": "integration_failure risk",
+      "probability": "medium",
+      "impact": "high",
+      "mitigation": "early integration test",
+      "contingency": "fallback path",
+      "owner": "owner",
+      "status": "OPEN",
+      "trigger": "integration test fails"
+    },
+    {
+      "risk_id": "proj_lead_system_commercial_mismatch",
+      "project_id": "proj_lead_system",
+      "category": "commercial_mismatch",
+      "description": "commercial_mismatch risk",
+      "probability": "low",
+      "impact": "high",
+      "mitigation": "scope freeze + Revenue OS handoff",
+      "contingency": "new offer",
+      "owner": "owner",
+      "status": "OPEN",
+      "trigger": "deliverable != sold scope"
+    },
+    {
+      "risk_id": "proj_lead_system_data_privacy",
+      "project_id": "proj_lead_system",
+      "category": "data_privacy",
+      "description": "data_privacy risk",
+      "probability": "low",
+      "impact": "high",
+      "mitigation": "privacy checklist",
+      "contingency": "escalate",
+      "owner": "owner",
+      "status": "OPEN",
+      "trigger": "PII handling"
+    }
+  ],
+  "evaluation": {
+    "ok": true,
+    "errors": [],
+    "warnings": [],
+    "total": 4,
+    "high_high": [],
+    "triggered": [],
+    "open_critical": [],
+    "blocks_closure": false
+  }
+}

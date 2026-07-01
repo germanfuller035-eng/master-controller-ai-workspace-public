@@ -1,0 +1,17 @@
+{
+  "schema": "executive_os.daily_view.v1",
+  "primary_action": "confirm weekly capacity",
+  "decisions_required": [],
+  "critical_exceptions": [],
+  "blocked_by_owner": [],
+  "blocked_externally": [],
+  "ai_tasks_in_progress": [],
+  "revenue_focus": "mini_audit (entry product)",
+  "delivery_focus": "UNKNOWN",
+  "finance_focus": "UNKNOWN",
+  "system_health": "soak in progress (FREEZE)",
+  "intentionally_waiting": [
+    "production changes (soak)"
+  ],
+  "note": "Compact. Not raw data."
+}

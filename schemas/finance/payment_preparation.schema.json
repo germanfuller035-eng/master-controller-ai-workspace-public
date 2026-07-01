@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/finance/payment_preparation.schema.json",
+  "title": "Payment Preparation V1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "synthetic",
+    "payment_preparation_id",
+    "preparation_only",
+    "execution_allowed",
+    "provider_enabled",
+    "payload_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "finance.payment_preparation.v1"},
+    "synthetic": {"const": true},
+    "payment_preparation_id": {"type": "string"},
+    "preparation_only": {"const": true},
+    "execution_allowed": {"const": false},
+    "provider_enabled": {"const": false},
+    "payload_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "additionalProperties": true
+}

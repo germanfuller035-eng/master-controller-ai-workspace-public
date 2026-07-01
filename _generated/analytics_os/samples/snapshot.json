@@ -1,0 +1,16 @@
+{
+  "snapshot_id": "customer_portfolio_cs_portfolio_snapshot_20260617_210000",
+  "type": "customer_portfolio",
+  "dataset": "cs_portfolio_snapshot",
+  "generated_at": "20260617_210000",
+  "schema_version": "1.0",
+  "source_versions": {},
+  "source_checksums": {
+    "cs_portfolio_snapshot": "5ac566da"
+  },
+  "row_count": 4,
+  "quality_status": "UNVERIFIED",
+  "freshness": "synthetic",
+  "synthetic": true,
+  "payload_checksum": "5ac566da"
+}

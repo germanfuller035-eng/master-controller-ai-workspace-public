@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-26",
+  "session": "POLICY_SECRETS_AUDIT_EMERGENCY_CONTROL_V1",
+  "default_unknown_action": "DENY",
+  "actions": [
+    {"id": "read_evidence", "risk": "R0", "capability": "read_search_analyze_classify", "decision": "ALLOW_IF_SCOPE_ALLOWED"},
+    {"id": "search_repo", "risk": "R0", "capability": "read_search_analyze_classify", "decision": "ALLOW_IF_SCOPE_ALLOWED"},
+    {"id": "classify_data", "risk": "R0", "capability": "read_search_analyze_classify", "decision": "ALLOW_IF_SCOPE_ALLOWED"},
+    {"id": "local_policy_test", "risk": "R1", "capability": "local_tests_drafts_reports", "decision": "ALLOW_IF_LOCAL_ONLY"},
+    {"id": "local_report", "risk": "R1", "capability": "local_tests_drafts_reports", "decision": "ALLOW_IF_LOCAL_ONLY"},
+    {"id": "local_draft", "risk": "R1", "capability": "local_tests_drafts_reports", "decision": "ALLOW_IF_LOCAL_ONLY"},
+    {"id": "worktree_edit", "risk": "R2", "capability": "worktree_commit_pr_internal", "decision": "ALLOW_WITH_JOURNAL"},
+    {"id": "commit_change", "risk": "R2", "capability": "worktree_commit_pr_internal", "decision": "ALLOW_WITH_JOURNAL"},
+    {"id": "open_pull_request", "risk": "R2", "capability": "worktree_commit_pr_internal", "decision": "ALLOW_WITH_JOURNAL"},
+    {"id": "low_risk_internal_change", "risk": "R3", "capability": "low_risk_internal_change", "decision": "REQUIRE_POLICY_GATE"},
+    {"id": "outbound_send", "risk": "R4", "capability": "outbound_message", "decision": "REQUIRE_OWNER_APPROVAL"},
+    {"id": "publish_external", "risk": "R4", "capability": "outbound_message", "decision": "REQUIRE_OWNER_APPROVAL"},
+    {"id": "production_deploy", "risk": "R4", "capability": "production_deploy", "decision": "REQUIRE_OWNER_APPROVAL"},
+    {"id": "production_db_write", "risk": "R4", "capability": "production_db_write", "decision": "REQUIRE_OWNER_APPROVAL"},
+    {"id": "browser_action", "risk": "R4", "capability": "browser_action", "decision": "REQUIRE_OWNER_APPROVAL"},
+    {"id": "payment_operation", "risk": "R5", "capability": "payment_operation", "decision": "REQUIRE_STRONG_OWNER_APPROVAL"},
+    {"id": "delete_production_data", "risk": "R5", "capability": "production_db_write", "decision": "REQUIRE_STRONG_OWNER_APPROVAL"},
+    {"id": "permission_change", "risk": "R5", "capability": "direct_production_filesystem", "decision": "REQUIRE_STRONG_OWNER_APPROVAL"},
+    {"id": "secret_issuance", "risk": "R5", "capability": "direct_secret_read", "decision": "REQUIRE_STRONG_OWNER_APPROVAL"},
+    {"id": "direct_secret_read", "risk": "R5", "capability": "direct_secret_read", "decision": "REQUIRE_STRONG_OWNER_APPROVAL"},
+    {"id": "irreversible_action", "risk": "R5", "capability": "payment_operation", "decision": "REQUIRE_STRONG_OWNER_APPROVAL"},
+    {"id": "direct_docker_socket", "risk": "R5", "capability": "direct_docker_socket", "decision": "DENY"},
+    {"id": "unrestricted_shell", "risk": "R5", "capability": "unrestricted_shell", "decision": "DENY"},
+    {"id": "direct_production_filesystem", "risk": "R5", "capability": "direct_production_filesystem", "decision": "DENY"},
+    {"id": "direct_mcp_production_tool_access", "risk": "R5", "capability": "direct_mcp_production_tool_access", "decision": "DENY"}
+  ]
+}

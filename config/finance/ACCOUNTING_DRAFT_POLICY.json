@@ -1,0 +1,31 @@
+{
+  "policy_id": "accounting_draft_policy_v1",
+  "scope": "LOCAL_SYNTHETIC_ONLY",
+  "required_fields": [
+    "schema_version",
+    "synthetic",
+    "accounting_entry_draft_id",
+    "draft_only",
+    "export_allowed",
+    "debits",
+    "credits",
+    "payload_hash"
+  ],
+  "safety": {
+    "OUTBOUND_EMAIL": "OFF",
+    "OUTBOUND_SOCIAL": "OFF",
+    "AUTO_SAFE": "OFF",
+    "PAYMENTS": "OFF",
+    "PRODUCTION_DB_WRITE": "OFF",
+    "CRM_WRITE": "OFF",
+    "INVOICE_SEND": "OFF",
+    "ACCOUNTING_EXPORT": "OFF",
+    "REAL_REPLY_MONITOR": "OFF"
+  },
+  "rules": {
+    "synthetic_required": true,
+    "draft_only": true,
+    "export_allowed": false,
+    "balanced_entry_required": true
+  }
+}

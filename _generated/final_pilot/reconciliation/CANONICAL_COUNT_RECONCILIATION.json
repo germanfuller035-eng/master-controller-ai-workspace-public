@@ -1,0 +1,15 @@
+{
+  "captured_at": "2026-06-19", "production_revision": 125,
+  "canonical_leads_before_discovery": 62, "new_leads_promoted": 7, "canonical_leads_current": 69,
+  "all_original_62_present": true, "lost_leads": 0, "deleted_leads": 0, "duplicate_canonical_leads": 0,
+  "primary_stage_sum": 69, "unique_ids": 69,
+  "new_leads": [
+    {"lead_id":"cand_17dfd512d3f1","company":"СТО","source":"osm_overpass","region":"Krasnodar","niche":"car_repair","contact_status":"MISSING_CONTACT","status":"manual_review_product_routing","dedupe":true,"promotion_reason":"FREE_ONLY discovery validation run"},
+    {"lead_id":"cand_f1254b4d593a","company":"Шиномонтаж","source":"osm_overpass","region":"Krasnodar","niche":"car_repair","contact_status":"MISSING_CONTACT","status":"manual_review_product_routing","dedupe":true,"promotion_reason":"FREE_ONLY discovery validation run"},
+    {"lead_id":"cand_020d0a383429","company":"СТО \"Японец\"","source":"osm_overpass","region":"Krasnodar","niche":"car_repair","contact_status":"MISSING_CONTACT","status":"manual_review_product_routing","dedupe":true,"promotion_reason":"FREE_ONLY discovery validation run"},
+    {"lead_id":"cand_88242d4f19d2","company":"Доктор Выхлоп","source":"osm_overpass","region":"Krasnodar","niche":"car_repair","contact_status":"MISSING_CONTACT","status":"manual_review_product_routing","dedupe":true,"promotion_reason":"FREE_ONLY discovery validation run"},
+    {"lead_id":"cand_2ce95d41e8cf","company":"Замена масла","source":"osm_overpass","region":"Krasnodar","niche":"car_repair","contact_status":"MISSING_CONTACT","status":"manual_review_product_routing","dedupe":true,"promotion_reason":"FREE_ONLY discovery validation run"},
+    {"lead_id":"cand_8341376395d8","company":"H&K сервис","source":"osm_overpass","region":"Krasnodar","niche":"car_repair","contact_status":"MISSING_CONTACT","status":"manual_review_product_routing","dedupe":true,"promotion_reason":"FREE_ONLY discovery validation run"},
+    {"lead_id":"cand_a2564c24d00f","company":"Автоэлектрик","source":"osm_overpass","region":"Krasnodar","niche":"car_repair","contact_status":"MISSING_CONTACT","status":"manual_review_product_routing","dedupe":true,"promotion_reason":"FREE_ONLY discovery validation run"}
+  ]
+}

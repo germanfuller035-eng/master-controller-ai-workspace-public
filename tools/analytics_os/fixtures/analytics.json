@@ -1,0 +1,34 @@
+{
+  "note": "Synthetic deterministic fixture for Analytics OS. NOT canonical data. Mirrors upstream metric shapes for offline derivation + tests.",
+  "kpi_series": {
+    "booked_revenue":   { "unit": "EUR", "period": "monthly", "source_system": "Finance_OS", "source_field": "booked_revenue", "status": "OWNER_TARGET", "points": [0, 0, 10000, 10000, 25000] },
+    "cash_collected":   { "unit": "EUR", "period": "monthly", "source_system": "Finance_OS", "source_field": "cash_collected", "status": "CONFIRMED",   "points": [0, 0, 0, 8000, 18000] },
+    "operating_result": { "unit": "EUR", "period": "monthly", "source_system": "Finance_OS", "source_field": "operating_result", "status": "MODEL_ESTIMATE", "points": [-3000, -3200, -1500, -800, 1200] },
+    "cash_runway":      { "unit": "months", "period": "monthly", "source_system": "Finance_OS", "source_field": "cash_runway", "status": "MODEL_ESTIMATE", "points": [5, 4, 4, 3, 2.5] },
+    "active_products":  { "unit": "count", "period": "monthly", "source_system": "Revenue_OS", "source_field": "active_products", "status": "CONFIRMED", "points": [0, 1, 1, 1, 2] },
+    "acceptance_rate":  { "unit": "ratio", "period": "monthly", "source_system": "Delivery_OS", "source_field": "acceptance_rate", "status": "MODEL_ESTIMATE", "points": [null, null, 1.0, 0.9, 0.85] }
+  },
+  "period_labels": ["2026-02", "2026-03", "2026-04", "2026-05", "2026-06"],
+  "thresholds": {
+    "cash_runway": { "warning_below": 3, "severity": "HIGH" },
+    "operating_result": { "warning_below": 0, "severity": "HIGH" },
+    "acceptance_rate": { "warning_below": 0.8, "severity": "MEDIUM" },
+    "active_products": { "warning_below": 2, "severity": "MEDIUM" }
+  },
+  "funnel": {
+    "funnel_ref": "revenue_os/funnel_base",
+    "stages": [
+      { "name": "candidates", "count": 1000 },
+      { "name": "contacted", "count": 220 },
+      { "name": "replied", "count": 60 },
+      { "name": "qualified", "count": 24 },
+      { "name": "proposal", "count": 12 },
+      { "name": "won", "count": 5 }
+    ]
+  },
+  "cohorts": [
+    { "cohort_key": "2026-04", "size": 3, "retained_by_period": [3, 3, 2] },
+    { "cohort_key": "2026-05", "size": 4, "retained_by_period": [4, 3] },
+    { "cohort_key": "2026-06", "size": 2, "retained_by_period": [2] }
+  ]
+}

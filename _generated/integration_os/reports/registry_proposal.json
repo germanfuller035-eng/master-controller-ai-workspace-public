@@ -1,0 +1,14 @@
+{
+  "schema": "integration_os.registry_proposal.v1",
+  "generated_ts": "20260617_000000",
+  "note": "Proposed Project Registry addition; NOT applied.",
+  "target": "00_MASTER_CONTEXT/PROJECT_REGISTRY.md (owner-applied)",
+  "integration_project_entry": {
+    "project_id": "integration-data-contracts",
+    "name": "Integration Architecture & Data Contracts Consolidation",
+    "status": "ACTIVE_DEVELOPMENT",
+    "priority": "P1_ARCHITECTURE",
+    "source_of_truth": "tools/integration_os + docs_canonical_proposed/14_integration/",
+    "note": "Cross-system contract/ownership/standards consolidation. Not a runtime; never mutates production, merges branches, applies migrations/docs, or deletes. Master Controller remains the sole canonical operational writer."
+  }
+}

@@ -1,0 +1,289 @@
+{
+  "conservative": {
+    "scenario": "conservative",
+    "label": "MODEL_ESTIMATE (assumptions visible)",
+    "revenue_implication": 100000,
+    "cash_implication": 60000,
+    "delivery_load_hours": 40,
+    "owner_load_hours": 20,
+    "project_priorities": [
+      "mini_audit",
+      "pipeline"
+    ],
+    "risks": [],
+    "decisions_required": [],
+    "assumptions": {
+      "monthly_deals": 20,
+      "avg_deal_value": 10000,
+      "monthly_costs": 40000,
+      "owner_hours_per_deal": 2,
+      "delivery_hours_per_deal": 4,
+      "capacity_limit": 15,
+      "incident_cost": 50000
+    }
+  },
+  "base": {
+    "scenario": "base",
+    "label": "MODEL_ESTIMATE (assumptions visible)",
+    "revenue_implication": 200000,
+    "cash_implication": 160000,
+    "delivery_load_hours": 80,
+    "owner_load_hours": 40,
+    "project_priorities": [
+      "mini_audit",
+      "pipeline"
+    ],
+    "risks": [],
+    "decisions_required": [],
+    "assumptions": {
+      "monthly_deals": 20,
+      "avg_deal_value": 10000,
+      "monthly_costs": 40000,
+      "owner_hours_per_deal": 2,
+      "delivery_hours_per_deal": 4,
+      "capacity_limit": 15,
+      "incident_cost": 50000
+    }
+  },
+  "growth": {
+    "scenario": "growth",
+    "label": "MODEL_ESTIMATE (assumptions visible)",
+    "revenue_implication": 360000,
+    "cash_implication": 320000,
+    "delivery_load_hours": 144,
+    "owner_load_hours": 72,
+    "project_priorities": [
+      "mini_audit",
+      "pipeline"
+    ],
+    "risks": [],
+    "decisions_required": [],
+    "assumptions": {
+      "monthly_deals": 20,
+      "avg_deal_value": 10000,
+      "monthly_costs": 40000,
+      "owner_hours_per_deal": 2,
+      "delivery_hours_per_deal": 4,
+      "capacity_limit": 15,
+      "incident_cost": 50000
+    }
+  },
+  "capacity_limited": {
+    "scenario": "capacity_limited",
+    "label": "MODEL_ESTIMATE (assumptions visible)",
+    "revenue_implication": 150000,
+    "cash_implication": 110000,
+    "delivery_load_hours": 60,
+    "owner_load_hours": 30,
+    "project_priorities": [
+      "mini_audit",
+      "pipeline"
+    ],
+    "risks": [],
+    "decisions_required": [],
+    "assumptions": {
+      "monthly_deals": 20,
+      "avg_deal_value": 10000,
+      "monthly_costs": 40000,
+      "owner_hours_per_deal": 2,
+      "delivery_hours_per_deal": 4,
+      "capacity_limit": 15,
+      "incident_cost": 50000
+    }
+  },
+  "no_new_sales": {
+    "scenario": "no_new_sales",
+    "label": "MODEL_ESTIMATE (assumptions visible)",
+    "revenue_implication": 0,
+    "cash_implication": -40000,
+    "delivery_load_hours": 0,
+    "owner_load_hours": 0,
+    "project_priorities": [
+      "delivery",
+      "collections"
+    ],
+    "risks": [
+      "pipeline dry",
+      "negative cash"
+    ],
+    "decisions_required": [],
+    "assumptions": {
+      "monthly_deals": 20,
+      "avg_deal_value": 10000,
+      "monthly_costs": 40000,
+      "owner_hours_per_deal": 2,
+      "delivery_hours_per_deal": 4,
+      "capacity_limit": 15,
+      "incident_cost": 50000
+    }
+  },
+  "delayed_payments": {
+    "scenario": "delayed_payments",
+    "label": "MODEL_ESTIMATE (assumptions visible)",
+    "revenue_implication": 200000,
+    "cash_implication": 40000,
+    "delivery_load_hours": 80,
+    "owner_load_hours": 40,
+    "project_priorities": [
+      "mini_audit",
+      "pipeline"
+    ],
+    "risks": [],
+    "decisions_required": [],
+    "assumptions": {
+      "monthly_deals": 20,
+      "avg_deal_value": 10000,
+      "monthly_costs": 40000,
+      "owner_hours_per_deal": 2,
+      "delivery_hours_per_deal": 4,
+      "capacity_limit": 15,
+      "incident_cost": 50000
+    }
+  },
+  "product_delay": {
+    "scenario": "product_delay",
+    "label": "MODEL_ESTIMATE (assumptions visible)",
+    "revenue_implication": 140000,
+    "cash_implication": 100000,
+    "delivery_load_hours": 56,
+    "owner_load_hours": 28,
+    "project_priorities": [
+      "mini_audit",
+      "pipeline"
+    ],
+    "risks": [],
+    "decisions_required": [],
+    "assumptions": {
+      "monthly_deals": 20,
+      "avg_deal_value": 10000,
+      "monthly_costs": 40000,
+      "owner_hours_per_deal": 2,
+      "delivery_hours_per_deal": 4,
+      "capacity_limit": 15,
+      "incident_cost": 50000
+    }
+  },
+  "infrastructure_failure": {
+    "scenario": "infrastructure_failure",
+    "label": "MODEL_ESTIMATE (assumptions visible)",
+    "revenue_implication": 120000,
+    "cash_implication": 30000,
+    "delivery_load_hours": 48,
+    "owner_load_hours": 24,
+    "project_priorities": [
+      "mini_audit",
+      "pipeline"
+    ],
+    "risks": [],
+    "decisions_required": [],
+    "assumptions": {
+      "monthly_deals": 20,
+      "avg_deal_value": 10000,
+      "monthly_costs": 40000,
+      "owner_hours_per_deal": 2,
+      "delivery_hours_per_deal": 4,
+      "capacity_limit": 15,
+      "incident_cost": 50000
+    }
+  },
+  "owner_unavailable": {
+    "scenario": "owner_unavailable",
+    "label": "MODEL_ESTIMATE (assumptions visible)",
+    "revenue_implication": 60000,
+    "cash_implication": 20000,
+    "delivery_load_hours": 24,
+    "owner_load_hours": 12,
+    "project_priorities": [
+      "mini_audit",
+      "pipeline"
+    ],
+    "risks": [
+      "owner bottleneck"
+    ],
+    "decisions_required": [
+      "delegate to Claude/Cline"
+    ],
+    "assumptions": {
+      "monthly_deals": 20,
+      "avg_deal_value": 10000,
+      "monthly_costs": 40000,
+      "owner_hours_per_deal": 2,
+      "delivery_hours_per_deal": 4,
+      "capacity_limit": 15,
+      "incident_cost": 50000
+    }
+  },
+  "cost_increase": {
+    "scenario": "cost_increase",
+    "label": "MODEL_ESTIMATE (assumptions visible)",
+    "revenue_implication": 200000,
+    "cash_implication": 144000,
+    "delivery_load_hours": 80,
+    "owner_load_hours": 40,
+    "project_priorities": [
+      "mini_audit",
+      "pipeline"
+    ],
+    "risks": [],
+    "decisions_required": [],
+    "assumptions": {
+      "monthly_deals": 20,
+      "avg_deal_value": 10000,
+      "monthly_costs": 40000,
+      "owner_hours_per_deal": 2,
+      "delivery_hours_per_deal": 4,
+      "capacity_limit": 15,
+      "incident_cost": 50000
+    }
+  },
+  "one_client_concentration": {
+    "scenario": "one_client_concentration",
+    "label": "MODEL_ESTIMATE (assumptions visible)",
+    "revenue_implication": 200000,
+    "cash_implication": 160000,
+    "delivery_load_hours": 80,
+    "owner_load_hours": 40,
+    "project_priorities": [
+      "mini_audit",
+      "pipeline"
+    ],
+    "risks": [
+      "single-client dependency"
+    ],
+    "decisions_required": [],
+    "assumptions": {
+      "monthly_deals": 20,
+      "avg_deal_value": 10000,
+      "monthly_costs": 40000,
+      "owner_hours_per_deal": 2,
+      "delivery_hours_per_deal": 4,
+      "capacity_limit": 15,
+      "incident_cost": 50000
+    }
+  },
+  "controlled_commercial_cycle": {
+    "scenario": "controlled_commercial_cycle",
+    "label": "MODEL_ESTIMATE (assumptions visible)",
+    "revenue_implication": 120000,
+    "cash_implication": 80000,
+    "delivery_load_hours": 48,
+    "owner_load_hours": 24,
+    "project_priorities": [
+      "mini_audit",
+      "pipeline"
+    ],
+    "risks": [],
+    "decisions_required": [
+      "approve first cycle + daily limit"
+    ],
+    "assumptions": {
+      "monthly_deals": 20,
+      "avg_deal_value": 10000,
+      "monthly_costs": 40000,
+      "owner_hours_per_deal": 2,
+      "delivery_hours_per_deal": 4,
+      "capacity_limit": 15,
+      "incident_cost": 50000
+    }
+  }
+}

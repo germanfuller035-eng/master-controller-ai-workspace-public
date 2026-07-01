@@ -1,0 +1,12 @@
+{
+  "scenario": "O",
+  "production_affected": false,
+  "name": "Unexpected send hard blocker",
+  "ok": true,
+  "steps": [
+    "unexpected_send -> detect:send while AUTOSEND=BLOCKED health:UNHEALTHY alert:a_unexpected_send runbook:rb_unexpected_send",
+    "HARD BLOCKER",
+    "security handoff"
+  ],
+  "hard_blocker": true
+}

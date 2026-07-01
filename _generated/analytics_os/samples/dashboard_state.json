@@ -1,0 +1,13 @@
+{
+  "generated_ts": "20260617_210000",
+  "synthetic": true,
+  "note": "references existing dashboards; no new dashboard created",
+  "kpis": [
+    "booked_revenue",
+    "cash_collected",
+    "operating_result",
+    "cash_runway",
+    "active_products",
+    "acceptance_rate"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "urn:json-schema:draft-2020-12",
+  "$id": "urn:master-controller:schemas:digital_presence:website_analysis",
+  "title": "website_analysis",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["site_id", "score", "status"],
+  "properties": {
+    "site_id": {"type": "string"},
+    "analysis_mode": {"type": "string"},
+    "score": {"type": "integer"},
+    "status": {"type": "string"},
+    "components": {"type": "object"},
+    "issues": {"type": "array"},
+    "evidence": {"type": "array"},
+    "browser_used": {"type": "boolean"},
+    "network_used": {"type": "boolean"}
+  }
+}

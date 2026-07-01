@@ -1,0 +1,11 @@
+{
+  "product_id": "mini_audit",
+  "price": 10000,
+  "price_status": "CONFIRMED",
+  "owner_hours": 2,
+  "verdict": "owner_decision_required",
+  "reasons": [
+    "economics not provided"
+  ],
+  "note": "No new approved prices. Recommendation only."
+}

@@ -1,0 +1,7 @@
+CTRL_LEDGER: BATCH_BEGIN screens=1 only=conversations total_controls=282
+CTRL_LEDGER: SCREEN_BEGIN screen=conversations controls=3 anchor=conversations
+CTRL_LEDGER: ROW {"control_id":"CTRL-0315","screen":"conversations","selector":"conv_${c.lead_id}","type":"SectionCard","risk":"NAVIGATION","visible":true,"enabled":true,"action":"conv_row_opens_readonly_timeline","status":"PASS_NAVIGATION"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0316","screen":"conversations","selector":"conv_${c.lead_id}","type":"Clickable","risk":"ACTION","visible":true,"enabled":true,"action":"conv_row_opens_readonly_timeline","status":"PASS_NAVIGATION"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0317","screen":"conversations","selector":"Закрыть","type":"TextButton","risk":"ACTION","visible":true,"enabled":true,"action":"timeline_close_clicked","status":"PASS_VISIBLE_ENABLED"}
+CTRL_LEDGER: SCREEN_END screen=conversations executed=3 passed=3 failed=0 unexecuted=0
+CTRL_LEDGER: BATCH_END executed=3 passed=3 failed=0 unexecuted=0

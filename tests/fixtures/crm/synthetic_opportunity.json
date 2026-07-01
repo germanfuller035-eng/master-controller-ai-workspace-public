@@ -1,0 +1,13 @@
+{
+  "schema_version": "crm.opportunity.v1",
+  "synthetic": true,
+  "opportunity_id": "synthetic-opportunity-alpha",
+  "contact_id": "synthetic-contact-alpha",
+  "stage": "qualified_shadow",
+  "estimated_value_units": 1200,
+  "currency": "SYNTHETIC_UNITS",
+  "source": "synthetic_fixture_only",
+  "draft_only": true,
+  "crm_write_allowed": false,
+  "production_db_write_allowed": false
+}

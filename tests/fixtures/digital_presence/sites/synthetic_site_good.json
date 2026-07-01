@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "site_id": "synthetic_site_good",
+  "synthetic": true,
+  "external_access": false,
+  "browser_action_allowed": false,
+  "reserved_domain_reference": "synthetic-site-good.example.test",
+  "synthetic_company_label": "Synthetic Good Fixture",
+  "metrics": {
+    "response_time_ms": 800,
+    "mobile_ready": true,
+    "message_clarity": 5,
+    "trust_proofs": 3
+  },
+  "lead_capture": {
+    "forms": 1,
+    "cta_count": 3,
+    "consent_copy": true,
+    "routing_defined": true,
+    "owner_followup_sla_minutes": 45
+  },
+  "front_office": {
+    "response_sla_minutes": 60,
+    "after_hours_plan": true
+  },
+  "signals": {
+    "website_problem": 0,
+    "lead_capture_problem": 0,
+    "response_handling_problem": 0,
+    "trust_problem": 0,
+    "landing_need": 1
+  },
+  "evidence": [
+    {
+      "id": "ev-good-profile",
+      "source": "synthetic_fixture",
+      "claim": "Synthetic good site has complete draft-only evidence for scoring."
+    }
+  ]
+}

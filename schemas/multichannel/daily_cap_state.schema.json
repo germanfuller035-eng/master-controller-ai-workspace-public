@@ -1,0 +1,17 @@
+{
+  "additionalProperties": true,
+  "properties": {
+    "channel": {},
+    "daily_cap": {},
+    "synthetic": {},
+    "used_today": {}
+  },
+  "required": [
+    "synthetic",
+    "channel",
+    "daily_cap",
+    "used_today"
+  ],
+  "title": "Daily Cap State",
+  "type": "object"
+}

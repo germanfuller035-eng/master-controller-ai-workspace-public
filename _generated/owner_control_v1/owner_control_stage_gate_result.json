@@ -1,0 +1,424 @@
+{
+  "synthetic": true,
+  "status": "PASS",
+  "checks": {
+    "TODAY_MAIN_ACTION": true,
+    "R4_R5_APPROVAL_HASH_AND_RISK_COPY": true,
+    "COMMERCIAL_NO_SEND_VISIBLE": true,
+    "COST_BUDGET_VISIBLE": true,
+    "MEMORY_PROPOSALS_REVIEW_ONLY": true,
+    "FEATURE_FLAGS_DISPLAY_ONLY": true,
+    "STOP_BLOCKS_RISKY_ACTIONS": true,
+    "ANDROID_WEB_ALIGNMENT": true,
+    "FALSE_SUCCESS_BLOCKED": true
+  },
+  "outbound_count": 0,
+  "payment_count": 0,
+  "production_db_writes": 0,
+  "panels": {
+    "today": {
+      "schema_version": 1,
+      "synthetic": true,
+      "panel_id": "today",
+      "main_action": {
+        "id": "act-review-r4",
+        "title": "Review urgent synthetic R4 approval",
+        "risk": "R4",
+        "evidence_ids": [
+          "ev-owner-control-synthetic"
+        ]
+      },
+      "decisions": [
+        "dec-r4-send-preview",
+        "dec-cost-watch"
+      ],
+      "stop_visible": true,
+      "no_send_state": "VISIBLE_OFF",
+      "evidence": [
+        {
+          "id": "ev-owner-control-synthetic",
+          "source": "synthetic_fixture",
+          "claim": "Local synthetic owner-control evidence."
+        }
+      ],
+      "main_action_count": 1,
+      "today_main_action_status": "PASS"
+    },
+    "decisions": {
+      "synthetic": true,
+      "decisions": [
+        {
+          "decision_id": "dec-r4-send-preview",
+          "synthetic": true,
+          "priority": 100,
+          "risk": "R4",
+          "title": "Review synthetic R4 approval",
+          "decision_type": "approval",
+          "urgent": true,
+          "evidence": [
+            {
+              "id": "ev-owner-control-synthetic",
+              "source": "synthetic_fixture",
+              "claim": "Local synthetic owner-control evidence."
+            }
+          ]
+        },
+        {
+          "decision_id": "dec-cost-watch",
+          "synthetic": true,
+          "priority": 30,
+          "risk": "R2",
+          "title": "Review synthetic cost budget",
+          "decision_type": "cost",
+          "evidence": [
+            {
+              "id": "ev-owner-control-synthetic",
+              "source": "synthetic_fixture",
+              "claim": "Local synthetic owner-control evidence."
+            }
+          ]
+        },
+        {
+          "decision_id": "dec-memory-review",
+          "synthetic": true,
+          "priority": 20,
+          "risk": "R3",
+          "title": "Review memory proposal",
+          "decision_type": "memory",
+          "evidence": [
+            {
+              "id": "ev-owner-control-synthetic",
+              "source": "synthetic_fixture",
+              "claim": "Local synthetic owner-control evidence."
+            }
+          ]
+        }
+      ],
+      "urgent_approvals_first": true,
+      "evidence": []
+    },
+    "approvals": {
+      "synthetic": true,
+      "cards": [
+        {
+          "approval_id": "approval-r4-synthetic",
+          "synthetic": true,
+          "risk": "R4",
+          "payload": {
+            "actor": "owner",
+            "action": "preview_outbound_draft",
+            "target": "synthetic_lead_alpha",
+            "payload": {
+              "draft_ref": "synthetic_offer_preview_alpha"
+            },
+            "risk": "R4",
+            "expiry": "synthetic_future_window",
+            "task_id": "owner-control-r4"
+          },
+          "payload_hash": "425327d6c7c67cce7d44bd403c0270aec0b99220477bbc6aa6ac496d6e708b42",
+          "risk_explanation": {
+            "what": "Synthetic R4 owner approval preview only.",
+            "who": "Master Controller owner reviews the synthetic card.",
+            "why": "Demonstrate exact payload hash and risk copy without execution.",
+            "cost": "No real cost, no send, no production write.",
+            "rollback": "Discard local synthetic card; no production rollback needed."
+          },
+          "execute_allowed": false,
+          "evidence": [
+            {
+              "id": "ev-owner-control-synthetic",
+              "source": "synthetic_fixture",
+              "claim": "Local synthetic owner-control evidence."
+            }
+          ]
+        },
+        {
+          "approval_id": "approval-r5-synthetic",
+          "synthetic": true,
+          "risk": "R5",
+          "payload": {
+            "actor": "owner",
+            "action": "preview_payment_operation",
+            "target": "synthetic_budget_hold",
+            "payload": {
+              "amount_units": 100,
+              "currency": "SYNTHETIC_UNITS"
+            },
+            "risk": "R5",
+            "expiry": "synthetic_future_window",
+            "task_id": "owner-control-r5"
+          },
+          "payload_hash": "c94f8e60f1057818ccd645e4416778ba0581df1bcfc469df552101726bc95c1b",
+          "risk_explanation": {
+            "what": "Synthetic R5 owner approval preview only.",
+            "who": "Master Controller owner reviews the synthetic card.",
+            "why": "Demonstrate exact payload hash and strong risk copy without execution.",
+            "cost": "No real cost, no payment, no production write.",
+            "rollback": "Discard local synthetic card; no production rollback needed."
+          },
+          "strong_approval_fields": {
+            "pin_or_biometric_future": true,
+            "repeated_human_description": true,
+            "short_delay": true,
+            "one_time_approval": true
+          },
+          "execute_allowed": false,
+          "evidence": [
+            {
+              "id": "ev-owner-control-synthetic",
+              "source": "synthetic_fixture",
+              "claim": "Local synthetic owner-control evidence."
+            }
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "ev-owner-control-synthetic",
+          "source": "synthetic_fixture",
+          "claim": "Local synthetic owner-control evidence."
+        },
+        {
+          "id": "ev-owner-control-synthetic",
+          "source": "synthetic_fixture",
+          "claim": "Local synthetic owner-control evidence."
+        }
+      ]
+    },
+    "commercial_funnel": {
+      "synthetic": true,
+      "panel_id": "commercial_funnel",
+      "qualified_leads": 3,
+      "draft_offers": 2,
+      "no_send_state": "OUTBOUND_OFF_VISIBLE",
+      "send_allowed": false,
+      "outbound_count": 0,
+      "payment_count": 0,
+      "production_db_writes": 0,
+      "evidence": [
+        {
+          "id": "ev-owner-control-synthetic",
+          "source": "synthetic_fixture",
+          "claim": "Local synthetic owner-control evidence."
+        }
+      ]
+    },
+    "costs": {
+      "synthetic": true,
+      "panel_id": "costs",
+      "budget": {
+        "currency": "SYNTHETIC_UNITS",
+        "monthly_limit": 20000,
+        "expensive_task_threshold": 1000
+      },
+      "synthetic_spend": {
+        "month_to_date": 3200,
+        "remaining": 16800,
+        "budget_status": "OK"
+      },
+      "stop_loss_required": true,
+      "evidence": [
+        {
+          "id": "ev-owner-control-synthetic",
+          "source": "synthetic_fixture",
+          "claim": "Local synthetic owner-control evidence."
+        }
+      ]
+    },
+    "agents_workflows": {
+      "synthetic": true,
+      "agents": [
+        {
+          "id": "agent-synthetic-review",
+          "status": "PASS",
+          "evidence_ids": [
+            "ev-owner-control-synthetic"
+          ]
+        }
+      ],
+      "workflows": [
+        {
+          "id": "workflow-owner-morning",
+          "status": "PASS",
+          "incidents": [
+            "inc-synthetic-delay"
+          ],
+          "evidence_ids": [
+            "ev-owner-control-synthetic"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "ev-owner-control-synthetic",
+          "source": "synthetic_fixture",
+          "claim": "Local synthetic owner-control evidence."
+        }
+      ]
+    },
+    "memory_proposals": {
+      "synthetic": true,
+      "proposals": [
+        {
+          "proposal_id": "mem-prop-synthetic-one",
+          "synthetic": true,
+          "review_only": true,
+          "can_write_memory": false,
+          "source_confidence": "MEDIUM",
+          "sensitivity": "BUSINESS_INTERNAL",
+          "evidence": [
+            {
+              "id": "ev-owner-control-synthetic",
+              "source": "synthetic_fixture",
+              "claim": "Local synthetic owner-control evidence."
+            }
+          ]
+        }
+      ]
+    },
+    "health_incidents": {
+      "synthetic": true,
+      "incidents": [
+        {
+          "incident_id": "inc-synthetic-delay",
+          "severity": "LOW",
+          "status": "OPEN",
+          "next_action": "Review synthetic workflow queue",
+          "evidence_ids": [
+            "ev-owner-control-synthetic"
+          ]
+        }
+      ],
+      "health": {
+        "overall": "PASS",
+        "production_checked": false,
+        "evidence_ids": [
+          "ev-owner-control-synthetic"
+        ]
+      },
+      "next_action": {
+        "id": "health-next-review",
+        "title": "Review synthetic low severity incident"
+      },
+      "evidence": [
+        {
+          "id": "ev-owner-control-synthetic",
+          "source": "synthetic_fixture",
+          "claim": "Local synthetic owner-control evidence."
+        }
+      ]
+    },
+    "feature_flags": {
+      "synthetic": true,
+      "display_only": true,
+      "can_enable_flags": false,
+      "flags": [
+        {
+          "id": "PRODUCTION_DEPLOY",
+          "state": "OFF"
+        },
+        {
+          "id": "OUTBOUND_EMAIL",
+          "state": "OFF"
+        },
+        {
+          "id": "OUTBOUND_SOCIAL",
+          "state": "OFF"
+        },
+        {
+          "id": "AUTO_SAFE",
+          "state": "OFF"
+        },
+        {
+          "id": "VOICE",
+          "state": "OFF"
+        },
+        {
+          "id": "PAYMENTS",
+          "state": "OFF"
+        },
+        {
+          "id": "PRODUCTION_DB_WRITE",
+          "state": "OFF"
+        }
+      ],
+      "evidence": [
+        {
+          "id": "ev-owner-control-synthetic",
+          "source": "synthetic_fixture",
+          "claim": "Local synthetic owner-control evidence."
+        }
+      ]
+    },
+    "stop": {
+      "synthetic": true,
+      "stop_active": true,
+      "blocked_actions": [
+        "outbound_send",
+        "browser_action",
+        "voice_risky_action",
+        "payment_operation",
+        "production_deploy",
+        "production_db_write"
+      ],
+      "queues": {
+        "outbound": "DISABLED",
+        "browser_action": "DISABLED",
+        "payment": "DISABLED",
+        "production_write": "DISABLED"
+      },
+      "active_approvals": "REVOKED",
+      "evidence": [
+        {
+          "id": "ev-owner-control-synthetic",
+          "source": "synthetic_fixture",
+          "claim": "Local synthetic owner-control evidence."
+        }
+      ]
+    },
+    "android_alignment": {
+      "synthetic": true,
+      "status": "PASS",
+      "surfaces": [
+        "Today",
+        "Approvals",
+        "Leads",
+        "Offer Preview",
+        "Replies",
+        "Deals",
+        "Agents",
+        "Costs",
+        "Incidents",
+        "Memory proposals",
+        "Global STOP",
+        "Voice"
+      ],
+      "android_production_behavior_changed": false,
+      "evidence": [
+        {
+          "id": "ev-android-alignment-policy",
+          "source": "config/owner_control/ANDROID_ALIGNMENT_POLICY.json",
+          "claim": "Android owner surfaces are aligned."
+        }
+      ]
+    },
+    "web_command_center": {
+      "synthetic": true,
+      "status": "PASS",
+      "sections": [
+        "Today & Decisions",
+        "Commerce",
+        "AI Circuit",
+        "Knowledge",
+        "System"
+      ],
+      "evidence": [
+        {
+          "id": "ev-web-command-center-nav",
+          "source": "config/owner_control/WEB_COMMAND_CENTER_NAV.json",
+          "claim": "Web IA sections are present."
+        }
+      ]
+    }
+  }
+}

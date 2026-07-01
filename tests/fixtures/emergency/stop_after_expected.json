@@ -1,0 +1,63 @@
+{
+  "approvals": [
+    {
+      "approval_id": "appr-r4-1",
+      "payload_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "revoked": true,
+      "status": "REVOKED_BY_STOP"
+    }
+  ],
+  "checkpoint": {
+    "generated": true,
+    "path": "_generated/policy_security_v1/synthetic_stop_checkpoint.json",
+    "stopped_at": "2026-06-26T00:00:00Z"
+  },
+  "feature_flags": {
+    "MCP_WRITE": "OFF",
+    "OUTBOUND_EMAIL": "OFF",
+    "PAYMENTS": "OFF",
+    "PRODUCTION_DB_WRITE": "OFF"
+  },
+  "queues": {
+    "browser_action": {
+      "enabled": false,
+      "items": [
+        {"id": "browser-1"}
+      ],
+      "status": "DISABLED_BY_STOP"
+    },
+    "outbound": {
+      "enabled": false,
+      "items": [
+        {"id": "send-1", "recipient": "lead@example.test"}
+      ],
+      "status": "DISABLED_BY_STOP"
+    },
+    "payment": {
+      "enabled": false,
+      "items": [
+        {"id": "pay-1"}
+      ],
+      "status": "DISABLED_BY_STOP"
+    },
+    "production_write": {
+      "enabled": false,
+      "items": [
+        {"id": "write-1"}
+      ],
+      "status": "DISABLED_BY_STOP"
+    }
+  },
+  "report": {
+    "approvals_revoked": 1,
+    "queues_disabled": ["outbound", "production_write", "payment", "browser_action"],
+    "workflows_stopped": 3
+  },
+  "stop_state": "ACTIVE",
+  "stopped_at": "2026-06-26T00:00:00Z",
+  "workflows": [
+    {"id": "wf-r0", "risk": "R0", "status": "CHECKPOINTED_BY_STOP"},
+    {"action": "outbound_send", "id": "wf-r4", "risk": "R4", "status": "CANCELLED_BY_STOP"},
+    {"action": "payment_operation", "id": "wf-r5", "risk": "R5", "status": "CANCELLED_BY_STOP"}
+  ]
+}

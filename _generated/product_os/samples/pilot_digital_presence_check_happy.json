@@ -1,0 +1,34 @@
+{
+  "pilot_id": "pilot_digital_presence_check_happy",
+  "product_id": "digital_presence_check",
+  "scenario": "happy",
+  "status": "PASSED",
+  "inputs": [
+    "verified identity",
+    "verified channels checked"
+  ],
+  "planned_outputs": [
+    "presence map",
+    "gaps",
+    "recommended first step"
+  ],
+  "actual_outputs": [
+    "presence map",
+    "gaps",
+    "recommended first step"
+  ],
+  "planned_hours": null,
+  "actual_hours": null,
+  "qa_result": "PASS",
+  "acceptance_result": "PASS",
+  "risks": [
+    "product not formalized in canonical files",
+    "price unknown"
+  ],
+  "lessons": [
+    "clean synthetic pilot"
+  ],
+  "recommendation": "eligible for READY_FOR_PILOT review (owner)",
+  "blockers": [],
+  "test_only": true
+}

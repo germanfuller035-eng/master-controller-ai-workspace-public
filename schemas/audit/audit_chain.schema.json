@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Audit Chain V1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["chain_id", "algorithm", "events"],
+  "properties": {
+    "chain_id": {"type": "string"},
+    "algorithm": {"const": "sha256_canonical_json_event_without_current_hash"},
+    "events": {"type": "array", "items": {"$ref": "high_risk_event.schema.json"}}
+  }
+}

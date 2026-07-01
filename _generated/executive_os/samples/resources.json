@@ -1,0 +1,13 @@
+{
+  "status": "UNKNOWN_OWNER_CAPACITY",
+  "owner_available": "UNKNOWN",
+  "owner_demand": 18,
+  "over_allocated": false,
+  "too_many_active": false,
+  "projects_without_resources": [],
+  "warnings": [
+    "maintenance burden not budgeted"
+  ],
+  "errors": [],
+  "label": "MODEL_ESTIMATE"
+}

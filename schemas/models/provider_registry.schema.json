@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Provider Registry",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["live_providers_enabled", "credentials_committed", "providers"],
+  "properties": {
+    "live_providers_enabled": {"type": "boolean", "const": false},
+    "credentials_committed": {"type": "boolean", "const": false},
+    "providers": {"type": "array", "items": {"type": "object"}}
+  }
+}

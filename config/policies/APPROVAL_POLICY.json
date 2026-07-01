@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-26",
+  "session": "POLICY_SECRETS_AUDIT_EMERGENCY_CONTROL_V1",
+  "approval_policy": {
+    "default": "DENY_WITHOUT_REQUIRED_APPROVAL",
+    "required_payload_fields": ["actor", "action", "target", "payload", "risk", "expiry", "task_id"],
+    "hash_algorithm": "sha256",
+    "canonical_json": true,
+    "single_use": true,
+    "expires": true,
+    "binds_to_exact_payload_hash": true,
+    "replay_policy": "DENY_REUSED_APPROVAL_ID_OR_HASH",
+    "stop_revocation": "REVOKE_ACTIVE_APPROVALS",
+    "r4": {
+      "approval_type": "OWNER_APPROVAL",
+      "required": true
+    },
+    "r5": {
+      "approval_type": "STRONG_OWNER_APPROVAL",
+      "required": true,
+      "future_ui_requirements": ["PIN_OR_BIOMETRIC", "REPEATED_HUMAN_DESCRIPTION", "SHORT_DELAY", "ONE_TIME_APPROVAL"]
+    }
+  }
+}

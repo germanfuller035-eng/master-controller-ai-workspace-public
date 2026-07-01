@@ -1,0 +1,14 @@
+{"group":"nav","case":"bottom_tab+root_today","status":"PASS_ANCHOR","detail":""}
+{"group":"nav","case":"hub_commercial","status":"PASS_ANCHOR","detail":""}
+{"group":"nav","case":"nested_hub_operations","status":"PASS_ANCHOR","detail":""}
+{"group":"nav","case":"list_leads","status":"PASS_LIST_ROWS_PRESENT","detail":"populated bucket; DEF-V3-002 fix; row=lead_row_cand_51b7191458b7"}
+{"group":"nav","case":"detail_lead","status":"PASS_DETAIL_ANCHOR","detail":"lead_detail"}
+{"group":"type","case":"NavigationBarItem","status":"PASS_ANCHOR","detail":""}
+{"group":"type","case":"SectionCard","status":"PASS_ANCHOR","detail":""}
+{"group":"type","case":"Switch","status":"PASS_STATE_TOGGLED","detail":"before=true after=false"}
+{"group":"type","case":"TextField","status":"PASS_INPUT_ECHOED","detail":""}
+{"group":"type","case":"Refresh+LiveRead","status":"PASS_LIVE_READ","detail":""}
+{"group":"type","case":"Button/IconButton","status":"PASS_ANCHOR","detail":"cost center refresh button"}
+{"group":"dangerous","case":"unpair_open_then_cancel","status":"PASS_UNSAFE_ACTION_BLOCKED","detail":"dialog shown, cancelled, still paired"}
+{"group":"state","case":"TEST_ONLY_DATA_visible","status":"PASS_TEST_FIXTURE_VISIBLE","detail":"seeded [ACCEPT_V3] campaign visible (includeTest=true)"}
+{"group":"state","case":"PAIRED_ONLINE","status":"PASS_AMBIENT","detail":""}

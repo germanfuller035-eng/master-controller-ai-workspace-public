@@ -1,0 +1,15 @@
+CTRL_LEDGER: BATCH_BEGIN screens=1 only=knowledge total_controls=282
+CTRL_LEDGER: SCREEN_BEGIN screen=knowledge controls=11 anchor=knowledge_home
+CTRL_LEDGER: ROW {"control_id":"CTRL-0160","screen":"knowledge","selector":"screen.knowledge.control.back","type":"IconButton","risk":"ACTION","visible":true,"enabled":true,"action":"observe","status":"PASS_VISIBLE_ENABLED"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0161","screen":"knowledge","selector":"kn_urgent","type":"SectionCard","risk":"NAVIGATION","visible":true,"enabled":true,"action":"click_navigate","status":"PASS_NAVIGATION"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0162","screen":"knowledge","selector":"kn_weekly","type":"SectionCard","risk":"NAVIGATION","visible":true,"enabled":true,"action":"click_navigate","status":"PASS_NAVIGATION"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0163","screen":"knowledge","selector":"kn_monthly","type":"SectionCard","risk":"NAVIGATION","visible":true,"enabled":true,"action":"click_navigate","status":"PASS_NAVIGATION"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0164","screen":"knowledge","selector":"kn_sources","type":"SectionCard","risk":"NAVIGATION","visible":true,"enabled":true,"action":"click_navigate","status":"PASS_NAVIGATION"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0165","screen":"knowledge","selector":"kn_status","type":"SectionCard","risk":"NAVIGATION","visible":true,"enabled":true,"action":"click_navigate","status":"PASS_NAVIGATION"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0166","screen":"knowledge","selector":"screen.knowledge.control.back","type":"IconButton","risk":"ACTION","visible":true,"enabled":true,"action":"observe","status":"PASS_VISIBLE_ENABLED"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0171","screen":"knowledge","selector":"screen.knowledge.control.back","type":"IconButton","risk":"ACTION","visible":true,"enabled":true,"action":"observe","status":"PASS_VISIBLE_ENABLED"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0172","screen":"knowledge","selector":"screen.knowledge.control.refresh","type":"TextButton","risk":"REFRESH","visible":false,"enabled":false,"action":"no_such_chrome_affordance","status":"PASS_NOT_APPLICABLE"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0173","screen":"knowledge","selector":"screen.knowledge.control.back","type":"IconButton","risk":"ACTION","visible":true,"enabled":true,"action":"observe","status":"PASS_VISIBLE_ENABLED"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0174","screen":"knowledge","selector":"screen.knowledge.control.refresh","type":"TextButton","risk":"REFRESH","visible":false,"enabled":false,"action":"no_such_chrome_affordance","status":"PASS_NOT_APPLICABLE"}
+CTRL_LEDGER: SCREEN_END screen=knowledge executed=11 passed=11 failed=0 unexecuted=0
+CTRL_LEDGER: BATCH_END executed=11 passed=11 failed=0 unexecuted=0

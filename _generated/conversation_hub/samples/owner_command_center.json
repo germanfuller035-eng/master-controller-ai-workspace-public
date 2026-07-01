@@ -1,0 +1,15 @@
+{
+  "schema": "conversation_hub.owner_command_center.v1",
+  "generated_ts": "20260617_000000",
+  "synthetic": true,
+  "primary_conversation_action": "conv_f11_critical_incident",
+  "highest_priority_reply": "conv_f11_critical_incident",
+  "approval_pending": null,
+  "opt_out_requiring_review": "conv_f06_explicit_opt_out",
+  "support_escalation": "conv_f10_support_request",
+  "channel_issue": "all live channels NOT_CONNECTED (by design this task)",
+  "identity_conflict": null,
+  "stale_thread": null,
+  "owner_capacity_warning": "high reply backlog",
+  "note": "No message action executed. Recommendations only."
+}

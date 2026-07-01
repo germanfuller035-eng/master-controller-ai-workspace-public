@@ -1,0 +1,17 @@
+{
+  "schema": "executive_os.quarterly_planning.v1",
+  "label": "PROPOSED_INTERNAL",
+  "proposed_objectives": [],
+  "key_results": [],
+  "projects_to_focus": [
+    "mini_audit"
+  ],
+  "projects_to_pause": [
+    "edera"
+  ],
+  "capacity_allocation": "UNKNOWN",
+  "financial_assumptions": [],
+  "owner_decisions": [],
+  "risk_register": [],
+  "note": "No automatic approval."
+}

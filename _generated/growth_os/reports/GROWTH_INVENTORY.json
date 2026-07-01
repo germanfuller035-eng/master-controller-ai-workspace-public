@@ -1,0 +1,29 @@
+{
+  "schema": "growth_os.inventory.v1",
+  "version": "1.0",
+  "generated_for": "feature/growth-marketing-os-v1",
+  "note": "Growth OS is greenfield. No prior canonical marketing/growth source exists in the workspace. Lead Hunter campaign.mjs is DISCOVERY (different domain) and is NOT a growth canonical source — Growth OS must not duplicate it.",
+  "columns": ["path", "asset_type", "product_id", "segment", "channel", "status", "canonical", "duplicate", "stale", "contains_real_contacts", "contains_unverified_claims", "contains_real_results", "approved", "recommended_action"],
+  "rows": [
+    {"path": "tools/lead_hunter/src/campaign.mjs", "asset_type": "discovery_campaign", "product_id": null, "segment": null, "channel": "discovery", "status": "EXISTING", "canonical": false, "duplicate": false, "stale": false, "contains_real_contacts": false, "contains_unverified_claims": false, "contains_real_results": false, "approved": true, "recommended_action": "DO_NOT_TOUCH — Lead Hunter discovery domain, not growth marketing"},
+    {"path": "tools/revenue_os/data/product_catalog.json", "asset_type": "product_catalog", "product_id": "ALL", "segment": null, "channel": null, "status": "CANONICAL", "canonical": true, "duplicate": false, "stale": false, "contains_real_contacts": false, "contains_unverified_claims": false, "contains_real_results": false, "approved": true, "recommended_action": "REFERENCE read-only — Revenue OS owns price/state"},
+    {"path": "tools/product_os/data/product_packs.json", "asset_type": "product_readiness_claims", "product_id": "ALL", "segment": null, "channel": null, "status": "CANONICAL", "canonical": true, "duplicate": false, "stale": false, "contains_real_contacts": false, "contains_unverified_claims": false, "contains_real_results": false, "approved": true, "recommended_action": "REFERENCE read-only — Product OS owns readiness/claims"},
+    {"path": "tools/analytics_os/data/controlled_commercial_cycle_measurement_plan.json", "asset_type": "measurement_plan", "product_id": null, "segment": null, "channel": null, "status": "CANONICAL", "canonical": true, "duplicate": false, "stale": false, "contains_real_contacts": false, "contains_unverified_claims": false, "contains_real_results": false, "approved": true, "recommended_action": "REFERENCE — Analytics OS owns measurement; Growth cycle runbook builds on it"}
+  ],
+  "canonical_sources": {
+    "marketing_source": "tools/growth_os (NEW — none existed)",
+    "icp_source": "tools/growth_os/data/icp_catalog.json (NEW)",
+    "positioning_source": "tools/growth_os/data/positioning.json (NEW)",
+    "content_source": "tools/growth_os/data/content_plan.json (NEW)",
+    "campaign_source": "tools/growth_os/data/campaigns.json (NEW)",
+    "experiment_source": "tools/growth_os/data/experiment_backlog.json (NEW; governed by Analytics OS experiment rules)",
+    "marketing_dashboard": "tools/growth_os/lib/dashboard.mjs -> _generated/growth_os/samples (NEW)"
+  },
+  "anti_duplication": {
+    "no_canonical_leads": "Master Controller owns leads; Growth OS stores none",
+    "no_discovery": "Lead Hunter owns discovery; Growth OS does not scan",
+    "no_product_catalog": "Revenue OS owns catalog/price; Growth references",
+    "no_second_analytics": "Analytics OS owns metrics/attribution/experiments; Growth defines backlog + reads",
+    "no_conversation_hub": "Conversation Hub owns send/threads; Growth never sends"
+  }
+}

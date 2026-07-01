@@ -1,0 +1,12 @@
+{
+  "version": "0.6.0-rc10", "version_code": 22,
+  "apk_sha256": "8e1c357d9bdb6804f114074e0eddb72937d96afc9a4fa4aa1aa4bf2f77301c58",
+  "aab_sha256": "17d906ba2aa4812e283b99c04c30a549f852a792859a1494adeb657e238d85d5",
+  "signer_cert_sha256": "11038fca7db3fab1b0206971a93678b9dd28363ddf61241e162568019a1023f7",
+  "signer_match": true, "apksigner_verify": "PASS",
+  "unit_tests": "158 passed / 0 failed",
+  "new_feature": "First Touch owner command UI (no-send): generate-draft, select-subject/body, approve-text-only, request-changes, reject, return-to-audit, select-pilot — each via Idempotency-Key + expectedRevision; no send button.",
+  "install_over_rc9": "Success (versionCode 21->22, pairing/data retained, 0 crash)",
+  "room_migration": "none (no new entities)",
+  "owner_install": "PENDING"
+}

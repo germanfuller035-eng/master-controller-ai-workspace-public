@@ -1,0 +1,119 @@
+{
+  "schema": "consolidation.master_validation.v1",
+  "generated_ts": "UNSTAMPED",
+  "total": 18,
+  "passed": 17,
+  "failed": 0,
+  "explicit_not_run": 1,
+  "quarantined": 0,
+  "unclassified_failures": 0,
+  "results": [
+    {
+      "suite": "ai_hq",
+      "status": "PASS",
+      "exit": 0,
+      "required": true
+    },
+    {
+      "suite": "revenue_os",
+      "status": "PASS",
+      "exit": 0,
+      "required": true
+    },
+    {
+      "suite": "delivery_os",
+      "status": "PASS",
+      "exit": 0,
+      "required": true
+    },
+    {
+      "suite": "finance_os",
+      "status": "PASS",
+      "exit": 0,
+      "required": true
+    },
+    {
+      "suite": "executive_os",
+      "status": "PASS",
+      "exit": 0,
+      "required": true
+    },
+    {
+      "suite": "product_os",
+      "status": "PASS",
+      "exit": 0,
+      "required": true
+    },
+    {
+      "suite": "customer_success_os",
+      "status": "PASS",
+      "exit": 0,
+      "required": true
+    },
+    {
+      "suite": "analytics_os",
+      "status": "PASS",
+      "exit": 0,
+      "required": true
+    },
+    {
+      "suite": "growth_os",
+      "status": "PASS",
+      "exit": 0,
+      "required": true
+    },
+    {
+      "suite": "conversation_hub",
+      "status": "PASS",
+      "exit": 0,
+      "required": true
+    },
+    {
+      "suite": "integration_os",
+      "status": "PASS",
+      "exit": 0,
+      "required": true
+    },
+    {
+      "suite": "orchestrator_os",
+      "status": "PASS",
+      "exit": 0,
+      "required": true
+    },
+    {
+      "suite": "security_os",
+      "status": "PASS",
+      "exit": 0,
+      "required": true
+    },
+    {
+      "suite": "reliability_os",
+      "status": "PASS",
+      "exit": 0,
+      "required": true
+    },
+    {
+      "suite": "consolidation_os",
+      "status": "PASS",
+      "exit": 0,
+      "required": true
+    },
+    {
+      "suite": "master_controller_offline",
+      "status": "PASS",
+      "exit": 0,
+      "required": true
+    },
+    {
+      "suite": "lead_hunter",
+      "status": "PASS",
+      "exit": 0,
+      "required": false
+    },
+    {
+      "suite": "android_unit",
+      "status": "EXPLICIT_NOT_RUN",
+      "exit": null
+    }
+  ]
+}

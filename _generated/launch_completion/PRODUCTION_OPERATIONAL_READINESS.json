@@ -1,0 +1,33 @@
+{
+  "generated_at": "2026-06-19",
+  "operational_mode": {
+    "discovery_and_verification": "automatic_free_only",
+    "audit_and_first_touch_preparation": "automatic",
+    "owner_decisions": "android_commands_no_send",
+    "client_sends": "single_explicit_owner_approval",
+    "reply_monitoring": "automatic_read_only",
+    "followup_drafts": "automatic",
+    "followup_sending": "owner_approval_only",
+    "autosend": "disabled"
+  },
+  "discovery": { "scheduler_owners": 1, "duplicate_runs": 0, "direct_writers": 0, "promotion_path": "API_ONLY",
+    "failed_unit_root_cause": "stale_empty_writelock + acquireLock cannot recover empty lock",
+    "failed_unit_action": "operational lock removal + code fix (mtime fallback)", "validation_run_promotions": 7, "paid_source_calls": 0 },
+  "first_touch": { "read_api": true, "command_api": true, "command_routes": 8,
+    "packages_in_production": 2, "teaser_artifacts_in_production": 0 },
+  "pilot": { "beton_masters_classification": "DELIVERY_STATUS_UNKNOWN", "beton_masters_send_eligible": false,
+    "clean_pilot": "KZ-JBI_RU", "clean_pilot_score": 84, "clean_pilot_artifact_hash": "cfd6a59cec98500a25197699d48d04b7",
+    "clean_pilot_blockers": ["IDENTITY_MATCH_MISMATCH", "CONTACT_SCRAPED_NOT_VERIFIED"] },
+  "closed_loop": { "reply_monitor": "read_only_ready", "reply_correlation_test": "10/0",
+    "followup_planner": "ready", "followup_draft_test": "20/0", "followup_autosend": "OFF" },
+  "android": { "version": "0.6.0-rc10", "version_code": 22, "unit_tests": "158/0",
+    "acceptance_run_1": "PASS", "acceptance_run_2": "PASS", "crashes": 0, "signer_match": true },
+  "send_truth": { "authoritative_send_records": 7, "commercial_sends": 0, "test_internal_sends": 7,
+    "send_ledger_changed": false, "awaiting_reply": 0, "followup_required": 0, "smtp_calls": 0, "client_messages": 0 },
+  "production": { "revision_before": 106, "revision_after": 125, "canonical_leads_before": 62, "canonical_leads_after": 69,
+    "new_leads_promoted": 7, "lost_leads": 0, "deleted_leads": 0, "canonical_writer_count": 1,
+    "queue_completed": 51, "queue_failed": 0, "dead_letters": 0 },
+  "gates": { "autosend": "BLOCKED", "send_allowed_live": "OFF", "controlled_send_gate": "DISABLED",
+    "transport_enabled": false, "payment_facts": 0, "gate_c1c": "NOT_ACTIVATED",
+    "approval_token_issued": false, "real_send_executed": false }
+}

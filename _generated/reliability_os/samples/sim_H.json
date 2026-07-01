@@ -1,0 +1,10 @@
+{
+  "scenario": "H",
+  "production_affected": false,
+  "name": "Backup missing",
+  "ok": true,
+  "steps": [
+    "backup_failure -> detect:no fresh backup health:UNHEALTHY alert:a_backup_failed runbook:rb_backup_missing"
+  ],
+  "alert": "a_backup_failed"
+}

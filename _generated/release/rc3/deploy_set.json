@@ -1,0 +1,16 @@
+{
+  "added": [
+    "src/owner_center/backup_center.mjs",
+    "src/owner_center/cost_center.mjs",
+    "src/owner_center/fcm_push.mjs",
+    "src/owner_center/reliability.mjs"
+  ],
+  "changed": [
+    "src/jobs/service.mjs",
+    "src/scheduler/daily_discovery.mjs",
+    "src/server/index.mjs",
+    "src/shared/config.mjs",
+    "src/worker/index.mjs"
+  ],
+  "removed": []
+}

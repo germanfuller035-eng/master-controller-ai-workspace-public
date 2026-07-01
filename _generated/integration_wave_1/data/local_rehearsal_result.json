@@ -1,0 +1,29 @@
+{
+  "stages": [
+    "R0",
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "read_endpoints_verified": 9,
+  "read_endpoints_ok": 9,
+  "command_endpoints_disabled": 7,
+  "command_disabled_ok": 7,
+  "disabled_command_mutations": 0,
+  "events_emitted_by_disabled_commands": 0,
+  "rehearsal_messages_sent": 0,
+  "rehearsal_smtp_calls": 0,
+  "queue_writes": 0,
+  "commercial_collections_empty": true,
+  "unknown_not_zero": true,
+  "rollback_restored_baseline": true,
+  "pass": 19,
+  "fail": 0
+}

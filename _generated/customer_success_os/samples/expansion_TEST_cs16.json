@@ -1,0 +1,12 @@
+{
+  "candidate_product": "full_business_audit",
+  "eligible": true,
+  "reason_codes": [
+    "unmet_need_evidence",
+    "current_adopted",
+    "candidate_ready"
+  ],
+  "blockers": [],
+  "owner_approval_required": true,
+  "note": "No pressure-based rules. No upsell merely because time passed."
+}

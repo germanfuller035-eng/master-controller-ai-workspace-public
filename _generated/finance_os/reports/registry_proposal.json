@@ -1,0 +1,14 @@
+{
+  "schema": "finance_os.registry_proposal.v1",
+  "generated_ts": "20260617_160000",
+  "note": "Proposed Project Registry addition. NOT applied to canonical registry during soak.",
+  "target": "00_MASTER_CONTEXT/PROJECT_REGISTRY.md (owner-applied post-soak)",
+  "finance_os_project_entry": {
+    "project_id": "finance-os",
+    "name": "Finance OS / Business Control Center",
+    "status": "ACTIVE_DEVELOPMENT",
+    "priority": "P1_REVENUE",
+    "source_of_truth": "tools/finance_os + docs_canonical_proposed/07_revenue_os/finance_os_command_center.md",
+    "note": "Resolves the task-ledger warning (finance-os not yet in registry)."
+  }
+}

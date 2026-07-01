@@ -1,0 +1,15 @@
+{
+  "name": "mater-controller-api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Master Controller API — owner-only HTTP gateway over existing AI_WORKSPACE Mini Audit services. No second store, no second ledger, no second send path. (npm name stays mater-controller-api for compatibility.)",
+  "main": "src/server/index.mjs",
+  "scripts": {
+    "start": "node src/server/index.mjs",
+    "test": "node tests/run_all.mjs"
+  },
+  "dependencies": {
+    "express": "*"
+  }
+}

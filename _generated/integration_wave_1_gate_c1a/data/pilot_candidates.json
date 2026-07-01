@@ -1,0 +1,43 @@
+{
+  "pilot": "FIRST_COMMERCIAL_PILOT",
+  "status": "PREPARED_NOT_STARTED",
+  "real_pilot_started": false,
+  "client_messages_sent": 0,
+  "selection_criteria": [
+    "verified identity (identity_match_status=match)",
+    "verified public email (email_verified=true, email_source=manual_verified — no guessed email)",
+    "audit_ready=true",
+    "no unresolved send state (not send_uncertain, send_proof not missing)",
+    "good Mini Audit fit",
+    "no duplicate open opportunity"
+  ],
+  "recommended_product": { "product_id": "mini_audit", "name": "Мини-аудит сайта и пути клиента до заявки", "status": "ACTIVE", "price": 10000, "currency": "RUB" },
+  "candidates": [
+    {
+      "lead_id": "DKBI_RU", "company": "ДКБИ", "niche": "бетон и ЖБИ", "region": "Краснодарский край",
+      "website_present": true, "email_verified": true, "email_source": "manual_verified", "identity": "match",
+      "audit_ready": true, "audit_preview_present": false,
+      "prior_communication": { "last_send_status": "success", "send_proof": "proven", "smtp_response_code": 250, "last_sent_at": "2026-06-12T21:43:29Z", "reply_state": null, "status": "waiting_reply" },
+      "risks": ["already contacted once (warm, awaiting reply) — pilot action is a follow-up, not a first contact", "audit preview not yet generated"],
+      "recommended_next_action": "owner reviews prior message + decides follow-up; do NOT auto-send"
+    },
+    {
+      "lead_id": "STROYDVOR-UG_RU", "company": "СтройДвор-Юг", "niche": "стройматериалы", "region": "Краснодарский край",
+      "website_present": true, "email_verified": true, "email_source": "manual_verified", "identity": "match",
+      "audit_ready": true, "audit_preview_present": true,
+      "prior_communication": { "last_send_status": "success", "send_proof": "proven", "smtp_response_code": 250, "last_sent_at": "2026-06-13T17:48:41Z", "reply_state": null, "status": "waiting_reply" },
+      "risks": ["already contacted once (warm, awaiting reply)"],
+      "recommended_next_action": "owner reviews audit preview + prior message; decide follow-up; no auto-send"
+    },
+    {
+      "lead_id": "ZAVODATOM_RU", "company": "Завод Атом", "niche": "производство и металлоконструкции", "region": "Краснодарский край",
+      "website_present": true, "email_verified": true, "email_source": "manual_verified", "identity": "match",
+      "audit_ready": true, "audit_preview_present": true,
+      "prior_communication": { "last_send_status": "success", "send_proof": "proven", "smtp_response_code": 250, "last_sent_at": "2026-06-13T18:56:09Z", "reply_state": null, "status": "waiting_reply" },
+      "risks": ["already contacted once (warm, awaiting reply)"],
+      "recommended_next_action": "owner reviews audit preview + prior message; decide follow-up; no auto-send"
+    }
+  ],
+  "next_owner_gate": "Real pilot requires a SEPARATE explicit owner approval. Sending to a client is Gate C1-C (transport), which remains PROHIBITED. Recording a real payment is Gate C1-B, which remains NOT APPROVED.",
+  "notes": "PII (raw email addresses) intentionally omitted from this evidence file. All 3 candidates already received one proven outbound message and are awaiting reply, so any pilot action is a follow-up decision, not a first contact."
+}

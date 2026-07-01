@@ -1,0 +1,10 @@
+{
+  "scenario": "C",
+  "production_affected": false,
+  "name": "Worker stalled",
+  "ok": true,
+  "steps": [
+    "worker_stall -> detect:heartbeat stale health:UNHEALTHY alert:a_worker_stalled runbook:rb_worker_stalled"
+  ],
+  "alert": "a_worker_stalled"
+}

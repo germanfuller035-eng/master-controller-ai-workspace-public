@@ -1,0 +1,23 @@
+{
+  "schema": "analytics_os.lineage.v1",
+  "version": "1.0",
+  "note": "Synthetic lineage edges from canonical sources to derived analytics + executive KPIs. code_ref points at the transform module. No live data.",
+  "edges": [
+    {"from": "Master_Controller:lead_status", "to": "mc_operational_snapshot", "transform": "snapshot", "code_ref": "lib/snapshot.mjs"},
+    {"from": "mc_operational_snapshot", "to": "funnel_stage", "transform": "stage_map", "code_ref": "lib/funnel.mjs"},
+    {"from": "funnel_stage", "to": "metric:rev_conversion_to_paid", "transform": "conversion", "code_ref": "lib/funnel.mjs"},
+    {"from": "metric:rev_conversion_to_paid", "to": "analytics_report", "transform": "rollup", "code_ref": "lib/reports.mjs"},
+    {"from": "analytics_report", "to": "exec_kpi:exec_pipeline", "transform": "reference", "code_ref": "executive_os/lib/reviews.mjs"},
+    {"from": "Delivery_OS:actual_hours", "to": "del_project_snapshot", "transform": "snapshot", "code_ref": "lib/snapshot.mjs"},
+    {"from": "del_project_snapshot", "to": "profitability_input", "transform": "aggregate", "code_ref": "lib/rollup.mjs"},
+    {"from": "profitability_input", "to": "metric:fin_booked_revenue", "transform": "reference", "code_ref": "finance_os/lib"},
+    {"from": "metric:fin_booked_revenue", "to": "analytics_trend", "transform": "trend", "code_ref": "lib/trends.mjs"},
+    {"from": "Customer_Success_OS:health", "to": "cs_portfolio_snapshot", "transform": "snapshot", "code_ref": "lib/snapshot.mjs"},
+    {"from": "cs_portfolio_snapshot", "to": "cohort_health_trend", "transform": "cohort", "code_ref": "lib/cohort.mjs"},
+    {"from": "cohort_health_trend", "to": "exec_risk", "transform": "reference", "code_ref": "executive_os/lib/risk.mjs"}
+  ],
+  "dashboards": [
+    {"id": "analytics_dashboard", "metric_ids": ["rev_conversion_to_paid", "fin_cash_collected", "cs_health_at_risk"]},
+    {"id": "owner_analytics_command_center", "metric_ids": ["exec_decision_backlog", "fin_cash_runway", "prod_active_products"]}
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "schema": "analytics_os.event_taxonomy.v1",
+  "version": "1.0",
+  "note": "Versioned event taxonomy — CONTRACTS ONLY. No emitter is created. Each event names its producer system and key fields by reference. Synthetic/derived analytics only.",
+  "emitter_status": "NONE_CREATED",
+  "domains": {
+    "lead": {
+      "producer": "Master_Controller",
+      "events": [
+        {"event_id": "candidate_discovered", "version": "1.0", "key_fields": ["candidate_id", "source", "discovered_at"]},
+        {"event_id": "identity_verified", "version": "1.0", "key_fields": ["candidate_id", "verified_at"]},
+        {"event_id": "contact_verified", "version": "1.0", "key_fields": ["candidate_id", "channel"]},
+        {"event_id": "audit_generated", "version": "1.0", "key_fields": ["canonical_lead_id", "product_id"]},
+        {"event_id": "draft_generated", "version": "1.0", "key_fields": ["canonical_lead_id"]},
+        {"event_id": "owner_approved", "version": "1.0", "key_fields": ["canonical_lead_id", "approved_at"]},
+        {"event_id": "outbound_attempted", "version": "1.0", "key_fields": ["canonical_lead_id", "channel", "test_only"]},
+        {"event_id": "outbound_delivered", "version": "1.0", "key_fields": ["canonical_lead_id", "channel"]},
+        {"event_id": "reply_received", "version": "1.0", "key_fields": ["canonical_lead_id", "classification"]},
+        {"event_id": "followup_due", "version": "1.0", "key_fields": ["canonical_lead_id", "due_at"]}
+      ]
+    },
+    "revenue": {
+      "producer": "Revenue_OS",
+      "events": [
+        {"event_id": "offer_created", "version": "1.0", "key_fields": ["deal_id", "product_id"]},
+        {"event_id": "proposal_created", "version": "1.0", "key_fields": ["deal_id"]},
+        {"event_id": "deal_stage_changed", "version": "1.0", "key_fields": ["deal_id", "from_stage", "to_stage"]},
+        {"event_id": "deal_won", "version": "1.0", "key_fields": ["deal_id", "value"]},
+        {"event_id": "deal_lost", "version": "1.0", "key_fields": ["deal_id", "reason"]}
+      ]
+    },
+    "delivery": {
+      "producer": "Delivery_OS",
+      "events": [
+        {"event_id": "project_created", "version": "1.0", "key_fields": ["project_id", "deal_id"]},
+        {"event_id": "project_started", "version": "1.0", "key_fields": ["project_id", "started_at"]},
+        {"event_id": "milestone_completed", "version": "1.0", "key_fields": ["project_id", "milestone_id"]},
+        {"event_id": "qa_completed", "version": "1.0", "key_fields": ["project_id", "qa_result"]},
+        {"event_id": "project_accepted", "version": "1.0", "key_fields": ["project_id", "accepted_at"]}
+      ]
+    },
+    "finance": {
+      "producer": "Finance_OS",
+      "events": [
+        {"event_id": "invoice_created", "version": "1.0", "key_fields": ["invoice_id", "project_id"]},
+        {"event_id": "invoice_issued_external", "version": "1.0", "key_fields": ["invoice_id"]},
+        {"event_id": "payment_expected", "version": "1.0", "key_fields": ["invoice_id", "due_date"]},
+        {"event_id": "payment_confirmed", "version": "1.0", "key_fields": ["invoice_id", "amount"]},
+        {"event_id": "expense_confirmed", "version": "1.0", "key_fields": ["expense_id", "amount"]},
+        {"event_id": "period_closed", "version": "1.0", "key_fields": ["period"]}
+      ]
+    },
+    "product": {
+      "producer": "Product_OS",
+      "events": [
+        {"event_id": "product_version_created", "version": "1.0", "key_fields": ["product_id", "version"]},
+        {"event_id": "pilot_started", "version": "1.0", "key_fields": ["product_id", "pilot_id"]},
+        {"event_id": "pilot_completed", "version": "1.0", "key_fields": ["pilot_id", "outcome"]},
+        {"event_id": "readiness_assessed", "version": "1.0", "key_fields": ["product_id", "score"]}
+      ]
+    },
+    "customer_success": {
+      "producer": "Customer_Success_OS",
+      "events": [
+        {"event_id": "onboarding_started", "version": "1.0", "key_fields": ["customer_ref_id"]},
+        {"event_id": "adoption_observed", "version": "1.0", "key_fields": ["customer_ref_id", "adoption"]},
+        {"event_id": "value_reviewed", "version": "1.0", "key_fields": ["customer_ref_id"]},
+        {"event_id": "support_created", "version": "1.0", "key_fields": ["customer_ref_id", "support_id"]},
+        {"event_id": "incident_opened", "version": "1.0", "key_fields": ["customer_ref_id", "severity"]},
+        {"event_id": "renewal_reviewed", "version": "1.0", "key_fields": ["customer_ref_id", "eligible"]},
+        {"event_id": "expansion_reviewed", "version": "1.0", "key_fields": ["customer_ref_id"]},
+        {"event_id": "churn_recorded", "version": "1.0", "key_fields": ["customer_ref_id", "reason"]}
+      ]
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "synthetic": true,
+  "proposals": [
+    {
+      "proposal_id": "mem-prop-synthetic-one",
+      "synthetic": true,
+      "review_only": true,
+      "can_write_memory": false,
+      "source_confidence": "MEDIUM",
+      "sensitivity": "BUSINESS_INTERNAL",
+      "evidence": [
+        {
+          "id": "ev-owner-control-synthetic",
+          "source": "synthetic_fixture",
+          "claim": "Local synthetic owner-control evidence."
+        }
+      ]
+    }
+  ]
+}

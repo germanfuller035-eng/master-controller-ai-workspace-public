@@ -1,0 +1,142 @@
+{
+  "schema": "growth_os.content_plan.v1",
+  "version": "1.0",
+  "note": "Content pillars + formats + week-relative 30/60/90 plan. No publication. No fabricated cases. Dates are week-relative (W1..W12) pending owner capacity confirmation.",
+  "pillars": [
+    "digital_presence",
+    "website_conversion",
+    "lead_handling",
+    "local_visibility",
+    "audit_methodology",
+    "business_process",
+    "ai_assisted_operations",
+    "case_methodology",
+    "owner_education"
+  ],
+  "formats": [
+    "article",
+    "short_post",
+    "checklist",
+    "guide",
+    "audit_example",
+    "faq",
+    "comparison",
+    "template",
+    "diagnostic",
+    "case_framework",
+    "video_script",
+    "webinar_outline"
+  ],
+  "calendar": [
+    {
+      "week": "W1",
+      "topic": "Why your website gets visits but few requests",
+      "segment": "seg_weak_site",
+      "product": "mini_audit",
+      "intent": "informational",
+      "format": "article",
+      "evidence": "audit methodology",
+      "cta": "request Mini Audit",
+      "owner_review": true,
+      "production_effort": "low",
+      "status": "PLANNED"
+    },
+    {
+      "week": "W2",
+      "topic": "Mini Audit sample: what an evidence-backed finding looks like",
+      "segment": "seg_weak_site",
+      "product": "mini_audit",
+      "intent": "commercial",
+      "format": "audit_example",
+      "evidence": "sample audit structure",
+      "cta": "request Mini Audit",
+      "owner_review": true,
+      "production_effort": "medium",
+      "status": "PLANNED"
+    },
+    {
+      "week": "W3",
+      "topic": "Website request-path checklist (free)",
+      "segment": "seg_weak_site",
+      "product": "mini_audit",
+      "intent": "lead_magnet",
+      "format": "checklist",
+      "evidence": "methodology",
+      "cta": "download checklist",
+      "owner_review": true,
+      "production_effort": "low",
+      "status": "PLANNED"
+    },
+    {
+      "week": "W4",
+      "topic": "Do nothing vs freelancer vs audit: choosing wisely",
+      "segment": "seg_weak_site",
+      "product": "mini_audit",
+      "intent": "comparison",
+      "format": "comparison",
+      "evidence": "alternatives framework",
+      "cta": "request Mini Audit",
+      "owner_review": true,
+      "production_effort": "low",
+      "status": "PLANNED"
+    },
+    {
+      "week": "W6",
+      "topic": "Found on maps but invisible everywhere else",
+      "segment": "seg_no_site_local",
+      "product": "digital_presence_check",
+      "intent": "informational",
+      "format": "article",
+      "evidence": "presence map concept",
+      "cta": "learn about Presence Check",
+      "owner_review": true,
+      "production_effort": "low",
+      "status": "PLANNED",
+      "note": "product PLANNED — education only, no commercial promise"
+    },
+    {
+      "week": "W8",
+      "topic": "Local visibility checklist",
+      "segment": "seg_no_site_local",
+      "product": "digital_presence_check",
+      "intent": "lead_magnet",
+      "format": "checklist",
+      "evidence": "methodology",
+      "cta": "download checklist",
+      "owner_review": true,
+      "production_effort": "low",
+      "status": "PLANNED"
+    },
+    {
+      "week": "W10",
+      "topic": "When traffic does not convert: funnel gaps",
+      "segment": "seg_good_site_weak_funnel",
+      "product": "mini_audit",
+      "intent": "informational",
+      "format": "guide",
+      "evidence": "funnel methodology",
+      "cta": "request Mini Audit",
+      "owner_review": true,
+      "production_effort": "medium",
+      "status": "PLANNED"
+    },
+    {
+      "week": "W12",
+      "topic": "How we keep audit findings evidence-based (methodology)",
+      "segment": "ALL",
+      "product": "mini_audit",
+      "intent": "trust",
+      "format": "faq",
+      "evidence": "QA methodology",
+      "cta": "request Mini Audit",
+      "owner_review": true,
+      "production_effort": "low",
+      "status": "PLANNED"
+    }
+  ],
+  "rules": {
+    "publication": false,
+    "fabricated_cases": false,
+    "exact_dates": "require owner capacity"
+  }
+}

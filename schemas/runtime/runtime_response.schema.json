@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Runtime Response",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["status", "task_id", "memory_enabled", "production_capabilities", "evidence_refs"],
+  "properties": {
+    "status": {"type": "string", "enum": ["DRY_RUN_OK", "DENIED", "ERROR"]},
+    "task_id": {"type": "string"},
+    "model_choice": {"type": "object"},
+    "cost_estimate": {"type": "object"},
+    "retry_count": {"type": "integer", "minimum": 0},
+    "memory_enabled": {"type": "boolean"},
+    "production_capabilities": {"type": "integer", "const": 0},
+    "evidence_refs": {"type": "array", "items": {"type": "string"}}
+  }
+}

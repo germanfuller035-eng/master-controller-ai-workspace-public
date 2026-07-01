@@ -1,0 +1,172 @@
+{
+  "schema": "ai_hq.backup_manifest.v1",
+  "generated_ts": "UNSTAMPED",
+  "src": "D:\\AI_WORKSPACE_WORKTREES\\delivery-os-client-project-factory-v1\\tools\\delivery_os",
+  "file_count": 32,
+  "total_size": 140550,
+  "excluded_secret_files": 0,
+  "git_head": "68dd433dc45b50dbbed93f236109c48ae5657a88",
+  "entries": [
+    {
+      "path": "apply_manifest.mjs",
+      "size": 2366,
+      "sha256": "ea77ced18c1f9c5efe2956818915609a38ec59c1b5f0990e29a9bd72c997c1da"
+    },
+    {
+      "path": "delivery.mjs",
+      "size": 10139,
+      "sha256": "a5414a24be033fc01cb15236ac5e9895aef4926badc05e25e9a33fb008e129c4"
+    },
+    {
+      "path": "tests/delivery.test.mjs",
+      "size": 12486,
+      "sha256": "d17f4f2cb4603e1aa04bc28e0e52fa6f865b34c1e16628c272068b8e13c6fa39"
+    },
+    {
+      "path": "tests/run_all.mjs",
+      "size": 874,
+      "sha256": "fa23a61b784be535de6cf38444d15d0ec313b7eab0e520114bf082fc9982575d"
+    },
+    {
+      "path": "tests/security.test.mjs",
+      "size": 3029,
+      "sha256": "128dbd2f382623f4efac085e4e3eb50ce5ea7fe1cfc782acca099233e1838486"
+    },
+    {
+      "path": "schemas/domain.mjs",
+      "size": 9154,
+      "sha256": "82b9ee9fe027771fa8063bda27589b8070544c5eaaa838d89ac951fe00b72886"
+    },
+    {
+      "path": "lib/acceptance.mjs",
+      "size": 2201,
+      "sha256": "286e9bf67b443efee8625a9b9786f172d624b224a46c05c5e0663a6ad5fdc9c0"
+    },
+    {
+      "path": "lib/assets.mjs",
+      "size": 3531,
+      "sha256": "c3c4b5035df59cb28c9143be2d3e91b95b47e3c74e73d56e781a65e6b4471f73"
+    },
+    {
+      "path": "lib/capacity.mjs",
+      "size": 2512,
+      "sha256": "e5aa32e4bf7b88c4024f6f0bb1c87a5cc8469552b0bec29d894ba31172ab1785"
+    },
+    {
+      "path": "lib/casestudy.mjs",
+      "size": 2189,
+      "sha256": "d9a98bb3450d3119da224092df575d600988d3718efb5640de31740b8468e240"
+    },
+    {
+      "path": "lib/change.mjs",
+      "size": 3073,
+      "sha256": "505f93fe57fe6e983d1b984e642f8a93ba1c3ba45fe19483191cd51028b9152a"
+    },
+    {
+      "path": "lib/common.mjs",
+      "size": 3650,
+      "sha256": "0ba36339c7448ea70c0dd5b8a11953ed995ab4d48c7004e21c2eb9138743cc10"
+    },
+    {
+      "path": "lib/creation.mjs",
+      "size": 3913,
+      "sha256": "c252f1b05e4e1e78313a7d7c805df2cba37ce88236af3aaba28f7aa2d80a6332"
+    },
+    {
+      "path": "lib/dashboard.mjs",
+      "size": 4291,
+      "sha256": "95fb6540458edc05449febce268f65e9b39fbe532695a88509405e3ce1f76c4c"
+    },
+    {
+      "path": "lib/inputs.mjs",
+      "size": 2912,
+      "sha256": "26ec863ed83260c88e3f35a72bcd7234ea215aae95ed72bce539bbc861d943f3"
+    },
+    {
+      "path": "lib/kickoff.mjs",
+      "size": 3541,
+      "sha256": "b7e56282e24b3c7126bb4d61f3ca2132a64f77f18d0eac7aacafecac74f401c8"
+    },
+    {
+      "path": "lib/lifecycle.mjs",
+      "size": 3980,
+      "sha256": "66484cded7efe551b9eb220c59a1fe2349bd61e3a3f3ed7580957c999b6900b3"
+    },
+    {
+      "path": "lib/milestones.mjs",
+      "size": 4479,
+      "sha256": "b27fe15f1e0b5e2dc47c34df3add2d07910005519f5748eb12373aa1dbeb0157"
+    },
+    {
+      "path": "lib/pilot.mjs",
+      "size": 5016,
+      "sha256": "0aeb3fc14bd74d1d9f2f5fdee45d4c7c0641edfd2a2c789efe04be2615828bc2"
+    },
+    {
+      "path": "lib/plan_actual.mjs",
+      "size": 1978,
+      "sha256": "cc5c7641ba4ee12d6399ad6770d2d7f400e484b6e97730534f4136de9adf4025"
+    },
+    {
+      "path": "lib/playbooks.mjs",
+      "size": 4283,
+      "sha256": "ac85683e6366ba2736fc03f3927b7dfe5621881bb1064113ada232b57f3039d2"
+    },
+    {
+      "path": "lib/qa.mjs",
+      "size": 3465,
+      "sha256": "fb3a6a6cf455c2690ec1af92f536dbe6001e1f01607b0d8ff0d1a35f337a6a98"
+    },
+    {
+      "path": "lib/readiness.mjs",
+      "size": 3320,
+      "sha256": "982ec5eb57cfef0e353323d254c7eb750806fafe8f9c345ee3b4970ec6ccbcb9"
+    },
+    {
+      "path": "lib/registry_contract.mjs",
+      "size": 2983,
+      "sha256": "ef6e5baa067d5d53abf9ccacd01283bb723ab756dacc2cd2835f61278451e480"
+    },
+    {
+      "path": "lib/risk.mjs",
+      "size": 2227,
+      "sha256": "aa7c07f6a495ec16092810ebd9d7566a80dfb3708ada260b18193b4bbfe672cf"
+    },
+    {
+      "path": "lib/tasks.mjs",
+      "size": 4049,
+      "sha256": "7b92f8f5921831094fd8db8f86a7c18dc765845fccb34b7d866a7061761c9681"
+    },
+    {
+      "path": "lib/validators.mjs",
+      "size": 2741,
+      "sha256": "d2ad776d9f03a53560bcc28bfd4f495d58757801bf8e642944cbc1ce494495b6"
+    },
+    {
+      "path": "fixtures/projects.json",
+      "size": 7478,
+      "sha256": "4da36ea88b64720f942653671c8019fc8e5a2783432541ad731813283aa2b2c2"
+    },
+    {
+      "path": "data/advanced_playbooks.json",
+      "size": 4201,
+      "sha256": "91f689564c3657592078085a708e9cced13a728597519d601f0a6442ab93e8f7"
+    },
+    {
+      "path": "data/client_inputs_catalog.json",
+      "size": 6468,
+      "sha256": "7e40ce14e2d8cddf530885cfba0d9883cc7637255ec7077a83243ac7d9f41bfd"
+    },
+    {
+      "path": "data/playbooks.json",
+      "size": 10323,
+      "sha256": "81b58d195936bde144a478405dbb9575b8e3de83e58274ff9e7ac556f96353ed"
+    },
+    {
+      "path": "data/risk_taxonomy.json",
+      "size": 3698,
+      "sha256": "af6b297c44efca4530eaf9472e137ac09d1a02f07b0fe88c59c6298ce0a1918d"
+    }
+  ],
+  "restore_instructions": "Verify with: for each entry sha256sum -c. Restore by copying files; secrets restored separately from D:\\AI_SECRETS encrypted store."
+}

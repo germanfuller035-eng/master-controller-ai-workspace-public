@@ -1,0 +1,16 @@
+{
+  "draft_type": "first_contact",
+  "channel": "email",
+  "product_id": null,
+  "recipient_evidence": false,
+  "claims": [
+    "weak CTA verified"
+  ],
+  "evidence_refs": [
+    "https://weak.test"
+  ],
+  "risk_flags": [],
+  "body": "Здравствуйте. Я посмотрел бизнес (fitness). Заметил: weak CTA verified. Могу сделать короткий разбор с конкретными правками. Если интересно — отвечу подробнее.",
+  "approval_state": "DRAFT_INTERNAL",
+  "send_allowed": false
+}

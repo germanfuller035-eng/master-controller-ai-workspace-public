@@ -1,0 +1,105 @@
+{
+  "label": "MANAGERIAL_INTERNAL (no secrets exposed)",
+  "items": [
+    {
+      "risk": "laptop_loss",
+      "rpo": "1 commit/push",
+      "rto": "< 1 day",
+      "backup": "git bundles + D:\\AI_BACKUPS",
+      "restore_path": "clone bundle on new machine",
+      "owner_dependency": "owner provides machine",
+      "current_gap": "no Git remote yet (owner decision pending)"
+    },
+    {
+      "risk": "disk_failure",
+      "rpo": "1 commit",
+      "rto": "< 1 day",
+      "backup": "git bundles",
+      "restore_path": "restore from bundle",
+      "owner_dependency": "owner",
+      "current_gap": "off-site copy depends on remote decision"
+    },
+    {
+      "risk": "no_git_remote",
+      "rpo": "n/a",
+      "rto": "n/a",
+      "backup": "local bundles",
+      "restore_path": "configure remote",
+      "owner_dependency": "owner decision d_git_remote",
+      "current_gap": "OPEN — owner decision required"
+    },
+    {
+      "risk": "lost_ssh_key",
+      "rpo": "n/a",
+      "rto": "varies",
+      "backup": "keys in D:\\AI_SECRETS",
+      "restore_path": "regenerate + re-add to VPS",
+      "owner_dependency": "owner",
+      "current_gap": "key rotation policy undocumented"
+    },
+    {
+      "risk": "owner_unavailable",
+      "rpo": "n/a",
+      "rto": "n/a",
+      "backup": "decision queue + delegation",
+      "restore_path": "Claude/Cline continue offline work",
+      "owner_dependency": "owner for decisions",
+      "current_gap": "owner is single point for decisions"
+    },
+    {
+      "risk": "expired_credentials",
+      "rpo": "n/a",
+      "rto": "varies",
+      "backup": "reference only",
+      "restore_path": "owner renews",
+      "owner_dependency": "owner",
+      "current_gap": "no expiry tracking"
+    },
+    {
+      "risk": "broken_vps",
+      "rpo": "last backup",
+      "rto": "< 1 day (reprovision)",
+      "backup": "VPS backup timers (production)",
+      "restore_path": "reprovision + restore (post-soak)",
+      "owner_dependency": "owner",
+      "current_gap": "reprovision runbook exists"
+    },
+    {
+      "risk": "corrupted_vault",
+      "rpo": "1 backup cycle",
+      "rto": "< 2h",
+      "backup": "canonical backups + manifests",
+      "restore_path": "restore from backup",
+      "owner_dependency": "none",
+      "current_gap": "vault not in Git (known)"
+    },
+    {
+      "risk": "missing_backup",
+      "rpo": "n/a",
+      "rto": "n/a",
+      "backup": "backup verifier",
+      "restore_path": "rerun backup",
+      "owner_dependency": "none",
+      "current_gap": "backup verify is manual"
+    },
+    {
+      "risk": "payment_interruption",
+      "rpo": "n/a",
+      "rto": "n/a",
+      "backup": "Finance OS receivables",
+      "restore_path": "manual follow-up (owner-approved)",
+      "owner_dependency": "owner",
+      "current_gap": "no automated reminders (by design)"
+    },
+    {
+      "risk": "production_incident",
+      "rpo": "last good state",
+      "rto": "rollback runbook",
+      "backup": "release rollback runbook",
+      "restore_path": "rollback (post-soak, owner-approved)",
+      "owner_dependency": "owner",
+      "current_gap": "frozen during soak"
+    }
+  ],
+  "note": "Secrets never exposed; credential paths referenced only."
+}

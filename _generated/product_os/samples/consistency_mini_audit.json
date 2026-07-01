@@ -1,0 +1,47 @@
+{
+  "ok": false,
+  "product_id": "mini_audit",
+  "findings": [
+    {
+      "type": "promise_not_in_delivery",
+      "item": "5-7 key findings"
+    },
+    {
+      "type": "promise_not_in_delivery",
+      "item": "short fix plan"
+    },
+    {
+      "type": "promise_not_in_delivery",
+      "item": "client-facing pdf or structured note"
+    },
+    {
+      "type": "delivered_not_sold",
+      "item": "audit_summary"
+    },
+    {
+      "type": "delivered_not_sold",
+      "item": "findings_list"
+    },
+    {
+      "type": "delivered_not_sold",
+      "item": "evidence_register"
+    },
+    {
+      "type": "delivered_not_sold",
+      "item": "priority_matrix"
+    },
+    {
+      "type": "delivered_not_sold",
+      "item": "recommended_fixes"
+    },
+    {
+      "type": "delivered_not_sold",
+      "item": "commercial_next_step"
+    },
+    {
+      "type": "delivered_not_sold",
+      "item": "qa_report"
+    }
+  ],
+  "note": "Consistency check across Revenue/Delivery (read-only)."
+}

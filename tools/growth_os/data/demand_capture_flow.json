@@ -1,0 +1,11 @@
+{
+  "schema": "growth_os.demand_capture_flow.v1",
+  "version": "1.0",
+  "note": "FUTURE demand-capture flow design. No form is implemented or connected to production. Intake routes to Master Controller intake API (future) — Growth OS never writes leads directly.",
+  "flow": ["visitor", "content_or_landing", "consented_form", "validation", "master_controller_intake_api", "qualification", "owner_review"],
+  "required_fields": ["consent", "source", "timestamp", "campaign_id", "product_interest", "privacy_ack", "opt_out_option"],
+  "consent": {"explicit": true, "pre_checked_boxes": false, "privacy_link_required": true},
+  "validation": ["required fields present", "no malformed contact", "consent true", "campaign_id known"],
+  "intake_contract": {"target": "Master_Controller intake API (FUTURE)", "growth_writes_leads": false, "direction": "Growth proposes eligibility; MC owns canonical lead"},
+  "rules": {"form_connected_to_production": false, "tracking_installed": false, "real_submission": false}
+}

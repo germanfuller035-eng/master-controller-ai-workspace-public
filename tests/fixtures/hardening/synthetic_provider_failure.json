@@ -1,0 +1,8 @@
+{
+  "fixture_id": "synthetic-provider-failure-v1",
+  "synthetic": true,
+  "primary_provider_status": "UNAVAILABLE",
+  "fallback_provider_status": "LOCAL_SYNTHETIC_AVAILABLE",
+  "external_request_allowed": false,
+  "paid_provider_allowed": false
+}

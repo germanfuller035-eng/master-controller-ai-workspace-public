@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "sensitive_memory_review",
+  "type": "object",
+  "required": ["review_id", "proposal_id", "classification", "owner_approval_required", "decision"],
+  "properties": {
+    "review_id": {"type": "string"},
+    "proposal_id": {"type": "string"},
+    "classification": {"type": "string"},
+    "owner_approval_required": {"type": "boolean"},
+    "decision": {"type": "string"}
+  },
+  "additionalProperties": true
+}

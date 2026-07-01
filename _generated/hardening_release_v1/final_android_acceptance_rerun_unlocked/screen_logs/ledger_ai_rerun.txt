@@ -1,0 +1,6 @@
+CTRL_LEDGER: BATCH_BEGIN screens=1 only=ai total_controls=282
+CTRL_LEDGER: SCREEN_BEGIN screen=ai controls=2 anchor=ai_usage
+CTRL_LEDGER: ROW {"control_id":"CTRL-0021","screen":"ai","selector":"screen.ai.control.back","type":"IconButton","risk":"ACTION","visible":true,"enabled":true,"action":"observe","status":"PASS_VISIBLE_ENABLED"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0022","screen":"ai","selector":"screen.ai.control.refresh","type":"TextButton","risk":"REFRESH","visible":true,"enabled":true,"action":"refresh","status":"PASS_LIVE_READ"}
+CTRL_LEDGER: SCREEN_END screen=ai executed=2 passed=2 failed=0 unexecuted=0
+CTRL_LEDGER: BATCH_END executed=2 passed=2 failed=0 unexecuted=0

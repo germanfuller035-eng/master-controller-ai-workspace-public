@@ -1,0 +1,19 @@
+{
+  "additionalProperties": true,
+  "properties": {
+    "decision": {},
+    "execute_allowed": {},
+    "intent_id": {},
+    "screen_approval_required": {},
+    "synthetic": {}
+  },
+  "required": [
+    "synthetic",
+    "intent_id",
+    "decision",
+    "execute_allowed",
+    "screen_approval_required"
+  ],
+  "title": "Voice Action Plan",
+  "type": "object"
+}

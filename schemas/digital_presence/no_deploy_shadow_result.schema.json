@@ -1,0 +1,16 @@
+{
+  "$schema": "urn:json-schema:draft-2020-12",
+  "$id": "urn:master-controller:schemas:digital_presence:no_deploy_shadow_result",
+  "title": "no_deploy_shadow_result",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["pipeline_status", "outbound_count", "production_db_writes"],
+  "properties": {
+    "pipeline_status": {"type": "string"},
+    "owner_approval_required_for_future_deploy_or_send": {"type": "boolean"},
+    "outbound_count": {"type": "integer"},
+    "payment_count": {"type": "integer"},
+    "production_db_writes": {"type": "integer"},
+    "results": {"type": "array"}
+  }
+}

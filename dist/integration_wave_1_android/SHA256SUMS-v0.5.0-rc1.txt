@@ -1,0 +1,2 @@
+53f7b609008ea23bb3df243e1392e2e5677404ca59274a4801e0eb0d0ff55c4b *MasterController-release-v0.5.0-rc1.apk
+150e44d0eb028802997f813e07ab3d37f61f18719f77ccd86d8621e97a922352 *MasterController-release-v0.5.0-rc1.aab

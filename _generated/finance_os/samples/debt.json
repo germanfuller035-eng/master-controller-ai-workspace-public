@@ -1,0 +1,12 @@
+{
+  "label": "MANAGERIAL_INTERNAL",
+  "total_debts": 1,
+  "monthly_debt_service": 20000,
+  "total_remaining_payments": 400000,
+  "interest_burden": 72000,
+  "cashflow_coverage": 1.1,
+  "stress_coverage": 0.77,
+  "coverage_risk": "HIGH",
+  "errors": [],
+  "note": "Synthetic fixtures only. Real/personal debt is referenced safely, never copied into general dashboards."
+}

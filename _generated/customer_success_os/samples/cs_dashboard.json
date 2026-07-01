@@ -1,0 +1,52 @@
+{
+  "schema": "cs.dashboard.v1",
+  "label": "INTERNAL_OWNER_ONLY",
+  "note": "Does NOT duplicate Revenue/Delivery/Finance/Product dashboards. Post-delivery success focus.",
+  "onboarding": [
+    "TEST_cs04"
+  ],
+  "activation": [],
+  "healthy": [
+    "TEST_cs04",
+    "TEST_cs05",
+    "TEST_cs14",
+    "TEST_cs16",
+    "TEST_cs17"
+  ],
+  "watch": [
+    "TEST_cs10"
+  ],
+  "at_risk": [
+    "TEST_cs02",
+    "TEST_cs11"
+  ],
+  "critical": [
+    "TEST_cs08"
+  ],
+  "support_requests": 8,
+  "incidents": [
+    "TEST_cs08"
+  ],
+  "renewals": [
+    "TEST_cs14",
+    "TEST_cs15"
+  ],
+  "expansion": [
+    "TEST_cs16"
+  ],
+  "churn": [
+    "TEST_cs19",
+    "TEST_cs20"
+  ],
+  "case_permissions": [
+    "TEST_cs21",
+    "TEST_cs22"
+  ],
+  "owner_actions": [
+    "TEST_cs02",
+    "TEST_cs08",
+    "TEST_cs11",
+    "TEST_cs14",
+    "TEST_cs15"
+  ]
+}

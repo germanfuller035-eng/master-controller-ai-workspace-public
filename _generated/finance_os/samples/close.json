@@ -1,0 +1,22 @@
+{
+  "label": "MANAGERIAL_INTERNAL",
+  "period": "2026-06",
+  "total_steps": 15,
+  "completed": 6,
+  "remaining": [
+    "review_project_profitability",
+    "review_subscriptions",
+    "update_debt",
+    "calculate_tax_reserve_estimate",
+    "compare_budget",
+    "lock_period",
+    "generate_owner_report",
+    "record_decisions",
+    "backup_evidence"
+  ],
+  "reconciliations_complete": true,
+  "can_lock_period": true,
+  "errors": [],
+  "complete": false,
+  "note": "No actual bank integration. Lock blocked until reconciliations + receivables + cashflow done."
+}

@@ -1,0 +1,13 @@
+{
+  "title": "today_summary",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["schema_version", "synthetic", "main_action", "decisions", "evidence"],
+  "properties": {
+    "schema_version": {"type": "integer"},
+    "synthetic": {"type": "boolean"},
+    "main_action": {"type": "object"},
+    "decisions": {"type": "array"},
+    "evidence": {"type": "array"}
+  }
+}

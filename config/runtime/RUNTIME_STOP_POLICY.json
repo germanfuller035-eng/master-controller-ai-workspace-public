@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-26",
+  "session": "VOLTAGENT_RUNTIME_MODEL_ROUTER_AND_COST_GOVERNOR_V1",
+  "stop_source_config": "config/policies/STOP_POLICY.json",
+  "stop_blocks_runtime_execution": true,
+  "stop_pauses_workflows": true,
+  "stop_cancels_pending_tool_calls": true,
+  "stop_revokes_active_approvals": true,
+  "stop_blocks_new_runtime_requests": true,
+  "production_capabilities": 0,
+  "memory_enabled": false
+}

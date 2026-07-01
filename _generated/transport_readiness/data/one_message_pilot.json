@@ -1,0 +1,50 @@
+{
+  "pilot": "ONE_MESSAGE_PILOT",
+  "status": "PREPARED_NOT_SENT",
+  "real_pilot_send_executed": false,
+  "selected_lead": {
+    "lead_id": "STROYDVOR-UG_RU",
+    "company": "СтройДвор-Юг",
+    "niche": "стройматериалы",
+    "region": "Краснодарский край",
+    "identity_evidence": "identity_match_status=match",
+    "contact_evidence": "email_verified=true, email_source=manual_verified (no guessed email)",
+    "recipient_redacted": "s***@stroydvor-***.ru",
+    "audit_findings_ref": "audit_draft_preview present (audit_ready=true)",
+    "delivery_classification": "CONFIRMED_SENT (prior message proven, SMTP 250) — NOT a delivery-unconfirmed record",
+    "prior_communication": "one proven outbound message (in the authoritative ledger of 7); awaiting reply"
+  },
+  "internal_entities_prepared": {
+    "opportunity_id": "opp_e70e7ec3cc87",
+    "offer_id": "offer_dbbbf391d547",
+    "offer_status": "READY_FOR_SEND_REVIEW",
+    "deal": null, "handoff": null, "project": null, "invoice": null
+  },
+  "offer_preview": {
+    "product": "mini_audit (Мини-аудит сайта и пути клиента до заявки)",
+    "price": 10000, "currency": "RUB",
+    "scope_included_count": 8, "scope_excluded_count": 9, "inputs_required_count": 3,
+    "send_capability": "NONE"
+  },
+  "email_preview": {
+    "channel": "email",
+    "subject": "Мини-аудит сайта СтройДвор-Юг: как поднять заявки с сайта",
+    "body_preview": "[OWNER PREVIEW] Здравствуйте! Подготовил для СтройДвор-Юг мини-аудит сайта и пути клиента до заявки (10 000 ₽): что мешает заявкам и 3 конкретных улучшения. Если интересно — пришлю краткий разбор. — Дмитрий",
+    "note": "This is an owner-preview only. NOT sent. The actual approval would bind to the exact subject/body hashes."
+  },
+  "transport_approval": {
+    "contract": "commercial_core/lib/transport_approval.mjs buildSendApproval",
+    "single_use": true,
+    "binds": ["owner_id", "lead_id", "channel", "offer_id", "recipient_hash", "subject_hash", "body_hash", "product_snapshot_hash"],
+    "any_content_change_invalidates": true,
+    "approval_hash_note": "computed at owner approval time from the exact content; not precomputed here to avoid implying a live approval"
+  },
+  "duplicate_check": "no existing opportunity for this lead before prep; one proven prior send (warm lead → follow-up tone)",
+  "send_risk": "warm lead awaiting reply; a second message is a follow-up, not a first contact — owner must review prior message",
+  "one_message_limiter": { "MAX_REAL_SENDS": 1, "ALLOWED_LEAD_ID": "STROYDVOR-UG_RU", "ALLOWED_CHANNEL": "email", "FOLLOWUP_AUTOSEND": "OFF", "active": false },
+  "reply_monitoring": "reply_correlation (thread/recipient/subject-fallback, ambiguous quarantined); read-only IMAP, no flag mutation",
+  "followup_plan": { "D0": "send (gated)", "D2": "check reply", "D5": "follow-up candidate (owner task, no autosend)", "D10": "close/review", "FOLLOWUP_AUTOSEND": "OFF" },
+  "rollback_containment": "no send executed; offer stays READY_FOR_SEND_REVIEW; flipping COMMERCIAL_SEND back OFF (already OFF) is sufficient; entity is real but pre-sale, no deal",
+  "owner_approval_line": "APPROVE_ONE_REAL_PILOT_SEND_STROYDVOR-UG_RU",
+  "owner_approval_executed": false
+}

@@ -1,0 +1,147 @@
+{
+  "schema": "orchestrator_os.policies.v1",
+  "note": "MP4,7-12,16-17,29-34,37 — SoT extension, capability registry, selection/routing/context/task contracts, approval gates, budgets, scheduler/executor contracts, production boundary, token accounting, observability, policy engine, integrations. Descriptive only; no runtime, no agent launch.",
+  "synthetic": true,
+
+  "source_of_truth_extension": {
+    "entities": [
+      { "entity": "orchestration_task", "owner": "agent_orchestration", "forbidden_writers": [] },
+      { "entity": "task_plan", "owner": "agent_orchestration" },
+      { "entity": "execution_run", "owner": "agent_orchestration", "note": "synthetic only this task" },
+      { "entity": "execution_phase", "owner": "agent_orchestration" },
+      { "entity": "agent_profile", "owner": "agent_orchestration" },
+      { "entity": "capability", "owner": "agent_orchestration" },
+      { "entity": "policy", "owner": "agent_orchestration" },
+      { "entity": "approval_gate", "owner": "executive_os", "note": "approval is a REFERENCE to Executive/owner decision, not invented by orchestration" },
+      { "entity": "resource_budget", "owner": "agent_orchestration", "recommenders": ["executive_os"] },
+      { "entity": "checkpoint", "owner": "agent_orchestration" },
+      { "entity": "artifact", "owner": "agent_orchestration", "note": "never canonical" },
+      { "entity": "verification_result", "owner": "agent_orchestration" },
+      { "entity": "retry_record", "owner": "agent_orchestration" },
+      { "entity": "dead_letter", "owner": "agent_orchestration" },
+      { "entity": "lease", "owner": "agent_orchestration" },
+      { "entity": "cancellation", "owner": "agent_orchestration" },
+      { "entity": "handoff", "owner": "agent_orchestration" },
+      { "entity": "execution_metric", "owner": "analytics_os", "note": "orchestration metrics flow to Analytics OS" }
+    ],
+    "delegations": {
+      "project_identity": "ai_hq",
+      "task_history": "ai_hq_task_ledger",
+      "owner_priority": "executive_os",
+      "production_operational_jobs": "master_controller_queue",
+      "domain_task": "owning_domain_os"
+    }
+  },
+
+  "capability_registry": [
+    { "capability_id": "read_workspace", "risk": "R0_READ_ONLY", "allowed_agents": ["CLAUDE_CODE", "CLINE", "DETERMINISTIC_NODE", "DETERMINISTIC_PYTHON"], "requires_owner_approval": false, "requires_network": false, "requires_write": false, "requires_secret": false },
+    { "capability_id": "search_files", "risk": "R0_READ_ONLY", "allowed_agents": ["CLAUDE_CODE", "CLINE", "DETERMINISTIC_NODE"], "requires_owner_approval": false, "requires_network": false, "requires_write": false, "requires_secret": false },
+    { "capability_id": "edit_isolated_files", "risk": "R2_ISOLATED_CODE", "allowed_agents": ["CLAUDE_CODE", "CLINE"], "requires_owner_approval": false, "requires_network": false, "requires_write": true, "requires_secret": false },
+    { "capability_id": "run_local_tests", "risk": "R1_LOCAL_REVERSIBLE", "allowed_agents": ["CLAUDE_CODE", "CLINE", "DETERMINISTIC_NODE"], "requires_owner_approval": false, "requires_network": false, "requires_write": false, "requires_secret": false },
+    { "capability_id": "create_commit", "risk": "R2_ISOLATED_CODE", "allowed_agents": ["CLAUDE_CODE", "CLINE"], "requires_owner_approval": false, "requires_network": false, "requires_write": true, "requires_secret": false },
+    { "capability_id": "create_worktree", "risk": "R2_ISOLATED_CODE", "allowed_agents": ["CLAUDE_CODE"], "requires_owner_approval": false, "requires_network": false, "requires_write": true, "requires_secret": false },
+    { "capability_id": "generate_report", "risk": "R0_READ_ONLY", "allowed_agents": ["CLAUDE_CODE", "CLINE", "DETERMINISTIC_NODE"], "requires_owner_approval": false, "requires_network": false, "requires_write": true, "requires_secret": false },
+    { "capability_id": "access_network", "risk": "R6_EXTERNAL_COMMUNICATION", "allowed_agents": [], "requires_owner_approval": true, "requires_network": true, "requires_write": false, "requires_secret": false },
+    { "capability_id": "access_secret", "risk": "R3_SENSITIVE_LOCAL", "allowed_agents": ["HUMAN_OWNER"], "requires_owner_approval": true, "requires_network": false, "requires_write": false, "requires_secret": true },
+    { "capability_id": "mutate_canonical", "risk": "R5_PRODUCTION_MUTATION", "allowed_agents": ["HUMAN_OWNER"], "requires_owner_approval": true, "requires_network": true, "requires_write": true, "requires_secret": true },
+    { "capability_id": "deploy", "risk": "R4_PRODUCTION_PREPARATION", "allowed_agents": ["HUMAN_OWNER"], "requires_owner_approval": true, "requires_network": true, "requires_write": true, "requires_secret": true },
+    { "capability_id": "restart_service", "risk": "R5_PRODUCTION_MUTATION", "allowed_agents": ["HUMAN_OWNER"], "requires_owner_approval": true, "requires_network": true, "requires_write": true, "requires_secret": true },
+    { "capability_id": "send_message", "risk": "R6_EXTERNAL_COMMUNICATION", "allowed_agents": ["HUMAN_OWNER"], "requires_owner_approval": true, "requires_network": true, "requires_write": true, "requires_secret": true },
+    { "capability_id": "publish", "risk": "R6_EXTERNAL_COMMUNICATION", "allowed_agents": ["HUMAN_OWNER"], "requires_owner_approval": true, "requires_network": true, "requires_write": true, "requires_secret": false },
+    { "capability_id": "delete", "risk": "R3_SENSITIVE_LOCAL", "allowed_agents": ["HUMAN_OWNER"], "requires_owner_approval": true, "requires_network": false, "requires_write": true, "requires_secret": false },
+    { "capability_id": "merge", "risk": "R4_PRODUCTION_PREPARATION", "allowed_agents": ["HUMAN_OWNER"], "requires_owner_approval": true, "requires_network": false, "requires_write": true, "requires_secret": false },
+    { "capability_id": "push", "risk": "R4_PRODUCTION_PREPARATION", "allowed_agents": ["HUMAN_OWNER"], "requires_owner_approval": true, "requires_network": true, "requires_write": true, "requires_secret": true }
+  ],
+
+  "agent_selection_policy": {
+    "deterministic_tool": ["validation", "transformations", "checksums", "reports", "schema_checks", "reproducible_calculations"],
+    "claude_code": ["repo-wide architecture", "multi-file implementation", "root-cause analysis", "complex refactoring"],
+    "cline": ["bounded IDE-local changes", "explicit file-level tasks", "controlled execution"],
+    "human_owner": ["price decisions", "capacity", "production mutation", "external communication", "credentials", "git remote", "legal/compliance", "irreversible deletion"],
+    "rule": "no agent chosen only by convenience; prefer deterministic where reproducible"
+  },
+
+  "model_routing_policy": {
+    "classes": ["high_reasoning", "standard_coding", "lightweight_validation", "local_model_future"],
+    "factors": ["risk", "context_size", "codebase_breadth", "deterministic_alternative", "privacy", "token_budget", "required_tool_access"],
+    "rule": "critical tasks cannot be auto-assigned to an unverified local model; no real model API calls",
+    "weak_model_critical_block": true
+  },
+
+  "context_pack_contract": {
+    "required": ["project", "task", "source_commits", "canonical_files", "relevant_decisions", "completed_work", "known_risks", "forbidden_actions", "token_budget", "freshness", "checksums", "secret_exclusion", "sensitive_exclusion"],
+    "prevent": ["whole-repository dumping", "stale context", "duplicate context", "irrelevant historical logs", "secrets", "uncontrolled message bodies"],
+    "reuses": "tools/ai_hq/context_pack_builder.mjs (no second builder)"
+  },
+
+  "task_contract_standard": {
+    "required_sections": ["objective", "current_state", "source_of_truth", "exact_scope", "out_of_scope", "allowed_paths", "forbidden_paths", "allowed_tools", "forbidden_tools", "safety_invariants", "required_phases", "tests", "commit_gates", "deployment_gate", "stop_conditions", "done_definition", "final_report_schema"]
+  },
+
+  "approval_gates": {
+    "categories": ["owner_decision", "production_mutation", "external_communication", "secret_access", "cost_purchase", "irreversible_delete", "migration_apply", "branch_merge", "proposed_doc_apply", "release_tag", "legal_compliance"],
+    "rule": "approval is a REFERENCE to an authoritative Executive/owner decision, never a boolean invented by the agent; no agent self-approval"
+  },
+
+  "budget_engine": {
+    "types": ["token", "monetary", "elapsed_time", "file_changes", "commands", "retries", "concurrent_runs", "context_size"],
+    "statuses": ["UNKNOWN", "OWNER_TARGET", "ESTIMATED", "OBSERVED", "EXCEEDED"],
+    "breach_action": ["checkpoint", "stop_new_phase", "produce_evidence", "recommend_reduced_scope", "owner_review_when_required"],
+    "rule": "no fabricated confirmed token cost; UNKNOWN stays UNKNOWN; estimated and confirmed separated"
+  },
+
+  "lease_policy": { "rules": ["one active writer lease per isolated worktree", "expired lease recoverable", "no duplicate run", "no production locks", "synthetic simulator only"] },
+
+  "checkpoint_resume": {
+    "checkpoint_contains": ["completed_phases", "current_branch", "current_commit", "dirty_files", "tests", "artifacts", "decisions", "blockers", "next_phase", "state_hash"],
+    "resume_validates": ["branch_unchanged", "source_commits_exist", "files_not_unexpectedly_changed", "dependency_states_unchanged", "prior_tests_relevant"]
+  },
+
+  "retry_policy": {
+    "classes": ["TRANSIENT_TOOL", "TRANSIENT_RESOURCE", "VALIDATION", "DEPENDENCY", "REVISION_CONFLICT", "POLICY_BLOCK", "OWNER_REQUIRED", "TERMINAL_CODE", "AMBIGUOUS_RESULT"],
+    "no_retry": ["POLICY_BLOCK", "OWNER_REQUIRED", "TERMINAL_CODE"],
+    "rules": ["bounded retry", "changed strategy after repeated identical failure", "ambiguous result requires reconciliation", "same idempotency identity where applicable"]
+  },
+
+  "scheduler_contract": {
+    "future_responsibilities": ["select READY task", "enforce dependency", "acquire lease", "enforce capability", "enforce budgets", "invoke approved executor", "persist checkpoints", "run verification", "release lease"],
+    "this_task": "contract + simulator only; NO cron/systemd/Windows task"
+  },
+
+  "executor_contracts": {
+    "executors": ["CLAUDE_CODE", "CLINE", "DETERMINISTIC_NODE", "DETERMINISTIC_PYTHON", "HUMAN_OWNER"],
+    "rule": "no subprocess starts Claude/Cline; executor input/output envelope follows Integration API standard",
+    "io_envelope": "integration_os request/response/error envelope"
+  },
+
+  "production_queue_boundary": {
+    "agent_orchestration": ["development", "documentation", "analysis", "offline_transformations", "proposed_changes"],
+    "master_controller_queue": ["production_lead_pipeline", "operational_jobs", "canonical_mutations"],
+    "rule": "no shared writable queue; future handoff only through explicit approved contract"
+  },
+
+  "token_cost_accounting": {
+    "fields": ["provider", "model", "input_tokens", "output_tokens", "cache_tokens", "estimated_cost", "confirmed_cost", "source", "status"],
+    "rules": ["no fabricated usage", "unknown remains UNKNOWN", "estimated and confirmed separated", "cost per completed task", "cost per accepted artifact", "rework cost", "duplicate-work avoided estimate"]
+  },
+
+  "observability_contract": {
+    "events": ["task_created", "plan_created", "task_ready", "lease_acquired", "run_started", "phase_completed", "checkpoint_created", "budget_warning", "retry_scheduled", "verification_failed", "run_completed", "run_failed", "dead_lettered", "owner_gate_required"],
+    "metrics": ["completion_rate", "cycle_time", "retry_rate", "failure_rate", "duplicate_prevention", "token_usage", "cost", "owner_wait_time", "verification_pass_rate", "rollback_rate"],
+    "this_task": "contracts only; no emitter"
+  },
+
+  "policy_engine": {
+    "policies": ["no production without approval", "no send", "no network unless allowed", "no secret access without gate", "no delete without approval", "no merge without approval", "no task without done definition", "no run without context freshness", "no duplicate task", "no unlimited retry", "no unbounded token use", "no agent self-approval", "no critical claim without evidence", "no completion without verification"]
+  },
+
+  "integration_contracts": {
+    "ai_hq": ["project", "task_ledger", "context_packs"],
+    "executive_os": ["owner_priorities", "decisions", "next_action"],
+    "delivery_os": ["project_task_references"],
+    "analytics_os": ["orchestration_metrics"],
+    "conversation_hub": ["draft_requests", "owner_communication_references"],
+    "integration_registry": ["schemas", "ids", "revisions", "idempotency"],
+    "master_controller": ["production_queue_boundary_only"]
+  }
+}

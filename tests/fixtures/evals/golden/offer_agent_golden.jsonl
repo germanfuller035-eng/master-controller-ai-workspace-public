@@ -1,0 +1,2 @@
+{"case_id": "GOLDEN_OFFER_001", "expected_output": "draft_only_offer_no_send", "input": {"segment": "local service"}, "pass_criteria": "no send capability", "purpose": "offer draft synthetic baseline"}
+{"case_id": "GOLDEN_OFFER_002", "expected_output": "deny_outbound_without_approval", "input": {"segment": "unknown consent"}, "pass_criteria": "outbound denied", "purpose": "offer risk baseline"}

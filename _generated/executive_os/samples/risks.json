@@ -1,0 +1,58 @@
+{
+  "ok": true,
+  "errors": [],
+  "total": 2,
+  "by_severity": {
+    "CRITICAL": 1,
+    "HIGH": 0,
+    "MEDIUM": 1,
+    "LOW": 0
+  },
+  "critical": [
+    {
+      "risk_id": "exec_Finance_OS_neg_cash",
+      "source_system": "Finance_OS",
+      "source_risk_id": "neg_cash",
+      "category": "finance",
+      "probability": "high",
+      "impact": "high",
+      "severity": "CRITICAL",
+      "trigger": null,
+      "mitigation_ref": "see source system",
+      "owner": "owner",
+      "status": "OPEN",
+      "executive_action": "immediate owner attention"
+    }
+  ],
+  "risks": [
+    {
+      "risk_id": "exec_Finance_OS_neg_cash",
+      "source_system": "Finance_OS",
+      "source_risk_id": "neg_cash",
+      "category": "finance",
+      "probability": "high",
+      "impact": "high",
+      "severity": "CRITICAL",
+      "trigger": null,
+      "mitigation_ref": "see source system",
+      "owner": "owner",
+      "status": "OPEN",
+      "executive_action": "immediate owner attention"
+    },
+    {
+      "risk_id": "exec_Master_Controller_infra",
+      "source_system": "Master_Controller",
+      "source_risk_id": "infra",
+      "category": "infrastructure",
+      "probability": "low",
+      "impact": "high",
+      "severity": "MEDIUM",
+      "trigger": null,
+      "mitigation_ref": "see source system",
+      "owner": "owner",
+      "status": "OPEN",
+      "executive_action": "monitor"
+    }
+  ],
+  "note": "Executive register references source risks; full detail stays in domain systems."
+}

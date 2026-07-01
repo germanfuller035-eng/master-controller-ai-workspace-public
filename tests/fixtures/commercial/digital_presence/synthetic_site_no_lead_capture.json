@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "synthetic": true,
+  "site_id": "synthetic_site_no_lead_capture",
+  "analysis_mode": "LOCAL_SYNTHETIC_FIXTURE",
+  "signals": {
+    "website_problem": 1,
+    "lead_capture_problem": 5,
+    "response_handling_problem": 1,
+    "trust_problem": 1,
+    "audit_uncertainty": 1
+  },
+  "evidence": [
+    {
+      "id": "ev-site-no-capture-1",
+      "source": "synthetic_site_fixture",
+      "claim": "Synthetic site fixture has no clear lead capture path."
+    }
+  ]
+}

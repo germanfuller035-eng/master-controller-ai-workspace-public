@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/controlled_outbound/batch_approval.schema.json",
+  "title": "Batch Approval V1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "synthetic",
+    "owner_approval_required",
+    "payload_hash",
+    "send_allowed"
+  ],
+  "properties": {
+    "schema_version": {"const": "controlled_outbound.batch_approval.v1"},
+    "synthetic": {"const": true},
+    "owner_approval_required": {"const": true},
+    "payload_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "send_allowed": {"const": false}
+  },
+  "additionalProperties": true
+}

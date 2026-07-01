@@ -1,0 +1,108 @@
+{
+  "captured_at": "2026-06-18T19:10:00Z",
+  "source": "read-only forensic of production VPS 195.96.132.82 + canonical store + API /api/v1",
+  "production_revision": 106,
+  "canonical_leads": 62,
+  "outbound_send_ledger": {
+    "path": "/opt/master-controller/13_sales/outbound_send_ledger.jsonl",
+    "rows": 7,
+    "statuses": { "SENT": 7 },
+    "distinct_leads": 7
+  },
+  "outbound_email_ledger": {
+    "path": "/opt/master-controller/13_sales/outbound_email_ledger.jsonl",
+    "rows": 63,
+    "note": "attempt/uncertain log, NOT authoritative send count"
+  },
+  "queue": {
+    "queue_revision": 146,
+    "total_jobs": 41,
+    "statuses": { "COMPLETED": 41 },
+    "failed": 0,
+    "dead_letters": 0
+  },
+  "canonical_writer": {
+    "count": 1,
+    "active_env": "/etc/master-controller/master-controller.env (MATER_CANONICAL_WRITER=true)",
+    "note": "other matches are .bak backup files, not active services"
+  },
+  "commercial": {
+    "opportunities_canonical": 4,
+    "offers_canonical": 4,
+    "offers_ready_for_send_review": ["STROYDVOR-UG_RU", "DKBI_RU", "ZAVODATOM_RU"],
+    "offers_approved_test_only": ["TEST_ONLY_GATE_C1A_ACCEPTANCE"],
+    "api_summary": {
+      "open_opportunities": 3,
+      "offers_awaiting_owner": 0,
+      "estimated_pipeline_value": 30000,
+      "owner_decisions_required": 0
+    },
+    "DEFECT": "API /commercial/summary returns offers_awaiting_owner=0 while canonical has 3 READY_FOR_SEND_REVIEW offers (non-test). Confirmed at source."
+  },
+  "agents": {
+    "runtime": "ON",
+    "mode": "SHADOW_NO_SEND",
+    "provider_available": false,
+    "capabilities": { "canonical_direct_write": false, "send": false, "payment": false, "deploy": false },
+    "profiles": ["CHIEF_ORCHESTRATOR", "LEAD_INTELLIGENCE", "MINI_AUDIT", "OFFER", "QA_SAFETY"],
+    "safety": { "agent_secret_exposure": 0, "direct_agent_writers": 0, "direct_smtp_paths": 0 }
+  },
+  "operational_flags": {
+    "MATER_NO_SEND": "true",
+    "EMAIL_REAL_SEND_ENABLED": "false",
+    "MATER_MAINTENANCE": "false",
+    "MATER_CANONICAL_WRITER": "true",
+    "COMMERCIAL_SEND": "false",
+    "FOLLOWUP_AUTOSEND": "false",
+    "AGENT_RUNTIME": "true",
+    "AGENT_MODE": "SHADOW_NO_SEND",
+    "AGENT_CANONICAL_DIRECT_WRITE": "false",
+    "AGENT_SEND": "false",
+    "AGENT_PAYMENT": "false",
+    "WEB_INTAKE": "true",
+    "VK_DISCOVERY": "false",
+    "VK_INBOUND": "false",
+    "MAX_INBOUND": "false",
+    "CLIENT_TELEGRAM_INBOUND": "false"
+  },
+  "sources_health": {
+    "osm_overpass": "ACTIVE",
+    "web_intake": "ACTIVE",
+    "vk_communities": "PENDING_CREDENTIAL",
+    "vk_lead_forms": "PENDING_CREDENTIAL",
+    "vk_inbound": "PENDING_CREDENTIAL",
+    "two_gis": "PENDING_CREDENTIAL",
+    "dataforseo": "PENDING_CREDENTIAL",
+    "max_inbound": "PENDING_CREDENTIAL",
+    "yandex_business": "DISABLED"
+  },
+  "channels_health": {
+    "EMAIL": { "inbound": "ON", "outbound": "GATED" },
+    "VK": { "inbound": "PENDING_CREDENTIAL", "outbound": "OFF" },
+    "MAX": { "inbound": "PENDING_CREDENTIAL", "outbound": "OFF" },
+    "TELEGRAM": { "inbound": "PENDING_CREDENTIAL", "outbound": "OFF" },
+    "WEB_FORM": { "inbound": "ON", "outbound": "OFF" },
+    "WHATSAPP": { "inbound": "PENDING_CREDENTIAL", "outbound": "OFF" },
+    "SMS": { "inbound": "PENDING_CREDENTIAL", "outbound": "OFF" },
+    "PHONE": { "inbound": "PENDING_CREDENTIAL", "outbound": "OFF" },
+    "AVITO": { "inbound": "PENDING_CREDENTIAL", "outbound": "OFF" }
+  },
+  "integrity_gates": {
+    "historical_sends_eq_7": true,
+    "writer_count_eq_1": true,
+    "queue_failed_eq_0": true,
+    "dead_letters_eq_0": true,
+    "canonical_integrity": "PASS",
+    "unexpected_outbound": false,
+    "payment_facts_created": false,
+    "HARD_STOP_TRIGGERED": false
+  },
+  "infrastructure": {
+    "vps": "195.96.132.82 (debian12)",
+    "api": "node /opt/master-controller/tools/mater_controller_api/src/server/index.mjs on 127.0.0.1:8787",
+    "api_base": "/api/v1",
+    "reverse_proxy": "caddy -> 195-96-132-82.sslip.io",
+    "services_running": ["caddy", "master-controller-api", "master-controller-telegram", "master-controller-worker"],
+    "adb_available": false
+  }
+}

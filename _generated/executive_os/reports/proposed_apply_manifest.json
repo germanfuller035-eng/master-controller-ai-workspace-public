@@ -1,0 +1,58 @@
+{
+  "schema": "executive_os.apply_manifest.v1",
+  "generated_ts": "20260617_180000",
+  "vault": "D:\\AI_WORKSPACE",
+  "apply_command": "AI_HQ_APPLY_OK=1 node tools/ai_hq/apply_canonical.mjs --apply  (post-soak, owner only)",
+  "note": "Proposed docs NOT applied during soak.",
+  "total": 6,
+  "rows": [
+    {
+      "source_proposed": "docs_canonical_proposed/03_sop/executive_os_standards.md",
+      "target_path": "03_sop/executive_os_standards.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/07_revenue_os/executive_os_command_center.md",
+      "target_path": "07_revenue_os/executive_os_command_center.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/07_revenue_os/executive_os_integration_contracts.md",
+      "target_path": "07_revenue_os/executive_os_integration_contracts.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/09_dashboards/delivery_owner_command_center.md",
+      "target_path": "09_dashboards/delivery_owner_command_center.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/09_dashboards/finance_owner_command_center.md",
+      "target_path": "09_dashboards/finance_owner_command_center.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/09_dashboards/owner_command_center.md",
+      "target_path": "09_dashboards/owner_command_center.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review": true
+    }
+  ]
+}

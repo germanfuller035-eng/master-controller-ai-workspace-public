@@ -1,0 +1,147 @@
+{
+  "ok": true,
+  "kickoff": {
+    "schema": "delivery_os.kickoff.v1",
+    "project_id": "TEST_proj_mini_audit_TEST_d01",
+    "product_id": "mini_audit",
+    "sections": {
+      "project_summary": "Mini Audit 10K for Mini Audit 10K project",
+      "goals": [
+        "Site/page/listing exists but requests are weak; unclear where the customer is lost."
+      ],
+      "scope": [
+        "first screen",
+        "customer path to request",
+        "CTA",
+        "forms",
+        "contacts",
+        "trust",
+        "visible quality errors",
+        "basic SEO signals"
+      ],
+      "exclusions": [
+        "full legal audit",
+        "full technical SEO",
+        "deep crawl",
+        "all-pages review",
+        "analytics setup",
+        "site fixes",
+        "admin access",
+        "new blocks",
+        "new website"
+      ],
+      "deliverables": [
+        "5-7 key findings",
+        "short fix plan",
+        "next step recommendation",
+        "client-facing PDF or structured note"
+      ],
+      "timeline": "1.2 days (relative)",
+      "milestones": [
+        {
+          "milestone_id": "ma1",
+          "name": "Identity & website verification",
+          "relative": "Day 0",
+          "owner": "claude",
+          "deliverables": [
+            "verified_identity_record"
+          ],
+          "qa_gate": false,
+          "acceptance_gate": false
+        },
+        {
+          "milestone_id": "ma2",
+          "name": "Evidence collection",
+          "relative": "after ma1",
+          "owner": "claude",
+          "deliverables": [
+            "evidence_register"
+          ],
+          "qa_gate": false,
+          "acceptance_gate": false
+        },
+        {
+          "milestone_id": "ma3",
+          "name": "Finding generation + dedup/conflict",
+          "relative": "after ma2",
+          "owner": "claude",
+          "deliverables": [
+            "findings_list"
+          ],
+          "qa_gate": true,
+          "acceptance_gate": false
+        },
+        {
+          "milestone_id": "ma4",
+          "name": "Business implications + recommendations",
+          "relative": "after ma3",
+          "owner": "claude",
+          "deliverables": [
+            "recommendations"
+          ],
+          "qa_gate": true,
+          "acceptance_gate": false
+        },
+        {
+          "milestone_id": "ma5",
+          "name": "Owner QA + client packaging",
+          "relative": "after owner approval",
+          "owner": "owner",
+          "deliverables": [
+            "audit_summary",
+            "priority_matrix",
+            "qa_report"
+          ],
+          "qa_gate": true,
+          "acceptance_gate": true
+        }
+      ],
+      "client_inputs": [
+        "company_information",
+        "contacts",
+        "products_services"
+      ],
+      "responsibilities": {
+        "owner": "approvals, client comms, sensitive access",
+        "claude": "implementation/QA",
+        "cline": "focused fixes",
+        "client": "inputs, approvals, acceptance"
+      },
+      "communication_rules": "All client communication owner-led and owner-approved. No autosend.",
+      "review_process": "internal QA -> owner review -> client review -> acceptance",
+      "revision_limits": "1 round",
+      "acceptance": [
+        "5-7 findings each evidence-backed",
+        "no duplicate findings",
+        "actionable recommendations",
+        "price = 10000 RUB",
+        "recipient evidence present",
+        "no guessed data"
+      ],
+      "risks": [
+        "scope creep into full audit",
+        "guaranteeing growth",
+        "unverified findings"
+      ],
+      "change_request_process": "changes beyond scope -> impact eval -> owner approval (may require new offer)",
+      "support_terms": "post-acceptance warranty per agreement"
+    }
+  },
+  "label": "INTERNAL_DRAFT",
+  "send_allowed": false,
+  "input_completeness": {
+    "score": 0,
+    "required_total": 3,
+    "required_received": 0,
+    "blockers_missing": [
+      "company_information",
+      "contacts",
+      "products_services"
+    ],
+    "ready_to_start": false,
+    "secret_violations": []
+  },
+  "blockers": [
+    "missing_inputs:company_information,contacts,products_services"
+  ]
+}

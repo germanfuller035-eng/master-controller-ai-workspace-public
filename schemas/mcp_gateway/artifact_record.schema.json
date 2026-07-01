@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MCP Gateway Artifact Record",
+  "type": "object",
+  "required": ["artifact_id", "task_id", "adapter_id", "path", "sha256", "created_at", "data_class", "redaction_status"]
+}

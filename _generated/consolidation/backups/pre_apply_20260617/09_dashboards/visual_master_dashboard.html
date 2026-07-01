@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Visual Master Dashboard — Active Action Board</title>
+<style>
+  :root {
+    --bg: #0f1117;
+    --surface: #1a1d27;
+    --surface2: #21253a;
+    --border: #2e3250;
+    --accent: #4f8ef7;
+    --accent2: #7c5cbf;
+    --green: #27ae60;
+    --yellow: #f39c12;
+    --red: #e74c3c;
+    --muted: #5a607a;
+    --text: #e2e8f0;
+    --textlow: #8890a8;
+    --card-shadow: 0 2px 12px rgba(0,0,0,0.4);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; font-size: 14px; line-height: 1.6; }
+
+  header { background: var(--surface); border-bottom: 2px solid var(--border); padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+  header h1 { font-size: 18px; color: var(--accent); letter-spacing: 0.04em; }
+  .header-meta { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+  .badge { padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; }
+  .badge-yellow { background: rgba(243,156,18,0.15); color: var(--yellow); border: 1px solid rgba(243,156,18,0.4); }
+  .badge-red { background: rgba(231,76,60,0.15); color: var(--red); border: 1px solid rgba(231,76,60,0.4); }
+  .badge-green { background: rgba(39,174,96,0.15); color: var(--green); border: 1px solid rgba(39,174,96,0.4); }
+  .badge-muted { background: rgba(90,96,122,0.15); color: var(--muted); border: 1px solid rgba(90,96,122,0.4); }
+
+  main { max-width: 1200px; margin: 0 auto; padding: 20px 16px 60px; display: flex; flex-direction: column; gap: 24px; }
+
+  .section { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; box-shadow: var(--card-shadow); }
+  .section-header { padding: 14px 20px; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 10px; }
+  .section-header h2 { font-size: 15px; font-weight: 700; color: var(--text); }
+  .section-icon { font-size: 18px; }
+  .section-body { padding: 16px 20px; }
+  .section-badge { margin-left: auto; }
+
+  /* ── Main Action Block ── */
+  .main-action-box { background: linear-gradient(135deg, rgba(79,142,247,0.1), rgba(124,92,191,0.1)); border: 1px solid rgba(79,142,247,0.35); border-radius: 8px; padding: 18px 20px; }
+  .main-action-box .action-title { font-size: 13px; color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; }
+  .main-action-box .action-text { font-size: 15px; color: var(--text); font-weight: 500; }
+
+  /* ── Lead Cards ── */
+  .leads-grid { display: flex; flex-direction: column; gap: 14px; }
+  .lead-card { background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; padding: 16px; position: relative; }
+  .lead-card-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; margin-bottom: 12px; flex-wrap: wrap; }
+  .lead-rank { background: var(--accent); color: #fff; font-size: 11px; font-weight: 800; border-radius: 50%; width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .lead-name { font-size: 15px; font-weight: 700; color: #fff; }
+  .lead-id { font-size: 11px; color: var(--muted); margin-left: 2px; }
+  .lead-status-badge { padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 700; white-space: nowrap; }
+  .status-waiting { background: rgba(243,156,18,0.15); color: var(--yellow); border: 1px solid rgba(243,156,18,0.4); }
+  .status-active { background: rgba(79,142,247,0.12); color: var(--accent); border: 1px solid rgba(79,142,247,0.3); }
+  .status-hold { background: rgba(90,96,122,0.15); color: var(--muted); border: 1px solid rgba(90,96,122,0.3); }
+
+  .lead-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 20px; }
+  .lead-field { display: flex; flex-direction: column; gap: 2px; }
+  .lead-field-label { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+  .lead-field-value { font-size: 13px; color: var(--text); }
+  .lead-field-value.next-step { color: #7dd3fc; }
+  .lead-field-value.no { color: var(--red); font-weight: 600; }
+  .lead-field-value.forbidden { color: var(--red); font-size: 12px; }
+
+  .next-step-row { margin-top: 10px; background: rgba(79,142,247,0.07); border: 1px solid rgba(79,142,247,0.2); border-radius: 6px; padding: 8px 12px; }
+  .next-step-row .label { font-size: 10px; color: var(--accent); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 3px; }
+  .next-step-row .val { font-size: 13px; color: #7dd3fc; }
+
+  .forbidden-row { margin-top: 8px; background: rgba(231,76,60,0.07); border: 1px solid rgba(231,76,60,0.2); border-radius: 6px; padding: 7px 12px; }
+  .forbidden-row .label { font-size: 10px; color: var(--red); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 2px; }
+  .forbidden-row .val { font-size: 12px; color: #f87171; }
+
+  /* ── Pseudo Buttons ── */
+  .btn-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+  .btn-pseudo { display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px; border-radius: 6px; font-size: 12px; font-weight: 600; cursor: help; border: 1px solid; user-select: none; }
+  .btn-pseudo.check { background: rgba(79,142,247,0.1); color: var(--accent); border-color: rgba(79,142,247,0.3); }
+  .btn-pseudo.draft { background: rgba(124,92,191,0.1); color: #a78bda; border-color: rgba(124,92,191,0.3); }
+  .btn-pseudo.contact { background: rgba(243,156,18,0.1); color: var(--yellow); border-color: rgba(243,156,18,0.3); }
+  .btn-pseudo.decision { background: rgba(39,174,96,0.1); color: var(--green); border-color: rgba(39,174,96,0.3); }
+  .btn-pseudo.hold { background: rgba(90,96,122,0.1); color: var(--muted); border-color: rgba(90,96,122,0.3); }
+  .btn-pseudo-note { font-size: 11px; color: var(--muted); margin-top: 4px; font-style: italic; }
+
+  /* ── Decision Center ── */
+  .decision-table { width: 100%; border-collapse: collapse; }
+  .decision-table th { background: var(--surface); color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; padding: 8px 12px; text-align: left; border-bottom: 1px solid var(--border); }
+  .decision-table td { padding: 10px 12px; border-bottom: 1px solid rgba(46,50,80,0.5); vertical-align: top; font-size: 13px; }
+  .decision-table tr:last-child td { border-bottom: none; }
+  .decision-table tr:hover td { background: rgba(79,142,247,0.04); }
+  .priority-num { font-weight: 800; color: var(--accent); font-size: 14px; }
+  .decision-options { display: flex; flex-wrap: wrap; gap: 4px; }
+  .opt-pill { padding: 2px 8px; border-radius: 12px; font-size: 11px; background: rgba(79,142,247,0.1); color: var(--accent); border: 1px solid rgba(79,142,247,0.2); }
+  .opt-pill.warn { background: rgba(243,156,18,0.1); color: var(--yellow); border-color: rgba(243,156,18,0.2); }
+  .opt-pill.hold { background: rgba(90,96,122,0.1); color: var(--muted); border-color: rgba(90,96,122,0.25); }
+
+  /* ── Followup Queue ── */
+  .queue-card { background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; margin-bottom: 10px; }
+  .queue-card:last-child { margin-bottom: 0; }
+  .queue-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 6px; }
+  .queue-id { font-size: 11px; color: var(--muted); }
+  .queue-meta { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+  .queue-field { display: flex; flex-direction: column; gap: 2px; }
+  .queue-field-label { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
+  .queue-field-value { font-size: 12px; color: var(--text); }
+  .queue-notes { margin-top: 8px; font-size: 12px; color: var(--textlow); background: rgba(255,255,255,0.03); border-radius: 4px; padding: 6px 10px; border-left: 2px solid var(--border); }
+
+  /* ── Forbidden / Risks ── */
+  .list-items { display: flex; flex-direction: column; gap: 6px; }
+  .list-item { display: flex; align-items: flex-start; gap: 10px; padding: 8px 12px; border-radius: 6px; }
+  .list-item.forbidden { background: rgba(231,76,60,0.07); border: 1px solid rgba(231,76,60,0.15); }
+  .list-item.forbidden .icon { color: var(--red); font-size: 14px; }
+  .list-item.forbidden .text { color: #f87171; font-size: 13px; }
+  .risk-row { display: grid; grid-template-columns: 80px 1fr 80px 100px; gap: 8px; align-items: center; padding: 8px 12px; border-bottom: 1px solid rgba(46,50,80,0.4); }
+  .risk-row:last-child { border-bottom: none; }
+  .risk-row .risk-id { font-size: 11px; color: var(--muted); font-family: monospace; }
+  .risk-row .risk-title { font-size: 13px; color: var(--text); }
+  .risk-level-HIGH { color: var(--red); font-size: 11px; font-weight: 700; }
+  .risk-level-MEDIUM { color: var(--yellow); font-size: 11px; font-weight: 700; }
+  .risk-status-ACTIVE { color: var(--yellow); font-size: 11px; }
+  .risk-status-MITIGATED { color: var(--green); font-size: 11px; }
+  .risk-status-BLOCKED { color: var(--muted); font-size: 11px; }
+
+  /* ── Sources ── */
+  .sources-list { display: flex; flex-direction: column; gap: 4px; }
+  .source-item { font-size: 12px; color: var(--muted); background: rgba(255,255,255,0.02); padding: 5px 10px; border-radius: 4px; font-family: monospace; border-left: 2px solid var(--border); }
+
+  /* ── Archive (collapsed) ── */
+  .archive-section { background: rgba(26,29,39,0.5); border: 1px solid rgba(46,50,80,0.4); border-radius: 10px; box-shadow: none; }
+  .archive-toggle { width: 100%; background: none; border: none; cursor: pointer; text-align: left; padding: 12px 20px; display: flex; align-items: center; gap: 10px; color: var(--muted); font-size: 13px; }
+  .archive-toggle:hover { color: var(--textlow); }
+  .archive-toggle .arrow { transition: transform 0.2s; font-size: 12px; }
+  .archive-toggle.open .arrow { transform: rotate(90deg); }
+  .archive-warning { background: rgba(231,76,60,0.08); border: 1px solid rgba(231,76,60,0.2); border-radius: 6px; padding: 8px 14px; margin-bottom: 12px; font-size: 12px; color: #f87171; }
+  .archive-content { display: none; padding: 0 20px 16px; }
+  .archive-content.visible { display: block; }
+  .legacy-table { width: 100%; border-collapse: collapse; }
+  .legacy-table th { background: var(--surface); color: var(--muted); font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; padding: 7px 10px; text-align: left; border-bottom: 1px solid var(--border); }
+  .legacy-table td { padding: 8px 10px; border-bottom: 1px solid rgba(46,50,80,0.3); font-size: 12px; color: var(--textlow); }
+  .legacy-table tr:last-child td { border-bottom: none; }
+
+  /* ── Status bar ── */
+  .status-bar { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 8px 16px; display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+  .status-item { display: flex; gap: 6px; align-items: center; font-size: 12px; }
+  .status-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+  .dot-green { background: var(--green); box-shadow: 0 0 6px var(--green); }
+  .dot-yellow { background: var(--yellow); box-shadow: 0 0 6px var(--yellow); }
+  .dot-red { background: var(--red); box-shadow: 0 0 6px var(--red); }
+  .dot-muted { background: var(--muted); }
+
+  .ts { font-size: 11px; color: var(--muted); margin-left: auto; white-space: nowrap; }
+
+  @media (max-width: 720px) {
+    .lead-grid { grid-template-columns: 1fr; }
+    .decision-table { font-size: 12px; }
+    .queue-meta { grid-template-columns: 1fr 1fr; }
+    .risk-row { grid-template-columns: 1fr 1fr; }
+  }
+
+  /* ── Command Guidance ── */
+  .cmd-guidance-box { background: rgba(52,152,219,0.08); border: 1px solid rgba(52,152,219,0.35); border-radius: 10px; padding: 16px 20px; margin-bottom: 8px; }
+  .cmd-guidance-box h3 { font-size: 13px; font-weight: 700; color: #60a5fa; margin: 0 0 10px; letter-spacing: 0.04em; }
+  .cmd-guidance-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 5px; }
+  .cmd-guidance-list li { font-size: 12px; color: var(--textlow); padding-left: 14px; position: relative; }
+  .cmd-guidance-list li::before { content: "→"; position: absolute; left: 0; color: #60a5fa; }
+  .cmd-guidance-list li strong { color: var(--text); }
+
+  .lead-cmd-card { background: rgba(30,33,55,0.7); border: 1px solid rgba(52,152,219,0.2); border-radius: 8px; margin-top: 8px; overflow: hidden; }
+  .lead-cmd-header { background: rgba(52,152,219,0.1); padding: 6px 12px; font-size: 11px; font-weight: 700; color: #60a5fa; letter-spacing: 0.05em; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+  .lead-cmd-header:hover { background: rgba(52,152,219,0.18); }
+  .lead-cmd-body { padding: 10px 12px; display: none; }
+  .lead-cmd-body.open { display: block; }
+  .cmd-row { display: grid; grid-template-columns: 100px 1fr; gap: 4px 10px; margin-bottom: 6px; font-size: 11px; align-items: start; }
+  .cmd-label { color: var(--muted); font-weight: 600; padding-top: 2px; }
+  .cmd-value { color: var(--textlow); }
+  .cmd-code { background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.08); border-radius: 4px; padding: 3px 7px; font-family: 'Courier New', monospace; font-size: 10px; color: #a5f3fc; cursor: pointer; display: inline-block; word-break: break-all; }
+  .cmd-code:hover { border-color: #60a5fa; background: rgba(52,152,219,0.12); }
+  .cmd-forbidden { color: #f87171; font-size: 10px; }
+  .cmd-log { color: #86efac; font-size: 10px; }
+  .cmd-section-divider { font-size: 10px; color: var(--muted); border-top: 1px solid var(--border); padding-top: 6px; margin-top: 4px; }
+</style>
+
+</head>
+<body>
+
+<header>
+  <h1>🎯 Visual Master Dashboard — Active Action Board</h1>
+  <div class="header-meta">
+    <span class="badge badge-yellow" id="sys-status">⚡ Жёлтый режим</span>
+    <span class="badge badge-red" id="autosend-badge">🚫 Автоотправка ВЫКЛ</span>
+    <span class="ts" id="gen-ts">—</span>
+  </div>
+</header>
+
+<main>
+
+  <!-- ── 0. КАК УПРАВЛЯТЬ СИСТЕМОЙ СЕЙЧАС ── -->
+  <div class="section" id="section-command-guidance">
+    <div class="section-title">📋 Как управлять системой сейчас</div>
+    <div class="cmd-guidance-box">
+      <h3>🎯 Роли инструментов</h3>
+      <ul class="cmd-guidance-list">
+        <li><strong>Dashboard (этот экран)</strong> — только смотреть состояние. Не выполняет действия.</li>
+        <li><strong>Cline (VS Code)</strong> — давать команды на подготовку задач в AI_WORKSPACE. Черновики, логи, обновления статусов.</li>
+        <li><strong>Ручная почта / WA / MAX / TG</strong> — отправлять клиентам только вручную, после Cline подготовит черновик.</li>
+        <li><strong>После ручной отправки → Cline</strong> — залогировать касание командой <span class="cmd-code">log_manual_touch [лид]</span>.</li>
+        <li><strong>Telegram-бот</strong> — пока не подключён к этим командам. Будет позже.</li>
+        <li><strong>Auto-send</strong> — <span style="color:#f87171;font-weight:700;">ВЫКЛЮЧЕН</span>. Все отправки только вручную с approvaлом.</li>
+      </ul>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:10px;">
+      <div class="cmd-guidance-box" style="margin-bottom:0;">
+        <h3>📥 Шаг 1 — Смотреть</h3>
+        <ul class="cmd-guidance-list">
+          <li>Открыть dashboard (этот файл)</li>
+          <li>Найти нужного лида в очереди</li>
+          <li>Прочитать «Что решить» и команду</li>
+        </ul>
+      </div>
+      <div class="cmd-guidance-box" style="margin-bottom:0;">
+        <h3>⚡ Шаг 2 — Дать команду Cline</h3>
+        <ul class="cmd-guidance-list">
+          <li>Скопировать команду из блока лида</li>
+          <li>Вставить в Cline (VS Code)</li>
+          <li>Дождаться черновика / отчёта</li>
+        </ul>
+      </div>
+      <div class="cmd-guidance-box" style="margin-bottom:0;">
+        <h3>✅ Шаг 3 — Залогировать</h3>
+        <ul class="cmd-guidance-list">
+          <li>После ручной отправки → Cline</li>
+          <li>Команда: <span class="cmd-code">Залогируй ручное WA-касание ZB23</span></li>
+          <li>Cline запишет в outreach_log</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 1. ГЛАВНОЕ ДЕЙСТВИЕ СЕЙЧАС ── -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-icon">🔴</span>
+      <h2>Главное действие сейчас</h2>
+    </div>
+    <div class="section-body">
+      <div class="main-action-box">
+        <div class="action-title">▶ ДЕЙСТВИЕ</div>
+        <div class="action-text" id="main-action-text">Загрузка...</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 1b. КАК УПРАВЛЯТЬ СИСТЕМОЙ СЕЙЧАС ── -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-icon">🗺️</span>
+      <h2>Как управлять системой сейчас</h2>
+      <span class="badge badge-green section-badge">Инструкция для Дмитрия</span>
+    </div>
+    <div class="section-body">
+      <div class="cmd-guidance-box">
+        <h3>📌 DASHBOARD — только просмотр состояния</h3>
+        <ul class="cmd-guidance-list">
+          <li>Dashboard <strong>показывает состояние</strong>, но <strong>не выполняет действия</strong> — кнопки здесь только подсказки.</li>
+          <li>Команды на подготовку задач давать в <strong>Cline</strong> (окно чата здесь в VS Code).</li>
+          <li>Отправки клиентам делать <strong>только вручную</strong> или через отдельный approved send-модуль.</li>
+          <li>После ручной отправки — <strong>обязательно залогировать</strong> касание через Cline.</li>
+          <li>Telegram-бот пока <strong>не подключён</strong> к этим командам — работаем через Cline.</li>
+        </ul>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px;margin-top:12px;">
+        <div style="background:rgba(79,142,247,0.08);border:1px solid rgba(79,142,247,0.25);border-radius:8px;padding:12px;">
+          <div style="font-size:18px;margin-bottom:6px;">👁️</div>
+          <div style="font-size:11px;font-weight:700;color:#60a5fa;margin-bottom:4px;">DASHBOARD</div>
+          <div style="font-size:11px;color:var(--textlow);">Смотреть состояние, статусы, следующие шаги</div>
+        </div>
+        <div style="background:rgba(124,92,191,0.08);border:1px solid rgba(124,92,191,0.25);border-radius:8px;padding:12px;">
+          <div style="font-size:18px;margin-bottom:6px;">⌨️</div>
+          <div style="font-size:11px;font-weight:700;color:#a78bda;margin-bottom:4px;">CLINE (здесь)</div>
+          <div style="font-size:11px;color:var(--textlow);">Выполнять задачи: готовить черновики, логировать, обновлять</div>
+        </div>
+        <div style="background:rgba(243,156,18,0.08);border:1px solid rgba(243,156,18,0.25);border-radius:8px;padding:12px;">
+          <div style="font-size:18px;margin-bottom:6px;">✉️</div>
+          <div style="font-size:11px;font-weight:700;color:var(--yellow);margin-bottom:4px;">РУЧНАЯ ОТПРАВКА</div>
+          <div style="font-size:11px;color:var(--textlow);">Email / WhatsApp / Telegram / MAX — только вручную после approval</div>
+        </div>
+        <div style="background:rgba(39,174,96,0.08);border:1px solid rgba(39,174,96,0.25);border-radius:8px;padding:12px;">
+          <div style="font-size:18px;margin-bottom:6px;">📝</div>
+          <div style="font-size:11px;font-weight:700;color:var(--green);margin-bottom:4px;">ЛОГИРОВАТЬ</div>
+          <div style="font-size:11px;color:var(--textlow);">После каждой ручной отправки — команда в Cline для записи касания</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 2. АКТИВНЫЕ ЛИДЫ — РАБОЧАЯ ОЧЕРЕДЬ ── -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-icon">📋</span>
+      <h2>Активные лиды — рабочая очередь</h2>
+      <span class="badge badge-yellow section-badge" id="leads-count">5 лидов</span>
+    </div>
+    <div class="section-body">
+      <div class="leads-grid" id="leads-grid">
+        <!-- dynamic -->
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ── 3. ЦЕНТР РЕШЕНИЙ ДМИТРИЯ ── -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-icon">🧭</span>
+      <h2>Центр решений Дмитрия</h2>
+      <span class="badge badge-green section-badge">Приоритетные решения</span>
+    </div>
+    <div class="section-body" style="padding: 0;">
+      <div style="overflow-x: auto;">
+        <table class="decision-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Лид</th>
+              <th>Решение Дмитрия</th>
+              <th>Варианты</th>
+              <th>Что будет после решения</th>
+            </tr>
+          </thead>
+          <tbody id="decision-tbody">
+            <!-- dynamic -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 4. ОЧЕРЕДЬ ПОВТОРНЫХ КАСАНИЙ ── -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-icon">📅</span>
+      <h2>Очередь повторных касаний</h2>
+    </div>
+    <div class="section-body" id="followup-queue">
+      <!-- dynamic -->
+    </div>
+  </div>
+
+  <!-- ── 5. ЧТО ЗАПРЕЩЕНО ── -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-icon">🚫</span>
+      <h2>Что запрещено сейчас</h2>
+    </div>
+    <div class="section-body">
+      <div class="list-items" id="forbidden-list">
+        <!-- dynamic -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 6. РИСКИ ── -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-icon">⚠️</span>
+      <h2>Риски</h2>
+    </div>
+    <div class="section-body" style="padding: 0;">
+      <div id="risks-block"><!-- dynamic --></div>
+    </div>
+  </div>
+
+  <!-- ── 7. ИСТОЧНИКИ ДАННЫХ ── -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-icon">📂</span>
+      <h2>Источники данных</h2>
+    </div>
+    <div class="section-body">
+      <div class="sources-list" id="sources-list"><!-- dynamic --></div>
+    </div>
+  </div>
+
+  <!-- ── 8. АРХИВ ИСТОРИИ КАСАНИЙ (СВЁРНУТЫЙ) ── -->
+  <div class="section archive-section">
+    <button class="archive-toggle" id="archive-toggle" onclick="toggleArchive()">
+      <span class="arrow">▶</span>
+      <span>📦 Архив истории касаний — справочно</span>
+      <span style="margin-left: auto; font-size: 11px; color: var(--muted);">свёрнут по умолчанию</span>
+    </button>
+    <div class="archive-content" id="archive-content">
+      <div class="archive-warning">
+        ⚠️ <strong>Не использовать как рабочую очередь.</strong> Рабочий статус смотреть в «Активных лидах» выше. Этот блок — только справочная история прошлых касаний.
+      </div>
+      <div style="overflow-x: auto;">
+        <table class="legacy-table">
+          <thead>
+            <tr>
+              <th>Лид</th>
+              <th>Статус</th>
+              <th>Причина</th>
+              <th>Дата</th>
+              <th>Писать?</th>
+              <th>Действие</th>
+            </tr>
+          </thead>
+          <tbody id="legacy-tbody"><!-- dynamic --></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<script>
+const ACTIVE_WORK_QUEUE = [
+  {
+    rank: 1,
+    lead_id: 'ZB23',
+    name: 'ZB23 / Завод «ЖЕЛЕЗОБЕТОН»',
+    status: 'Ждём ответ',
+    status_class: 'status-waiting',
+    next_step: '2026-05-28 — проверить Яндекс-почту. Если ответа нет — подготовить WhatsApp Business follow-up draft.',
+    can_contact: 'Нет',
+    channel: 'Яндекс Email → WhatsApp Business',
+    forbidden: 'не повторять email, не отправлять PDF',
+    buttons: [
+      { text: '📬 Проверить ответ', cls: 'check' },
+      { text: '📝 Подготовить черновик', cls: 'draft' }
+    ]
+  },
+  {
+    rank: 2,
+    lead_id: 'EDERA',
+    name: 'EDERA / Эдера',
+    status: 'Тёплый лид / после оплаты',
+    status_class: 'status-active',
+    next_step: 'Дмитрий подтверждает, что проект закрыт корректно. После этого — подготовить следующий оффер.',
+    can_contact: 'Нет, только после approval',
+    channel: 'Telegram manual (после подтверждения)',
+    forbidden: 'не писать без проверки статуса проекта',
+    buttons: [
+      { text: '✅ Ждёт решения Дмитрия', cls: 'decision' },
+      { text: '📝 Подготовить черновик', cls: 'draft' }
+    ]
+  },
+  {
+    rank: 3,
+    lead_id: 'КЖБИ',
+    name: 'КЖБИ / ООО «КЖБИ»',
+    status: 'Активный / нужен подтверждённый контакт',
+    status_class: 'status-active',
+    next_step: 'Дмитрий подтверждает ЛПР и канал связи.',
+    can_contact: 'Нет',
+    channel: 'pending',
+    forbidden: 'не писать на неподтверждённый контакт',
+    buttons: [
+      { text: '👤 Нужен контакт', cls: 'contact' },
+      { text: '✅ Ждёт решения Дмитрия', cls: 'decision' }
+    ]
+  },
+  {
+    rank: 4,
+    lead_id: 'ATOM',
+    name: 'Завод АТОМ',
+    status: 'Активный / нужно решение по первому касанию',
+    status_class: 'status-active',
+    next_step: 'Дмитрий подтверждает: первое сообщение было отправлено или только подготовлено.',
+    can_contact: 'Нет',
+    channel: 'email / manual after approval',
+    forbidden: 'не делать follow-up, пока неясно, было ли первое касание',
+    buttons: [
+      { text: '✅ Ждёт решения Дмитрия', cls: 'decision' },
+      { text: '⏸ HOLD', cls: 'hold' }
+    ]
+  },
+  {
+    rank: 5,
+    lead_id: 'ГСК',
+    name: 'ГСК / ООО «ГСК» завод ЖБИ',
+    status: 'Активный / ждёт выбора канала',
+    status_class: 'status-active',
+    next_step: 'Дмитрий выбирает канал: телефон / WhatsApp Business / email / форма сайта. Потом AI готовит черновик.',
+    can_contact: 'Нет',
+    channel: 'pending',
+    forbidden: 'не писать без approval и без выбранного канала',
+    buttons: [
+      { text: '✅ Ждёт решения Дмитрия', cls: 'decision' },
+      { text: '⏸ HOLD', cls: 'hold' }
+    ]
+  }
+];
+
+const DECISION_CENTER = [
+  {
+    priority: 1, lead: 'ZB23 — Завод «ЖЕЛЕЗОБЕТОН»',
+    decision: 'Ждать ответ до 2026-05-28',
+    options: [{t:'ждать',c:''},{t:'проверить ответ',c:''},{t:'WA draft после даты',c:''},{t:'HOLD',c:'hold'}],
+    after: 'WA Business follow-up draft после 28-го'
+  },
+  {
+    priority: 2, lead: 'EDERA — Эдера',
+    decision: 'Проект закрыт?',
+    options: [{t:'закрыт',c:'warn'},{t:'не закрыт',c:'warn'},{t:'HOLD',c:'hold'}],
+    after: 'Следующий оффер или официальное закрытие проекта'
+  },
+  {
+    priority: 3, lead: 'КЖБИ',
+    decision: 'Какой контакт / ЛПР?',
+    options: [{t:'подтвердить ЛПР',c:''},{t:'найти контакт',c:'warn'},{t:'HOLD',c:'hold'}],
+    after: 'Подготовить черновик первого сообщения'
+  },
+  {
+    priority: 4, lead: 'Завод АТОМ',
+    decision: 'Было ли первое сообщение?',
+    options: [{t:'было',c:''},{t:'не было',c:'warn'},{t:'неизвестно',c:'hold'}],
+    after: 'Follow-up (если было) или первое письмо (если нет)'
+  },
+  {
+    priority: 5, lead: 'ГСК',
+    decision: 'Какой канал?',
+    options: [{t:'телефон',c:''},{t:'WhatsApp',c:''},{t:'email',c:''},{t:'форма',c:''},{t:'HOLD',c:'hold'}],
+    after: 'Подготовить черновик под выбранный канал'
+  }
+];
+
+const BTN_TOOLTIP = 'Действие выполняется через Cline/Telegram после approval Дмитрия. Кнопка не отправляет сообщения.';
+
+const LEAD_COMMANDS = {
+  'ZB23': {
+    what_to_decide: 'Проверить, пришёл ли ответ от ZB23 на email. Если нет — подготовить WhatsApp follow-up после 2026-05-28.',
+    where_to_command: 'Cline (окно чата в VS Code)',
+    commands: [
+      { label: 'Проверить ответ', cmd: 'Проверь, пришёл ли ответ от ZB23 в Яндекс-почту. Файл: data/inbox_messages.json' },
+      { label: 'WA draft после 28-го', cmd: 'Подготовь WhatsApp Business follow-up draft для ZB23 (лид ZB23, завод ЖЕЛЕЗОБЕТОН). Дата отправки — после 2026-05-28.' },
+      { label: 'Залогировать отправку', cmd: 'Залогируй ручную WhatsApp-отправку для ZB23. Дата: [вставить дату]. Канал: WhatsApp Business.' }
+    ],
+    forbidden: 'Не повторять email. Не отправлять PDF. Не писать до 2026-05-28.',
+    log_after: 'Залогируй ручное касание ZB23 — WhatsApp Business — дата [дата] — результат [результат].'
+  },
+  'EDERA': {
+    what_to_decide: 'Подтвердить, закрыт ли проект EDERA корректно. Затем подготовить post-sale offer draft.',
+    where_to_command: 'Cline (окно чата в VS Code)',
+    commands: [
+      { label: 'Проверить статус', cmd: 'Проверь статус проекта EDERA: закрыт ли он корректно? Файл: data/deals.json, 17_client_projects/edera_rest_mini_audit/' },
+      { label: 'Post-sale offer draft', cmd: 'Подготовь post-sale offer draft для EDERA (существующий клиент, мини-аудит оплачен). Следующий шаг — upsell.' },
+      { label: 'Залогировать follow-up', cmd: 'Залогируй follow-up касание EDERA — канал: Telegram — дата: [дата] — результат: [результат].' }
+    ],
+    forbidden: 'Не писать без проверки статуса проекта. Не отправлять без approval.',
+    log_after: 'Залогируй ручное касание EDERA — Telegram — дата [дата] — результат [результат].'
+  },
+  'КЖБИ': {
+    what_to_decide: 'Подтвердить ЛПР и канал связи для КЖБИ, затем подготовить черновик первого сообщения.',
+    where_to_command: 'Cline (окно чата в VS Code)',
+    commands: [
+      { label: 'Подтвердить контакт', cmd: 'Дмитрий подтверждает ЛПР для КЖБИ: имя, должность, контакт. Обнови data/contact_resolution.json.' },
+      { label: 'Подготовить черновик', cmd: 'Подготовь черновик первого b2b-сообщения для КЖБИ. Канал: [уточнит Дмитрий]. Шаблон: 02_templates/b2b_followup_message_templates.md' },
+      { label: 'Залогировать касание', cmd: 'Залогируй первое касание КЖБИ — канал: [канал] — дата: [дата] — результат: [результат].' }
+    ],
+    forbidden: 'Не писать на неподтверждённый контакт. Не выбирать канал без approval Дмитрия.',
+    log_after: 'Залогируй ручное касание КЖБИ — канал [канал] — дата [дата] — результат [результат].'
+  },
+  'ATOM': {
+    what_to_decide: 'Выяснить: первое сообщение Заводу АТОМ было отправлено или только подготовлено?',
+    where_to_command: 'Cline (окно чата в VS Code)',
+    commands: [
+      { label: 'Проверить статус', cmd: 'Проверь статус первого касания Завод АТОМ: было ли оно реально отправлено? Проверь: 13_sales/daily_lead_factory/output/outreach_log_zb23_2026-05-26.md и data/followups.json' },
+      { label: 'Если не было — первое', cmd: 'Подготовь first message draft для Завода АТОМ. Канал: email. Файл шаблона: 17_client_projects/lead_generation_test_jbi_krasnodar/followup/ATOM_FOLLOWUP_APPROVAL_PACK.md' },
+      { label: 'Если было — follow-up', cmd: 'Подготовь follow-up draft для Завода АТОМ. Прошло [N] дней с первого касания.' }
+    ],
+    forbidden: 'Не делать follow-up пока неясно, было ли первое касание. Не дублировать отправку.',
+    log_after: 'Залогируй касание Завод АТОМ — email — дата [дата] — тип: [first / followup] — результат [результат].'
+  },
+  'ГСК': {
+    what_to_decide: 'Выбрать канал для ГСК: телефон / WhatsApp Business / email / форма сайта. Затем подготовить black.',
+    where_to_command: 'Cline (окно чата в VS Code)',
+    commands: [
+      { label: 'Выбрать канал', cmd: 'Дмитрий выбирает канал для ГСК (ООО «ГСК», завод ЖБИ): телефон / WhatsApp Business / email / форма сайта. Обнови data/contact_resolution.json.' },
+      { label: 'Подготовить черновик', cmd: 'Подготовь first message draft для ГСК (завод ЖБИ). Канал: [уточнит Дмитрий]. Шаблон: 02_templates/b2b_followup_message_templates.md' },
+      { label: 'Залогировать касание', cmd: 'Залогируй первое касание ГСК — канал: [канал] — дата: [дата] — результат: [результат].' }
+    ],
+    forbidden: 'Не писать без approval и без выбранного канала. Не использовать личный номер без согласования.',
+    log_after: 'Залогируй ручное касание ГСК — канал [канал] — дата [дата] — результат [результат].'
+  }
+};
+
+function toggleLeadCmd(id) {
+  const body = document.getElementById('cmd-body-' + id);
+  const arrow = document.getElementById('cmd-arrow-' + id);
+  if (body) { body.classList.toggle('open'); }
+  if (arrow) { arrow.textContent = body && body.classList.contains('open') ? '▼' : '▶'; }
+}
+
+function copyCmd(text) {
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(text).then(() => {
+      // simple visual feedback
+      const tip = document.createElement('div');
+      tip.textContent = '✅ Скопировано в буфер';
+      tip.style.cssText = 'position:fixed;bottom:24px;right:24px;background:#27ae60;color:#fff;padding:8px 16px;border-radius:6px;font-size:12px;z-index:9999;';
+      document.body.appendChild(tip);
+      setTimeout(() => tip.remove(), 1800);
+    });
+  }
+}
+
+function renderLeads() {
+  const grid = document.getElementById('leads-grid');
+  grid.innerHTML = ACTIVE_WORK_QUEUE.map(l => {
+    const cmds = LEAD_COMMANDS[l.lead_id] || null;
+    const cmdBlock = cmds ? `
+      <div class="lead-cmd-card">
+        <div class="lead-cmd-header" onclick="toggleLeadCmd('${l.lead_id}')">
+          <span>🗂️ Команды для Cline — ${l.lead_id}</span>
+          <span id="cmd-arrow-${l.lead_id}">▶</span>
+        </div>
+        <div class="lead-cmd-body" id="cmd-body-${l.lead_id}">
+          <div class="cmd-row">
+            <span class="cmd-label">Что решить</span>
+            <span class="cmd-value">${cmds.what_to_decide}</span>
+          </div>
+          <div class="cmd-row">
+            <span class="cmd-label">Куда давать</span>
+            <span class="cmd-value" style="color:#a78bda;">⌨️ ${cmds.where_to_command}</span>
+          </div>
+          <div class="cmd-section-divider">📋 Готовые команды — скопируй и вставь в Cline:</div>
+          ${cmds.commands.map((c,i) => `
+          <div style="margin-top:6px;">
+            <div style="font-size:10px;color:var(--muted);margin-bottom:2px;">${c.label}:</div>
+            <div class="cmd-code" onclick="copyCmd(\`${c.cmd.replace(/`/g,"'")}\`)" title="Нажми чтобы скопировать">${c.cmd}</div>
+          </div>`).join('')}
+          <div class="cmd-section-divider">🚫 Что запрещено:</div>
+          <div class="cmd-forbidden">${cmds.forbidden}</div>
+          <div class="cmd-section-divider">📝 После ручного действия — залогировать через Cline:</div>
+          <div class="cmd-log">${cmds.log_after}</div>
+        </div>
+      </div>` : '';
+    return `
+    <div class="lead-card">
+      <div class="lead-card-header">
+        <div style="display:flex;align-items:center;gap:8px;">
+          <div class="lead-rank">${l.rank}</div>
+          <div>
+            <div class="lead-name">${l.name}</div>
+            <span class="lead-id">${l.lead_id}</span>
+          </div>
+        </div>
+        <span class="lead-status-badge ${l.status_class}">${l.status}</span>
+      </div>
+      <div class="next-step-row">
+        <div class="label">📌 Следующий шаг</div>
+        <div class="val">${l.next_step}</div>
+      </div>
+      <div class="lead-grid" style="margin-top:10px;">
+        <div class="lead-field">
+          <span class="lead-field-label">Можно писать сейчас</span>
+          <span class="lead-field-value no">${l.can_contact}</span>
+        </div>
+        <div class="lead-field">
+          <span class="lead-field-label">Канал</span>
+          <span class="lead-field-value">${l.channel}</span>
+        </div>
+      </div>
+      <div class="forbidden-row">
+        <div class="label">🚫 Что запрещено</div>
+        <div class="val">${l.forbidden}</div>
+      </div>
+      <div class="btn-row">
+        ${l.buttons.map(b => `<span class="btn-pseudo ${b.cls}" title="${BTN_TOOLTIP}">${b.text}</span>`).join('')}
+      </div>
+      <div class="btn-pseudo-note">⚠️ Кнопки не отправляют сообщения — только подсказка. Все отправки через Cline/Telegram после approval.</div>
+      ${cmdBlock}
+    </div>`;
+  }).join('');
+}
+
+
+function renderDecisionCenter() {
+  const tbody = document.getElementById('decision-tbody');
+  tbody.innerHTML = DECISION_CENTER.map(d => `
+    <tr>
+      <td><span class="priority-num">${d.priority}</span></td>
+      <td style="color:var(--text);font-weight:600;">${d.lead}</td>
+      <td style="color:#7dd3fc;">${d.decision}</td>
+      <td><div class="decision-options">${d.options.map(o=>`<span class="opt-pill ${o.c}">${o.t}</span>`).join('')}</div></td>
+      <td style="color:var(--textlow);">${d.after}</td>
+    </tr>
+  `).join('');
+}
+
+function toggleArchive() {
+  const btn = document.getElementById('archive-toggle');
+  const content = document.getElementById('archive-content');
+  btn.classList.toggle('open');
+  content.classList.toggle('visible');
+}
+
+async function loadState() {
+  try {
+    const resp = await fetch('./dashboard_state.json?_=' + Date.now());
+    if (!resp.ok) throw new Error('HTTP ' + resp.status);
+    const s = await resp.json();
+
+    // Header
+    if (s.generated_at) {
+      const d = new Date(s.generated_at);
+      document.getElementById('gen-ts').textContent = 'Обновлено: ' + d.toLocaleString('ru-RU');
+    }
+    if (s.system_status_ru) {
+      document.getElementById('sys-status').textContent = '⚡ ' + s.system_status_ru;
+    }
+
+    // Main action
+    if (s.main_action) {
+      document.getElementById('main-action-text').textContent = s.main_action.text;
+    }
+
+    // Forbidden
+    const forbList = document.getElementById('forbidden-list');
+    const forbItems = s.forbidden_now || s.forbidden_actions || [];
+    forbList.innerHTML = forbItems.map(f => `
+      <div class="list-item forbidden">
+        <span class="icon">🚫</span>
+        <span class="text">${f}</span>
+      </div>
+    `).join('') || '<p style="color:var(--muted)">Нет данных</p>';
+
+    // Risks
+    const risksBlock = document.getElementById('risks-block');
+    const risks = s.risks || [];
+    risksBlock.innerHTML = risks.map(r => `
+      <div class="risk-row">
+        <span class="risk-id">${r.id}</span>
+        <span class="risk-title">${r.title}<br><small style="color:var(--muted);font-size:11px;">${r.note||''}</small></span>
+        <span class="risk-level-${r.level}">${r.level}</span>
+        <span class="risk-status-${r.status}">${r.status}</span>
+      </div>
+    `).join('') || '<p style="padding:16px;color:var(--muted)">Нет данных</p>';
+
+    // Followup queue
+    const fqBlock = document.getElementById('followup-queue');
+    const fq = s.followup_queue || [];
+    const fqArr = Array.isArray(fq) ? fq : [fq];
+    fqBlock.innerHTML = fqArr.length > 0 ? fqArr.map(q => `
+      <div class="queue-card">
+        <div class="queue-header">
+          <strong style="font-size:14px;color:#fff;">${q.lead || q.lead_id || '—'}</strong>
+          <span class="badge badge-yellow queue-id">${q.queue_id || '—'}</span>
+        </div>
+        <div class="queue-meta">
+          <div class="queue-field">
+            <span class="queue-field-label">Статус</span>
+            <span class="queue-field-value">${q.status_ru || q.status || '—'}</span>
+          </div>
+          <div class="queue-field">
+            <span class="queue-field-label">Следующий контакт</span>
+            <span class="queue-field-value" style="color:#7dd3fc;">${q.next_contact_date || '—'}</span>
+          </div>
+          <div class="queue-field">
+            <span class="queue-field-label">Канал</span>
+            <span class="queue-field-value">${q.next_channel || '—'}</span>
+          </div>
+        </div>
+        ${q.notes ? `<div class="queue-notes">${q.notes}</div>` : ''}
+      </div>
+    `).join('') : '<p style="color:var(--muted)">Очередь пуста — ждём решений Дмитрия</p>';
+
+    // Sources
+    const srcList = document.getElementById('sources-list');
+    const srcs = s.sources_read || [];
+    srcList.innerHTML = srcs.map(s => `<div class="source-item">📄 ${s}</div>`).join('')
+      || '<p style="color:var(--muted)">Нет данных</p>';
+
+    // Legacy table
+    const legacyTbody = document.getElementById('legacy-tbody');
+    const legacy = s.legacy_leads || [];
+    legacyTbody.innerHTML = legacy.length > 0 ? legacy.map(l => `
+      <tr>
+        <td>${l.name}</td>
+        <td>${l.status_ru || l.status}</td>
+        <td>${l.reason || '—'}</td>
+        <td>${l.last_known_date || '—'}</td>
+        <td style="color:var(--red);">${l.can_contact ? 'Да' : 'Нет'}</td>
+        <td>${l.action || '—'}</td>
+      </tr>
+    `).join('') : '<tr><td colspan="6" style="color:var(--muted);text-align:center;padding:12px;">Нет данных</td></tr>';
+
+  } catch (e) {
+    console.warn('dashboard_state.json не загружен:', e.message);
+    document.getElementById('main-action-text').textContent =
+      'dashboard_state.json недоступен. Запустите: node tools/dashboard/build_dashboard_state.mjs';
+  }
+}
+
+// Init
+renderLeads();
+renderDecisionCenter();
+loadState();
+</script>
+</body>
+</html>

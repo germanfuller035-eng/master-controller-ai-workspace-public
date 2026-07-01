@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "memory_curator_decision",
+  "type": "object",
+  "required": ["decision_id", "proposal_id", "decision", "reviewed_by", "reviewed_at", "reason"],
+  "properties": {
+    "decision_id": {"type": "string"},
+    "proposal_id": {"type": "string"},
+    "decision": {"type": "string"},
+    "reviewed_by": {"type": "string"},
+    "reviewed_at": {"type": "string"},
+    "reason": {"type": "string"}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,12 @@
+{
+  "title": "agent_workflow_snapshot",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["synthetic", "agents", "workflows", "evidence"],
+  "properties": {
+    "synthetic": {"type": "boolean"},
+    "agents": {"type": "array"},
+    "workflows": {"type": "array"},
+    "evidence": {"type": "array"}
+  }
+}

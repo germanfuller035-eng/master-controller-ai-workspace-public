@@ -1,0 +1,15 @@
+{
+  "campaign_id": "camp_mini_audit_inbound",
+  "ready": false,
+  "permitted_status": "DRAFT",
+  "active_allowed": false,
+  "failed_conditions": [
+    "owner_capacity_confirmed"
+  ],
+  "blockers": [
+    {
+      "condition": "owner_capacity_confirmed",
+      "severity": "MEDIUM"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-26",
+  "session": "POLICY_SECRETS_AUDIT_EMERGENCY_CONTROL_V1",
+  "default_state": "STOP_INACTIVE",
+  "stop_blocks": ["outbound_send", "publish_external", "production_deploy", "production_db_write", "browser_action", "payment_operation", "delete_production_data", "permission_change", "secret_issuance", "direct_secret_read", "irreversible_action"],
+  "stop_actions": ["STOP_ALL_AGENTS", "OUTBOUND_OFF", "PRODUCTION_WRITE_OFF", "PAYMENTS_OFF", "BROWSER_ACTIONS_OFF", "REVOKE_ACTIVE_APPROVALS"],
+  "approval_revocation": {
+    "active_approvals": "REVOKED",
+    "new_r4_r5_approvals": "DENY_UNTIL_STOP_CLEARED"
+  },
+  "queues": {
+    "outbound": "DISABLED",
+    "production_write": "DISABLED",
+    "payment": "DISABLED",
+    "browser_action": "DISABLED"
+  }
+}

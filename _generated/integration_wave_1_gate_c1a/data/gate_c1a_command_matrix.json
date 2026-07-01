@@ -1,0 +1,31 @@
+{
+  "gate": "C1A",
+  "commands_enabled": 6,
+  "payment_commands_enabled": 0,
+  "send_commands_enabled": 0,
+  "flags": {
+    "COMMERCIAL_READ_API": "ON",
+    "COMMERCIAL_COMMAND_API": "ON",
+    "COMMERCIAL_COMMAND_C1A": "ON",
+    "COMMERCIAL_PAYMENT_COMMAND": "OFF",
+    "COMMERCIAL_SEND": "OFF"
+  },
+  "commands": [
+    { "n": 1, "fn": "createOpportunity", "route": "POST /opportunities", "gate": "commandC1A", "enabled": true, "auth": "owner device (requireAuth)", "revision": "expectedRevision", "idempotency": "Idempotency-Key + opp_<hash>", "send": "NONE" },
+    { "n": 2, "fn": "prepareOffer", "route": "POST /opportunities/:id/prepare-offer", "gate": "commandC1A", "enabled": true, "auth": "owner device", "send": "NONE", "note": "immutable product snapshot; price from Product OS snapshot; unknown price not zero" },
+    { "n": 3, "fn": "recordOwnerDecision", "route": "POST /offers/:id/decision", "gate": "commandC1A", "enabled": true, "auth": "owner device", "send": "NONE", "note": "APPROVE wins the deal in the same writer flow; decision is an authority record" },
+    { "n": 4, "fn": "createHandoff", "route": "POST /deals/:id/delivery-handoff", "gate": "commandC1A", "enabled": true, "auth": "owner device", "send": "NONE", "note": "only from WON deal; product snapshot + acceptance criteria attached" },
+    { "n": 5, "fn": "createProject", "route": "POST /delivery/handoffs/:id/create-project", "gate": "commandC1A", "enabled": true, "auth": "owner device", "send": "NONE", "note": "Delivery OS contract; single project truth" },
+    { "n": 6, "fn": "createInvoice", "route": "POST /finance/invoices", "gate": "commandC1A", "enabled": true, "auth": "owner device", "send": "NONE", "note": "status DRAFT; real_issuance DISABLED; bank_integration NONE; no payment" },
+    { "n": 7, "fn": "recordPayment", "route": "POST /finance/payments/record", "gate": "paymentCommand", "enabled": false, "auth": "owner device", "send": "NONE", "note": "Gate C1-B — DISABLED here; returns 403 FEATURE_DISABLED" }
+  ],
+  "production_verification": {
+    "no_auth_blocked": "401",
+    "service_token_blocked": "401",
+    "payment_feature_disabled": "403 FEATURE_DISABLED (in-process probe, paymentCommand OFF)",
+    "test_only_e2e": "PASS (rev 91→97, 6 entities, idempotent replay no bump)",
+    "real_messages_sent": 0,
+    "payment_facts_created": 0,
+    "smtp_calls": 0
+  }
+}

@@ -1,0 +1,2 @@
+510bfb461a0f049f8389a0483a875e19bee61fc54ee90cb918fc8a7f738cbe29 *MasterController-release-v0.6.0-rc7.aab
+5185b8596d01c8daf0759a0f4b104f25fa72d40fcf0a8681666fd924f4fdd96d *MasterController-release-v0.6.0-rc7.apk

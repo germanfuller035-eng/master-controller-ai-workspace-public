@@ -1,0 +1,17 @@
+{
+  "additionalProperties": true,
+  "properties": {
+    "active": {},
+    "contact_ref": {},
+    "reason": {},
+    "synthetic": {}
+  },
+  "required": [
+    "synthetic",
+    "contact_ref",
+    "reason",
+    "active"
+  ],
+  "title": "Suppression Entry",
+  "type": "object"
+}

@@ -1,0 +1,16 @@
+{
+  "manifest_version":1,"gate":"MULTICHANNEL_REVENUE_ENGINE","base_evidence_head":"b844d45",
+  "whole_repository_deployment":false,
+  "note":"Additive multichannel core (no-send, read/inbound-gated). 7 backend files (6 new + 1 modified index.mjs). No new store/writer/ledger/sendpath; new-channel outbound OFF. Android 0.6.0-rc1 separate. Credential files NOT in git.",
+  "entries":[
+    {"path":"tools/commercial_core/lib/source_registry.mjs","sha256_16":"c7b83fedf299507b","before":"ABSENT","restart_required":true,"rollback":"remove"},
+    {"path":"tools/commercial_core/lib/identity_graph.mjs","sha256_16":"f1549f6d21bf6d4f","before":"ABSENT","restart_required":true,"rollback":"remove"},
+    {"path":"tools/commercial_core/lib/consent_policy.mjs","sha256_16":"4b978a252a216931","before":"ABSENT","restart_required":true,"rollback":"remove"},
+    {"path":"tools/commercial_core/lib/channel_router.mjs","sha256_16":"e20b28d504671847","before":"ABSENT","restart_required":true,"rollback":"remove"},
+    {"path":"tools/commercial_core/lib/multichannel_agents.mjs","sha256_16":"8e1b71852cebebb0","before":"ABSENT","restart_required":true,"rollback":"remove"},
+    {"path":"tools/mater_controller_api/src/commercial/multichannel.mjs","sha256_16":"7ee6466671ab457f","before":"ABSENT","restart_required":true,"rollback":"remove"},
+    {"path":"tools/mater_controller_api/src/server/index.mjs","sha256_16":"95d94e3cbeb96433","before":"3e84d149ff4276d8","restart_required":true,"rollback":"restore backup (3e84d149)"}
+  ],
+  "config_changes":{"WEB_INTAKE":"true (ON)","VK_DISCOVERY":"false (PENDING_CREDENTIAL)","VK_INBOUND":"false","MAX_INBOUND":"false","CLIENT_TELEGRAM_INBOUND":"false","COMMERCIAL_SEND":"OFF (unchanged)","SEND_ALLOWED_LIVE":"OFF","AUTOSEND":"BLOCKED","new_channel_outbound":"OFF"},
+  "counts":{"backend_deployable_files":7,"new_files":6,"modified_files":1,"new_store_or_writer_or_ledger_or_sendpath":0}
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-26",
+  "session": "KNOWLEDGE_MEMORY_QDRANT_DOCLING_V1",
+  "mandatory_fields": ["artifact_id", "source_id", "source_uri", "source_type", "data_class", "sha256", "created_at"],
+  "date_requirement": "source_date_OR_created_at_REQUIRED",
+  "hash_algorithm": "sha256",
+  "artifact_id_strategy": "deterministic_sha256_prefix",
+  "synthetic_fixtures_must_be_marked": true,
+  "unknown_data_class_policy": "DENY",
+  "secret_like_content_policy": "DENY",
+  "allowed_data_classes": ["PUBLIC", "BUSINESS_INTERNAL", "SYNTHETIC_PUBLIC", "SYNTHETIC_SENSITIVE"]
+}

@@ -1,0 +1,92 @@
+{
+  "schema": "consolidation.governance.v1",
+  "note": "MP13-26 — owner decision backlog, product/status/capacity reconciliation, security/reliability consolidation, legacy retirement manifest, generated-artifact policy. Facts not changed; recommendations kept separate from canonical status; nothing deleted.",
+
+  "owner_decision_backlog": [
+    { "decision_id": "od01", "domain": "capacity", "question": "Weekly owner review capacity?", "recommendation": "owner provides", "blocks_consolidation": false, "blocks_live_verification": false, "blocks_commercial_launch": true, "owner_status": "OWNER_DECISION_REQUIRED" },
+    { "decision_id": "od02", "domain": "capacity", "question": "Delivery capacity?", "blocks_commercial_launch": true, "blocks_live_verification": false, "blocks_consolidation": false, "owner_status": "OWNER_DECISION_REQUIRED" },
+    { "decision_id": "od03", "domain": "capacity", "question": "Support capacity?", "blocks_commercial_launch": true, "blocks_live_verification": false, "blocks_consolidation": false, "owner_status": "OWNER_DECISION_REQUIRED" },
+    { "decision_id": "od04", "domain": "finance", "question": "Monthly revenue target?", "blocks_commercial_launch": false, "blocks_live_verification": false, "blocks_consolidation": false, "owner_status": "OWNER_DECISION_REQUIRED" },
+    { "decision_id": "od05", "domain": "product", "question": "Product status approvals (which become ACTIVE)?", "blocks_commercial_launch": true, "blocks_live_verification": false, "blocks_consolidation": false, "owner_status": "OWNER_DECISION_REQUIRED" },
+    { "decision_id": "od06", "domain": "product", "question": "Product pricing approvals?", "blocks_commercial_launch": true, "blocks_live_verification": false, "blocks_consolidation": false, "owner_status": "OWNER_DECISION_REQUIRED" },
+    { "decision_id": "od07", "domain": "product", "question": "Start Pack price conflict resolution?", "blocks_commercial_launch": false, "owner_status": "OWNER_DECISION_REQUIRED" },
+    { "decision_id": "od08", "domain": "product", "question": "Pilot product selection?", "blocks_commercial_launch": false, "owner_status": "OWNER_DECISION_REQUIRED" },
+    { "decision_id": "od09", "domain": "product", "question": "Product pause/merge decisions?", "blocks_commercial_launch": false, "owner_status": "OWNER_DECISION_REQUIRED" },
+    { "decision_id": "od10", "domain": "marketing", "question": "Approved claims?", "blocks_commercial_launch": true, "owner_status": "OWNER_DECISION_REQUIRED" },
+    { "decision_id": "od11", "domain": "marketing", "question": "Approved cases?", "blocks_commercial_launch": false, "owner_status": "OWNER_DECISION_REQUIRED" },
+    { "decision_id": "od12", "domain": "finance", "question": "Cash balances?", "blocks_commercial_launch": false, "owner_status": "OWNER_DECISION_REQUIRED" },
+    { "decision_id": "od13", "domain": "finance", "question": "Tax regime/rate?", "blocks_commercial_launch": false, "owner_status": "LEGAL_REVIEW_REQUIRED" },
+    { "decision_id": "od14", "domain": "finance", "question": "Expense classification?", "blocks_commercial_launch": false, "owner_status": "OWNER_DECISION_REQUIRED" },
+    { "decision_id": "od15", "domain": "lead_hunter", "question": "External discovery credentials?", "blocks_commercial_launch": false, "blocks_live_verification": true, "owner_status": "OWNER_DECISION_REQUIRED" },
+    { "decision_id": "od16", "domain": "reliability", "question": "Alert delivery channel?", "blocks_live_verification": true, "blocks_commercial_launch": false, "owner_status": "OWNER_DECISION_REQUIRED" },
+    { "decision_id": "od17", "domain": "reliability", "question": "SLO targets?", "blocks_live_verification": true, "owner_status": "OWNER_DECISION_REQUIRED" },
+    { "decision_id": "od18", "domain": "reliability", "question": "RPO/RTO?", "blocks_live_verification": true, "owner_status": "OWNER_DECISION_REQUIRED" },
+    { "decision_id": "od19", "domain": "reliability", "question": "Backup encryption?", "blocks_live_verification": true, "owner_status": "OWNER_DECISION_REQUIRED" },
+    { "decision_id": "od20", "domain": "reliability", "question": "Off-site backup?", "blocks_live_verification": true, "owner_status": "OWNER_DECISION_REQUIRED" },
+    { "decision_id": "od21", "domain": "security", "question": "Communication-monitor file disposition (21 files)?", "blocks_live_verification": false, "blocks_commercial_launch": false, "owner_status": "OWNER_DECISION_REQUIRED" },
+    { "decision_id": "od22", "domain": "compliance", "question": "Legal/privacy review (privacy, retention, consent, tax)?", "blocks_commercial_launch": true, "owner_status": "LEGAL_REVIEW_REQUIRED" },
+    { "decision_id": "od23", "domain": "git", "question": "Git remote policy (none exists)?", "blocks_consolidation": false, "blocks_live_verification": false, "owner_status": "OWNER_DECISION_REQUIRED" },
+    { "decision_id": "od24", "domain": "client", "question": "Telegram owner acceptance smoke?", "blocks_live_verification": true, "owner_status": "OWNER_DECISION_REQUIRED" },
+    { "decision_id": "od25", "domain": "client", "question": "Android physical-device acceptance?", "blocks_live_verification": true, "owner_status": "OWNER_DECISION_REQUIRED" },
+    { "decision_id": "od26", "domain": "launch", "question": "Authorize future live production verification?", "blocks_live_verification": true, "owner_status": "OWNER_DECISION_REQUIRED" },
+    { "decision_id": "od27", "domain": "launch", "question": "Controlled commercial-cycle approval (limits)?", "blocks_commercial_launch": true, "owner_status": "OWNER_DECISION_REQUIRED" }
+  ],
+  "decision_summary": {
+    "total": 27,
+    "blocking_consolidation": 0,
+    "blocking_live_verification": 11,
+    "blocking_commercial_launch": 10,
+    "non_blocking": "remainder (deferrable)",
+    "legal_review_required": 2
+  },
+
+  "product_reconciliation": {
+    "note": "MP17 — facts NOT changed. Counts as last confirmed by Revenue/Product canonical source.",
+    "products_total": 18, "active": 2, "draft": 7, "planned": 9,
+    "mini_audit": { "price": "10000 RUB CONFIRMED", "macro_phases": 5, "detailed_stages": 18, "readiness": "recommendation_separate_from_canonical_status", "no_guaranteed_business_outcome": true },
+    "digital_presence_check": { "price": "UNKNOWN unless owner-approved", "readiness": "recommendation_separate", "status": "PLANNED/DRAFT per source" },
+    "rule": "readiness recommendation is separate from canonical status; PLANNED product cannot be READY_TO_MARKET; status not auto-promoted"
+  },
+
+  "capacity_reconciliation": {
+    "note": "MP19 — single owner capacity input contract; all UNKNOWN until owner provides; launch gates block on UNKNOWN.",
+    "unknown_capacities": ["owner_review", "sales", "delivery", "support", "incident_response", "campaign", "release_verification"],
+    "rule": "no numbers filled without owner; campaigns + launch gates block on UNKNOWN capacity"
+  },
+
+  "security_consolidation": {
+    "note": "MP20 — Security findings not changed without evidence.",
+    "tracked_live_secrets": 0, "secret_values_in_docs": 0, "real_data_in_fixtures": 0,
+    "security_release_gate": "READY_FOR_OWNER_REVIEW",
+    "communication_files_disposition": "21 classified (KEEP_RESTRICTED=3, KEEP_AUDIT_EVIDENCE=5, REDACT_AND_TRACK=4, QUARANTINE=4, ARCHIVE=4, DELETE_AFTER_APPROVAL=1)",
+    "encryption_live_verification_required": ["workstation", "vps", "android_room", "file_vault", "backups"],
+    "legal_flags": ["privacy", "retention", "consent", "tax"]
+  },
+
+  "reliability_consolidation": {
+    "note": "MP21 — production NOT marked HEALTHY.",
+    "services": 16, "spof": 5, "health_checks": 43, "sli": 15, "slo_proposals": 8, "alerts": 13,
+    "runbooks": 25, "backup_assets": 11, "recovery_plans": 12,
+    "release_readiness": "READY_FOR_INTERNAL_REVIEW",
+    "live_health_status": "UNKNOWN", "alert_channel": "NONE_SELECTED", "owner_capacity": "UNKNOWN"
+  },
+
+  "legacy_retirement_manifest": {
+    "note": "MP22 — retirement decisions consolidated. NOTHING deleted; all owner-gated.",
+    "items": [
+      { "item": "37 emergency/getMe/route scripts (tools/telegram_gateway)", "classification": "HISTORICAL", "runtime_reference": false, "test_reference": false, "real_data": false, "network_capability": true, "recommended_disposition": "MOVE_TO_ARCHIVE", "owner_approval": "REQUIRED", "earliest_safe_stage": "post-consolidation", "rollback": "git history" },
+      { "item": "21 excluded communication-monitor files (main-disk)", "classification": "MIXED (send/real-data/credential-ref)", "runtime_reference": "deploy reference only", "real_data": true, "network_capability": true, "recommended_disposition": "QUARANTINE/ARCHIVE/DELETE_AFTER_APPROVAL per Security", "owner_approval": "REQUIRED", "earliest_safe_stage": "owner decision", "rollback": "main-disk originals retained" },
+      { "item": "feature/analytics-os-metrics-reporting-v1 (8014e43)", "classification": "SUPERSEDED", "runtime_reference": false, "test_reference": false, "real_data": false, "network_capability": false, "recommended_disposition": "KEEP_REFERENCE (do not delete)", "owner_approval": "REQUIRED", "earliest_safe_stage": "after launch", "rollback": "branch retained" },
+      { "item": "git bundles (*.gitbundle)", "classification": "GENERATED", "recommended_disposition": "GENERATED_IGNORE (gitignored, kept local)", "owner_approval": "n/a", "rollback": "regenerate" }
+    ],
+    "deletions_executed": 0
+  },
+
+  "generated_artifact_policy": {
+    "note": "MP23 — _generated/ classification. No mass delete; .gitignore changed only if proven necessary.",
+    "TRACK": ["reports", "data manifests", "source mirrors", "SHA256 manifests", "samples"],
+    "DO_NOT_TRACK": ["*.gitbundle (large binary)", "temp restore dirs"],
+    "KEEP_LOCAL": ["per-OS backups"],
+    "OWNER_REVIEW": ["any real-data-sensitive output (none currently tracked)"]
+  }
+}

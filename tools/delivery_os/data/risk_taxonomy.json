@@ -1,0 +1,29 @@
+{
+  "schema": "delivery_os.risk_taxonomy.v1",
+  "version": "1.0",
+  "categories": [
+    {"key": "client_input_delay", "default_probability": "high", "default_impact": "medium", "trigger": "required input not received by Day N", "mitigation": "early input request + fallback", "contingency": "pause clock"},
+    {"key": "unclear_scope", "default_probability": "medium", "default_impact": "high", "trigger": "ambiguous deliverable", "mitigation": "scope freeze + acceptance criteria", "contingency": "change request"},
+    {"key": "owner_overload", "default_probability": "medium", "default_impact": "high", "trigger": "owner-days > capacity", "mitigation": "capacity planner + product mix", "contingency": "reschedule"},
+    {"key": "technical_uncertainty", "default_probability": "medium", "default_impact": "medium", "trigger": "unknown tech requirement", "mitigation": "spike task", "contingency": "scope reduction"},
+    {"key": "credential_access", "default_probability": "medium", "default_impact": "high", "trigger": "access not granted", "mitigation": "client-side deploy option", "contingency": "handoff guide"},
+    {"key": "third_party_dependency", "default_probability": "medium", "default_impact": "medium", "trigger": "vendor unavailable", "mitigation": "alternative vendor", "contingency": "timeline extension"},
+    {"key": "domain_hosting", "default_probability": "medium", "default_impact": "medium", "trigger": "domain/hosting issue", "mitigation": "verify access early", "contingency": "client-side"},
+    {"key": "legal_content", "default_probability": "low", "default_impact": "high", "trigger": "legal/content concern", "mitigation": "legal placeholders + disclaimer", "contingency": "owner review"},
+    {"key": "data_privacy", "default_probability": "low", "default_impact": "high", "trigger": "PII handling", "mitigation": "privacy checklist", "contingency": "escalate"},
+    {"key": "security", "default_probability": "low", "default_impact": "high", "trigger": "security gap", "mitigation": "security checklist", "contingency": "block release"},
+    {"key": "client_approval_delay", "default_probability": "high", "default_impact": "medium", "trigger": "no approval by Day N", "mitigation": "clear review window", "contingency": "pause clock"},
+    {"key": "integration_failure", "default_probability": "medium", "default_impact": "high", "trigger": "integration test fails", "mitigation": "early integration test", "contingency": "fallback path"},
+    {"key": "vendor_api_limits", "default_probability": "low", "default_impact": "medium", "trigger": "rate/quota hit", "mitigation": "respect limits", "contingency": "queue/retry"},
+    {"key": "quality_risk", "default_probability": "medium", "default_impact": "high", "trigger": "QA fail", "mitigation": "QA gates", "contingency": "rework"},
+    {"key": "timeline_risk", "default_probability": "medium", "default_impact": "medium", "trigger": "milestone slip", "mitigation": "critical path tracking", "contingency": "rescope"},
+    {"key": "commercial_mismatch", "default_probability": "low", "default_impact": "high", "trigger": "deliverable != sold scope", "mitigation": "scope freeze + Revenue OS handoff", "contingency": "new offer"}
+  ],
+  "product_defaults": {
+    "mini_audit": ["unclear_scope", "quality_risk", "client_input_delay"],
+    "business_website": ["client_input_delay", "credential_access", "domain_hosting", "owner_overload", "timeline_risk"],
+    "lead_system": ["security", "integration_failure", "commercial_mismatch", "data_privacy"],
+    "ai_front_office": ["data_privacy", "security", "quality_risk"],
+    "landing_sprint": ["client_input_delay", "client_approval_delay", "quality_risk"]
+  }
+}

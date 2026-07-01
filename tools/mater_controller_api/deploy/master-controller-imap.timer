@@ -1,0 +1,11 @@
+[Unit]
+Description=Master Controller IMAP reply sync timer (every 15 min)
+
+[Timer]
+OnBootSec=3min
+OnUnitActiveSec=15min
+RandomizedDelaySec=120
+Persistent=true
+
+[Install]
+WantedBy=timers.target

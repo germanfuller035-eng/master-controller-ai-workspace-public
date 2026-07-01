@@ -1,0 +1,11 @@
+{
+  "scenario": "P",
+  "production_affected": false,
+  "name": "Release rollback readiness",
+  "ok": true,
+  "steps": [
+    "rollback trigger defined",
+    "no overwrite of newer canonical data",
+    "health validation"
+  ]
+}

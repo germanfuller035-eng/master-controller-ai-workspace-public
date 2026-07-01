@@ -1,0 +1,12 @@
+CTRL_LEDGER: BATCH_BEGIN screens=1 only=transport total_controls=282
+CTRL_LEDGER: SCREEN_BEGIN screen=transport controls=8 anchor=delivery_review
+CTRL_LEDGER: ROW {"control_id":"CTRL-0301","screen":"transport","selector":"screen.transport.control.back","type":"IconButton","risk":"ACTION","visible":true,"enabled":true,"action":"observe","status":"PASS_VISIBLE_ENABLED"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0302","screen":"transport","selector":"screen.transport.control.refresh","type":"TextButton","risk":"REFRESH","visible":true,"enabled":true,"action":"refresh","status":"PASS_LIVE_READ"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0303","screen":"transport","selector":"dr_${rec.leadId}","type":"SectionCard","risk":"NAVIGATION","visible":false,"enabled":false,"action":"delivery_review_empty:Нет записей на сверку","status":"PASS_EMPTY_STATE_VERIFIED"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0304","screen":"transport","selector":"screen.transport.control.back","type":"IconButton","risk":"ACTION","visible":true,"enabled":true,"action":"observe","status":"PASS_VISIBLE_ENABLED"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0305","screen":"transport","selector":"screen.transport.control.refresh","type":"TextButton","risk":"REFRESH","visible":true,"enabled":true,"action":"refresh","status":"PASS_LIVE_READ"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0312","screen":"transport","selector":"screen.transport.control.back","type":"SectionCard","risk":"DANGEROUS","visible":true,"enabled":true,"action":"open_then_cancel","status":"PASS_UNSAFE_ACTION_BLOCKED"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0313","screen":"transport","selector":"screen.transport.control.back","type":"IconButton","risk":"ACTION","visible":true,"enabled":true,"action":"observe","status":"PASS_VISIBLE_ENABLED"}
+CTRL_LEDGER: ROW {"control_id":"CTRL-0314","screen":"transport","selector":"screen.transport.control.refresh","type":"TextButton","risk":"REFRESH","visible":true,"enabled":true,"action":"refresh","status":"PASS_LIVE_READ"}
+CTRL_LEDGER: SCREEN_END screen=transport executed=8 passed=8 failed=0 unexecuted=0
+CTRL_LEDGER: BATCH_END executed=8 passed=8 failed=0 unexecuted=0

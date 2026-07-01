@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-26",
+  "session": "MASTER_CONTROLLER_MCP_GATEWAY_V1",
+  "scope_kind": "mcp_gateway_tool_scopes",
+  "default_environment": "LOCAL_SYNTHETIC",
+  "assigned_worktree_policy": {
+    "root_source": "request.input.assigned_worktree_or_repo_root",
+    "deny_absolute_escape": true,
+    "deny_symlink_escape": true,
+    "deny_path_traversal": true,
+    "max_file_bytes": 1048576,
+    "binary_files": "DENY_BY_DEFAULT"
+  },
+  "artifact_policy": {
+    "allowed_write_root": "_generated/mcp_gateway_v1/artifacts",
+    "deny_absolute_path": true,
+    "hash_outputs": true,
+    "manifest": "_generated/mcp_gateway_v1/artifacts/artifact_manifest.jsonl"
+  },
+  "git_policy": {
+    "repo_root": "current_worktree",
+    "read_only": true,
+    "allow_ref_args": true,
+    "deny_mutating_commands": true
+  },
+  "test_runner_policy": {
+    "cwd": "repo_root",
+    "allowlist_config": "config/mcp/GATEWAY_ADAPTERS.json:test_runner_local.allowlist",
+    "timeout_required": true,
+    "cancellation_required": true
+  }
+}

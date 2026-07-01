@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ingestion_result",
+  "type": "object",
+  "required": ["status", "decision", "artifact_id", "provenance_required"],
+  "properties": {
+    "status": {"type": "string"},
+    "decision": {"type": "string"},
+    "artifact_id": {"type": "string"},
+    "provenance_required": {"type": "boolean"},
+    "errors": {"type": "array"}
+  },
+  "additionalProperties": true
+}

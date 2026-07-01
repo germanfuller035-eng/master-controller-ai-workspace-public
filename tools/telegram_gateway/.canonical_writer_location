@@ -1,0 +1,4 @@
+VPS
+# Master Controller canonical writer is the VPS (195.96.132.82) since 2026-06-16 cutover.
+# While this marker reads VPS, the local Telegram bot / workers MUST NOT start (would create a second writer).
+# To intentionally revert to local canonical, set this to LOCAL (and flip the VPS off first).

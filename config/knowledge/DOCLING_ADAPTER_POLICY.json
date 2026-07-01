@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-26",
+  "session": "KNOWLEDGE_MEMORY_QDRANT_DOCLING_V1",
+  "docling_status": "CONTRACT_ONLY_NOT_INSTALLED",
+  "install_allowed": false,
+  "internet_install_allowed": false,
+  "import_required": false,
+  "synthetic_parse_result_only": true,
+  "parse_required_fields": ["parse_id", "artifact_id", "synthetic", "pages", "text_chunks", "parser_status"],
+  "parser_status_required": "CONTRACT_ONLY_NOT_INSTALLED"
+}

@@ -1,0 +1,73 @@
+{
+  "weights": {
+    "strategic_value": 2,
+    "revenue_value": 2.5,
+    "time_to_value": 1.5,
+    "readiness": 1.5,
+    "owner_effort": -1,
+    "delivery_capacity": 1,
+    "financial_risk": -1.5,
+    "technical_risk": -1,
+    "dependency_risk": -1,
+    "automation_leverage": 1,
+    "reversibility": 0.5,
+    "maintenance_burden": -0.5,
+    "data_quality": 0.5,
+    "owner_urgency": 1.5
+  },
+  "ranked": [
+    {
+      "project_id": "mini_audit",
+      "score": 48,
+      "recommended_action": "FOCUS_NOW",
+      "reason_codes": [
+        "high_revenue"
+      ],
+      "critical_dependencies": [],
+      "owner_decision": false,
+      "contributions": {
+        "strategic_value": 14,
+        "revenue_value": 20,
+        "time_to_value": 0,
+        "readiness": 10.5,
+        "owner_effort": -4,
+        "delivery_capacity": 0,
+        "financial_risk": -3,
+        "technical_risk": 0,
+        "dependency_risk": 0,
+        "automation_leverage": 0,
+        "reversibility": 0,
+        "maintenance_burden": 0,
+        "data_quality": 0,
+        "owner_urgency": 10.5
+      },
+      "rank": 1
+    },
+    {
+      "project_id": "obsidian_hq",
+      "score": 31,
+      "recommended_action": "CONTINUE",
+      "reason_codes": [],
+      "critical_dependencies": [],
+      "owner_decision": false,
+      "contributions": {
+        "strategic_value": 16,
+        "revenue_value": 7.5,
+        "time_to_value": 0,
+        "readiness": 12,
+        "owner_effort": -3,
+        "delivery_capacity": 0,
+        "financial_risk": -1.5,
+        "technical_risk": 0,
+        "dependency_risk": 0,
+        "automation_leverage": 0,
+        "reversibility": 0,
+        "maintenance_burden": 0,
+        "data_quality": 0,
+        "owner_urgency": 0
+      },
+      "rank": 2
+    }
+  ],
+  "note": "Weights configurable + visible. Recommendations only."
+}

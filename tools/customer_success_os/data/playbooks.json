@@ -1,0 +1,44 @@
+{
+  "schema": "customer_success_os.playbooks.v1",
+  "version": "1.0",
+  "note": "Customer success playbooks per product. Does not promote product readiness. Synthetic paths only.",
+  "playbooks": {
+    "mini_audit": {
+      "onboarding": ["confirm delivery", "confirm report access", "confirm understanding", "select top priorities", "identify recommended next action", "check clarification need", "optional value review", "close or propose next product with evidence"],
+      "activation": "report reviewed + priorities discussed",
+      "adoption": "recommendations selected",
+      "value_review": "priorities understood; business value only if customer evidence",
+      "support": "clarification questions; implementation requests are OUT_OF_SCOPE -> Implementation Sprint",
+      "risks": ["customer never reviews report", "expects guaranteed growth"],
+      "renewal_applicability": "NOT_APPLICABLE (one-time)",
+      "expansion_paths": ["implementation_sprint", "full_business_audit"],
+      "case_permission": "after accepted + value evidence + explicit permission",
+      "closure": "after report delivered + reviewed",
+      "success_is_not": ["guaranteed implementation", "guaranteed revenue", "guaranteed conversion"],
+      "happy_path": "delivered -> reviewed -> priorities selected -> closed/next product",
+      "unhappy_path": "delivered -> never reviewed -> value_blocked_by_adoption -> follow-up"
+    },
+    "digital_presence_check": {"onboarding": ["confirm presence map delivered", "review gaps"], "renewal_applicability": "NOT_APPLICABLE", "expansion_paths": ["owned_presence_pack", "start_page_sprint"], "spec_only": false},
+    "full_business_audit": {"onboarding": ["confirm executive report", "review findings"], "renewal_applicability": "NOT_APPLICABLE", "expansion_paths": ["implementation_sprint"]},
+    "start_page_sprint": {"onboarding": ["ownership access", "review page", "forms validation"], "renewal_applicability": "NOT_APPLICABLE", "expansion_paths": ["business_website", "growth_support"]},
+    "landing_sprint": {"onboarding": ["ownership access", "forms validation", "analytics access"], "renewal_applicability": "NOT_APPLICABLE", "expansion_paths": ["business_website", "lead_system"]},
+    "business_website": {
+      "onboarding": ["ownership access", "content update guide", "forms validation", "analytics access", "backup responsibility", "domain/hosting responsibility", "support period", "known limitations", "first performance review", "change-request boundary", "maintenance eligibility"],
+      "support": "warranty for defects; new pages = CHANGE_REQUEST/NEW_PROJECT",
+      "renewal_applicability": "maintenance retainer if agreed",
+      "expansion_paths": ["lead_system", "ai_front_office", "growth_support"],
+      "no_live_access": true
+    },
+    "lead_system": {
+      "spec_only": true,
+      "boundaries": ["support must not become permanent custom dev by default", "architecture responsibility explicit", "data responsibility explicit", "credentials boundary", "approval gate", "incident handling", "backup responsibility", "no send default"],
+      "keep_status": "PLANNED"
+    },
+    "ai_front_office": {
+      "spec_only": true,
+      "boundaries": ["autonomy level explicit", "draft-only/approval-gated modes", "privacy", "escalation", "human override", "audit log", "support burden", "channel limitations"],
+      "autonomous_prohibited_default": true,
+      "keep_status": "PLANNED"
+    }
+  }
+}

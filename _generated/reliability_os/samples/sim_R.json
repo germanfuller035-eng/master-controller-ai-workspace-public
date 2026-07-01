@@ -1,0 +1,12 @@
+{
+  "scenario": "R",
+  "production_affected": false,
+  "name": "Canonical corruption suspicion",
+  "ok": true,
+  "steps": [
+    "canonical_corruption -> detect:integrity fail health:UNHEALTHY alert:a_canonical_unreadable runbook:rb_canonical_corruption",
+    "freeze writes",
+    "restore verified backup"
+  ],
+  "hard_blocker": true
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "urn:json-schema:draft-2020-12",
+  "$id": "urn:master-controller:schemas:digital_presence:ai_front_office_architecture",
+  "title": "ai_front_office_architecture",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["artifact_id", "artifact_type", "draft_only"],
+  "properties": {
+    "artifact_id": {"type": "string"},
+    "artifact_type": {"const": "ai_front_office_architecture"},
+    "site_id": {"type": "string"},
+    "draft_only": {"type": "boolean"},
+    "bot_runtime_enabled": {"type": "boolean"},
+    "outbound_allowed": {"type": "boolean"},
+    "production_db_write_allowed": {"type": "boolean"},
+    "workflow": {"type": "array"},
+    "claims": {"type": "array"}
+  }
+}

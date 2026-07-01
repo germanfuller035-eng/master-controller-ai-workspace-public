@@ -1,0 +1,18 @@
+{
+  "$schema": "urn:json-schema:draft-2020-12",
+  "$id": "urn:master-controller:schemas:digital_presence:digital_presence_score",
+  "title": "digital_presence_score",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["site_id", "website_quality_score", "lead_capture_score"],
+  "properties": {
+    "site_id": {"type": "string"},
+    "represented_as": {"type": "string"},
+    "website_quality_score": {"type": "integer"},
+    "website_quality_status": {"type": "string"},
+    "lead_capture_score": {"type": "integer"},
+    "lead_capture_status": {"type": "string"},
+    "evidence": {"type": "array"},
+    "real_external_url_accessed": {"type": "boolean"}
+  }
+}

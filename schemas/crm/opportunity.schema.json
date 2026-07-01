@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/crm/opportunity.schema.json",
+  "title": "CRM Opportunity V1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "synthetic",
+    "opportunity_id",
+    "contact_id",
+    "stage",
+    "estimated_value_units",
+    "draft_only",
+    "crm_write_allowed"
+  ],
+  "properties": {
+    "schema_version": {"const": "crm.opportunity.v1"},
+    "synthetic": {"const": true},
+    "opportunity_id": {"type": "string"},
+    "contact_id": {"type": "string"},
+    "stage": {"type": "string"},
+    "estimated_value_units": {"type": "number"},
+    "draft_only": {"const": true},
+    "crm_write_allowed": {"const": false}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,8 @@
+{
+  "decision_id": "memdec_rejected_001",
+  "proposal_id": "memprop_missing_source_001",
+  "decision": "REJECT",
+  "reviewed_by": "Memory Curator synthetic validator",
+  "reviewed_at": "2026-06-26",
+  "reason": "missing source"
+}

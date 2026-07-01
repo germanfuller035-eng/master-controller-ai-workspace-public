@@ -1,0 +1,29 @@
+{
+  "schema": "revenue_os.audit_taxonomy.v1",
+  "version": "1.0",
+  "source_of_truth": "13_sales/audit_product_ladder.md + 00_architecture/b2b_website_audit_production_layer.md (read-only)",
+  "severity_scale": ["CRITICAL", "HIGH", "MEDIUM", "LOW", "INFO"],
+  "severity_note": "Severity describes technical/business impact only. Never use severity as marketing pressure.",
+  "categories": [
+    {"key": "identity_and_trust", "title": "Identity and trust", "example_findings": ["no visible company identity", "no trust signals"], "eligible_products": ["mini_audit", "full_business_audit"]},
+    {"key": "contactability", "title": "Contactability", "example_findings": ["no visible contact path", "contact form missing"], "eligible_products": ["mini_audit", "funnel_audit"]},
+    {"key": "mobile", "title": "Mobile experience", "example_findings": ["no mobile layout (verified)"], "eligible_products": ["mini_audit", "implementation_sprint"]},
+    {"key": "performance", "title": "Performance", "example_findings": ["slow load (measured)"], "eligible_products": ["full_business_audit", "implementation_sprint"]},
+    {"key": "technical_reliability", "title": "Technical reliability", "example_findings": ["broken pages", "no HTTPS (verified)"], "eligible_products": ["domain_recovery", "full_business_audit"]},
+    {"key": "conversion", "title": "Conversion", "example_findings": ["weak conversion path"], "eligible_products": ["funnel_audit", "mini_audit"]},
+    {"key": "call_to_action", "title": "Call to action", "example_findings": ["no clear CTA"], "eligible_products": ["mini_audit", "landing_sprint"]},
+    {"key": "forms", "title": "Forms", "example_findings": ["no request form (verified)"], "eligible_products": ["mini_audit", "implementation_sprint"]},
+    {"key": "analytics", "title": "Analytics", "example_findings": ["no analytics detected"], "eligible_products": ["implementation_sprint"]},
+    {"key": "seo_discoverability", "title": "SEO discoverability", "example_findings": ["missing title/description"], "eligible_products": ["full_business_audit", "implementation_sprint"]},
+    {"key": "local_presence", "title": "Local presence", "example_findings": ["no maps listing"], "eligible_products": ["digital_presence_check", "owned_presence_pack"]},
+    {"key": "content_clarity", "title": "Content clarity", "example_findings": ["unclear offer"], "eligible_products": ["mini_audit", "landing_sprint"]},
+    {"key": "product_clarity", "title": "Product clarity", "example_findings": ["unclear product range"], "eligible_products": ["business_website"]},
+    {"key": "pricing_clarity", "title": "Pricing clarity", "example_findings": ["no pricing info"], "eligible_products": ["business_website"]},
+    {"key": "social_proof", "title": "Social proof", "example_findings": ["no reviews/cases"], "eligible_products": ["mini_audit", "start_page_sprint"]},
+    {"key": "legal_pages", "title": "Legal pages", "example_findings": ["no privacy policy (verified)"], "eligible_products": ["full_business_audit"], "prohibited_claims": ["legal opinion", "guarantee no fines"]},
+    {"key": "sales_process", "title": "Sales process", "example_findings": ["no clear sales path"], "eligible_products": ["process_comm_audit"]},
+    {"key": "response_process", "title": "Response process", "example_findings": ["slow response (evidence)"], "eligible_products": ["process_comm_audit", "ai_front_office"]},
+    {"key": "follow_up_process", "title": "Follow-up process", "example_findings": ["no follow-up"], "eligible_products": ["process_comm_audit", "ai_front_office"]},
+    {"key": "ownership_risk", "title": "Ownership risk", "example_findings": ["presence only on third-party platform"], "eligible_products": ["owned_presence_pack", "business_website"]}
+  ]
+}

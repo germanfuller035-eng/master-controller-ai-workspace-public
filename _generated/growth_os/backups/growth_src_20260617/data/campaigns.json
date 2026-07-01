@@ -1,0 +1,47 @@
+{
+  "schema": "growth_os.campaigns.v1",
+  "version": "1.0",
+  "note": "Internal campaign definitions. ALL test_only=true. ACTIVE is PROHIBITED this task. Outbound uses synthetic recipients only; sends route via Conversation Hub (Growth never sends). No real production lead lists.",
+  "campaigns": [
+    {
+      "campaign_id": "camp_mini_audit_inbound", "name": "Mini Audit inbound capture", "objective": "capture inbound interest in Mini Audit",
+      "segment_ids": ["seg_weak_site"], "product_ids": ["mini_audit"], "channel_ids": ["ch_content", "ch_landing"],
+      "offer": "Fixed-price 10000 RUB Mini Audit", "assets": ["landing_mini_audit", "lm_request_path_checklist", "content W1-W4"],
+      "hypothesis": "Evidence-led content + checklist drives Mini Audit requests", "metrics": ["visits", "checklist downloads", "requests"],
+      "budget": {"owner_hours": 8, "tooling": 0, "status": "MODEL_ESTIMATE"}, "capacity": {"delivery": "low", "support": "low"},
+      "start_gate": "assets ready + measurement ready", "stop_gate": ["owner overload", "quality below floor"],
+      "approval_state": "DRAFT", "status": "MEASUREMENT_READY", "test_only": true
+    },
+    {
+      "campaign_id": "camp_mini_audit_outbound_draft", "name": "Mini Audit outbound (draft-only)", "objective": "targeted evidence-led outreach (DRAFT, no send)",
+      "segment_ids": ["seg_weak_site"], "product_ids": ["mini_audit"], "channel_ids": ["ch_outbound_email"],
+      "offer": "Fixed-price 10000 RUB Mini Audit", "assets": ["message_architecture.outbound_draft"],
+      "eligible_segment": "seg_weak_site", "evidence_threshold": "verified site URL + identity", "contact_evidence_threshold": "verified reachable contact + no opt-out",
+      "exclusions": ["no website", "opt_out", "TEST_ONLY contact misuse", "unverified"],
+      "daily_limit_proposal": 5, "draft_types": ["outbound_draft"], "approval": "owner approves every message",
+      "follow_up_policy": "max 1 follow-up, consent-aware, opt-out terminal", "stop_criteria": ["bounce>2%", "any opt-out complaint", "unsupported claim", "guessed recipient"],
+      "measurement": ["delivered (future)", "replied (future)", "opt_out"], "hypothesis": "Evidence-led outbound earns replies without spam perception", "metrics": ["reply_rate"],
+      "budget": {"owner_hours": 6, "status": "MODEL_ESTIMATE"}, "capacity": {"delivery": "low", "support": "low"},
+      "start_gate": "freeze lifted + Conversation Hub + owner approval", "stop_gate": ["bounce>2%", "opt-out complaint"],
+      "approval_state": "DRAFT", "status": "DRAFT", "test_only": true, "send_path": "Conversation Hub", "recipients": "SYNTHETIC_ONLY"
+    },
+    {
+      "campaign_id": "camp_presence_check_education", "name": "Digital Presence Check education", "objective": "educate low-maturity segment (product PLANNED)",
+      "segment_ids": ["seg_no_site_local"], "product_ids": ["digital_presence_check"], "channel_ids": ["ch_content", "ch_local_search"],
+      "offer": "(none — education only; price not approved)", "assets": ["content W6-W8", "lm_local_visibility_checklist"],
+      "hypothesis": "Education builds future demand for Presence Check", "metrics": ["visits", "checklist downloads"],
+      "budget": {"owner_hours": 5, "status": "MODEL_ESTIMATE"}, "capacity": {"delivery": "low", "support": "low"},
+      "start_gate": "assets ready", "stop_gate": ["owner overload"],
+      "approval_state": "DRAFT", "status": "DRAFT", "test_only": true, "blocked_reason": "product PLANNED + price unapproved -> cannot become READY"
+    },
+    {
+      "campaign_id": "camp_full_audit_referral", "name": "Full Audit referral (future)", "objective": "referral-led Full Audit interest",
+      "segment_ids": ["seg_good_site_weak_funnel"], "product_ids": ["full_business_audit"], "channel_ids": ["ch_referral"],
+      "offer": "(price not approved)", "assets": ["case_framework"],
+      "hypothesis": "Warm referrals suit higher-depth product", "metrics": ["referrals"],
+      "budget": {"owner_hours": 3, "status": "MODEL_ESTIMATE"}, "capacity": {"delivery": "high", "support": "medium"},
+      "start_gate": "accepted customers + product ready + price approved", "stop_gate": ["quality issues"],
+      "approval_state": "DRAFT", "status": "IDEA", "test_only": true, "blocked_reason": "product DRAFT + price unapproved + no accepted customers"
+    }
+  ]
+}

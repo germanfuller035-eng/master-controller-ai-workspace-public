@@ -1,0 +1,759 @@
+{
+  "runtime_entrypoints_scanned": 9,
+  "transitive_dependencies": 98,
+  "unresolved_runtime_imports": 0,
+  "cross_os_runtime_imports": 0,
+  "cwd_dependent_runtime_paths": 0,
+  "absolute_workspace_paths": 0,
+  "violations": [],
+  "deps": [
+    {
+      "source": "tools/mater_controller_api/src/server/index.mjs",
+      "dependency": "express",
+      "type": "package",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/server/index.mjs",
+      "dependency": "node:fs",
+      "type": "builtin",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/server/index.mjs",
+      "dependency": "node:path",
+      "type": "builtin",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/server/index.mjs",
+      "dependency": "node:url",
+      "type": "builtin",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/server/index.mjs",
+      "dependency": "../shared/config.mjs",
+      "type": "relative",
+      "resolved_path": "tools/mater_controller_api/src/shared/config.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/server/index.mjs",
+      "dependency": "../shared/http.mjs",
+      "type": "relative",
+      "resolved_path": "tools/mater_controller_api/src/shared/http.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/server/index.mjs",
+      "dependency": "../auth/auth.mjs",
+      "type": "relative",
+      "resolved_path": "tools/mater_controller_api/src/auth/auth.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/server/index.mjs",
+      "dependency": "../projects/projects.mjs",
+      "type": "relative",
+      "resolved_path": "tools/mater_controller_api/src/projects/projects.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/server/index.mjs",
+      "dependency": "../system/system.mjs",
+      "type": "relative",
+      "resolved_path": "tools/mater_controller_api/src/system/system.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/server/index.mjs",
+      "dependency": "../mini_audit/service.mjs",
+      "type": "relative",
+      "resolved_path": "tools/mater_controller_api/src/mini_audit/service.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/server/index.mjs",
+      "dependency": "../replies/service.mjs",
+      "type": "relative",
+      "resolved_path": "tools/mater_controller_api/src/replies/service.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/server/index.mjs",
+      "dependency": "../writes/service.mjs",
+      "type": "relative",
+      "resolved_path": "tools/mater_controller_api/src/writes/service.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/server/index.mjs",
+      "dependency": "../jobs/service.mjs",
+      "type": "relative",
+      "resolved_path": "tools/mater_controller_api/src/jobs/service.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/server/index.mjs",
+      "dependency": "../pipeline/service.mjs",
+      "type": "relative",
+      "resolved_path": "tools/mater_controller_api/src/pipeline/service.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/server/index.mjs",
+      "dependency": "../commercial/routes.mjs",
+      "type": "relative",
+      "resolved_path": "tools/mater_controller_api/src/commercial/routes.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/server/index.mjs",
+      "dependency": "../commercial/conversations.mjs",
+      "type": "relative",
+      "resolved_path": "tools/mater_controller_api/src/commercial/conversations.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/server/index.mjs",
+      "dependency": "../commercial/agents.mjs",
+      "type": "relative",
+      "resolved_path": "tools/mater_controller_api/src/commercial/agents.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/server/index.mjs",
+      "dependency": "../commercial/pipeline_read.mjs",
+      "type": "relative",
+      "resolved_path": "tools/mater_controller_api/src/commercial/pipeline_read.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/server/index.mjs",
+      "dependency": "../commercial/multichannel.mjs",
+      "type": "relative",
+      "resolved_path": "tools/mater_controller_api/src/commercial/multichannel.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/commercial/routes.mjs",
+      "dependency": "./service.mjs",
+      "type": "relative",
+      "resolved_path": "tools/mater_controller_api/src/commercial/service.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/commercial/service.mjs",
+      "dependency": "../shared/store_access.mjs",
+      "type": "relative",
+      "resolved_path": "tools/mater_controller_api/src/shared/store_access.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/commercial/service.mjs",
+      "dependency": "../../../commercial_core/lib/readmodels.mjs",
+      "type": "relative",
+      "resolved_path": "tools/commercial_core/lib/readmodels.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/commercial/service.mjs",
+      "dependency": "../../../commercial_core/lib/lifecycle.mjs",
+      "type": "relative",
+      "resolved_path": "tools/commercial_core/lib/lifecycle.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/commercial/service.mjs",
+      "dependency": "../../../commercial_core/lib/product_catalog_runtime.mjs",
+      "type": "relative",
+      "resolved_path": "tools/commercial_core/lib/product_catalog_runtime.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/commercial_core/lib/lifecycle.mjs",
+      "dependency": "./product_catalog_runtime.mjs",
+      "type": "relative",
+      "resolved_path": "tools/commercial_core/lib/product_catalog_runtime.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/commercial_core/lib/lifecycle.mjs",
+      "dependency": "./store.mjs",
+      "type": "relative",
+      "resolved_path": "tools/commercial_core/lib/store.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/commercial_core/lib/readmodels.mjs",
+      "dependency": "./store.mjs",
+      "type": "relative",
+      "resolved_path": "tools/commercial_core/lib/store.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/commercial_core/lib/readmodels.mjs",
+      "dependency": "./lifecycle.mjs",
+      "type": "relative",
+      "resolved_path": "tools/commercial_core/lib/lifecycle.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/commercial_core/lib/store.mjs",
+      "dependency": "node:crypto",
+      "type": "builtin",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/commercial_core/lib/events.mjs",
+      "dependency": "node:crypto",
+      "type": "builtin",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/commercial_core/lib/product_catalog_runtime.mjs",
+      "dependency": "node:fs",
+      "type": "builtin",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/commercial_core/lib/product_catalog_runtime.mjs",
+      "dependency": "node:path",
+      "type": "builtin",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/commercial_core/lib/product_catalog_runtime.mjs",
+      "dependency": "node:url",
+      "type": "builtin",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/shared/config.mjs",
+      "dependency": "node:fs",
+      "type": "builtin",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/shared/config.mjs",
+      "dependency": "node:path",
+      "type": "builtin",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/shared/config.mjs",
+      "dependency": "node:url",
+      "type": "builtin",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/shared/http.mjs",
+      "dependency": "node:crypto",
+      "type": "builtin",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/auth/auth.mjs",
+      "dependency": "node:fs",
+      "type": "builtin",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/auth/auth.mjs",
+      "dependency": "node:crypto",
+      "type": "builtin",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/auth/auth.mjs",
+      "dependency": "../shared/config.mjs",
+      "type": "relative",
+      "resolved_path": "tools/mater_controller_api/src/shared/config.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/system/system.mjs",
+      "dependency": "node:fs",
+      "type": "builtin",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/system/system.mjs",
+      "dependency": "node:path",
+      "type": "builtin",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/system/system.mjs",
+      "dependency": "../shared/config.mjs",
+      "type": "relative",
+      "resolved_path": "tools/mater_controller_api/src/shared/config.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/system/system.mjs",
+      "dependency": "../mini_audit/service.mjs",
+      "type": "relative",
+      "resolved_path": "tools/mater_controller_api/src/mini_audit/service.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/mini_audit/service.mjs",
+      "dependency": "node:path",
+      "type": "builtin",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/mini_audit/service.mjs",
+      "dependency": "node:fs",
+      "type": "builtin",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/mini_audit/service.mjs",
+      "dependency": "node:url",
+      "type": "builtin",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/mini_audit/service.mjs",
+      "dependency": "../shared/config.mjs",
+      "type": "relative",
+      "resolved_path": "tools/mater_controller_api/src/shared/config.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/mini_audit/service.mjs",
+      "dependency": "../shared/store_access.mjs",
+      "type": "relative",
+      "resolved_path": "tools/mater_controller_api/src/shared/store_access.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/mini_audit/service.mjs",
+      "dependency": "../../../commercial_core/lib/reconciliation.mjs",
+      "type": "relative",
+      "resolved_path": "tools/commercial_core/lib/reconciliation.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/replies/service.mjs",
+      "dependency": "node:path",
+      "type": "builtin",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/replies/service.mjs",
+      "dependency": "node:url",
+      "type": "builtin",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/replies/service.mjs",
+      "dependency": "../shared/config.mjs",
+      "type": "relative",
+      "resolved_path": "tools/mater_controller_api/src/shared/config.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/writes/service.mjs",
+      "dependency": "node:path",
+      "type": "builtin",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/writes/service.mjs",
+      "dependency": "node:url",
+      "type": "builtin",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/writes/service.mjs",
+      "dependency": "../shared/config.mjs",
+      "type": "relative",
+      "resolved_path": "tools/mater_controller_api/src/shared/config.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/writes/service.mjs",
+      "dependency": "../shared/store_access.mjs",
+      "type": "relative",
+      "resolved_path": "tools/mater_controller_api/src/shared/store_access.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/jobs/service.mjs",
+      "dependency": "node:crypto",
+      "type": "builtin",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/jobs/service.mjs",
+      "dependency": "./queue_store.mjs",
+      "type": "relative",
+      "resolved_path": "tools/mater_controller_api/src/jobs/queue_store.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/pipeline/service.mjs",
+      "dependency": "node:crypto",
+      "type": "builtin",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/pipeline/service.mjs",
+      "dependency": "../shared/config.mjs",
+      "type": "relative",
+      "resolved_path": "tools/mater_controller_api/src/shared/config.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/pipeline/service.mjs",
+      "dependency": "../shared/store_access.mjs",
+      "type": "relative",
+      "resolved_path": "tools/mater_controller_api/src/shared/store_access.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/commercial/conversations.mjs",
+      "dependency": "../shared/store_access.mjs",
+      "type": "relative",
+      "resolved_path": "tools/mater_controller_api/src/shared/store_access.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/commercial/conversations.mjs",
+      "dependency": "../shared/config.mjs",
+      "type": "relative",
+      "resolved_path": "tools/mater_controller_api/src/shared/config.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/commercial/conversations.mjs",
+      "dependency": "node:fs",
+      "type": "builtin",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/commercial/conversations.mjs",
+      "dependency": "../replies/service.mjs",
+      "type": "relative",
+      "resolved_path": "tools/mater_controller_api/src/replies/service.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/commercial/conversations.mjs",
+      "dependency": "../../../commercial_core/lib/conversation_read.mjs",
+      "type": "relative",
+      "resolved_path": "tools/commercial_core/lib/conversation_read.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/commercial/conversations.mjs",
+      "dependency": "../../../commercial_core/lib/reconciliation.mjs",
+      "type": "relative",
+      "resolved_path": "tools/commercial_core/lib/reconciliation.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/commercial/agents.mjs",
+      "dependency": "node:fs",
+      "type": "builtin",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/commercial/agents.mjs",
+      "dependency": "../shared/store_access.mjs",
+      "type": "relative",
+      "resolved_path": "tools/mater_controller_api/src/shared/store_access.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/commercial/agents.mjs",
+      "dependency": "../shared/config.mjs",
+      "type": "relative",
+      "resolved_path": "tools/mater_controller_api/src/shared/config.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/commercial/agents.mjs",
+      "dependency": "../../../commercial_core/lib/agent_shadow.mjs",
+      "type": "relative",
+      "resolved_path": "tools/commercial_core/lib/agent_shadow.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/commercial/agents.mjs",
+      "dependency": "../../../commercial_core/lib/lifecycle.mjs",
+      "type": "relative",
+      "resolved_path": "tools/commercial_core/lib/lifecycle.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/commercial/agents.mjs",
+      "dependency": "../../../commercial_core/lib/reconciliation.mjs",
+      "type": "relative",
+      "resolved_path": "tools/commercial_core/lib/reconciliation.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/commercial/pipeline_read.mjs",
+      "dependency": "node:fs",
+      "type": "builtin",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/commercial/pipeline_read.mjs",
+      "dependency": "../shared/store_access.mjs",
+      "type": "relative",
+      "resolved_path": "tools/mater_controller_api/src/shared/store_access.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/commercial/pipeline_read.mjs",
+      "dependency": "../shared/config.mjs",
+      "type": "relative",
+      "resolved_path": "tools/mater_controller_api/src/shared/config.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/commercial/pipeline_read.mjs",
+      "dependency": "../replies/service.mjs",
+      "type": "relative",
+      "resolved_path": "tools/mater_controller_api/src/replies/service.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/commercial/pipeline_read.mjs",
+      "dependency": "../../../commercial_core/lib/reconciliation.mjs",
+      "type": "relative",
+      "resolved_path": "tools/commercial_core/lib/reconciliation.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/commercial/pipeline_read.mjs",
+      "dependency": "../../../commercial_core/lib/pipeline_state.mjs",
+      "type": "relative",
+      "resolved_path": "tools/commercial_core/lib/pipeline_state.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/commercial/multichannel.mjs",
+      "dependency": "node:fs",
+      "type": "builtin",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/commercial/multichannel.mjs",
+      "dependency": "../shared/store_access.mjs",
+      "type": "relative",
+      "resolved_path": "tools/mater_controller_api/src/shared/store_access.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/commercial/multichannel.mjs",
+      "dependency": "../../../commercial_core/lib/source_registry.mjs",
+      "type": "relative",
+      "resolved_path": "tools/commercial_core/lib/source_registry.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/commercial/multichannel.mjs",
+      "dependency": "../../../commercial_core/lib/identity_graph.mjs",
+      "type": "relative",
+      "resolved_path": "tools/commercial_core/lib/identity_graph.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/commercial/multichannel.mjs",
+      "dependency": "../../../commercial_core/lib/consent_policy.mjs",
+      "type": "relative",
+      "resolved_path": "tools/commercial_core/lib/consent_policy.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/commercial/multichannel.mjs",
+      "dependency": "../../../commercial_core/lib/channel_router.mjs",
+      "type": "relative",
+      "resolved_path": "tools/commercial_core/lib/channel_router.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/commercial/multichannel.mjs",
+      "dependency": "../../../commercial_core/lib/multichannel_agents.mjs",
+      "type": "relative",
+      "resolved_path": "tools/commercial_core/lib/multichannel_agents.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/shared/store_access.mjs",
+      "dependency": "node:fs",
+      "type": "builtin",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/shared/store_access.mjs",
+      "dependency": "node:path",
+      "type": "builtin",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/shared/store_access.mjs",
+      "dependency": "./config.mjs",
+      "type": "relative",
+      "resolved_path": "tools/mater_controller_api/src/shared/config.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/jobs/queue_store.mjs",
+      "dependency": "node:fs",
+      "type": "builtin",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/jobs/queue_store.mjs",
+      "dependency": "node:path",
+      "type": "builtin",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/mater_controller_api/src/jobs/queue_store.mjs",
+      "dependency": "../shared/config.mjs",
+      "type": "relative",
+      "resolved_path": "tools/mater_controller_api/src/shared/config.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/commercial_core/lib/identity_graph.mjs",
+      "dependency": "node:crypto",
+      "type": "builtin",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/commercial_core/lib/channel_router.mjs",
+      "dependency": "node:crypto",
+      "type": "builtin",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/commercial_core/lib/channel_router.mjs",
+      "dependency": "./consent_policy.mjs",
+      "type": "relative",
+      "resolved_path": "tools/commercial_core/lib/consent_policy.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/commercial_core/lib/multichannel_agents.mjs",
+      "dependency": "./agent_shadow.mjs",
+      "type": "relative",
+      "resolved_path": "tools/commercial_core/lib/agent_shadow.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    },
+    {
+      "source": "tools/commercial_core/lib/multichannel_agents.mjs",
+      "dependency": "./consent_policy.mjs",
+      "type": "relative",
+      "resolved_path": "tools/commercial_core/lib/consent_policy.mjs",
+      "inside_closure": true,
+      "status": "ok"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "schema": "delivery_os.dashboard.v1",
+  "scope": "execution-only (NOT the Project Portfolio)",
+  "sections": {
+    "active_projects": [],
+    "waiting_inputs": [],
+    "ready_to_start": [],
+    "blocked": [],
+    "in_qa": [],
+    "waiting_owner": [],
+    "waiting_client": [],
+    "change_requests": [],
+    "delivered": [],
+    "acceptance_pending": [],
+    "support": [],
+    "overdue_milestones": []
+  },
+  "risks": [],
+  "owner_actions": [],
+  "claude_actions": [],
+  "cline_actions": [],
+  "counts": {
+    "active_projects": 0,
+    "waiting_inputs": 0,
+    "ready_to_start": 0,
+    "blocked": 0,
+    "in_qa": 0,
+    "waiting_owner": 0,
+    "waiting_client": 0,
+    "change_requests": 0,
+    "delivered": 0,
+    "acceptance_pending": 0,
+    "support": 0,
+    "overdue_milestones": 0
+  }
+}

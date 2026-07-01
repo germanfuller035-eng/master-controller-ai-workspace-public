@@ -1,0 +1,51 @@
+{
+  "synthetic": true,
+  "decisions": [
+    {
+      "decision_id": "dec-cost-watch",
+      "synthetic": true,
+      "priority": 30,
+      "risk": "R2",
+      "title": "Review synthetic cost budget",
+      "decision_type": "cost",
+      "evidence": [
+        {
+          "id": "ev-owner-control-synthetic",
+          "source": "synthetic_fixture",
+          "claim": "Local synthetic owner-control evidence."
+        }
+      ]
+    },
+    {
+      "decision_id": "dec-r4-send-preview",
+      "synthetic": true,
+      "priority": 100,
+      "risk": "R4",
+      "title": "Review synthetic R4 approval",
+      "decision_type": "approval",
+      "urgent": true,
+      "evidence": [
+        {
+          "id": "ev-owner-control-synthetic",
+          "source": "synthetic_fixture",
+          "claim": "Local synthetic owner-control evidence."
+        }
+      ]
+    },
+    {
+      "decision_id": "dec-memory-review",
+      "synthetic": true,
+      "priority": 20,
+      "risk": "R3",
+      "title": "Review memory proposal",
+      "decision_type": "memory",
+      "evidence": [
+        {
+          "id": "ev-owner-control-synthetic",
+          "source": "synthetic_fixture",
+          "claim": "Local synthetic owner-control evidence."
+        }
+      ]
+    }
+  ]
+}

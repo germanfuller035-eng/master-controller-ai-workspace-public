@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-26",
+  "session": "VOLTAGENT_RUNTIME_MODEL_ROUTER_AND_COST_GOVERNOR_V1",
+  "registry_kind": "provider_registry",
+  "live_providers_enabled": false,
+  "credentials_committed": false,
+  "providers": [
+    {
+      "id": "deterministic_local_process",
+      "kind": "deterministic_code",
+      "available_for_local_synthetic": true,
+      "production_enabled": false,
+      "external_network": false,
+      "credential_status": "none_required",
+      "allowed_environments": ["LOCAL_SYNTHETIC"],
+      "fallback_only": false
+    },
+    {
+      "id": "synthetic_cheap_provider",
+      "kind": "synthetic_provider_profile",
+      "available_for_local_synthetic": true,
+      "production_enabled": false,
+      "external_network": false,
+      "credential_status": "none_committed",
+      "allowed_environments": ["LOCAL_SYNTHETIC"],
+      "fallback_only": false
+    },
+    {
+      "id": "synthetic_premium_provider",
+      "kind": "synthetic_provider_profile",
+      "available_for_local_synthetic": true,
+      "production_enabled": false,
+      "external_network": false,
+      "credential_status": "none_committed",
+      "allowed_environments": ["LOCAL_SYNTHETIC"],
+      "fallback_only": false
+    },
+    {
+      "id": "codex_claude_agent_sdk_router",
+      "kind": "contract_only_coding_profile",
+      "available_for_local_synthetic": true,
+      "production_enabled": false,
+      "external_network": false,
+      "credential_status": "none_committed",
+      "allowed_environments": ["LOCAL_SYNTHETIC"],
+      "fallback_only": false
+    },
+    {
+      "id": "synthetic_independent_review_provider",
+      "kind": "synthetic_provider_profile",
+      "available_for_local_synthetic": true,
+      "production_enabled": false,
+      "external_network": false,
+      "credential_status": "none_committed",
+      "allowed_environments": ["LOCAL_SYNTHETIC"],
+      "fallback_only": false
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "synthetic": true,
+  "fixture_set": "owner_control_v1",
+  "panels": [
+    "today",
+    "decisions",
+    "approvals",
+    "commercial_funnel",
+    "costs",
+    "agents_workflows",
+    "memory_proposals",
+    "health_incidents",
+    "feature_flags",
+    "stop"
+  ],
+  "expected_counts": {
+    "outbound_count": 0,
+    "payment_count": 0,
+    "production_db_writes": 0
+  }
+}

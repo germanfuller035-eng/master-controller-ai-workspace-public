@@ -1,0 +1,242 @@
+{
+  "version": "lead-intake-approval-queue-d2b-v1",
+  "updated_at": "2026-06-06T08:26:05.317Z",
+  "cards": [
+    {
+      "import_id": "IMP-D2G-SANDBOX-1",
+      "created_at": "2026-06-06T08:26:05.267Z",
+      "source": "lead_import_prepare",
+      "text_hash": "ec355c1b52a09036e333184ac21f8482e610d78be79e160cdf6f6cd27551ea76",
+      "parsed_count": 3,
+      "valid_count": 3,
+      "added_count": 2,
+      "merged_count": 1,
+      "needs_review_count": 0,
+      "qa_status": "PASS",
+      "safety": {
+        "network_used": "NO",
+        "external_send": "NO",
+        "smtp_used": "NO",
+        "auto_send": "BLOCKED",
+        "client_contact": "BLOCKED",
+        "email_send": "BLOCKED",
+        "telegram_send": "BLOCKED",
+        "whatsapp_send": "BLOCKED",
+        "max_send": "BLOCKED",
+        "env_secrets": "NO",
+        "bot_integration": "NO",
+        "writes_lead_data": "NO",
+        "runs_import": "NO"
+      },
+      "status": "APPROVED_BY_DMITRY",
+      "approved_by": "Dmitry",
+      "approved_at": "2026-06-06T08:26:05.275Z",
+      "snapshot_id": null,
+      "commit_result": null,
+      "cancelled_at": null,
+      "failed_at": null,
+      "history": [
+        {
+          "at": "2026-06-06T08:26:05.267Z",
+          "from": null,
+          "to": "PENDING",
+          "note": "card created"
+        },
+        {
+          "at": "2026-06-06T08:26:05.275Z",
+          "from": "PENDING",
+          "to": "APPROVED_BY_DMITRY",
+          "note": "approved by Dmitry"
+        }
+      ]
+    },
+    {
+      "import_id": "IMP-D2G-APPROVE-1",
+      "created_at": "2026-06-06T08:26:05.278Z",
+      "source": "lead_import_prepare",
+      "text_hash": "f0d4a1888126cc8aa31e5c6bf9249d896e09cd7cb607a8e57922e9acb52b1542",
+      "parsed_count": 3,
+      "valid_count": 3,
+      "added_count": 2,
+      "merged_count": 1,
+      "needs_review_count": 0,
+      "qa_status": "PASS",
+      "safety": {
+        "network_used": "NO",
+        "external_send": "NO",
+        "smtp_used": "NO",
+        "auto_send": "BLOCKED",
+        "client_contact": "BLOCKED",
+        "email_send": "BLOCKED",
+        "telegram_send": "BLOCKED",
+        "whatsapp_send": "BLOCKED",
+        "max_send": "BLOCKED",
+        "env_secrets": "NO",
+        "bot_integration": "NO",
+        "writes_lead_data": "NO",
+        "runs_import": "NO"
+      },
+      "status": "APPROVED_BY_DMITRY",
+      "approved_by": "Dmitry",
+      "approved_at": "2026-06-06T08:26:05.305Z",
+      "snapshot_id": null,
+      "commit_result": null,
+      "cancelled_at": null,
+      "failed_at": null,
+      "history": [
+        {
+          "at": "2026-06-06T08:26:05.278Z",
+          "from": null,
+          "to": "PENDING",
+          "note": "card created"
+        },
+        {
+          "at": "2026-06-06T08:26:05.305Z",
+          "from": "PENDING",
+          "to": "APPROVED_BY_DMITRY",
+          "note": "approved by Dmitry"
+        }
+      ]
+    },
+    {
+      "import_id": "IMP-D2G-REJECT-1",
+      "created_at": "2026-06-06T08:26:05.280Z",
+      "source": "lead_import_prepare",
+      "text_hash": "1ca5cc7b2317827ee022d8524c71a6f4ce40e8b66233095f0cef12110465a086",
+      "parsed_count": 3,
+      "valid_count": 3,
+      "added_count": 2,
+      "merged_count": 1,
+      "needs_review_count": 0,
+      "qa_status": "PASS",
+      "safety": {
+        "network_used": "NO",
+        "external_send": "NO",
+        "smtp_used": "NO",
+        "auto_send": "BLOCKED",
+        "client_contact": "BLOCKED",
+        "email_send": "BLOCKED",
+        "telegram_send": "BLOCKED",
+        "whatsapp_send": "BLOCKED",
+        "max_send": "BLOCKED",
+        "env_secrets": "NO",
+        "bot_integration": "NO",
+        "writes_lead_data": "NO",
+        "runs_import": "NO"
+      },
+      "status": "CANCELLED",
+      "approved_by": null,
+      "approved_at": null,
+      "snapshot_id": null,
+      "commit_result": {
+        "cancelled_reason": "duplicate batch"
+      },
+      "cancelled_at": "2026-06-06T08:26:05.317Z",
+      "failed_at": null,
+      "history": [
+        {
+          "at": "2026-06-06T08:26:05.280Z",
+          "from": null,
+          "to": "PENDING",
+          "note": "card created"
+        },
+        {
+          "at": "2026-06-06T08:26:05.317Z",
+          "from": "PENDING",
+          "to": "CANCELLED",
+          "note": "cancelled (no lead data touched)"
+        }
+      ]
+    },
+    {
+      "import_id": "IMP-D2G-STALE-1",
+      "created_at": "2026-06-06T08:26:05.282Z",
+      "source": "lead_import_prepare",
+      "text_hash": "86cc449b765ffcae084a9dd690f397dd74640cb3b85ff78fa6914eaceb14a55f",
+      "parsed_count": 3,
+      "valid_count": 3,
+      "added_count": 2,
+      "merged_count": 1,
+      "needs_review_count": 0,
+      "qa_status": "PASS",
+      "safety": {
+        "network_used": "NO",
+        "external_send": "NO",
+        "smtp_used": "NO",
+        "auto_send": "BLOCKED",
+        "client_contact": "BLOCKED",
+        "email_send": "BLOCKED",
+        "telegram_send": "BLOCKED",
+        "whatsapp_send": "BLOCKED",
+        "max_send": "BLOCKED",
+        "env_secrets": "NO",
+        "bot_integration": "NO",
+        "writes_lead_data": "NO",
+        "runs_import": "NO"
+      },
+      "status": "PENDING",
+      "approved_by": null,
+      "approved_at": null,
+      "snapshot_id": null,
+      "commit_result": null,
+      "cancelled_at": null,
+      "failed_at": null,
+      "history": [
+        {
+          "at": "2026-06-06T08:26:05.282Z",
+          "from": null,
+          "to": "PENDING",
+          "note": "card created"
+        }
+      ]
+    },
+    {
+      "import_id": "IMP-D2G-DONE-1",
+      "created_at": "2026-06-06T08:26:05.285Z",
+      "source": "lead_import_prepare",
+      "text_hash": "cdc3274b83ea958c1267fa98900f41b5325877007d72a91fcdc7452691d3ef8b",
+      "parsed_count": 3,
+      "valid_count": 3,
+      "added_count": 2,
+      "merged_count": 1,
+      "needs_review_count": 0,
+      "qa_status": "PASS",
+      "safety": {
+        "network_used": "NO",
+        "external_send": "NO",
+        "smtp_used": "NO",
+        "auto_send": "BLOCKED",
+        "client_contact": "BLOCKED",
+        "email_send": "BLOCKED",
+        "telegram_send": "BLOCKED",
+        "whatsapp_send": "BLOCKED",
+        "max_send": "BLOCKED",
+        "env_secrets": "NO",
+        "bot_integration": "NO",
+        "writes_lead_data": "NO",
+        "runs_import": "NO"
+      },
+      "status": "APPROVED_BY_DMITRY",
+      "approved_by": "Dmitry",
+      "approved_at": "2026-06-06T08:26:05.301Z",
+      "snapshot_id": null,
+      "commit_result": null,
+      "cancelled_at": null,
+      "failed_at": null,
+      "history": [
+        {
+          "at": "2026-06-06T08:26:05.285Z",
+          "from": null,
+          "to": "PENDING",
+          "note": "card created"
+        },
+        {
+          "at": "2026-06-06T08:26:05.301Z",
+          "from": "PENDING",
+          "to": "APPROVED_BY_DMITRY",
+          "note": "approved by Dmitry"
+        }
+      ]
+    }
+  ]
+}

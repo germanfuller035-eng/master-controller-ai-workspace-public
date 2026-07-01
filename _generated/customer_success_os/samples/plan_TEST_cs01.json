@@ -1,0 +1,31 @@
+{
+  "success_plan_id": "sp_TEST_cs01_mini_audit",
+  "customer_ref_id": "TEST_cs01",
+  "product_id": "mini_audit",
+  "expected_outcomes": [
+    "customer understands verified issues",
+    "priorities ranked",
+    "recommended actions documented",
+    "next product recommendation may exist"
+  ],
+  "customer_actions": [
+    "review deliverables",
+    "implement recommendations"
+  ],
+  "owner_actions": [
+    "confirm delivery",
+    "run value review"
+  ],
+  "milestones": [
+    "handoff",
+    "activation",
+    "30-day value review"
+  ],
+  "metrics": [],
+  "risks": [
+    "baseline missing -> value may be unmeasurable"
+  ],
+  "review_cadence": "post-handoff + 30-day",
+  "status": "PROPOSED",
+  "no_value_risk": true
+}

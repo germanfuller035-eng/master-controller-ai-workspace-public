@@ -1,0 +1,58 @@
+{
+  "schema": "revenue_os.apply_manifest.v1",
+  "generated_ts": "20260617_120000",
+  "vault": "D:\\AI_WORKSPACE",
+  "apply_command": "AI_HQ_APPLY_OK=1 node tools/ai_hq/apply_canonical.mjs --apply  (post-soak, owner only)",
+  "note": "Proposed docs are NOT applied during soak. This manifest is for owner review.",
+  "total": 6,
+  "rows": [
+    {
+      "source_proposed": "docs_canonical_proposed/07_revenue_os/conversation_hub_architecture.md",
+      "target_real_path": "07_revenue_os/conversation_hub_architecture.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review_required": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/07_revenue_os/master_controller_integration_contract.md",
+      "target_real_path": "07_revenue_os/master_controller_integration_contract.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review_required": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/07_revenue_os/revenue_30_day_execution_plan.md",
+      "target_real_path": "07_revenue_os/revenue_30_day_execution_plan.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review_required": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/07_revenue_os/revenue_os_command_center.md",
+      "target_real_path": "07_revenue_os/revenue_os_command_center.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review_required": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/09_dashboards/revenue_command_dashboard.md",
+      "target_real_path": "09_dashboards/revenue_command_dashboard.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review_required": true
+    },
+    {
+      "source_proposed": "docs_canonical_proposed/09_dashboards/revenue_portfolio_dashboard.md",
+      "target_real_path": "09_dashboards/revenue_portfolio_dashboard.md",
+      "target_exists": false,
+      "change_type": "CREATE",
+      "conflict_risk": "low",
+      "owner_review_required": true
+    }
+  ]
+}

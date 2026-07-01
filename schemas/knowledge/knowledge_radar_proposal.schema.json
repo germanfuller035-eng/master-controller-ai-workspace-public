@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "knowledge_radar_proposal",
+  "type": "object",
+  "required": ["proposal_id", "source_id", "reason", "classification", "confidence", "created_at"],
+  "properties": {
+    "proposal_id": {"type": "string"},
+    "source_id": {"type": "string"},
+    "reason": {"type": "string"},
+    "classification": {"type": "string"},
+    "confidence": {"type": "number"},
+    "created_at": {"type": "string"},
+    "action": {"type": "string"}
+  },
+  "additionalProperties": true
+}

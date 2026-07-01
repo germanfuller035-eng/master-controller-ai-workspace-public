@@ -1,0 +1,7 @@
+{
+  "always_on_listening": false,
+  "push_to_talk": true,
+  "real_audio_capture": false,
+  "request_id": "synthetic-ptt-alpha",
+  "synthetic": true
+}

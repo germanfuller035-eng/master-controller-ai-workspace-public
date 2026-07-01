@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-26",
+  "session": "WEB_COMMAND_CENTER_ANDROID_OWNER_CONTROL_V1",
+  "scope": "LOCAL_SYNTHETIC_CONTRACT_ONLY",
+  "synthetic_only": true,
+  "real_approvals_execution": "OFF",
+  "payload_hash_required_for": ["R4", "R5"],
+  "risk_copy_fields_required": ["what", "who", "why", "cost", "rollback"],
+  "r5_strong_fields_required": [
+    "pin_or_biometric_future",
+    "repeated_human_description",
+    "short_delay",
+    "one_time_approval"
+  ],
+  "safety": {
+    "production_web_deploy": "OFF",
+    "outbound_email": "OFF",
+    "outbound_social": "OFF",
+    "auto_safe": "OFF",
+    "voice": "OFF",
+    "browser_actions": "OFF",
+    "payments": "OFF",
+    "production_db_write": "OFF"
+  }
+}

@@ -1,0 +1,487 @@
+{
+  "schema": "revenue_os.fixtures.customer_profiles.v1",
+  "note": "TEST_ONLY synthetic fixtures. No real personal contacts. All IDs prefixed TEST_.",
+  "profiles": [
+    {
+      "profile_id": "TEST_no_presence",
+      "industry": "auto_service",
+      "region": "test_region",
+      "company_size": "small",
+      "digital_maturity": "NO_DIGITAL_PRESENCE",
+      "website_evidence": {
+        "website_working": false,
+        "present_channels": [],
+        "checked_channels": [
+          "website",
+          "maps",
+          "marketplace",
+          "messenger",
+          "social"
+        ]
+      },
+      "budget_signal": "unknown",
+      "urgency_signal": "low",
+      "owner_capacity": "unknown",
+      "opted_out": false,
+      "evidence": [
+        {
+          "category": "identity",
+          "claim_type": "FACT",
+          "source_url": "https://example.test/biz",
+          "source_type": "direct_observation",
+          "checked_at": "2026-06-17",
+          "evidence_excerpt": "verified business name",
+          "confidence": 0.8,
+          "freshness": "fresh",
+          "claim": "verified business name"
+        }
+      ]
+    },
+    {
+      "profile_id": "TEST_maps_only",
+      "industry": "salon",
+      "region": "test_region",
+      "company_size": "micro",
+      "digital_maturity": "MAPS_ONLY",
+      "website_evidence": {
+        "website_working": false,
+        "present_channels": [
+          "maps"
+        ],
+        "checked_channels": [
+          "website",
+          "maps",
+          "marketplace",
+          "messenger"
+        ]
+      },
+      "budget_signal": "low",
+      "urgency_signal": "low",
+      "owner_capacity": "limited",
+      "opted_out": false,
+      "evidence": [
+        {
+          "category": "identity",
+          "claim_type": "FACT",
+          "source_url": "https://maps.test/listing",
+          "source_type": "direct_observation",
+          "checked_at": "2026-06-17",
+          "evidence_excerpt": "maps listing verified",
+          "confidence": 0.8,
+          "freshness": "fresh",
+          "claim": "maps listing verified"
+        }
+      ]
+    },
+    {
+      "profile_id": "TEST_broken_site",
+      "industry": "manufacturing",
+      "region": "test_region",
+      "company_size": "medium",
+      "digital_maturity": "BROKEN_WEBSITE",
+      "website_evidence": {
+        "website_working": false,
+        "website_broken": true,
+        "present_channels": [
+          "maps"
+        ],
+        "checked_channels": [
+          "website",
+          "maps"
+        ]
+      },
+      "budget_signal": "unknown",
+      "urgency_signal": "medium",
+      "owner_capacity": "unknown",
+      "opted_out": false,
+      "evidence": [
+        {
+          "category": "technical",
+          "claim_type": "FACT",
+          "source_url": "https://broken.test",
+          "source_type": "direct_observation",
+          "checked_at": "2026-06-17",
+          "evidence_excerpt": "HTTP 522 verified",
+          "confidence": 0.9,
+          "freshness": "fresh",
+          "claim": "HTTP 522 verified"
+        }
+      ]
+    },
+    {
+      "profile_id": "TEST_weak_site",
+      "industry": "fitness",
+      "region": "test_region",
+      "company_size": "small",
+      "digital_maturity": "WEAK_WEBSITE",
+      "website_evidence": {
+        "website_working": true,
+        "website_weak": true,
+        "present_channels": [
+          "website",
+          "maps"
+        ],
+        "checked_channels": [
+          "website",
+          "maps",
+          "social"
+        ]
+      },
+      "budget_signal": "medium",
+      "urgency_signal": "medium",
+      "owner_capacity": "available",
+      "opted_out": false,
+      "evidence": [
+        {
+          "category": "website",
+          "claim_type": "FACT",
+          "source_url": "https://weak.test",
+          "source_type": "direct_observation",
+          "checked_at": "2026-06-17",
+          "evidence_excerpt": "weak CTA verified",
+          "confidence": 0.75,
+          "freshness": "fresh",
+          "claim": "weak CTA verified"
+        }
+      ]
+    },
+    {
+      "profile_id": "TEST_good_weak_funnel",
+      "industry": "b2b_supplier",
+      "region": "test_region",
+      "company_size": "medium",
+      "digital_maturity": "GOOD_WEBSITE_WEAK_FUNNEL",
+      "website_evidence": {
+        "website_working": true,
+        "funnel_weak": true,
+        "present_channels": [
+          "website",
+          "maps",
+          "social"
+        ],
+        "checked_channels": [
+          "website",
+          "maps",
+          "social"
+        ]
+      },
+      "budget_signal": "medium",
+      "urgency_signal": "medium",
+      "owner_capacity": "available",
+      "opted_out": false,
+      "evidence": [
+        {
+          "category": "funnel",
+          "claim_type": "FACT",
+          "source_url": "https://good.test/funnel",
+          "source_type": "direct_observation",
+          "checked_at": "2026-06-17",
+          "evidence_excerpt": "weak conversion path verified",
+          "confidence": 0.7,
+          "freshness": "fresh",
+          "claim": "weak conversion path verified"
+        }
+      ]
+    },
+    {
+      "profile_id": "TEST_good_weak_process",
+      "industry": "services",
+      "region": "test_region",
+      "company_size": "small",
+      "digital_maturity": "GOOD_WEBSITE_WEAK_PROCESS",
+      "website_evidence": {
+        "website_working": true,
+        "process_weak": true,
+        "present_channels": [
+          "website",
+          "maps"
+        ],
+        "checked_channels": [
+          "website",
+          "maps"
+        ]
+      },
+      "budget_signal": "medium",
+      "urgency_signal": "low",
+      "owner_capacity": "limited",
+      "opted_out": false,
+      "evidence": [
+        {
+          "category": "process",
+          "claim_type": "FACT",
+          "source_url": "https://good.test",
+          "source_type": "direct_observation",
+          "checked_at": "2026-06-17",
+          "evidence_excerpt": "slow response evidence",
+          "confidence": 0.65,
+          "freshness": "fresh",
+          "claim": "slow response evidence"
+        }
+      ]
+    },
+    {
+      "profile_id": "TEST_strong_presence",
+      "industry": "retail",
+      "region": "test_region",
+      "company_size": "large",
+      "digital_maturity": "STRONG_DIGITAL_PRESENCE",
+      "website_evidence": {
+        "website_working": true,
+        "strong": true,
+        "present_channels": [
+          "website",
+          "maps",
+          "marketplace",
+          "social"
+        ],
+        "checked_channels": [
+          "website",
+          "maps",
+          "marketplace",
+          "social"
+        ]
+      },
+      "budget_signal": "high",
+      "urgency_signal": "low",
+      "owner_capacity": "available",
+      "opted_out": false,
+      "evidence": [
+        {
+          "category": "website",
+          "claim_type": "FACT",
+          "source_url": "https://strong.test",
+          "source_type": "direct_observation",
+          "checked_at": "2026-06-17",
+          "evidence_excerpt": "strong funnel verified",
+          "confidence": 0.85,
+          "freshness": "fresh",
+          "claim": "strong funnel verified"
+        }
+      ]
+    },
+    {
+      "profile_id": "TEST_insufficient_evidence",
+      "industry": "unknown",
+      "region": "test_region",
+      "company_size": "unknown",
+      "digital_maturity": "UNKNOWN",
+      "website_evidence": {
+        "present_channels": [],
+        "checked_channels": []
+      },
+      "budget_signal": "unknown",
+      "urgency_signal": "unknown",
+      "owner_capacity": "unknown",
+      "opted_out": false,
+      "evidence": []
+    },
+    {
+      "profile_id": "TEST_conflicting_identity",
+      "industry": "services",
+      "region": "test_region",
+      "company_size": "small",
+      "digital_maturity": "NO_DIGITAL_PRESENCE",
+      "website_evidence": {
+        "website_working": true,
+        "present_channels": [
+          "website"
+        ],
+        "checked_channels": [
+          "website",
+          "maps"
+        ]
+      },
+      "budget_signal": "unknown",
+      "urgency_signal": "low",
+      "owner_capacity": "unknown",
+      "opted_out": false,
+      "evidence": [
+        {
+          "category": "identity",
+          "claim_type": "FACT",
+          "source_url": "https://conflict.test",
+          "source_type": "direct_observation",
+          "checked_at": "2026-06-17",
+          "evidence_excerpt": "working site found despite NO_DIGITAL declared",
+          "confidence": 0.5,
+          "freshness": "fresh",
+          "claim": "working site found despite NO_DIGITAL declared"
+        }
+      ]
+    },
+    {
+      "profile_id": "TEST_guessed_email",
+      "industry": "auto_service",
+      "region": "test_region",
+      "company_size": "small",
+      "digital_maturity": "WEAK_WEBSITE",
+      "website_evidence": {
+        "website_working": true,
+        "website_weak": true,
+        "present_channels": [
+          "website"
+        ],
+        "checked_channels": [
+          "website",
+          "maps"
+        ]
+      },
+      "contact_email": "info@guessed.test",
+      "budget_signal": "low",
+      "urgency_signal": "low",
+      "owner_capacity": "available",
+      "opted_out": false,
+      "evidence": [
+        {
+          "category": "website",
+          "claim_type": "FACT",
+          "source_url": "https://guessed.test",
+          "source_type": "direct_observation",
+          "checked_at": "2026-06-17",
+          "evidence_excerpt": "weak site",
+          "confidence": 0.7,
+          "freshness": "fresh",
+          "claim": "weak site"
+        }
+      ]
+    },
+    {
+      "profile_id": "TEST_opted_out",
+      "industry": "retail",
+      "region": "test_region",
+      "company_size": "small",
+      "digital_maturity": "WEAK_WEBSITE",
+      "website_evidence": {
+        "website_working": true,
+        "website_weak": true,
+        "present_channels": [
+          "website"
+        ],
+        "checked_channels": [
+          "website"
+        ]
+      },
+      "budget_signal": "medium",
+      "urgency_signal": "low",
+      "owner_capacity": "available",
+      "opted_out": true,
+      "evidence": [
+        {
+          "category": "website",
+          "claim_type": "FACT",
+          "source_url": "https://optout.test",
+          "source_type": "direct_observation",
+          "checked_at": "2026-06-17",
+          "evidence_excerpt": "weak site",
+          "confidence": 0.7,
+          "freshness": "fresh",
+          "claim": "weak site"
+        }
+      ]
+    },
+    {
+      "profile_id": "TEST_budget_unknown",
+      "industry": "services",
+      "region": "test_region",
+      "company_size": "small",
+      "digital_maturity": "WEAK_WEBSITE",
+      "website_evidence": {
+        "website_working": true,
+        "website_weak": true,
+        "present_channels": [
+          "website"
+        ],
+        "checked_channels": [
+          "website",
+          "maps"
+        ]
+      },
+      "budget_signal": "unknown",
+      "urgency_signal": "medium",
+      "owner_capacity": "available",
+      "opted_out": false,
+      "evidence": [
+        {
+          "category": "website",
+          "claim_type": "FACT",
+          "source_url": "https://nobudget.test",
+          "source_type": "direct_observation",
+          "checked_at": "2026-06-17",
+          "evidence_excerpt": "weak site",
+          "confidence": 0.7,
+          "freshness": "fresh",
+          "claim": "weak site"
+        }
+      ]
+    },
+    {
+      "profile_id": "TEST_product_not_ready",
+      "industry": "services",
+      "region": "test_region",
+      "company_size": "small",
+      "digital_maturity": "GOOD_WEBSITE_WEAK_PROCESS",
+      "website_evidence": {
+        "website_working": true,
+        "process_weak": true,
+        "present_channels": [
+          "website"
+        ],
+        "checked_channels": [
+          "website"
+        ]
+      },
+      "budget_signal": "high",
+      "urgency_signal": "high",
+      "owner_capacity": "available",
+      "opted_out": false,
+      "evidence": [
+        {
+          "category": "process",
+          "claim_type": "FACT",
+          "source_url": "https://notready.test",
+          "source_type": "direct_observation",
+          "checked_at": "2026-06-17",
+          "evidence_excerpt": "weak process",
+          "confidence": 0.7,
+          "freshness": "fresh",
+          "claim": "weak process"
+        }
+      ]
+    },
+    {
+      "profile_id": "TEST_capacity_unavailable",
+      "industry": "fitness",
+      "region": "test_region",
+      "company_size": "small",
+      "digital_maturity": "WEAK_WEBSITE",
+      "website_evidence": {
+        "website_working": true,
+        "website_weak": true,
+        "present_channels": [
+          "website"
+        ],
+        "checked_channels": [
+          "website",
+          "maps"
+        ]
+      },
+      "budget_signal": "medium",
+      "urgency_signal": "high",
+      "owner_capacity": "unavailable",
+      "opted_out": false,
+      "evidence": [
+        {
+          "category": "website",
+          "claim_type": "FACT",
+          "source_url": "https://busy.test",
+          "source_type": "direct_observation",
+          "checked_at": "2026-06-17",
+          "evidence_excerpt": "weak site",
+          "confidence": 0.7,
+          "freshness": "fresh",
+          "claim": "weak site"
+        }
+      ]
+    }
+  ]
+}

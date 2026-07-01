@@ -1,0 +1,14 @@
+{
+  "manifest_version": 1, "gate": "CONTINUOUS_PIPELINE_AGENT_SHADOW", "base_evidence_head": "a518868",
+  "whole_repository_deployment": false,
+  "note": "Additive shadow-no-send agent control plane + async pipeline read models. 5 backend files (4 new + 1 modified). orchestrator_os engines are NOT runtime-imported (referenced conceptually) so not deployed. No new store/writer/ledger/sendpath. Android RC4 separate from VPS set.",
+  "entries": [
+    {"path":"tools/commercial_core/lib/pipeline_state.mjs","source_sha256_16":"27d0bb1a4ce48c7e","target_sha256_before":"ABSENT","service":"master-controller-api","restart_required":true,"rollback_source":"remove (absent)"},
+    {"path":"tools/commercial_core/lib/agent_shadow.mjs","source_sha256_16":"cb4102264476c9e9","target_sha256_before":"ABSENT","service":"master-controller-api","restart_required":true,"rollback_source":"remove (absent)"},
+    {"path":"tools/mater_controller_api/src/commercial/agents.mjs","source_sha256_16":"96a4b62590f3ec8d","target_sha256_before":"ABSENT","service":"master-controller-api","restart_required":true,"rollback_source":"remove (absent)"},
+    {"path":"tools/mater_controller_api/src/commercial/pipeline_read.mjs","source_sha256_16":"b5f99bf6cf91ade3","target_sha256_before":"ABSENT","service":"master-controller-api","restart_required":true,"rollback_source":"remove (absent)"},
+    {"path":"tools/mater_controller_api/src/server/index.mjs","source_sha256_16":"3e84d149ff4276d8","target_sha256_before":"d6c0294a2132dc6b","service":"master-controller-api","restart_required":true,"rollback_source":"restore backup (d6c0294a)"}
+  ],
+  "config_changes": {"AGENT_RUNTIME":"true (new)","AGENT_MODE":"SHADOW_NO_SEND (new)","AGENT_CANONICAL_DIRECT_WRITE":"false","AGENT_SEND":"false","AGENT_PAYMENT":"false","COMMERCIAL_SEND":"OFF (unchanged)","SEND_ALLOWED_LIVE":"OFF","AUTOSEND":"BLOCKED","FOLLOWUP_AUTOSEND":"OFF"},
+  "counts": {"backend_deployable_files":5,"new_files":4,"modified_files":1,"new_store_or_writer_or_ledger_or_sendpath":0}
+}

@@ -1,0 +1,3 @@
+be572bc9b91bba7c954242c944e8ff0b6f4f0e03d854cdea75de2e16175d0025 *MasterController-debug-v0.4.0-rc1.apk
+467acccdf5a4acc4524458d1fce4737127a8126738b369edaf58c734bfe0eca2 *MasterController-release-v0.4.0-rc1.apk
+41f5ee9c2bdcac9646a17f89af24350d45a6148cc1a7f405d26564aba6691c6e *MasterController-release-v0.4.0-rc1.aab

@@ -1,0 +1,48 @@
+{
+  "product_id": "ai_front_office",
+  "scenario": "success",
+  "steps": [
+    {
+      "step": "creation",
+      "result": "blocked: product ai_front_office is PLANNED — not deliverable"
+    },
+    {
+      "step": "inputs",
+      "result": "ready_to_start=true score=100"
+    },
+    {
+      "step": "milestones",
+      "result": "architecture-spec playbook (no milestone plan)"
+    },
+    {
+      "step": "risks",
+      "result": "total=3 blocks_closure=false"
+    },
+    {
+      "step": "change_request",
+      "result": "suggested=PENDING approved=false"
+    },
+    {
+      "step": "qa",
+      "result": "client_ready=true score=100"
+    },
+    {
+      "step": "acceptance",
+      "result": "status=PASS"
+    },
+    {
+      "step": "closure",
+      "result": "NOT_CLOSEABLE"
+    }
+  ],
+  "outcome": "BLOCKED",
+  "blockers": [
+    "creation_blocked"
+  ],
+  "expected_gate": "product_planned_not_deliverable (gate OK)",
+  "send_allowed": false,
+  "test_only": true,
+  "lessons": [
+    "clean synthetic pilot"
+  ]
+}

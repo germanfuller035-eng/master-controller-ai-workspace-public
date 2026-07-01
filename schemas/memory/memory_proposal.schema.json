@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "memory_proposal",
+  "type": "object",
+  "required": ["proposal_id", "proposed_by", "claim", "source_id", "source_date", "confidence", "classification", "retention"],
+  "properties": {
+    "proposal_id": {"type": "string"},
+    "proposed_by": {"type": "string"},
+    "claim": {"type": "string"},
+    "source_id": {"type": "string"},
+    "source_date": {"type": "string"},
+    "confidence": {"type": "number"},
+    "classification": {"type": "string"},
+    "retention": {"type": "string"}
+  },
+  "additionalProperties": true
+}

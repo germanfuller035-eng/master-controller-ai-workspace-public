@@ -1,0 +1,18 @@
+{
+  "$schema": "urn:json-schema:draft-2020-12",
+  "$id": "urn:master-controller:schemas:digital_presence:digital_factory_run",
+  "title": "digital_factory_run",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["pipeline_status", "synthetic_site_profiles_processed"],
+  "properties": {
+    "pipeline_status": {"type": "string"},
+    "synthetic_site_profiles_processed": {"type": "integer"},
+    "no_real_external_url_accessed": {"type": "boolean"},
+    "no_form_submit": {"type": "boolean"},
+    "no_outbound": {"type": "boolean"},
+    "no_deployment": {"type": "boolean"},
+    "artifact_hashes_created": {"type": "boolean"},
+    "results": {"type": "array"}
+  }
+}

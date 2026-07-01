@@ -1,0 +1,10 @@
+{
+  "fact_id": "tf_synthetic_001",
+  "subject": "knowledge_memory_v1",
+  "predicate": "memory_write_status",
+  "value": "OFF",
+  "valid_from": "2026-06-26",
+  "source_id": "src_synthetic_public_001",
+  "confidence": 0.95,
+  "synthetic": true
+}

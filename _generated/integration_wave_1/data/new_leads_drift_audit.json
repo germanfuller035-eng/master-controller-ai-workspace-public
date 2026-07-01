@@ -1,0 +1,16 @@
+{
+  "audit": "new_leads_drift",
+  "baseline_leads": 50,
+  "live_leads": 62,
+  "new_leads_total": 12,
+  "new_leads_explained": 12,
+  "unknown_source_leads": 0,
+  "duplicate_new_leads": 0,
+  "guessed_emails": 0,
+  "rogue_promotions": 0,
+  "existing_leads_changed": 0,
+  "all_same_batch": true,
+  "common": { "created_at": "2026-06-18T10:15:43Z", "source": "osm_overpass", "status": "manual_review_product_routing", "has_email": false, "enrichment_batch_id": "none", "source_classification": "LEAD_HUNTER" },
+  "new_lead_ids_redacted": ["cand_5d7..","cand_4ed..","cand_af3..","cand_3a9..","cand_4f5..","cand_c09..","cand_5f6..","cand_1e3..","cand_8bc..","cand_02a..","cand_dba..","cand_716.."],
+  "discovery": { "service": "master-controller-discovery.service", "user": "mcworker", "result": "success", "exec_status": 0, "api_base": "http://127.0.0.1:8787/api/v1", "region": "Krasnodar", "niches": ["beauty","car_repair","dentist"], "daily_candidate_limit": 20 }
+}

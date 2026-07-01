@@ -1,0 +1,18 @@
+{
+  "schema": "growth_os.integration_contracts.v1",
+  "version": "1.0",
+  "note": "Growth OS integration contracts. Growth is a planning layer: it READS from domain OS and PROPOSES; it never writes canonical data, sends, or promotes leads. Future contracts are marked FUTURE.",
+  "contracts": [
+    {"system": "AI_HQ", "growth_consumes": ["context_packs", "task_ledger", "project_registry"], "growth_provides": ["growth-os project registry proposal"], "direction": "read + propose"},
+    {"system": "Revenue_OS", "growth_consumes": ["product_catalog", "price (approved only)", "offer", "deal lifecycle"], "growth_provides": ["campaign demand signals (future)"], "direction": "read", "rule": "Growth never sets price or catalog"},
+    {"system": "Product_OS", "growth_consumes": ["readiness", "supported_claims", "assets", "pilot status"], "growth_provides": ["claim usage requests"], "direction": "read", "rule": "claims must be Product-OS-supported"},
+    {"system": "Delivery_OS", "growth_consumes": ["capacity", "implementation_risk"], "growth_provides": ["expected campaign demand (future)"], "direction": "read"},
+    {"system": "Finance_OS", "growth_consumes": ["budget", "unit_economics", "margin"], "growth_provides": ["campaign economics proposal"], "direction": "read + propose"},
+    {"system": "Customer_Success_OS", "growth_consumes": ["retention", "referral_eligibility", "expansion_evidence", "churn_lessons"], "growth_provides": ["referral campaign proposals"], "direction": "read + propose"},
+    {"system": "Analytics_OS", "growth_consumes": ["metrics", "attribution", "experiment governance", "anomalies", "measurement_plan"], "growth_provides": ["experiment backlog", "campaign measurement requests"], "direction": "read + propose", "rule": "experiments governed by Analytics OS; RUNNING_ALLOWED=NO"},
+    {"system": "Executive_OS", "growth_consumes": ["priority", "owner_decisions", "resource_allocation", "stop/go/pause"], "growth_provides": ["growth decisions for owner review"], "direction": "read + propose"},
+    {"system": "Lead_Hunter", "growth_consumes": ["source", "evidence", "identity", "contactability", "website_status", "score_v2", "product_route_hints", "provenance"], "growth_provides": ["target_segment", "campaign_eligibility", "product_focus", "source_performance_feedback", "exclusion_rules"], "direction": "future contract", "rule": "Growth must NOT promote leads directly; Master Controller owns canonical lead"},
+    {"system": "Master_Controller", "growth_consumes": [], "growth_provides": ["future campaign metadata", "lead eligibility recommendations only"], "direction": "future propose-only", "rule": "Growth never writes canonical leads, never sends"},
+    {"system": "Conversation_Hub", "growth_consumes": [], "growth_provides": ["future draft/send REQUESTS only"], "direction": "future propose-only", "rule": "Growth NEVER sends directly; Conversation Hub owns send"}
+  ]
+}

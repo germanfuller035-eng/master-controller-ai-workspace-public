@@ -1,0 +1,53 @@
+{
+  "funnel_ref": "revenue_os/funnel_base",
+  "stages": [
+    {
+      "stage": "candidates",
+      "count": 1000,
+      "conv_from_top": 1,
+      "conv_from_prev": 1,
+      "drop_from_prev": 0
+    },
+    {
+      "stage": "contacted",
+      "count": 220,
+      "conv_from_top": 0.22,
+      "conv_from_prev": 0.22,
+      "drop_from_prev": 0.78
+    },
+    {
+      "stage": "replied",
+      "count": 60,
+      "conv_from_top": 0.06,
+      "conv_from_prev": 0.2727,
+      "drop_from_prev": 0.7273
+    },
+    {
+      "stage": "qualified",
+      "count": 24,
+      "conv_from_top": 0.024,
+      "conv_from_prev": 0.4,
+      "drop_from_prev": 0.6
+    },
+    {
+      "stage": "proposal",
+      "count": 12,
+      "conv_from_top": 0.012,
+      "conv_from_prev": 0.5,
+      "drop_from_prev": 0.5
+    },
+    {
+      "stage": "won",
+      "count": 5,
+      "conv_from_top": 0.005,
+      "conv_from_prev": 0.4167,
+      "drop_from_prev": 0.5833
+    }
+  ],
+  "overall_conversion": 0.005,
+  "biggest_drop_stage": {
+    "stage": "contacted",
+    "drop": 0.78
+  },
+  "status": "MODEL_ESTIMATE"
+}

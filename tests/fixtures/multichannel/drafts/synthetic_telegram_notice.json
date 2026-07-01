@@ -1,0 +1,14 @@
+{
+  "context": {
+    "available_channels": [
+      "TELEGRAM_RESERVE"
+    ],
+    "body": "Synthetic Telegram reserve notice only.",
+    "contact_ref": "reserved-telegram-contact-alpha",
+    "draft_ref": "synthetic-telegram-alpha",
+    "lead_ref": "synthetic-lead-gamma",
+    "preferred_channel": "TELEGRAM_RESERVE",
+    "synthetic": true,
+    "telegram_ref": "reserved-telegram-alpha"
+  }
+}

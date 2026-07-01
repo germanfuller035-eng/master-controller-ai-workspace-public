@@ -1,0 +1,19 @@
+{
+  "project_id": "TEST_p_unpaid",
+  "product_id": "mini_audit",
+  "revenue": 10000,
+  "invoiced": 10000,
+  "paid": 0,
+  "receivable": 10000,
+  "direct_costs": 0,
+  "owner_cost_estimate": 6000,
+  "overhead": 1000,
+  "gross_profit": 10000,
+  "margin_pct": 100,
+  "flags": [
+    "profitable_on_paper_but_unpaid",
+    "unpaid_completed_work"
+  ],
+  "confidence": "CONFIRMED",
+  "label": "CONFIRMED revenue, MODEL_ESTIMATE costs"
+}

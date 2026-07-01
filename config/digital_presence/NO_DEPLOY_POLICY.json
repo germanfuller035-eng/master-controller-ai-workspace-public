@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-26",
+  "session": "DIGITAL_PRESENCE_WEBSITE_AND_AI_FRONT_OFFICE_FACTORY_V1",
+  "scope": "LOCAL_SYNTHETIC_NO_DEPLOY",
+  "deployment_allowed": false,
+  "publication_allowed": false,
+  "hosting_allowed": false,
+  "dns_change_allowed": false,
+  "vps_change_allowed": false,
+  "browser_actions_allowed": false,
+  "form_submit_allowed": false,
+  "outbound_allowed": false,
+  "production_db_write_allowed": false,
+  "owner_approval_required_for_future_deploy_or_send": true,
+  "stop_active_decision": "BLOCK_PIPELINE"
+}

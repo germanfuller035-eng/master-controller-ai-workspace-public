@@ -1,0 +1,30 @@
+{
+  "migration_id": "iw1_commercial_sections_v1",
+  "ranAt": "SYNTHETIC",
+  "tmp": "C:\\Users\\dima-\\AppData\\Local\\Temp\\iw1_dryrun_qSg0Ho",
+  "additive_only": true,
+  "idempotent": true,
+  "second_run_changed_data": false,
+  "sections": [
+    "commercial.opportunities",
+    "commercial.offers",
+    "commercial.owner_decisions",
+    "commercial.deals",
+    "delivery.handoffs",
+    "delivery.projects",
+    "finance.invoices",
+    "finance.payments"
+  ],
+  "sections_added_run1": 8,
+  "sections_added_run2": 0,
+  "existing_leads_unchanged": true,
+  "existing_send_ledger_unchanged": true,
+  "existing_queue_unchanged": true,
+  "rollback_simulation": "PASS",
+  "rollback_refuses_nonempty": true,
+  "real_entities_created": 0,
+  "unrelated_data_loss": 0,
+  "blind_full_store_restore_required": false,
+  "pass": 20,
+  "fail": 0
+}

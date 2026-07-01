@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MCP Gateway Tool Scope",
+  "type": "object",
+  "required": ["schema_version", "assigned_worktree_policy", "artifact_policy", "git_policy", "test_runner_policy"]
+}

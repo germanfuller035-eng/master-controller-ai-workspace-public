@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Owner Dark Command Center V2</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #050505;
+      --surface: #151515;
+      --surface-2: #1f1f1f;
+      --surface-3: #292929;
+      --line: #333333;
+      --text: #f5f5f5;
+      --muted: #b7b7b7;
+      --dim: #7c7c7c;
+      --primary: #9b6cff;
+      --info: #2d8cff;
+      --success: #48d597;
+      --warning: #f6c766;
+      --danger: #ff6b6b;
+      font-family: Inter, Roboto, "Segoe UI", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    .shell {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 292px minmax(0, 1fr);
+    }
+
+    .drawer {
+      border-right: 1px solid var(--line);
+      background: #0b0b0b;
+      padding: 24px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .brand {
+      display: grid;
+      gap: 6px;
+      padding: 0 6px;
+    }
+
+    .brand strong { font-size: 22px; }
+    .brand span { color: var(--muted); font-size: 13px; }
+
+    .section-title {
+      color: var(--primary);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-transform: uppercase;
+      margin: 0 0 8px;
+    }
+
+    .nav {
+      display: grid;
+      gap: 6px;
+    }
+
+    .nav button {
+      min-height: 52px;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      background: transparent;
+      color: var(--muted);
+      display: grid;
+      grid-template-columns: 30px 1fr auto;
+      align-items: center;
+      gap: 10px;
+      padding: 0 12px;
+      font: inherit;
+      text-align: left;
+    }
+
+    .nav button.active {
+      color: var(--text);
+      background: var(--surface-2);
+      border-color: var(--line);
+    }
+
+    .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--dim);
+    }
+
+    .active .dot { background: var(--success); }
+    .pin { color: var(--warning); font-size: 12px; }
+
+    .main {
+      min-width: 0;
+      display: grid;
+      grid-template-rows: auto minmax(0, 1fr) auto;
+    }
+
+    .topbar {
+      height: 88px;
+      border-bottom: 1px solid var(--line);
+      background: #101010;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 28px;
+      gap: 20px;
+    }
+
+    .title {
+      display: grid;
+      gap: 4px;
+    }
+
+    .title span { color: var(--muted); font-size: 13px; }
+    .title h1 { margin: 0; font-size: 26px; line-height: 1.1; }
+
+    .modes {
+      display: flex;
+      gap: 8px;
+    }
+
+    .mode {
+      min-height: 44px;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      padding: 0 18px;
+      background: transparent;
+      color: var(--muted);
+      font: inherit;
+      font-weight: 700;
+    }
+
+    .mode.active {
+      color: #082217;
+      background: var(--success);
+      border-color: transparent;
+    }
+
+    .workspace {
+      min-width: 0;
+      overflow: auto;
+      padding: 28px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(300px, .7fr);
+      gap: 20px;
+      align-content: start;
+    }
+
+    .focus-card,
+    .side-card,
+    .packet,
+    .timeline {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+      box-shadow: 0 18px 50px rgba(0, 0, 0, .24);
+    }
+
+    .focus-card {
+      padding: 28px;
+      display: grid;
+      gap: 20px;
+    }
+
+    .kicker {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .pill {
+      display: inline-flex;
+      min-height: 30px;
+      align-items: center;
+      border-radius: 8px;
+      padding: 0 12px;
+      font-size: 13px;
+      font-weight: 800;
+      border: 1px solid var(--line);
+      color: var(--muted);
+      background: var(--surface-2);
+    }
+
+    .pill.ok { color: #062115; background: var(--success); border-color: transparent; }
+    .pill.warn { color: #261900; background: var(--warning); border-color: transparent; }
+    .pill.stop { color: #2a0505; background: var(--danger); border-color: transparent; }
+    .pill.info { color: #031c38; background: var(--info); border-color: transparent; }
+
+    .focus-title {
+      display: grid;
+      gap: 10px;
+    }
+
+    .focus-title h2 {
+      margin: 0;
+      font-size: 34px;
+      line-height: 1.08;
+    }
+
+    .focus-title p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.55;
+      max-width: 760px;
+    }
+
+    .fact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .fact {
+      min-height: 92px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface-2);
+      padding: 14px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .fact small {
+      color: var(--dim);
+      font-weight: 800;
+    }
+
+    .fact strong {
+      font-size: 17px;
+      line-height: 1.35;
+    }
+
+    .actions {
+      display: grid;
+      gap: 10px;
+    }
+
+    .primary,
+    .secondary,
+    .danger {
+      min-height: 54px;
+      border-radius: 8px;
+      font: inherit;
+      font-weight: 800;
+      border: 1px solid transparent;
+    }
+
+    .primary { background: var(--primary); color: #170035; }
+    .secondary { background: var(--surface-2); color: var(--text); border-color: var(--line); }
+    .danger { background: transparent; color: var(--danger); border-color: rgba(255, 107, 107, .45); }
+
+    .side {
+      display: grid;
+      gap: 16px;
+      align-content: start;
+    }
+
+    .side-card,
+    .timeline {
+      padding: 18px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .side-card h3,
+    .timeline h3,
+    .packet h3 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      align-items: center;
+      padding: 10px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .row:first-child { border-top: 0; }
+    .row span { color: var(--muted); font-size: 13px; line-height: 1.4; }
+    .row strong { font-size: 15px; }
+
+    .packet {
+      grid-column: 1 / -1;
+      padding: 22px;
+      display: grid;
+      gap: 18px;
+      border-style: dashed;
+    }
+
+    .packet-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: start;
+    }
+
+    .packet-code {
+      font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .body {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #0d0d0d;
+      padding: 16px;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .commandbar {
+      min-height: 86px;
+      border-top: 1px solid var(--line);
+      background: #101010;
+      display: grid;
+      grid-template-columns: 44px minmax(0, 1fr) 44px 56px;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 20px;
+    }
+
+    .icon-btn,
+    .run-btn {
+      min-height: 48px;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: var(--surface-2);
+      color: var(--text);
+      font: inherit;
+      font-weight: 900;
+    }
+
+    .run-btn { background: var(--primary); color: #170035; border-color: transparent; }
+    .input {
+      min-height: 56px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #0b0b0b;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      padding: 0 16px;
+    }
+
+    @media (max-width: 920px) {
+      .shell { grid-template-columns: 1fr; }
+      .drawer { display: none; }
+      .workspace { grid-template-columns: 1fr; padding: 16px; }
+      .topbar { height: auto; min-height: 82px; padding: 14px 16px; }
+      .focus-title h2 { font-size: 28px; }
+      .fact-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <aside class="drawer">
+      <div class="brand">
+        <strong>Master Controller</strong>
+        <span>Тёмный пульт владельца</span>
+      </div>
+
+      <div>
+        <p class="section-title">Основное</p>
+        <nav class="nav">
+          <button class="active"><span class="dot"></span><strong>Сегодня</strong><span></span></button>
+          <button><span class="dot"></span><strong>Лиды</strong><span class="pin">3</span></button>
+          <button><span class="dot"></span><strong>Ответы</strong><span>0</span></button>
+          <button><span class="dot"></span><strong>Сделки</strong><span>1</span></button>
+          <button><span class="dot"></span><strong>Документы</strong><span></span></button>
+          <button><span class="dot"></span><strong>История</strong><span></span></button>
+          <button><span class="dot"></span><strong>Безопасность</strong><span></span></button>
+          <button><span class="dot"></span><strong>Настройки</strong><span></span></button>
+        </nav>
+      </div>
+
+      <div>
+        <p class="section-title">Закреплено</p>
+        <nav class="nav">
+          <button><span class="dot"></span><strong>Первый ручной пакет</strong><span></span></button>
+          <button><span class="dot"></span><strong>Ограничения контакта</strong><span class="pin">решить</span></button>
+          <button><span class="dot"></span><strong>Черновики документов</strong><span></span></button>
+          <button><span class="dot"></span><strong>Разрешение оплаты</strong><span class="pin">выкл</span></button>
+        </nav>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="title">
+          <span>Master Controller</span>
+          <h1>Фокус владельца</h1>
+        </div>
+        <div class="modes">
+          <button class="mode active">Фокус</button>
+          <button class="mode">Обзор</button>
+        </div>
+      </header>
+
+      <section class="workspace">
+        <article class="focus-card">
+          <div class="kicker">
+            <span class="pill ok">данные доступны</span>
+            <span class="pill warn">нужно решение</span>
+            <span class="pill">без скрытых действий</span>
+          </div>
+
+          <div class="focus-title">
+            <h2>Проверить первый ручной пакет</h2>
+            <p>Система подготовила следующий шаг: владелец проверяет лид, текст, канал и риск. Отправка выполняется только владельцем после отдельного действия.</p>
+          </div>
+
+          <div class="fact-grid">
+            <div class="fact">
+              <small>Главный факт</small>
+              <strong>Пакет создан локально, но не отправлен.</strong>
+            </div>
+            <div class="fact">
+              <small>Риск</small>
+              <strong>Есть ограничение контакта: требуется решение владельца.</strong>
+            </div>
+            <div class="fact">
+              <small>Текст</small>
+              <strong>Финальное сообщение привязано к контрольной метке.</strong>
+            </div>
+            <div class="fact">
+              <small>Система не будет делать сама</small>
+              <strong>Нет автоотправки, платежей и записи в рабочую базу.</strong>
+            </div>
+          </div>
+
+          <div class="actions">
+            <button class="primary">Открыть пакет для ручной отправки</button>
+            <button class="secondary">Править текст</button>
+            <button class="danger">Не контактировать</button>
+          </div>
+        </article>
+
+        <aside class="side">
+          <section class="side-card">
+            <h3>Готовность</h3>
+            <div class="list">
+              <div class="row"><div><strong>Проверка качества</strong><br><span>Без обещаний результата и неподтверждённых заявлений.</span></div><span class="pill ok">пройдена</span></div>
+              <div class="row"><div><strong>Канал</strong><br><span>Почта или форма открываются только владельцем.</span></div><span class="pill warn">проверить</span></div>
+              <div class="row"><div><strong>Платежи</strong><br><span>Доступен только черновик счёта.</span></div><span class="pill stop">выкл</span></div>
+            </div>
+          </section>
+
+          <section class="timeline">
+            <h3>История</h3>
+            <div class="list">
+              <div class="row"><div><strong>Лид разобран</strong><br><span>Факты извлечены, слабые места помечены.</span></div><span>локально</span></div>
+              <div class="row"><div><strong>Черновик создан</strong><br><span>Сохранён как draft, не как sent.</span></div><span>локально</span></div>
+              <div class="row"><div><strong>Пакет готов</strong><br><span>Ожидает ручного решения владельца.</span></div><span>не отправлен</span></div>
+            </div>
+          </section>
+        </aside>
+
+        <section class="packet">
+          <div class="packet-head">
+            <div>
+              <span class="pill warn">ПАКЕТ НЕ ОТПРАВЛЕН</span>
+              <h3>Boarding pass ручной отправки</h3>
+              <div class="packet-code">PACK-LOCAL-7F4A · TEXT-4D11 · EVENT-A928</div>
+            </div>
+            <span class="pill">одноразовый</span>
+          </div>
+          <div class="body">
+            Тема, канал, финальный текст, риск и решение владельца видны перед действием. Если владелец меняет текст, контрольная метка меняется и пакет нужно создать заново.
+          </div>
+        </section>
+      </section>
+
+      <footer class="commandbar">
+        <button class="icon-btn">+</button>
+        <div class="input">Введите сайт, команду или решение</div>
+        <button class="icon-btn">●</button>
+        <button class="run-btn">→</button>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>

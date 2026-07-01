@@ -1,0 +1,90 @@
+{
+  "schema": "ai_hq.context_pack.v1",
+  "project_id": "obsidian_hq",
+  "agent": "claude",
+  "task": "final validation",
+  "generated_ts": "20260617_025903",
+  "max_size": 16000,
+  "actual_size": 15948,
+  "truncated": true,
+  "estimated_tokens": 3987,
+  "sources": [
+    {
+      "path": "00_MASTER_CONTEXT/00_READ_FIRST.md",
+      "sha256": "0ef1bf57c53ad2a00cca3c545aae63331b6e8bf80ebfaab5c5a436e2f3c68eb9",
+      "redactions": 0,
+      "freshness": "STALE"
+    },
+    {
+      "path": "00_MASTER_CONTEXT/05_SECURITY_AND_PRIVACY_RULES.md",
+      "sha256": "cf4f30e788f3627ecf719be8a37589fad9e925c727f3929d07219cf71d3e5f23",
+      "redactions": 0,
+      "freshness": "STALE"
+    },
+    {
+      "path": "00_MASTER_CONTEXT/03_CURRENT_PROJECTS_AND_PRIORITIES.md",
+      "sha256": "c1ae31a57785b3991961de6a895e79fc6fb6ca0758bd5b4315865ca4dde306b1",
+      "redactions": 0,
+      "freshness": "STALE"
+    },
+    {
+      "path": "00_MASTER_CONTEXT/01_MASTER_CONTEXT_FOR_NEW_AI.md",
+      "sha256": "add70c0bced19c66b7139ccfc11d933303cc4b2c66958542de6a7488ef89e16a",
+      "redactions": 0,
+      "freshness": "STALE"
+    },
+    {
+      "path": "00_MASTER_CONTEXT/03_CURRENT_PROJECTS_AND_PRIORITIES.bak_2026-05-26.md",
+      "sha256": "af04fa2c7e340254ff4d417f9ce840bb976d8f4e8207c4018260b20c0e65cbc6",
+      "redactions": 0,
+      "freshness": "STALE"
+    },
+    {
+      "path": "00_MASTER_CONTEXT/03_CURRENT_PROJECTS_AND_PRIORITIES.bak_chatgptimport_2026-05-25.md",
+      "sha256": "52c6089c0bc93a289f5b2ef9dacc8734ffcc5e1667ca0f4e88da1d5ca23d9945",
+      "redactions": 0,
+      "freshness": "STALE"
+    },
+    {
+      "path": "00_MASTER_CONTEXT/01_MASTER_CONTEXT_FOR_NEW_AI.bak_chatgptimport_2026-05-25.md",
+      "sha256": "f37b864c049f7692eab19732d8810db3e4167c3a1eb328da8e8df93a7e5b61e2",
+      "redactions": 0,
+      "freshness": "STALE"
+    },
+    {
+      "path": "00_MASTER_CONTEXT/00_README_КАК_ПЕРЕДАТЬ_КОНТЕКСТ.md",
+      "sha256": "98470fcc4d4f0e43f76653b7ca62da5d195c70f2822d2ca93de8752685df8ac8",
+      "redactions": 0,
+      "freshness": "STALE"
+    },
+    {
+      "path": "00_MASTER_CONTEXT/01_MASTER_CONTEXT_FOR_NEW_AI.bak_2026-05-25.md",
+      "sha256": "6f6c9b5a7f1bc55029c1b55304abb69fed1664840deb6a39246d4e63dce6dcbc",
+      "redactions": 0,
+      "freshness": "STALE"
+    },
+    {
+      "path": "00_MASTER_CONTEXT/02_AI_WORKSPACE_STRUCTURE.md",
+      "sha256": "bd202cbc54a84d47adcb8b565f7fbeead529465cf7020267a031c312901d8d05",
+      "redactions": 0,
+      "freshness": "STALE"
+    },
+    {
+      "path": "00_MASTER_CONTEXT/03_CURRENT_PROJECTS_AND_PRIORITIES.bak_2026-05-25.md",
+      "sha256": "097b64a1a624d1b9a301586e69dc39f01df8ce04c1f1a00bd9614e916378bbea",
+      "redactions": 0,
+      "freshness": "STALE"
+    },
+    {
+      "path": "00_MASTER_CONTEXT/04_RULES_FOR_NEW_AI_ASSISTANT.md",
+      "sha256": "fd15ef44471039519721b89d135b410d64e94649551f1aed4f6f2d7500ffa8ab",
+      "redactions": 0,
+      "freshness": "STALE"
+    }
+  ],
+  "source_count": 12,
+  "sensitive_excluded": [],
+  "secret_findings_in_pack": [],
+  "content_sha256": "118faa8e196a204b7c9ee61264488dfc25a422814e0267dad42874271113e0c6",
+  "freshness_days": 7
+}

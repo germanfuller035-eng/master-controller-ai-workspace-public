@@ -1,0 +1,17 @@
+{
+  "additionalProperties": true,
+  "properties": {
+    "provider_used": {},
+    "stt_id": {},
+    "synthetic": {},
+    "transcript": {}
+  },
+  "required": [
+    "synthetic",
+    "stt_id",
+    "transcript",
+    "provider_used"
+  ],
+  "title": "STT Result",
+  "type": "object"
+}

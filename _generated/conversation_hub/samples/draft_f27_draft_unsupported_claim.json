@@ -1,0 +1,33 @@
+{
+  "draft": {
+    "draft_id": "draft_dfdc055591a1",
+    "conversation_id": "c27",
+    "message_type": "PLAIN",
+    "channel": "EMAIL",
+    "recipient_evidence": {
+      "verified": true,
+      "guessed": false
+    },
+    "subject": "Рост",
+    "body": "Гарантируем рост продаж в 3 раза",
+    "claims": [
+      "guaranteed_3x_growth"
+    ],
+    "evidence_refs": [],
+    "product_id": null,
+    "canonical_lead_id": "lead_c27",
+    "source_system": "GROWTH_OS",
+    "status": "INTERNAL_DRAFT",
+    "approval_required": true,
+    "send_allowed": false,
+    "revision": 1,
+    "synthetic": true
+  },
+  "validation": {
+    "ok": false,
+    "status": "VALIDATION_FAILED",
+    "errors": [
+      "unsupported claim: guaranteed_3x_growth"
+    ]
+  }
+}

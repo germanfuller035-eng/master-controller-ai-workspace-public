@@ -1,0 +1,14 @@
+{
+  "onboarding_completion": 0.5,
+  "adoption_rate": 0.25,
+  "health_distribution": {
+    "HEALTHY": 1,
+    "AT_RISK": 2,
+    "CRITICAL": 1
+  },
+  "support_burden": 3,
+  "incidents": 1,
+  "renewal_eligibility": 0.25,
+  "churn_count": 1,
+  "value_evidence_completeness": 0.25
+}

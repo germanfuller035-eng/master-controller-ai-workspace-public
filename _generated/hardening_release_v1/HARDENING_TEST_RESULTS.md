@@ -1,0 +1,18 @@
+# Hardening Test Results
+
+HARDENING_TEST_RESULT=PASS
+DURATION_SECONDS=2.45
+BACKUP_MANIFEST_RESULT=PASS
+RESTORE_REHEARSAL_RESULT=PASS
+PROVIDER_FAILURE_RESULT=PASS
+RESTART_RECOVERY_RESULT=PASS
+ROLLBACK_BUNDLE_RESULT=PASS
+
+## Unit Test Output
+```text
+......
+----------------------------------------------------------------------
+Ran 6 tests in 0.788s
+
+OK
+```

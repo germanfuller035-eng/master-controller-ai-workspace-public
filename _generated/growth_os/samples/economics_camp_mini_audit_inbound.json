@@ -1,0 +1,16 @@
+{
+  "economics_id": "econ_camp_mini_audit_inbound",
+  "total_cost": 16000,
+  "total_cost_status": "MODEL_ESTIMATE",
+  "cost_per_candidate": 320,
+  "cost_per_verified": 800,
+  "cost_per_reply": 3200,
+  "cost_per_opportunity": null,
+  "cost_per_win": 16000,
+  "gross_per_win": 7000,
+  "break_even_wins": 3,
+  "capacity_ceiling": 5,
+  "confidence": "MODEL_ESTIMATE",
+  "viable": true,
+  "note": "send is never counted as a result; outcomes require Analytics OS evidence"
+}

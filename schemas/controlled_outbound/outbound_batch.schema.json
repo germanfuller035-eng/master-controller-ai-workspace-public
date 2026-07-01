@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/controlled_outbound/outbound_batch.schema.json",
+  "title": "Outbound Batch V1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "synthetic",
+    "batch_id",
+    "drafts",
+    "max_batch_size",
+    "send_allowed"
+  ],
+  "properties": {
+    "schema_version": {"const": "controlled_outbound.outbound_batch.v1"},
+    "synthetic": {"const": true},
+    "batch_id": {"type": "string"},
+    "drafts": {"type": "array", "maxItems": 3},
+    "max_batch_size": {"const": 3},
+    "send_allowed": {"const": false}
+  },
+  "additionalProperties": true
+}

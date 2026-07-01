@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Data Classification V1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["data_class", "external_ai_policy", "prompt_policy", "log_policy"],
+  "properties": {
+    "data_class": {"enum": ["PUBLIC", "BUSINESS_INTERNAL", "CLIENT_CONFIDENTIAL", "PERSONAL_CONFIDENTIAL", "MILITARY_MEDICAL", "SECRETS"]},
+    "external_ai_policy": {"type": "string"},
+    "prompt_policy": {"type": "string"},
+    "log_policy": {"type": "string"},
+    "owner_approval_required": {"type": "boolean"}
+  }
+}

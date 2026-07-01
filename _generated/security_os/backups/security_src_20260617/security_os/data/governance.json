@@ -1,0 +1,186 @@
+{
+  "schema": "security_os.governance.v1",
+  "note": "MP4-21 — security governance model. Descriptive/normative; no runtime, no secret values, no legal assertions. Reuses Integration data classes + Orchestration capability gates; creates no second audit/identity/approval store.",
+  "synthetic": true,
+
+  "asset_registry": [
+    { "asset_id": "vps", "name": "VPS 195.96.132.82", "owner": "owner", "system": "master_controller", "criticality": "CRITICAL", "confidentiality": "HIGH", "integrity": "HIGH", "availability": "HIGH", "data_classes": ["PERSONAL", "CLIENT_CONFIDENTIAL", "SECRET_REFERENCE"], "dependencies": ["ssh", "systemd", "caddy"], "trust_boundaries": ["internet->caddy", "caddy->api", "api->store"], "backup": "master-controller-backup.timer", "recovery": "restore runbook", "current_controls": ["UFW", "fail2ban", "TLS", "API auth"], "known_gaps": ["live verification out of scope this task"] },
+    { "asset_id": "canonical_store", "name": "Canonical lead store", "owner": "master_controller", "system": "master_controller", "criticality": "CRITICAL", "confidentiality": "HIGH", "integrity": "HIGH", "availability": "MEDIUM", "data_classes": ["PERSONAL", "CLIENT_CONFIDENTIAL"], "dependencies": ["vps"], "trust_boundaries": ["api->store"], "backup": "timer", "recovery": "restore", "current_controls": ["single canonical writer", "revision"], "known_gaps": [] },
+    { "asset_id": "mc_api", "name": "Master Controller API", "owner": "master_controller", "system": "master_controller", "criticality": "CRITICAL", "confidentiality": "HIGH", "integrity": "HIGH", "availability": "HIGH", "data_classes": ["PERSONAL"], "dependencies": ["vps"], "trust_boundaries": ["client->api"], "backup": "n/a", "recovery": "redeploy", "current_controls": ["auth", "HTTPS", "revision", "idempotency"], "known_gaps": ["idempotency only partial on some commands (integration finding)"] },
+    { "asset_id": "ssh_credentials", "name": "SSH private key", "owner": "owner", "system": "vps", "criticality": "CRITICAL", "confidentiality": "MAX", "integrity": "HIGH", "availability": "LOW", "data_classes": ["SECRET_REFERENCE"], "dependencies": [], "trust_boundaries": ["workstation->vps"], "backup": "owner-held", "recovery": "regenerate", "current_controls": ["key-based auth"], "known_gaps": ["rotation cadence owner-defined"] },
+    { "asset_id": "telegram_token", "name": "Telegram bot token", "owner": "owner", "system": "master_controller", "criticality": "HIGH", "confidentiality": "MAX", "integrity": "MEDIUM", "availability": "MEDIUM", "data_classes": ["SECRET_REFERENCE"], "dependencies": ["mc_api"], "trust_boundaries": ["service->telegram_api"], "backup": "owner-held", "recovery": "revoke+reissue", "current_controls": ["env-only", "API-only owner control"], "known_gaps": [] },
+    { "asset_id": "imap_smtp_credentials", "name": "Yandex IMAP/SMTP password", "owner": "owner", "system": "master_controller", "criticality": "HIGH", "confidentiality": "MAX", "integrity": "MEDIUM", "availability": "MEDIUM", "data_classes": ["SECRET_REFERENCE"], "dependencies": ["imap_service"], "trust_boundaries": ["service->yandex"], "backup": "owner-held", "recovery": "rotate app-password", "current_controls": ["env-only", "read-only IMAP"], "known_gaps": [] },
+    { "asset_id": "android_signing", "name": "Android signing key", "owner": "owner", "system": "android", "criticality": "HIGH", "confidentiality": "MAX", "integrity": "HIGH", "availability": "LOW", "data_classes": ["SECRET_REFERENCE"], "dependencies": [], "trust_boundaries": ["build->release"], "backup": "owner-held", "recovery": "key rotation breaks update path", "current_controls": ["external keystore"], "known_gaps": ["verify never tracked"] },
+    { "asset_id": "file_vault", "name": "File Vault (D:/AI_FILE_VAULT)", "owner": "owner", "system": "workspace", "criticality": "MEDIUM", "confidentiality": "HIGH", "integrity": "MEDIUM", "availability": "MEDIUM", "data_classes": ["CLIENT_CONFIDENTIAL", "PERSONAL"], "dependencies": [], "trust_boundaries": ["workstation->vault"], "backup": "owner", "recovery": "restore", "current_controls": ["reference-only index"], "known_gaps": ["encryption-at-rest unverified this task"] },
+    { "asset_id": "git_repo", "name": "Local Git repository", "owner": "owner", "system": "workspace", "criticality": "HIGH", "confidentiality": "MEDIUM", "integrity": "HIGH", "availability": "MEDIUM", "data_classes": ["INTERNAL", "CONFIDENTIAL"], "dependencies": [], "trust_boundaries": ["local-only (no remote)"], "backup": "git bundles", "recovery": "clone bundle", "current_controls": ["no remote", "gitignore", "per-OS security tests"], "known_gaps": ["future remote will need secret-scan gate"] },
+    { "asset_id": "backups", "name": "Backups + git bundles", "owner": "owner", "system": "workspace", "criticality": "HIGH", "confidentiality": "HIGH", "integrity": "HIGH", "availability": "MEDIUM", "data_classes": ["CONFIDENTIAL", "PERSONAL"], "dependencies": [], "trust_boundaries": ["local"], "backup": "self", "recovery": "verify+restore", "current_controls": ["SHA256 manifest", "bundle verify"], "known_gaps": ["off-site + encryption owner-defined"] },
+    { "asset_id": "agent_environment", "name": "AI agent execution environment", "owner": "owner", "system": "orchestrator", "criticality": "MEDIUM", "confidentiality": "MEDIUM", "integrity": "HIGH", "availability": "MEDIUM", "data_classes": ["INTERNAL"], "dependencies": ["git_repo"], "trust_boundaries": ["agent->workspace"], "backup": "n/a", "recovery": "n/a", "current_controls": ["capability gates", "no secret access", "no network", "isolated worktree"], "known_gaps": [] },
+    { "asset_id": "android_client", "name": "Android production app", "owner": "owner", "system": "android", "criticality": "MEDIUM", "confidentiality": "MEDIUM", "integrity": "HIGH", "availability": "MEDIUM", "data_classes": ["PERSONAL"], "dependencies": ["mc_api"], "trust_boundaries": ["device->api"], "backup": "store", "recovery": "reinstall", "current_controls": ["HTTPS", "no server secrets", "Room cache"], "known_gaps": ["cache-at-rest encryption status REQUIRES_LIVE_VERIFICATION"] }
+  ],
+
+  "threat_model": [
+    { "threat_id": "T01", "asset": "telegram_token", "boundary": "service->telegram_api", "category": "information_disclosure", "actor": "leaked_credential", "attack_precondition": "token committed or logged", "impact": "bot takeover", "likelihood": "low", "existing_controls": ["env-only", "secret scanners"], "control_gaps": [], "mitigation": "scan + rotation runbook", "owner": "owner", "verification": "static scan", "status": "CONTROLLED" },
+    { "threat_id": "T02", "asset": "git_repo", "boundary": "local->future_remote", "category": "information_disclosure", "actor": "leaked_credential", "attack_precondition": "secret pushed to remote", "impact": "credential exposure", "likelihood": "medium_future", "existing_controls": ["no remote yet", "gitignore"], "control_gaps": ["pre-push secret gate not yet enforced"], "mitigation": "secret-scan release gate before any remote", "owner": "owner", "verification": "MP40 gate", "status": "MITIGATION_PLANNED" },
+    { "threat_id": "T03", "asset": "agent_environment", "boundary": "external_content->agent", "category": "prompt_injection", "actor": "client_supplied_malicious_content", "attack_precondition": "agent ingests untrusted text as instructions", "impact": "policy bypass / exfiltration attempt", "likelihood": "medium", "existing_controls": ["instruction hierarchy", "capability gates", "secret exclusion"], "control_gaps": [], "mitigation": "source trust classification + owner approval", "owner": "owner", "verification": "prompt-injection fixtures", "status": "CONTROLLED" },
+    { "threat_id": "T04", "asset": "agent_environment", "boundary": "agent->external", "category": "data_exfiltration", "actor": "compromised_ai_tool", "attack_precondition": "agent writes secret/PII into report or network call", "impact": "data leak", "likelihood": "low", "existing_controls": ["no network", "secret exclusion", "exfiltration validator"], "control_gaps": [], "mitigation": "static exfiltration controls", "owner": "owner", "verification": "exfiltration tests", "status": "CONTROLLED" },
+    { "threat_id": "T05", "asset": "canonical_store", "boundary": "service->store", "category": "tampering", "actor": "unauthorized_external_actor", "attack_precondition": "second writer or auth bypass", "impact": "canonical corruption", "likelihood": "low", "existing_controls": ["single canonical writer", "ownership matrix", "revision"], "control_gaps": [], "mitigation": "ownership enforcement tests", "owner": "master_controller", "verification": "integration ownership tests", "status": "CONTROLLED" },
+    { "threat_id": "T06", "asset": "git_repo", "boundary": "dependency->build", "category": "supply_chain_compromise", "actor": "malicious_dependency", "attack_precondition": "compromised npm/gradle package", "impact": "code execution", "likelihood": "low_medium", "existing_controls": ["pinned deps", "minimal deps"], "control_gaps": ["no automated vuln feed (offline)"], "mitigation": "SBOM + update policy", "owner": "owner", "verification": "SBOM inventory", "status": "DOCUMENTED_ONLY" },
+    { "threat_id": "T07", "asset": "imap_smtp_credentials", "boundary": "service->yandex", "category": "elevation_of_privilege", "actor": "compromised_vps", "attack_precondition": "VPS compromise exposes env", "impact": "mail account access", "likelihood": "low", "existing_controls": ["read-only IMAP", "app-password scope"], "control_gaps": [], "mitigation": "rotation runbook", "owner": "owner", "verification": "imap read-only test", "status": "CONTROLLED" },
+    { "threat_id": "T08", "asset": "file_vault", "boundary": "upload->vault", "category": "tampering", "actor": "malicious_file_upload", "attack_precondition": "unsafe attachment ingested", "impact": "malware / traversal", "likelihood": "low", "existing_controls": ["reference-only", "MIME/size contract"], "control_gaps": ["malware scan future"], "mitigation": "file security controls + quarantine", "owner": "owner", "verification": "file security tests", "status": "MITIGATION_PLANNED" },
+    { "threat_id": "T09", "asset": "vps", "boundary": "internet->vps", "category": "denial_of_service", "actor": "unauthorized_external_actor", "attack_precondition": "exposed port flood", "impact": "availability loss", "likelihood": "low", "existing_controls": ["UFW", "fail2ban", "Caddy"], "control_gaps": ["live verification out of scope"], "mitigation": "documented controls", "owner": "owner", "verification": "REQUIRES_LIVE_VERIFICATION", "status": "DOCUMENTED_ONLY" },
+    { "threat_id": "T10", "asset": "android_client", "boundary": "device->api", "category": "information_disclosure", "actor": "lost_device", "attack_precondition": "unencrypted cache on lost device", "impact": "local data exposure", "likelihood": "low", "existing_controls": ["no server secrets", "HTTPS"], "control_gaps": ["cache-at-rest encryption status unknown"], "mitigation": "verify Room encryption", "owner": "owner", "verification": "REQUIRES_LIVE_VERIFICATION", "status": "OWNER_REVIEW_REQUIRED" },
+    { "threat_id": "T11", "asset": "agent_environment", "boundary": "agent->approval", "category": "elevation_of_privilege", "actor": "compromised_ai_tool", "attack_precondition": "agent self-approves a gate", "impact": "unauthorized action", "likelihood": "low", "existing_controls": ["no agent self-approval", "approval is reference"], "control_gaps": [], "mitigation": "orchestration approval policy", "owner": "owner", "verification": "orchestration tests", "status": "CONTROLLED" },
+    { "threat_id": "T12", "asset": "backups", "boundary": "local", "category": "information_disclosure", "actor": "accidental_owner_action", "attack_precondition": "backup with real data shared", "impact": "data leak", "likelihood": "low", "existing_controls": ["gitignored bundles", "no real data in tracked backups"], "control_gaps": [], "mitigation": "backup security policy", "owner": "owner", "verification": "backup tests", "status": "CONTROLLED" }
+  ],
+
+  "security_ownership_matrix": [
+    { "decision": "security_policy", "owner": "owner" },
+    { "decision": "secret", "owner": "owner" },
+    { "decision": "credential_reference", "owner": "owner" },
+    { "decision": "access_role", "owner": "owner" },
+    { "decision": "service_identity", "owner": "master_controller" },
+    { "decision": "vulnerability", "owner": "owner" },
+    { "decision": "incident", "owner": "owner" },
+    { "decision": "audit_event", "owner": "master_controller", "note": "canonical audit; no second ledger" },
+    { "decision": "exception", "owner": "owner" },
+    { "decision": "data_classification", "owner": "integration_architecture", "note": "reuses integration data classes" },
+    { "decision": "retention_decision", "owner": "owner" },
+    { "decision": "deletion_decision", "owner": "owner" },
+    { "decision": "backup_encryption", "owner": "owner" },
+    { "decision": "release_security_gate", "owner": "owner" }
+  ],
+
+  "identities": ["human_owner", "future_administrator", "developer_agent", "deterministic_tool", "vps_api_service", "vps_worker", "telegram_service", "imap_service", "android_client", "future_channel_adapter", "backup_process", "ci_future"],
+
+  "least_privilege_matrix": [
+    { "identity": "telegram_service", "allowed_systems": ["mc_api"], "data_classes": ["PERSONAL_VIA_API"], "read": true, "write": false, "execute": false, "network": "telegram_api_only", "secret_reference": "telegram_token", "canonical_mutation": false, "send": "owner_gated_only", "deployment": false, "backup": false, "restore": false, "owner_approval_required": true, "boundary_checks": ["cannot access canonical file directly", "cannot access worker/IMAP secrets"] },
+    { "identity": "imap_service", "allowed_systems": ["yandex_imap"], "data_classes": ["PERSONAL"], "read": true, "write": false, "execute": false, "network": "imaps_read_only", "secret_reference": "imap_smtp_credentials", "canonical_mutation": false, "send": false, "deployment": false, "backup": false, "restore": false, "owner_approval_required": true, "boundary_checks": ["read-only EXAMINE", "no flag mutation", "no send", "no APPEND"] },
+    { "identity": "android_client", "allowed_systems": ["mc_api"], "data_classes": ["PERSONAL_VIA_API"], "read": true, "write": "via_api_command_only", "execute": false, "network": "https_api_only", "secret_reference": "none", "canonical_mutation": false, "send": false, "deployment": false, "backup": false, "restore": false, "owner_approval_required": false, "boundary_checks": ["no server secrets", "no offline canonical mutation"] },
+    { "identity": "developer_agent", "allowed_systems": ["git_repo", "workspace_local"], "data_classes": ["INTERNAL"], "read": true, "write": "isolated_worktree", "execute": "local_tests", "network": false, "secret_reference": "none", "canonical_mutation": false, "send": false, "deployment": false, "backup": "generate_local", "restore": false, "owner_approval_required": false, "boundary_checks": ["no secret access", "no production mutation", "no network", "R2 ceiling"] },
+    { "identity": "vps_api_service", "allowed_systems": ["canonical_store", "queue"], "data_classes": ["PERSONAL", "CLIENT_CONFIDENTIAL"], "read": true, "write": true, "execute": false, "network": "inbound_https", "secret_reference": "api_auth", "canonical_mutation": true, "send": false, "deployment": false, "backup": false, "restore": false, "owner_approval_required": false, "boundary_checks": ["sole canonical writer"] },
+    { "identity": "vps_worker", "allowed_systems": ["queue", "canonical_store"], "data_classes": ["PERSONAL"], "read": true, "write": true, "execute": true, "network": "outbound_controlled", "secret_reference": "service_creds", "canonical_mutation": true, "send": "approved_only", "deployment": false, "backup": false, "restore": false, "owner_approval_required": false, "boundary_checks": ["send only via approved seam"] },
+    { "identity": "backup_process", "allowed_systems": ["canonical_store", "backups"], "data_classes": ["PERSONAL", "CONFIDENTIAL"], "read": true, "write": "backup_target_only", "execute": false, "network": false, "secret_reference": "backup_encryption_key_future", "canonical_mutation": false, "send": false, "deployment": false, "backup": true, "restore": "owner_gated", "owner_approval_required": true, "boundary_checks": ["restore is owner-gated"] }
+  ],
+  "least_privilege_assertions": [
+    "Telegram cannot access canonical file directly",
+    "Telegram cannot access worker/IMAP secrets",
+    "IMAP service is read-only",
+    "Android has no server secrets",
+    "Agent Orchestration cannot mutate production",
+    "Conversation Hub cannot send",
+    "Analytics cannot write domain state",
+    "Lead Hunter cannot write canonical store directly"
+  ],
+
+  "authentication_contract": [
+    { "identity": "vps_api_service", "credential_type": "service_token", "storage_reference": "env", "rotation_policy": "owner_defined", "expiry": "owner_defined", "scope": "api", "revocation": "owner", "audit": true, "fallback": "fail_closed" },
+    { "identity": "telegram_service", "credential_type": "bot_token", "storage_reference": "env", "rotation_policy": "on_compromise", "expiry": "none", "scope": "owner_chat", "revocation": "telegram_revoke", "audit": true, "fallback": "fail_closed" },
+    { "identity": "imap_service", "credential_type": "app_password", "storage_reference": "env", "rotation_policy": "periodic_owner", "expiry": "owner_defined", "scope": "imap_read", "revocation": "yandex_revoke", "audit": true, "fallback": "fail_closed" },
+    { "identity": "android_client", "credential_type": "session_token", "storage_reference": "device_secure_storage", "rotation_policy": "session", "expiry": "session", "scope": "api_read+command", "revocation": "server", "audit": true, "fallback": "re_auth" }
+  ],
+
+  "authorization_model": {
+    "principles": ["deny_by_default", "explicit_capability", "resource+operation+environment", "owner_gate_for_high_risk", "revision_checked", "audit_event_emitted"],
+    "detections": ["role_too_broad", "wildcard_permission", "service_with_unnecessary_send", "service_with_unnecessary_canonical_write", "offline_client_mutation", "hidden_fallback"]
+  },
+
+  "secrets_policy": {
+    "categories": ["ssh_private_key", "telegram_bot_token", "smtp_imap_password", "api_key", "android_signing_secret", "tls_private_key", "database_credential_future", "third_party_credential"],
+    "rules": ["never Git", "never report", "never context pack", "never fixture", "never log", "reference only", "environment separation", "least privilege", "rotation", "revocation", "fingerprint without value", "owner-gated access"]
+  },
+
+  "credential_rotation_runbooks": {
+    "ssh": "owner generates new keypair offline -> add pubkey -> verify login -> remove old -> audit. No automation.",
+    "telegram": "owner revokes via BotFather -> issue new token -> update env (owner) -> restart service (owner) -> audit.",
+    "imap": "owner rotates Yandex app-password -> update env (owner) -> verify read-only -> audit.",
+    "smtp": "same as imap; separate app-password where possible.",
+    "signing_key": "WARNING: rotating Android signing key breaks update path; owner+legal review.",
+    "external_api": "per-provider; owner-gated."
+  },
+
+  "secure_configuration": {
+    "rules": ["env vars for secrets (not config files)", "root-only files where required", "service-specific configs", "documented permission expectations", "redacted diagnostics", "safe defaults", "fail_closed on missing config", "no localhost fallback where inappropriate", "HTTPS-only"],
+    "validation": "static only"
+  },
+
+  "data_classification_mapping": [
+    { "data": "leads", "class": "PERSONAL" },
+    { "data": "contacts", "class": "PERSONAL" },
+    { "data": "audit_evidence", "class": "CONFIDENTIAL" },
+    { "data": "messages", "class": "PERSONAL" },
+    { "data": "attachments", "class": "CLIENT_CONFIDENTIAL" },
+    { "data": "invoices", "class": "FINANCIAL" },
+    { "data": "health_data", "class": "SENSITIVE_SPECIAL_CATEGORY" },
+    { "data": "legal_medical_documents", "class": "SENSITIVE_SPECIAL_CATEGORY" },
+    { "data": "credentials", "class": "SECRET_REFERENCE" },
+    { "data": "logs", "class": "INTERNAL" },
+    { "data": "backups", "class": "CONFIDENTIAL" },
+    { "data": "analytics_snapshots", "class": "INTERNAL" },
+    { "data": "synthetic_fixtures", "class": "PUBLIC" }
+  ],
+
+  "privacy_minimization": {
+    "rules": ["collect minimum", "stable IDs not raw identifiers", "avoid copying message bodies", "redact unnecessary contacts", "aggregate analytics", "separate operational from analytics data", "exclude special-category data from general context packs", "no production data in test fixtures", "no client data in demos", "purpose limitation", "access limitation"]
+  },
+
+  "consent_reconciliation": {
+    "sources": ["conversation_hub_consent", "growth_nurture", "customer_success_permissions", "revenue_commercial", "master_controller_opt_out", "analytics_measurement"],
+    "purposes": ["commercial_contact", "support", "transactional", "testimonial", "public_case", "logo", "referral", "analytics"],
+    "rules": ["no implied consent", "no automatic legal conclusion", "opt-out canonical owner = master_controller"]
+  },
+
+  "privacy_impact_assessments": [
+    { "processing_activity": "lead_discovery", "purpose": "demand_gen", "data_categories": ["PERSONAL"], "subjects": "business_contacts", "source": "lead_hunter", "storage": "candidate_store", "access": "owner+services", "retention": "policy_defined", "risk": "medium", "mitigation": "minimization+provenance", "owner": "owner", "legal_review_required": "LEGAL_REVIEW_REQUIRED" },
+    { "processing_activity": "email_monitoring", "purpose": "reply_correlation", "data_categories": ["PERSONAL"], "subjects": "contacts", "source": "imap_read_only", "storage": "reply_state", "access": "owner", "retention": "policy_defined", "risk": "medium", "mitigation": "read-only+body minimization", "owner": "owner", "legal_review_required": "LEGAL_REVIEW_REQUIRED" },
+    { "processing_activity": "android_cache", "purpose": "offline_view", "data_categories": ["PERSONAL"], "subjects": "contacts", "source": "mc_api", "storage": "room_cache", "access": "device", "retention": "session/ttl", "risk": "medium", "mitigation": "no offline mutation; encryption verify", "owner": "owner", "legal_review_required": "OWNER_REVIEW_REQUIRED" },
+    { "processing_activity": "financial_records", "purpose": "billing", "data_categories": ["FINANCIAL"], "subjects": "customers", "source": "finance_os", "storage": "finance_store", "access": "owner+accountant", "retention": "statutory_owner_defined", "risk": "high", "mitigation": "access limitation", "owner": "owner", "legal_review_required": "LEGAL_REVIEW_REQUIRED" }
+  ],
+  "pia_disclaimer": "Internal control framework only. Does NOT assert GDPR/152-FZ/ISO compliance. Legal review flagged where required.",
+
+  "retention_policy": [
+    { "data": "candidate_leads", "retention": "owner_defined", "deletion_stage_max": "READY" },
+    { "data": "rejected_leads", "retention": "short_owner_defined", "deletion_stage_max": "READY" },
+    { "data": "canonical_leads", "retention": "owner_defined", "deletion_stage_max": "READY" },
+    { "data": "sent_messages", "retention": "audit_owner_defined", "deletion_stage_max": "READY" },
+    { "data": "replies", "retention": "audit_owner_defined", "deletion_stage_max": "READY" },
+    { "data": "opt_outs", "retention": "indefinite_suppression", "deletion_stage_max": "READY" },
+    { "data": "attachments", "retention": "reference_owner_defined", "deletion_stage_max": "READY" },
+    { "data": "invoices", "retention": "statutory_legal_review", "deletion_stage_max": "READY" },
+    { "data": "backups", "retention": "rotation_owner_defined", "deletion_stage_max": "READY" },
+    { "data": "logs", "retention": "bounded", "deletion_stage_max": "READY" },
+    { "data": "audit_events", "retention": "long_append_only", "deletion_stage_max": "READY" },
+    { "data": "agent_runs", "retention": "bounded", "deletion_stage_max": "READY" },
+    { "data": "generated_reports", "retention": "bounded", "deletion_stage_max": "READY" },
+    { "data": "temporary_outputs", "retention": "ephemeral", "deletion_stage_max": "READY" }
+  ],
+  "deletion_note": "Max deletion stage this task = READY. No deletion executed. Stages: REQUESTED->VALIDATED->LEGAL_HOLD_CHECKED->BACKUP_IMPACT_REVIEWED->OWNER_APPROVED->READY->EXECUTED->VERIFIED.",
+
+  "encryption_standard": {
+    "in_transit": [
+      { "control": "HTTPS/TLS (Caddy)", "status": "CONFIRMED_DOCUMENTED" },
+      { "control": "SSH", "status": "CONFIRMED_DOCUMENTED" },
+      { "control": "IMAPS", "status": "CONFIRMED_DOCUMENTED" },
+      { "control": "SMTPS", "status": "REQUIRES_LIVE_VERIFICATION" },
+      { "control": "official_channel_apis", "status": "PLANNED" }
+    ],
+    "at_rest": [
+      { "control": "local_workstation_disk", "status": "REQUIRES_LIVE_VERIFICATION" },
+      { "control": "vps_disk", "status": "REQUIRES_LIVE_VERIFICATION" },
+      { "control": "backups", "status": "PLANNED" },
+      { "control": "android_room_cache", "status": "REQUIRES_LIVE_VERIFICATION" },
+      { "control": "file_vault", "status": "REQUIRES_LIVE_VERIFICATION" },
+      { "control": "signing_keys", "status": "CONFIRMED_DOCUMENTED" }
+    ],
+    "note": "No encryption claimed on assumption. REQUIRES_LIVE_VERIFICATION items are owner actions."
+  },
+
+  "logging_redaction": {
+    "allowed_fields": ["request_id", "operation", "entity_id", "status", "duration", "error_code", "service", "timestamp", "redacted_source_reference"],
+    "forbidden_fields": ["secret", "token", "password", "raw_authorization_header", "private_key", "complete_message_body", "unnecessary_email_phone", "financial_credential", "attachment_body"]
+  },
+
+  "audit_trail_standard": {
+    "events": ["login_future", "secret_access_future", "approval", "canonical_mutation", "send", "status_change", "price_change", "product_promotion", "deployment", "restart", "backup", "restore", "deletion", "permission_grant", "security_exception", "incident_action"],
+    "rules": ["audit trail not modifiable by derived UI", "no second outbound ledger", "append-only", "owner-readable"]
+  }
+}

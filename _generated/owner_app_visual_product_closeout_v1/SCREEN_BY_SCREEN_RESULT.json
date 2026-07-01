@@ -1,0 +1,151 @@
+{
+  "session": "OWNER_APP_VISUAL_PRODUCT_CLOSEOUT_V1",
+  "device": "Honor ALT-LX1 AMSKBB4914919475",
+  "private_screenshot_vault": "D:/AI_FILE_VAULT/sales_pilot_private/owner_app_visual_product_closeout_20260628_132817",
+  "screenshots_in_git": false,
+  "screens": [
+    {
+      "screen": "Today",
+      "screen_status": "PASS",
+      "private_png": "01_today.png",
+      "private_ui_dump": "01_today.xml",
+      "theme_consistent": true,
+      "primary_action_clear": true,
+      "next_step_clear": true,
+      "stale_handling_visible": true,
+      "owner_visible_old_wording_found": false
+    },
+    {
+      "screen": "Leads",
+      "screen_status": "PASS",
+      "private_png": "02_leads.png",
+      "private_ui_dump": "02_leads.xml",
+      "theme_consistent": true,
+      "primary_action_clear": true,
+      "next_step_clear": true,
+      "stale_handling_visible": true,
+      "owner_visible_old_wording_found": false
+    },
+    {
+      "screen": "Commerce",
+      "screen_status": "PASS",
+      "private_png": "03_commerce.png",
+      "private_ui_dump": "03_commerce.xml",
+      "theme_consistent": true,
+      "primary_action_clear": true,
+      "next_step_clear": true,
+      "stale_handling_visible": true,
+      "owner_visible_old_wording_found": false
+    },
+    {
+      "screen": "Decisions",
+      "screen_status": "PASS",
+      "private_png": "04_decisions.png",
+      "private_ui_dump": "04_decisions.xml",
+      "theme_consistent": true,
+      "primary_action_clear": true,
+      "next_step_clear": true,
+      "stale_handling_visible": true,
+      "owner_visible_old_wording_found": false
+    },
+    {
+      "screen": "Agents",
+      "screen_status": "PASS",
+      "private_png": "05_agents.png",
+      "private_ui_dump": "05_agents.xml",
+      "theme_consistent": true,
+      "primary_action_clear": true,
+      "next_step_clear": true,
+      "stale_handling_visible": true,
+      "owner_visible_old_wording_found": false
+    },
+    {
+      "screen": "System",
+      "screen_status": "PASS",
+      "private_png": "06_system.png",
+      "private_ui_dump": "06_system.xml",
+      "theme_consistent": true,
+      "primary_action_clear": true,
+      "next_step_clear": true,
+      "stale_handling_visible": true,
+      "owner_visible_old_wording_found": false
+    },
+    {
+      "screen": "Working Sales MVP",
+      "screen_status": "PASS",
+      "private_png": "07_working_sales_mvp.png",
+      "private_ui_dump": "07_working_sales_mvp.xml",
+      "theme_consistent": true,
+      "primary_action_clear": true,
+      "next_step_clear": true,
+      "stale_handling_visible": true,
+      "owner_visible_old_wording_found": false
+    },
+    {
+      "screen": "Draft Editor",
+      "screen_status": "PASS",
+      "private_png": "08_draft_editor.png",
+      "private_ui_dump": "08_draft_editor.xml",
+      "theme_consistent": true,
+      "primary_action_clear": true,
+      "next_step_clear": true,
+      "stale_handling_visible": true,
+      "owner_visible_old_wording_found": false
+    },
+    {
+      "screen": "QA Gate",
+      "screen_status": "PASS",
+      "private_png": "09_qa_gate.png",
+      "private_ui_dump": "09_qa_gate.xml",
+      "theme_consistent": true,
+      "primary_action_clear": true,
+      "next_step_clear": true,
+      "stale_handling_visible": true,
+      "owner_visible_old_wording_found": false
+    },
+    {
+      "screen": "Send Readiness",
+      "screen_status": "PASS",
+      "private_png": "10_send_readiness.png",
+      "private_ui_dump": "10_send_readiness.xml",
+      "theme_consistent": true,
+      "primary_action_clear": true,
+      "next_step_clear": true,
+      "stale_handling_visible": true,
+      "owner_visible_old_wording_found": false
+    },
+    {
+      "screen": "Manual Send Packet",
+      "screen_status": "PASS",
+      "private_png": "11_manual_send_packet.png",
+      "private_ui_dump": "11_manual_send_packet.xml",
+      "theme_consistent": true,
+      "primary_action_clear": true,
+      "next_step_clear": true,
+      "stale_handling_visible": true,
+      "owner_visible_old_wording_found": false
+    },
+    {
+      "screen": "Post-send Result",
+      "screen_status": "PASS",
+      "private_png": "12_post_send_result.png",
+      "private_ui_dump": "12_post_send_result.xml",
+      "theme_consistent": true,
+      "primary_action_clear": true,
+      "next_step_clear": true,
+      "stale_handling_visible": true,
+      "owner_visible_old_wording_found": false
+    },
+    {
+      "screen": "Settings",
+      "screen_status": "PASS",
+      "private_png": "13_settings.png",
+      "private_ui_dump": "13_settings.xml",
+      "theme_consistent": true,
+      "primary_action_clear": true,
+      "next_step_clear": true,
+      "stale_handling_visible": true,
+      "owner_visible_old_wording_found": false
+    }
+  ]
+}

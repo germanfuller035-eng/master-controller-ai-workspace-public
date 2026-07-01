@@ -1,0 +1,23 @@
+{
+  "schema": "analytics_os.controlled_commercial_cycle_measurement_plan.v1",
+  "version": "1.0",
+  "status": "PLAN_ONLY",
+  "note": "FUTURE measurement plan for a controlled commercial cycle. NOT executed. No sends, no experiments, no tracking started. Requires explicit owner approval + lifting of production freeze before any execution.",
+  "execution_state": {"cycle_started": false, "running_allowed": false, "owner_approval_required": true},
+  "eligible_leads": {"definition": "verified + qualified + product-routed leads with valid contact and no opt-out", "synthetic_only": true},
+  "exclusions": ["opt_out", "unverified", "TEST_ONLY", "duplicate", "missing_contact", "out_of_ICP"],
+  "product": {"default": "mini_audit", "note": "single product per cohort to isolate measurement"},
+  "daily_limit": {"value": 5, "rationale": "owner-approval-gated, capacity-safe, avoids spam patterns"},
+  "approval_rule": "every outbound owner-approved before send (no autosend)",
+  "send_evidence": ["message_id", "channel", "approved_by", "approved_at", "delivery_status"],
+  "delivery_evidence": ["transport_accept", "bounce_status"],
+  "reply_classification": ["positive", "neutral", "negative", "auto_reply", "bounce", "out_of_office"],
+  "opt_out": {"honored": true, "immediate": true, "suppression_list": true},
+  "funnel_stages": ["eligible", "approved", "sent", "delivered", "replied", "interested", "opportunity", "won"],
+  "lead_quality": ["source", "verified_rate", "icp_fit", "audit_ready"],
+  "owner_workload": {"track": ["approvals_per_day", "review_minutes", "overload_risk"]},
+  "delivery_capacity": {"track": ["active_projects", "owner_hours_committed"]},
+  "support_capacity": {"track": ["open_support", "critical_incidents"]},
+  "stop_criteria": ["owner_overload HIGH", "delivery_capacity exceeded", "support_capacity exceeded", "bounce_rate > threshold", "any opt-out complaint", "quality below floor"],
+  "safety_guardrails": ["no autosend", "daily_limit enforced", "opt-out honored", "no TEST_ONLY in funnel", "freeze must be lifted by owner", "all sends owner-approved", "synthetic until approved"]
+}

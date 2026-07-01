@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-26",
+  "session": "VOLTAGENT_RUNTIME_MODEL_ROUTER_AND_COST_GOVERNOR_V1",
+  "currency": "RUB_EQUIVALENT",
+  "monthly_budget_min_rub": 10000,
+  "monthly_budget_max_rub": 30000,
+  "active_monthly_budget_rub": 20000,
+  "transparent_meter_required": true,
+  "stop_loss_required_for_expensive_task": true,
+  "expensive_task_threshold_rub": 1000,
+  "unlimited_loops": "DENY",
+  "retries_limited": true,
+  "provider_fallbacks_limited": true,
+  "production_spend_authority": false
+}

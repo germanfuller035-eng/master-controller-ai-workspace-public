@@ -1,0 +1,10 @@
+{
+  "experiment_id": "X01",
+  "type": "message",
+  "status": "APPROVED",
+  "hypothesis_statement": "For verified leads, changing subject from A to B is expected to change reply_rate within 2w, because clarity, while guardrails remain acceptable.",
+  "blocks": [],
+  "measurement_ready": true,
+  "running_allowed": false,
+  "will_start": false
+}

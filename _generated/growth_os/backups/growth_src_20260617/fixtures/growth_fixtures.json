@@ -1,0 +1,35 @@
+{
+  "schema": "growth_os.fixtures.v1",
+  "version": "1.0",
+  "note": "24 synthetic Growth OS scenarios. NO real contacts. TEST_ ids only. Used by validators + tests. acme.test placeholders are intentional negative cases.",
+  "scenarios": [
+    {"fixture_id": "F01_no_site_industrial", "type": "segment", "digital_maturity": "none", "segment_id": "seg_no_site_local", "expect": "fit digital_presence_check (PLANNED)"},
+    {"fixture_id": "F02_maps_only", "type": "segment", "digital_maturity": "maps_only", "segment_id": "seg_maps_directory_only", "expect": "fit presence/start_page (DRAFT)"},
+    {"fixture_id": "F03_weak_website", "type": "segment", "digital_maturity": "weak_site", "segment_id": "seg_weak_site", "expect": "fit mini_audit (marketable)"},
+    {"fixture_id": "F04_good_site_weak_funnel", "type": "segment", "digital_maturity": "good_site_weak_funnel", "segment_id": "seg_good_site_weak_funnel", "expect": "fit mini_audit + funnel_audit (DRAFT)"},
+    {"fixture_id": "F05_good_site_weak_process", "type": "segment", "digital_maturity": "good_site_weak_process", "segment_id": "seg_good_site_weak_process", "expect": "fit advisory products (PLANNED)"},
+    {"fixture_id": "F06_mini_audit_campaign", "type": "campaign", "product_id": "mini_audit", "status": "MEASUREMENT_READY", "test_only": true, "expect_ready_blocked_by": "owner_capacity_confirmed"},
+    {"fixture_id": "F07_presence_campaign", "type": "campaign", "product_id": "digital_presence_check", "status": "DRAFT", "test_only": true, "expect_blocked": "product PLANNED + price unapproved"},
+    {"fixture_id": "F08_full_audit_campaign", "type": "campaign", "product_id": "full_business_audit", "status": "IDEA", "test_only": true, "expect_blocked": "product DRAFT + price unapproved"},
+    {"fixture_id": "F09_landing_campaign", "type": "campaign", "product_id": "landing_sprint", "status": "DRAFT", "test_only": true, "expect_blocked": "product DRAFT"},
+    {"fixture_id": "F10_product_not_ready", "type": "icp", "icp_id": "icp_bad", "product_id": "lead_system", "READY_TO_MARKET": true, "expect_validation_error": "READY_TO_MARKET on PLANNED product"},
+    {"fixture_id": "F11_price_not_approved", "type": "positioning", "product_id": "business_website", "price_status": "UNKNOWN", "expect": "cannot show invented price"},
+    {"fixture_id": "F12_capacity_unknown", "type": "campaign_readiness", "owner_capacity_confirmed": false, "expect": "not READY"},
+    {"fixture_id": "F13_unsupported_claim", "type": "positioning", "positioning_id": "pos_bad", "product_id": "mini_audit", "claims": ["guaranteed growth"], "prohibited_claims": ["guaranteed growth"], "proof": [], "value_proposition": "x", "expect_validation_error": "unsupported claim"},
+    {"fixture_id": "F14_missing_opt_out", "type": "message", "has_opt_out": false, "expect_validation_error": "missing opt-out"},
+    {"fixture_id": "F15_high_cost_channel", "type": "economics", "channel": "ch_paid_search_future", "cost_per_win": 50000, "capacity_ceiling": 5, "break_even_wins": 9, "expect": "not viable (break_even>ceiling)"},
+    {"fixture_id": "F16_low_quality_source", "type": "lead_source", "source": "low_quality", "verified_rate": 0.05, "expect": "source_health LOW"},
+    {"fixture_id": "F17_referral_eligible", "type": "referral", "accepted_project": true, "positive_evidence": true, "critical_support": false, "permission": true, "owner_approval": true, "expect": "eligible"},
+    {"fixture_id": "F18_referral_blocked", "type": "referral", "accepted_project": true, "permission": false, "expect_blocked": "no permission"},
+    {"fixture_id": "F19_partner_conflict", "type": "partner", "partner_type": "marketers", "expect": "FLAGGED_CONFLICT"},
+    {"fixture_id": "F20_social_proof_no_permission", "type": "social_proof", "proof_id": "sp_bad", "kind": "testimonial", "permission": "NOT_OBTAINED", "published": false, "expect_blocked": "no permission"},
+    {"fixture_id": "F21_experiment_insufficient_sample", "type": "experiment", "sample_requirement": 100, "current_sample": 12, "expect_blocked": "insufficient sample"},
+    {"fixture_id": "F22_campaign_stopped_quality", "type": "campaign", "status": "STOPPED", "stop_reason": "quality below floor", "expect": "stopped"},
+    {"fixture_id": "F23_controlled_cycle_ready", "type": "controlled_cycle", "preconditions_met": false, "expect": "runbook only, not started"},
+    {"fixture_id": "F24_controlled_cycle_blocked", "type": "controlled_cycle", "freeze_lifted": false, "expect_blocked": "freeze not lifted"}
+  ],
+  "negative_examples": {
+    "real_contact": {"email": "owner@realcompany.com", "phone": "+7 495 123 45 67", "note": "negative test — must be flagged by privacy validator"},
+    "running_experiment": {"experiment_id": "ex_bad", "status": "RUNNING", "note": "must be blocked"}
+  }
+}

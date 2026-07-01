@@ -1,0 +1,8 @@
+{
+  "scenario": "F",
+  "name": "Retry succeeds",
+  "ok": true,
+  "steps": [
+    "retry: RETRY_BOUNDED (TRANSIENT_TOOL is bounded-retryable)"
+  ]
+}

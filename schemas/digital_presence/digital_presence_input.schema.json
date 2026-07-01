@@ -1,0 +1,16 @@
+{
+  "$schema": "urn:json-schema:draft-2020-12",
+  "$id": "urn:master-controller:schemas:digital_presence:digital_presence_input",
+  "title": "digital_presence_input",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["site_id", "synthetic"],
+  "properties": {
+    "schema_version": {"type": "integer"},
+    "site_id": {"type": "string"},
+    "synthetic": {"type": "boolean"},
+    "external_access": {"type": "boolean"},
+    "reserved_domain_reference": {"type": "string"},
+    "evidence": {"type": "array"}
+  }
+}

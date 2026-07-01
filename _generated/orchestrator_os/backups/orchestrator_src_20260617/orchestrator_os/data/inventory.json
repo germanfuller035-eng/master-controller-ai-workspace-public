@@ -1,0 +1,23 @@
+{
+  "schema": "orchestrator_os.inventory.v1",
+  "note": "MP3 — inventory of existing automation/worker/scheduler/agent tooling. Read-only scan. Agent Orchestration adds a development/knowledge-work planning+simulation layer; it duplicates NONE of these and replaces NONE.",
+  "synthetic": false,
+  "counts": {
+    "mc_worker_files": 1, "mc_jobs_files": 2, "mc_scheduler_files": 1,
+    "systemd_services": 6, "systemd_timers": 3,
+    "ai_hq_task_ledger": 1, "ai_hq_context_pack_builder": 1
+  },
+  "rows": [
+    { "path": "tools/mater_controller_api/src/worker/index.mjs", "system": "master_controller", "component_type": "WORKER", "runtime": "vps", "production": true, "agent": false, "scheduler": false, "queue": true, "writer": "master_controller", "network_capable": true, "secret_sensitive": true, "canonical": true, "duplicate": false, "legacy": false, "recommended_action": "REFERENCE_ONLY — production worker; orchestration NEVER replaces it" },
+    { "path": "tools/mater_controller_api/src/jobs/queue_store.mjs", "system": "master_controller", "component_type": "QUEUE", "runtime": "vps", "production": true, "agent": false, "scheduler": false, "queue": true, "writer": "master_controller", "network_capable": false, "secret_sensitive": false, "canonical": true, "duplicate": false, "legacy": false, "recommended_action": "REFERENCE_ONLY — production job queue; no shared writable queue" },
+    { "path": "tools/mater_controller_api/src/scheduler/daily_discovery.mjs", "system": "master_controller", "component_type": "SCHEDULER", "runtime": "vps", "production": true, "agent": false, "scheduler": true, "queue": false, "writer": "master_controller", "network_capable": true, "secret_sensitive": false, "canonical": false, "duplicate": false, "legacy": false, "recommended_action": "REFERENCE_ONLY — production scheduler; orchestration creates contract+simulator only" },
+    { "path": "tools/mater_controller_api/deploy/*.service|*.timer", "system": "master_controller", "component_type": "SYSTEMD", "runtime": "vps", "production": true, "agent": false, "scheduler": true, "queue": false, "writer": "owner", "network_capable": true, "secret_sensitive": true, "canonical": false, "duplicate": false, "legacy": false, "recommended_action": "REFERENCE_ONLY — 6 services + 3 timers; orchestration creates NO systemd/cron/Windows task" },
+    { "path": "tools/ai_hq/context_pack_builder.mjs", "system": "ai_hq", "component_type": "CONTEXT_PACK", "runtime": "tool", "production": false, "agent": false, "scheduler": false, "queue": false, "writer": "ai_hq", "network_capable": false, "secret_sensitive": false, "canonical": false, "duplicate": false, "legacy": false, "recommended_action": "REUSE — orchestration context contract references this, no second builder" },
+    { "path": "tools/ai_hq/task_ledger_validate.mjs", "system": "ai_hq", "component_type": "TASK_LEDGER", "runtime": "tool", "production": false, "agent": false, "scheduler": false, "queue": false, "writer": "ai_hq", "network_capable": false, "secret_sensitive": false, "canonical": true, "duplicate": false, "legacy": false, "recommended_action": "REUSE — AI HQ owns task history; orchestration creates NO second task ledger" },
+    { "path": "tools/communication_monitor/yandex_mail_imap_read.mjs", "system": "master_controller", "component_type": "IMAP_READER", "runtime": "tool", "production": true, "agent": false, "scheduler": false, "queue": false, "writer": "none", "network_capable": true, "secret_sensitive": true, "canonical": false, "duplicate": false, "legacy": false, "recommended_action": "TRACKED_SAFE — read-only source now tracked (MP2); no IMAP executed" }
+  ],
+  "boundary": {
+    "orchestration_owns": ["development/knowledge-work job contracts", "agent selection", "capability policy", "execution plans", "dependency DAG", "checkpoints", "budgets", "leases", "retries", "failure handling", "artifact handoff", "verification", "owner gates", "audit trail", "future scheduler contracts"],
+    "orchestration_never": ["canonical lead writes", "SMTP", "send", "production mutation", "auto-execute owner decisions", "real agent launch (this task)", "second Project Registry", "second task ledger", "production scheduler", "production worker queue", "secrets", "agent report as proof without verification"]
+  }
+}

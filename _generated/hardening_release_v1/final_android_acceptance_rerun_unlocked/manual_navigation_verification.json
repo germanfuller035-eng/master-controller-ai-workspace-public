@@ -1,0 +1,22 @@
+{
+  "today_stop_entry": {
+    "status": "PASS",
+    "anchor": "today_screen",
+    "marker": "card_system_stop",
+    "destructive_action_executed": false
+  },
+  "owner_incidents_empty_state": {
+    "status": "PASS_EMPTY_STATE_VERIFIED",
+    "anchor": "owner_list_incidents",
+    "empty_marker": "Инцидентов нет",
+    "connection_error": false
+  },
+  "multichannel_manual_navigation": {
+    "status": "PASS",
+    "source_card": "cs_multichannel",
+    "bounded_scrolls": 1,
+    "anchor": "multichannel",
+    "state_loading": false,
+    "connection_error": false
+  }
+}
